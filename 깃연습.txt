@@ -5,6 +5,8 @@ class Main{
 	public static void main(String[] args){
 
 		System.out.println("hello java");
+		// 깃 연습용으로 작성
+
 	}
 
 }
