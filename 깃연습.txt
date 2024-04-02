@@ -6,6 +6,7 @@ class Main{
 
 		System.out.println("hello java");
 		System.out.println("hello java1111");
+	//깃 연습용 수정
 
 // 깃 연습용으로 작성
 
