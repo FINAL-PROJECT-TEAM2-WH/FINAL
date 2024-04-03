@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    button{
+        background-color: red;
+        display: inline-block;
+        padding: 5px;
+        border: none;
+        color: white;
+    }
+    /* :의사클래스 -특정 상태 */
+    /* ::의사요소 */
+    /* button:hover{
+        background-color: blue;
+    } */
+</style>
+</head>
+<body>
+<h3>마우스 롤오버 효과</h3>
+
+<button type="button">마우스 롤 오버 효과</button>
+<button >마우스 롤 오버 효과</button>
+<button >마우스 롤 오버 효과</button>
+<script>
+
+    // document.querySelector("button").onmouseover=function(){
+    //     document.querySelector("button").style.color="blue";
+    // }
+    // const btns =document.querySelector("button");
+    // btns.onmouseover=function(){
+    //     console.log("btn_mouseover");
+    //     btns.style.backgroundColor = "blue";
+    // }
+    // btns.onmouseout =function(){
+    //     btns.style.backgroundColor = "red";
+    // }
+        // const btns = document.querySelectorAll("button");
+        // const btns = document.getElementById("아이디명");
+        const btns = document.getElementsByTagName("태그이름");
+
+        //alert(btns.length);
+        for (let i = 0; i < btns.length; i++) {
+        btns[i].onmouseover=function(){
+         event.srcElement.style.backgroundColor = "blue";
+        }
+        btns[i].onmouseout =function(){
+            event.srcElement.style.backgroundColor = "red";
+        }
+        }
+    
+</script>
+</body>
+</html>

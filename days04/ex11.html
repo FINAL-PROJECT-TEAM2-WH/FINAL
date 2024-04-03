@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    div{
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid;
+    }
+
+    div#box{
+        /* 3D 변환 */
+        transform: rotateX(150deg);
+        transform: rotateY(45deg);
+    }
+</style>
+</head>
+<body>
+<pre>
+    [CSS 2D 변환]
+    - transform 속성
+        : 이동 translate(),
+          rotate(),
+          scale(),
+          skew(),
+          matrix()
+    [CSS 3D 변환]
+    - transform 속성
+        이동  translate3d(x,y,z)
+        회전 rotateX(),rotateY(),rotateZ()
+             rotate3d(x,y,z, )
+        크기 scaleX(), scaleY(), scaleZ()
+             scale3d(x,y,z)
+        matrix3d(????????? 16개)
+</pre>
+
+<button>회전 시작</button>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<div>Lorem ipsum dolor sit.</div>
+<div id="box">Lorem ipsum dolor sit.</div>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</body>
+</html>

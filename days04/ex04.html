@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    p{  /*특이성 1점*/
+        width: 200px;
+        height: 200px;
+        border: 1px solid gray;
+        padding: 20px;
+    }
+    /* p:nth-of-type(1){ */
+    /* p:nth-child(2){ */
+    p:first-of-type{ 
+        background-color:red;
+        /* border-top-left-radius: 15px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 5px; */
+
+        border-radius:15px 50px 30px 5px;
+        /* border-radius:15px; */
+
+ 
+        }
+               /* 두 번째 p 태그 */
+   p:nth-of-type(2){
+            background: url(../images/paper.gif) left top repeat;
+            border-radius : 0 50%;
+
+            border-top-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+    }
+</style>
+</head>
+<body>
+<pre>
+    둥근 모서리 : border-ridius 속성
+</pre>
+
+<p>Lorem, ipsum dolor.</p>
+<p>Esse, nemo velit?</p>
+<p>Laudantium, officia optio?</p>
+</body>
+</html>

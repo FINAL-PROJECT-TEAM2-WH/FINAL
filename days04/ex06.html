@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    #grad1{
+        width: 200px;
+        height:150px;
+
+        /* 브라우저 따라서 그라데이션 효과가 지원되지 않는 경우에는 */
+        /* background-color: red; */
+        /* 방향 기본: 위 -> 아래로 */
+        /* background-image: linear-gradient(red,yellow) ; */
+        /* background-image: linear-gradient(to right,red,yellow) ; */
+        /* background-image: linear-gradient(to bottom right,red,yellow) ; */
+        /*
+         to top 0deg
+         to right 90deg
+         to bottom 180deg; 
+          */
+        
+        /* 각도를 사용해서 방향 지정 */
+        /* background-image: linear-gradient(180deg,red,yellow,green) ; */
+
+        background-image: linear-gradient(to right,rgba(0,255,0,0),rgba(0,255,0,1)) ;
+
+        
+    }
+</style>
+</head>
+<body>
+<pre>
+    [CSS 그라디언트]
+    ㄴ 두 개 이상의 지정된 색상 사이의
+       부드러운 전환
+    ㄴ 3가지 유형
+      1) 선형 그라데이션(위,아래,왼쪽,오른쪽->이동)
+      background: linear-gradient
+      2) 방사형 그라데이션( 중심-> 이동)
+      3) 원뿔형 그라데이션( 중심점을 중심으로 ->회전)
+</pre>
+
+<div id="grad1"></div>
+</body>
+</html>
