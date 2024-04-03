@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    /* input{
+        width: 200px;
+        border: 1px solid red;
+    } */
+    /* input[type]{ */
+        /* input[type=submit]{ */
+    /* WHERE title = 'flower' */
+    /* [title=flower]{ */
+        /* WHERE title LIKE 'flower%'; */
+        /* [title^=flower]{ */
+
+        /* WHERE title LIKE '%flower' */
+        /* [title$=flower]{ */
+    /* WHERE title LIKE '%flower%' */
+    /* [title*=flower]{ */
+
+        /* 단어가 flower인것 */
+     /* [title~=flower]{  */
+
+        [title|=flower]{
+        width: 200px;
+        border: 1px solid red;
+    }
+    
+</style>
+</head>
+<body>
+<pre>
+    [css 속성(attribute)을 사용하는 선택자]
+    1.[속성명만 있을경우]
+    2.[속성명=속성값]
+
+    3.[속성명^=속성값]
+    4.[속성명$=속성값]
+    5.[속성명*=속성값]
+    6.[속성명~=속성값]  //지정된 단어(공백구분 O , -는 포함X)
+    7.[속성명|=속성값]
+    정확히 지정된 속성이 있는 요소
+                flower
+              ="flower"
+              ="flower-????""
+</pre>
+
+<a href="#" title="klematis flower">naver</a><br>
+<a href="#" title="flower">daum</a><br>
+<a href="#" title="flower-kbs">daum</a><br>
+<a href="#" title="kbsflower">sist</a><br>
+<a href="#" title="kbs-flower">taeyo</a><br>
+<a href="#" title="flowers">admin</a><br>
+<hr>
+<input><br>
+<input><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="submit"><br>
+<input type="reset"><br>
+</body>
+</html>

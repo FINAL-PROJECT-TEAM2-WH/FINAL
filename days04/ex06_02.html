@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+   #grad1{
+    width: 200px;
+    height:150px;
+
+    /* background-image : radial-gradient(red,yellow,green); */
+                                    /* 색상의 간격 */
+    /* background-image : radial-gradient(red 5%,yellow 15%,green 60%); */
+    /* background-image : radial-gradient([원/타원 모양]red ,yellow ,green ); */
+    /* background-image : radial-gradient(circle,red ,yellow ,green ); */
+    background-image : conic-gradient(red ,yellow ,green );
+
+    
+   }
+
+</style>
+</head>
+<body>
+<pre>
+    [CSS 그라디언트]
+    ㄴ 두 개 이상의 지정된 색상 사이의
+       부드러운 전환
+    ㄴ 3가지 유형
+      1) 선형 그라데이션(위,아래,왼쪽,오른쪽->이동)
+      background: linear-gradient
+      2) 방사형 그라데이션( 중심-> 이동)
+      3) 원뿔형 그라데이션( 중심점을 중심으로 ->회전)
+</pre>
+
+<div id="grad1"></div>
+</body>
+</html>
