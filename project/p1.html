@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="icon" type="image/png" href="https://sui.ssgcdn.com/ui/common/img/ssg.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/c42522e32a.js" crossorigin="anonymous"></script>
+<style>
+	*{
+		box-sizing: border-box;
+	}
+	body{
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+	}
+	
+	#logo{
+		background-color: white;
+		position: relative;
+		left: 15%;
+		top: 60px;
+		z-index: 1;
+		width: 190px;
+	}
+	#second div:not(:first-of-type):hover {
+    background-color: #f2f2f2;
+    }
+    #second div{
+     border-radius: 40px;
+    
+     margin:4px;
+     padding-left : 15px;
+     width: 170px;
+     height: 55px;
+    }
+    
+	#rot:hover{
+		transform: rotate(90deg);
+		transition: 0.2s linear;
+	}
+	#rot:not(:hover){
+		transition: 0.2s linear;
+	}
+	#logo2:hover #second{
+	    transition-delay: 0.2s;
+	    transition-duration: 1s;
+	    transform: scale(1);
+		visibility: visible;
+		animation: move 0.3s ease-in-out forwards;
+	}
+	#i{
+		position:absolute;
+		width: 150px;
+		top: 3px;
+		left: 20px;
+		
+	}
+	#i i{
+		font-size: 20px;
+		color: black;
+	}
+	
+	 #second{
+	 	background-color:white;
+		position: absolute;
+		width: 190px;
+		height: 260px;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+		border-radius: 10px;
+		top: -10%;
+		left:-6px;
+		z-index:2;
+		visibility: hidden;
+		
+	}
+	#autosearch li{
+		text-decoration: none;
+		list-style-type: none;
+		font-size: 12px;
+	}
+	
+	#search{
+	width: 100%;
+    height: 100%; 
+    border-radius: 10px;
+    border: 1px solid red; 
+     animation: borderc 2s infinite;
+     text-indent: 10px;
+	}
+	#cardimg{
+		position : relative;
+		display : inline-block;
+		width: 450px;
+		height: 300px;
+		right: -700px;
+		top: 0px;
+		
+	}
+	
+	.buttonpage{
+		width: 650px;
+		height: 200px;
+		background-color: rgba(128, 128, 128, 0.05);
+		position: relative;
+		top: -20px;
+	}
+	.imgbtn{
+		border: 0.1px solid rgba(128, 128, 128, 0.05);
+		border-radius: 15px;
+		background-color: white;
+		color: black;
+		cursor: pointer;
+		height: 40px;
+		width: 100px;
+		text-align: center;
+		margin-right: 20px;
+		position: relative;
+		left: 40px;
+		top: 35px;
+
+	}
+	.imgbtn:focus{
+   	background-color: black;
+   	color: white;
+   }
+	#second div img{
+		
+		width: 150px;
+		height: 48px;
+	}
+	#logo2{
+		width: 300px;
+	}
+	input:focus{
+		outline:none;
+	}
+	#smalltag{
+		position: absolute;
+		right: -580%;;
+		top: 34px;
+		color: gray;
+	}
+	#smalltag a{
+	
+		text-decoration: none;
+	    color: black;
+	    vertical-align: top;
+	    font-style: bold;
+	    
+	}
+	.present2{
+		position: absolute;
+		left: 50px;
+		width: 400px;
+		height: 200px;
+		
+		left: 152px;
+		top: 0px;
+	}
+	.present2 label{
+		display: inline-block;
+		border: 1px solid  rgba(128, 128, 128, 0.5);
+		padding-top : 11px;
+		padding-left : 45px;
+		width:340px;
+		height: 50px;
+		font: 16px solid black bold;
+		
+	}
+	input[type="radio"] {
+	accent-color : red;
+    width: 17px;
+    height: 17px;
+}
+	::-webkit-input-placeholder { 
+    padding-left: 10px;
+}
+	#receive input:first-of-type{
+		position: absolute;
+		width: 345px;
+		height: 30px;
+		border: 1px solid gray;
+		left: 153px;
+	}
+	label:has(input[type="radio"]:checked){
+		height: 80px;
+		border: 2px solid black;
+	}
+	label:has(input[type="radio"]:checked) div{
+		display: block;
+		
+	}
+	
+
+	
+	 @media screen and (max-width: 600px) {
+        .fix1 {
+            width: 90%; /* 작은 화면에서 더 좁게 설정 */
+        }
+    }
+    #present{
+    	
+    	position: relative;
+    	left: 17%;
+    	top: 100px;
+    	display: inline-block;
+    	width: 700px;
+    	
+    	
+    	
+    }
+    
+    .box1:focus{
+    	border: 2px solid black;
+    	outline: none;
+    	border-radius: 5px;
+    }
+    .box1{
+    	border: 1px solid rgba(128, 128, 128, 0.5);
+    	
+    }
+    #receive{
+    	position: relative;
+    	left: 17%;
+    	top: -280px;
+    	margin-top: 20px;
+    	display : inline-block;
+    	width : 200px;
+    	font: 17px solid black ;
+    	
+    }
+     #receive2{
+     	
+     	display: none;
+     	
+     }
+     .cardimg2{
+     	position: relative;
+     	margin-right: 20px;
+     	width: 70px;
+     	height: 70px;
+     	top: 50px;
+     	left: 50px;
+     	
+     }
+     
+    
+     .imagecon{
+     	display: inline-block;
+     	
+     }
+    .presetn2sub{
+    	position: absolute;
+    	left : 72px;
+    	margin-top : 5px;
+    	font-size: 11px;
+    	color: gray;
+    	display: none;
+    }
+    #receive input:focus {
+    border: 2px solid black;
+    }
+    #receive2 button{
+    	border-radius: 15px;
+    	color: gray;
+    	background-color: white;
+    	border: 1px solid  rgba(128, 128, 128, 0.5);
+    	height: 35px;
+    	position:absolute;
+    	left: 150px;
+    	top: 90px;
+    	width: 110px;
+    	cursor: pointer;
+    }
+    .autosearch{
+    	font-size: 11px;
+    	margin-left: -30px;
+    }
+   	#autosearch{
+      font-size: 12px;
+      padding-left : 15px;
+   	  display : none;
+   	  background-color: white;
+   	  width: 100%;
+   	  height: auto;
+   	  border: 1px solid red; 
+   	  border-top: none;
+   	  border-bottom-left-radius: 10px;
+   	  border-bottom-right-radius: 10px;
+   	  
+   	}
+   	#autosearch:focus{
+   		display: block;
+   	}
+   	
+    #sender{
+    	position: absolute;
+    	left: 0px;
+    	top: 48px;
+    	font: 16px solid black;
+    	
+    }
+    footer{
+    	position: relative;
+    	top: 100px;
+    	margin-top: 100px;
+    	padding: 0;
+    	
+    }
+    
+    footer>hr{
+    	position: relative;
+    }
+    footer hr:last-of-type{
+    	position: absolute;
+    	top: 500px;
+    }
+    footer hr:nth-of-type(2){
+    	position: relative;
+    	top: 20px;
+    }
+    hr[class="fhr"]{
+    	border: 0.5px solid rgba(128, 128, 128, 0.1);
+    }
+    #lastbox{
+    	position: relative;
+    	left: 200px;
+    	top: 40px;
+    }
+    #lastbox pre button{
+    	background-color: white;
+    	border: 1px solid rgba(128, 128, 128, 0.1);
+    	cursor: pointer;
+    }
+    #fintro{
+     	margin-left: 330px;
+     	margin-top: 20px;
+    }
+    #fintro a{
+    margin-right: 40px;
+    text-decoration: none;
+    color: #606060;
+    font-size: 12px;
+    
+    
+    }
+    .fontawe{
+    	font-size: 50px;
+    }
+    #sender input{
+    	position: absolute;
+		width: 345px;
+		height: 30px;
+		border: 1px solid gray;
+		left: 150px;
+    }
+   		#present4{
+   		position: absolute;
+    	left: 0px;
+    	top: 100px;
+    	font: 16px solid black;
+    	
+   		}
+   		#continue{
+   			background-color: #FF0000; ;
+   			color: white;
+   			width: 500px;
+   			height: 50px;
+   			position : absolute;
+   			top: 300px;
+   			opacity: 0.7;
+   			cursor: pointer;
+   			border-color: white;
+   		}
+	@keyframes move{
+        0% {
+            
+            transform: translate(0, 0) scale(0); /* 초기 위치와 크기 설정 */
+        }
+        50% {
+           
+            transform: translate(0, 0) scale(1.15); /* 최종 위치와 크기 설정 */
+        }
+        100%{
+        	transform: translate(0, 0) scale(1);
+        }
+    }
+    @keyframes borderc{
+    	0%{
+    		border-color: red;
+    	}
+    	50%{
+    		border-color: #BA55D3;
+    	}
+    	100%{
+    		border-color: red;
+    	}
+    }
+</style>
+</head>
+<body>
+<div class="fix1">
+<div id="logo">
+ <div id="logo2">
+	<img src="../proimage/logo3.png" alt="" /><img id="rot" src="../proimage/logoani.png" alt="" />
+	<div id="second"><div><a href="http://localhost/WebPro/project/p1.html"><img src="../proimage/SSG.png" alt=""  /></a></div><div><a href="https://emart.ssg.com/"><img src="../proimage/emartmall.png" alt="" ></a></div><div class="logog"><a href="https://shinsegaemall.ssg.com/"><img src="../proimage/s-mall2.png" alt="" /></a></div><div class="logog"><a href="https://department.ssg.com/"><img src="../proimage/s-baek2.png" alt="" /></a></div></div>
+	</div>
+	<div style="width: 450px; height: 45px; position: absolute; left:200px; top:10px"> 
+	<input id="search" type="text" />
+	<div id="autosearch" ><b>최근 검색어</b><br>
+	<ul>
+		
+	</ul>
+	</div>
+	<button id="searchbtn" style="position: absolute; top:4px; right: 1%; width:40px; height: 40px;  background-color: rgba(255, 255, 255, 0); border: none; cursor: pointer;" >
+	<i class="fa-solid fa-magnifying-glass" style= "font-size: 20px;" ></i></button></div>
+	<div id="srank" style="width: 100px; height: 20px; position: absolute; left: 680px; top:27px; font-size: 13px;">1.바로이쌀</div>
+	
+	<div style=" color: gray; font-size: 11px; position: absolute; left: 550%; top: -30px; width: 800px;  "><a href="https://www.ssg.com/membership/gate.ssg"><img src="../proimage/uniclub.png" alt="" style="height: 18px; width: 300px; position: absolute; top: 0px; left: -330px;"/></a><div style="position: absolute; left: -25px; top: 2px; font-size: 12px;"><a href="https://www.ssg.com/myssg/main.ssg?gnb=myssg" style="text-decoration: none; color: gray;">권맑음님</a><a style="text-decoration: none; color: gray;">&nbsp;&nbsp; 로그아웃</a>•<a href="https://www.ssg.com/customer/main.ssg?aplSiteNo=6005" style="text-decoration: none; color: gray;">고객센터</a></div>
+	</div>
+	<div style="position: absolute;  left : 630%; top: -30px;"><div style=" color: gray; font-size: 12px; opacity: 0.2;">&nbsp;|&nbsp;</div><div id="i"><a href="https://www.ssg.com/myssg/myClip/main.ssg?attnDivCd=10&gnb=myclip"><i class="fa-regular fa-heart"></i></a>&nbsp;&nbsp;
+	<a href=""><i class="fa-regular fa-user"></i></a>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa-solid fa-truck"></i></a>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa-solid fa-bag-shopping"></i></a></div>
+	
+	</div>
+	<div id="smalltag"><a href="https://emart.ssg.com/"><img src="../proimage/emartmalls.png" alt="" /></a>&#x22C5;<a href="https://shinsegaemall.ssg.com/">신세계몰</a>&#x22C5;<a href="https://department.ssg.com/">신세계백화점</a></div>
+	
+	</div>
+	<hr style="position: relative; top: 70px; opacity: 0.4;"/>
+	</div>
+	<div id="present"><p style="font-size: 30px"><b>선물하기</b></p>
+	<hr style="position: absolute; width: 500px; top: 70px; height: 3px; background-color: black; "/>
+	<div style="font-size: 20px; position: relative; display: inline-block;">발송정보<a href="" style="color: red; font-size: 14px; position:absolute; right: -420px; top: 5px; color: red; text-align: center; vertical-align: bottom; text-decoration: none">배송지 대신 입력하기 ></a></div>
+	<div style="font-size: 17px; display: inline-block; position: relative; top:50px; left: -83px;" ><b>받는 분 수</b> 
+	<div> <select class="box1" name="cars" style=" width: 340px; height: 30px; position: absolute; top: 0px; left: 150px; ">
+    <option value="1">1명</option>
+<option value="2">2명</option>
+<option value="3">3명</option>
+<option value="4">4명</option>
+<option value="5">5명</option>
+<option value="6">6명</option>
+<option value="7">7명</option>
+<option value="8">8명</option>
+<option value="9">9명</option>
+<option value="10">10명</option>
+<option value="11">11명</option>
+<option value="12">12명</option>
+<option value="13">13명</option>
+<option value="14">14명</option>
+<option value="15">15명</option>
+<option value="16">16명</option>
+<option value="17">17명</option>
+<option value="18">18명</option>
+<option value="19">19명</option>
+<option value="20">20명</option>
+
+</select>
+</div> 
+ </div>
+	<div style="font-size: 17px; display: inline-block; position: absolute; top:215px; left: 1px;" ><b>선물 전달 방법</b> 
+	<div class="present2" ><label for="present2"><input type="radio" id="present2"  name="presetn2" checked/>카카오톡으로 직접 전달할게요<br><div class="presetn2sub">카카오톡 채팅방에서 직접 전달할 수 있어요.</div></label><br />
+ <label for="present3"><input type="radio" id="present3" name="presetn2"/>SSG 닷컴이 대신 보내주세요.<br><div class="presetn2sub">SSG닷컴 카카오톡 채널로 보내드려요.<br>
+(발송 실패 시 문자로 발송)</div></label>
+</div>
+ </div>
+	</div>
+	<br />
+	<div id="receive"><div><b>받는 분 정보 </b><input type="text" placeholder="이름"/></div><br />
+	<div id="receive2"><input type="text" placeholder="-없이 숫자만 입력해주세요."/><br /><button>나에게 보내기</button>
+	</div>
+	<div id="sender"><b>보내는 분</b><input type="text" /> </div>
+	
+	<div id="present4"><b>보내는 선물</b></div>
+	<button id="continue">계속 하기</button>
+	</div>
+	<div id="cardimg"><img src="../proimage/card1.png" alt="" /><br /><div class="buttonpage"><button class="imgbtn" data-event-type="con">축하해요</button><button class="imgbtn" data-event-type="thk">고마워요</button><button class="imgbtn">응원해요</button><button class="imgbtn">사랑해요</button><button class="imgbtn">건강해요</button>
+	<br />
+	<div class="imagecon"><img class="cardimg2" src="../proimage/card1.png" alt="" /></div>
+	<div class="imagecon"><img class="cardimg2" src="../proimage/card2.png" alt="" /></div>
+	<div class="imagecon"><img class="cardimg2" src="../proimage/card3.png" alt="" /></div>
+	<div class="imagecon"><img class="cardimg2" src="../proimage/card4.png" alt="" /></div>
+	<div class="imagecon"><img class="cardimg2" src="../proimage/card5.png" alt="" /></div>
+	<div class="imagecon"><img class="cardimg2" src="../proimage/card6.png" alt="" /></div>
+	
+	</div>
+	</div>
+	
+	
+<script>
+		function srank() {
+			document.querySelector("#srank").innerHTML = "2.cgv";
+			
+		}
+		setInterval(srank, 1000);
+		
+		document.querySelectorAll("input[type='radio']").forEach(function(rera){
+			rera.addEventListener("click",function(){
+				if (document.querySelector("input[type='radio']:first-of-type").checked) {
+					document.getElementById("receive2").style.display = "none";
+					document.getElementById("sender").style.marginTop = "0px";
+					document.getElementById("receive").style.top = "-280px";
+					document.getElementById("present4").style.marginTop = "0px";
+					document.getElementById("continue").style.marginTop = "0px";
+					
+				} else{
+					document.getElementById("receive2").style.display = "block";
+					document.getElementById("sender").style.marginTop = "120px";
+					document.getElementById("receive").style.top = "-250px";
+					document.getElementById("present4").style.marginTop = "120px";
+					document.getElementById("continue").style.marginTop = "120px";
+					
+				}
+			})
+		})
+		
+		
+		document.getElementById("search").onkeyup = function(){
+			if (event.keyCode ==13 && event.target.value.trim()!="") {
+				let a = document.createElement("li");
+				a.setAttribute("class","autosearch");
+				a.textContent = document.getElementById("search").value;
+				a.innerHTML +='<button style="position:absolute; right:10px; background-color: white; border:none;">x</button>';
+				document.getElementById("autosearch").children[2].appendChild(a);
+				 autosearch.style.display = 'none';
+			        search.style.borderBottom = "1px solid red";
+			        search.style.borderBottomLeftRadius = "10px";
+				    search.style.borderBottomRightRadius = "10px";
+			}
+		}
+		
+		var search = document.getElementById('search');
+		var autosearch = document.getElementById('autosearch');
+
+		search.addEventListener('click', function(event) {
+		    autosearch.style.display = 'block';
+		    event.stopPropagation(); // 상위 요소의 클릭 이벤트 전파 차단
+		    search.style.borderBottom = "none";
+		    search.style.borderBottomLeftRadius = 0;
+		    search.style.borderBottomRightRadius = 0;
+		    search.style.boxShadow = "1px";
+			
+		});
+
+		document.addEventListener('click', function(event) {
+		    var isClickInsideAutosearch = autosearch.contains(event.target);
+		    var isClickOnSearch = (event.target === search);
+
+		    if (!isClickInsideAutosearch && !isClickOnSearch) {
+		    	 autosearch.style.display = 'none';
+			        search.style.borderBottom = "1px solid red";
+			        search.style.borderBottomLeftRadius = "10px";
+				    search.style.borderBottomRightRadius = "10px";
+		       
+		    }
+		});
+		document.getElementById("searchbtn").addEventListener("click",function(){
+			if (document.getElementById("search").value.trim()!="") {
+				let a = document.createElement("li");
+				a.setAttribute("class","autosearch");
+				a.textContent = document.getElementById("search").value;
+				a.innerHTML +='<button style="position:absolute; right:10px; background-color: white; border:none;">x</button>';
+				document.getElementById("autosearch").children[2].appendChild(a);
+
+			}
+			})
+	document.getElementById("autosearch").addEventListener("click", function(event) {
+     if (event.target.tagName === 'BUTTON') { // 클릭된 요소가 버튼인 경우
+    	
+        var li = event.target.closest("li"); // 클릭된 버튼의 가장 가까운 li 요소를 찾음
+            li.parentNode.removeChild(li); // li 요소를 삭제
+        
+    }
+});
+		document.querySelectorAll(".cardimg2").forEach(function(event){event.addEventListener("click",function(){
+			
+			document.querySelector("#cardimg img").setAttribute("src",this.getAttribute("src"));
+		})})
+		
+		 document.querySelectorAll(".imgbtn").forEach(function(event){
+			event.addEventListener("click",function(){
+				if (event.getAttribute("data-event-type")=="con") {
+					let a = document.querySelectorAll(".cardimg2");
+					a[0].setAttribute("src","../proimage/card1.png");
+					a[1].setAttribute("src","../proimage/card2.png");
+					a[2].setAttribute("src","../proimage/card3.png");
+					a[3].setAttribute("src","../proimage/card4.png");
+					a[4].setAttribute("src","../proimage/card5.png");
+					a[5].setAttribute("src","../proimage/card6.png");
+					a[5].style.display = "block";
+					} 
+	           else if (event.getAttribute("data-event-type")=="thk"){
+					let a = document.querySelectorAll(".cardimg2");
+					a[0].setAttribute("src","../proimage/card21.png");
+					a[1].setAttribute("src","../proimage/card22.png");
+					a[2].setAttribute("src","../proimage/card23.png");
+					a[3].setAttribute("src","../proimage/card24.png");
+					a[4].setAttribute("src","../proimage/card25.png");
+					a[5].style.display = "none";
+				}
+			})
+		}) 
+</script>
+</body>
+<footer> 
+	<hr class="fhr">
+	<div id="fintro"><a href="">회사소개</a><a href="">개인정보처리방침</a><a href="">이용약관</a><a href="">청소년 보호방침</a><a href="">지식재산권센터</a><a href="">입점상담</a><a href="">광고센터</a></div>
+	
+	<hr class="fhr"/>
+	<hr class="fhr">
+	<div id="lastbox">
+	<pre>
+	          (주) 에스에스지닷컴
+                   <i class="fa-solid fa-headset">1577-3419</i> <button>전화문의 전 클릭</button> <button>1:1 고객센터톡</button> 고객센터/전자금융거래분쟁처리                                                                 ssg.com  <i class="fa-brands fa-facebook fontawe"></i><i class="fa-brands fa-square-instagram fontawe"></i>
+		 대표자: 이인영 서울특별시 강남구 테헤란로 231 사업자등록번호: 870-88-01143 통신판매업 신고번호: 제2022-서울강남-03751호
+
+		 개인정보보호책임자: 김우진 Fax: 02-2068-7118 ssg@ssg.com
+
+		 <button>사업자 정보확인</button> <button>소비자분쟁해결기준</button>
+		 
+
+		 SSG.COM 호스팅서비스 사업자 : (주)에스에스지닷컴
+
+ 		 한국온라인쇼핑협회
+		 정회원사 위해상품차단시스템 운영매장 우리은행 채무지급보증 안내
+		 당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다. 서비스 가입사실 확인
+		 ㈜에스에스지닷컴은 SSG.COM 실시간 항공권 서비스의 통신판매중개자로서 거래 당사자가 아니며, 입점 판매사가 등록한 상품 정보 및 거래에 대해 책임을 지지 않습니다.
+
+		 ㈜에스에스지닷컴 사이트의 상품/판매자/쇼핑정보, 컨텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는 저작권법, 콘텐츠사업 진흥법 등에 의하여 엄격히 금지됩니다. 콘텐츠 산업 진흥법에따른 표시</pre>
+		</div>
+	</footer>
+</html>

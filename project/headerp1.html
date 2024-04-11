@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="icon" type="image/png" href="https://sui.ssgcdn.com/ui/common/img/ssg.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/c42522e32a.js" crossorigin="anonymous"></script>
+<style>
+*{
+		box-sizing: border-box;
+	}
+	body{
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+	}
+	#logo{
+		background-color: white;
+		position: relative;
+		left: 15%;
+		top: 60px;
+		z-index: 1;
+		width: 190px;
+	}
+	#second div:not(:first-of-type):hover {
+    background-color: #f2f2f2;
+    }
+    #second div{
+     border-radius: 40px;
+    
+     margin:4px;
+     padding-left : 15px;
+     width: 170px;
+     height: 55px;
+    }
+    #second div img{
+		
+		width: 150px;
+		height: 48px;
+	}
+    input:focus{
+		outline:none;
+	}
+    .box1:focus{
+    	border: 2px solid black;
+    	outline: none;
+    	border-radius: 5px;
+    }
+    .box1{
+    	border: 1px solid rgba(128, 128, 128, 0.5);
+    	
+    }
+    #smalltag{
+		position: absolute;
+		right: -580%;;
+		top: 34px;
+		color: gray;
+	}
+	#smalltag a{
+	
+		text-decoration: none;
+	    color: black;
+	    vertical-align: top;
+	    font-style: bold;
+	    
+	}
+    
+	#rot:hover{
+		transform: rotate(90deg);
+		transition: 0.2s linear;
+	}
+	#rot:not(:hover){
+		transition: 0.2s linear;
+	}
+	#logo2{
+		width: 300px;
+	}
+	#logo2:hover #second{
+	    transition-delay: 0.2s;
+	    transition-duration: 1s;
+	    transform: scale(1);
+		visibility: visible;
+		animation: move 0.3s ease-in-out forwards;
+	}
+	#i{
+		position:absolute;
+		width: 150px;
+		top: 3px;
+		left: 20px;
+		
+	}
+	#i i{
+		font-size: 20px;
+		color: black;
+	}
+	
+	 #second{
+	 	background-color:white;
+		position: absolute;
+		width: 190px;
+		height: 260px;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+		border-radius: 10px;
+		top: -10%;
+		left:-6px;
+		z-index:2;
+		visibility: hidden;
+		
+	}
+	#autosearch li{
+		text-decoration: none;
+		list-style-type: none;
+		font-size: 12px;
+	}
+	  .autosearch{
+    	font-size: 11px;
+    	margin-left: -30px;
+    }
+   	#autosearch{
+      font-size: 12px;
+      padding-left : 15px;
+   	  display : none;
+   	  background-color: white;
+   	  width: 100%;
+   	  height: auto;
+   	  border: 1px solid red; 
+   	  border-top: none;
+   	  border-bottom-left-radius: 10px;
+   	  border-bottom-right-radius: 10px;
+   	  
+   	}
+   	#autosearch:focus{
+   		display: block;
+   	}
+	
+	#search{
+	width: 100%;
+    height: 100%; 
+    border-radius: 10px;
+    border: 1px solid red; 
+     animation: borderc 2s infinite;
+     text-indent: 10px;
+	}
+	   footer{
+    	position: relative;
+    	top: 100px;
+    	margin-top: 100px;
+    	padding: 0;
+    	
+    }
+    
+    footer>hr{
+    	position: relative;
+    }
+    footer hr:last-of-type{
+    	position: absolute;
+    	top: 500px;
+    }
+    footer hr:nth-of-type(2){
+    	position: relative;
+    	top: 20px;
+    }
+    hr[class="fhr"]{
+    	border: 0.5px solid rgba(128, 128, 128, 0.1);
+    }
+    #lastbox{
+    	position: relative;
+    	left: 200px;
+    	top: 40px;
+    }
+    #lastbox pre button{
+    	background-color: white;
+    	border: 1px solid rgba(128, 128, 128, 0.1);
+    	cursor: pointer;
+    }
+    #fintro{
+     	margin-left: 330px;
+     	margin-top: 20px;
+    }
+    #fintro a{
+    margin-right: 40px;
+    text-decoration: none;
+    color: #606060;
+    font-size: 12px;
+    
+    
+    }
+    .fontawe{
+    	font-size: 50px;
+    }
+	@keyframes move{
+        0% {
+            
+            transform: translate(0, 0) scale(0); /* 초기 위치와 크기 설정 */
+        }
+        50% {
+           
+            transform: translate(0, 0) scale(1.15); /* 최종 위치와 크기 설정 */
+        }
+        100%{
+        	transform: translate(0, 0) scale(1);
+        }
+    }
+    @keyframes borderc{
+    	0%{
+    		border-color: red;
+    	}
+    	50%{
+    		border-color: #BA55D3;
+    	}
+    	100%{
+    		border-color: red;
+    	}
+    }
+ </style>
+<title>Insert title here</title>
+</head>
+<body>
+<header>
+<div class="fix1">
+<div id="logo">
+ <div id="logo2">
+	<img src="../proimage/logo3.png" alt="" /><img id="rot" src="../proimage/logoani.png" alt="" />
+	<div id="second"><div><a href="http://localhost/WebPro/project/p1.html"><img src="../proimage/SSG.png" alt=""  /></a></div><div><a href="https://emart.ssg.com/"><img src="../proimage/emartmall.png" alt="" ></a></div><div class="logog"><a href="https://shinsegaemall.ssg.com/"><img src="../proimage/s-mall2.png" alt="" /></a></div><div class="logog"><a href="https://department.ssg.com/"><img src="../proimage/s-baek2.png" alt="" /></a></div></div>
+	</div>
+	<div style="width: 450px; height: 45px; position: absolute; left:200px; top:10px"> 
+	<input id="search" type="text" />
+	<div id="autosearch" ><b>최근 검색어</b><br>
+	<ul>
+		
+	</ul>
+	</div>
+	<button id="searchbtn" style="position: absolute; top:4px; right: 1%; width:40px; height: 40px;  background-color: rgba(255, 255, 255, 0); border: none; cursor: pointer;" >
+	<i class="fa-solid fa-magnifying-glass" style= "font-size: 20px;" ></i></button></div>
+	<div id="srank" style="width: 100px; height: 20px; position: absolute; left: 680px; top:27px; font-size: 13px;">1.바로이쌀</div>
+	
+	<div style=" color: gray; font-size: 11px; position: absolute; left: 550%; top: -30px; width: 800px;  "><a href="https://www.ssg.com/membership/gate.ssg"><img src="../proimage/uniclub.png" alt="" style="height: 18px; width: 300px; position: absolute; top: 0px; left: -330px;"/></a><div style="position: absolute; left: -25px; top: 2px; font-size: 12px;"><a href="https://www.ssg.com/myssg/main.ssg?gnb=myssg" style="text-decoration: none; color: gray;">권맑음님</a><a style="text-decoration: none; color: gray;">&nbsp;&nbsp; 로그아웃</a>•<a href="https://www.ssg.com/customer/main.ssg?aplSiteNo=6005" style="text-decoration: none; color: gray;">고객센터</a></div>
+	</div>
+	<div style="position: absolute;  left : 630%; top: -30px;"><div style=" color: gray; font-size: 12px; opacity: 0.2;">&nbsp;|&nbsp;</div><div id="i"><a href="https://www.ssg.com/myssg/myClip/main.ssg?attnDivCd=10&gnb=myclip"><i class="fa-regular fa-heart"></i></a>&nbsp;&nbsp;
+	<a href=""><i class="fa-regular fa-user"></i></a>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa-solid fa-truck"></i></a>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa-solid fa-bag-shopping"></i></a></div>
+	
+	</div>
+	<div id="smalltag"><a href="https://emart.ssg.com/"><img src="../proimage/emartmalls.png" alt="" /></a>&#x22C5;<a href="https://shinsegaemall.ssg.com/">신세계몰</a>&#x22C5;<a href="https://department.ssg.com/">신세계백화점</a></div>
+	
+	</div>
+	<hr style="position: relative; top: 70px; opacity: 0.4;"/>
+	</div>
+</header>
+<div>
+
+</div>
+<script>
+function srank() {
+	document.querySelector("#srank").innerHTML = "2.cgv";
+	
+}
+setInterval(srank, 1000);
+document.getElementById("search").onkeyup = function(){
+	if (event.keyCode ==13 && event.target.value.trim()!="") {
+		let a = document.createElement("li");
+		a.setAttribute("class","autosearch");
+		a.textContent = document.getElementById("search").value;
+		a.innerHTML +='<button style="position:absolute; right:10px; background-color: white; border:none;">x</button>';
+		document.getElementById("autosearch").children[2].appendChild(a);
+		 autosearch.style.display = 'none';
+	        search.style.borderBottom = "1px solid red";
+	        search.style.borderBottomLeftRadius = "10px";
+		    search.style.borderBottomRightRadius = "10px";
+	}
+}
+var search = document.getElementById('search');
+var autosearch = document.getElementById('autosearch');
+
+search.addEventListener('click', function(event) {
+    autosearch.style.display = 'block';
+    event.stopPropagation(); // 상위 요소의 클릭 이벤트 전파 차단
+    search.style.borderBottom = "none";
+    search.style.borderBottomLeftRadius = 0;
+    search.style.borderBottomRightRadius = 0;
+    search.style.boxShadow = "1px";
+	
+});
+
+document.addEventListener('click', function(event) {
+    var isClickInsideAutosearch = autosearch.contains(event.target);
+    var isClickOnSearch = (event.target === search);
+
+    if (!isClickInsideAutosearch && !isClickOnSearch) {
+    	 autosearch.style.display = 'none';
+	        search.style.borderBottom = "1px solid red";
+	        search.style.borderBottomLeftRadius = "10px";
+		    search.style.borderBottomRightRadius = "10px";
+       
+    }
+});
+document.getElementById("searchbtn").addEventListener("click",function(){
+	if (document.getElementById("search").value.trim()!="") {
+		let a = document.createElement("li");
+		a.setAttribute("class","autosearch");
+		a.textContent = document.getElementById("search").value;
+		a.innerHTML +='<button style="position:absolute; right:10px; background-color: white; border:none;">x</button>';
+		document.getElementById("autosearch").children[2].appendChild(a);
+
+	}
+	})
+document.getElementById("autosearch").addEventListener("click", function(event) {
+if (event.target.tagName === 'BUTTON') { // 클릭된 요소가 버튼인 경우
+
+var li = event.target.closest("li"); // 클릭된 버튼의 가장 가까운 li 요소를 찾음
+    li.parentNode.removeChild(li); // li 요소를 삭제
+
+}
+});
+</script>
+<footer> 
+	<hr class="fhr">
+	<div id="fintro"><a href="">회사소개</a><a href="">개인정보처리방침</a><a href="">이용약관</a><a href="">청소년 보호방침</a><a href="">지식재산권센터</a><a href="">입점상담</a><a href="">광고센터</a></div>
+	
+	<hr class="fhr"/>
+	<hr class="fhr">
+	<div id="lastbox">
+	<pre>
+	          (주) 에스에스지닷컴
+                   <i class="fa-solid fa-headset">1577-3419</i> <button>전화문의 전 클릭</button> <button>1:1 고객센터톡</button> 고객센터/전자금융거래분쟁처리                                                                 ssg.com  <i class="fa-brands fa-facebook fontawe"></i><i class="fa-brands fa-square-instagram fontawe"></i>
+		 대표자: 이인영 서울특별시 강남구 테헤란로 231 사업자등록번호: 870-88-01143 통신판매업 신고번호: 제2022-서울강남-03751호
+
+		 개인정보보호책임자: 김우진 Fax: 02-2068-7118 ssg@ssg.com
+
+		 <button>사업자 정보확인</button> <button>소비자분쟁해결기준</button>
+		 
+
+		 SSG.COM 호스팅서비스 사업자 : (주)에스에스지닷컴
+
+ 		 한국온라인쇼핑협회
+		 정회원사 위해상품차단시스템 운영매장 우리은행 채무지급보증 안내
+		 당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다. 서비스 가입사실 확인
+		 ㈜에스에스지닷컴은 SSG.COM 실시간 항공권 서비스의 통신판매중개자로서 거래 당사자가 아니며, 입점 판매사가 등록한 상품 정보 및 거래에 대해 책임을 지지 않습니다.
+
+		 ㈜에스에스지닷컴 사이트의 상품/판매자/쇼핑정보, 컨텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는 저작권법, 콘텐츠사업 진흥법 등에 의하여 엄격히 금지됩니다. 콘텐츠 산업 진흥법에따른 표시</pre>
+		</div>
+	</footer>
+</body>
+</html>
