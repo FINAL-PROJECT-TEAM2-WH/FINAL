@@ -76,7 +76,12 @@ EXEC insert_product('2097001432075', '12090100', NULL, '10', 'sellStore002', 'br
 --15
 EXEC insert_product('1000067576484', '09010200', NULL, '10', 'sellStore005', 'brand005', '갤럭시탭 Trade-in OPEN', 788970, 0, '상품번호 : 1000067576484', '2024-04-10', 100);
 
+<<<<<<< HEAD
+
+
+=======
 -----------------------------------------
+>>>>>>> 8700568660c206716ee32e187ca4f65a3d5bea22
 CREATE OR REPLACE PROCEDURE insert_productoption (
     p_id          IN PRODUCTOPTION.ID%TYPE,
     p_productid   IN PRODUCTOPTION.PRODUCTID%TYPE,
@@ -110,8 +115,6 @@ EXCEPTION
 END insert_productoption;
 
 --프로시저
-
-
 CREATE SEQUENCE product_id_seq
 START WITH 1
 INCREMENT BY 1
