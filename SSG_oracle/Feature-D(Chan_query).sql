@@ -76,6 +76,47 @@ EXEC insert_product('2097001432075', '12090100', NULL, '10', 'sellStore002', 'br
 --15
 EXEC insert_product('1000067576484', '09010200', NULL, '10', 'sellStore005', 'brand005', '갤럭시탭 Trade-in OPEN', 788970, 0, '상품번호 : 1000067576484', '2024-04-10', 100);
 
+-----------------------------------------
+CREATE OR REPLACE PROCEDURE insert_productoption (
+    p_id          IN PRODUCTOPTION.ID%TYPE,
+    p_productid   IN PRODUCTOPTION.PRODUCTID%TYPE,
+    p_optionname  IN PRODUCTOPTION.OPTIONNAME%TYPE,
+    p_optionname2 IN PRODUCTOPTION.OPTIONNAME2%TYPE,
+    p_optionprice IN PRODUCTOPTION.OPTIONPRICE%TYPE,
+    p_optionstock IN PRODUCTOPTION.OPTIONSTOCK%TYPE
+) IS
+BEGIN
+    INSERT INTO SSGPRO.PRODUCTOPTION (
+        ID,
+        PRODUCTID,
+        OPTIONNAME,
+        OPTIONNAME2,
+        OPTIONPRICE,
+        OPTIONSTOCK
+    ) VALUES (
+        p_id,
+        p_productid,
+        p_optionname,
+        p_optionname2,
+        p_optionprice,
+        p_optionstock
+    );
+
+    COMMIT;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+END insert_productoption;
+
+--프로시저
+
+
+CREATE SEQUENCE product_id_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
 
 
 ----------------------------------------
