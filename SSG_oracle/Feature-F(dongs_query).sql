@@ -36,7 +36,7 @@ COMMIT;
 
 
 -- 배송 정보 시퀀스
-CREATE 
+CREATE
 SEQUENCE 
 seq_shippingid 
 START WITH 1 
@@ -47,6 +47,7 @@ NOCYCLE NOCACHE;
 ALTER TABLE shippinginformation RENAME COLUMN shppingmsg TO shippingmsg;
 
 -- 배송번호, 주문번호, 배송지번호, 배송요청사항, 배송상태, 택배 배송 요청사항, 수령위치, 현관출입방법, 배송 종료일
+-- 배송에 따라 다르게 구분?? -> SSG1 , SSGDAWN1, COMMON1 
 -- 배송 원하는 시간 + 날짜도 속성으로 들어가야한다. 회원도 넣을지 말지??
 -- 배송 상태는 일단 디폴트값으로 배송전을 넣자.
 CREATE OR REPLACE PROCEDURE up_insert_shipinfo
@@ -94,6 +95,20 @@ BEGIN
     
 --EXCEPTION
 END;
+
+
+-- 공동 현관 출입방법은 무조건 문앞에 놓아주세요를 선택했을때만 넣을 수 있다.
+-- 멤버 아이디 통일시켜야 할듯
+EXECUTE up_insert_shipinfo ( 1, 'memid', null , '배송전', '안전하게 배송해주세요~', '문앞에 놓아주세요',  '공동현관 출입번호-(#1234)' , null);
+EXECUTE up_insert_shipinfo ( 2, 'memid', null , '배송전', '친절한 배송 기사님께 감사 인사 전달해주세요.', '문앞에 놓아주세요',  '공동현관 출입번호-(#2222)' , null);
+EXECUTE up_insert_shipinfo ( 3, 'memid', null , '배송전', '상자에 신중하게 포장 부탁드려요.', '경비실에 보관해주세요', null , null);
+EXECUTE up_insert_shipinfo ( 4, 'memid', null , '배송전', '배송 시간이 조금 늦어져도 괜찮습니다~', '문앞에 놓아주세요',  '공동현관 출입번호-(#1010)' , null);
+EXECUTE up_insert_shipinfo ( 5, 'memid', null , '배송전', '특별한 배송 요청사항은 없습니다', '경비실에 보관해주세요',  null , null);
+EXECUTE up_insert_shipinfo ( 6, 'memid', null , '배송전', '특별한 요청 없음', '경비실에 보관해주세요',  null , null);
+EXECUTE up_insert_shipinfo ( 7, 'memid', null , '배송전', '방시혁 OUT', '문앞에 놓아주세요',  '공동현관 출입번호-(#5555)' , null);
+EXECUTE up_insert_shipinfo ( 8, 'memid', null , '배송전', '민희진 모자 GET', '문앞에 놓아주세요',  '공동현관 출입번호-(#7777)' , null);
+EXECUTE up_insert_shipinfo ( 9, 'memid', null , '배송전', '부드러운 소포에 담아주세요.', '3층 택배보관함 보관해주세요',  null , null);
+EXECUTE up_insert_shipinfo ( 10,'memid', null , '배송전', '배송 잘 부탁드립니다.', '문앞에 놓아주세요',  '공동현관 출입번호-(#3300)' , null);
 
 SELECT *
 FROM shippinginformation;
