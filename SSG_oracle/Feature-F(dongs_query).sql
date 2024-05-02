@@ -316,3 +316,57 @@ EXECUTE up_insert_search ( 'hive', '방탄소년단앨범');
 --SELECT *
 --FROM category;
 --
+
+
+상품 테이블에는 
+상품 코드 pk
+상품명 
+상품 설명
+      
+      
+상품 이미지 테이블
+순번 pk
+상품 코드 fk
+원래 이미지 명		a.gif
+등록될때 파일 이미지 명 a1.gif
+
+CREATE TABLE recipe_member
+(
+    memid VARCHAR2(100) PRIMARY KEY,
+    pwd VARCHAR2(100) NOT NULL
+    
+);
+
+CREATE TABLE recipe
+(
+     recipeid NUMBER primary key,
+     recipename VARCHAR2(1000)  NOT NULL,
+     recipecontent VARCHAR2(4000),
+     writer VARCHAR2(200) NOT NULL,
+     views NUMBER default 0,
+     writedate DATE,
+     FOREIGN KEY( writer ) REFERENCES recipe_member(memid) 
+);
+
+CREATE TABLE recipe_img
+(
+    imgid NUMBER PRIMARY KEY,
+    recipeid NUMBER,
+    defaultimg VARCHAR2(4000),
+    regimg VARCHAR2(4000),
+    FOREIGN KEY( recipeid ) REFERENCES recipe(recipeid) 
+);
+
+-- 레시피 테이블
+-- 넘버, 제목, 작성자, 
+
+-- 레시피 이미지 테이블
+
+SELECT *
+FROM recipe_member;
+
+SELECT *
+FROM recipe;
+
+SELECT *
+FROM recipe_img;
