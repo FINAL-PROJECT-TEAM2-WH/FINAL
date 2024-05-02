@@ -1,10 +1,10 @@
-ALTER TABLE product modify specialPriceId not null; 
--- 특가번호 null
-
-ALTER TABLE product MODIFY id VARCHAR2(50);
--- 상품코드 타입 변경
-ALTER TABLE product MODIFY pdName VARCHAR2(300);
---상품코드 타입 변경
+--ALTER TABLE product modify specialPriceId not null; 
+---- 특가번호 null
+--
+--ALTER TABLE product MODIFY id VARCHAR2(50);
+---- 상품코드 타입 변경
+--ALTER TABLE product MODIFY pdName VARCHAR2(300);
+----상품코드 타입 변경
 
 CREATE OR REPLACE PROCEDURE insert_product(
     p_id             IN  product.id%TYPE,
@@ -76,12 +76,7 @@ EXEC insert_product('2097001432075', '12090100', NULL, '10', 'sellStore002', 'br
 --15
 EXEC insert_product('1000067576484', '09010200', NULL, '10', 'sellStore005', 'brand005', '갤럭시탭 Trade-in OPEN', 788970, 0, '상품번호 : 1000067576484', '2024-04-10', 100);
 
-<<<<<<< HEAD
 
-
-=======
------------------------------------------
->>>>>>> 8700568660c206716ee32e187ca4f65a3d5bea22
 CREATE OR REPLACE PROCEDURE insert_productoption (
     p_id          IN PRODUCTOPTION.ID%TYPE,
     p_productid   IN PRODUCTOPTION.PRODUCTID%TYPE,
