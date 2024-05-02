@@ -157,16 +157,12 @@ EXEC insert_brand('brand013', null, '밀도');
 
 CREATE OR REPLACE PROCEDURE insert_sellerstore(
     p_id IN VARCHAR2,
-    p_sellerName IN VARCHAR2,
-    p_deliCompDate IN DATE,
-    p_orderDate IN DATE,
-    p_qaRes IN VARCHAR2,
-    p_reviewAvg IN VARCHAR2
+    p_sellerName IN VARCHAR2
 )
 IS
 BEGIN
-    INSERT INTO sellerstore (id, sellerName, deliCompDate, orderDate, qaRes, reviewAvg)
-    VALUES (p_id, p_sellerName, p_deliCompDate, p_orderDate, p_qaRes, p_reviewAvg);
+    INSERT INTO sellerstore (id, sellerName)
+    VALUES (p_id, p_sellerName);
     COMMIT;
     DBMS_OUTPUT.PUT_LINE('판매자 스토어 입력 성공.');
 EXCEPTION
@@ -174,12 +170,12 @@ EXCEPTION
         ROLLBACK;
         DBMS_OUTPUT.PUT_LINE('판매자 스토어 입력 실패 오류 : ' || SQLERRM);
 END;
-EXEC insert_sellerstore('sellStore001','시코르', null, null, '90%', '4.5');
-EXEC insert_sellerstore('sellStore002','이마트', null, null, '80%', '3.5');
-EXEC insert_sellerstore('sellStore003','지이크', null, null, '85%', '3.8');
-EXEC insert_sellerstore('sellStore004','콜드플레임', null, null, null, null);
-EXEC insert_sellerstore('sellStore005','신세계백화점', null, null, null, null);
-EXEC insert_sellerstore('sellStore006','한우비', null, null, null, null);
-EXEC insert_sellerstore('sellStore007','나래식품', null, null, null, null);
-EXEC insert_sellerstore('sellStore009','템퍼', null, null, null, null);
-EXEC insert_sellerstore('sellStore010','JBL', null, null, null, null);
+EXEC insert_sellerstore('sellStore001','시코르');
+EXEC insert_sellerstore('sellStore002','이마트');
+EXEC insert_sellerstore('sellStore003','지이크');
+EXEC insert_sellerstore('sellStore004','콜드플레임');
+EXEC insert_sellerstore('sellStore005','신세계백화점');
+EXEC insert_sellerstore('sellStore006','한우비');
+EXEC insert_sellerstore('sellStore007','나래식품');
+EXEC insert_sellerstore('sellStore009','템퍼');
+EXEC insert_sellerstore('sellStore010','JBL');

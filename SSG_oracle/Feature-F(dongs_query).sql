@@ -316,3 +316,4 @@ EXECUTE up_insert_search ( 'hive', '방탄소년단앨범');
 --SELECT *
 --FROM category;
 --
+
