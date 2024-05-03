@@ -31,6 +31,18 @@ DROP TABLE ShoppingCart CASCADE CONSTRAINTS;
 DROP TABLE applicant CASCADE CONSTRAINTS;
 DROP TABLE present CASCADE CONSTRAINTS;
 
+-- 배송옵션 시퀀스 삭제
+DROP SEQUENCE shippingoption_id_seq;
+-- 상품 시퀀스 삭제
+DROP SEQUENCE product_id_seq;
+-- 배송 정보 시퀀스 삭제
+DROP SEQUENCE seq_shippingid;
+-- 배송지 정보 테이블 시퀀스 삭제
+DROP SEQUENCE seqshipplaceinfo;
+-- 검색 테이블 시퀀스 삭제
+DROP SEQUENCE seq_search;
+
+
 CREATE TABLE payrecord (
     id number NOT NULL,
     OrderDate varchar2(100) NOT NULL,

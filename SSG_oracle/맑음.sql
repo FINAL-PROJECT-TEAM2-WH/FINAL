@@ -794,6 +794,10 @@ VALUES
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
     (15, '2024-05-15', 788970, 0, 0, '카드', 0, '1000067576484', 'newjeans', '0', 1);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 23b3f1283a3cce9e7a7ca03e5b3d55681875e67d
 
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)

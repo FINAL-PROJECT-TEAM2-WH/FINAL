@@ -96,23 +96,71 @@ BEGIN
 --EXCEPTION
 END;
 
-
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (1, '2024-05-01', 62000, 0, 1000, '카드', 0, '1000026532717', 'daetu01', '0', 1);
+    
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (2, '2024-05-02', 10580, 0, 0, '카드', 0, '1000544937242', 'daetu01', '0', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (3, '2024-05-03', 109000, 0, 0, '카드', 0, '1000587702102', 'daetu01', '4', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (4, '2024-05-04', 29800, 0, 0, '카드', 0, '2097001577943', 'd_Chan01', '0', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (5, '2024-05-05', 1194000, 0, 0, '카드', 0, '1000582326954', 'd_Chan01', '13', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (6, '2024-05-06', 132000, 0, 0, '카드', 0, '1000398650979', 'minziZzang', '15', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (7, '2024-05-07', 11800, 0, 500, '카드', 0, '1000014118201', 'd_Chan01', '18', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (8, '2024-05-08', 3580, 0, 0, '카드', 0, '2097001308233', 'minziZzang', '0', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (9, '2024-05-09', 19800, 0, 0, '카드', 0, '2097000257655', 'whyun01', '0', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (10, '2024-05-10', 23800, 0, 0, '카드', 0, '2097001557433', 'minziZzang', '0', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (11, '2024-05-11', 150000, 1, 0, '카드', 0, '1000579723160', 'whyun01', '26', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (12, '2024-05-12', 105245, 0, 0, '카드', 0, '1000280142269', 'whyun01', '0', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (13, '2024-05-13', 43900, 0, 0, '카드', 0, '1000059288917', 'hive', '29', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (14, '2024-05-14', 6500, 0, 0, '카드', 0, '2097001432075', 'hive', '0', 1);
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
+VALUES
+    (15, '2024-05-15', 788970, 0, 0, '카드', 0, '1000067576484', 'newjeans', '0', 1);
 -- 공동 현관 출입방법은 무조건 문앞에 놓아주세요를 선택했을때만 넣을 수 있다.
 -- 멤버 아이디 통일시켜야 할듯
-EXECUTE up_insert_shipinfo ( 1, 'memid', null , '배송전', '안전하게 배송해주세요~', '문앞에 놓아주세요',  '공동현관 출입번호-(#1234)' , null);
-EXECUTE up_insert_shipinfo ( 2, 'memid', null , '배송전', '친절한 배송 기사님께 감사 인사 전달해주세요.', '문앞에 놓아주세요',  '공동현관 출입번호-(#2222)' , null);
-EXECUTE up_insert_shipinfo ( 3, 'memid', null , '배송전', '상자에 신중하게 포장 부탁드려요.', '경비실에 보관해주세요', null , null);
-EXECUTE up_insert_shipinfo ( 4, 'memid', null , '배송전', '배송 시간이 조금 늦어져도 괜찮습니다~', '문앞에 놓아주세요',  '공동현관 출입번호-(#1010)' , null);
-EXECUTE up_insert_shipinfo ( 5, 'memid', null , '배송전', '특별한 배송 요청사항은 없습니다', '경비실에 보관해주세요',  null , null);
-EXECUTE up_insert_shipinfo ( 6, 'memid', null , '배송전', '특별한 요청 없음', '경비실에 보관해주세요',  null , null);
-EXECUTE up_insert_shipinfo ( 7, 'memid', null , '배송전', '방시혁 OUT', '문앞에 놓아주세요',  '공동현관 출입번호-(#5555)' , null);
-EXECUTE up_insert_shipinfo ( 8, 'memid', null , '배송전', '민희진 모자 GET', '문앞에 놓아주세요',  '공동현관 출입번호-(#7777)' , null);
-EXECUTE up_insert_shipinfo ( 9, 'memid', null , '배송전', '부드러운 소포에 담아주세요.', '3층 택배보관함 보관해주세요',  null , null);
-EXECUTE up_insert_shipinfo ( 10,'memid', null , '배송전', '배송 잘 부탁드립니다.', '문앞에 놓아주세요',  '공동현관 출입번호-(#3300)' , null);
+-- seq_shippingid.NEXTVAL , porderid, vplaceid, pshippingmsg, pshippingstate, pshippingrequest, preceiveposition, pentrance, pshippingenddate 
+EXECUTE up_insert_shipinfo ( 1, 'daetu01, '잘전달해주세요~', '배송전', '안전하게 배송해주세요~', '문앞에 놓아주세요',  '공동현관 출입번호-(#1234)' , null);
+EXECUTE up_insert_shipinfo ( 2, 2,  null , '잘전달해주세요~', '배송전', '친절한 배송 기사님께 감사 인사 전달해주세요.', '문앞에 놓아주세요',  '공동현관 출입번호-(#2222)' , null);
+EXECUTE up_insert_shipinfo ( 3, 3, null , '잘전달해주세요~',  '배송전', '상자에 신중하게 포장 부탁드려요.', '경비실에 보관해주세요', null , null);
+EXECUTE up_insert_shipinfo ( 4, 4, null , '잘전달해주세요~', '배송전', '배송 시간이 조금 늦어져도 괜찮습니다~', '문앞에 놓아주세요',  '공동현관 출입번호-(#1010)' , null);
+EXECUTE up_insert_shipinfo ( 5, 5, null , '잘전달해주세요~', '배송전', '특별한 배송 요청사항은 없습니다', '경비실에 보관해주세요',  null , null);
+EXECUTE up_insert_shipinfo ( 6, 6, null , '잘전달해주세요~', '배송전', '특별한 요청 없음', '경비실에 보관해주세요',  null , null);
+EXECUTE up_insert_shipinfo ( 7, 7, null , '잘전달해주세요~', '배송전', '방시혁 OUT', '문앞에 놓아주세요',  '공동현관 출입번호-(#5555)' , null);
+EXECUTE up_insert_shipinfo ( 8, 8, null , '잘전달해주세요~', '배송전', '민희진 모자 GET', '문앞에 놓아주세요',  '공동현관 출입번호-(#7777)' , null);
+EXECUTE up_insert_shipinfo ( 9, 9, null , '잘전달해주세요~', '배송전', '부드러운 소포에 담아주세요.', '3층 택배보관함 보관해주세요',  null , null);
+EXECUTE up_insert_shipinfo ( 10, 10, null , '잘전달해주세요~', '배송전', '배송 잘 부탁드립니다.', '문앞에 놓아주세요',  '공동현관 출입번호-(#3300)' , null);
 
 SELECT *
 FROM shippinginformation;
 
+SELECT *
+FROM shippingplaceinformation;
 
 
 -- 배송지 정보에서 회원 번호 데이터 유형 변경
