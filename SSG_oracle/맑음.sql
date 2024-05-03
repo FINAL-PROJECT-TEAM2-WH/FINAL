@@ -471,65 +471,66 @@ REFERENCES member (
 
 --맑음
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (1, '2024-05-01', 62000, 0, 1000, '카드',0 , '1000026532717', 'M001', '0');
+    (1, '2024-05-01', 62000, 0, 1000, '카드', 0, '1000026532717', 'daetu01', '0', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (2, '2024-05-02', 10580 , 0, 0, '카드', 0, '1000544937242', 'M002', '0');
+    (2, '2024-05-02', 10580, 0, 0, '카드', 0, '1000544937242', 'daetu01', '0', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (3, '2024-05-03', 109000, 0, 0, '카드', 0, '1000587702102', 'M003', '4');
+    (3, '2024-05-03', 109000, 0, 0, '카드', 0, '1000587702102', 'daetu01', '4', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (4, '2024-05-04', 29800, 0, 0, '카드', 0, '2097001577943', 'M004', '0');
+    (4, '2024-05-04', 29800, 0, 0, '카드', 0, '2097001577943', 'd_Chan01', '0', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (5, '2024-05-05', 1194000, 0, 0, '카드', 0, '1000582326954', 'M005', '13');
+    (5, '2024-05-05', 1194000, 0, 0, '카드', 0, '1000582326954', 'd_Chan01', '13', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (6, '2024-05-06', 132000 , 0, 0, '카드', 0,'1000398650979', 'M006', '15');
+    (6, '2024-05-06', 132000, 0, 0, '카드', 0, '1000398650979', 'minziZzang', '15', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (7, '2024-05-07', 11800, 0, 500, '카드', 0, '1000014118201', 'M007', '18');
+    (7, '2024-05-07', 11800, 0, 500, '카드', 0, '1000014118201', 'd_Chan01', '18', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (8, '2024-05-08', 3580, 0, 0, '카드', 0, '2097001308233', 'M008', '0');
+    (8, '2024-05-08', 3580, 0, 0, '카드', 0, '2097001308233', 'minziZzang', '0', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (9, '2024-05-09', 19800, 0, 0, '카드',0, '2097000257655', 'M009', '0');
+    (9, '2024-05-09', 19800, 0, 0, '카드', 0, '2097000257655', 'whyun01', '0', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (10, '2024-05-10', 23800, 0, 0, '카드', 0, '2097001557433', 'M010', '0');
+    (10, '2024-05-10', 23800, 0, 0, '카드', 0, '2097001557433', 'minziZzang', '0', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (11, '2024-05-11', 150000, 1, 0, '카드', 0, '1000579723160', 'M011', '26');
+    (11, '2024-05-11', 150000, 1, 0, '카드', 0, '1000579723160', 'whyun01', '26', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (12, '2024-05-12', 105245, 0, 0, '카드', 0, '1000280142269', 'M012', '0');
+    (12, '2024-05-12', 105245, 0, 0, '카드', 0, '1000280142269', 'whyun01', '0', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (13, '2024-05-13', 43900 , 0, 0, '카드', 0, '1000059288917', 'M013', '29');
+    (13, '2024-05-13', 43900, 0, 0, '카드', 0, '1000059288917', 'hive', '29', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (14, '2024-05-14', 6500, 0, 0, '카드', 0, '2097001432075', 'M014', '0');
+    (14, '2024-05-14', 6500, 0, 0, '카드', 0, '2097001432075', 'hive', '0', 1);
 
-INSERT INTO payrecord (id, OrderDate, OrderAmount, Coupon, Points, pmethod, present, productId, memId, id2)
+INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (15, '2024-05-15', 788970, 0, 0, '카드', 0, '1000067576484', 'M015', '0');
+    (15, '2024-05-15', 788970, 0, 0, '카드', 0, '1000067576484', 'newjeans', '0', 1);
+
 
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
