@@ -45,7 +45,7 @@ DROP SEQUENCE seq_search;
 
 CREATE TABLE payrecord (
     id number NOT NULL,
-    OrderDate varchar2(100) NOT NULL,
+    OrderDate date NOT NULL,
     OrderAmount number NOT NULL,
     id3 number DEFAULT 0 NULL,
     Points number NULL,

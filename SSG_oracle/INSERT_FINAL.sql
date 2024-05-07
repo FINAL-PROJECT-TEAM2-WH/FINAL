@@ -731,66 +731,66 @@ INSERT INTO coupon VALUES
 
 
 --     주문번호, 주문일자, 주문금액, 쿠폰번호, 사용포인트, 결제수단, 선물순번, 상품코드, 회원ID, 옵션코드, 결제여부
+--     주문번호, 주문일자, 주문금액, 쿠폰번호, 사용포인트, 결제수단, 선물순번, 상품코드, 회원ID, 옵션코드, 결제여부
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-01', 62000, 1, 1000, '카드', 1, '1000026532717', 'daetu01', '1', 1);
+    (payrecord_seq.nextval, sysdate, 62000, 1, 1000, '카드', 1, '1000026532717', 'daetu01', '1', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-02', 10580, 2, 0, '카드', null, '1000544937242', 'daetu01', '2', 1);
+    (payrecord_seq.nextval, sysdate, 10580, 2, 0, '카드', null, '1000544937242', 'daetu01', '2', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-03', 109000, null, 0, '카드', null, '1000587702102', 'daetu01', '3', 1);
+    (payrecord_seq.nextval, sysdate , 109000, null, 0, '카드', null, '1000587702102', 'daetu01', '3', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-04', 29800, 3, 0, '카드', null, '2097001577943', 'd_Chan01', '5', 1);
+    (payrecord_seq.nextval, sysdate, 29800, 3, 0, '카드', null, '2097001577943', 'd_Chan01', '5', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-05', 1194000, 4, 0, '카드', null, '1000582326954', 'd_Chan01', '13', 1);
+    (payrecord_seq.nextval, sysdate, 1194000, 4, 0, '카드', null, '1000582326954', 'd_Chan01', '13', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-06', 132000, 5, 0, '카드', null, '1000398650979', 'minziZzang', '15', 1);
+    (payrecord_seq.nextval, sysdate, 132000, 5, 0, '카드', null, '1000398650979', 'minziZzang', '15', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-07', 11800, 6, 500, '카드', null, '1000014118201', 'd_Chan01', '18', 1);
+    (payrecord_seq.nextval,sysdate, 11800, 6, 500, '카드', null, '1000014118201', 'd_Chan01', '18', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-08', 3580, null, 0, '카드', null, '2097001308233', 'minziZzang', null, 1);
+    (payrecord_seq.nextval, sysdate, 3580, null, 0, '카드', null, '2097001308233', 'minziZzang', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-09', 19800, null, 0, '카드', null, '2097000257655', 'whyun01', null, 1);
+    (payrecord_seq.nextval, sysdate, 19800, null, 0, '카드', null, '2097000257655', 'whyun01', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-10', 23800, 7, 0, '카드', null, '2097001557433', 'minziZzang', null, 1);
+    (payrecord_seq.nextval, sysdate, 23800, 7, 0, '카드', null, '2097001557433', 'minziZzang', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-11', 150000, 1, 0, '카드', null, '1000579723160', 'whyun01', '26', 1);
+    (payrecord_seq.nextval, sysdate, 150000, 1, 0, '카드', null, '1000579723160', 'whyun01', '26', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-12', 105245, 8, 0, '카드', null, '1000280142269', 'whyun01', null, 1);
+    (payrecord_seq.nextval, sysdate, 105245, 8, 0, '카드', null, '1000280142269', 'whyun01', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-13', 43900, null, 0, '카드', null, '1000059288917', 'hive', '29', 1);
+    (payrecord_seq.nextval, sysdate, 43900, null, 0, '카드', null, '1000059288917', 'hive', '29', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-14', 6500, null, 0, '카드', null, '2097001432075', 'hive', null, 1);
+    (payrecord_seq.nextval, sysdate, 6500, null, 0, '카드', null, '2097001432075', 'hive', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, '2024-05-15', 788970, null, 0, '카드', null, '1000067576484', 'newjeans', null, 1);
-
+    (payrecord_seq.nextval, sysdate, 788970, null, 0, '카드', null, '1000067576484', 'newjeans', null, 1);
 
 
 
