@@ -82,7 +82,7 @@ CREATE TABLE product (
     id VARCHAR2(50) NOT NULL,
     categoryId VARCHAR2(20) NOT NULL,
     specialPriceId NUMBER NULL,
-    shippingOptionId VARCHAR2(100) NOT NULL,
+    shippingOptionId NUMBER NOT NULL,
     sellerStoreId VARCHAR2(20) NOT NULL,
     brandId VARCHAR2(20) NOT NULL,
     pdName VARCHAR2(300) NULL,
@@ -201,7 +201,7 @@ CREATE TABLE specialprice (
 CREATE TABLE shippingInformation (
     id NUMBER NOT NULL,
     orderId number NOT NULL,
-    shippingPlaceId varchar2(200) NOT NULL,
+    shippingPlaceId NUMBER NOT NULL,
     shippingMsg VARCHAR2(4000) NULL,
     shippingState VARCHAR2(50) NOT NULL,
     shippingRequest VARCHAR2(4000) NULL,
