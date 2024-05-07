@@ -86,10 +86,9 @@ CREATE TABLE product (
     sellerStoreId VARCHAR2(20) NOT NULL,
     brandId VARCHAR2(20) NOT NULL,
     pdName VARCHAR2(300) NULL,
-    price NUMBER(20) NULL,
     pcontent VARCHAR2(3000) NULL,
     updateDay VARCHAR2(50) NULL,
-    stock NUMBER(10) NULL
+    
 );
 
 CREATE TABLE member (
@@ -141,7 +140,8 @@ CREATE TABLE productOption (
     id VARCHAR2(50) NOT NULL,
     productId VARCHAR2(20) NOT NULL,
     optionName VARCHAR2(100) NULL,
-    optionName2 VARCHAR2(100) NULL,
+    optionDesc VARCHAR2(100) NULL,
+    optionRef VARCHAR2(50) NULL,
     optionPrice NUMBER(10) NULL,
     optionStock NUMBER(10) NULL
 );
