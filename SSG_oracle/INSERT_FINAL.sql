@@ -727,6 +727,10 @@ INSERT INTO coupon VALUES
     (9, '무료배송', 5000, 15000, 0, 2, '전자제품', TO_DATE('2024-05-09', 'YYYY-MM-DD'), TO_DATE('2024-06-09', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
     (10, '할인', 100000, 30000, 15, 3, '모든제품', TO_DATE('2024-05-10', 'YYYY-MM-DD'), TO_DATE('2024-06-10', 'YYYY-MM-DD'));
+INSERT INTO coupon VALUES
+    (11, '할인', 70000, 40000, 8, 3, '모든제품', TO_DATE('2024-05-10', 'YYYY-MM-DD'), TO_DATE('2024-06-10', 'YYYY-MM-DD'));
+    INSERT INTO coupon VALUES
+    (12, '할인', 70000, 10000, 7, 3, '모든제품', TO_DATE('2024-05-10', 'YYYY-MM-DD'), TO_DATE('2024-06-10', 'YYYY-MM-DD'));
 
 
 
@@ -1104,3 +1108,5 @@ INSERT INTO applicant VALUES (4, 2, 'dyoung01', '구기자가 미백에 효과�
 INSERT INTO applicant VALUES (5, 2, 'mggun01', '꼭 테스트 해보고 싶습니다.', TO_DATE('2024-04-28'), '당첨', null);
 
 INSERT INTO applicant VALUES (6, 2, 'whyun01', '엄마가 요즘 탄력이랑 주름 관련해서 고민이 많으셔서 도움을 드리고 싶었는데 스틱제품은 잘 쓰실것 같아 신청합니다.', TO_DATE('2024-04-28'), '당첨', null);
+
+commit;
