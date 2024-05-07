@@ -91,6 +91,7 @@ CREATE TABLE product (
     
 );
 
+
 CREATE TABLE member (
     id varchar2(300) NOT NULL,
     email varchar2(300) NOT NULL,
@@ -102,8 +103,10 @@ CREATE TABLE member (
     registerDate DATE DEFAULT SYSDATE NULL,
     updateDate DATE DEFAULT SYSDATE NULL,
     loginNotification char(1) DEFAULT 0 NULL,
-    login2Notification char(1) DEFAULT 0 NULL
+    login2Notification char(1) DEFAULT 0 NULL,
+    privilege varchar2(300) DEFAULT 'member' NULL
 );
+
 
 CREATE TABLE interestBrand (
     id NUMBER NOT NULL,
@@ -342,6 +345,14 @@ CREATE TABLE present (
     rnum varchar2(2000) NULL
 );
 
+CREATE TABLE Auth (
+id varchar(300) NOT NULL,
+name varchar2 (300) NOT NULL,
+loginYN char(1)  DEFAULT 'Y' NULL,
+privilege varchar(300) NOT NULL
+);
+
+
 ALTER TABLE payrecord ADD CONSTRAINT PK_PAYRECORD PRIMARY KEY (
     id
 );
@@ -364,6 +375,10 @@ ALTER TABLE member ADD CONSTRAINT PK_MEMBER PRIMARY KEY (
 
 ALTER TABLE interestBrand ADD CONSTRAINT PK_INTERESTBRAND PRIMARY KEY (
     id
+);
+
+ALTER TABLE Auth ADD CONSTRAINT PK_AUTH PRIMARY KEY (
+id
 );
 
 ALTER TABLE interestGoods ADD CONSTRAINT PK_INTERESTGOODS PRIMARY KEY (
@@ -523,6 +538,13 @@ ALTER TABLE product ADD CONSTRAINT FK_shippingOption_TO_product_1 FOREIGN KEY (
     shippingOptionId
 )
 REFERENCES shippingOption (
+    id
+);
+
+ALTER TABLE Auth ADD CONSTRAINT FK_member_TO_auth_1 FOREIGN KEY (
+    id
+)
+REFERENCES member (
     id
 );
 
