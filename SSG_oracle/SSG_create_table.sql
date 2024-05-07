@@ -130,7 +130,7 @@ CREATE TABLE interestCategory (
 CREATE TABLE productImg (
     id VARCHAR2(50) NOT NULL,
     productId VARCHAR2(20) NOT NULL,
-    imgurl VARCHAR2(50) NULL,
+    imgurl VARCHAR2(1000) NULL,
     imgcontent VARCHAR2(100) NULL
 );
 
