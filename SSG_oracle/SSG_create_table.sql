@@ -79,7 +79,7 @@ CREATE TABLE announcement (
 );
 
 CREATE TABLE product (
-    id VARCHAR2(50) NOT NULL,
+    id NUMBER NOT NULL,
     categoryId VARCHAR2(20) NOT NULL,
     specialPriceId NUMBER NULL,
     shippingOptionId NUMBER NOT NULL,
@@ -133,15 +133,15 @@ CREATE TABLE interestCategory (
 );
 
 CREATE TABLE productImg (
-    id VARCHAR2(50) NOT NULL,
-    productId VARCHAR2(20) NOT NULL,
+    id NUMBER NOT NULL,
+    productId NUMBER NOT NULL,
     imgurl VARCHAR2(1000) NULL,
     imgcontent VARCHAR2(100) NULL
 );
 
 CREATE TABLE productOption (
-    id VARCHAR2(50) NOT NULL,
-    productId VARCHAR2(20) NOT NULL,
+    id NUMBER NOT NULL,
+    productId NUMBER NOT NULL,
     optionName VARCHAR2(100) NULL,
     optionDesc VARCHAR2(100) NULL,
     optionRef VARCHAR2(50) NULL,
@@ -161,10 +161,10 @@ CREATE TABLE loginLog (
 );
 
 CREATE TABLE review (
-    id VARCHAR2(50) NOT NULL,
-    productId VARCHAR2(20) NOT NULL,
+    id NUMBER NOT NULL,
+    productId NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
-    reviewOption VARCHAR2(300) NULL,
+    productOptionId NUMBER NULL,
     reviewContent VARCHAR2(3000) NULL,
     reviewDate VARCHAR2(100) NULL,
     reviewType VARCHAR2(100) NULL,
@@ -243,23 +243,20 @@ CREATE TABLE quitMember (
 );
 
 CREATE TABLE reviewImg (
-    id VARCHAR2(50) NOT NULL,
-    reviewId VARCHAR2(50) NOT NULL,
+    id NUMBER NOT NULL,
+    reviewId NUMBER NOT NULL,
     reviewImgUrl VARCHAR2(100) NULL
 );
 
 CREATE TABLE qna (
-    id VARCHAR2(100) NOT NULL,
-    productId VARCHAR2(20) NOT NULL,
+    id NUMBER NOT NULL,
+    productId NUMBER NOT NULL,
     memId varchar2(300) NOT NULL,
-    qContent VARCHAR2(3000)
-
- NULL,
+    qContent VARCHAR2(3000) NULL,
     qDate VARCHAR2(50) NULL,
     aContent VARCHAR2(3000) NULL,
     aDate VARCHAR2(50) NULL
 );
-
 CREATE TABLE Agreement (
     id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
