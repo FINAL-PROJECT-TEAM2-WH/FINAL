@@ -42,6 +42,10 @@ DROP SEQUENCE seqshipplaceinfo;
 -- 검색 테이블 시퀀스 삭제
 DROP SEQUENCE seq_search;
 
+drop sequence pointrecord_seq;
+drop sequence couponrecord_seq;
+drop sequence payrecord_seq;
+
 
 CREATE TABLE payrecord (
     id number NOT NULL,

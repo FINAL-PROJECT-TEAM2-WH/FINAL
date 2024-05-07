@@ -518,6 +518,8 @@ INSERT INTO specialprice VALUES (2, 'https://sstatic.ssgcdn.com/promo/event/ssg/
 
 INSERT INTO specialprice VALUES (3, 'https://sstatic.ssgcdn.com/promo/event/ssg/202404/44900931049498046.jpg' , 'LG프라엘 가정의달 ~28%할인 쓱단독 추가 사은품 + 선물 쇼핑백', TO_DATE('2024-05-01'), TO_DATE('2024-05-31'), 23);
 
+INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_DATE('9999-05-31'), 0);
+
 
 
 ------------------------------------------------------------------------------------------------
@@ -566,7 +568,7 @@ EXEC insert_product('1000059288917', '09090102', 0, '9', 'sellStore010', 'brand0
 EXEC insert_product('2097001432075', '12090100', 0, '10', 'sellStore002', 'brand013', '[밀도] 담백식빵 480g', 6500, '하얀 속살의 보들 보들한 매력 결대로 쭉 찢어서 한입 먹으면 입안에서 사르르 녹는 부드러움에 반하실 거예요. 식빵 그 자체만으로도 매력적인 밀도의 시그니처 담백식빵을 줄 서는 번거로움 없이 편하게 집에서 만나보세요.', '2024-03-17', 1000);
 
 --15
-EXEC insert_product('1000067576484', '09010200',0 , '10', 'sellStore005', 'brand005', '갤럭시탭 Trade-in OPEN', 788970,  '상품번호 : 1000067576484', '2024-04-10', 100);
+EXEC insert_product('1000067576484', '09010200', 0 , '10', 'sellStore005', 'brand005', '갤럭시탭 Trade-in OPEN', 788970,  '상품번호 : 1000067576484', '2024-04-10', 100);
 
 
 
@@ -795,7 +797,7 @@ INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, pr
 VALUES
     (payrecord_seq.nextval, sysdate, 788970, null, 0, '카드', null, '1000067576484', 'newjeans', null, 1);
 
-
+select * from payrecord;
 
 insert into points values (7214915413320664, 100, 'GB1C4UBQNF20');
 insert into points values (1109694324250316, 200, 'UDlQI3r5FUPY');
