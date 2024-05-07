@@ -42,10 +42,14 @@ DROP SEQUENCE seqshipplaceinfo;
 -- 검색 테이블 시퀀스 삭제
 DROP SEQUENCE seq_search;
 
+drop sequence pointrecord_seq;
+drop sequence couponrecord_seq;
+drop sequence payrecord_seq;
+
 
 CREATE TABLE payrecord (
     id number NOT NULL,
-    OrderDate varchar2(100) NOT NULL,
+    OrderDate date NOT NULL,
     OrderAmount number NOT NULL,
     id3 number DEFAULT 0 NULL,
     Points number NULL,
@@ -82,11 +86,9 @@ CREATE TABLE product (
     sellerStoreId VARCHAR2(20) NOT NULL,
     brandId VARCHAR2(20) NOT NULL,
     pdName VARCHAR2(300) NULL,
-    price NUMBER(20) NULL,
-    sale NUMBER(2) NULL,
     pcontent VARCHAR2(3000) NULL,
-    updateDay VARCHAR2(50) NULL,
-    stock NUMBER(10) NULL
+    updateDay VARCHAR2(50) NULL
+    
 );
 
 CREATE TABLE member (
@@ -138,7 +140,8 @@ CREATE TABLE productOption (
     id VARCHAR2(50) NOT NULL,
     productId VARCHAR2(20) NOT NULL,
     optionName VARCHAR2(100) NULL,
-    optionName2 VARCHAR2(100) NULL,
+    optionDesc VARCHAR2(100) NULL,
+    optionRef VARCHAR2(50) NULL,
     optionPrice NUMBER(10) NULL,
     optionStock NUMBER(10) NULL
 );
