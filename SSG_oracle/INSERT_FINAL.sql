@@ -35,6 +35,28 @@ INCREMENT BY 1
 NOCACHE NOCYCLE;
 
 
+-- 주문 시퀀스
+create sequence payrecord_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
+
+-- 포인트내역 시퀀스
+create sequence pointrecord_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
+
+-- 쿠폰내역 시퀀스
+create sequence couponrecord_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
+
+
 -- 회원insert 프로시저 
 create or replace PROCEDURE ins_member 
 (
@@ -256,7 +278,9 @@ CREATE OR REPLACE PROCEDURE ps_insert_shipPlaceInfo
     pmemid shippingplaceinformation.memid%TYPE,
     paddrnick shippingplaceinformation.addressnick%TYPE,
     preceivemem shippingplaceinformation.receivemem%TYPE,
-    paddr shippingplaceinformation.address%TYPE,
+    proadAddress shippingplaceinformation.roadAddress%TYPE,
+	pjibunAddress shippingplaceinformation.jibunAddress%TYPE,
+	pdetailAddress shippingplaceinformation.detailAddress%TYPE,
     ptel shippingplaceinformation.tel%TYPE,
     ppostnum shippingplaceinformation.postnum%TYPE,
     pdefaultship shippingplaceinformation.defaultshipping%TYPE
@@ -278,8 +302,8 @@ BEGIN
     IF vcount < 1 THEN
     RAISE_APPLICATION_ERROR(-20001, '없는 회원번호입니다.');
     ELSE 
-    INSERT INTO shippingplaceinformation ( id, memid, addressnick, receivemem, address, tel, postnum, defaultshipping)
-    VALUES ( seqshipplaceinfo.NEXTVAL , vmemid, paddrnick, preceivemem, paddr, ptel, ppostnum, pdefaultship );
+    INSERT INTO shippingplaceinformation ( id, memid, addressnick, receivemem, roadAddress, jibunAddress, detailAddress, tel, postnum, defaultshipping)
+    VALUES ( seqshipplaceinfo.NEXTVAL , vmemid, paddrnick, preceivemem, proadAddress, pjibunAddress, pdetailAddress, ptel, ppostnum, pdefaultship );
     COMMIT;
     END IF;
 --EXCEPTION
@@ -709,63 +733,64 @@ INSERT INTO coupon VALUES
 --     주문번호, 주문일자, 주문금액, 쿠폰번호, 사용포인트, 결제수단, 선물순번, 상품코드, 회원ID, 옵션코드, 결제여부
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (1, '2024-05-01', 62000, 1, 1000, '카드', 1, '1000026532717', 'daetu01', '1', 1);
+    (payrecord_seq.nextval, '2024-05-01', 62000, 1, 1000, '카드', 1, '1000026532717', 'daetu01', '1', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (2, '2024-05-02', 10580, 2, 0, '카드', null, '1000544937242', 'daetu01', '2', 1);
+    (payrecord_seq.nextval, '2024-05-02', 10580, 2, 0, '카드', null, '1000544937242', 'daetu01', '2', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (3, '2024-05-03', 109000, null, 0, '카드', null, '1000587702102', 'daetu01', '3', 1);
+    (payrecord_seq.nextval, '2024-05-03', 109000, null, 0, '카드', null, '1000587702102', 'daetu01', '3', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (4, '2024-05-04', 29800, 3, 0, '카드', null, '2097001577943', 'd_Chan01', '5', 1);
+    (payrecord_seq.nextval, '2024-05-04', 29800, 3, 0, '카드', null, '2097001577943', 'd_Chan01', '5', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (5, '2024-05-05', 1194000, 4, 0, '카드', null, '1000582326954', 'd_Chan01', '13', 1);
+    (payrecord_seq.nextval, '2024-05-05', 1194000, 4, 0, '카드', null, '1000582326954', 'd_Chan01', '13', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (6, '2024-05-06', 132000, 5, 0, '카드', null, '1000398650979', 'minziZzang', '15', 1);
+    (payrecord_seq.nextval, '2024-05-06', 132000, 5, 0, '카드', null, '1000398650979', 'minziZzang', '15', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (7, '2024-05-07', 11800, 6, 500, '카드', null, '1000014118201', 'd_Chan01', '18', 1);
+    (payrecord_seq.nextval, '2024-05-07', 11800, 6, 500, '카드', null, '1000014118201', 'd_Chan01', '18', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (8, '2024-05-08', 3580, null, 0, '카드', null, '2097001308233', 'minziZzang', null, 1);
+    (payrecord_seq.nextval, '2024-05-08', 3580, null, 0, '카드', null, '2097001308233', 'minziZzang', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (9, '2024-05-09', 19800, null, 0, '카드', null, '2097000257655', 'whyun01', null, 1);
+    (payrecord_seq.nextval, '2024-05-09', 19800, null, 0, '카드', null, '2097000257655', 'whyun01', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (10, '2024-05-10', 23800, 7, 0, '카드', null, '2097001557433', 'minziZzang', null, 1);
+    (payrecord_seq.nextval, '2024-05-10', 23800, 7, 0, '카드', null, '2097001557433', 'minziZzang', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (11, '2024-05-11', 150000, 1, 0, '카드', null, '1000579723160', 'whyun01', '26', 1);
+    (payrecord_seq.nextval, '2024-05-11', 150000, 1, 0, '카드', null, '1000579723160', 'whyun01', '26', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (12, '2024-05-12', 105245, 8, 0, '카드', null, '1000280142269', 'whyun01', null, 1);
+    (payrecord_seq.nextval, '2024-05-12', 105245, 8, 0, '카드', null, '1000280142269', 'whyun01', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (13, '2024-05-13', 43900, null, 0, '카드', null, '1000059288917', 'hive', '29', 1);
+    (payrecord_seq.nextval, '2024-05-13', 43900, null, 0, '카드', null, '1000059288917', 'hive', '29', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (14, '2024-05-14', 6500, null, 0, '카드', null, '2097001432075', 'hive', null, 1);
+    (payrecord_seq.nextval, '2024-05-14', 6500, null, 0, '카드', null, '2097001432075', 'hive', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (15, '2024-05-15', 788970, null, 0, '카드', null, '1000067576484', 'newjeans', null, 1);
+    (payrecord_seq.nextval, '2024-05-15', 788970, null, 0, '카드', null, '1000067576484', 'newjeans', null, 1);
+
 
 
 
@@ -784,75 +809,79 @@ insert into points values (6802392665232420, 100, 'qteQYT753XJ7');
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
 VALUES
-    (1, 'daetu01', '7214915413320664', 100, 1, 1);
+    (pointrecord_seq.nextval, 'daetu01', '7214915413320664', 100, 1, 1);
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
 VALUES
-    (2, 'newjeans', '1109694324250316', 200, 2, 2);
+    (pointrecord_seq.nextval, 'newjeans', '1109694324250316', 200, 2, 2);
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
 VALUES
-    (3, 'hive', '8314548743334128', 300, 1, 3);
+    (pointrecord_seq.nextval, 'hive', '8314548743334128', 300, 1, 3);
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
 VALUES
-    (4, 'd_Chan01', '9377727979389141', 400, 2, 4);
+    (pointrecord_seq.nextval, 'd_Chan01', '9377727979389141', 400, 2, 4);
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
 VALUES
-    (5, 'minziZzang', '4882538104554810', 500, 1, 5);
+    (pointrecord_seq.nextval, 'minziZzang', '4882538104554810', 500, 1, 5);
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
 VALUES
-    (6, 'minziZzang', '7923020691828206', 600, 2, 6);
+    (pointrecord_seq.nextval, 'minziZzang', '7923020691828206', 600, 2, 6);
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
 VALUES
-    (7, 'whyun01', '4711589896008036', 700, 1, 7);
+    (pointrecord_seq.nextval, 'whyun01', '4711589896008036', 700, 1, 7);
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
 VALUES
-    (8, 'whyun01', '2658360255978897', 800, 2, 8);
+    (pointrecord_seq.nextval, 'whyun01', '2658360255978897', 800, 2, 8);
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
 VALUES
-    (9, 'whyun01', '5620299371129935', 900, 1, 9);
+    (pointrecord_seq.nextval, 'whyun01', '5620299371129935', 900, 1, 9);
 
 INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
 VALUES
-    (10, 'whyun01', '6802392665232420', 1000, 2, 10);
+    (pointrecord_seq.nextval, 'whyun01', '6802392665232420', 1000, 2, 10);
 
 
 
-INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
-    (1, 'daetu01', 1, TO_DATE('2024-05-01', 'YYYY-MM-DD'));
 
 INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
-    (2, 'newjeans', 2, TO_DATE('2024-05-02', 'YYYY-MM-DD'));
+    (couponrecord_seq.nextval, 'daetu01', 1, TO_DATE('2024-05-01', 'YYYY-MM-DD'));
 
 INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
-    (3, 'newjeans', 3, TO_DATE('2024-05-03', 'YYYY-MM-DD'));
+    (couponrecord_seq.nextval, 'newjeans', 2, TO_DATE('2024-05-02', 'YYYY-MM-DD'));
 
 INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
-    (4, 'daetu01', 4, TO_DATE('2024-05-04', 'YYYY-MM-DD'));
+    (couponrecord_seq.nextval, 'newjeans', 3, TO_DATE('2024-05-03', 'YYYY-MM-DD'));
 
 INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
-    (5, 'd_Chan01', 5, TO_DATE('2024-05-05', 'YYYY-MM-DD'));
+    (couponrecord_seq.nextval, 'daetu01', 4, TO_DATE('2024-05-04', 'YYYY-MM-DD'));
 
 INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
-    (6, 'minziZzang', 6, TO_DATE('2024-05-06', 'YYYY-MM-DD'));
+    (couponrecord_seq.nextval, 'd_Chan01', 5, TO_DATE('2024-05-05', 'YYYY-MM-DD'));
 
 INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
-    (7, 'minziZzang', 7, TO_DATE('2024-05-07', 'YYYY-MM-DD'));
+    (couponrecord_seq.nextval, 'minziZzang', 6, TO_DATE('2024-05-06', 'YYYY-MM-DD'));
 
 INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
-    (8, 'd_Chan01', 8, TO_DATE('2024-05-08', 'YYYY-MM-DD'));
+    (couponrecord_seq.nextval, 'minziZzang', 7, TO_DATE('2024-05-07', 'YYYY-MM-DD'));
 
 INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
-    (9, 'd_Chan01', 1, TO_DATE('2024-05-09', 'YYYY-MM-DD'));
+    (couponrecord_seq.nextval, 'd_Chan01', 8, TO_DATE('2024-05-08', 'YYYY-MM-DD'));
 
 INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
-    (10, 'hive', 2, TO_DATE('2024-05-10', 'YYYY-MM-DD'));
+    (couponrecord_seq.nextval, 'd_Chan01', 1, TO_DATE('2024-05-09', 'YYYY-MM-DD'));
+
+INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
+    (couponrecord_seq.nextval, 'hive', 2, TO_DATE('2024-05-10', 'YYYY-MM-DD'));
+    
+
+    
     
 INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
     (1, 'minziZzang', '1000544937242', TO_DATE('2024-05-01', 'YYYY-MM-DD'));
@@ -894,67 +923,79 @@ INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
 -- 배송 상태는 일단 디폴트값으로 배송전을 넣자.
 -- 공동 현관 출입방법은 무조건 문앞에 놓아주세요를 선택했을때만 넣을 수 있다.
 -- 멤버 아이디 통일시켜야 할듯
-EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '서울특별시 강남구 강남대로94길 83 (역삼동)', '010-1234-5678', '06131', 'X' );
+-- ADDRESS 없애고 도로명주소, 지번주소, 상세주소 추가
+--    pmemid shippingplaceinformation.memid%TYPE,
+--    paddrnick shippingplaceinformation.addressnick%TYPE,
+--    preceivemem shippingplaceinformation.receivemem%TYPE,
+--    proadAddress shippingplaceinformation.roadAddress%TYPE,
+--	  pjibunAddress shippingplaceinformation.jibunAddress%TYPE,
+--	  pdetailAddress shippingplaceinformation.detailAddress%TYPE,
+--    ptel shippingplaceinformation.tel%TYPE,
+--    ppostnum shippingplaceinformation.postnum%TYPE,
+--    pdefaultship shippingplaceinformation.defaultshipping%TYPE
+ALTER TABLE shippingplaceinformation ;
+
+EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X' );
 
 -- 지번 : 서울특별시 중구 태평로1가 31 서울특별시청
 -- 상세주소 : 서울특별시청
-EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '서울특별시 중구 세종대로 110 (태평로1가)', '010-1234-5678', '04524', 'X' );
+EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '서울특별시 중구 세종대로 110', '서울특별시 중구 태평로1가 31', '서울특별시청',  '010-1234-5678', '04524', 'X' );
 
 -- 지번 : 경기도 수원시 장안구 조원동 10 아토피센터 2층
 -- 상세주소 : 아토피센터 2층
-EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '경기도 수원시 장안구 수일로233번길 144 (조원동)', '010-1234-5678', '05343', '이번만배송지' );
+EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '경기도 수원시 장안구 수일로233번길 144', '경기도 수원시 장안구 조원동 10 아토피센터 2층', '아토피센터 2층', '010-1234-5678', '05343', '이번만배송지' );
 
 -- 지번 : 서울특별시 강남구 역삼동 735 8층 쌍용교육센터
 -- 상세주소 : 8층 쌍용교육센터
-EXECUTE ps_insert_shipplaceinfo( 'm_eum01', '맑음학원', '맑음', '서울특별시 강남구 테헤란로 132 8층 쌍용교육센터 (역삼동) ', '010-1010-2020', '06235', '기본배송지' );
+EXECUTE ps_insert_shipplaceinfo( 'm_eum01', '맑음학원', '맑음', '서울특별시 강남구 테헤란로 132', '서울특별시 강남구 역삼동 735 8층 쌍용교육센터', '8층 쌍용교육센터', '010-1010-2020', '06235', '기본배송지' );
 
 -- 지번 : 강원특별자치도 평창군 평창읍 약수리 15-4 약수 클산종합가구
 -- 상세주소 : 클산종합가구
-EXECUTE ps_insert_shipplaceinfo( 'm_eum01', '맑음', '맑음', '강원특별자치도 평창군 평창읍 평창강로 1236-4', '010-1010-2020', '25373', 'X' );
+EXECUTE ps_insert_shipplaceinfo( 'm_eum01', '맑음', '맑음', '강원특별자치도 평창군 평창읍 평창강로 1236-4', '강원특별자치도 평창군 평창읍 약수리 15-4 약수 클산종합가구', '클산종합가구',  '010-1010-2020', '25373', 'X' );
 
 -- 지번 : 경기도 화성시 신동 산179 호반써밋 동탄 101동 101호
 -- 상세주소 : 101동 101호 (신동, 호반써밋 동탄)
-EXECUTE ps_insert_shipplaceinfo( 'd_Chan01', '동찬집', '동찬', '경기 화성시 동탄신리천로4길 48', '010-1111-2222', '18495', '기본배송지' );
+EXECUTE ps_insert_shipplaceinfo( 'd_Chan01', '동찬집', '동찬', '경기 화성시 동탄신리천로4길 48', '경기도 화성시 신동 산179 호반써밋 동탄 101동 101호', '101동 101호 (신동, 호반써밋 동탄)', '010-1111-2222', '18495', '기본배송지' );
 
 -- 지번 : 서울특별시 강남구 역삼동 825 미진프라자 스타벅스
 -- 상세주소 : 스타벅스
-EXECUTE ps_insert_shipplaceinfo( 'd_Chan01', '카페', '카페', '서울특별시 강남구 강남대로 390 (역삼동)', '010-1111-2222', '06232', 'X' );
+EXECUTE ps_insert_shipplaceinfo( 'd_Chan01', '카페', '카페', '서울특별시 강남구 강남대로 390', '서울특별시 강남구 역삼동 825 미진프라자 스타벅스', '스타벅스', '010-1111-2222', '06232', 'X' );
 
--- 지번 : 서울특별시 강남구 역삼동 645-20 역삼생화 307호
+-- 지번 : 서울특별시 강남구 역삼동 645-20 역삼생화 308호
 -- 상세주소 : 역삼생활 308호
-EXECUTE ps_insert_shipplaceinfo( 'dyoung01', '동영집', '동스', '서울특별시 강남구 강남대로94길 83 (역삼동)', '010-3333-4444', '06131', '기본배송지' );
+EXECUTE ps_insert_shipplaceinfo( 'dyoung01', '동영집', '동스', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20 역삼생화 308호', '역삼생활 308호', '010-3333-4444', '06131', '기본배송지' );
 
 -- 지번 : 서울특별시 종로구 관철동 43-15 숙달돼지
 -- 상세주소 : 숙달돼지
-EXECUTE ps_insert_shipplaceinfo( 'dyoung01', '동스', '동스', '서울 종로구 종로8길 15', '010-3333-4444', '03189', 'X' );
+EXECUTE ps_insert_shipplaceinfo( 'dyoung01', '동스', '동스', '서울 종로구 종로8길 15', '서울특별시 종로구 관철동 43-15 숙달돼지', '숙달돼지', '010-3333-4444', '03189', 'X' );
 
 -- 지번 : 경기도 성남시 분당구 정자동 178-4 네이버 1784 1층
 -- 상세주소 : 네이버 1784 1층
-EXECUTE ps_insert_shipplaceinfo( 'mggun01', '직장', '명스', '경기도 성남시 분당구 정자일로 95', '010-4444-5555', '13561', '기본배송지' );
+EXECUTE ps_insert_shipplaceinfo( 'mggun01', '직장', '명스', '경기도 성남시 분당구 정자일로 95', '경기도 성남시 분당구 정자동 178-4 네이버 1784 1층', '네이버 1784 1층', '010-4444-5555', '13561', '기본배송지' );
 
 -- 지번 : 부산광역시 수영구 남천동 148-4 비치아파트 101동 101호
 -- 상세주소 : 비치아파트 101동 101호
-EXECUTE ps_insert_shipplaceinfo( 'mggun01', '명건', '명건', '부산광역시 수영구 광안해변로 100', '010-4444-5555', '48305', 'X' );
+EXECUTE ps_insert_shipplaceinfo( 'mggun01', '명건', '명건', '부산광역시 수영구 광안해변로 100', '부산광역시 수영구 남천동 148-4 비치아파트 101동 101호', '비치아파트 101동 101호', '010-4444-5555', '48305', 'X' );
 
 -- 지번 : 서울특별시 강남구 삼성동 16-1 강남구청 1층
 -- 상세주소 :  1층 (삼성동)
-EXECUTE ps_insert_shipplaceinfo( 'mggun01', '강남구청', '명건', '서울특별시 강남구 학동로 426', '010-4444-5555', '06090', 'X' );
+EXECUTE ps_insert_shipplaceinfo( 'mggun01', '강남구청', '명건', '서울특별시 강남구 학동로 426', '서울특별시 강남구 삼성동 16-1 강남구청 1층', '1층 (삼성동)', '010-4444-5555', '06090', 'X' );
 
 -- 지번 : 서울특별시 노원구 상계동 701-1 노원구청 2층
 -- 상세주소 : 노원구청 2층
-EXECUTE ps_insert_shipplaceinfo( 'whyun01', '우현', '우현', '서울특별시 노원구 노해로 437', '010-5555-6666', '01689', 'X' );
+EXECUTE ps_insert_shipplaceinfo( 'whyun01', '우현', '우현', '서울특별시 노원구 노해로 437', '서울특별시 노원구 상계동 701-1 노원구청 2층', '노원구청 2층', '010-5555-6666', '01689', 'X' );
 
 -- 지번 : 서울특별시 노원구 공릉동 744 건영장미아파트 101동 101호
 -- 상세주소 : 101동 101호 (공릉동, 건영장미아파트)
-EXECUTE ps_insert_shipplaceinfo( 'whyun01', '우현집', '우현', '서울특별시 노원구 공릉로51길 14-17)', '010-6666-7777', '01833', '기본배송지' );
+EXECUTE ps_insert_shipplaceinfo( 'whyun01', '우현집', '우현', '서울특별시 노원구 공릉로51길 14-17)', '서울특별시 노원구 공릉동 744 건영장미아파트 101동 101호', '101동 101호 (공릉동, 건영장미아파트)', '010-6666-7777', '01833', '기본배송지' );
 
 -- 지번 : 서울특별시 용산구 한강로3가 65-9
 -- 상세주소 : 하이브
-EXECUTE ps_insert_shipplaceinfo( 'minziZzang', '하이브', '민지', '서울특별시 용산구 한강대로 42', '010-9999-9999', '04389', '기본배송지' );
+EXECUTE ps_insert_shipplaceinfo( 'minziZzang', '하이브', '민지', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-9999-9999', '04389', '기본배송지' );
 
 -- 지번 : 서울특별시 용산구 한강로3가 65-9
 -- 상세주소 : 하이브
-EXECUTE ps_insert_shipplaceinfo( 'hive', '하이브', '하이브', '서울특별시 용산구 한강대로 42', '010-8888-9999', '04389', '기본배송지' );
+EXECUTE ps_insert_shipplaceinfo( 'hive', '하이브', '하이브', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-8888-9999', '04389', '기본배송지' );
 
 
 -- 배송정보 INSERT 프로시저 실행

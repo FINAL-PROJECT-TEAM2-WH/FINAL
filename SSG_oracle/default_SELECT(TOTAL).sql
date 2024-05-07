@@ -57,6 +57,14 @@ SELECT id, spclImg, spclNm, spclStrDt, spclPrcEnDt, spclDscnRt FROM specialprice
 -- shippingInformation 테이블
 SELECT id, orderId, shippingPlaceId, shippingMsg, shippingState, shippingRequest, receivePosition, entrance, ShippingEndDate FROM shippingInformation;
 
+--SELECT id
+--FROM shippingPlaceInformation
+--WHERE memid = 'daetu01' AND (defaultshipping = '기본배송지' OR defaultshipping='이번만배송지');
+
+UPDATE shippingPlaceInformation
+SET shippingPlaceInformation = 'X'
+WHERE id = 3;
+
 -- shippingPlaceInformation 테이블
 SELECT id, memid, addressNick, receiveMem, address, tel, postNum, defaultShipping FROM shippingPlaceInformation;
 

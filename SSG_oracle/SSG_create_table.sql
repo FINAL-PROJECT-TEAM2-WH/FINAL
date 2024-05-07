@@ -212,9 +212,11 @@ CREATE TABLE shippingPlaceInformation (
     memid varchar2(300) NOT NULL,
     addressNick VARCHAR2(100) NULL,
     receiveMem VARCHAR2(100) NULL,
-    address VARCHAR2(300) NOT NULL,
+    roadAddress VARCHAR2(100) NULL,
+	jibunAddress VARCHAR2(100) NULL,
+	detailAddress VARCHAR2(100) NULL,
     tel VARCHAR2(30) NULL,
-    postNum NUMBER NULL,
+    postNum VARCHAR2(10) NULL,
     defaultShipping VARCHAR2(20) NULL
 );
 
