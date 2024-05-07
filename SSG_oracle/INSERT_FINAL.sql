@@ -933,7 +933,6 @@ INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
 --    ptel shippingplaceinformation.tel%TYPE,
 --    ppostnum shippingplaceinformation.postnum%TYPE,
 --    pdefaultship shippingplaceinformation.defaultshipping%TYPE
-ALTER TABLE shippingplaceinformation ;
 
 EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X' );
 
@@ -1104,3 +1103,4 @@ INSERT INTO applicant VALUES (4, 2, 'dyoung01', '구기자가 미백에 효과�
 INSERT INTO applicant VALUES (5, 2, 'mggun01', '꼭 테스트 해보고 싶습니다.', TO_DATE('2024-04-28'), '당첨', null);
 
 INSERT INTO applicant VALUES (6, 2, 'whyun01', '엄마가 요즘 탄력이랑 주름 관련해서 고민이 많으셔서 도움을 드리고 싶었는데 스틱제품은 잘 쓰실것 같아 신청합니다.', TO_DATE('2024-04-28'), '당첨', null);
+COMMIT;

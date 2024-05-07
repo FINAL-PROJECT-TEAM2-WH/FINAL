@@ -61,12 +61,8 @@ SELECT id, orderId, shippingPlaceId, shippingMsg, shippingState, shippingRequest
 --FROM shippingPlaceInformation
 --WHERE memid = 'daetu01' AND (defaultshipping = '기본배송지' OR defaultshipping='이번만배송지');
 
-UPDATE shippingPlaceInformation
-SET shippingPlaceInformation = 'X'
-WHERE id = 3;
-
 -- shippingPlaceInformation 테이블
-SELECT id, memid, addressNick, receiveMem, address, tel, postNum, defaultShipping FROM shippingPlaceInformation;
+SELECT * FROM shippingPlaceInformation;
 
 -- shippingOption 테이블
 SELECT id, shippingCompanyName, shippingOptionName, shippingOptionExplain, defaultShippingFee, regionName, ShppingCheck FROM shippingOption;
