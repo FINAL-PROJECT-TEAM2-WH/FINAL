@@ -199,7 +199,7 @@ CREATE TABLE specialprice (
 );
 
 CREATE TABLE shippingInformation (
-    id VARCHAR2(200) NOT NULL,
+    id NUMBER NOT NULL,
     orderId number NOT NULL,
     shippingPlaceId varchar2(200) NOT NULL,
     shippingMsg VARCHAR2(4000) NULL,
@@ -211,7 +211,7 @@ CREATE TABLE shippingInformation (
 );
 
 CREATE TABLE shippingPlaceInformation (
-    id VARCHAR2(100) NOT NULL,
+    id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
     addressNick VARCHAR2(100) NULL,
     receiveMem VARCHAR2(100) NULL,
@@ -224,7 +224,7 @@ CREATE TABLE shippingPlaceInformation (
 );
 
 CREATE TABLE shippingOption (
-    id VARCHAR2(100) NOT NULL,
+    id NUMBER NOT NULL,
     shippingCompanyName VARCHAR2(50) NULL,
     shippingOptionName VARCHAR2(40) NULL,
     shippingOptionExplain VARCHAR2(100) NULL,
@@ -298,7 +298,7 @@ CREATE TABLE coupon (
 );
 
 CREATE TABLE Search (
-    id VARCHAR2(100) NOT NULL,
+    id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
     SearchWord VARCHAR2(1000) NOT NULL,
     searchHour DATE NULL
