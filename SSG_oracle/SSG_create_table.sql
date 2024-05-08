@@ -55,9 +55,9 @@ CREATE TABLE payrecord (
     Points number NULL,
     pmethod varchar2(500) NULL,
     id4 number NULL,
-    productId VARCHAR2(20) NOT NULL,
+    productId NUMBER NOT NULL,
     memId varchar2(300) NOT NULL,
-    id2 VARCHAR2(50) DEFAULT 0 NULL,
+    id2 NUMBER DEFAULT 0 NULL,
     ps number NULL
 );
 
@@ -119,7 +119,7 @@ CREATE TABLE interestBrand (
 CREATE TABLE interestGoods (
     id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
-    productId VARCHAR2(20) NOT NULL,
+    productId NUMBER NOT NULL,
     RecordDate DATE NULL,
     divisionFolder varchar2(100) DEFAULT '모아보기' NULL
 );
@@ -318,7 +318,7 @@ CREATE TABLE brand (
 CREATE TABLE ShoppingCart (
     id number NOT NULL,
     memid varchar2(300) NOT NULL,
-    pd_id VARCHAR2(20) NOT NULL,
+    pd_id NUMBER NOT NULL,
     rdate date NULL
 );
 
