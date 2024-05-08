@@ -30,6 +30,7 @@ DROP TABLE brand CASCADE CONSTRAINTS;
 DROP TABLE ShoppingCart CASCADE CONSTRAINTS;
 DROP TABLE applicant CASCADE CONSTRAINTS;
 DROP TABLE present CASCADE CONSTRAINTS;
+DROP TABLE Auth CASCADE CONSTRAINTS;
 
 -- 배송옵션 시퀀스 삭제
 DROP SEQUENCE shippingoption_id_seq;
@@ -41,7 +42,7 @@ DROP SEQUENCE seq_shippingid;
 DROP SEQUENCE seqshipplaceinfo;
 -- 검색 테이블 시퀀스 삭제
 DROP SEQUENCE seq_search;
-
+drop sequence productoption_id_seq;
 drop sequence pointrecord_seq;
 drop sequence couponrecord_seq;
 drop sequence payrecord_seq;
