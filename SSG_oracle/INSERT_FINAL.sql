@@ -140,64 +140,6 @@ EXCEPTION
 END;
 
 
--- 상품 테이블 insert 프로시저
-CREATE OR REPLACE PROCEDURE insert_product(
-    p_id             IN  product.id%TYPE,
-    p_categoryId  IN  product.categoryId%TYPE,
-    p_specialPriceId IN  product.specialPriceId%TYPE,
-    p_shippingOptionId    IN  product.shippingOptionId%TYPE,
-    p_sellerStoreId   IN  product.sellerStoreId%TYPE,
-    p_brandid         IN PRODUCT.BRANDID%TYPE,
-    p_pdname          IN PRODUCT.PDNAME%TYPE,
-    p_price           IN PRODUCT.PRICE%TYPE,
-    p_pcontent        IN PRODUCT.PCONTENT%TYPE,
-    p_updateday       IN PRODUCT.UPDATEDAY%TYPE,
-    p_stock           IN PRODUCT.STOCK%TYPE
-)
-IS
-BEGIN
-    INSERT INTO product (id ,categoryId,specialPriceId, shippingoptionid, sellerstoreid, brandid ,pdname, price,pcontent,updateday,stock )
-    VALUES (p_id ,p_categoryId,p_specialPriceId,p_shippingoptionid, p_sellerstoreid, p_brandid ,p_pdname, p_price,p_pcontent,p_updateday,p_stock   );
-    COMMIT;
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-END insert_product;
-
-
--- 상품 옵션 insert 프로시저
-CREATE OR REPLACE PROCEDURE insert_productoption (
-    p_id          IN PRODUCTOPTION.ID%TYPE,
-    p_productid   IN PRODUCTOPTION.PRODUCTID%TYPE,
-    p_optionname  IN PRODUCTOPTION.OPTIONNAME%TYPE,
-    p_optionname2 IN PRODUCTOPTION.OPTIONNAME2%TYPE,
-    p_optionprice IN PRODUCTOPTION.OPTIONPRICE%TYPE,
-    p_optionstock IN PRODUCTOPTION.OPTIONSTOCK%TYPE
-) IS
-BEGIN
-    INSERT INTO PRODUCTOPTION (
-        ID,
-        PRODUCTID,
-        OPTIONNAME,
-        OPTIONNAME2,
-        OPTIONPRICE,
-        OPTIONSTOCK
-    ) VALUES (
-        p_id,
-        p_productid,
-        p_optionname,
-        p_optionname2,
-        p_optionprice,
-        p_optionstock
-    );
-
-    COMMIT;
-
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-END insert_productoption;
-
 
 -- 상품 이미지 insert 프로시저
 CREATE OR REPLACE PROCEDURE INSERT_PRODUCTIMG (
@@ -767,65 +709,64 @@ INSERT INTO coupon VALUES
 --     주문번호, 주문일자, 주문금액, 쿠폰번호, 사용포인트, 결제수단, 선물순번, 상품코드, 회원ID, 옵션코드, 결제여부
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 62000, 1, 1000, '카드', 1, '1000026532717', 'daetu01', '1', 1);
+    (payrecord_seq.nextval, sysdate, 62000, 1, 1000, '카드', 1, 1000026532717, 'daetu01', 1, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 10580, 2, 0, '카드', null, '1000544937242', 'daetu01', '2', 1);
+    (payrecord_seq.nextval, sysdate, 10580, 2, 0, '카드', null, 1000544937242, 'daetu01', 2, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate , 109000, null, 0, '카드', null, '1000587702102', 'daetu01', '3', 1);
+    (payrecord_seq.nextval, sysdate , 109000, null, 0, '카드', null, 1000587702102, 'daetu01', 3, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 29800, 3, 0, '카드', null, '2097001577943', 'd_Chan01', '5', 1);
+    (payrecord_seq.nextval, sysdate, 29800, 3, 0, '카드', null, 2097001577943, 'd_Chan01', 5, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 1194000, 4, 0, '카드', null, '1000582326954', 'd_Chan01', '13', 1);
+    (payrecord_seq.nextval, sysdate, 1194000, 4, 0, '카드', null, 1000582326954, 'd_Chan01', 13, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 132000, 5, 0, '카드', null, '1000398650979', 'minziZzang', '15', 1);
+    (payrecord_seq.nextval, sysdate, 132000, 5, 0, '카드', null, 1000398650979, 'minziZzang', 15, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval,sysdate, 11800, 6, 500, '카드', null, '1000014118201', 'd_Chan01', '18', 1);
+    (payrecord_seq.nextval,sysdate, 11800, 6, 500, '카드', null, 1000014118201, 'd_Chan01', 18, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 3580, null, 0, '카드', null, '2097001308233', 'minziZzang', null, 1);
+    (payrecord_seq.nextval, sysdate, 3580, null, 0, '카드', null, 2097001308233, 'minziZzang', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 19800, null, 0, '카드', null, '2097000257655', 'whyun01', null, 1);
+    (payrecord_seq.nextval, sysdate, 19800, null, 0, '카드', null, 2097000257655, 'whyun01', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 23800, 7, 0, '카드', null, '2097001557433', 'minziZzang', null, 1);
+    (payrecord_seq.nextval, sysdate, 23800, 7, 0, '카드', null, 2097001557433, 'minziZzang', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 150000, 1, 0, '카드', null, '1000579723160', 'whyun01', '26', 1);
+    (payrecord_seq.nextval, sysdate, 150000, 1, 0, '카드', null, 1000579723160, 'whyun01', 26, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 105245, 8, 0, '카드', null, '1000280142269', 'whyun01', null, 1);
+    (payrecord_seq.nextval, sysdate, 105245, 8, 0, '카드', null, 1000280142269, 'whyun01', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 43900, null, 0, '카드', null, '1000059288917', 'hive', '29', 1);
+    (payrecord_seq.nextval, sysdate, 43900, null, 0, '카드', null, 1000059288917, 'hive', 29, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 6500, null, 0, '카드', null, '2097001432075', 'hive', null, 1);
+    (payrecord_seq.nextval, sysdate, 6500, null, 0, '카드', null, 2097001432075, 'hive', null, 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, id3, Points, pmethod, id4, productId, memId, id2, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 788970, null, 0, '카드', null, '1000067576484', 'newjeans', null, 1);
+    (payrecord_seq.nextval, sysdate, 788970, null, 0, '카드', null, 1000067576484, 'newjeans', null, 1);
 
-select * from payrecord;
 
 insert into points values (7214915413320664, 100, 'GB1C4UBQNF20');
 insert into points values (1109694324250316, 200, 'UDlQI3r5FUPY');
@@ -917,34 +858,34 @@ INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
     
     
 INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (1, 'minziZzang', '1000544937242', TO_DATE('2024-05-01', 'YYYY-MM-DD'));
+    (1, 'minziZzang', 1000544937242, TO_DATE('2024-05-01', 'YYYY-MM-DD'));
 
 INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (2, 'hive', '1000544937242', TO_DATE('2024-05-02', 'YYYY-MM-DD'));
+    (2, 'hive', 1000544937242, TO_DATE('2024-05-02', 'YYYY-MM-DD'));
 
 INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (3, 'hive', '1000544937242', TO_DATE('2024-05-03', 'YYYY-MM-DD'));
+    (3, 'hive', 1000544937242, TO_DATE('2024-05-03', 'YYYY-MM-DD'));
 
 INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (4, 'daetu01', '1000026532717', TO_DATE('2024-05-04', 'YYYY-MM-DD'));
+    (4, 'daetu01', 1000026532717, TO_DATE('2024-05-04', 'YYYY-MM-DD'));
 
 INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (5, 'hive', '1000026532717', TO_DATE('2024-05-05', 'YYYY-MM-DD'));
+    (5, 'hive', 1000026532717, TO_DATE('2024-05-05', 'YYYY-MM-DD'));
 
 INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (6, 'minziZzang', '1000026532717', TO_DATE('2024-05-06', 'YYYY-MM-DD'));
+    (6, 'minziZzang', 1000026532717, TO_DATE('2024-05-06', 'YYYY-MM-DD'));
 
 INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (7, 'hive', '2097001308233', TO_DATE('2024-05-07', 'YYYY-MM-DD'));
+    (7, 'hive', 2097001308233, TO_DATE('2024-05-07', 'YYYY-MM-DD'));
 
 INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (8, 'daetu01', '2097001308233', TO_DATE('2024-05-08', 'YYYY-MM-DD'));
+    (8, 'daetu01', 2097001308233, TO_DATE('2024-05-08', 'YYYY-MM-DD'));
 
 INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (9, 'hive', '2097001432075', TO_DATE('2024-05-09', 'YYYY-MM-DD'));
+    (9, 'hive', 2097001432075, TO_DATE('2024-05-09', 'YYYY-MM-DD'));
 
 INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (10, 'daetu01', '2097001432075', TO_DATE('2024-05-10', 'YYYY-MM-DD'));
+    (10, 'daetu01', 2097001432075, TO_DATE('2024-05-10', 'YYYY-MM-DD'));
 
 
 
@@ -1059,7 +1000,6 @@ EXECUTE up_insert_shipinfo ( 10, 'minziZzang',  '잘전달해주세요~', '배�
 --SELECT *
 --FROM shippingplaceinformation;
 
-
 -- 검색테이블 INSERT 프로시저 실행
 EXECUTE up_insert_search ( 'daetu01', '키보드');
 EXECUTE up_insert_search ( 'daetu01', '노트북');
@@ -1079,6 +1019,7 @@ EXECUTE up_insert_search ( 'whyun01', '마우스');
 EXECUTE up_insert_search ( 'minziZzang', '뉴진스앨범');
 EXECUTE up_insert_search ( 'hive', '민희진모자');
 EXECUTE up_insert_search ( 'hive', '방탄소년단앨범');
+
 
 
 
@@ -1121,7 +1062,6 @@ INSERT INTO event VALUES (6, '체험단 강이지 유산균', 'event_image6.jpg'
 
 INSERT INTO event VALUES (7, 'MADA 구기자 링클 광채 세럼스틱', 'event_image7.jpg', TO_DATE('2024-04-22'), TO_DATE('2024-04-28'));
 
-
 -- 신청자 테이블 insert
 --링크 https://event.ssg.com/eventDetail.ssg?nevntId=1000000013107&domainSiteNo=6005&_mpop=new
 INSERT INTO applicant VALUES (1, 1, 'daetu01', '저희 아기가 배변활동이 좋지 않아서 신청합니다.', TO_DATE('2024-04-25'), '당첨', null);
@@ -1136,12 +1076,5 @@ INSERT INTO applicant VALUES (4, 2, 'dyoung01', '구기자가 미백에 효과�
 INSERT INTO applicant VALUES (5, 2, 'mggun01', '꼭 테스트 해보고 싶습니다.', TO_DATE('2024-04-28'), '당첨', null);
 
 INSERT INTO applicant VALUES (6, 2, 'whyun01', '엄마가 요즘 탄력이랑 주름 관련해서 고민이 많으셔서 도움을 드리고 싶었는데 스틱제품은 잘 쓰실것 같아 신청합니다.', TO_DATE('2024-04-28'), '당첨', null);
-<<<<<<< HEAD
-COMMIT;
-=======
-<<<<<<< HEAD
 
-commit;
-=======
->>>>>>> c394804cddf5a07ab5b0d5b1d68a2549f5e6a0d2
->>>>>>> 7e00a00e8378ca424bb4af6768cef800acc3fa14
+COMMIT;
