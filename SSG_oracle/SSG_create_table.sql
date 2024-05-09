@@ -264,20 +264,21 @@ CREATE TABLE Agreement (
     agreeDate DATE DEFAULT SYSDATE NULL
 );
 
-CREATE TABLE points (
-    id varchar2(600) NOT NULL,
-    cpoint number NULL,
-    password varchar2(500) NULL
-);
-
 CREATE TABLE pointrecord (
     id number NOT NULL,
-    memid varchar2(300) NOT NULL,
     cardNumber varchar2(600) NOT NULL,
     points number NULL,
     classify number NOT NULL,
     id2 number NULL
 );
+
+CREATE TABLE points (
+    id varchar2(600) NOT NULL,
+    cpoint number NULL,
+    password varchar2(500) NULL,
+    id2 varchar2(300) NOT NULL
+);
+
 
 CREATE TABLE couponrecord (
     id number NOT NULL,
@@ -700,12 +701,6 @@ REFERENCES member (
     id
 );
 
-ALTER TABLE pointrecord ADD CONSTRAINT FK_member_TO_pointrecord_1 FOREIGN KEY (
-    memid
-)
-REFERENCES member (
-    id
-);
 
 ALTER TABLE pointrecord ADD CONSTRAINT FK_points_TO_pointrecord_1 FOREIGN KEY (
     cardNumber
@@ -768,4 +763,11 @@ ALTER TABLE applicant ADD CONSTRAINT FK_member_TO_applicant_1 FOREIGN KEY (
 )
 REFERENCES member (
     id
+);
+
+ALTER TABLE points ADD CONSTRAINT FK_member_TO_points_1 FOREIGN KEY (
+	id2
+)
+REFERENCES member (
+	id
 );

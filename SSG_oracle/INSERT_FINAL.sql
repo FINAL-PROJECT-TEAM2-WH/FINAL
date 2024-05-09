@@ -768,58 +768,58 @@ VALUES
     (payrecord_seq.nextval, sysdate, 788970, null, 0, '카드', null, 1000067576484, 'newjeans', null, 1);
 
 
-insert into points values (7214915413320664, 100, 'GB1C4UBQNF20');
-insert into points values (1109694324250316, 200, 'UDlQI3r5FUPY');
-insert into points values (8314548743334128, 500, 'BJLS6FvkwrIB');
-insert into points values (9377727979389141, 720, 'GA5EMgRjpXa2');
-insert into points values (4882538104554810, 0, 'KAZx42cJzY8n');
-insert into points values (7923020691828206, 0, '3whnAiZ0x6V5');
-insert into points values (4711589896008036, 330, 'VYqXZDg4POO8');
-insert into points values (2658360255978897, 3020, 'ySmmMx47X8pw');
-insert into points values (5620299371129935, 50, '2YvzQyhjT8Wd');
-insert into points values (6802392665232420, 100, 'qteQYT753XJ7');
+insert into points values (7214915413320664, 100, 'GB1C4UBQNF20' ,'daetu01');
+insert into points values (1109694324250316, 200, 'UDlQI3r5FUPY','m_eum01');
+insert into points values (8314548743334128, 500, 'BJLS6FvkwrIB','d_Chan01');
+insert into points values (9377727979389141, 720, 'GA5EMgRjpXa2','dyoung01');
+insert into points values (4882538104554810, 0, 'KAZx42cJzY8n','mggun01');
+insert into points values (7923020691828206, 0, '3whnAiZ0x6V5','whyun01');
+insert into points values (4711589896008036, 330, 'VYqXZDg4POO8','minziZzang');
+insert into points values (2658360255978897, 3020, 'ySmmMx47X8pw','hive');
+insert into points values (5620299371129935, 50, '2YvzQyhjT8Wd','newjeans');
+insert into points values (6802392665232420, 100, 'qteQYT753XJ7','cap');
 
 
 
-INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
+INSERT INTO pointrecord (id, cardNumber, points, classify, id2)
 VALUES
-    (pointrecord_seq.nextval, 'daetu01', '7214915413320664', 100, 1, 1);
+    (pointrecord_seq.nextval,  '7214915413320664', 100, 1, 1);
 
-INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
+INSERT INTO pointrecord (id, cardNumber, points, classify, id2)
 VALUES
-    (pointrecord_seq.nextval, 'newjeans', '1109694324250316', 200, 2, 2);
+    (pointrecord_seq.nextval, '1109694324250316', 200, 2, 2);
 
-INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
+INSERT INTO pointrecord (id,  cardNumber, points, classify, id2)
 VALUES
-    (pointrecord_seq.nextval, 'hive', '8314548743334128', 300, 1, 3);
+    (pointrecord_seq.nextval,  '8314548743334128', 300, 1, 3);
 
-INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
+INSERT INTO pointrecord (id,  cardNumber, points, classify, id2)
 VALUES
-    (pointrecord_seq.nextval, 'd_Chan01', '9377727979389141', 400, 2, 4);
+    (pointrecord_seq.nextval, '9377727979389141', 400, 2, 4);
 
-INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
+INSERT INTO pointrecord (id,  cardNumber, points, classify, id2)
 VALUES
-    (pointrecord_seq.nextval, 'minziZzang', '4882538104554810', 500, 1, 5);
+    (pointrecord_seq.nextval,  '4882538104554810', 500, 1, 5);
 
-INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
+INSERT INTO pointrecord (id, cardNumber, points, classify, id2)
 VALUES
-    (pointrecord_seq.nextval, 'minziZzang', '7923020691828206', 600, 2, 6);
+    (pointrecord_seq.nextval,  '7923020691828206', 600, 2, 6);
 
-INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
+INSERT INTO pointrecord (id, cardNumber, points, classify, id2)
 VALUES
-    (pointrecord_seq.nextval, 'whyun01', '4711589896008036', 700, 1, 7);
+    (pointrecord_seq.nextval,  '4711589896008036', 700, 1, 7);
 
-INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
+INSERT INTO pointrecord (id,  cardNumber, points, classify, id2)
 VALUES
-    (pointrecord_seq.nextval, 'whyun01', '2658360255978897', 800, 2, 8);
+    (pointrecord_seq.nextval, '2658360255978897', 800, 2, 8);
 
-INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
+INSERT INTO pointrecord (id, cardNumber, points, classify, id2)
 VALUES
-    (pointrecord_seq.nextval, 'whyun01', '5620299371129935', 900, 1, 9);
+    (pointrecord_seq.nextval,  '5620299371129935', 900, 1, 9);
 
-INSERT INTO pointrecord (id, memid, cardNumber, points, classify, id2)
+INSERT INTO pointrecord (id, cardNumber, points, classify, id2)
 VALUES
-    (pointrecord_seq.nextval, 'whyun01', '6802392665232420', 1000, 2, 10);
+    (pointrecord_seq.nextval,  '6802392665232420', 1000, 2, 10);
 
 
 
