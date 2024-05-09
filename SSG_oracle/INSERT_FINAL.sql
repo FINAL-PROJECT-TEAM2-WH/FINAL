@@ -473,7 +473,7 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 ------------------------------------------------------------------------------------------------
 -- 상품 관련 테이블
 --1
-INSERT INTO product VALUES (1000026532717, '04040303', 0, '1', 'sellStore001', 'brand001', '시몽 테르미크 150ml [No.1 헤어에센스-손상모발용]', '상품번호 : 1000026532717 모델번호 : E1036200.', '2024-04-10');
+INSERT INTO product VALUES (1000026532717, '04040303', 2, '1', 'sellStore001', 'brand001', '시몽 테르미크 150ml [No.1 헤어에센스-손상모발용]', '상품번호 : 1000026532717 모델번호 : E1036200.', '2024-04-10');
 
 --2
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
