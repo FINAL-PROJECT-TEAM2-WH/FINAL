@@ -31,6 +31,7 @@ DROP TABLE ShoppingCart CASCADE CONSTRAINTS;
 DROP TABLE applicant CASCADE CONSTRAINTS;
 DROP TABLE present CASCADE CONSTRAINTS;
 DROP TABLE Auth CASCADE CONSTRAINTS;
+DROP TABLE paydetail CASCADE CONSTRAINTS;
 
 -- 배송옵션 시퀀스 삭제
 DROP SEQUENCE shippingoption_id_seq;
@@ -46,23 +47,23 @@ drop sequence productoption_id_seq;
 drop sequence pointrecord_seq;
 drop sequence couponrecord_seq;
 drop sequence payrecord_seq;
+drop sequence paydetail_seq;
 
 
 CREATE TABLE payrecord (
     id number NOT NULL,
-    OrderDate date NOT NULL,
+    OrderDate Date NOT NULL,
     OrderAmount number NOT NULL,
-    id3 number DEFAULT 0 NULL,
+    coupon number DEFAULT 0 NULL,
     Points number NULL,
     pmethod varchar2(500) NULL,
-    id4 number NULL,
-    productId NUMBER NOT NULL,
+    present number NULL,
     memId varchar2(300) NOT NULL,
-    id2 NUMBER DEFAULT 0 NULL,
     ps number NULL
 );
 
 COMMENT ON COLUMN payrecord.ps IS '환불여부';
+
 
 CREATE TABLE event (
     id number NOT NULL,
@@ -351,10 +352,18 @@ loginYN char(1)  DEFAULT 'Y' NULL,
 privilege varchar(300) NOT NULL
 );
 
-
-ALTER TABLE payrecord ADD CONSTRAINT PK_PAYRECORD PRIMARY KEY (
-    id
+CREATE TABLE paydetail (
+    id number NOT NULL,
+    quantity number DEFAULT 0 NULL,
+    id2 number NOT NULL,
+    id3 NUMBER NOT NULL,
+    id4 number DEFAULT 0 NULL
 );
+
+ALTER TABLE payrecord ADD CONSTRAINT PK_PAYRECORD PRIMARY KEY (id);
+
+ALTER TABLE paydetail ADD CONSTRAINT PK_PAYDETAIL PRIMARY KEY (id);
+
 
 ALTER TABLE event ADD CONSTRAINT PK_EVENT PRIMARY KEY (
     id
@@ -484,40 +493,19 @@ ALTER TABLE present ADD CONSTRAINT PK_PRESENT PRIMARY KEY (
     id
 );
 
-ALTER TABLE payrecord ADD CONSTRAINT FK_coupon_TO_payrecord_1 FOREIGN KEY (
-    id3
-)
-REFERENCES coupon (
-    id
-);
+ALTER TABLE paydetail ADD CONSTRAINT FK_payrecord_TO_paydetail_1 FOREIGN KEY (id2) REFERENCES payrecord (id);
 
-ALTER TABLE payrecord ADD CONSTRAINT FK_present_TO_payrecord_1 FOREIGN KEY (
-    id4
-)
-REFERENCES present (
-    id
-);
+ALTER TABLE paydetail ADD CONSTRAINT FK_productOp_TO_paydetail_1 FOREIGN KEY (id3) REFERENCES productOption (id);
 
-ALTER TABLE payrecord ADD CONSTRAINT FK_product_TO_payrecord_1 FOREIGN KEY (
-    productId
-)
-REFERENCES product (
-    id
-);
+ALTER TABLE paydetail ADD CONSTRAINT FK_coupon_TO_paydetail_1 FOREIGN KEY (id4) REFERENCES coupon (id);
 
-ALTER TABLE payrecord ADD CONSTRAINT FK_member_TO_payrecord_1 FOREIGN KEY (
-    memId
-)
-REFERENCES member (
-    id
-);
 
-ALTER TABLE payrecord ADD CONSTRAINT FK_productO_TO_payreco FOREIGN KEY (
-    id2
-)
-REFERENCES productOption (
-    id
-);
+ALTER TABLE payrecord ADD CONSTRAINT FK_coupon_TO_payrecord_1 FOREIGN KEY (coupon) REFERENCES coupon (id);
+
+ALTER TABLE payrecord ADD CONSTRAINT FK_present_TO_payrecord_1 FOREIGN KEY (present) REFERENCES present (id);
+
+ALTER TABLE payrecord ADD CONSTRAINT FK_member_TO_payrecord_1 FOREIGN KEY (memId) REFERENCES member (id);
+
 
 ALTER TABLE product ADD CONSTRAINT FK_category_TO_product_1 FOREIGN KEY (
     categoryId
