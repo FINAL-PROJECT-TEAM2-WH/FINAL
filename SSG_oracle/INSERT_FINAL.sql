@@ -684,7 +684,8 @@ INSERT INTO present (id, img, meth, name, num, rname, rnum) VALUES (8, NULL, NUL
 INSERT INTO present (id, img, meth, name, num, rname, rnum) VALUES (9, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO present (id, img, meth, name, num, rname, rnum) VALUES (10, NULL, NULL, NULL, NULL, NULL, NULL);
 
-
+INSERT INTO coupon VALUES
+    (0, '할인', 0, 0, 0, 1, '모든제품', TO_DATE('2024-05-01', 'YYYY-MM-DD'), TO_DATE('2024-06-01', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
     (1, '할인', 10000, 0, 20, 1, '모든제품', TO_DATE('2024-05-01', 'YYYY-MM-DD'), TO_DATE('2024-06-01', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
@@ -1085,5 +1086,6 @@ INSERT INTO applicant VALUES (5, 2, 'mggun01', '꼭 테스트 해보고 싶습�
 
 INSERT INTO applicant VALUES (6, 2, 'whyun01', '엄마가 요즘 탄력이랑 주름 관련해서 고민이 많으셔서 도움을 드리고 싶었는데 스틱제품은 잘 쓰실것 같아 신청합니다.', TO_DATE('2024-04-28'), '당첨', null);
 
+insert into productimg values ( 1 , 2097001432075 , null ,null );
 COMMIT;
 COMMIT;
