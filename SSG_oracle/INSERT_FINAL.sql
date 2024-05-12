@@ -156,7 +156,7 @@ CREATE OR REPLACE PROCEDURE insert_product(
 )
 IS
 BEGIN
-    INSERT INTO product (id ,categoryId,specialPriceId, shippingoptionid, sellerstoreid, brandid ,pdname, price,pcontent,updateday,stock )
+    INSERT INTO product (id ,categoryId,specialPriceId, shippingoptionid, sellerstoreid, brandid ,pdname, price, pcontent,updateday,stock )
     VALUES (p_id ,p_categoryId,p_specialPriceId,p_shippingoptionid, p_sellerstoreid, p_brandid ,p_pdname, p_price,p_pcontent,p_updateday,p_stock   );
     COMMIT;
 EXCEPTION
@@ -345,7 +345,6 @@ BEGIN
 
 --EXCEPTION
 END;
-
 
 -- 회원 INSERT
 -- 더미데이터 
