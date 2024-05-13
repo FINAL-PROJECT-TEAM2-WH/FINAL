@@ -323,7 +323,8 @@ CREATE TABLE ShoppingCart (
     id NUMBER NOT NULL,
     memid VARCHAR2(300) NOT NULL,
     rdate DATE NULL,
-    id2 NUMBER NOT NULL
+    id2 NUMBER NOT NULL,
+    scount number null
 );
 
 CREATE TABLE applicant (
