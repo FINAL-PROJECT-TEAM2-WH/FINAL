@@ -49,7 +49,8 @@ drop sequence pointrecord_seq;
 drop sequence couponrecord_seq;
 drop sequence payrecord_seq;
 drop sequence paydetail_seq;
-drop sequence 
+drop sequence agreement_seq;
+drop sequence terms_seq;
 
 CREATE TABLE payrecord (
     id number NOT NULL,
