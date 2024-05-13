@@ -262,7 +262,9 @@ CREATE TABLE qna (
 );
 CREATE TABLE Agreement (
     id NUMBER NOT NULL,
+    terms_id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
+    status VARCHAR2(50) DEFAULT 'Y' NULL ,
     agreeDate DATE DEFAULT SYSDATE NULL
 );
 
@@ -360,6 +362,14 @@ CREATE TABLE paydetail (
     id3 NUMBER NOT NULL,
     id4 number DEFAULT 0 NULL
 );
+
+CREATE TABLE terms (
+    id NUMBER NOT NULL,
+    name VARCHAR2(300) NOT NULL,
+    content VARCHAR2(1000) NOT NULL,
+    necessary VARCHAR2(100) NOT NULL
+);
+
 
 ALTER TABLE payrecord ADD CONSTRAINT PK_PAYRECORD PRIMARY KEY (id);
 
@@ -491,6 +501,11 @@ ALTER TABLE applicant ADD CONSTRAINT PK_APPLICANT PRIMARY KEY (
 );
 
 ALTER TABLE present ADD CONSTRAINT PK_PRESENT PRIMARY KEY (
+    id
+);
+
+
+ALTER TABLE terms ADD CONSTRAINT PK_TERMS PRIMARY KEY (
     id
 );
 
@@ -689,6 +704,15 @@ ALTER TABLE Agreement ADD CONSTRAINT FK_member_TO_Agreement_1 FOREIGN KEY (
 REFERENCES member (
     id
 );
+
+
+ALTER TABLE Agreement ADD CONSTRAINT FK_member_TO_Agreement_2 FOREIGN KEY (
+    terms_id
+)
+REFERENCES terms (
+    id
+);
+
 
 
 ALTER TABLE pointrecord ADD CONSTRAINT FK_points_TO_pointrecord_1 FOREIGN KEY (
