@@ -5,6 +5,18 @@ INCREMENT BY 1
 NOCACHE
 NOCYCLE;
 
+--상품 시퀀스
+CREATE SEQUENCE product_id_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+--상품옵션시퀀스
+CREATE SEQUENCE productoption_id_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
 
 -- 배송 정보 시퀀스
 CREATE SEQUENCE 
@@ -149,63 +161,6 @@ EXCEPTION
 END;
 
 
--- 상품 테이블 insert 프로시저
-CREATE OR REPLACE PROCEDURE insert_product(
-    p_id             IN  product.id%TYPE,
-    p_categoryId  IN  product.categoryId%TYPE,
-    p_specialPriceId IN  product.specialPriceId%TYPE,
-    p_shippingOptionId    IN  product.shippingOptionId%TYPE,
-    p_sellerStoreId   IN  product.sellerStoreId%TYPE,
-    p_brandid         IN PRODUCT.BRANDID%TYPE,
-    p_pdname          IN PRODUCT.PDNAME%TYPE,
-    p_price           IN PRODUCT.PRICE%TYPE,
-    p_pcontent        IN PRODUCT.PCONTENT%TYPE,
-    p_updateday       IN PRODUCT.UPDATEDAY%TYPE,
-    p_stock           IN PRODUCT.STOCK%TYPE
-)
-IS
-BEGIN
-    INSERT INTO product (id ,categoryId,specialPriceId, shippingoptionid, sellerstoreid, brandid ,pdname, price, pcontent,updateday,stock )
-    VALUES (p_id ,p_categoryId,p_specialPriceId,p_shippingoptionid, p_sellerstoreid, p_brandid ,p_pdname, p_price,p_pcontent,p_updateday,p_stock   );
-    COMMIT;
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-END insert_product;
-
-
--- 상품 옵션 insert 프로시저
-CREATE OR REPLACE PROCEDURE insert_productoption (
-    p_id          IN PRODUCTOPTION.ID%TYPE,
-    p_productid   IN PRODUCTOPTION.PRODUCTID%TYPE,
-    p_optionname  IN PRODUCTOPTION.OPTIONNAME%TYPE,
-    p_optionname2 IN PRODUCTOPTION.OPTIONNAME2%TYPE,
-    p_optionprice IN PRODUCTOPTION.OPTIONPRICE%TYPE,
-    p_optionstock IN PRODUCTOPTION.OPTIONSTOCK%TYPE
-) IS
-BEGIN
-    INSERT INTO PRODUCTOPTION (
-        ID,
-        PRODUCTID,
-        OPTIONNAME,
-        OPTIONNAME2,
-        OPTIONPRICE,
-        OPTIONSTOCK
-    ) VALUES (
-        p_id,
-        p_productid,
-        p_optionname,
-        p_optionname2,
-        p_optionprice,
-        p_optionstock
-    );
-
-    COMMIT;
-
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-END insert_productoption;
 
 
 -- 상품 이미지 insert 프로시저
