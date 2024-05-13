@@ -69,6 +69,20 @@ increment by 1
 nocache 
 nocycle;
 
+-- 약관 시퀀스
+create sequence terms_seq
+start with 1 
+increment by 1
+nocache
+nocycle;
+
+-- 약관동의 시퀀스 
+CREATE sequence agreement_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
+
 
 -- 회원insert 프로시저 
 create or replace PROCEDURE ins_member 
@@ -352,6 +366,50 @@ BEGIN
 
 --EXCEPTION
 END;
+
+-- 필수 약관 동의 6개 insert 문 . 
+CREATE OR REPLACE PROCEDURE ins_req_terms
+(
+p_ID member.id%TYPE
+)
+IS
+countid terms.name%TYPE;
+num1 NUMBER := 1;
+BEGIN 
+
+    SELECT COUNT(id) INTO countid
+    FROM terms
+    WHERE REGEXP_LIKE(name,'req');
+    
+    WHILE(num1 <= countid)
+    LOOP 
+    INSERT INTO agreement VALUES (agreement_seq.NEXTVAL,num1,p_ID,'Y',SYSDATE);
+    num1 := num1 + 1;
+    END LOOP;
+--EXCEPTION 
+
+END;
+
+
+-- 선택 약관 
+CREATE OR REPLACE PROCEDURE ins_sel_terms
+(
+p_name terms.name%TYPE,
+p_ID member.id%TYPE
+)
+IS
+num1 NUMBER ;
+BEGIN 
+    SELECT t.id into num1
+    FROM terms t
+    WHERE name = p_name; 
+    
+    INSERT INTO agreement VALUES (agreement_seq.NEXTVAL,num1,p_ID,'Y',SYSDATE);
+END;
+
+
+
+
 
 -- 회원 INSERT
 -- 더미데이터 
@@ -1144,5 +1202,29 @@ INSERT INTO applicant VALUES (5, 2, 'mggun01', '꼭 테스트 해보고 싶습�
 INSERT INTO applicant VALUES (6, 2, 'whyun01', '엄마가 요즘 탄력이랑 주름 관련해서 고민이 많으셔서 도움을 드리고 싶었는데 스틱제품은 잘 쓰실것 같아 신청합니다.', TO_DATE('2024-04-28'), '당첨', null);
 
 insert into productimg values ( 1 , 2097001432075 , null ,null );
+
+
+
+-- require terms 
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_01', '/SSGSSAK/member/terms/terms_01','Y');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_02', '/SSGSSAK/member/terms/terms_02','Y');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_03', '/SSGSSAK/member/terms/terms_03','Y');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_04', '/SSGSSAK/member/terms/terms_04','Y');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_05', '/SSGSSAK/member/terms/terms_05','Y');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_06', '/SSGSSAK/member/terms/terms_06','Y');
+
+-- SELECT terms
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=10', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=10','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=20', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=20','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=20_email', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=20_email','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=20_sms', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=20_sms','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=20_post', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=20_post','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=20_tel', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=20_tel','N');
+
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10', '/SSGSSAK/member/terms/ssgInfoRcvAgree','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_email', '/SSGSSAK/member/terms/ssgInfoRcvAgree_email','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_sms', '/SSGSSAK/member/terms/ssgInfoRcvAgree_sms','N');
+
+
 COMMIT;
 COMMIT;
