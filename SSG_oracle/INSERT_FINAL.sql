@@ -981,35 +981,35 @@ INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
 
     
     
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (1, 'minziZzang', 1000544937242, TO_DATE('2024-05-01', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (1, 'minziZzang', sysdate , 47 , 1;
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (2, 'hive', 1000544937242, TO_DATE('2024-05-02', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (2, 'hive', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (3, 'hive', 1000544937242, TO_DATE('2024-05-03', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (3, 'hive', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (4, 'daetu01', 1000026532717, TO_DATE('2024-05-04', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (4, 'daetu01', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (5, 'hive', 1000026532717, TO_DATE('2024-05-05', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (5, 'hive', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (6, 'minziZzang', 1000026532717, TO_DATE('2024-05-06', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart VALUES
+    (6, 'minziZzang', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (7, 'hive', 2097001308233, TO_DATE('2024-05-07', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart VALUES
+    (7, 'hive', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (8, 'daetu01', 2097001308233, TO_DATE('2024-05-08', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (8, 'daetu01', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (9, 'hive', 2097001432075, TO_DATE('2024-05-09', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (9, 'hive', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (10, 'daetu01', 2097001432075, TO_DATE('2024-05-10', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (10, 'daetu01', sysdate , 47 , 1);
 
 
 

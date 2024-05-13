@@ -326,7 +326,8 @@ CREATE TABLE ShoppingCart (
     id number NOT NULL,
     memid varchar2(300) NOT NULL,
     pd_id NUMBER NOT NULL,
-    rdate date NULL
+    rdate date NULL,
+    scount number null
 );
 
 CREATE TABLE applicant (
