@@ -147,6 +147,64 @@ EXCEPTION
 END;
 
 
+-- 상품 테이블 insert 프로시저
+CREATE OR REPLACE PROCEDURE insert_product(
+    p_id             IN  product.id%TYPE,
+    p_categoryId  IN  product.categoryId%TYPE,
+    p_specialPriceId IN  product.specialPriceId%TYPE,
+    p_shippingOptionId    IN  product.shippingOptionId%TYPE,
+    p_sellerStoreId   IN  product.sellerStoreId%TYPE,
+    p_brandid         IN PRODUCT.BRANDID%TYPE,
+    p_pdname          IN PRODUCT.PDNAME%TYPE,
+    p_price           IN PRODUCT.PRICE%TYPE,
+    p_pcontent        IN PRODUCT.PCONTENT%TYPE,
+    p_updateday       IN PRODUCT.UPDATEDAY%TYPE,
+    p_stock           IN PRODUCT.STOCK%TYPE
+)
+IS
+BEGIN
+    INSERT INTO product (id ,categoryId,specialPriceId, shippingoptionid, sellerstoreid, brandid ,pdname, price, pcontent,updateday,stock )
+    VALUES (p_id ,p_categoryId,p_specialPriceId,p_shippingoptionid, p_sellerstoreid, p_brandid ,p_pdname, p_price,p_pcontent,p_updateday,p_stock   );
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+END insert_product;
+
+
+-- 상품 옵션 insert 프로시저
+CREATE OR REPLACE PROCEDURE insert_productoption (
+    p_id          IN PRODUCTOPTION.ID%TYPE,
+    p_productid   IN PRODUCTOPTION.PRODUCTID%TYPE,
+    p_optionname  IN PRODUCTOPTION.OPTIONNAME%TYPE,
+    p_optionname2 IN PRODUCTOPTION.OPTIONNAME2%TYPE,
+    p_optionprice IN PRODUCTOPTION.OPTIONPRICE%TYPE,
+    p_optionstock IN PRODUCTOPTION.OPTIONSTOCK%TYPE
+) IS
+BEGIN
+    INSERT INTO PRODUCTOPTION (
+        ID,
+        PRODUCTID,
+        OPTIONNAME,
+        OPTIONNAME2,
+        OPTIONPRICE,
+        OPTIONSTOCK
+    ) VALUES (
+        p_id,
+        p_productid,
+        p_optionname,
+        p_optionname2,
+        p_optionprice,
+        p_optionstock
+    );
+
+    COMMIT;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+END insert_productoption;
+
 
 -- 상품 이미지 insert 프로시저
 CREATE OR REPLACE PROCEDURE INSERT_PRODUCTIMG (
@@ -178,52 +236,52 @@ END;
 -- 이미지 입력받는곳 경로 결정하고 추가하는걸로..
 
 
--- 배송정보 테이블 insert 프로시저
-CREATE OR REPLACE PROCEDURE up_insert_shipinfo
-(
-    porderid payrecord.id%TYPE,
-    pmemid payrecord.memid%TYPE,
-    pshippingmsg shippinginformation.shippingmsg%TYPE,
-    pshippingstate shippinginformation.shippingstate%TYPE,
-    pshippingrequest  shippinginformation.shippingrequest%TYPE,
-    preceiveposition shippinginformation.receiveposition%TYPE,
-    pentrance shippinginformation.entrance%TYPE,
-    pshippingenddate shippinginformation.shippingenddate%TYPE
-)
-IS
-    vplaceid NUMBER;
-    vplacecount NUMBER;
-    vmemcount NUMBER;
-    vmemid VARCHAR2(300);
-BEGIN
-    SELECT COUNT(id), id
-        INTO vmemcount, vmemid
-    FROM member
-    GROUP BY id
-    HAVING id = pmemid;
-    
-    SELECT id
-        INTO vplaceid 
-    FROM shippingplaceinformation
-    WHERE memid = vmemid AND defaultshipping IN('기본배송지' ,'이번만배송지');
-    
-    SELECT COUNT(id)
-        INTO vplacecount 
-    FROM shippingplaceinformation
-    WHERE id = vplaceid;
-    
-    IF vmemcount < 1 THEN
-    RAISE_APPLICATION_ERROR(-20001, '없는 회원번호입니다.');
-    ELSIF vplacecount < 1 THEN
-    RAISE_APPLICATION_ERROR(-20002, '없는 주소번호입니다.');
-    ELSE 
-    INSERT INTO shippinginformation ( id, orderid, shippingplaceid, shippingmsg, shippingstate, shippingrequest, receiveposition, entrance, shippingenddate  )
-    VALUES ( seq_shippingid.NEXTVAL , porderid, vplaceid, pshippingmsg, pshippingstate, pshippingrequest, preceiveposition, pentrance, pshippingenddate );
-    COMMIT;
-    END IF;
-    
---EXCEPTION
-END;
+---- 배송정보 테이블 insert 프로시저
+--CREATE OR REPLACE PROCEDURE up_insert_shipinfo
+--(
+--    porderid payrecord.id%TYPE,
+--    pmemid payrecord.memid%TYPE,
+--    pshippingmsg shippinginformation.shippingmsg%TYPE,
+--    pshippingstate shippinginformation.shippingstate%TYPE,
+--    pshippingrequest  shippinginformation.shippingrequest%TYPE,
+--    preceiveposition shippinginformation.receiveposition%TYPE,
+--    pentrance shippinginformation.entrance%TYPE,
+--    pshippingenddate shippinginformation.shippingenddate%TYPE
+--)
+--IS
+--    vplaceid NUMBER;
+--    vplacecount NUMBER;
+--    vmemcount NUMBER;
+--    vmemid VARCHAR2(300);
+--BEGIN
+--    SELECT COUNT(id), id
+--        INTO vmemcount, vmemid
+--    FROM member
+--    GROUP BY id
+--    HAVING id = pmemid;
+--    
+--    SELECT id
+--        INTO vplaceid 
+--    FROM shippingplaceinformation
+--    WHERE memid = vmemid AND defaultshipping IN('기본배송지' ,'이번만배송지');
+--    
+--    SELECT COUNT(id)
+--        INTO vplacecount 
+--    FROM shippingplaceinformation
+--    WHERE id = vplaceid;
+--    
+--    IF vmemcount < 1 THEN
+--    RAISE_APPLICATION_ERROR(-20001, '없는 회원번호입니다.');
+--    ELSIF vplacecount < 1 THEN
+--    RAISE_APPLICATION_ERROR(-20002, '없는 주소번호입니다.');
+--    ELSE 
+--    INSERT INTO shippinginformation ( id, orderid, shippingplaceid, shippingmsg, shippingstate, shippingrequest, receiveposition, entrance, shippingenddate  )
+--    VALUES ( seq_shippingid.NEXTVAL , porderid, vplaceid, pshippingmsg, pshippingstate, pshippingrequest, preceiveposition, pentrance, pshippingenddate );
+--    COMMIT;
+--    END IF;
+--    
+----EXCEPTION
+--END;
 
 
 -- 배송지 정보 테이블 INSERT 프로시저
@@ -294,7 +352,6 @@ BEGIN
 
 --EXCEPTION
 END;
-
 
 -- 회원 INSERT
 -- 더미데이터 
@@ -981,17 +1038,17 @@ EXECUTE ps_insert_shipplaceinfo( 'hive', '하이브', '하이브', '서울특별
 
 
 -- 배송정보 INSERT 프로시저 실행
--- seq_shippingid.NEXTVAL , porderid, vplaceid, pshippingmsg, pshippingstate, pshippingrequest, preceiveposition, pentrance, pshippingenddate 
-EXECUTE up_insert_shipinfo ( 1, 'daetu01', '잘전달해주세요~', '배송전', '안전하게 배송해주세요~', '문앞에 놓아주세요',  '공동현관 출입번호-(#1234)' , null);
-EXECUTE up_insert_shipinfo ( 2, 'daetu01', '잘전달해주세요~', '배송전', '친절한 배송 기사님께 감사 인사 전달해주세요.', '문앞에 놓아주세요',  '공동현관 출입번호-(#2222)' , null);
-EXECUTE up_insert_shipinfo ( 3, 'daetu01',  '좀더 싸게 올려주세요~',  '배송전', '상자에 신중하게 포장 부탁드려요.', '경비실에 보관해주세요', null , null);
-EXECUTE up_insert_shipinfo ( 4, 'd_Chan01', '잘전달해주세요~', '배송전', '배송 시간이 조금 늦어져도 괜찮습니다~', '문앞에 놓아주세요',  '공동현관 출입번호-(#1010)' , null);
-EXECUTE up_insert_shipinfo ( 5, 'd_Chan01',  '너무 비싸네요~', '배송전', '특별한 배송 요청사항은 없습니다', '경비실에 보관해주세요',  null , null);
-EXECUTE up_insert_shipinfo ( 6, 'minziZzang',  '잘전달해주세요~', '배송전', '특별한 요청 없음', '경비실에 보관해주세요',  null , null);
-EXECUTE up_insert_shipinfo ( 7, 'd_Chan01', '잘전달해주세요~', '배송전', '방시혁 OUT', '문앞에 놓아주세요',  '공동현관 출입번호-(#5555)' , null);
-EXECUTE up_insert_shipinfo ( 8, 'minziZzang',  '잘전달해주세요~', '배송전', 'GOOD', '문앞에 놓아주세요',  '공동현관 출입번호-(#7777)' , null);
-EXECUTE up_insert_shipinfo ( 9, 'whyun01',  '잘전달해주세요~', '배송전', '부드러운 소포에 담아주세요.', '3층 택배보관함 보관해주세요',  null , null);
-EXECUTE up_insert_shipinfo ( 10, 'minziZzang',  '잘전달해주세요~', '배송전', '배송 잘 부탁드립니다.', '문앞에 놓아주세요',  '공동현관 출입번호-(#3300)' , null);
+---- seq_shippingid.NEXTVAL , porderid, vplaceid, pshippingmsg, pshippingstate, pshippingrequest, preceiveposition, pentrance, pshippingenddate 
+--EXECUTE up_insert_shipinfo ( 1, 'daetu01', '잘전달해주세요~', '배송전', '안전하게 배송해주세요~', '문앞에 놓아주세요',  '공동현관 출입번호-(#1234)' , null);
+--EXECUTE up_insert_shipinfo ( 2, 'daetu01', '잘전달해주세요~', '배송전', '친절한 배송 기사님께 감사 인사 전달해주세요.', '문앞에 놓아주세요',  '공동현관 출입번호-(#2222)' , null);
+--EXECUTE up_insert_shipinfo ( 3, 'daetu01',  '좀더 싸게 올려주세요~',  '배송전', '상자에 신중하게 포장 부탁드려요.', '경비실에 보관해주세요', null , null);
+--EXECUTE up_insert_shipinfo ( 4, 'd_Chan01', '잘전달해주세요~', '배송전', '배송 시간이 조금 늦어져도 괜찮습니다~', '문앞에 놓아주세요',  '공동현관 출입번호-(#1010)' , null);
+--EXECUTE up_insert_shipinfo ( 5, 'd_Chan01',  '너무 비싸네요~', '배송전', '특별한 배송 요청사항은 없습니다', '경비실에 보관해주세요',  null , null);
+--EXECUTE up_insert_shipinfo ( 6, 'minziZzang',  '잘전달해주세요~', '배송전', '특별한 요청 없음', '경비실에 보관해주세요',  null , null);
+--EXECUTE up_insert_shipinfo ( 7, 'd_Chan01', '잘전달해주세요~', '배송전', '방시혁 OUT', '문앞에 놓아주세요',  '공동현관 출입번호-(#5555)' , null);
+--EXECUTE up_insert_shipinfo ( 8, 'minziZzang',  '잘전달해주세요~', '배송전', 'GOOD', '문앞에 놓아주세요',  '공동현관 출입번호-(#7777)' , null);
+--EXECUTE up_insert_shipinfo ( 9, 'whyun01',  '잘전달해주세요~', '배송전', '부드러운 소포에 담아주세요.', '3층 택배보관함 보관해주세요',  null , null);
+--EXECUTE up_insert_shipinfo ( 10, 'minziZzang',  '잘전달해주세요~', '배송전', '배송 잘 부탁드립니다.', '문앞에 놓아주세요',  '공동현관 출입번호-(#3300)' , null);
 
 --    porderid payrecord.id%TYPE,
 --    pmemid payrecord.memid%TYPE,
