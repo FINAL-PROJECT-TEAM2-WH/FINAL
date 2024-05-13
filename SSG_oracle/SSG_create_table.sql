@@ -324,19 +324,13 @@ CREATE TABLE brand (
 );
 
 CREATE TABLE ShoppingCart (
-<<<<<<< HEAD
-    id number NOT NULL,
-    memid varchar2(300) NOT NULL,
-    pd_id NUMBER NOT NULL,
-    rdate date NULL,
-=======
     id NUMBER NOT NULL,
     memid VARCHAR2(300) NOT NULL,
     rdate DATE NULL,
     id2 NUMBER NOT NULL,
->>>>>>> b18912e18e4fb009aad7622443de3bcc13174298
-    scount number null
+    scount NUMBER NULL
 );
+
 
 CREATE TABLE applicant (
     id number NOT NULL,

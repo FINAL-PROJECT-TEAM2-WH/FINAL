@@ -981,9 +981,8 @@ INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
 
     
     
-<<<<<<< HEAD
 INSERT INTO ShoppingCart  VALUES
-    (1, 'minziZzang', sysdate , 47 , 1;
+    (1, 'minziZzang', sysdate , 47 , 1);
 
 INSERT INTO ShoppingCart  VALUES
     (2, 'hive', sysdate , 47 , 1);
@@ -1041,7 +1040,7 @@ INSERT INTO ShoppingCart  VALUES
 
 INSERT INTO ShoppingCart  VALUES
     (10, 'daetu01', sysdate, 47 , 1);
->>>>>>> b18912e18e4fb009aad7622443de3bcc13174298
+
 
 
 
