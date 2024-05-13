@@ -212,7 +212,8 @@ CREATE TABLE shippingInformation (
     shippingRequest VARCHAR2(4000) NULL,
     receivePosition VARCHAR2(100) NULL,
     entrance VARCHAR2(100) NULL,
-    ShippingEndDate DATE NULL
+    ShippingEndDate DATE NULL,
+    requestTime DATE NULL
 );
 
 CREATE TABLE shippingPlaceInformation (
