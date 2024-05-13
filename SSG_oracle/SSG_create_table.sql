@@ -32,6 +32,7 @@ DROP TABLE applicant CASCADE CONSTRAINTS;
 DROP TABLE present CASCADE CONSTRAINTS;
 DROP TABLE Auth CASCADE CONSTRAINTS;
 DROP TABLE paydetail CASCADE CONSTRAINTS;
+DROP TABLE terms CASCADE CONSTRAINTS;
 
 -- 배송옵션 시퀀스 삭제
 DROP SEQUENCE shippingoption_id_seq;
@@ -48,7 +49,7 @@ drop sequence pointrecord_seq;
 drop sequence couponrecord_seq;
 drop sequence payrecord_seq;
 drop sequence paydetail_seq;
-
+drop sequence 
 
 CREATE TABLE payrecord (
     id number NOT NULL,
@@ -262,7 +263,9 @@ CREATE TABLE qna (
 );
 CREATE TABLE Agreement (
     id NUMBER NOT NULL,
+	terms_id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
+	status VARCHAR2(50) DEFAULT 'Y' NULL ,
     agreeDate DATE DEFAULT SYSDATE NULL
 );
 
@@ -359,6 +362,13 @@ CREATE TABLE paydetail (
     id2 number NOT NULL,
     id3 NUMBER NOT NULL,
     id4 number DEFAULT 0 NULL
+);
+
+CREATE TABLE terms (
+    id NUMBER NOT NULL,
+    name VARCHAR2(300) NOT NULL,
+    content VARCHAR2(1000) NOT NULL,
+    necessary VARCHAR2(100) NOT NULL
 );
 
 
@@ -687,6 +697,17 @@ ALTER TABLE Agreement ADD CONSTRAINT FK_member_TO_Agreement_1 FOREIGN KEY (
     memid
 )
 REFERENCES member (
+    id
+);
+
+ALTER TABLE terms ADD CONSTRAINT PK_TERMS PRIMARY KEY (
+    id
+);
+
+ALTER TABLE Agreement ADD CONSTRAINT FK_member_TO_Agreement_2 FOREIGN KEY (
+    terms_id
+)
+REFERENCES terms (
     id
 );
 
