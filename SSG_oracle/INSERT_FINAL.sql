@@ -471,6 +471,97 @@ EXEC insert_category('12090100', '가공/건강식품', '베이커리/잼', '식
 EXEC insert_category('09010200', '디지털/렌탈', '컴퓨터/노트북/태블릿', '태블릿PC/패드', '없음');
 --15번상품
 
+--더미상품
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+
+INSERT INTO product VALUES (0000000000001, '04040303', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000002, '04040303', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000003, '04040303', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000004, '04040303', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000005, '04040303', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000006, '04040303', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000007, '04040303', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000008, '04040303', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000009, '04040303', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+
+INSERT INTO product VALUES (0000000000010, '01030601', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000011, '01030601', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000012, '01030601', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000013, '01030601', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000014, '01030601', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000015, '01030601', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000016, '01030601', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000017, '01030601', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000018, '01030601', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+
+INSERT INTO product VALUES (0000000000019, '02030102', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000020, '02030102', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000021, '02030102', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000022, '02030102', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000023, '02030102', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000024, '02030102', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000025, '02030102', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000026, '02030102', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000027, '02030102', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+
+INSERT INTO product VALUES (0000000000028, '06010101', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000029, '06010101', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000030, '06010101', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000031, '06010101', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000032, '06010101', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000033, '06010101', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000034, '06010101', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000035, '06010101', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000036, '06010101', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+
+INSERT INTO product VALUES (0000000000037, '07040202', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000038, '07040202', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000039, '07040202', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000040, '07040202', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000041, '07040202', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000042, '07040202', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000043, '07040202', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000044, '07040202', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000045, '07040202', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+
+INSERT INTO product VALUES (0000000000046, '09010200', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000047, '09010200', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000048, '09010200', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000049, '09010200', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000050, '09010200', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000051, '09010200', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000052, '09010200', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000053, '09010200', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000054, '09010200', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 
 
 -- 브랜드 insert 프로시저 실행
@@ -487,7 +578,16 @@ EXEC insert_brand('brand010', null, '콜드플레임');
 EXEC insert_brand('brand011', null, '템퍼');
 EXEC insert_brand('brand012', null, 'JBL');
 EXEC insert_brand('brand013', null, '밀도');
-
+--더미브랜드
+INSERT INTO brand VALUES ('brand014',null,'더미전자');
+INSERT INTO brand VALUES ('brand015',null,'더미건강');
+INSERT INTO brand VALUES ('brand016',null,'더미화장품');
+INSERT INTO brand VALUES ('brand017',null,'더미뷰티');
+INSERT INTO brand VALUES ('brand018',null,'더미패션');
+INSERT INTO brand VALUES ('brand019',null,'더미장난감');
+INSERT INTO brand VALUES ('brand020',null,'더미식품');
+INSERT INTO brand VALUES ('brand021',null,'더미브랜드');
+INSERT INTO brand VALUES ('brand022',null,'더미더미덤');
 -- 판매자 스토어 insert 프로시저 실행
 EXEC insert_sellerstore('sellStore001','시코르');
 EXEC insert_sellerstore('sellStore002','이마트');
@@ -498,6 +598,8 @@ EXEC insert_sellerstore('sellStore006','한우비');
 EXEC insert_sellerstore('sellStore007','나래식품');
 EXEC insert_sellerstore('sellStore009','템퍼');
 EXEC insert_sellerstore('sellStore010','JBL');
+--더미판매자스토어
+INSERT INTO sellerStore VALUES ('sellStore011','더미용판매처');
 
 
 ----------------------------------------------------------------------------------
