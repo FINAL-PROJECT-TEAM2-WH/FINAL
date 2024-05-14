@@ -99,7 +99,6 @@ CREATE TABLE product (
 CREATE TABLE member (
     id varchar2(300) NOT NULL,
     email varchar2(300) NOT NULL,
-    address varchar2(1000) NOT NULL,
     phoneNum varchar2(300) NOT NULL,
     name varchar2(300) NOT NULL,
     passwd varchar2(300) NOT NULL,
