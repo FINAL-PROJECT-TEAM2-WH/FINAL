@@ -69,13 +69,12 @@ increment by 1
 nocache 
 nocycle;
 
-<<<<<<< HEAD
 CREATE SEQUENCE applicant_seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE 
 NOCYCLE;
-=======
+
 -- 약관 시퀀스
 create sequence terms_seq
 start with 1 
@@ -95,8 +94,6 @@ start with 1
 increment by 1 
 nocache 
 nocycle;
-
->>>>>>> efc7f1daaf1d930963c29c8640d33e44d7ad2ff3
 
 -- 회원insert 프로시저 
 create or replace PROCEDURE ins_member 
@@ -1351,7 +1348,6 @@ INSERT INTO applicant VALUES (6, 2, 'whyun01', '엄마가 요즘 탄력이랑 �
 
 insert into productimg values ( 1 , 2097001432075 , null ,null );
 
-<<<<<<< HEAD
 insert into productimg values ( 2 , 2097001432075 , null ,null );
 insert into productimg values ( 3 , 2097001432075 , null ,null );
 insert into productimg values ( 4 , 2097001432075 , null ,null );
@@ -1397,7 +1393,6 @@ INSERT INTO applicant VALUES (7, 2, 'hive', '신청합니다.', TO_DATE('2024-05
 INSERT INTO  applicant VALUES( applicant_seq.NEXTVAL, 2, 'hive', '신청합니다', SYSDATE, NULL, NULL);
 
 INSERT INTO applicant VALUES( applicant.NEXTVAL, ?(eventid), ?(memid), ?('신청코메트'), ?(신청날짜), null, null);
-=======
 
 
 -- require terms 
@@ -1436,4 +1431,3 @@ INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',20970002576
 COMMIT;
 COMMIT;
 
->>>>>>> efc7f1daaf1d930963c29c8640d33e44d7ad2ff3
