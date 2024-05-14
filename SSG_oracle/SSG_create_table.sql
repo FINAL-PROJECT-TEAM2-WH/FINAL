@@ -34,6 +34,7 @@ DROP TABLE Auth CASCADE CONSTRAINTS;
 DROP TABLE paydetail CASCADE CONSTRAINTS;
 DROP TABLE terms CASCADE CONSTRAINTS;
 
+
 -- 배송옵션 시퀀스 삭제
 DROP SEQUENCE shippingoption_id_seq;
 -- 상품 시퀀스 삭제
@@ -51,6 +52,7 @@ drop sequence payrecord_seq;
 drop sequence paydetail_seq;
 drop sequence agreement_seq;
 drop sequence terms_seq;
+drop sequence interestGoods_seq;
 
 CREATE TABLE payrecord (
     id number NOT NULL,
