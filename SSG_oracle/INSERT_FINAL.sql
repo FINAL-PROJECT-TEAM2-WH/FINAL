@@ -69,25 +69,47 @@ increment by 1
 nocache 
 nocycle;
 
+<<<<<<< HEAD
 CREATE SEQUENCE applicant_seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE 
 NOCYCLE;
+=======
+-- 약관 시퀀스
+create sequence terms_seq
+start with 1 
+increment by 1
+nocache
+nocycle;
+
+-- 약관동의 시퀀스 
+CREATE sequence agreement_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
+
+CREATE sequence interestGoods_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
+
+>>>>>>> efc7f1daaf1d930963c29c8640d33e44d7ad2ff3
 
 -- 회원insert 프로시저 
 create or replace PROCEDURE ins_member 
 (
 p_ID VARCHAR2,
 p_email VARCHAR2,
-p_address VARCHAR2,
 p_phonenum VARCHAR2,
 p_name VARCHAR2,
 p_passwd VARCHAR2,
 BIRTHD DATE)
 IS
 BEGIN 
-    INSERT INTO MEMBER(id,email,address,phonenum,name,passwd,birthd,REGISTERDATE,UPDATEDATE,LOGINNOTIFICATION,LOGIN2NOTIFICATION ) VALUES (p_ID,p_email ,p_address,p_phonenum,p_name,p_passwd,BIRTHD,SYSDATE,SYSDATE,'0','0');
+    INSERT INTO MEMBER(id,email,phonenum,name,passwd,birthd,REGISTERDATE,UPDATEDATE,LOGINNOTIFICATION,LOGIN2NOTIFICATION ) VALUES (p_ID,p_email,p_phonenum,p_name,p_passwd,BIRTHD,SYSDATE,SYSDATE,'0','0');
 
 --EXCEPTION 
 
@@ -152,63 +174,6 @@ EXCEPTION
 END;
 
 
--- 상품 테이블 insert 프로시저
-CREATE OR REPLACE PROCEDURE insert_product(
-    p_id             IN  product.id%TYPE,
-    p_categoryId  IN  product.categoryId%TYPE,
-    p_specialPriceId IN  product.specialPriceId%TYPE,
-    p_shippingOptionId    IN  product.shippingOptionId%TYPE,
-    p_sellerStoreId   IN  product.sellerStoreId%TYPE,
-    p_brandid         IN PRODUCT.BRANDID%TYPE,
-    p_pdname          IN PRODUCT.PDNAME%TYPE,
-    p_price           IN PRODUCT.PRICE%TYPE,
-    p_pcontent        IN PRODUCT.PCONTENT%TYPE,
-    p_updateday       IN PRODUCT.UPDATEDAY%TYPE,
-    p_stock           IN PRODUCT.STOCK%TYPE
-)
-IS
-BEGIN
-    INSERT INTO product (id ,categoryId,specialPriceId, shippingoptionid, sellerstoreid, brandid ,pdname, price, pcontent,updateday,stock )
-    VALUES (p_id ,p_categoryId,p_specialPriceId,p_shippingoptionid, p_sellerstoreid, p_brandid ,p_pdname, p_price,p_pcontent,p_updateday,p_stock   );
-    COMMIT;
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-END insert_product;
-
-
--- 상품 옵션 insert 프로시저
-CREATE OR REPLACE PROCEDURE insert_productoption (
-    p_id          IN PRODUCTOPTION.ID%TYPE,
-    p_productid   IN PRODUCTOPTION.PRODUCTID%TYPE,
-    p_optionname  IN PRODUCTOPTION.OPTIONNAME%TYPE,
-    p_optionname2 IN PRODUCTOPTION.OPTIONNAME2%TYPE,
-    p_optionprice IN PRODUCTOPTION.OPTIONPRICE%TYPE,
-    p_optionstock IN PRODUCTOPTION.OPTIONSTOCK%TYPE
-) IS
-BEGIN
-    INSERT INTO PRODUCTOPTION (
-        ID,
-        PRODUCTID,
-        OPTIONNAME,
-        OPTIONNAME2,
-        OPTIONPRICE,
-        OPTIONSTOCK
-    ) VALUES (
-        p_id,
-        p_productid,
-        p_optionname,
-        p_optionname2,
-        p_optionprice,
-        p_optionstock
-    );
-
-    COMMIT;
-
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-END insert_productoption;
 
 
 -- 상품 이미지 insert 프로시저
@@ -358,19 +323,63 @@ BEGIN
 --EXCEPTION
 END;
 
+-- 필수 약관 동의 6개 insert 문 . 
+CREATE OR REPLACE PROCEDURE ins_req_terms
+(
+p_ID member.id%TYPE
+)
+IS
+countid terms.name%TYPE;
+num1 NUMBER := 1;
+BEGIN 
+
+    SELECT COUNT(id) INTO countid
+    FROM terms
+    WHERE REGEXP_LIKE(name,'req');
+    
+    WHILE(num1 <= countid)
+    LOOP 
+    INSERT INTO agreement VALUES (agreement_seq.NEXTVAL,num1,p_ID,'Y',SYSDATE);
+    num1 := num1 + 1;
+    END LOOP;
+--EXCEPTION 
+
+END;
+
+
+-- 선택 약관 
+CREATE OR REPLACE PROCEDURE ins_sel_terms
+(
+p_name terms.name%TYPE,
+p_ID member.id%TYPE
+)
+IS
+num1 NUMBER ;
+BEGIN 
+    SELECT t.id into num1
+    FROM terms t
+    WHERE name = p_name; 
+    
+    INSERT INTO agreement VALUES (agreement_seq.NEXTVAL,num1,p_ID,'Y',SYSDATE);
+END;
+
+
+
+
+
 -- 회원 INSERT
 -- 더미데이터 
-EXEC ins_member('daetu01','daetu01@gmail.com','서울특별시 중구 세종대로 110(태평로1가)',010-1111-1111,'원대만','1234','1978-05-29');
-EXEC ins_member('m_eum01','m_eum01@naver.com','서울특별시 종로구 돈화문로9길 26(돈의동)',010-4142-2134,'권맑음','1234','1998-09-12');
-EXEC ins_member('d_Chan01','d_Chan01@daum.com','서울특별시 중구 창경궁로 17(예관동)',010-1231-2685,'이동찬','1234','1995-11-20');
-EXEC ins_member('dyoung01','dyoung01@gmail.com','서울특별시 중구 수표로 65(수표동)',010-1245-5415,'이동영','1234','1990-01-02');
-EXEC ins_member('mggun01','mggun01@gmail.com','서울특별시 종로구 삼일대로30길 22(낙원동)',010-6733-3573,'강명건','1234','1993-05-20');
-EXEC ins_member('whyun01','whyun01@gmail.com','서울특별시 종로구 삼청로 115-13(삼청동)',010-2351-6738,'박우현','1234','1992-10-01');
+EXEC ins_member('daetu01','daetu01@gmail.com',010-1111-1111,'원대만','1234','1978-05-29');
+EXEC ins_member('m_eum01','m_eum01@naver.com',010-4142-2134,'권맑음','1234','1998-09-12');
+EXEC ins_member('d_Chan01','d_Chan01@daum.com',010-1231-2685,'이동찬','1234','1995-11-20');
+EXEC ins_member('dyoung01','dyoung01@gmail.com',010-1245-5415,'이동영','1234','1990-01-02');
+EXEC ins_member('mggun01','mggun01@gmail.com',010-6733-3573,'강명건','1234','1993-05-20');
+EXEC ins_member('whyun01','whyun01@gmail.com',010-2351-6738,'박우현','1234','1992-10-01');
 
-EXEC ins_member('minziZzang','minziZzang@gmail.com','서울특별시 종로구 이화장길 81(동숭동)',010-1461-1245,'김민지','1234','2003-02-10');
-EXEC ins_member('hive','hive@gmail.com','서울특별시 종로구 삼청로 118(삼청동)',010-5242-6642,'오함마','1234','2006-03-20');
-EXEC ins_member('newjeans','newjeans@gmail.com','서울특별시 종로구 대학로 103(연건동)',010-6645-2411,'박바지','1234','2007-01-20');
-EXEC ins_member('cap','cap@gmail.com','서울특별시 서대문구 연대동문길 27-27(대신동)',010-5124-5665,'하남자','1234','2002-06-06');
+EXEC ins_member('minziZzang','minziZzang@gmail.com',010-1461-1245,'김민지','1234','2003-02-10');
+EXEC ins_member('hive','hive@gmail.com',010-5242-6642,'오함마','1234','2006-03-20');
+EXEC ins_member('newjeans','newjeans@gmail.com',010-6645-2411,'박바지','1234','2007-01-20');
+EXEC ins_member('cap','cap@gmail.com',010-5124-5665,'하남자','1234','2002-06-06');
 
 
 --SELECT * 
@@ -470,6 +479,97 @@ EXEC insert_category('12090100', '가공/건강식품', '베이커리/잼', '식
 EXEC insert_category('09010200', '디지털/렌탈', '컴퓨터/노트북/태블릿', '태블릿PC/패드', '없음');
 --15번상품
 
+--더미상품
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+
+INSERT INTO product VALUES (0000000000001, '04040303', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000002, '04040303', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000003, '04040303', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000004, '04040303', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000005, '04040303', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000006, '04040303', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000007, '04040303', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000008, '04040303', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000009, '04040303', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+
+INSERT INTO product VALUES (0000000000010, '01030601', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000011, '01030601', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000012, '01030601', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000013, '01030601', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000014, '01030601', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000015, '01030601', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000016, '01030601', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000017, '01030601', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000018, '01030601', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+
+INSERT INTO product VALUES (0000000000019, '02030102', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000020, '02030102', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000021, '02030102', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000022, '02030102', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000023, '02030102', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000024, '02030102', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000025, '02030102', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000026, '02030102', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000027, '02030102', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+
+INSERT INTO product VALUES (0000000000028, '06010101', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000029, '06010101', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000030, '06010101', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000031, '06010101', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000032, '06010101', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000033, '06010101', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000034, '06010101', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000035, '06010101', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000036, '06010101', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+
+INSERT INTO product VALUES (0000000000037, '07040202', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000038, '07040202', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000039, '07040202', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000040, '07040202', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000041, '07040202', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000042, '07040202', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000043, '07040202', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000044, '07040202', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000045, '07040202', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+
+INSERT INTO product VALUES (0000000000046, '09010200', null, '1', 'sellStore001', 'brand014', '아이더미X18', null, null);
+INSERT INTO product VALUES (0000000000047, '09010200', null, '1', 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
+INSERT INTO product VALUES (0000000000048, '09010200', null, '1', 'sellStore001', 'brand016', '더미수분크림', null, null);
+INSERT INTO product VALUES (0000000000049, '09010200', null, '1', 'sellStore001', 'brand017', '더미팩트', null, null);
+INSERT INTO product VALUES (0000000000050, '09010200', null, '1', 'sellStore001', 'brand018', '더미블레이저', null, null);
+INSERT INTO product VALUES (0000000000051, '09010200', null, '1', 'sellStore001', 'brand019', '더미건담더블오', null, null);
+INSERT INTO product VALUES (0000000000052, '09010200', null, '1', 'sellStore001', 'brand020', '더미만두', null, null);
+INSERT INTO product VALUES (0000000000053, '09010200', null, '1', 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
+INSERT INTO product VALUES (0000000000054, '09010200', null, '1', 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 
 
 -- 브랜드 insert 프로시저 실행
@@ -486,7 +586,16 @@ EXEC insert_brand('brand010', null, '콜드플레임');
 EXEC insert_brand('brand011', null, '템퍼');
 EXEC insert_brand('brand012', null, 'JBL');
 EXEC insert_brand('brand013', null, '밀도');
-
+--더미브랜드
+INSERT INTO brand VALUES ('brand014',null,'더미전자');
+INSERT INTO brand VALUES ('brand015',null,'더미건강');
+INSERT INTO brand VALUES ('brand016',null,'더미화장품');
+INSERT INTO brand VALUES ('brand017',null,'더미뷰티');
+INSERT INTO brand VALUES ('brand018',null,'더미패션');
+INSERT INTO brand VALUES ('brand019',null,'더미장난감');
+INSERT INTO brand VALUES ('brand020',null,'더미식품');
+INSERT INTO brand VALUES ('brand021',null,'더미브랜드');
+INSERT INTO brand VALUES ('brand022',null,'더미더미덤');
 -- 판매자 스토어 insert 프로시저 실행
 EXEC insert_sellerstore('sellStore001','시코르');
 EXEC insert_sellerstore('sellStore002','이마트');
@@ -497,6 +606,8 @@ EXEC insert_sellerstore('sellStore006','한우비');
 EXEC insert_sellerstore('sellStore007','나래식품');
 EXEC insert_sellerstore('sellStore009','템퍼');
 EXEC insert_sellerstore('sellStore010','JBL');
+--더미판매자스토어
+INSERT INTO sellerStore VALUES ('sellStore011','더미용판매처');
 
 
 ----------------------------------------------------------------------------------
@@ -928,35 +1039,36 @@ INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
 
     
     
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (1, 'minziZzang', 1000544937242, TO_DATE('2024-05-01', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (1, 'minziZzang', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (2, 'hive', 1000544937242, TO_DATE('2024-05-02', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (2, 'hive', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (3, 'hive', 1000544937242, TO_DATE('2024-05-03', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (3, 'hive', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (4, 'daetu01', 1000026532717, TO_DATE('2024-05-04', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (4, 'daetu01', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (5, 'hive', 1000026532717, TO_DATE('2024-05-05', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (5, 'hive', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (6, 'minziZzang', 1000026532717, TO_DATE('2024-05-06', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart VALUES
+    (6, 'minziZzang', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (7, 'hive', 2097001308233, TO_DATE('2024-05-07', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart VALUES
+    (7, 'hive', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (8, 'daetu01', 2097001308233, TO_DATE('2024-05-08', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (8, 'daetu01', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (9, 'hive', 2097001432075, TO_DATE('2024-05-09', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (9, 'hive', sysdate , 47 , 1);
 
-INSERT INTO ShoppingCart (id, memid, pd_id, rdate) VALUES
-    (10, 'daetu01', 2097001432075, TO_DATE('2024-05-10', 'YYYY-MM-DD'));
+INSERT INTO ShoppingCart  VALUES
+    (10, 'daetu01', sysdate , 47 , 1);
+
 
 
 
@@ -1239,6 +1351,7 @@ INSERT INTO applicant VALUES (6, 2, 'whyun01', '엄마가 요즘 탄력이랑 �
 
 insert into productimg values ( 1 , 2097001432075 , null ,null );
 
+<<<<<<< HEAD
 insert into productimg values ( 2 , 2097001432075 , null ,null );
 insert into productimg values ( 3 , 2097001432075 , null ,null );
 insert into productimg values ( 4 , 2097001432075 , null ,null );
@@ -1284,3 +1397,43 @@ INSERT INTO applicant VALUES (7, 2, 'hive', '신청합니다.', TO_DATE('2024-05
 INSERT INTO  applicant VALUES( applicant_seq.NEXTVAL, 2, 'hive', '신청합니다', SYSDATE, NULL, NULL);
 
 INSERT INTO applicant VALUES( applicant.NEXTVAL, ?(eventid), ?(memid), ?('신청코메트'), ?(신청날짜), null, null);
+=======
+
+
+-- require terms 
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_01', '/SSGSSAK/member/terms/terms_01','Y');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_02', '/SSGSSAK/member/terms/terms_02','Y');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_03', '/SSGSSAK/member/terms/terms_03','Y');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_04', '/SSGSSAK/member/terms/terms_04','Y');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_05', '/SSGSSAK/member/terms/terms_05','Y');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'req_terms_06', '/SSGSSAK/member/terms/terms_06','Y');
+
+-- SELECT terms
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=10', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=10','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=20', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=20','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=20_email', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=20_email','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=20_sms', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=20_sms','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=20_post', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=20_post','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'mbrSvcAgreeTypeCd=20_tel', '/SSGSSAK/member/terms/mbrSvcAgreeTypeCd=20_tel','N');
+
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10', '/SSGSSAK/member/terms/ssgInfoRcvAgree','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_email', '/SSGSSAK/member/terms/ssgInfoRcvAgree_email','N');
+INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_sms', '/SSGSSAK/member/terms/ssgInfoRcvAgree_sms','N');
+
+
+-- interestgoods insert
+
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000026532717,SYSDATE,'모아보기');
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000544937242,SYSDATE,'모아보기');
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000587702102,SYSDATE,'모아보기');
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001577943,SYSDATE,'모아보기');
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000398650979,SYSDATE,'모아보기');
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000014118201,SYSDATE,'모아보기');
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001308233,SYSDATE,'모아보기');
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097000257655,SYSDATE,'모아보기');
+
+
+COMMIT;
+COMMIT;
+
+>>>>>>> efc7f1daaf1d930963c29c8640d33e44d7ad2ff3

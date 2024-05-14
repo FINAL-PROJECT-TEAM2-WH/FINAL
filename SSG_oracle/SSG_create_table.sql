@@ -32,6 +32,8 @@ DROP TABLE applicant CASCADE CONSTRAINTS;
 DROP TABLE present CASCADE CONSTRAINTS;
 DROP TABLE Auth CASCADE CONSTRAINTS;
 DROP TABLE paydetail CASCADE CONSTRAINTS;
+DROP TABLE terms CASCADE CONSTRAINTS;
+
 
 -- 배송옵션 시퀀스 삭제
 DROP SEQUENCE shippingoption_id_seq;
@@ -48,7 +50,9 @@ drop sequence pointrecord_seq;
 drop sequence couponrecord_seq;
 drop sequence payrecord_seq;
 drop sequence paydetail_seq;
-
+drop sequence agreement_seq;
+drop sequence terms_seq;
+drop sequence interestGoods_seq;
 
 CREATE TABLE payrecord (
     id number NOT NULL,
@@ -97,7 +101,6 @@ CREATE TABLE product (
 CREATE TABLE member (
     id varchar2(300) NOT NULL,
     email varchar2(300) NOT NULL,
-    address varchar2(1000) NOT NULL,
     phoneNum varchar2(300) NOT NULL,
     name varchar2(300) NOT NULL,
     passwd varchar2(300) NOT NULL,
@@ -262,7 +265,9 @@ CREATE TABLE qna (
 );
 CREATE TABLE Agreement (
     id NUMBER NOT NULL,
+	terms_id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
+	status VARCHAR2(50) DEFAULT 'Y' NULL ,
     agreeDate DATE DEFAULT SYSDATE NULL
 );
 
@@ -320,11 +325,13 @@ CREATE TABLE brand (
 );
 
 CREATE TABLE ShoppingCart (
-    id number NOT NULL,
-    memid varchar2(300) NOT NULL,
-    pd_id NUMBER NOT NULL,
-    rdate date NULL
+    id NUMBER NOT NULL,
+    memid VARCHAR2(300) NOT NULL,
+    rdate DATE NULL,
+    id2 NUMBER NOT NULL,
+    scount NUMBER NULL
 );
+
 
 CREATE TABLE applicant (
     id number NOT NULL,
@@ -361,6 +368,17 @@ CREATE TABLE paydetail (
     id4 number DEFAULT 0 NULL
 );
 
+CREATE TABLE terms (
+    id NUMBER NOT NULL,
+    name VARCHAR2(300) NOT NULL,
+    content VARCHAR2(1000) NOT NULL,
+    necessary VARCHAR2(100) NOT NULL
+);
+
+
+ALTER TABLE ShoppingCart ADD CONSTRAINT PK_SHOPPINGCART PRIMARY KEY (
+    id
+);
 ALTER TABLE payrecord ADD CONSTRAINT PK_PAYRECORD PRIMARY KEY (id);
 
 ALTER TABLE paydetail ADD CONSTRAINT PK_PAYDETAIL PRIMARY KEY (id);
@@ -479,10 +497,6 @@ ALTER TABLE sellerstore ADD CONSTRAINT PK_SELLERSTORE PRIMARY KEY (
 );
 
 ALTER TABLE brand ADD CONSTRAINT PK_BRAND PRIMARY KEY (
-    id
-);
-
-ALTER TABLE ShoppingCart ADD CONSTRAINT PK_SHOPPINGCART PRIMARY KEY (
     id
 );
 
@@ -690,6 +704,17 @@ REFERENCES member (
     id
 );
 
+ALTER TABLE terms ADD CONSTRAINT PK_TERMS PRIMARY KEY (
+    id
+);
+
+ALTER TABLE Agreement ADD CONSTRAINT FK_member_TO_Agreement_2 FOREIGN KEY (
+    terms_id
+)
+REFERENCES terms (
+    id
+);
+
 
 ALTER TABLE pointrecord ADD CONSTRAINT FK_points_TO_pointrecord_1 FOREIGN KEY (
     cardNumber
@@ -726,19 +751,8 @@ REFERENCES member (
     id
 );
 
-ALTER TABLE ShoppingCart ADD CONSTRAINT FK_member_TO_ShoppingCart_1 FOREIGN KEY (
-    memid
-)
-REFERENCES member (
-    id
-);
 
-ALTER TABLE ShoppingCart ADD CONSTRAINT FK_product_TO_ShoppingCart_1 FOREIGN KEY (
-    pd_id
-)
-REFERENCES product (
-    id
-);
+
 
 ALTER TABLE applicant ADD CONSTRAINT FK_event_TO_applicant_1 FOREIGN KEY (
     eid
@@ -760,3 +774,17 @@ ALTER TABLE points ADD CONSTRAINT FK_member_TO_points_1 FOREIGN KEY (
 REFERENCES member (
 	id
 );
+
+ALTER TABLE ShoppingCart ADD CONSTRAINT FK_member_TO_ShoppingCart_1 FOREIGN KEY (
+    memid
+) REFERENCES member (
+    id
+);
+
+ALTER TABLE ShoppingCart ADD CONSTRAINT FK_productOp_TO_ShoppingC_1 FOREIGN KEY (
+    id2
+) REFERENCES productOption (
+    id
+);
+
+
