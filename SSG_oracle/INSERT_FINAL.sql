@@ -69,6 +69,11 @@ increment by 1
 nocache 
 nocycle;
 
+CREATE SEQUENCE applicant_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE 
+NOCYCLE;
 
 -- 회원insert 프로시저 
 create or replace PROCEDURE ins_member 
@@ -1085,9 +1090,98 @@ EXECUTE up_insert_search ( 'whyun01', '마우스');
 EXECUTE up_insert_search ( 'minziZzang', '뉴진스앨범');
 EXECUTE up_insert_search ( 'hive', '민희진모자');
 EXECUTE up_insert_search ( 'hive', '방탄소년단앨범');
-
-
-
+EXECUTE up_insert_search ( 'daetu01', '키보드');
+EXECUTE up_insert_search ( 'daetu01', '노트북');
+EXECUTE up_insert_search ( 'daetu01', '김치');
+EXECUTE up_insert_search ( 'daetu01', '참깨스틱');
+EXECUTE up_insert_search ( 'm_eum01', '계란');
+EXECUTE up_insert_search ( 'm_eum01', '대파');
+EXECUTE up_insert_search ( 'd_Chan01', '간장');
+EXECUTE up_insert_search ( 'd_Chan01', '데스크톱');
+EXECUTE up_insert_search ( 'dyoung01', '삼다수');
+EXECUTE up_insert_search ( 'dyoung01', '오레오오즈');
+EXECUTE up_insert_search ( 'mggun01', '키보드');
+EXECUTE up_insert_search ( 'mggun01', '로션');
+EXECUTE up_insert_search ( 'whyun01', '감자');
+EXECUTE up_insert_search ( 'whyun01', '참치');
+EXECUTE up_insert_search ( 'whyun01', '마우스');
+EXECUTE up_insert_search ( 'minziZzang', '뉴진스앨범');
+EXECUTE up_insert_search ( 'hive', '민희진모자');
+EXECUTE up_insert_search ( 'hive', '방탄소년단앨범');
+EXECUTE up_insert_search ( 'daetu01', '키보드');
+EXECUTE up_insert_search ( 'daetu01', '노트북');
+EXECUTE up_insert_search ( 'daetu01', '김치');
+EXECUTE up_insert_search ( 'daetu01', '참깨스틱');
+EXECUTE up_insert_search ( 'm_eum01', '계란');
+EXECUTE up_insert_search ( 'm_eum01', '대파');
+EXECUTE up_insert_search ( 'd_Chan01', '간장');
+EXECUTE up_insert_search ( 'd_Chan01', '데스크톱');
+EXECUTE up_insert_search ( 'dyoung01', '삼다수');
+EXECUTE up_insert_search ( 'dyoung01', '오레오오즈');
+EXECUTE up_insert_search ( 'mggun01', '키보드');
+EXECUTE up_insert_search ( 'mggun01', '로션');
+EXECUTE up_insert_search ( 'whyun01', '감자');
+EXECUTE up_insert_search ( 'whyun01', '참치');
+EXECUTE up_insert_search ( 'whyun01', '마우스');
+EXECUTE up_insert_search ( 'minziZzang', '뉴진스앨범');
+EXECUTE up_insert_search ( 'hive', '컴퓨터');
+EXECUTE up_insert_search ( 'hive', '키보드');
+EXECUTE up_insert_search ( 'whyun01', '호박');
+EXECUTE up_insert_search ( 'whyun01', '대파');
+EXECUTE up_insert_search ( 'whyun01', '스팸');
+EXECUTE up_insert_search ( 'minziZzang', '고구마');
+EXECUTE up_insert_search ( 'hive', '명란');
+EXECUTE up_insert_search ( 'hive', '핫도그');
+EXECUTE up_insert_search ( 'hive', '컴퓨터');
+EXECUTE up_insert_search ( 'hive', '키보드');
+EXECUTE up_insert_search ( 'whyun01', '호박');
+EXECUTE up_insert_search ( 'whyun01', '대파');
+EXECUTE up_insert_search ( 'whyun01', '스팸');
+EXECUTE up_insert_search ( 'minziZzang', '고구마');
+EXECUTE up_insert_search ( 'hive', '명란');
+EXECUTE up_insert_search ( 'hive', '핫도그');
+EXECUTE up_insert_search ( 'hive', '컴퓨터');
+EXECUTE up_insert_search ( 'hive', '키보드');
+EXECUTE up_insert_search ( 'whyun01', '호박');
+EXECUTE up_insert_search ( 'whyun01', '대파');
+EXECUTE up_insert_search ( 'whyun01', '스팸');
+EXECUTE up_insert_search ( 'minziZzang', '고구마');
+EXECUTE up_insert_search ( 'hive', '명란');
+EXECUTE up_insert_search ( 'hive', '핫도그');
+EXECUTE up_insert_search ( 'hive', '컴퓨터');
+EXECUTE up_insert_search ( 'hive', '키보드');
+EXECUTE up_insert_search ( 'whyun01', '호박');
+EXECUTE up_insert_search ( 'whyun01', '대파');
+EXECUTE up_insert_search ( 'whyun01', '스팸');
+EXECUTE up_insert_search ( 'minziZzang', '고구마');
+EXECUTE up_insert_search ( 'hive', '명란');
+EXECUTE up_insert_search ( 'hive', '핫도그');
+EXECUTE up_insert_search ( 'hive', '컴퓨터');
+EXECUTE up_insert_search ( 'hive', '키보드');
+EXECUTE up_insert_search ( 'whyun01', '호박');
+EXECUTE up_insert_search ( 'whyun01', '대파');
+EXECUTE up_insert_search ( 'whyun01', '스팸');
+EXECUTE up_insert_search ( 'minziZzang', '고구마');
+EXECUTE up_insert_search ( 'hive', '명란');
+EXECUTE up_insert_search ( 'hive', '핫도그');
+EXECUTE up_insert_search ( 'hive', '컴퓨터');
+EXECUTE up_insert_search ( 'hive', '키보드');
+EXECUTE up_insert_search ( 'whyun01', '호박');
+EXECUTE up_insert_search ( 'whyun01', '대파');
+EXECUTE up_insert_search ( 'whyun01', '스팸');
+EXECUTE up_insert_search ( 'minziZzang', '고구마');
+EXECUTE up_insert_search ( 'hive', '명란');
+EXECUTE up_insert_search ( 'hive', '핫도그');
+EXECUTE up_insert_search ( 'hive', '명란');
+EXECUTE up_insert_search ( 'hive', '핫도그');
+EXECUTE up_insert_search ( 'hive', '컴퓨터');
+EXECUTE up_insert_search ( 'hive', '키보드');
+EXECUTE up_insert_search ( 'whyun01', '호박');
+EXECUTE up_insert_search ( 'whyun01', '대파');
+EXECUTE up_insert_search ( 'whyun01', '스팸');
+EXECUTE up_insert_search ( 'minziZzang', '고구마');
+EXECUTE up_insert_search ( 'hive', '명란');
+EXECUTE up_insert_search ( 'hive', '핫도그');
 
 
 
@@ -1144,5 +1238,49 @@ INSERT INTO applicant VALUES (5, 2, 'mggun01', '꼭 테스트 해보고 싶습�
 INSERT INTO applicant VALUES (6, 2, 'whyun01', '엄마가 요즘 탄력이랑 주름 관련해서 고민이 많으셔서 도움을 드리고 싶었는데 스틱제품은 잘 쓰실것 같아 신청합니다.', TO_DATE('2024-04-28'), '당첨', null);
 
 insert into productimg values ( 1 , 2097001432075 , null ,null );
-COMMIT;
-COMMIT;
+
+insert into productimg values ( 2 , 2097001432075 , null ,null );
+insert into productimg values ( 3 , 2097001432075 , null ,null );
+insert into productimg values ( 4 , 2097001432075 , null ,null );
+insert into productimg values ( 5 , 2097001432075 , null ,null );
+insert into productimg values ( 6 , 2097001432075 , null ,null );
+insert into productimg values ( 7 , 1000587702102 , null ,null );
+insert into productimg values ( 8 , 1000587702102 , null ,null );
+insert into productimg values ( 9 , 1000587702102 , null ,null );
+insert into productimg values ( 10 , 1000587702102 , null ,null );
+insert into productimg values ( 11 , 1000544937242 , null ,null );
+insert into productimg values ( 12 , 1000544937242 , null ,null );
+insert into productimg values ( 13 , 1000544937242 , null ,null );
+
+INSERT INTO applicant VALUES (1, 1, 'daetu01', '딱 저희 아이의 탈취제가 필요했는데 신청합니다.', TO_DATE('2024-04-22'), '당첨');
+
+INSERT INTO applicant VALUES (2, 1, 'm_eum01', '계속 쓰고 있는 제품인데 너무 좋아요.', TO_DATE('2024-04-24'), '탈락');
+
+INSERT INTO applicant VALUES (3, 1, 'd_Chan01', '신청합니다. 당첨 되었으면 좋겠어요', TO_DATE('2024-04-25'), '당첨');
+
+INSERT INTO applicant VALUES (4, 1, 'mggun01', '저희 댕댕이가 참 좋아해요.', TO_DATE('2024-04-25'), '탈락');
+
+INSERT INTO applicant VALUES (5, 1, 'whyun01', '당첨되고 싶어요 꼭!.', TO_DATE('2024-04-26'), '당첨');
+
+INSERT INTO applicant VALUES (5, 1, 'minziZzang', '신청해요!', TO_DATE('2024-04-26'), '당첨');
+
+INSERT INTO applicant VALUES (5, 1, 'hive', '신청합니다.', TO_DATE('2024-04-27'), '당첨');
+
+--링크 https://event.ssg.com/eventDetail.ssg?nevntId=1000000012872&domainSiteNo=6005&_mpop=new
+INSERT INTO applicant VALUES (1, 2, 'daetu01', '꼭 당첨되고 싶어요ㅂ!', TO_DATE('2024-04-27'), '당첨');
+
+INSERT INTO applicant VALUES (2, 2, 'm_eum01', '계속 쓰고 있는 제품인데 너무 좋아요.', TO_DATE('2024-05-27'), '탈락');
+
+INSERT INTO applicant VALUES (3, 2, 'd_Chan01', '신청합니다. 당첨 되었으면 좋겠어요', TO_DATE('2024-05-27'), '당첨');
+
+INSERT INTO applicant VALUES (4, 2, 'mggun01', '저희 아이 참 좋아해요.', TO_DATE('2024-05-28'), '탈락');
+
+INSERT INTO applicant VALUES (5, 2, 'whyun01', '당첨되고 싶어요 꼭!.', TO_DATE('2024-05-28'), '당첨');
+
+INSERT INTO applicant VALUES (5, 2, 'minziZzang', '신청해요!', TO_DATE('2024-05-28'), '탈락');
+
+INSERT INTO applicant VALUES (7, 2, 'hive', '신청합니다.', TO_DATE('2024-05-28'), '당첨');
+
+INSERT INTO  applicant VALUES( applicant_seq.NEXTVAL, 2, 'hive', '신청합니다', SYSDATE, NULL, NULL);
+
+INSERT INTO applicant VALUES( applicant.NEXTVAL, ?(eventid), ?(memid), ?('신청코메트'), ?(신청날짜), null, null);
