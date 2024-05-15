@@ -97,7 +97,7 @@ CREATE TABLE product (
     brandId VARCHAR2(20) NOT NULL,
     pdName VARCHAR2(300) NULL,
     pcontent VARCHAR2(3000) NULL,
-    updateDay VARCHAR2(50) NULL
+    updateDay DATE NULL
     
 );
 
@@ -175,7 +175,7 @@ CREATE TABLE review (
     memid varchar2(300) NOT NULL,
     productOptionId NUMBER NULL,
     reviewContent VARCHAR2(3000) NULL,
-    reviewDate VARCHAR2(100) NULL,
+    reviewDate DATE NULL,
     reviewType VARCHAR2(100) NULL,
     productType VARCHAR2(100) NULL,
     grade NUMBER(3,2) NOT NULL,
@@ -263,9 +263,9 @@ CREATE TABLE qna (
     productId NUMBER NOT NULL,
     memId varchar2(300) NOT NULL,
     qContent VARCHAR2(3000) NULL,
-    qDate VARCHAR2(50) NULL,
+    qDate DATE NULL,
     aContent VARCHAR2(3000) NULL,
-    aDate VARCHAR2(50) NULL
+    aDate DATE NULL
 );
 CREATE TABLE Agreement (
     id NUMBER NOT NULL,
