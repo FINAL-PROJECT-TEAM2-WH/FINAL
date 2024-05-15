@@ -255,7 +255,7 @@ CREATE TABLE quitMember (
 CREATE TABLE reviewImg (
     id NUMBER NOT NULL,
     reviewId NUMBER NOT NULL,
-    reviewImgUrl VARCHAR2(100) NULL
+    reviewImgUrl VARCHAR2(1000) NULL
 );
 
 CREATE TABLE qna (
