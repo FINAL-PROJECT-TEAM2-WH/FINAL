@@ -33,6 +33,7 @@ DROP TABLE present CASCADE CONSTRAINTS;
 DROP TABLE Auth CASCADE CONSTRAINTS;
 DROP TABLE paydetail CASCADE CONSTRAINTS;
 DROP TABLE terms CASCADE CONSTRAINTS;
+DROP TABLE divisionfolder CASCADE CONSTRAINTS;
 
 
 -- 배송옵션 시퀀스 삭제
@@ -56,6 +57,7 @@ drop sequence interestGoods_seq;
 drop sequence category_seq;
 drop sequence brand_seq;
 drop sequence seller_seq;
+drop sequence division_seq;
 
 
 CREATE TABLE payrecord (
