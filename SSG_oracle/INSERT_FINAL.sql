@@ -113,6 +113,14 @@ increment by 1
 nocache 
 nocycle;
 
+CREATE sequence division_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
+
+
+
 -- 회원insert 프로시저 
 create or replace PROCEDURE ins_member 
 (
