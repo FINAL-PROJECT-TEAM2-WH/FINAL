@@ -53,6 +53,10 @@ drop sequence paydetail_seq;
 drop sequence agreement_seq;
 drop sequence terms_seq;
 drop sequence interestGoods_seq;
+drop sequence category_seq;
+drop sequence brand_seq;
+drop sequence seller_seq;
+
 
 CREATE TABLE payrecord (
     id number NOT NULL,
@@ -182,7 +186,7 @@ CREATE TABLE review (
 );
 
 CREATE TABLE category (
-    id VARCHAR2(300) NOT NULL,
+    id number NOT NULL,
     majorCateName VARCHAR2(300) NULL,
     middleCateName VARCHAR2(300) NULL,
     subCateName VARCHAR2(300) NULL,
@@ -314,12 +318,12 @@ CREATE TABLE Search (
 );
 
 CREATE TABLE sellerstore (
-    id varchar2(300) NOT NULL,
+    id number NOT NULL,
     sellerName varchar2(300) NULL
 );
 
 CREATE TABLE brand (
-    id VARCHAR2(300) NOT NULL,
+    id number NOT NULL,
     brandImg VARCHAR2(3000) NULL,
     brandName VARCHAR2(300) NULL
 );
