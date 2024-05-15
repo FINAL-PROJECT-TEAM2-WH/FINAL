@@ -120,25 +120,25 @@ CREATE TABLE member (
 CREATE TABLE interestBrand (
     id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
-    sellerID VARCHAR2(200) NOT NULL,
-    RecordDate DATE NULL,
-    divisionFolder varchar2(100) DEFAULT '모아보기' NULL
+    brandId number NOT NULL,
+	folderId number NOT NULL,
+    RecordDate DATE NULL  
 );
 
 CREATE TABLE interestGoods (
     id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
     productId NUMBER NOT NULL,
+	folderId number NOT NULL,
     RecordDate DATE NULL,
-    divisionFolder varchar2(100) DEFAULT '모아보기' NULL
 );
 
 CREATE TABLE interestCategory (
     id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
     categoryID VARCHAR2(20) NOT NULL,
-    RecordDate DATE DEFAULT SYSDATE NULL,
-    divisionFolder varchar2(100) DEFAULT '모아보기' NULL
+	folderId number NOT NULL,
+    RecordDate DATE DEFAULT SYSDATE NULL
 );
 
 CREATE TABLE productImg (
@@ -379,6 +379,13 @@ CREATE TABLE terms (
     necessary VARCHAR2(100) NOT NULL
 );
 
+CREATE TABLE divisionFolder (
+id number NOT NULL,
+memid varchar2(300) NOT NULL,
+name varchar2(300) DEFAULT '모아보기' NULL ,
+createDate DATE DEFAULT SYSDATE NULL
+)
+
 
 ALTER TABLE ShoppingCart ADD CONSTRAINT PK_SHOPPINGCART PRIMARY KEY (
     id
@@ -512,6 +519,11 @@ ALTER TABLE present ADD CONSTRAINT PK_PRESENT PRIMARY KEY (
     id
 );
 
+ALTER TABLE divisionFolder ADD CONSTANT PK_DIVISIONFOLDER PRIMARY KEY (
+	id
+);
+
+
 ALTER TABLE paydetail ADD CONSTRAINT FK_payrecord_TO_paydetail_1 FOREIGN KEY (id2) REFERENCES payrecord (id);
 
 ALTER TABLE paydetail ADD CONSTRAINT FK_productOp_TO_paydetail_1 FOREIGN KEY (id3) REFERENCES productOption (id);
@@ -576,9 +588,16 @@ REFERENCES member (
 );
 
 ALTER TABLE interestBrand ADD CONSTRAINT FK_brand_TO_interestBrand_1 FOREIGN KEY (
-    sellerID
+    brandId
 )
 REFERENCES brand (
+    id
+);
+
+ALTER TABLE interestBrand ADD CONSTRAINT FK_divisionFolder_TO_interestBrand_1 FOREIGN KEY (
+    folderId
+)
+REFERENCES divisionfolder (
     id
 );
 
@@ -596,6 +615,13 @@ REFERENCES product (
     id
 );
 
+ALTER TABLE interestGoods ADD CONSTRAINT FK_divisionFolder_TO_interestGoods_1 FOREIGN KEY (
+    folderId
+)
+REFERENCES divisionfolder (
+    id
+);
+
 ALTER TABLE interestCategory ADD CONSTRAINT FK_member_TO_inteCate FOREIGN KEY (
     memid
 )
@@ -605,8 +631,13 @@ REFERENCES member (
 
 ALTER TABLE interestCategory ADD CONSTRAINT FK_category_TO_interCate FOREIGN KEY (
     categoryID
-)
-REFERENCES category (
+) REFERENCES category (
+    id
+);
+
+ALTER TABLE interestCategory ADD CONSTRAINT FK_divisionFolder_TO_interCate FOREIGN KEY (
+    folderId
+) REFERENCES divisionfolder (
     id
 );
 
@@ -789,6 +820,12 @@ ALTER TABLE ShoppingCart ADD CONSTRAINT FK_productOp_TO_ShoppingC_1 FOREIGN KEY 
     id2
 ) REFERENCES productOption (
     id
+);
+
+ALTER TABLE divisionFolder ADD CONSTANT FK_member_TO_divisionF_1 FOREIGN KEY (
+	memid
+) REFERENCES member (
+	id
 );
 
 
