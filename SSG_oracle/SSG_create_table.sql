@@ -179,12 +179,10 @@ CREATE TABLE review (
     reviewContent VARCHAR2(3000) NULL,
     reviewDate DATE NULL,
     reviewType VARCHAR2(100) NULL,
-    productType VARCHAR2(100) NULL,
     grade NUMBER(3,2) NOT NULL,
-    q1 VARCHAR2(100) NULL,
-    q2 VARCHAR2(100) NULL,
-    q3 VARCHAR2(100) NULL,
-    q4 VARCHAR2(100) NULL
+    q1 NUMBER NULL,
+    q2 NUMBER NULL,
+    q3 NUMBER NULL
 );
 
 CREATE TABLE category (
