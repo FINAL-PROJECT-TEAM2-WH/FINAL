@@ -90,7 +90,7 @@ CREATE TABLE product (
     specialPriceId NUMBER NULL,
     shippingOptionId NUMBER NOT NULL,
     sellerStoreId VARCHAR2(20) NOT NULL,
-    brandId VARCHAR2(20) NOT NULL,
+    brandId VARCHAR2(300) NOT NULL,
     pdName VARCHAR2(300) NULL,
     pcontent VARCHAR2(3000) NULL,
     updateDay VARCHAR2(50) NULL
