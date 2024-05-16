@@ -1,3 +1,23 @@
+-- 상품 이미지 insert 프로시저
+CREATE OR REPLACE PROCEDURE INSERT_PRODUCTIMG (
+    p_id IN PRODUCTIMG.ID%TYPE,
+    p_productid IN PRODUCTIMG.PRODUCTID%TYPE,
+    p_imgurl IN PRODUCTIMG.IMGURL%TYPE,
+    p_imgcontent IN PRODUCTIMG.IMGCONTENT%TYPE
+)
+IS
+BEGIN
+    INSERT INTO PRODUCTIMG (ID, PRODUCTID, IMGURL, IMGCONTENT)
+    VALUES (p_id, p_productid, p_imgurl, p_imgcontent);
+    
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;  
+END;
+
+
 -- 배송옵션 시퀀스
 CREATE SEQUENCE shippingoption_id_seq
 START WITH 1
@@ -108,24 +128,7 @@ nocache
 nocycle;
 
 
--- 상품 이미지 insert 프로시저
-CREATE OR REPLACE PROCEDURE INSERT_PRODUCTIMG (
-    p_id IN PRODUCTIMG.ID%TYPE,
-    p_productid IN PRODUCTIMG.PRODUCTID%TYPE,
-    p_imgurl IN PRODUCTIMG.IMGURL%TYPE,
-    p_imgcontent IN PRODUCTIMG.IMGCONTENT%TYPE
-)
-IS
-BEGIN
-    INSERT INTO PRODUCTIMG (ID, PRODUCTID, IMGURL, IMGCONTENT)
-    VALUES (p_id, p_productid, p_imgurl, p_imgcontent);
-    
-    COMMIT;
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-        RAISE;  
-END;
+
 
 --BEGIN
 --    SSGPRO.INSERT_PRODUCTIMG(
@@ -1018,23 +1021,61 @@ INSERT INTO event VALUES (6, '체험단 강이지 유산균', 'event_image6.jpg'
 
 INSERT INTO event VALUES (7, 'MADA 구기자 링클 광채 세럼스틱', 'event_image7.jpg', TO_DATE('2024-04-22'), TO_DATE('2024-04-28'));
 
--- 신청자 테이블 insert
---링크 https://event.ssg.com/eventDetail.ssg?nevntId=1000000013107&domainSiteNo=6005&_mpop=new
-INSERT INTO applicant VALUES (1, 1, 'daetu01', '저희 아기가 배변활동이 좋지 않아서 신청합니다.', TO_DATE('2024-04-25'), '당첨', null);
+--공지사항 insert
+INSERT INTO announcement VALUES (1, 'UBPAY 결제서비스', TO_DATE('2024-03-28'), 'UBPAY 결제서비스 종료 안내');
 
-INSERT INTO applicant VALUES (2, 1, 'm_eum01', '건강한 장을 위해서 체험단 신청합니다.', TO_DATE('2024-04-22'), '탈락', null);
+INSERT INTO announcement VALUES (2, 'SSG.COM을 사칭하는 문자', TO_DATE('2024-04-02'), 'SSG.COM을 사칭 문자 주의 안내');
 
-INSERT INTO applicant VALUES (3, 1, 'd_Chan01', '신청합니다.', TO_DATE('2024-04-28'), '당첨', null);
+INSERT INTO announcement VALUES (3, '이마트몰 택배 배송비', TO_DATE('2024-04-10'), '이마트몰 택배 배송 배송비 조정 안내');
+
+INSERT INTO announcement VALUES (4, '주문,배송,알림톡 앱푸시', TO_DATE('2024-04-17'), '주문,배송,알림톡을 앱푸시로 안내해 드려요');
+
+INSERT INTO announcement VALUES (5, 'SSG.COM 이용약관 개정', TO_DATE('2024-04-28'), 'SSG.COM 이용약관 개정을 안내');
+
+INSERT INTO announcement VALUES (6, '스마일캐시 전환 한도 변경', TO_DATE('2024-05-01'), '스마일캐시 전환 한도 변경 안내');
+
+INSERT INTO announcement VALUES (7, '개인정보처리 방침 개정', TO_DATE('2024-05-08'), 'SSG.COM 개인정보처리방침 개정 안내');
+
+INSERT INTO announcement VALUES (8, '개인정보처리 방침 개정', TO_DATE('2024-05-08'), 'SSG.COM 개인정보처리방침 개정 안내');
+
+INSERT INTO announcement VALUES (9, '개인정보처리 방침 개정', TO_DATE('2024-05-15'), 'SSG.COM 개인정보처리방침 개정 안내');
+
+INSERT INTO announcement VALUES (10, '이용약관 개정', TO_DATE('2024-05-21'), 'SSG.COM 이용약관 개정 안내');
+
+
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1,  'daetu01', '딱 저희 아이의 탈취제가 필요했는데 신청합니다.', TO_DATE('2024-04-22'), '당첨',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'm_eum01', '계속 쓰고 있는 제품인데 너무 좋아요.', TO_DATE('2024-04-24'), '탈락',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'd_Chan01', '신청합니다. 당첨 되었으면 좋겠어요', TO_DATE('2024-04-25'), '당첨',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'mggun01', '저희 댕댕이가 참 좋아해요.', TO_DATE('2024-04-25'), '탈락',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'whyun01', '당첨되고 싶어요 꼭!.', TO_DATE('2024-04-26'), '당첨',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'minziZzang', '신청해요!', TO_DATE('2024-04-26'), '당첨',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'hive', '신청합니다.', TO_DATE('2024-04-27'), '당첨',null);
 
 --링크 https://event.ssg.com/eventDetail.ssg?nevntId=1000000012872&domainSiteNo=6005&_mpop=new
-INSERT INTO applicant VALUES (4, 2, 'dyoung01', '구기자가 미백에 효과가 좋다고 들었어요. 스틱 제형이라 편리할 것 같아요. 광채효과 체험해보고 싶어요', TO_DATE('2024-04-28'), '당첨', null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'daetu01', '꼭 당첨되고 싶어요!', TO_DATE('2024-04-27'), '당첨',null);
 
-INSERT INTO applicant VALUES (5, 2, 'mggun01', '꼭 테스트 해보고 싶습니다.', TO_DATE('2024-04-28'), '당첨', null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'm_eum01', '계속 쓰고 있는 제품인데 너무 좋아요.', TO_DATE('2024-05-27'), '탈락',null);
 
-INSERT INTO applicant VALUES (6, 2, 'whyun01', '엄마가 요즘 탄력이랑 주름 관련해서 고민이 많으셔서 도움을 드리고 싶었는데 스틱제품은 잘 쓰실것 같아 신청합니다.', TO_DATE('2024-04-28'), '당첨', null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'd_Chan01', '신청합니다. 당첨 되었으면 좋겠어요', TO_DATE('2024-05-27'), '당첨',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'mggun01', '저희 아이 참 좋아해요.', TO_DATE('2024-05-28'), '탈락',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'whyun01', '당첨되고 싶어요 꼭!.', TO_DATE('2024-05-28'), '당첨',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'minziZzang', '신청해요!', TO_DATE('2024-05-28'), '탈락',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'hive', '신청합니다.', TO_DATE('2024-05-28'), '당첨',null);
+
+select * from applicant;
 
 insert into productimg values ( 1 , 2097001432075 , null ,null );
-
 insert into productimg values ( 2 , 2097001432075 , null ,null );
 insert into productimg values ( 3 , 2097001432075 , null ,null );
 insert into productimg values ( 4 , 2097001432075 , null ,null );
