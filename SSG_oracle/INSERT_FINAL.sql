@@ -7,7 +7,7 @@ NOCYCLE;
 
 --상품 시퀀스
 CREATE SEQUENCE product_id_seq
-START WITH 1
+START WITH 3000000000000
 INCREMENT BY 1
 NOCACHE
 NOCYCLE;
@@ -101,6 +101,11 @@ increment by 1
 nocache 
 nocycle;
 
+create sequence productimg_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
 
 -- 회원insert 프로시저 
 create or replace PROCEDURE ins_member 
@@ -1330,20 +1335,20 @@ INSERT INTO applicant VALUES (5, 2, 'mggun01', '꼭 테스트 해보고 싶습�
 
 INSERT INTO applicant VALUES (6, 2, 'whyun01', '엄마가 요즘 탄력이랑 주름 관련해서 고민이 많으셔서 도움을 드리고 싶었는데 스틱제품은 잘 쓰실것 같아 신청합니다.', TO_DATE('2024-04-28'), '당첨', null);
 
-insert into productimg values ( 1 , 2097001432075 , null ,null );
-
-insert into productimg values ( 2 , 2097001432075 , null ,null );
-insert into productimg values ( 3 , 2097001432075 , null ,null );
-insert into productimg values ( 4 , 2097001432075 , null ,null );
-insert into productimg values ( 5 , 2097001432075 , null ,null );
-insert into productimg values ( 6 , 2097001432075 , null ,null );
-insert into productimg values ( 7 , 1000587702102 , null ,null );
-insert into productimg values ( 8 , 1000587702102 , null ,null );
-insert into productimg values ( 9 , 1000587702102 , null ,null );
-insert into productimg values ( 10 , 1000587702102 , null ,null );
-insert into productimg values ( 11 , 1000544937242 , null ,null );
-insert into productimg values ( 12 , 1000544937242 , null ,null );
-insert into productimg values ( 13 , 1000544937242 , null ,null );
+--insert into productimg values ( 1 , 2097001432075 , null ,null );
+--
+--insert into productimg values ( 2 , 2097001432075 , null ,null );
+--insert into productimg values ( 3 , 2097001432075 , null ,null );
+--insert into productimg values ( 4 , 2097001432075 , null ,null );
+--insert into productimg values ( 5 , 2097001432075 , null ,null );
+--insert into productimg values ( 6 , 2097001432075 , null ,null );
+--insert into productimg values ( 7 , 1000587702102 , null ,null );
+--insert into productimg values ( 8 , 1000587702102 , null ,null );
+--insert into productimg values ( 9 , 1000587702102 , null ,null );
+--insert into productimg values ( 10 , 1000587702102 , null ,null );
+--insert into productimg values ( 11 , 1000544937242 , null ,null );
+--insert into productimg values ( 12 , 1000544937242 , null ,null );
+--insert into productimg values ( 13 , 1000544937242 , null ,null );
 
 --INSERT INTO applicant VALUES (1, 1, 'daetu01', '딱 저희 아이의 탈취제가 필요했는데 신청합니다.', TO_DATE('2024-04-22'), '당첨');
 --
