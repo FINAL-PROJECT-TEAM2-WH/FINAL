@@ -18,6 +18,21 @@ SELECT id, evnNm, evnImg, evnStrDt, evnEnDt FROM event;
 -- announcement 테이블
 SELECT id, notcCntn, notnum, notc FROM announcement;
 
+-- 결제 디테일 id, 상품수량, 주문번호, 옵션코드, 쿠폰번호
+
+SELECT *
+FROM payrecord pr JOIN paydetail pt ON pr.id = pt.id3;
+
+SELECT *
+FROM productoption;
+
+SELECT *
+FROM payrecord;
+
+INSERT INTO paydetail VALUES( paydetail_seq, 1, 1, 41, 1);
+INSERT INTO paydetail VALUES( paydetail_seq, 1, 2, 42, 1);
+INSERT INTO paydetail VALUES( paydetail_seq, 1, 3, 4, 1);
+
 -- product 테이블
 SELECT * FROM product;
 
@@ -94,7 +109,8 @@ WITH RankedSearches AS (
 )
 WHERE num <= 20; 
 
-
+SELECT *
+FROM paydetail;
 
 -- member 테이블
 SELECT id, email, address, phoneNum, name, passwd, birthD, registerDate, updateDate, loginNotification, login2Notification FROM member;
