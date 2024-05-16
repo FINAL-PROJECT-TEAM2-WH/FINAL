@@ -55,11 +55,13 @@ drop sequence applicant_seq;
 drop sequence agreement_seq;
 drop sequence terms_seq;
 drop sequence interestGoods_seq;
+drop sequence productimg_seq;
 drop sequence division_seq;
 drop sequence shoppingcart_seq;
 drop sequence applicant_seq;
 drop sequence review_seq;
 drop sequence reviewimg_seq;
+
 CREATE TABLE payrecord (
     id number NOT NULL,
     OrderDate Date NOT NULL,
@@ -153,12 +155,13 @@ CREATE TABLE productImg (
     imgcontent VARCHAR2(100) NULL
 );
 
+
 CREATE TABLE productOption (
     id NUMBER NOT NULL,
     productId NUMBER NOT NULL,
     optionName VARCHAR2(100) NULL,
     optionDesc VARCHAR2(100) NULL,
-    optionRef VARCHAR2(50) NULL,
+    optionRef NUMBER NULL,
     optionPrice NUMBER(10) NULL,
     optionStock NUMBER(10) NULL
 );
@@ -189,7 +192,7 @@ CREATE TABLE review (
 );
 
 CREATE TABLE category (
-    id VARCHAR2(300) NOT NULL,
+    id number NOT NULL,
     majorCateName VARCHAR2(300) NULL,
     middleCateName VARCHAR2(300) NULL,
     subCateName VARCHAR2(300) NULL,
@@ -266,9 +269,9 @@ CREATE TABLE qna (
     productId NUMBER NOT NULL,
     memId varchar2(300) NOT NULL,
     qContent VARCHAR2(3000) NULL,
-    qDate VARCHAR2(50) NULL,
+    qDate DATE NULL,
     aContent VARCHAR2(3000) NULL,
-    aDate VARCHAR2(50) NULL
+    aDate DATE NULL
 );
 CREATE TABLE Agreement (
     id NUMBER NOT NULL,
@@ -321,12 +324,12 @@ CREATE TABLE Search (
 );
 
 CREATE TABLE sellerstore (
-    id varchar2(300) NOT NULL,
+    id number NOT NULL,
     sellerName varchar2(300) NULL
 );
 
 CREATE TABLE brand (
-    id VARCHAR2(300) NOT NULL,
+    id number NOT NULL,
     brandImg VARCHAR2(3000) NULL,
     brandName VARCHAR2(300) NULL
 );

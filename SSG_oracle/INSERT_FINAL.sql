@@ -9,7 +9,7 @@ NOCYCLE;
 
 --상품 시퀀스
 CREATE SEQUENCE product_id_seq
-START WITH 1
+START WITH 3000000000000
 INCREMENT BY 1
 NOCACHE
 NOCYCLE;
@@ -97,6 +97,7 @@ increment by 1
 nocache 
 nocycle;
 
+
 CREATE sequence division_seq
 start with 1 
 increment by 1 
@@ -119,6 +120,13 @@ START WITH 1
 INCREMENT BY 1
 NOCACHE NOCYCLE;
 
+
+
+create sequence productimg_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
 
 
 --BEGIN
@@ -168,12 +176,6 @@ INSERT INTO category VALUES ('04050000', '뷰티', '바디케어', '', '');
 INSERT INTO category VALUES ('04060000', '뷰티', '미용기기/소품', '', '');
 INSERT INTO category VALUES ('04070000', '뷰티', '남성화장품', '', '');
 INSERT INTO category VALUES ('04080000', '뷰티', '뷰티선물세트', '', '');
-
-
-
-
-
-
 
 
 
@@ -346,6 +348,7 @@ INSERT INTO sellerStore VALUES ('sellStore010', 'JBL');
 --더미판매자스토어
 INSERT INTO sellerStore VALUES ('sellStore011','더미용판매처');
 
+
 ----------------------------------------------------------------------------------
 -- 배송옵션 테이블 생성
 -- 배송옵션 시퀀스 생성
@@ -388,8 +391,16 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 
 ------------------------------------------------------------------------------------------------
 -- 상품 관련 테이블
+
+select*
+FROM product;
+SELECT*
+from
+productoption;
 --1
-INSERT INTO product VALUES (1000026532717, '04040303', 2, '1', 'sellStore001', 'brand001', '시몽 테르미크 150ml [No.1 헤어에센스-손상모발용]', '상품번호 : 1000026532717 모델번호 : E1036200.', '2024-04-10');
+INSERT INTO product VALUES (1000026532717, '04040303', 2, '1', 'sellStore001', 'brand001',
+'시몽 테르미크 150ml [No.1 헤어에센스-손상모발용]', '상품번호 : 1000026532717 모델번호 : E1036200.',
+'2024-04-10');
 
 --2
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
@@ -1198,6 +1209,7 @@ INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'm_eum01', '계속 쓰�
 
 INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'd_Chan01', '신청합니다. 당첨 되었으면 좋겠어요', TO_DATE('2024-05-27'), '당첨',null);
 
+
 INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'mggun01', '저희 아이 참 좋아해요.', TO_DATE('2024-05-28'), '탈락',null);
 
 INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'whyun01', '당첨되고 싶어요 꼭!.', TO_DATE('2024-05-28'), '당첨',null);
@@ -1221,6 +1233,7 @@ insert into productimg values ( 10 , 1000587702102 , null ,null );
 insert into productimg values ( 11 , 1000544937242 , null ,null );
 insert into productimg values ( 12 , 1000544937242 , null ,null );
 insert into productimg values ( 13 , 1000544937242 , null ,null );
+
 
 --INSERT INTO applicant VALUES (1, 1, 'daetu01', '딱 저희 아이의 탈취제가 필요했는데 신청합니다.', TO_DATE('2024-04-22'), '당첨');
 --
@@ -1294,5 +1307,4 @@ INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',20970002576
 
 COMMIT;
 COMMIT;
-
 
