@@ -98,7 +98,7 @@ CREATE TABLE product (
     brandId VARCHAR2(300) NOT NULL,
     pdName VARCHAR2(300) NULL,
     pcontent VARCHAR2(3000) NULL,
-    updateDay VARCHAR2(50) NULL
+    updateDay DATE NULL
     
 );
 
@@ -116,6 +116,9 @@ CREATE TABLE member (
     login2Notification char(1) DEFAULT 0 NULL,
     privilege varchar2(300) DEFAULT 'member' NULL
 );
+
+SELECT *
+FROM member;
 
 
 CREATE TABLE interestBrand (
@@ -176,12 +179,12 @@ CREATE TABLE review (
     memid varchar2(300) NOT NULL,
     productOptionId NUMBER NULL,
     reviewContent VARCHAR2(3000) NULL,
-    reviewDate VARCHAR2(100) NULL,
+    reviewDate DATE NULL,
     reviewType VARCHAR2(100) NULL,
     grade NUMBER(3,2) NOT NULL,
-    q1 VARCHAR2(100) NULL,
-    q2 VARCHAR2(100) NULL,
-    q3 VARCHAR2(100) NULL
+    q1 NUMBER NULL,
+    q2 NUMBER NULL,
+    q3 NUMBER NULL
 );
 
 CREATE TABLE category (
