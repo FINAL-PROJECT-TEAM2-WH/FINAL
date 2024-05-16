@@ -1,21 +1,3 @@
--- 상품 이미지 insert 프로시저
-CREATE OR REPLACE PROCEDURE INSERT_PRODUCTIMG (
-    p_id IN PRODUCTIMG.ID%TYPE,
-    p_productid IN PRODUCTIMG.PRODUCTID%TYPE,
-    p_imgurl IN PRODUCTIMG.IMGURL%TYPE,
-    p_imgcontent IN PRODUCTIMG.IMGCONTENT%TYPE
-)
-IS
-BEGIN
-    INSERT INTO PRODUCTIMG (ID, PRODUCTID, IMGURL, IMGCONTENT)
-    VALUES (p_id, p_productid, p_imgurl, p_imgcontent);
-    
-    COMMIT;
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-        RAISE;  
-END;
 
 
 -- 배송옵션 시퀀스
