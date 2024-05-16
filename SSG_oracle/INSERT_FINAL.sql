@@ -834,14 +834,8 @@ INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
 -- 배송번호, 주문번호, 배송지번호, 배송요청사항, 배송상태, 택배 배송 요청사항, 수령위치, 현관출입방법, 배송 종료일
 //SELECT * FROM SHIPPINGPLACEINFORMATION;
 
-<<<<<<< HEAD
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
 ( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X');
-=======
-
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'daetu01', 'daetu', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X');
->>>>>>> a1a4c96603f7be07098a1983e484d171044da867
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
 ( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '서울특별시 중구 세종대로 110', '서울특별시 중구 태평로1가 31', '서울특별시청', '010-1234-5678', '04524', 'X');
