@@ -92,11 +92,11 @@ CREATE TABLE announcement (
 
 CREATE TABLE product (
     id NUMBER NOT NULL,
-    categoryId VARCHAR2(20) NOT NULL,
+    categoryId number NOT NULL,
     specialPriceId NUMBER NULL,
     shippingOptionId NUMBER NOT NULL,
-    sellerStoreId VARCHAR2(20) NOT NULL,
-    brandId VARCHAR2(20) NOT NULL,
+    sellerStoreId number NOT NULL,
+    brandId number NOT NULL,
     pdName VARCHAR2(300) NULL,
     pcontent VARCHAR2(3000) NULL,
     updateDay DATE NULL
@@ -132,13 +132,13 @@ CREATE TABLE interestGoods (
     memid varchar2(300) NOT NULL,
     productId NUMBER NOT NULL,
 	folderId number NOT NULL,
-    RecordDate DATE NULL,
+    RecordDate DATE NULL
 );
 
 CREATE TABLE interestCategory (
     id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
-    categoryID VARCHAR2(20) NOT NULL,
+    categoryID NUMBER NOT NULL,
 	folderId number NOT NULL,
     RecordDate DATE DEFAULT SYSDATE NULL
 );
@@ -235,7 +235,7 @@ CREATE TABLE shippingPlaceInformation (
     postNum VARCHAR2(10) NULL,
     defaultShipping VARCHAR2(20) NULL
 );
-
+    
 CREATE TABLE shippingOption (
     id NUMBER NOT NULL,
     shippingCompanyName VARCHAR2(50) NULL,
@@ -519,9 +519,12 @@ ALTER TABLE present ADD CONSTRAINT PK_PRESENT PRIMARY KEY (
     id
 );
 
-ALTER TABLE divisionFolder ADD CONSTANT PK_DIVISIONFOLDER PRIMARY KEY (
-	id
+
+ALTER TABLE divisionFolder ADD CONSTRAINT PK_DIVISIONFOLDER PRIMARY KEY (
+    id
 );
+
+
 
 
 ALTER TABLE paydetail ADD CONSTRAINT FK_payrecord_TO_paydetail_1 FOREIGN KEY (id2) REFERENCES payrecord (id);
@@ -594,7 +597,7 @@ REFERENCES brand (
     id
 );
 
-ALTER TABLE interestBrand ADD CONSTRAINT FK_divisionFolder_TO_interestBrand_1 FOREIGN KEY (
+ALTER TABLE interestBrand ADD CONSTRAINT FK_diviF_TO_interestBrand_1 FOREIGN KEY (
     folderId
 )
 REFERENCES divisionfolder (
@@ -602,8 +605,8 @@ REFERENCES divisionfolder (
 );
 
 ALTER TABLE interestGoods ADD CONSTRAINT FK_member_TO_interestGoods_1 FOREIGN KEY (
-    memid
-)
+    memid 
+    )
 REFERENCES member (
     id
 );
@@ -615,7 +618,7 @@ REFERENCES product (
     id
 );
 
-ALTER TABLE interestGoods ADD CONSTRAINT FK_divisionFolder_TO_interestGoods_1 FOREIGN KEY (
+ALTER TABLE interestGoods ADD CONSTRAINT FK_diviF_TO_interestGoods_1 FOREIGN KEY (
     folderId
 )
 REFERENCES divisionfolder (
@@ -822,10 +825,13 @@ ALTER TABLE ShoppingCart ADD CONSTRAINT FK_productOp_TO_ShoppingC_1 FOREIGN KEY 
     id
 );
 
-ALTER TABLE divisionFolder ADD CONSTANT FK_member_TO_divisionF_1 FOREIGN KEY (
-	memid
+
+ALTER TABLE divisionFolder ADD CONSTRAINT FK_member_TO_divisionF_1 FOREIGN KEY (
+    memid
 ) REFERENCES member (
-	id
+    id
 );
+
+
 
 
