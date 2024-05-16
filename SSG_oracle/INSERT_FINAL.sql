@@ -603,8 +603,16 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 
 ------------------------------------------------------------------------------------------------
 -- 상품 관련 테이블
+
+select*
+FROM product;
+SELECT*
+from
+productoption;
 --1
-INSERT INTO product VALUES (1000026532717, '04040303', 2, '1', 'sellStore001', 'brand001', '시몽 테르미크 150ml [No.1 헤어에센스-손상모발용]', '상품번호 : 1000026532717 모델번호 : E1036200.', '2024-04-10');
+INSERT INTO product VALUES (1000026532717, '04040303', 2, '1', 'sellStore001', 'brand001',
+'시몽 테르미크 150ml [No.1 헤어에센스-손상모발용]', '상품번호 : 1000026532717 모델번호 : E1036200.',
+'2024-04-10');
 
 --2
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
@@ -1419,4 +1427,9 @@ INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',20970002576
 
 COMMIT;
 COMMIT;
-
+select * from productimg;
+select product_id_seq.currval from dual;
+with seq_value as (
+select product_id_seq.currval seq from dual
+)
+select id optionid from productoption p , seq_value s  where p.productid = s.seq;

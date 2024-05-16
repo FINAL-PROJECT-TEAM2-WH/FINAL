@@ -147,12 +147,13 @@ CREATE TABLE productImg (
     imgcontent VARCHAR2(100) NULL
 );
 
+
 CREATE TABLE productOption (
     id NUMBER NOT NULL,
     productId NUMBER NOT NULL,
     optionName VARCHAR2(100) NULL,
     optionDesc VARCHAR2(100) NULL,
-    optionRef VARCHAR2(50) NULL,
+    optionRef NUMBER NULL,
     optionPrice NUMBER(10) NULL,
     optionStock NUMBER(10) NULL
 );
