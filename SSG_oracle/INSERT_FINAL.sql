@@ -95,29 +95,18 @@ increment by 1
 nocache 
 nocycle;
 
+CREATE sequence division_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
+
 create sequence shoppingcart_seq
 start with 1 
 increment by 1 
 nocache 
 nocycle;
 
-
--- 회원insert 프로시저 
-create or replace PROCEDURE ins_member 
-(
-p_ID VARCHAR2,
-p_email VARCHAR2,
-p_phonenum VARCHAR2,
-p_name VARCHAR2,
-p_passwd VARCHAR2,
-BIRTHD DATE)
-IS
-BEGIN 
-    INSERT INTO MEMBER(id,email,phonenum,name,passwd,birthd,REGISTERDATE,UPDATEDATE,LOGINNOTIFICATION,LOGIN2NOTIFICATION ) VALUES (p_ID,p_email,p_phonenum,p_name,p_passwd,BIRTHD,SYSDATE,SYSDATE,'0','0');
-
---EXCEPTION 
-
-END;
 
 
 -- 카테고리 INSERT 프로시저
@@ -212,63 +201,20 @@ END;
 
 
 
--- 필수 약관 동의 6개 insert 문 . 
-CREATE OR REPLACE PROCEDURE ins_req_terms
-(
-p_ID member.id%TYPE
-)
-IS
-countid terms.name%TYPE;
-num1 NUMBER := 1;
-BEGIN 
-
-    SELECT COUNT(id) INTO countid
-    FROM terms
-    WHERE REGEXP_LIKE(name,'req');
-    
-    WHILE(num1 <= countid)
-    LOOP 
-    INSERT INTO agreement VALUES (agreement_seq.NEXTVAL,num1,p_ID,'Y',SYSDATE);
-    num1 := num1 + 1;
-    END LOOP;
---EXCEPTION 
-
-END;
-
-
--- 선택 약관 
-CREATE OR REPLACE PROCEDURE ins_sel_terms
-(
-p_name terms.name%TYPE,
-p_ID member.id%TYPE
-)
-IS
-num1 NUMBER ;
-BEGIN 
-    SELECT t.id into num1
-    FROM terms t
-    WHERE name = p_name; 
-    
-    INSERT INTO agreement VALUES (agreement_seq.NEXTVAL,num1,p_ID,'Y',SYSDATE);
-END;
-
-
-
-
 
 -- 회원 INSERT
 -- 더미데이터 
-EXEC ins_member('daetu01','daetu01@gmail.com',010-1111-1111,'원대만','1234','1978-05-29');
-EXEC ins_member('m_eum01','m_eum01@naver.com',010-4142-2134,'권맑음','1234','1998-09-12');
-EXEC ins_member('d_Chan01','d_Chan01@daum.com',010-1231-2685,'이동찬','1234','1995-11-20');
-EXEC ins_member('dyoung01','dyoung01@gmail.com',010-1245-5415,'이동영','1234','1990-01-02');
-EXEC ins_member('mggun01','mggun01@gmail.com',010-6733-3573,'강명건','1234','1993-05-20');
-EXEC ins_member('whyun01','whyun01@gmail.com',010-2351-6738,'박우현','1234','1992-10-01');
+INSERT INTO MEMBER VALUES('daetu01','daetu01@gmail.com','010-1111-1111','원대만','1234','1978-05-29',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('m_eum01','m_eum01@naver.com','010-4142-2134','권맑음','1234','1998-09-12',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('d_Chan01','d_Chan01@daum.com','010-1231-2685','이동찬','1234','1995-11-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('dyoung01','dyoung01@gmail.com','010-1245-5415','이동영','1234','1990-01-02',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('mggun01','mggun01@gmail.com','010-6733-3573','강명건','1234','1993-05-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('whyun01','whyun01@gmail.com','010-2351-6738','박우현','1234','1992-10-01',SYSDATE,SYSDATE,'0','0','member');
 
-EXEC ins_member('minziZzang','minziZzang@gmail.com',010-1461-1245,'김민지','1234','2003-02-10');
-EXEC ins_member('hive','hive@gmail.com',010-5242-6642,'오함마','1234','2006-03-20');
-EXEC ins_member('newjeans','newjeans@gmail.com',010-6645-2411,'박바지','1234','2007-01-20');
-EXEC ins_member('cap','cap@gmail.com',010-5124-5665,'하남자','1234','2002-06-06');
+INSERT INTO MEMBER VALUES('minziZzang','minziZzang@gmail.com','010-1461-1245','김민지','1234','2003-02-10',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('hive','hive@gmail.com','010-5242-6642','오함마','1234','2006-03-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('newjeans','newjeans@gmail.com','010-6645-2411','박바지','1234','2007-01-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('cap','cap@gmail.com','010-5124-5665','하남자','1234','2002-06-06',SYSDATE,SYSDATE,'0','0','member');
 
 
 --SELECT * 
@@ -1206,19 +1152,23 @@ INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10', '/SSGSSAK/mem
 INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_email', '/SSGSSAK/member/terms/ssgInfoRcvAgree_email','N');
 INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_sms', '/SSGSSAK/member/terms/ssgInfoRcvAgree_sms','N');
 
+-- divisionFolder 
+INSERT INTO divisionfolder VALUES (division_seq.NEXTVAL, 'daetu01','모아보기',SYSDATE);
+
 
 -- interestgoods insert
 
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000026532717,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000544937242,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000587702102,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001577943,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000398650979,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000014118201,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001308233,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097000257655,SYSDATE,'모아보기');
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000026532717,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000544937242,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000587702102,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001577943,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000398650979,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000014118201,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001308233,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097000257655,SYSDATE,1);
 
 
 COMMIT;
 COMMIT;
+
 
