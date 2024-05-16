@@ -53,6 +53,8 @@ drop sequence paydetail_seq;
 drop sequence agreement_seq;
 drop sequence terms_seq;
 drop sequence interestGoods_seq;
+drop sequence shoppingcart_seq;
+drop sequence applicant_seq;
 
 CREATE TABLE payrecord (
     id number NOT NULL,
