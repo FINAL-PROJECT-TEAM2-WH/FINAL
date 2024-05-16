@@ -58,7 +58,8 @@ drop sequence interestGoods_seq;
 drop sequence division_seq;
 drop sequence shoppingcart_seq;
 drop sequence applicant_seq;
-
+drop sequence review_seq;
+drop sequence reviewimg_seq;
 CREATE TABLE payrecord (
     id number NOT NULL,
     OrderDate Date NOT NULL,
