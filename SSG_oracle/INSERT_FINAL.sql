@@ -100,8 +100,20 @@ start with 1
 increment by 1 
 nocache 
 nocycle;
+--리뷰 시퀀스
+CREATE SEQUENCE review_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE NOCYCLE;
+
+CREATE SEQUENCE reviewImg_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE NOCYCLE;
 
 
+
+commit;
 -- 회원insert 프로시저 
 create or replace PROCEDURE ins_member 
 (
@@ -180,35 +192,6 @@ END;
 
 
 
-
--- 상품 이미지 insert 프로시저
-CREATE OR REPLACE PROCEDURE INSERT_PRODUCTIMG (
-    p_id IN PRODUCTIMG.ID%TYPE,
-    p_productid IN PRODUCTIMG.PRODUCTID%TYPE,
-    p_imgurl IN PRODUCTIMG.IMGURL%TYPE,
-    p_imgcontent IN PRODUCTIMG.IMGCONTENT%TYPE
-)
-IS
-BEGIN
-    INSERT INTO PRODUCTIMG (ID, PRODUCTID, IMGURL, IMGCONTENT)
-    VALUES (p_id, p_productid, p_imgurl, p_imgcontent);
-    
-    COMMIT;
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-        RAISE;  
-END;
-
---BEGIN
---    SSGPRO.INSERT_PRODUCTIMG(
---        p_id          => 'img001',
---        p_productid   => '1000026532717',
---        p_imgurl      => 'C:\E\Class\PROJECTSPACE\dcha\SSG_oracle\PRODUCTIMG\1000026532717_i1_1100.avif',
---        p_imgcontent  => 'thumbnail'
---    );
---END;
--- 이미지 입력받는곳 경로 결정하고 추가하는걸로..
 
 
 ---- 배송정보 테이블 insert 프로시저
@@ -484,39 +467,6 @@ EXEC insert_category('12090100', '가공/건강식품', '베이커리/잼', '식
 EXEC insert_category('09010200', '디지털/렌탈', '컴퓨터/노트북/태블릿', '태블릿PC/패드', '없음');
 --15번상품
 
---더미상품
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
-
 
 -- 브랜드 insert 프로시저 실행
 EXEC insert_brand('brand001', null, '케라스타즈');
@@ -658,9 +608,7 @@ VALUES (2097001432075, '12090100', 0, '10', 'sellStore002', 'brand013', '[밀도
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
 VALUES (1000067576484, '09010200', 0 , '10', 'sellStore005', 'brand005', '갤럭시탭 Trade-in OPEN', '상품번호 : 1000067576484', '2024-04-10');
 
-select *
-FROM productoption;
-
+---더미데이터
 INSERT INTO product VALUES (0000000000001, '04040303', null, 1, 'sellStore001', 'brand014', '아이더미X18', null, null);
 INSERT INTO product VALUES (0000000000002, '04040303', null, 1, 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
 INSERT INTO product VALUES (0000000000003, '04040303', null, 1, 'sellStore001', 'brand016', '더미수분크림', null, null);
@@ -720,7 +668,7 @@ INSERT INTO product VALUES (0000000000051, '09010200', null, 1, 'sellStore001', 
 INSERT INTO product VALUES (0000000000052, '09010200', null, 1, 'sellStore001', 'brand020', '더미만두', null, null);
 INSERT INTO product VALUES (0000000000053, '09010200', null, 1, 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
 INSERT INTO product VALUES (0000000000054, '09010200', null, 1, 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
-
+---더미데이터
 
 --상품옵션인서트
 
@@ -786,7 +734,175 @@ INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001432075, '
 
 --옵션 없는 상품
 
+--리뷰 
 
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'daetu01',41,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'m_eum01',41,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'d_Chan01',41,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'dyoung01',41,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'mggun01',41,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'whyun01',41,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'minziZzang',41,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'hive',41,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'newjeans',41,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'cap',41,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'daetu01',42,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'m_eum01',42,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'d_Chan01',42,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'dyoung01',42,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'mggun01',42,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'whyun01',42,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'minziZzang',42,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'hive',42,'만족도가 장난아니에요','2024.05.03','일반',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'newjeans',42,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'cap',42,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'daetu01',4,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'m_eum01',5,'최고에용','2024.05.03','일반',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'d_Chan01',6,'조아용','2024.05.03','일반',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'dyoung01',7,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'mggun01',8,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'whyun01',6,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'minziZzang',4,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'hive',4,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'newjeans',5,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'cap',6,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'daetu01',43,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'m_eum01',43,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'d_Chan01',43,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'dyoung01',43,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'mggun01',43,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'whyun01',43,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'minziZzang',43,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'hive',43,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'newjeans',43,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'cap',43,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'daetu01',14,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'m_eum01',15,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'d_Chan01',14,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'dyoung01',14,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'mggun01',14,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'whyun01',15,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'minziZzang',16,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'hive',17,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'newjeans',17,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'cap',17,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'daetu01',18,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'m_eum01',19,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'d_Chan01',18,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'dyoung01',18,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'mggun01',18,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'whyun01',19,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'minziZzang',18,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'hive',18,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'newjeans',18,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'cap',19,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'daetu01',20,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'m_eum01',22,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'d_Chan01',21,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'dyoung01',25,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'mggun01',26,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'whyun01',27,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'minziZzang',24,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'hive',23,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'newjeans',24,'촉감이 좋습니다.','2024.05.03','일반',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'cap',25,'다음에 또 구매하겠습니다.','2024.05.03','일반',1,1,1,1);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'daetu01',44,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'m_eum01',4,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'d_Chan01',44,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'dyoung01',44,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'mggun01',44,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'whyun01',44,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'minziZzang',44,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'hive',44,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'newjeans',44,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'cap',44,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'daetu01',45,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'m_eum01',45,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'d_Chan01',45,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'dyoung01',45,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'mggun01',45,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'whyun01',45,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'minziZzang',45,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'hive',45,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'newjeans',45,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'cap',45,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'daetu01',46,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'m_eum01',46,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'d_Chan01',46,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'dyoung01',46,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'mggun01',46,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'whyun01',46,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'minziZzang',46,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'hive',46,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'newjeans',46,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'cap',46,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'daetu01',30,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'m_eum01',30,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'d_Chan01',30,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'dyoung01',31,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'mggun01',31,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'whyun01',31,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'minziZzang',33,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'hive',33,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'newjeans',34,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'cap',34,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,daetu01,productOptionId,'만족합니다','2024.05.03','일반',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,m_eum01,productOptionId,'최고에용','2024.05.03','일반',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,d_Chan01,productOptionId,'조아용','2024.05.03','일반',3,2,3,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,dyoung01,productOptionId,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,mggun01,productOptionId,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,whyun01,productOptionId,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,minziZzang,productOptionId,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,hive,productOptionId,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,newjeans,productOptionId,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,cap,productOptionId,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+--11번
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'daetu01',34,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'m_eum01',34,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'d_Chan01',35,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'dyoung01',35,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'mggun01',35,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'whyun01',39,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'minziZzang',39,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'hive',40,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'newjeans',40,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'cap',34,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'daetu01',47,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'m_eum01',47,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'d_Chan01',47,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'dyoung01',47,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'mggun01',47,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'whyun01',47,'가볍고 좋습니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'minziZzang',47,'완전 추천합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'hive',47,'만족도가 장난아니에요','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'newjeans',47,'촉감이 좋습니다.','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'cap',47,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,daetu01,productOptionId,'만족합니다','2024.05.03','일반',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,m_eum01,productOptionId,'최고에용','2024.05.03','일반',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,d_Chan01,productOptionId,'조아용','2024.05.03','일반',3,2,3,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,dyoung01,productOptionId,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,mggun01,productOptionId,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,whyun01,productOptionId,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,minziZzang,productOptionId,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,hive,productOptionId,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,newjeans,productOptionId,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,cap,productOptionId,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+--15번
 
 
 --------상품 링크
@@ -831,27 +947,6 @@ INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001432075, '
 ----14번 담백식빵 
 --<보류>딜상품 사용 X
 --https://www.ssg.com/item/dealItemView.ssg?itemId=1000067576484&siteNo=6004&salestrNo=6005
-
-
-
-
---카테고리 
---브랜드
---옵션 유무에 따른 템플릿을 이용해서 내용구분 
---그냥 옵션을 무조건 주는걸로 하는건어떨까..
---필수정보 좀더 생각해보기
---즉시할인 없어도될듯 
---컬럼 삭제
----상품 상세정보는 등록시 /n을 <br>처리해주는 기능이 필요할듯
--- HTML 박스임
---유튜브링크도 걸어놓을수있음
--- 상품등록시 이미지 어떻게 받을것인지
--- 받는다면 실제로 링크가 내 프로그램 안으로 저장되게해야함 
--- -> 모든이미지 그냥 다받아서 실제 작동구현함
-
-
-
-
 
 
 -----------------------------------------------------------------------------------

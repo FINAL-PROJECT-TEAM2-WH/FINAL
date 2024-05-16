@@ -95,7 +95,7 @@ CREATE TABLE product (
     brandId VARCHAR2(300) NOT NULL,
     pdName VARCHAR2(300) NULL,
     pcontent VARCHAR2(3000) NULL,
-    updateDay VARCHAR2(50) NULL
+    updateDay DATE NULL
     
 );
 
@@ -114,6 +114,9 @@ CREATE TABLE member (
     privilege varchar2(300) DEFAULT 'member' NULL
 );
 
+SELECT *
+FROM member;
+
 
 CREATE TABLE interestBrand (
     id NUMBER NOT NULL,
@@ -126,7 +129,7 @@ CREATE TABLE interestBrand (
 CREATE TABLE interestGoods (
     id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
-    productId NUMBER NOT NULL,
+    reviewId NUMBER NOT NULL,
     RecordDate DATE NULL,
     divisionFolder varchar2(100) DEFAULT '모아보기' NULL
 );
@@ -173,14 +176,12 @@ CREATE TABLE review (
     memid varchar2(300) NOT NULL,
     productOptionId NUMBER NULL,
     reviewContent VARCHAR2(3000) NULL,
-    reviewDate VARCHAR2(100) NULL,
+    reviewDate DATE NULL,
     reviewType VARCHAR2(100) NULL,
-    productType VARCHAR2(100) NULL,
     grade NUMBER(3,2) NOT NULL,
-    q1 VARCHAR2(100) NULL,
-    q2 VARCHAR2(100) NULL,
-    q3 VARCHAR2(100) NULL,
-    q4 VARCHAR2(100) NULL
+    q1 NUMBER NULL,
+    q2 NUMBER NULL,
+    q3 NUMBER NULL
 );
 
 CREATE TABLE category (
@@ -253,7 +254,7 @@ CREATE TABLE quitMember (
 CREATE TABLE reviewImg (
     id NUMBER NOT NULL,
     reviewId NUMBER NOT NULL,
-    reviewImgUrl VARCHAR2(100) NULL
+    reviewImgUrl VARCHAR2(1000) NULL
 );
 
 CREATE TABLE qna (
