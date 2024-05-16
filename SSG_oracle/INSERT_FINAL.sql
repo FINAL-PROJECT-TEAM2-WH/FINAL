@@ -392,11 +392,7 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 ------------------------------------------------------------------------------------------------
 -- 상품 관련 테이블
 
-select*
-FROM product;
-SELECT*
-from
-productoption;
+
 --1
 INSERT INTO product VALUES (1000026532717, '04040303', 2, '1', 'sellStore001', 'brand001',
 '시몽 테르미크 150ml [No.1 헤어에센스-손상모발용]', '상품번호 : 1000026532717 모델번호 : E1036200.',
@@ -1002,7 +998,7 @@ INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
 -----------------------------------------------------------------------------
 -- 배송 정보, 배송지 정보, 검색 테이블
 -- 배송번호, 주문번호, 배송지번호, 배송요청사항, 배송상태, 택배 배송 요청사항, 수령위치, 현관출입방법, 배송 종료일
-//SELECT * FROM SHIPPINGPLACEINFORMATION;
+
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
 ( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X');
@@ -1070,8 +1066,7 @@ INSERT INTO SHIPPINGPLACEINFORMATION VALUES
 
 
 
---SELECT *
---FROM shippingplaceinformation;
+
 
 -- 검색테이블 INSERT 프로시저 실행
 INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
@@ -1218,21 +1213,21 @@ INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'minziZzang', '신청해
 
 INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'hive', '신청합니다.', TO_DATE('2024-05-28'), '당첨',null);
 
-select * from applicant;
 
-insert into productimg values ( 1 , 2097001432075 , null ,null );
-insert into productimg values ( 2 , 2097001432075 , null ,null );
-insert into productimg values ( 3 , 2097001432075 , null ,null );
-insert into productimg values ( 4 , 2097001432075 , null ,null );
-insert into productimg values ( 5 , 2097001432075 , null ,null );
-insert into productimg values ( 6 , 2097001432075 , null ,null );
-insert into productimg values ( 7 , 1000587702102 , null ,null );
-insert into productimg values ( 8 , 1000587702102 , null ,null );
-insert into productimg values ( 9 , 1000587702102 , null ,null );
-insert into productimg values ( 10 , 1000587702102 , null ,null );
-insert into productimg values ( 11 , 1000544937242 , null ,null );
-insert into productimg values ( 12 , 1000544937242 , null ,null );
-insert into productimg values ( 13 , 1000544937242 , null ,null );
+
+insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
+insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
+insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
+insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
+insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
+insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
+insert into productimg values ( productimg_seq.nextval , 1000587702102 , null ,null );
+insert into productimg values ( productimg_seq.nextval , 1000587702102 , null ,null );
+insert into productimg values ( productimg_seq.nextval , 1000587702102 , null ,null );
+insert into productimg values (productimg_seq.nextval , 1000587702102 , null ,null );
+insert into productimg values ( productimg_seq.nextval , 1000544937242 , null ,null );
+insert into productimg values ( productimg_seq.nextval , 1000544937242 , null ,null );
+insert into productimg values ( productimg_seq.nextval , 1000544937242 , null ,null );
 
 
 --INSERT INTO applicant VALUES (1, 1, 'daetu01', '딱 저희 아이의 탈취제가 필요했는데 신청합니다.', TO_DATE('2024-04-22'), '당첨');
