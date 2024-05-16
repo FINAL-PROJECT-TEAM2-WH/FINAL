@@ -1,3 +1,5 @@
+
+
 -- 배송옵션 시퀀스
 CREATE SEQUENCE shippingoption_id_seq
 START WITH 1
@@ -95,129 +97,37 @@ increment by 1
 nocache 
 nocycle;
 
-<<<<<<< HEAD
-CREATE sequence brand_seq
-=======
+
+CREATE sequence division_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
+
 create sequence shoppingcart_seq
->>>>>>> 29a8c037f965ec723f73042d1d696ed7513a2f00
 start with 1 
 increment by 1 
 nocache 
 nocycle;
+--리뷰 시퀀스
+CREATE SEQUENCE review_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE NOCYCLE;
 
-<<<<<<< HEAD
-CREATE sequence seller_seq
-start with 1 
-increment by 1 
-nocache 
-nocycle;
+CREATE SEQUENCE reviewImg_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE NOCYCLE;
 
-CREATE sequence category_seq
-=======
+
+
 create sequence productimg_seq
->>>>>>> 29a8c037f965ec723f73042d1d696ed7513a2f00
 start with 1 
 increment by 1 
 nocache 
 nocycle;
 
--- 회원insert 프로시저 
-create or replace PROCEDURE ins_member 
-(
-p_ID VARCHAR2,
-p_email VARCHAR2,
-p_phonenum VARCHAR2,
-p_name VARCHAR2,
-p_passwd VARCHAR2,
-BIRTHD DATE)
-IS
-BEGIN 
-    INSERT INTO MEMBER(id,email,phonenum,name,passwd,birthd,REGISTERDATE,UPDATEDATE,LOGINNOTIFICATION,LOGIN2NOTIFICATION ) VALUES (p_ID,p_email,p_phonenum,p_name,p_passwd,BIRTHD,SYSDATE,SYSDATE,'0','0');
-
---EXCEPTION 
-
-END;
-
-
--- 카테고리 INSERT 프로시저
-CREATE OR REPLACE PROCEDURE insert_category(
-    p_id             IN  VARCHAR2,
-    p_majorCateName  IN  VARCHAR2,
-    p_middleCateName IN  VARCHAR2,
-    p_subCateName    IN  VARCHAR2,
-    p_miniCateName   IN  VARCHAR2
-)
-IS
-BEGIN
-    INSERT INTO category (id, majorCateName, middleCateName, subCateName, miniCateName)
-    VALUES (p_id, p_majorCateName, p_middleCateName, p_subCateName, p_miniCateName);
-    COMMIT;
-    DBMS_OUTPUT.PUT_LINE('카테고리 데이터가 성공적으로 추가되었습니다.');
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-        DBMS_OUTPUT.PUT_LINE('카테고리 데이터 입력에 실패했습니다.' || SQLERRM);
-END insert_category;
-
-
--- 브랜드 insert 프로시저
-CREATE OR REPLACE PROCEDURE insert_brand(
-    p_id IN VARCHAR2,
-    p_brandImg IN VARCHAR2,
-    p_brandName IN VARCHAR2
-)
-
-IS
-BEGIN
-    INSERT INTO brand (id, brandImg, brandName)
-    VALUES (p_id, p_brandImg, p_brandName);
-    COMMIT;
-    DBMS_OUTPUT.PUT_LINE('브랜드 입력 성공');
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-        DBMS_OUTPUT.PUT_LINE('브랜드 입력 에러 발생' || SQLERRM);
-END;
-
-
--- 판매자 스토어 insert 프로시저
-CREATE OR REPLACE PROCEDURE insert_sellerstore(
-    p_id IN VARCHAR2,
-    p_sellerName IN VARCHAR2
-)
-IS
-BEGIN
-    INSERT INTO sellerstore (id, sellerName)
-    VALUES (p_id, p_sellerName);
-    COMMIT;
-    DBMS_OUTPUT.PUT_LINE('판매자 스토어 입력 성공.');
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-        DBMS_OUTPUT.PUT_LINE('판매자 스토어 입력 실패 오류 : ' || SQLERRM);
-END;
-
-
-
-
--- 상품 이미지 insert 프로시저
-CREATE OR REPLACE PROCEDURE INSERT_PRODUCTIMG (
-    p_id IN PRODUCTIMG.ID%TYPE,
-    p_productid IN PRODUCTIMG.PRODUCTID%TYPE,
-    p_imgurl IN PRODUCTIMG.IMGURL%TYPE,
-    p_imgcontent IN PRODUCTIMG.IMGCONTENT%TYPE
-)
-IS
-BEGIN
-    INSERT INTO PRODUCTIMG (ID, PRODUCTID, IMGURL, IMGCONTENT)
-    VALUES (p_id, p_productid, p_imgurl, p_imgcontent);
-    
-    COMMIT;
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-        RAISE;  
-END;
 
 --BEGIN
 --    SSGPRO.INSERT_PRODUCTIMG(
@@ -230,354 +140,213 @@ END;
 -- 이미지 입력받는곳 경로 결정하고 추가하는걸로..
 
 
----- 배송정보 테이블 insert 프로시저
---CREATE OR REPLACE PROCEDURE up_insert_shipinfo
---(
---    porderid payrecord.id%TYPE,
---    pmemid payrecord.memid%TYPE,
---    pshippingmsg shippinginformation.shippingmsg%TYPE,
---    pshippingstate shippinginformation.shippingstate%TYPE,
---    pshippingrequest  shippinginformation.shippingrequest%TYPE,
---    preceiveposition shippinginformation.receiveposition%TYPE,
---    pentrance shippinginformation.entrance%TYPE,
---    pshippingenddate shippinginformation.shippingenddate%TYPE
---)
---IS
---    vplaceid NUMBER;
---    vplacecount NUMBER;
---    vmemcount NUMBER;
---    vmemid VARCHAR2(300);
---BEGIN
---    SELECT COUNT(id), id
---        INTO vmemcount, vmemid
---    FROM member
---    GROUP BY id
---    HAVING id = pmemid;
---    
---    SELECT id
---        INTO vplaceid 
---    FROM shippingplaceinformation
---    WHERE memid = vmemid AND defaultshipping IN('기본배송지' ,'이번만배송지');
---    
---    SELECT COUNT(id)
---        INTO vplacecount 
---    FROM shippingplaceinformation
---    WHERE id = vplaceid;
---    
---    IF vmemcount < 1 THEN
---    RAISE_APPLICATION_ERROR(-20001, '없는 회원번호입니다.');
---    ELSIF vplacecount < 1 THEN
---    RAISE_APPLICATION_ERROR(-20002, '없는 주소번호입니다.');
---    ELSE 
---    INSERT INTO shippinginformation ( id, orderid, shippingplaceid, shippingmsg, shippingstate, shippingrequest, receiveposition, entrance, shippingenddate  )
---    VALUES ( seq_shippingid.NEXTVAL , porderid, vplaceid, pshippingmsg, pshippingstate, pshippingrequest, preceiveposition, pentrance, pshippingenddate );
---    COMMIT;
---    END IF;
---    
-----EXCEPTION
---END;
-
-
--- 배송지 정보 테이블 INSERT 프로시저
-CREATE OR REPLACE PROCEDURE ps_insert_shipPlaceInfo
-(
-    pmemid shippingplaceinformation.memid%TYPE,
-    paddrnick shippingplaceinformation.addressnick%TYPE,
-    preceivemem shippingplaceinformation.receivemem%TYPE,
-    proadAddress shippingplaceinformation.roadAddress%TYPE,
-	pjibunAddress shippingplaceinformation.jibunAddress%TYPE,
-	pdetailAddress shippingplaceinformation.detailAddress%TYPE,
-    ptel shippingplaceinformation.tel%TYPE,
-    ppostnum shippingplaceinformation.postnum%TYPE,
-    pdefaultship shippingplaceinformation.defaultshipping%TYPE
-)
-IS
-    vmemid VARCHAR2(300);
-    vcount NUMBER;
-BEGIN
-    SELECT COUNT(id) 
-        INTO vcount
-    FROM member
-    WHERE id = pmemid;
-
-    SELECT id 
-        INTO vmemid
-    FROM member
-    WHERE id = pmemid;
-    
-    IF vcount < 1 THEN
-    RAISE_APPLICATION_ERROR(-20001, '없는 회원번호입니다.');
-    ELSE 
-    INSERT INTO shippingplaceinformation ( id, memid, addressnick, receivemem, roadAddress, jibunAddress, detailAddress, tel, postnum, defaultshipping)
-    VALUES ( seqshipplaceinfo.NEXTVAL , vmemid, paddrnick, preceivemem, proadAddress, pjibunAddress, pdetailAddress, ptel, ppostnum, pdefaultship );
-    COMMIT;
-    END IF;
---EXCEPTION
-END;
-
-
--- 검색 테이블 인서트 프로시저
-CREATE OR REPLACE PROCEDURE up_insert_search
-(   
-    pmemid search.memid%TYPE,
-    psearchword search.searchword%TYPE
-)
-IS
-    vmemid VARCHAR2(300);
-    vcount NUMBER;
-BEGIN
-    SELECT COUNT(id) 
-        INTO vcount
-    FROM member
-    WHERE id = pmemid;
-    
-    SELECT id 
-        INTO vmemid
-    FROM member
-    WHERE id = pmemid;
-    
-    IF vcount < 1 THEN
-    RAISE_APPLICATION_ERROR(-20001, '없는 회원번호입니다.');
-    ELSE 
-    INSERT INTO search ( id, memid, searchword, searchhour )
-    VALUES ( seq_search.NEXTVAL , vmemid, psearchword, SYSDATE );
-    COMMIT;
-    END IF;
-
---EXCEPTION
-END;
-
--- 필수 약관 동의 6개 insert 문 . 
-CREATE OR REPLACE PROCEDURE ins_req_terms
-(
-p_ID member.id%TYPE
-)
-IS
-countid terms.name%TYPE;
-num1 NUMBER := 1;
-BEGIN 
-
-    SELECT COUNT(id) INTO countid
-    FROM terms
-    WHERE REGEXP_LIKE(name,'req');
-    
-    WHILE(num1 <= countid)
-    LOOP 
-    INSERT INTO agreement VALUES (agreement_seq.NEXTVAL,num1,p_ID,'Y',SYSDATE);
-    num1 := num1 + 1;
-    END LOOP;
---EXCEPTION 
-
-END;
-
-
--- 선택 약관 
-CREATE OR REPLACE PROCEDURE ins_sel_terms
-(
-p_name terms.name%TYPE,
-p_ID member.id%TYPE
-)
-IS
-num1 NUMBER ;
-BEGIN 
-    SELECT t.id into num1
-    FROM terms t
-    WHERE name = p_name; 
-    
-    INSERT INTO agreement VALUES (agreement_seq.NEXTVAL,num1,p_ID,'Y',SYSDATE);
-END;
-
-
-
 
 
 -- 회원 INSERT
 -- 더미데이터 
-EXEC ins_member('daetu01','daetu01@gmail.com',010-1111-1111,'원대만','1234','1978-05-29');
-EXEC ins_member('m_eum01','m_eum01@naver.com',010-4142-2134,'권맑음','1234','1998-09-12');
-EXEC ins_member('d_Chan01','d_Chan01@daum.com',010-1231-2685,'이동찬','1234','1995-11-20');
-EXEC ins_member('dyoung01','dyoung01@gmail.com',010-1245-5415,'이동영','1234','1990-01-02');
-EXEC ins_member('mggun01','mggun01@gmail.com',010-6733-3573,'강명건','1234','1993-05-20');
-EXEC ins_member('whyun01','whyun01@gmail.com',010-2351-6738,'박우현','1234','1992-10-01');
+INSERT INTO MEMBER VALUES('daetu01','daetu01@gmail.com','010-1111-1111','원대만','1234','1978-05-29',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('m_eum01','m_eum01@naver.com','010-4142-2134','권맑음','1234','1998-09-12',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('d_Chan01','d_Chan01@daum.com','010-1231-2685','이동찬','1234','1995-11-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('dyoung01','dyoung01@gmail.com','010-1245-5415','이동영','1234','1990-01-02',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('mggun01','mggun01@gmail.com','010-6733-3573','강명건','1234','1993-05-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('whyun01','whyun01@gmail.com','010-2351-6738','박우현','1234','1992-10-01',SYSDATE,SYSDATE,'0','0','member');
 
-EXEC ins_member('minziZzang','minziZzang@gmail.com',010-1461-1245,'김민지','1234','2003-02-10');
-EXEC ins_member('hive','hive@gmail.com',010-5242-6642,'오함마','1234','2006-03-20');
-EXEC ins_member('newjeans','newjeans@gmail.com',010-6645-2411,'박바지','1234','2007-01-20');
-EXEC ins_member('cap','cap@gmail.com',010-5124-5665,'하남자','1234','2002-06-06');
+INSERT INTO MEMBER VALUES('minziZzang','minziZzang@gmail.com','010-1461-1245','김민지','1234','2003-02-10',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('hive','hive@gmail.com','010-5242-6642','오함마','1234','2006-03-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('newjeans','newjeans@gmail.com','010-6645-2411','박바지','1234','2007-01-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('cap','cap@gmail.com','010-5124-5665','하남자','1234','2002-06-06',SYSDATE,SYSDATE,'0','0','member');
 
-
---SELECT * 
---FROM MEMBER;
 
 -------------------------------------------------------------------------------------------
 -- 판매자 페이지, 브랜드 페이지, 상품 카테고리 테이블
---SELECT *
---FROM category;
--- 카테고리 INSERT 프로시저 사용문
-EXEC insert_category(category_seq.nextval, '뷰티', '헤어케어', '트리트먼트/케어', '헤어트리트먼트');
-EXEC insert_category(category_seq.nextval, '뷰티', '헤어케어', '트리트먼트/케어', '헤어팩/마스크');
-EXEC insert_category(category_seq.nextval, '뷰티', '헤어케어', '트리트먼트/케어', '헤어에센스/오일/세럼');
---1번상품
-EXEC insert_category(category_seq.nextval, '뷰티', '헤어케어', '트리트먼트/케어', '헤어퍼퓸/헤어미스트');
-
-EXEC insert_category(category_seq.nextval, '생활/주방', '화장지/생리대', '화장지', '롤화장지');
---2번상품
-EXEC insert_category(category_seq.nextval, '생활/주방', '화장지/생리대', '화장지', '고급화장지');
-EXEC insert_category(category_seq.nextval, '생활/주방', '화장지/생리대', '화장지', '점포롤화장지');
-EXEC insert_category(category_seq.nextval, '생활/주방', '화장지/생리대', '화장지', '페이퍼타올');
-EXEC insert_category(category_seq.nextval, '생활/주방', '화장지/생리대', '화장지', '냅킨');
-
-EXEC insert_category(category_seq.nextval, '패션의류', '남성패션', '정장/수트', '솔리드정장세트');
---3번상품
-EXEC insert_category(category_seq.nextval, '패션의류', '남성패션', '정장/수트', '패턴정장세트');
-EXEC insert_category(category_seq.nextval, '패션의류', '남성패션', '정장/수트', '정장바지');
-EXEC insert_category(category_seq.nextval, '패션의류', '남성패션', '정장/수트', '정장자켓');
-
-EXEC insert_category(category_seq.nextval, '신선식품', '수산물/건해산', '새우/게/랍스터', '새우');
---4번상품
-EXEC insert_category(category_seq.nextval, '신선식품', '수산물/건해산', '새우/게/랍스터', '꽃게/대게/킹크랩');
-EXEC insert_category(category_seq.nextval, '신선식품', '수산물/건해산', '새우/게/랍스터', '랍스터');
-
-EXEC insert_category(category_seq.nextval, '디지털/렌탈', '휴대폰/스마트기기', '자급제폰/공기계', '없음');
---5번상품
-
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '국내산소고기', '국거리');
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '국내산소고기', '장조림/갈비/찜');
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '국내산소고기', '구이/스테이크');
---6번상품
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '국내산소고기', '불고기/잡채/샤브샤브용');
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '국내산소고기', '다짐육/이유식');
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '국내산소고기', '사골/곰탕');
-
-EXEC insert_category(category_seq.nextval, '가공/건강식품', '김치/반찬/델리', '김치', '포기/배추김치');
-EXEC insert_category(category_seq.nextval, '가공/건강식품', '김치/반찬/델리', '김치', '무/열무김치');
-EXEC insert_category(category_seq.nextval, '가공/건강식품', '김치/반찬/델리', '김치', '물김치');
-EXEC insert_category(category_seq.nextval, '가공/건강식품', '김치/반찬/델리', '김치', '갓김치/기타김치');
---7번상품
-
-EXEC insert_category(category_seq.nextval, '신선식품', '과일', '바나나/파인애플', '바나나');
---8번상품
-EXEC insert_category(category_seq.nextval, '신선식품', '과일', '바나나/파인애플', '파인애플');
-
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '양념육/가공육', '소고기');
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '양념육/가공육', '돼지고기');
---9번상품
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '양념육/가공육', '닭고기');
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '양념육/가공육', '오리고기');
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '양념육/가공육', '양고기');
-EXEC insert_category(category_seq.nextval, '신선식품', '정육/계란류', '양념육/가공육', '기타 가공육');
-
-EXEC insert_category(category_seq.nextval, '신선식품', '과일', '사과/배', '사과');
---10번상품
-EXEC insert_category(category_seq.nextval, '신선식품', '과일', '사과/배', '배');
+INSERT INTO category VALUES ('04010000', '뷰티', '메이크업', '', '');
+INSERT INTO category VALUES ('04020000', '뷰티', '스킨케어', '', '');
+INSERT INTO category VALUES ('04030000', '뷰티', '향수', '', '');
+INSERT INTO category VALUES ('04040000', '뷰티', '헤어케어', '', '');
+INSERT INTO category VALUES ('04040100', '뷰티', '헤어케어', '샴푸', '');
+INSERT INTO category VALUES ('04040200', '뷰티', '헤어케어', '린스/컨디셔너', '');
+INSERT INTO category VALUES ('04040300', '뷰티', '헤어케어', '트리트먼트/케어', '');
+INSERT INTO category VALUES ('04040301', '뷰티', '헤어케어', '트리트먼트/케어', '헤어트리트먼트');
+INSERT INTO category VALUES ('04040302', '뷰티', '헤어케어', '트리트먼트/케어', '헤어팩/마스크');
+INSERT INTO category VALUES ('04040303', '뷰티', '헤어케어', '트리트먼트/케어', '헤어에센스/오일/세럼');
+INSERT INTO category VALUES ('04040304', '뷰티', '헤어케어', '트리트먼트/케어', '헤어퍼퓸/헤어미스트');
+INSERT INTO category VALUES ('04040400', '뷰티', '헤어케어', '헤어스타일링', '');
+INSERT INTO category VALUES ('04040500', '뷰티', '헤어케어', '헤어컬러/펌', '');
+INSERT INTO category VALUES ('04050000', '뷰티', '바디케어', '', '');
+INSERT INTO category VALUES ('04060000', '뷰티', '미용기기/소품', '', '');
+INSERT INTO category VALUES ('04070000', '뷰티', '남성화장품', '', '');
+INSERT INTO category VALUES ('04080000', '뷰티', '뷰티선물세트', '', '');
 
 
 
-EXEC insert_category(category_seq.nextval, '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '14/18k목걸이');
-EXEC insert_category(category_seq.nextval, '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '실버목걸이');
---11번상품
-EXEC insert_category(category_seq.nextval, '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '패션목걸이');
--- 패션잡화 카테고리 추가
-EXEC insert_category(category_seq.nextval, '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '진주/원석목걸이');
-EXEC insert_category(category_seq.nextval, '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '다이아몬드목걸이');
-EXEC insert_category(category_seq.nextval, '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '랩그로운 다이아몬드목걸이');
-EXEC insert_category(category_seq.nextval, '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '팬던트');
+INSERT INTO category VALUES ('06010101', '생활/주방', '화장지/생리대', '화장지', '롤화장지');
 
--- 가구/인테리어 카테고리 추가
-EXEC insert_category(category_seq.nextval, '가구/인테리어', '침구/패브릭', '침구단품', '매트/침대커버');
-EXEC insert_category(category_seq.nextval, '가구/인테리어', '침구/패브릭', '침구단품', '베개/베개커버');
-EXEC insert_category(category_seq.nextval, '가구/인테리어', '침구/패브릭', '침구단품', '양모/솜이불');
-EXEC insert_category(category_seq.nextval, '가구/인테리어', '침구/패브릭', '침구단품', '거위털/오리털이불');
-EXEC insert_category(category_seq.nextval, '가구/인테리어', '침구/패브릭', '침구단품', '담요/패드');
-EXEC insert_category(category_seq.nextval, '가구/인테리어', '침구/패브릭', '침구단품', '요/요커버');
-EXEC insert_category(category_seq.nextval, '가구/인테리어', '침구/패브릭', '침구단품', '난방텐트');
+INSERT INTO category VALUES ('06010102', '생활/주방', '화장지/생리대', '화장지', '고급화장지');
 
--- 디지털/렌탈 카테고리 추가
-EXEC insert_category(category_seq.nextval, '디지털/렌탈', '영상/음향가전', '스피커', '일반스피커');
-EXEC insert_category(category_seq.nextval, '디지털/렌탈', '영상/음향가전', '스피커', '블루투스스피커');
-EXEC insert_category(category_seq.nextval, '디지털/렌탈', '영상/음향가전', '스피커', 'AI스피커');
-EXEC insert_category(category_seq.nextval, '디지털/렌탈', '영상/음향가전', '스피커', '채널스피커');
-EXEC insert_category(category_seq.nextval, '디지털/렌탈', '영상/음향가전', '스피커', 'PC스피커');
-EXEC insert_category(category_seq.nextval, '디지털/렌탈', '영상/음향가전', '스피커', '사운드바');
-EXEC insert_category(category_seq.nextval, '가공/건강식품', '베이커리/잼', '식빵', '없음');
-EXEC insert_category(category_seq.nextval, '디지털/렌탈', '컴퓨터/노트북/태블릿', '태블릿PC/패드', '없음');
+INSERT INTO category VALUES ('06010103', '생활/주방', '화장지/생리대', '화장지', '점포롤화장지');
 
---15번상품
+INSERT INTO category VALUES ('06010104', '생활/주방', '화장지/생리대', '화장지', '페이퍼타올');
 
---더미상품
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
+INSERT INTO category VALUES ('06010105', '생활/주방', '화장지/생리대', '화장지', '냅킨');
 
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
+INSERT INTO category VALUES ('01030601', '패션의류', '남성패션', '정장/수트', '솔리드정장세트');
+
+INSERT INTO category VALUES ('01030602', '패션의류', '남성패션', '정장/수트', '패턴정장세트');
+
+INSERT INTO category VALUES ('01030603', '패션의류', '남성패션', '정장/수트', '정장바지');
+
+INSERT INTO category VALUES ('01030604', '패션의류', '남성패션', '정장/수트', '정장자켓');
+
+INSERT INTO category VALUES ('11040301', '신선식품', '수산물/건해산', '새우/게/랍스터', '새우');
+
+INSERT INTO category VALUES ('11040302', '신선식품', '수산물/건해산', '새우/게/랍스터', '꽃게/대게/킹크랩');
+
+INSERT INTO category VALUES ('11040303', '신선식품', '수산물/건해산', '새우/게/랍스터', '랍스터');
+
+INSERT INTO category VALUES ('09100400', '디지털/렌탈', '휴대폰/스마트기기', '자급제폰/공기계', '없음');
+
+INSERT INTO category VALUES ('11050501', '신선식품', '정육/계란류', '국내산소고기', '국거리');
+
+INSERT INTO category VALUES ('11050502', '신선식품', '정육/계란류', '국내산소고기', '장조림/갈비/찜');
+
+INSERT INTO category VALUES ('11050503', '신선식품', '정육/계란류', '국내산소고기', '구이/스테이크');
+
+INSERT INTO category VALUES ('11050504', '신선식품', '정육/계란류', '국내산소고기', '불고기/잡채/샤브샤브용');
+
+INSERT INTO category VALUES ('11050505', '신선식품', '정육/계란류', '국내산소고기', '다짐육/이유식');
+
+INSERT INTO category VALUES ('11050506', '신선식품', '정육/계란류', '국내산소고기', '사골/곰탕');
+
+INSERT INTO category VALUES ('12030101', '가공/건강식품', '김치/반찬/델리', '김치', '포기/배추김치');
+
+INSERT INTO category VALUES ('12030102', '가공/건강식품', '김치/반찬/델리', '김치', '무/열무김치');
+
+INSERT INTO category VALUES ('12030103', '가공/건강식품', '김치/반찬/델리', '김치', '물김치');
+
+INSERT INTO category VALUES ('12030104', '가공/건강식품', '김치/반찬/델리', '김치', '갓김치/기타김치');
+
+INSERT INTO category VALUES ('11010301', '신선식품', '과일', '바나나/파인애플', '바나나');
+
+INSERT INTO category VALUES ('11010302', '신선식품', '과일', '바나나/파인애플', '파인애플');
+
+INSERT INTO category VALUES ('11050701', '신선식품', '정육/계란류', '양념육/가공육', '소고기');
+
+INSERT INTO category VALUES ('11050702', '신선식품', '정육/계란류', '양념육/가공육', '돼지고기');
+
+INSERT INTO category VALUES ('11050703', '신선식품', '정육/계란류', '양념육/가공육', '닭고기');
+
+INSERT INTO category VALUES ('11050704', '신선식품', '정육/계란류', '양념육/가공육', '오리고기');
+
+INSERT INTO category VALUES ('11050705', '신선식품', '정육/계란류', '양념육/가공육', '양고기');
+
+INSERT INTO category VALUES ('11050706', '신선식품', '정육/계란류', '양념육/가공육', '기타 가공육');
+
+INSERT INTO category VALUES ('11010501', '신선식품', '과일', '사과/배', '사과');
+
+INSERT INTO category VALUES ('11010502', '신선식품', '과일', '사과/배', '배');
+
+INSERT INTO category VALUES ('02030101', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '14/18k목걸이');
+
+INSERT INTO category VALUES ('02030102', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '실버목걸이');
+
+INSERT INTO category VALUES ('02030103', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '패션목걸이');
+
+INSERT INTO category VALUES ('02030104', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '진주/원석목걸이');
+
+INSERT INTO category VALUES ('02030105', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '다이아몬드목걸이');
+
+INSERT INTO category VALUES ('02030106', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '랩그로운 다이아몬드목걸이');
+
+INSERT INTO category VALUES ('02030107', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '팬던트');
+
+INSERT INTO category VALUES ('07040201', '가구/인테리어', '침구/패브릭', '침구단품', '매트/침대커버');
+
+INSERT INTO category VALUES ('07040202', '가구/인테리어', '침구/패브릭', '침구단품', '베개/베개커버');
+
+INSERT INTO category VALUES ('07040203', '가구/인테리어', '침구/패브릭', '침구단품', '양모/솜이불');
+
+INSERT INTO category VALUES ('07040204', '가구/인테리어', '침구/패브릭', '침구단품', '거위털/오리털이불');
+
+INSERT INTO category VALUES ('07040205', '가구/인테리어', '침구/패브릭', '침구단품', '담요/패드');
+
+INSERT INTO category VALUES ('07040206', '가구/인테리어', '침구/패브릭', '침구단품', '요/요커버');
+
+INSERT INTO category VALUES ('07040207', '가구/인테리어', '침구/패브릭', '침구단품', '난방텐트');
+
+INSERT INTO category VALUES ('09090101', '디지털/렌탈', '영상/음향가전', '스피커', '일반스피커');
+
+INSERT INTO category VALUES ('09090102', '디지털/렌탈', '영상/음향가전', '스피커', '블루투스스피커');
+
+INSERT INTO category VALUES ('09090103', '디지털/렌탈', '영상/음향가전', '스피커', 'AI스피커');
+
+INSERT INTO category VALUES ('09090104', '디지털/렌탈', '영상/음향가전', '스피커', '채널스피커');
+
+INSERT INTO category VALUES ('09090105', '디지털/렌탈', '영상/음향가전', '스피커', 'PC스피커');
+
+INSERT INTO category VALUES ('09090106', '디지털/렌탈', '영상/음향가전', '스피커', '사운드바');
+
+INSERT INTO category VALUES ('12090100', '가공/건강식품', '베이커리/잼', '식빵', '없음');
+
+INSERT INTO category VALUES ('09010200', '디지털/렌탈', '컴퓨터/노트북/태블릿', '태블릿PC/패드', '없음');
 
 
--- 브랜드 insert 프로시저 실행
--- 브랜드 추가
-EXEC insert_brand(brand_seq.nextval, null, '케라스타즈');
-EXEC insert_brand(brand_seq.nextval, 'https://sui.ssgcdn.com/cmpt/banner/201708/2017081013263780463968040496_758.jpg', '노브랜드');
-EXEC insert_brand(brand_seq.nextval, null, '지이크');
-EXEC insert_brand(brand_seq.nextval, null, '새우파는브랜드(더미)');
-EXEC insert_brand(brand_seq.nextval, null, '삼성공식스토어');
-EXEC insert_brand(brand_seq.nextval, null, '한우비');
-EXEC insert_brand(brand_seq.nextval, null, '나래식품');
-EXEC insert_brand(brand_seq.nextval, null, '치키타(바나나/더미)');
-EXEC insert_brand(brand_seq.nextval, null, '농협');
-EXEC insert_brand(brand_seq.nextval, null, '콜드플레임');
-EXEC insert_brand(brand_seq.nextval, null, '템퍼');
-EXEC insert_brand(brand_seq.nextval, null, 'JBL');
-EXEC insert_brand(brand_seq.nextval, null, '밀도');
 
--- 더미 브랜드 추가
-INSERT INTO brand VALUES (brand_seq.nextval, null, '더미전자');
-INSERT INTO brand VALUES (brand_seq.nextval, null, '더미건강');
-INSERT INTO brand VALUES (brand_seq.nextval, null, '더미화장품');
-INSERT INTO brand VALUES (brand_seq.nextval, null, '더미뷰티');
-INSERT INTO brand VALUES (brand_seq.nextval, null, '더미패션');
-INSERT INTO brand VALUES (brand_seq.nextval, null, '더미장난감');
-INSERT INTO brand VALUES (brand_seq.nextval, null, '더미식품');
-INSERT INTO brand VALUES (brand_seq.nextval, null, '더미브랜드');
-INSERT INTO brand VALUES (brand_seq.nextval, null, '더미더미덤');
+INSERT INTO brand VALUES ('brand001', NULL, '케라스타즈');
 
--- 판매자 스토어 추가
-EXEC insert_sellerstore(seller_seq.nextval, '시코르');
-EXEC insert_sellerstore(seller_seq.nextval, '이마트');
-EXEC insert_sellerstore(seller_seq.nextval, '지이크');
-EXEC insert_sellerstore(seller_seq.nextval, '콜드플레임');
-EXEC insert_sellerstore(seller_seq.nextval, '신세계백화점');
-EXEC insert_sellerstore(seller_seq.nextval, '한우비');
-EXEC insert_sellerstore(seller_seq.nextval, '나래식품');
-EXEC insert_sellerstore(seller_seq.nextval, '템퍼');
-EXEC insert_sellerstore(seller_seq.nextval, 'JBL');
+INSERT INTO brand VALUES ('brand002', 'https://sui.ssgcdn.com/cmpt/banner/201708/2017081013263780463968040496_758.jpg', '노브랜드');
 
--- 더미 판매자 스토어 추가
-INSERT INTO sellerStore VALUES (seller_seq.nextval, '더미용판매처');
+INSERT INTO brand VALUES ('brand003', NULL, '지이크');
+
+INSERT INTO brand VALUES ('brand004', NULL, '새우파는브랜드(더미)');
+
+INSERT INTO brand VALUES ('brand005', NULL, '삼성공식스토어');
+
+INSERT INTO brand VALUES ('brand006', NULL, '한우비');
+
+INSERT INTO brand VALUES ('brand007', NULL, '나래식품');
+
+INSERT INTO brand VALUES ('brand008', NULL, '치키타(바나나/더미)');
+
+INSERT INTO brand VALUES ('brand009', NULL, '농협');
+
+INSERT INTO brand VALUES ('brand010', NULL, '콜드플레임');
+
+INSERT INTO brand VALUES ('brand011', NULL, '템퍼');
+
+INSERT INTO brand VALUES ('brand012', NULL, 'JBL');
+
+INSERT INTO brand VALUES ('brand013', NULL, '밀도');
+--더미브랜드
+INSERT INTO brand VALUES ('brand014',null,'더미전자');
+INSERT INTO brand VALUES ('brand015',null,'더미건강');
+INSERT INTO brand VALUES ('brand016',null,'더미화장품');
+INSERT INTO brand VALUES ('brand017',null,'더미뷰티');
+INSERT INTO brand VALUES ('brand018',null,'더미패션');
+INSERT INTO brand VALUES ('brand019',null,'더미장난감');
+INSERT INTO brand VALUES ('brand020',null,'더미식품');
+INSERT INTO brand VALUES ('brand021',null,'더미브랜드');
+INSERT INTO brand VALUES ('brand022',null,'더미더미덤');
+
+
+INSERT INTO sellerStore VALUES ('sellStore001', '시코르');
+
+INSERT INTO sellerStore VALUES ('sellStore002', '이마트');
+
+INSERT INTO sellerStore VALUES ('sellStore003', '지이크');
+
+INSERT INTO sellerStore VALUES ('sellStore004', '콜드플레임');
+
+INSERT INTO sellerStore VALUES ('sellStore005', '신세계백화점');
+
+INSERT INTO sellerStore VALUES ('sellStore006', '한우비');
+
+INSERT INTO sellerStore VALUES ('sellStore007', '나래식품');
+
+INSERT INTO sellerStore VALUES ('sellStore009', '템퍼');
+
+INSERT INTO sellerStore VALUES ('sellStore010', 'JBL');
+--더미판매자스토어
+INSERT INTO sellerStore VALUES ('sellStore011','더미용판매처');
 
 
 ----------------------------------------------------------------------------------
@@ -690,8 +459,7 @@ VALUES (2097001432075, '12090100', 0, '10', 'sellStore002', 'brand013', '[밀도
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
 VALUES (1000067576484, '09010200', 0 , '10', 'sellStore005', 'brand005', '갤럭시탭 Trade-in OPEN', '상품번호 : 1000067576484', '2024-04-10');
 
-select *
-FROM productoption;
+
 
 INSERT INTO product VALUES (0000000000001, '04040303', null, 1, 'sellStore001', 'brand014', '아이더미X18', null, null);
 INSERT INTO product VALUES (0000000000002, '04040303', null, 1, 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
@@ -752,7 +520,7 @@ INSERT INTO product VALUES (0000000000051, '09010200', null, 1, 'sellStore001', 
 INSERT INTO product VALUES (0000000000052, '09010200', null, 1, 'sellStore001', 'brand020', '더미만두', null, null);
 INSERT INTO product VALUES (0000000000053, '09010200', null, 1, 'sellStore001', 'brand021', '덤더디덤더디덤더디덤', null, null);
 INSERT INTO product VALUES (0000000000054, '09010200', null, 1, 'sellStore001', 'brand022', '만두가먹고싶네요', null, null);
-
+---더미데이터
 
 --상품옵션인서트
 
@@ -818,7 +586,175 @@ INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001432075, '
 
 --옵션 없는 상품
 
+--리뷰 
 
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'daetu01',41,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'m_eum01',41,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'d_Chan01',41,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'dyoung01',41,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'mggun01',41,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'whyun01',41,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'minziZzang',41,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'hive',41,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'newjeans',41,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'cap',41,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'daetu01',42,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'m_eum01',42,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'d_Chan01',42,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'dyoung01',42,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'mggun01',42,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'whyun01',42,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'minziZzang',42,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'hive',42,'만족도가 장난아니에요','2024.05.03','일반',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'newjeans',42,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'cap',42,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'daetu01',4,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'m_eum01',5,'최고에용','2024.05.03','일반',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'d_Chan01',6,'조아용','2024.05.03','일반',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'dyoung01',7,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'mggun01',8,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'whyun01',6,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'minziZzang',4,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'hive',4,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'newjeans',5,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'cap',6,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'daetu01',43,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'m_eum01',43,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'d_Chan01',43,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'dyoung01',43,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'mggun01',43,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'whyun01',43,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'minziZzang',43,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'hive',43,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'newjeans',43,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'cap',43,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'daetu01',14,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'m_eum01',15,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'d_Chan01',14,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'dyoung01',14,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'mggun01',14,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'whyun01',15,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'minziZzang',16,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'hive',17,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'newjeans',17,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'cap',17,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'daetu01',18,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'m_eum01',19,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'d_Chan01',18,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'dyoung01',18,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'mggun01',18,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'whyun01',19,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'minziZzang',18,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'hive',18,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'newjeans',18,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'cap',19,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'daetu01',20,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'m_eum01',22,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'d_Chan01',21,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'dyoung01',25,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'mggun01',26,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'whyun01',27,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'minziZzang',24,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'hive',23,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'newjeans',24,'촉감이 좋습니다.','2024.05.03','일반',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'cap',25,'다음에 또 구매하겠습니다.','2024.05.03','일반',1,1,1,1);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'daetu01',44,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'m_eum01',4,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'d_Chan01',44,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'dyoung01',44,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'mggun01',44,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'whyun01',44,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'minziZzang',44,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'hive',44,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'newjeans',44,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'cap',44,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'daetu01',45,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'m_eum01',45,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'d_Chan01',45,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'dyoung01',45,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'mggun01',45,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'whyun01',45,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'minziZzang',45,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'hive',45,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'newjeans',45,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'cap',45,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'daetu01',46,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'m_eum01',46,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'d_Chan01',46,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'dyoung01',46,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'mggun01',46,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'whyun01',46,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'minziZzang',46,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'hive',46,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'newjeans',46,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'cap',46,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'daetu01',30,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'m_eum01',30,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'d_Chan01',30,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'dyoung01',31,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'mggun01',31,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'whyun01',31,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'minziZzang',33,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'hive',33,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'newjeans',34,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'cap',34,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,daetu01,productOptionId,'만족합니다','2024.05.03','일반',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,m_eum01,productOptionId,'최고에용','2024.05.03','일반',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,d_Chan01,productOptionId,'조아용','2024.05.03','일반',3,2,3,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,dyoung01,productOptionId,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,mggun01,productOptionId,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,whyun01,productOptionId,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,minziZzang,productOptionId,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,hive,productOptionId,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,newjeans,productOptionId,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,cap,productOptionId,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+--11번
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'daetu01',34,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'m_eum01',34,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'d_Chan01',35,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'dyoung01',35,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'mggun01',35,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'whyun01',39,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'minziZzang',39,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'hive',40,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'newjeans',40,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'cap',34,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'daetu01',47,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'m_eum01',47,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'d_Chan01',47,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'dyoung01',47,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'mggun01',47,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'whyun01',47,'가볍고 좋습니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'minziZzang',47,'완전 추천합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'hive',47,'만족도가 장난아니에요','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'newjeans',47,'촉감이 좋습니다.','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'cap',47,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,daetu01,productOptionId,'만족합니다','2024.05.03','일반',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,m_eum01,productOptionId,'최고에용','2024.05.03','일반',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,d_Chan01,productOptionId,'조아용','2024.05.03','일반',3,2,3,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,dyoung01,productOptionId,'원래 쓰던 상품이라 재구매합니다.','2024.05.03','일반',4,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,mggun01,productOptionId,'항상 이것만사용해요','2024.05.03','일반',2,3,2,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,whyun01,productOptionId,'가볍고 좋습니다','2024.05.03','일반',1,3,2,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,minziZzang,productOptionId,'완전 추천합니다','2024.05.03','일반',3,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,hive,productOptionId,'만족도가 장난아니에요','2024.05.03','일반',3,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,newjeans,productOptionId,'촉감이 좋습니다.','2024.05.03','일반',2,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,cap,productOptionId,'다음에 또 구매하겠습니다.','2024.05.03','일반',5,3,3,3);
+--15번
 
 
 --------상품 링크
@@ -863,27 +799,6 @@ INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001432075, '
 ----14번 담백식빵 
 --<보류>딜상품 사용 X
 --https://www.ssg.com/item/dealItemView.ssg?itemId=1000067576484&siteNo=6004&salestrNo=6005
-
-
-
-
---카테고리 
---브랜드
---옵션 유무에 따른 템플릿을 이용해서 내용구분 
---그냥 옵션을 무조건 주는걸로 하는건어떨까..
---필수정보 좀더 생각해보기
---즉시할인 없어도될듯 
---컬럼 삭제
----상품 상세정보는 등록시 /n을 <br>처리해주는 기능이 필요할듯
--- HTML 박스임
---유튜브링크도 걸어놓을수있음
--- 상품등록시 이미지 어떻게 받을것인지
--- 받는다면 실제로 링크가 내 프로그램 안으로 저장되게해야함 
--- -> 모든이미지 그냥 다받아서 실제 작동구현함
-
-
-
-
 
 
 -----------------------------------------------------------------------------------
@@ -1084,87 +999,60 @@ INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
 
 
 
-
 -----------------------------------------------------------------------------
 -- 배송 정보, 배송지 정보, 검색 테이블
 -- 배송번호, 주문번호, 배송지번호, 배송요청사항, 배송상태, 택배 배송 요청사항, 수령위치, 현관출입방법, 배송 종료일
--- 배송에 따라 다르게 구분?? -> SSG1 , SSGDAWN1, COMMON1 
--- 배송 원하는 시간 + 날짜도 속성으로 들어가야한다. 회원도 넣을지 말지??
--- 배송 상태는 일단 디폴트값으로 배송전을 넣자.
--- 공동 현관 출입방법은 무조건 문앞에 놓아주세요를 선택했을때만 넣을 수 있다.
--- 멤버 아이디 통일시켜야 할듯
--- ADDRESS 없애고 도로명주소, 지번주소, 상세주소 추가
---    pmemid shippingplaceinformation.memid%TYPE,
---    paddrnick shippingplaceinformation.addressnick%TYPE,
---    preceivemem shippingplaceinformation.receivemem%TYPE,
---    proadAddress shippingplaceinformation.roadAddress%TYPE,
---	  pjibunAddress shippingplaceinformation.jibunAddress%TYPE,
---	  pdetailAddress shippingplaceinformation.detailAddress%TYPE,
---    ptel shippingplaceinformation.tel%TYPE,
---    ppostnum shippingplaceinformation.postnum%TYPE,
---    pdefaultship shippingplaceinformation.defaultshipping%TYPE
+//SELECT * FROM SHIPPINGPLACEINFORMATION;
 
-EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X');
 
--- 지번 : 서울특별시 중구 태평로1가 31 서울특별시청
--- 상세주소 : 서울특별시청
-EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '서울특별시 중구 세종대로 110', '서울특별시 중구 태평로1가 31', '서울특별시청',  '010-1234-5678', '04524', 'X' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '서울특별시 중구 세종대로 110', '서울특별시 중구 태평로1가 31', '서울특별시청', '010-1234-5678', '04524', 'X');
 
--- 지번 : 경기도 수원시 장안구 조원동 10 아토피센터 2층
--- 상세주소 : 아토피센터 2층
-EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '경기도 수원시 장안구 수일로233번길 144', '경기도 수원시 장안구 조원동 10 아토피센터 2층', '아토피센터 2층', '010-1234-5678', '05343', '이번만배송지' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '경기도 수원시 장안구 수일로233번길 144', '경기도 수원시 장안구 조원동 10 아토피센터 2층', '아토피센터 2층', '010-1234-5678', '05343', '이번만배송지');
 
--- 지번 : 서울특별시 강남구 역삼동 735 8층 쌍용교육센터
--- 상세주소 : 8층 쌍용교육센터
-EXECUTE ps_insert_shipplaceinfo( 'm_eum01', '맑음학원', '맑음', '서울특별시 강남구 테헤란로 132', '서울특별시 강남구 역삼동 735 8층 쌍용교육센터', '8층 쌍용교육센터', '010-1010-2020', '06235', '기본배송지' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'm_eum01', '맑음학원', '맑음', '서울특별시 강남구 테헤란로 132', '서울특별시 강남구 역삼동 735 8층 쌍용교육센터', '8층 쌍용교육센터', '010-1010-2020', '06235', '기본배송지');
 
--- 지번 : 강원특별자치도 평창군 평창읍 약수리 15-4 약수 클산종합가구
--- 상세주소 : 클산종합가구
-EXECUTE ps_insert_shipplaceinfo( 'm_eum01', '맑음', '맑음', '강원특별자치도 평창군 평창읍 평창강로 1236-4', '강원특별자치도 평창군 평창읍 약수리 15-4 약수 클산종합가구', '클산종합가구',  '010-1010-2020', '25373', 'X' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'm_eum01', '맑음', '맑음', '강원특별자치도 평창군 평창읍 평창강로 1236-4', '강원특별자치도 평창군 평창읍 약수리 15-4 약수 클산종합가구', '클산종합가구', '010-1010-2020', '25373', 'X');
 
--- 지번 : 경기도 화성시 신동 산179 호반써밋 동탄 101동 101호
--- 상세주소 : 101동 101호 (신동, 호반써밋 동탄)
-EXECUTE ps_insert_shipplaceinfo( 'd_Chan01', '동찬집', '동찬', '경기 화성시 동탄신리천로4길 48', '경기도 화성시 신동 산179 호반써밋 동탄 101동 101호', '101동 101호 (신동, 호반써밋 동탄)', '010-1111-2222', '18495', '기본배송지' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'd_Chan01', '동찬집', '동찬', '경기 화성시 동탄신리천로4길 48', '경기도 화성시 신동 산179 호반써밋 동탄 101동 101호', '101동 101호 (신동, 호반써밋 동탄)', '010-1111-2222', '18495', '기본배송지');
 
--- 지번 : 서울특별시 강남구 역삼동 825 미진프라자 스타벅스
--- 상세주소 : 스타벅스
-EXECUTE ps_insert_shipplaceinfo( 'd_Chan01', '카페', '카페', '서울특별시 강남구 강남대로 390', '서울특별시 강남구 역삼동 825 미진프라자 스타벅스', '스타벅스', '010-1111-2222', '06232', 'X' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'd_Chan01', '카페', '카페', '서울특별시 강남구 강남대로 390', '서울특별시 강남구 역삼동 825 미진프라자 스타벅스', '스타벅스', '010-1111-2222', '06232', 'X');
 
--- 지번 : 서울특별시 강남구 역삼동 645-20 역삼생화 308호
--- 상세주소 : 역삼생활 308호
-EXECUTE ps_insert_shipplaceinfo( 'dyoung01', '동영집', '동스', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20 역삼생화 308호', '역삼생활 308호', '010-3333-4444', '06131', '기본배송지' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'dyoung01', '동영집', '동스', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20 역삼생화 308호', '역삼생활 308호', '010-3333-4444', '06131', '기본배송지');
 
--- 지번 : 서울특별시 종로구 관철동 43-15 숙달돼지
--- 상세주소 : 숙달돼지
-EXECUTE ps_insert_shipplaceinfo( 'dyoung01', '동스', '동스', '서울 종로구 종로8길 15', '서울특별시 종로구 관철동 43-15 숙달돼지', '숙달돼지', '010-3333-4444', '03189', 'X' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'dyoung01', '동스', '동스', '서울 종로구 종로8길 15', '서울특별시 종로구 관철동 43-15 숙달돼지', '숙달돼지', '010-3333-4444', '03189', 'X');
 
--- 지번 : 경기도 성남시 분당구 정자동 178-4 네이버 1784 1층
--- 상세주소 : 네이버 1784 1층
-EXECUTE ps_insert_shipplaceinfo( 'mggun01', '직장', '명스', '경기도 성남시 분당구 정자일로 95', '경기도 성남시 분당구 정자동 178-4 네이버 1784 1층', '네이버 1784 1층', '010-4444-5555', '13561', '기본배송지' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', '직장', '명스', '경기도 성남시 분당구 정자일로 95', '경기도 성남시 분당구 정자동 178-4 네이버 1784 1층', '네이버 1784 1층', '010-4444-5555', '13561', '기본배송지');
 
--- 지번 : 부산광역시 수영구 남천동 148-4 비치아파트 101동 101호
--- 상세주소 : 비치아파트 101동 101호
-EXECUTE ps_insert_shipplaceinfo( 'mggun01', '명건', '명건', '부산광역시 수영구 광안해변로 100', '부산광역시 수영구 남천동 148-4 비치아파트 101동 101호', '비치아파트 101동 101호', '010-4444-5555', '48305', 'X' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', '명건', '명건', '부산광역시 수영구 광안해변로 100', '부산광역시 수영구 남천동 148-4 비치아파트 101동 101호', '비치아파트 101동 101호', '010-4444-5555', '48305', 'X');
 
--- 지번 : 서울특별시 강남구 삼성동 16-1 강남구청 1층
--- 상세주소 :  1층 (삼성동)
-EXECUTE ps_insert_shipplaceinfo( 'mggun01', '강남구청', '명건', '서울특별시 강남구 학동로 426', '서울특별시 강남구 삼성동 16-1 강남구청 1층', '1층 (삼성동)', '010-4444-5555', '06090', 'X' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', '강남구청', '명건', '서울특별시 강남구 학동로 426', '서울특별시 강남구 삼성동 16-1 강남구청 1층', '1층 (삼성동)', '010-4444-5555', '06090', 'X');
 
--- 지번 : 서울특별시 노원구 상계동 701-1 노원구청 2층
--- 상세주소 : 노원구청 2층
-EXECUTE ps_insert_shipplaceinfo( 'whyun01', '우현', '우현', '서울특별시 노원구 노해로 437', '서울특별시 노원구 상계동 701-1 노원구청 2층', '노원구청 2층', '010-5555-6666', '01689', 'X' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'whyun01', '우현', '우현', '서울특별시 노원구 노해로 437', '서울특별시 노원구 상계동 701-1 노원구청 2층', '노원구청 2층', '010-5555-6666', '01689', 'X');
 
--- 지번 : 서울특별시 노원구 공릉동 744 건영장미아파트 101동 101호
--- 상세주소 : 101동 101호 (공릉동, 건영장미아파트)
-EXECUTE ps_insert_shipplaceinfo( 'whyun01', '우현집', '우현', '서울특별시 노원구 공릉로51길 14-17)', '서울특별시 노원구 공릉동 744 건영장미아파트 101동 101호', '101동 101호 (공릉동, 건영장미아파트)', '010-6666-7777', '01833', '기본배송지' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'whyun01', '우현집', '우현', '서울특별시 노원구 공릉로51길 14-17)', '서울특별시 노원구 공릉동 744 건영장미아파트 101동 101호', '101동 101호 (공릉동, 건영장미아파트)', '010-6666-7777', '01833', '기본배송지');
 
--- 지번 : 서울특별시 용산구 한강로3가 65-9
--- 상세주소 : 하이브
-EXECUTE ps_insert_shipplaceinfo( 'minziZzang', '하이브', '민지', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-9999-9999', '04389', '기본배송지' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'minziZzang', '하이브', '민지', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-9999-9999', '04389', '기본배송지');
 
--- 지번 : 서울특별시 용산구 한강로3가 65-9
--- 상세주소 : 하이브
-EXECUTE ps_insert_shipplaceinfo( 'hive', '하이브', '하이브', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-8888-9999', '04389', '기본배송지' );
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'hive', '하이브', '하이브', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-8888-9999', '04389', '기본배송지');
+
+
 
 
 -- 배송정보 INSERT 프로시저 실행
@@ -1180,133 +1068,86 @@ EXECUTE ps_insert_shipplaceinfo( 'hive', '하이브', '하이브', '서울특별
 --EXECUTE up_insert_shipinfo ( 9, 'whyun01',  '잘전달해주세요~', '배송전', '부드러운 소포에 담아주세요.', '3층 택배보관함 보관해주세요',  null , null);
 --EXECUTE up_insert_shipinfo ( 10, 'minziZzang',  '잘전달해주세요~', '배송전', '배송 잘 부탁드립니다.', '문앞에 놓아주세요',  '공동현관 출입번호-(#3300)' , null);
 
---    porderid payrecord.id%TYPE,
---    pmemid payrecord.memid%TYPE,
---    pshippingmsg shippinginformation.shippingmsg%TYPE,
---    pshippingstate shippinginformation.shippingstate%TYPE,
---    pshippingrequest  shippinginformation.shippingrequest%TYPE,
---    preceiveposition shippinginformation.receiveposition%TYPE,
---    pentrance shippinginformation.entrance%TYPE,
---    pshippingenddate shippinginformation.shippingenddate%TYPE
--- 배송지 테이블 INSERT 프로시저 실행
--- 지번 : 서울특별시 강남구 역삼동 645-20 
--- 상세주소 : 역삼생활 307호
 
 
 --SELECT *
 --FROM shippingplaceinformation;
 
 -- 검색테이블 INSERT 프로시저 실행
-EXECUTE up_insert_search ( 'daetu01', '키보드');
-EXECUTE up_insert_search ( 'daetu01', '노트북');
-EXECUTE up_insert_search ( 'daetu01', '김치');
-EXECUTE up_insert_search ( 'daetu01', '참깨스틱');
-EXECUTE up_insert_search ( 'm_eum01', '계란');
-EXECUTE up_insert_search ( 'm_eum01', '대파');
-EXECUTE up_insert_search ( 'd_Chan01', '간장');
-EXECUTE up_insert_search ( 'd_Chan01', '데스크톱');
-EXECUTE up_insert_search ( 'dyoung01', '삼다수');
-EXECUTE up_insert_search ( 'dyoung01', '오레오오즈');
-EXECUTE up_insert_search ( 'mggun01', '키보드');
-EXECUTE up_insert_search ( 'mggun01', '로션');
-EXECUTE up_insert_search ( 'whyun01', '감자');
-EXECUTE up_insert_search ( 'whyun01', '참치');
-EXECUTE up_insert_search ( 'whyun01', '마우스');
-EXECUTE up_insert_search ( 'minziZzang', '뉴진스앨범');
-EXECUTE up_insert_search ( 'hive', '민희진모자');
-EXECUTE up_insert_search ( 'hive', '방탄소년단앨범');
-EXECUTE up_insert_search ( 'daetu01', '키보드');
-EXECUTE up_insert_search ( 'daetu01', '노트북');
-EXECUTE up_insert_search ( 'daetu01', '김치');
-EXECUTE up_insert_search ( 'daetu01', '참깨스틱');
-EXECUTE up_insert_search ( 'm_eum01', '계란');
-EXECUTE up_insert_search ( 'm_eum01', '대파');
-EXECUTE up_insert_search ( 'd_Chan01', '간장');
-EXECUTE up_insert_search ( 'd_Chan01', '데스크톱');
-EXECUTE up_insert_search ( 'dyoung01', '삼다수');
-EXECUTE up_insert_search ( 'dyoung01', '오레오오즈');
-EXECUTE up_insert_search ( 'mggun01', '키보드');
-EXECUTE up_insert_search ( 'mggun01', '로션');
-EXECUTE up_insert_search ( 'whyun01', '감자');
-EXECUTE up_insert_search ( 'whyun01', '참치');
-EXECUTE up_insert_search ( 'whyun01', '마우스');
-EXECUTE up_insert_search ( 'minziZzang', '뉴진스앨범');
-EXECUTE up_insert_search ( 'hive', '민희진모자');
-EXECUTE up_insert_search ( 'hive', '방탄소년단앨범');
-EXECUTE up_insert_search ( 'daetu01', '키보드');
-EXECUTE up_insert_search ( 'daetu01', '노트북');
-EXECUTE up_insert_search ( 'daetu01', '김치');
-EXECUTE up_insert_search ( 'daetu01', '참깨스틱');
-EXECUTE up_insert_search ( 'm_eum01', '계란');
-EXECUTE up_insert_search ( 'm_eum01', '대파');
-EXECUTE up_insert_search ( 'd_Chan01', '간장');
-EXECUTE up_insert_search ( 'd_Chan01', '데스크톱');
-EXECUTE up_insert_search ( 'dyoung01', '삼다수');
-EXECUTE up_insert_search ( 'dyoung01', '오레오오즈');
-EXECUTE up_insert_search ( 'mggun01', '키보드');
-EXECUTE up_insert_search ( 'mggun01', '로션');
-EXECUTE up_insert_search ( 'whyun01', '감자');
-EXECUTE up_insert_search ( 'whyun01', '참치');
-EXECUTE up_insert_search ( 'whyun01', '마우스');
-EXECUTE up_insert_search ( 'minziZzang', '뉴진스앨범');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '노트북', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '김치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '참깨스틱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '계란', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '간장', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '데스크톱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '삼다수', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '오레오오즈', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '로션', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '감자', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '참치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '마우스', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '뉴진스앨범', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '민희진모자', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '방탄소년단앨범', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '노트북', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '김치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '참깨스틱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '계란', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '간장', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '데스크톱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '삼다수', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '오레오오즈', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '로션', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '감자', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '참치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '마우스', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '뉴진스앨범', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '민희진모자', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '방탄소년단앨범', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '노트북', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '김치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '참깨스틱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '계란', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '간장', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '데스크톱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '삼다수', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '오레오오즈', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '로션', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '감자', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '참치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '마우스', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '뉴진스앨범', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '컴퓨터', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '호박', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '스팸', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '고구마', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '명란', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '핫도그', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '컴퓨터', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '호박', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '스팸', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '고구마', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '명란', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '핫도그', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '컴퓨터', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '호박', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '스팸', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '고구마', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
 
 
 
@@ -1347,35 +1188,52 @@ INSERT INTO event VALUES (6, '체험단 강이지 유산균', 'event_image6.jpg'
 
 INSERT INTO event VALUES (7, 'MADA 구기자 링클 광채 세럼스틱', 'event_image7.jpg', TO_DATE('2024-04-22'), TO_DATE('2024-04-28'));
 
--- 신청자 테이블 insert
---링크 https://event.ssg.com/eventDetail.ssg?nevntId=1000000013107&domainSiteNo=6005&_mpop=new
-INSERT INTO applicant VALUES (1, 1, 'daetu01', '저희 아기가 배변활동이 좋지 않아서 신청합니다.', TO_DATE('2024-04-25'), '당첨', null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1,  'daetu01', '딱 저희 아이의 탈취제가 필요했는데 신청합니다.', TO_DATE('2024-04-22'), '당첨',null);
 
-INSERT INTO applicant VALUES (2, 1, 'm_eum01', '건강한 장을 위해서 체험단 신청합니다.', TO_DATE('2024-04-22'), '탈락', null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'm_eum01', '계속 쓰고 있는 제품인데 너무 좋아요.', TO_DATE('2024-04-24'), '탈락',null);
 
-INSERT INTO applicant VALUES (3, 1, 'd_Chan01', '신청합니다.', TO_DATE('2024-04-28'), '당첨', null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'd_Chan01', '신청합니다. 당첨 되었으면 좋겠어요', TO_DATE('2024-04-25'), '당첨',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'mggun01', '저희 댕댕이가 참 좋아해요.', TO_DATE('2024-04-25'), '탈락',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'whyun01', '당첨되고 싶어요 꼭!.', TO_DATE('2024-04-26'), '당첨',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'minziZzang', '신청해요!', TO_DATE('2024-04-26'), '당첨',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'hive', '신청합니다.', TO_DATE('2024-04-27'), '당첨',null);
 
 --링크 https://event.ssg.com/eventDetail.ssg?nevntId=1000000012872&domainSiteNo=6005&_mpop=new
-INSERT INTO applicant VALUES (4, 2, 'dyoung01', '구기자가 미백에 효과가 좋다고 들었어요. 스틱 제형이라 편리할 것 같아요. 광채효과 체험해보고 싶어요', TO_DATE('2024-04-28'), '당첨', null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'daetu01', '꼭 당첨되고 싶어요!', TO_DATE('2024-04-27'), '당첨',null);
 
-INSERT INTO applicant VALUES (5, 2, 'mggun01', '꼭 테스트 해보고 싶습니다.', TO_DATE('2024-04-28'), '당첨', null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'm_eum01', '계속 쓰고 있는 제품인데 너무 좋아요.', TO_DATE('2024-05-27'), '탈락',null);
 
-INSERT INTO applicant VALUES (6, 2, 'whyun01', '엄마가 요즘 탄력이랑 주름 관련해서 고민이 많으셔서 도움을 드리고 싶었는데 스틱제품은 잘 쓰실것 같아 신청합니다.', TO_DATE('2024-04-28'), '당첨', null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'd_Chan01', '신청합니다. 당첨 되었으면 좋겠어요', TO_DATE('2024-05-27'), '당첨',null);
 
---insert into productimg values ( 1 , 2097001432075 , null ,null );
---
---insert into productimg values ( 2 , 2097001432075 , null ,null );
---insert into productimg values ( 3 , 2097001432075 , null ,null );
---insert into productimg values ( 4 , 2097001432075 , null ,null );
---insert into productimg values ( 5 , 2097001432075 , null ,null );
---insert into productimg values ( 6 , 2097001432075 , null ,null );
---insert into productimg values ( 7 , 1000587702102 , null ,null );
---insert into productimg values ( 8 , 1000587702102 , null ,null );
---insert into productimg values ( 9 , 1000587702102 , null ,null );
---insert into productimg values ( 10 , 1000587702102 , null ,null );
---insert into productimg values ( 11 , 1000544937242 , null ,null );
---insert into productimg values ( 12 , 1000544937242 , null ,null );
---insert into productimg values ( 13 , 1000544937242 , null ,null );
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'mggun01', '저희 아이 참 좋아해요.', TO_DATE('2024-05-28'), '탈락',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'whyun01', '당첨되고 싶어요 꼭!.', TO_DATE('2024-05-28'), '당첨',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'minziZzang', '신청해요!', TO_DATE('2024-05-28'), '탈락',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'hive', '신청합니다.', TO_DATE('2024-05-28'), '당첨',null);
+
+select * from applicant;
+
+insert into productimg values ( 1 , 2097001432075 , null ,null );
+insert into productimg values ( 2 , 2097001432075 , null ,null );
+insert into productimg values ( 3 , 2097001432075 , null ,null );
+insert into productimg values ( 4 , 2097001432075 , null ,null );
+insert into productimg values ( 5 , 2097001432075 , null ,null );
+insert into productimg values ( 6 , 2097001432075 , null ,null );
+insert into productimg values ( 7 , 1000587702102 , null ,null );
+insert into productimg values ( 8 , 1000587702102 , null ,null );
+insert into productimg values ( 9 , 1000587702102 , null ,null );
+insert into productimg values ( 10 , 1000587702102 , null ,null );
+insert into productimg values ( 11 , 1000544937242 , null ,null );
+insert into productimg values ( 12 , 1000544937242 , null ,null );
+insert into productimg values ( 13 , 1000544937242 , null ,null );
+
 
 --INSERT INTO applicant VALUES (1, 1, 'daetu01', '딱 저희 아이의 탈취제가 필요했는데 신청합니다.', TO_DATE('2024-04-22'), '당첨');
 --
@@ -1431,24 +1289,22 @@ INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10', '/SSGSSAK/mem
 INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_email', '/SSGSSAK/member/terms/ssgInfoRcvAgree_email','N');
 INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_sms', '/SSGSSAK/member/terms/ssgInfoRcvAgree_sms','N');
 
+-- divisionFolder 
+INSERT INTO divisionfolder VALUES (division_seq.NEXTVAL, 'daetu01','모아보기',SYSDATE);
+
 
 -- interestgoods insert
 
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000026532717,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000544937242,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000587702102,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001577943,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000398650979,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000014118201,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001308233,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097000257655,SYSDATE,'모아보기');
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000026532717,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000544937242,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000587702102,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001577943,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000398650979,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000014118201,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001308233,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097000257655,SYSDATE,1);
 
 
 COMMIT;
 COMMIT;
-select * from productimg;
-select product_id_seq.currval from dual;
-with seq_value as (
-select product_id_seq.currval seq from dual
-)
-select id optionid from productoption p , seq_value s  where p.productid = s.seq;
+

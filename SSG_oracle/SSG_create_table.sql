@@ -33,6 +33,7 @@ DROP TABLE present CASCADE CONSTRAINTS;
 DROP TABLE Auth CASCADE CONSTRAINTS;
 DROP TABLE paydetail CASCADE CONSTRAINTS;
 DROP TABLE terms CASCADE CONSTRAINTS;
+DROP TABLE divisionfolder CASCADE CONSTRAINTS;
 
 
 -- 배송옵션 시퀀스 삭제
@@ -50,19 +51,16 @@ drop sequence pointrecord_seq;
 drop sequence couponrecord_seq;
 drop sequence payrecord_seq;
 drop sequence paydetail_seq;
+drop sequence applicant_seq;
 drop sequence agreement_seq;
 drop sequence terms_seq;
 drop sequence interestGoods_seq;
-
-drop sequence category_seq;
-drop sequence brand_seq;
-drop sequence seller_seq;
-
-
+drop sequence productimg_seq;
+drop sequence division_seq;
 drop sequence shoppingcart_seq;
 drop sequence applicant_seq;
-drop sequence productimg_seq;
-
+drop sequence review_seq;
+drop sequence reviewimg_seq;
 
 CREATE TABLE payrecord (
     id number NOT NULL,
@@ -122,21 +120,24 @@ CREATE TABLE member (
     privilege varchar2(300) DEFAULT 'member' NULL
 );
 
+SELECT *
+FROM member;
+
 
 CREATE TABLE interestBrand (
     id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
     sellerID VARCHAR2(200) NOT NULL,
-    RecordDate DATE NULL,
-    divisionFolder varchar2(100) DEFAULT '모아보기' NULL
+    RecordDate DATE DEFAULT SYSDATE NULL,
+    folderId number NOT NULL
 );
 
 CREATE TABLE interestGoods (
     id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
     productId NUMBER NOT NULL,
-    RecordDate DATE NULL,
-    divisionFolder varchar2(100) DEFAULT '모아보기' NULL
+    RecordDate DATE DEFAULT SYSDATE NULL,
+    folderId number NOT NULL
 );
 
 CREATE TABLE interestCategory (
@@ -144,7 +145,7 @@ CREATE TABLE interestCategory (
     memid varchar2(300) NOT NULL,
     categoryID VARCHAR2(20) NOT NULL,
     RecordDate DATE DEFAULT SYSDATE NULL,
-    divisionFolder varchar2(100) DEFAULT '모아보기' NULL
+    folderId number NOT NULL
 );
 
 CREATE TABLE productImg (
@@ -184,12 +185,10 @@ CREATE TABLE review (
     reviewContent VARCHAR2(3000) NULL,
     reviewDate DATE NULL,
     reviewType VARCHAR2(100) NULL,
-    productType VARCHAR2(100) NULL,
     grade NUMBER(3,2) NOT NULL,
-    q1 VARCHAR2(100) NULL,
-    q2 VARCHAR2(100) NULL,
-    q3 VARCHAR2(100) NULL,
-    q4 VARCHAR2(100) NULL
+    q1 NUMBER NULL,
+    q2 NUMBER NULL,
+    q3 NUMBER NULL
 );
 
 CREATE TABLE category (
@@ -262,7 +261,7 @@ CREATE TABLE quitMember (
 CREATE TABLE reviewImg (
     id NUMBER NOT NULL,
     reviewId NUMBER NOT NULL,
-    reviewImgUrl VARCHAR2(100) NULL
+    reviewImgUrl VARCHAR2(1000) NULL
 );
 
 CREATE TABLE qna (
@@ -384,6 +383,13 @@ CREATE TABLE terms (
     name VARCHAR2(300) NOT NULL,
     content VARCHAR2(1000) NOT NULL,
     necessary VARCHAR2(100) NOT NULL
+);
+
+CREATE TABLE divisionFolder (
+id number NOT NULL,
+memid varchar2(300) NOT NULL,
+name varchar2(300) DEFAULT '모아보기' NULL ,
+createDate DATE DEFAULT SYSDATE NULL
 );
 
 
@@ -519,6 +525,11 @@ ALTER TABLE present ADD CONSTRAINT PK_PRESENT PRIMARY KEY (
     id
 );
 
+ALTER TABLE divisionFolder ADD CONSTRAINT PK_DIVISIONFOLDER PRIMARY KEY (
+    id
+);
+
+
 ALTER TABLE paydetail ADD CONSTRAINT FK_payrecord_TO_paydetail_1 FOREIGN KEY (id2) REFERENCES payrecord (id);
 
 ALTER TABLE paydetail ADD CONSTRAINT FK_productOp_TO_paydetail_1 FOREIGN KEY (id3) REFERENCES productOption (id);
@@ -589,6 +600,13 @@ REFERENCES brand (
     id
 );
 
+ALTER TABLE interestBrand ADD CONSTRAINT FK_diviF_TO_interestBrand_1 FOREIGN KEY (
+    folderId
+)
+REFERENCES divisionfolder (
+    id
+);
+
 ALTER TABLE interestGoods ADD CONSTRAINT FK_member_TO_interestGoods_1 FOREIGN KEY (
     memid
 )
@@ -603,7 +621,14 @@ REFERENCES product (
     id
 );
 
-ALTER TABLE interestCategory ADD CONSTRAINT FK_member_TO_inteCate FOREIGN KEY (
+ALTER TABLE interestGoods ADD CONSTRAINT FK_diviF_TO_interestGoods_1 FOREIGN KEY (
+    folderId
+)
+REFERENCES divisionfolder (
+    id
+);
+
+ALTER TABLE interestCategory ADD CONSTRAINT FK_member_TO_interCate FOREIGN KEY (
     memid
 )
 REFERENCES member (
@@ -614,6 +639,12 @@ ALTER TABLE interestCategory ADD CONSTRAINT FK_category_TO_interCate FOREIGN KEY
     categoryID
 )
 REFERENCES category (
+    id
+);
+
+ALTER TABLE interestCategory ADD CONSTRAINT FK_diviF_TO_interCate FOREIGN KEY (
+    folderId
+) REFERENCES divisionfolder (
     id
 );
 
@@ -795,6 +826,13 @@ ALTER TABLE ShoppingCart ADD CONSTRAINT FK_member_TO_ShoppingCart_1 FOREIGN KEY 
 ALTER TABLE ShoppingCart ADD CONSTRAINT FK_productOp_TO_ShoppingC_1 FOREIGN KEY (
     id2
 ) REFERENCES productOption (
+    id
+);
+
+
+ALTER TABLE divisionFolder ADD CONSTRAINT FK__member_TO_divisionF_1 FOREIGN KEY (
+    memid
+) REFERENCES member (
     id
 );
 
