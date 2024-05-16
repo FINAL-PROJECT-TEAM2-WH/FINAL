@@ -120,8 +120,6 @@ CREATE TABLE member (
     privilege varchar2(300) DEFAULT 'member' NULL
 );
 
-SELECT *
-FROM member;
 
 
 CREATE TABLE interestBrand (
@@ -192,7 +190,7 @@ CREATE TABLE review (
 );
 
 CREATE TABLE category (
-    id number NOT NULL,
+    id VARCHAR2(20) NOT NULL,
     majorCateName VARCHAR2(300) NULL,
     middleCateName VARCHAR2(300) NULL,
     subCateName VARCHAR2(300) NULL,
@@ -324,12 +322,12 @@ CREATE TABLE Search (
 );
 
 CREATE TABLE sellerstore (
-    id number NOT NULL,
+    id VARCHAR2(20) NOT NULL,
     sellerName varchar2(300) NULL
 );
 
 CREATE TABLE brand (
-    id number NOT NULL,
+    id VARCHAR2(300) NOT NULL,
     brandImg VARCHAR2(3000) NULL,
     brandName VARCHAR2(300) NULL
 );
