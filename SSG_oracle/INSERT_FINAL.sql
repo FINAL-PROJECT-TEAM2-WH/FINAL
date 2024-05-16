@@ -95,90 +95,17 @@ increment by 1
 nocache 
 nocycle;
 
-create sequence shoppingcart_seq
+CREATE sequence division_seq
 start with 1 
 increment by 1 
 nocache 
 nocycle;
 
-
--- 회원insert 프로시저 
-create or replace PROCEDURE ins_member 
-(
-p_ID VARCHAR2,
-p_email VARCHAR2,
-p_phonenum VARCHAR2,
-p_name VARCHAR2,
-p_passwd VARCHAR2,
-BIRTHD DATE)
-IS
-BEGIN 
-    INSERT INTO MEMBER(id,email,phonenum,name,passwd,birthd,REGISTERDATE,UPDATEDATE,LOGINNOTIFICATION,LOGIN2NOTIFICATION ) VALUES (p_ID,p_email,p_phonenum,p_name,p_passwd,BIRTHD,SYSDATE,SYSDATE,'0','0');
-
---EXCEPTION 
-
-END;
-
-
--- 카테고리 INSERT 프로시저
-CREATE OR REPLACE PROCEDURE insert_category(
-    p_id             IN  VARCHAR2,
-    p_majorCateName  IN  VARCHAR2,
-    p_middleCateName IN  VARCHAR2,
-    p_subCateName    IN  VARCHAR2,
-    p_miniCateName   IN  VARCHAR2
-)
-IS
-BEGIN
-    INSERT INTO category (id, majorCateName, middleCateName, subCateName, miniCateName)
-    VALUES (p_id, p_majorCateName, p_middleCateName, p_subCateName, p_miniCateName);
-    COMMIT;
-    DBMS_OUTPUT.PUT_LINE('카테고리 데이터가 성공적으로 추가되었습니다.');
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-        DBMS_OUTPUT.PUT_LINE('카테고리 데이터 입력에 실패했습니다.' || SQLERRM);
-END insert_category;
-
-
--- 브랜드 insert 프로시저
-CREATE OR REPLACE PROCEDURE insert_brand(
-    p_id IN VARCHAR2,
-    p_brandImg IN VARCHAR2,
-    p_brandName IN VARCHAR2
-)
-
-IS
-BEGIN
-    INSERT INTO brand (id, brandImg, brandName)
-    VALUES (p_id, p_brandImg, p_brandName);
-    COMMIT;
-    DBMS_OUTPUT.PUT_LINE('브랜드 입력 성공');
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-        DBMS_OUTPUT.PUT_LINE('브랜드 입력 에러 발생' || SQLERRM);
-END;
-
-
--- 판매자 스토어 insert 프로시저
-CREATE OR REPLACE PROCEDURE insert_sellerstore(
-    p_id IN VARCHAR2,
-    p_sellerName IN VARCHAR2
-)
-IS
-BEGIN
-    INSERT INTO sellerstore (id, sellerName)
-    VALUES (p_id, p_sellerName);
-    COMMIT;
-    DBMS_OUTPUT.PUT_LINE('판매자 스토어 입력 성공.');
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-        DBMS_OUTPUT.PUT_LINE('판매자 스토어 입력 실패 오류 : ' || SQLERRM);
-END;
-
-
+create sequence shoppingcart_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
 
 
 -- 상품 이미지 insert 프로시저
@@ -212,210 +139,169 @@ END;
 
 
 
--- 필수 약관 동의 6개 insert 문 . 
-CREATE OR REPLACE PROCEDURE ins_req_terms
-(
-p_ID member.id%TYPE
-)
-IS
-countid terms.name%TYPE;
-num1 NUMBER := 1;
-BEGIN 
-
-    SELECT COUNT(id) INTO countid
-    FROM terms
-    WHERE REGEXP_LIKE(name,'req');
-    
-    WHILE(num1 <= countid)
-    LOOP 
-    INSERT INTO agreement VALUES (agreement_seq.NEXTVAL,num1,p_ID,'Y',SYSDATE);
-    num1 := num1 + 1;
-    END LOOP;
---EXCEPTION 
-
-END;
-
-
--- 선택 약관 
-CREATE OR REPLACE PROCEDURE ins_sel_terms
-(
-p_name terms.name%TYPE,
-p_ID member.id%TYPE
-)
-IS
-num1 NUMBER ;
-BEGIN 
-    SELECT t.id into num1
-    FROM terms t
-    WHERE name = p_name; 
-    
-    INSERT INTO agreement VALUES (agreement_seq.NEXTVAL,num1,p_ID,'Y',SYSDATE);
-END;
-
-
-
-
 
 -- 회원 INSERT
 -- 더미데이터 
-EXEC ins_member('daetu01','daetu01@gmail.com',010-1111-1111,'원대만','1234','1978-05-29');
-EXEC ins_member('m_eum01','m_eum01@naver.com',010-4142-2134,'권맑음','1234','1998-09-12');
-EXEC ins_member('d_Chan01','d_Chan01@daum.com',010-1231-2685,'이동찬','1234','1995-11-20');
-EXEC ins_member('dyoung01','dyoung01@gmail.com',010-1245-5415,'이동영','1234','1990-01-02');
-EXEC ins_member('mggun01','mggun01@gmail.com',010-6733-3573,'강명건','1234','1993-05-20');
-EXEC ins_member('whyun01','whyun01@gmail.com',010-2351-6738,'박우현','1234','1992-10-01');
+INSERT INTO MEMBER VALUES('daetu01','daetu01@gmail.com','010-1111-1111','원대만','1234','1978-05-29',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('m_eum01','m_eum01@naver.com','010-4142-2134','권맑음','1234','1998-09-12',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('d_Chan01','d_Chan01@daum.com','010-1231-2685','이동찬','1234','1995-11-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('dyoung01','dyoung01@gmail.com','010-1245-5415','이동영','1234','1990-01-02',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('mggun01','mggun01@gmail.com','010-6733-3573','강명건','1234','1993-05-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('whyun01','whyun01@gmail.com','010-2351-6738','박우현','1234','1992-10-01',SYSDATE,SYSDATE,'0','0','member');
 
-EXEC ins_member('minziZzang','minziZzang@gmail.com',010-1461-1245,'김민지','1234','2003-02-10');
-EXEC ins_member('hive','hive@gmail.com',010-5242-6642,'오함마','1234','2006-03-20');
-EXEC ins_member('newjeans','newjeans@gmail.com',010-6645-2411,'박바지','1234','2007-01-20');
-EXEC ins_member('cap','cap@gmail.com',010-5124-5665,'하남자','1234','2002-06-06');
+INSERT INTO MEMBER VALUES('minziZzang','minziZzang@gmail.com','010-1461-1245','김민지','1234','2003-02-10',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('hive','hive@gmail.com','010-5242-6642','오함마','1234','2006-03-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('newjeans','newjeans@gmail.com','010-6645-2411','박바지','1234','2007-01-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('cap','cap@gmail.com','010-5124-5665','하남자','1234','2002-06-06',SYSDATE,SYSDATE,'0','0','member');
 
-
---SELECT * 
---FROM MEMBER;
 
 -------------------------------------------------------------------------------------------
 -- 판매자 페이지, 브랜드 페이지, 상품 카테고리 테이블
---SELECT *
---FROM category;
--- 카테고리 INSERT 프로시저 사용문
-EXEC insert_category('04040301', '뷰티', '헤어케어', '트리트먼트/케어', '헤어트리트먼트');
-EXEC insert_category('04040302', '뷰티', '헤어케어', '트리트먼트/케어', '헤어팩/마스크');
-EXEC insert_category('04040303', '뷰티', '헤어케어', '트리트먼트/케어', '헤어에센스/오일/세럼');
---1번상품
-EXEC insert_category('04040304', '뷰티', '헤어케어', '트리트먼트/케어', '헤어퍼퓸/헤어미스트');
+INSERT INTO category VALUES ('04040301', '뷰티', '헤어케어', '트리트먼트/케어', '헤어트리트먼트');
 
-EXEC insert_category('06010101', '생활/주방', '화장지/생리대', '화장지', '롤화장지');
---2번상품
-EXEC insert_category('06010102', '생활/주방', '화장지/생리대', '화장지', '고급화장지');
-EXEC insert_category('06010103', '생활/주방', '화장지/생리대', '화장지', '점포롤화장지');
-EXEC insert_category('06010104', '생활/주방', '화장지/생리대', '화장지', '페이퍼타올');
-EXEC insert_category('06010105', '생활/주방', '화장지/생리대', '화장지', '냅킨');
+INSERT INTO category VALUES ('04040302', '뷰티', '헤어케어', '트리트먼트/케어', '헤어팩/마스크');
 
-EXEC insert_category('01030601', '패션의류', '남성패션', '정장/수트', '솔리드정장세트');
---3번상품
-EXEC insert_category('01030602', '패션의류', '남성패션', '정장/수트', '패턴정장세트');
-EXEC insert_category('01030603', '패션의류', '남성패션', '정장/수트', '정장바지');
-EXEC insert_category('01030604', '패션의류', '남성패션', '정장/수트', '정장자켓');
+INSERT INTO category VALUES ('04040303', '뷰티', '헤어케어', '트리트먼트/케어', '헤어에센스/오일/세럼');
 
-EXEC insert_category('11040301', '신선식품', '수산물/건해산', '새우/게/랍스터', '새우');
---4번상품
-EXEC insert_category('11040302', '신선식품', '수산물/건해산', '새우/게/랍스터', '꽃게/대게/킹크랩');
-EXEC insert_category('11040303', '신선식품', '수산물/건해산', '새우/게/랍스터', '랍스터');
+INSERT INTO category VALUES ('04040304', '뷰티', '헤어케어', '트리트먼트/케어', '헤어퍼퓸/헤어미스트');
 
-EXEC insert_category('09100400', '디지털/렌탈', '휴대폰/스마트기기', '자급제폰/공기계', '없음');
---5번상품
+INSERT INTO category VALUES ('06010101', '생활/주방', '화장지/생리대', '화장지', '롤화장지');
 
-EXEC insert_category('11050501', '신선식품', '정육/계란류', '국내산소고기', '국거리');
-EXEC insert_category('11050502', '신선식품', '정육/계란류', '국내산소고기', '장조림/갈비/찜');
-EXEC insert_category('11050503', '신선식품', '정육/계란류', '국내산소고기', '구이/스테이크');
---6번상품
-EXEC insert_category('11050504', '신선식품', '정육/계란류', '국내산소고기', '불고기/잡채/샤브샤브용');
-EXEC insert_category('11050505', '신선식품', '정육/계란류', '국내산소고기', '다짐육/이유식');
-EXEC insert_category('11050506', '신선식품', '정육/계란류', '국내산소고기', '사골/곰탕');
+INSERT INTO category VALUES ('06010102', '생활/주방', '화장지/생리대', '화장지', '고급화장지');
 
-EXEC insert_category('12030101', '가공/건강식품', '김치/반찬/델리', '김치', '포기/배추김치');
-EXEC insert_category('12030102', '가공/건강식품', '김치/반찬/델리', '김치', '무/열무김치');
-EXEC insert_category('12030103', '가공/건강식품', '김치/반찬/델리', '김치', '물김치');
-EXEC insert_category('12030104', '가공/건강식품', '김치/반찬/델리', '김치', '갓김치/기타김치');
---7번상품
+INSERT INTO category VALUES ('06010103', '생활/주방', '화장지/생리대', '화장지', '점포롤화장지');
 
-EXEC insert_category('11010301', '신선식품', '과일', '바나나/파인애플', '바나나');
---8번상품
-EXEC insert_category('11010302', '신선식품', '과일', '바나나/파인애플', '파인애플');
+INSERT INTO category VALUES ('06010104', '생활/주방', '화장지/생리대', '화장지', '페이퍼타올');
 
-EXEC insert_category('11050701', '신선식품', '정육/계란류', '양념육/가공육', '소고기');
-EXEC insert_category('11050702', '신선식품', '정육/계란류', '양념육/가공육', '돼지고기');
---9번상품
-EXEC insert_category('11050703', '신선식품', '정육/계란류', '양념육/가공육', '닭고기');
-EXEC insert_category('11050704', '신선식품', '정육/계란류', '양념육/가공육', '오리고기');
-EXEC insert_category('11050705', '신선식품', '정육/계란류', '양념육/가공육', '양고기');
-EXEC insert_category('11050706', '신선식품', '정육/계란류', '양념육/가공육', '기타 가공육');
+INSERT INTO category VALUES ('06010105', '생활/주방', '화장지/생리대', '화장지', '냅킨');
 
-EXEC insert_category('11010501', '신선식품', '과일', '사과/배', '사과');
---10번상품
-EXEC insert_category('11010502', '신선식품', '과일', '사과/배', '배');
+INSERT INTO category VALUES ('01030601', '패션의류', '남성패션', '정장/수트', '솔리드정장세트');
 
+INSERT INTO category VALUES ('01030602', '패션의류', '남성패션', '정장/수트', '패턴정장세트');
 
+INSERT INTO category VALUES ('01030603', '패션의류', '남성패션', '정장/수트', '정장바지');
 
-EXEC insert_category('02030101', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '14/18k목걸이');
-EXEC insert_category('02030102', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '실버목걸이');
---11번상품
-EXEC insert_category('02030103', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '패션목걸이');
-EXEC insert_category('02030104', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '진주/원석목걸이');
-EXEC insert_category('02030105', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '다이아몬드목걸이');
-EXEC insert_category('02030106', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '랩그로운 다이아몬드목걸이');
-EXEC insert_category('02030107', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '팬던트');
+INSERT INTO category VALUES ('01030604', '패션의류', '남성패션', '정장/수트', '정장자켓');
 
-EXEC insert_category('07040201', '가구/인테리어', '침구/패브릭', '침구단품', '매트/침대커버');
-EXEC insert_category('07040202', '가구/인테리어', '침구/패브릭', '침구단품', '베개/베개커버');
---12번상품
-EXEC insert_category('07040203', '가구/인테리어', '침구/패브릭', '침구단품', '양모/솜이불');
-EXEC insert_category('07040204', '가구/인테리어', '침구/패브릭', '침구단품', '거위털/오리털이불');
-EXEC insert_category('07040205', '가구/인테리어', '침구/패브릭', '침구단품', '담요/패드');
-EXEC insert_category('07040206', '가구/인테리어', '침구/패브릭', '침구단품', '요/요커버');
-EXEC insert_category('07040207', '가구/인테리어', '침구/패브릭', '침구단품', '난방텐트');
+INSERT INTO category VALUES ('11040301', '신선식품', '수산물/건해산', '새우/게/랍스터', '새우');
 
-EXEC insert_category('09090101', '디지털/렌탈', '영상/음향가전', '스피커', '일반스피커');
-EXEC insert_category('09090102', '디지털/렌탈', '영상/음향가전', '스피커', '블루투스스피커');
---13번상품
-EXEC insert_category('09090103', '디지털/렌탈', '영상/음향가전', '스피커', 'AI스피커');
-EXEC insert_category('09090104', '디지털/렌탈', '영상/음향가전', '스피커', '채널스피커');
-EXEC insert_category('09090105', '디지털/렌탈', '영상/음향가전', '스피커', 'PC스피커');
-EXEC insert_category('09090106', '디지털/렌탈', '영상/음향가전', '스피커', '사운드바');
-EXEC insert_category('12090100', '가공/건강식품', '베이커리/잼', '식빵', '없음');
---14번상품
-EXEC insert_category('09010200', '디지털/렌탈', '컴퓨터/노트북/태블릿', '태블릿PC/패드', '없음');
---15번상품
+INSERT INTO category VALUES ('11040302', '신선식품', '수산물/건해산', '새우/게/랍스터', '꽃게/대게/킹크랩');
 
---더미상품
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
+INSERT INTO category VALUES ('11040303', '신선식품', '수산물/건해산', '새우/게/랍스터', '랍스터');
 
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
+INSERT INTO category VALUES ('09100400', '디지털/렌탈', '휴대폰/스마트기기', '자급제폰/공기계', '없음');
+
+INSERT INTO category VALUES ('11050501', '신선식품', '정육/계란류', '국내산소고기', '국거리');
+
+INSERT INTO category VALUES ('11050502', '신선식품', '정육/계란류', '국내산소고기', '장조림/갈비/찜');
+
+INSERT INTO category VALUES ('11050503', '신선식품', '정육/계란류', '국내산소고기', '구이/스테이크');
+
+INSERT INTO category VALUES ('11050504', '신선식품', '정육/계란류', '국내산소고기', '불고기/잡채/샤브샤브용');
+
+INSERT INTO category VALUES ('11050505', '신선식품', '정육/계란류', '국내산소고기', '다짐육/이유식');
+
+INSERT INTO category VALUES ('11050506', '신선식품', '정육/계란류', '국내산소고기', '사골/곰탕');
+
+INSERT INTO category VALUES ('12030101', '가공/건강식품', '김치/반찬/델리', '김치', '포기/배추김치');
+
+INSERT INTO category VALUES ('12030102', '가공/건강식품', '김치/반찬/델리', '김치', '무/열무김치');
+
+INSERT INTO category VALUES ('12030103', '가공/건강식품', '김치/반찬/델리', '김치', '물김치');
+
+INSERT INTO category VALUES ('12030104', '가공/건강식품', '김치/반찬/델리', '김치', '갓김치/기타김치');
+
+INSERT INTO category VALUES ('11010301', '신선식품', '과일', '바나나/파인애플', '바나나');
+
+INSERT INTO category VALUES ('11010302', '신선식품', '과일', '바나나/파인애플', '파인애플');
+
+INSERT INTO category VALUES ('11050701', '신선식품', '정육/계란류', '양념육/가공육', '소고기');
+
+INSERT INTO category VALUES ('11050702', '신선식품', '정육/계란류', '양념육/가공육', '돼지고기');
+
+INSERT INTO category VALUES ('11050703', '신선식품', '정육/계란류', '양념육/가공육', '닭고기');
+
+INSERT INTO category VALUES ('11050704', '신선식품', '정육/계란류', '양념육/가공육', '오리고기');
+
+INSERT INTO category VALUES ('11050705', '신선식품', '정육/계란류', '양념육/가공육', '양고기');
+
+INSERT INTO category VALUES ('11050706', '신선식품', '정육/계란류', '양념육/가공육', '기타 가공육');
+
+INSERT INTO category VALUES ('11010501', '신선식품', '과일', '사과/배', '사과');
+
+INSERT INTO category VALUES ('11010502', '신선식품', '과일', '사과/배', '배');
+
+INSERT INTO category VALUES ('02030101', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '14/18k목걸이');
+
+INSERT INTO category VALUES ('02030102', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '실버목걸이');
+
+INSERT INTO category VALUES ('02030103', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '패션목걸이');
+
+INSERT INTO category VALUES ('02030104', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '진주/원석목걸이');
+
+INSERT INTO category VALUES ('02030105', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '다이아몬드목걸이');
+
+INSERT INTO category VALUES ('02030106', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '랩그로운 다이아몬드목걸이');
+
+INSERT INTO category VALUES ('02030107', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '팬던트');
+
+INSERT INTO category VALUES ('07040201', '가구/인테리어', '침구/패브릭', '침구단품', '매트/침대커버');
+
+INSERT INTO category VALUES ('07040202', '가구/인테리어', '침구/패브릭', '침구단품', '베개/베개커버');
+
+INSERT INTO category VALUES ('07040203', '가구/인테리어', '침구/패브릭', '침구단품', '양모/솜이불');
+
+INSERT INTO category VALUES ('07040204', '가구/인테리어', '침구/패브릭', '침구단품', '거위털/오리털이불');
+
+INSERT INTO category VALUES ('07040205', '가구/인테리어', '침구/패브릭', '침구단품', '담요/패드');
+
+INSERT INTO category VALUES ('07040206', '가구/인테리어', '침구/패브릭', '침구단품', '요/요커버');
+
+INSERT INTO category VALUES ('07040207', '가구/인테리어', '침구/패브릭', '침구단품', '난방텐트');
+
+INSERT INTO category VALUES ('09090101', '디지털/렌탈', '영상/음향가전', '스피커', '일반스피커');
+
+INSERT INTO category VALUES ('09090102', '디지털/렌탈', '영상/음향가전', '스피커', '블루투스스피커');
+
+INSERT INTO category VALUES ('09090103', '디지털/렌탈', '영상/음향가전', '스피커', 'AI스피커');
+
+INSERT INTO category VALUES ('09090104', '디지털/렌탈', '영상/음향가전', '스피커', '채널스피커');
+
+INSERT INTO category VALUES ('09090105', '디지털/렌탈', '영상/음향가전', '스피커', 'PC스피커');
+
+INSERT INTO category VALUES ('09090106', '디지털/렌탈', '영상/음향가전', '스피커', '사운드바');
+
+INSERT INTO category VALUES ('12090100', '가공/건강식품', '베이커리/잼', '식빵', '없음');
+
+INSERT INTO category VALUES ('09010200', '디지털/렌탈', '컴퓨터/노트북/태블릿', '태블릿PC/패드', '없음');
 
 
--- 브랜드 insert 프로시저 실행
-EXEC insert_brand('brand001', null, '케라스타즈');
-EXEC insert_brand('brand002', 'https://sui.ssgcdn.com/cmpt/banner/201708/2017081013263780463968040496_758.jpg', '노브랜드');
-EXEC insert_brand('brand003', null, '지이크');
-EXEC insert_brand('brand004', null, '새우파는브랜드(더미)');
-EXEC insert_brand('brand005', null, '삼성공식스토어');
-EXEC insert_brand('brand006', null, '한우비');
-EXEC insert_brand('brand007', null, '나래식품');
-EXEC insert_brand('brand008', null, '치키타(바나나/더미)');
-EXEC insert_brand('brand009', null, '농협');
-EXEC insert_brand('brand010', null, '콜드플레임');
-EXEC insert_brand('brand011', null, '템퍼');
-EXEC insert_brand('brand012', null, 'JBL');
-EXEC insert_brand('brand013', null, '밀도');
+
+INSERT INTO brand VALUES ('brand001', NULL, '케라스타즈');
+
+INSERT INTO brand VALUES ('brand002', 'https://sui.ssgcdn.com/cmpt/banner/201708/2017081013263780463968040496_758.jpg', '노브랜드');
+
+INSERT INTO brand VALUES ('brand003', NULL, '지이크');
+
+INSERT INTO brand VALUES ('brand004', NULL, '새우파는브랜드(더미)');
+
+INSERT INTO brand VALUES ('brand005', NULL, '삼성공식스토어');
+
+INSERT INTO brand VALUES ('brand006', NULL, '한우비');
+
+INSERT INTO brand VALUES ('brand007', NULL, '나래식품');
+
+INSERT INTO brand VALUES ('brand008', NULL, '치키타(바나나/더미)');
+
+INSERT INTO brand VALUES ('brand009', NULL, '농협');
+
+INSERT INTO brand VALUES ('brand010', NULL, '콜드플레임');
+
+INSERT INTO brand VALUES ('brand011', NULL, '템퍼');
+
+INSERT INTO brand VALUES ('brand012', NULL, 'JBL');
+
+INSERT INTO brand VALUES ('brand013', NULL, '밀도');
 --더미브랜드
 INSERT INTO brand VALUES ('brand014',null,'더미전자');
 INSERT INTO brand VALUES ('brand015',null,'더미건강');
@@ -426,19 +312,27 @@ INSERT INTO brand VALUES ('brand019',null,'더미장난감');
 INSERT INTO brand VALUES ('brand020',null,'더미식품');
 INSERT INTO brand VALUES ('brand021',null,'더미브랜드');
 INSERT INTO brand VALUES ('brand022',null,'더미더미덤');
--- 판매자 스토어 insert 프로시저 실행
-EXEC insert_sellerstore('sellStore001','시코르');
-EXEC insert_sellerstore('sellStore002','이마트');
-EXEC insert_sellerstore('sellStore003','지이크');
-EXEC insert_sellerstore('sellStore004','콜드플레임');
-EXEC insert_sellerstore('sellStore005','신세계백화점');
-EXEC insert_sellerstore('sellStore006','한우비');
-EXEC insert_sellerstore('sellStore007','나래식품');
-EXEC insert_sellerstore('sellStore009','템퍼');
-EXEC insert_sellerstore('sellStore010','JBL');
+
+
+INSERT INTO sellerStore VALUES ('sellStore001', '시코르');
+
+INSERT INTO sellerStore VALUES ('sellStore002', '이마트');
+
+INSERT INTO sellerStore VALUES ('sellStore003', '지이크');
+
+INSERT INTO sellerStore VALUES ('sellStore004', '콜드플레임');
+
+INSERT INTO sellerStore VALUES ('sellStore005', '신세계백화점');
+
+INSERT INTO sellerStore VALUES ('sellStore006', '한우비');
+
+INSERT INTO sellerStore VALUES ('sellStore007', '나래식품');
+
+INSERT INTO sellerStore VALUES ('sellStore009', '템퍼');
+
+INSERT INTO sellerStore VALUES ('sellStore010', 'JBL');
 --더미판매자스토어
 INSERT INTO sellerStore VALUES ('sellStore011','더미용판매처');
-
 
 ----------------------------------------------------------------------------------
 -- 배송옵션 테이블 생성
@@ -542,8 +436,7 @@ VALUES (2097001432075, '12090100', 0, '10', 'sellStore002', 'brand013', '[밀도
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
 VALUES (1000067576484, '09010200', 0 , '10', 'sellStore005', 'brand005', '갤럭시탭 Trade-in OPEN', '상품번호 : 1000067576484', '2024-04-10');
 
-select *
-FROM productoption;
+
 
 INSERT INTO product VALUES (0000000000001, '04040303', null, 1, 'sellStore001', 'brand014', '아이더미X18', null, null);
 INSERT INTO product VALUES (0000000000002, '04040303', null, 1, 'sellStore001', 'brand015', '더마탄이가튼튼', null, null);
@@ -941,8 +834,14 @@ INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
 -- 배송번호, 주문번호, 배송지번호, 배송요청사항, 배송상태, 택배 배송 요청사항, 수령위치, 현관출입방법, 배송 종료일
 //SELECT * FROM SHIPPINGPLACEINFORMATION;
 
+<<<<<<< HEAD
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
 ( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X');
+=======
+
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'daetu01', 'daetu', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X');
+>>>>>>> a1a4c96603f7be07098a1983e484d171044da867
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
 ( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '서울특별시 중구 세종대로 110', '서울특별시 중구 태평로1가 31', '서울특별시청', '010-1234-5678', '04524', 'X');
@@ -988,6 +887,7 @@ INSERT INTO SHIPPINGPLACEINFORMATION VALUES
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
 ( SEQSHIPPLACEINFO.NEXTVAL, 'hive', '하이브', '하이브', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-8888-9999', '04389', '기본배송지');
+
 
 
 
@@ -1208,19 +1108,23 @@ INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10', '/SSGSSAK/mem
 INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_email', '/SSGSSAK/member/terms/ssgInfoRcvAgree_email','N');
 INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_sms', '/SSGSSAK/member/terms/ssgInfoRcvAgree_sms','N');
 
+-- divisionFolder 
+INSERT INTO divisionfolder VALUES (division_seq.NEXTVAL, 'daetu01','모아보기',SYSDATE);
+
 
 -- interestgoods insert
 
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000026532717,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000544937242,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000587702102,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001577943,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000398650979,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000014118201,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001308233,SYSDATE,'모아보기');
-INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097000257655,SYSDATE,'모아보기');
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000026532717,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000544937242,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000587702102,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001577943,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000398650979,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',1000014118201,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097001308233,SYSDATE,1);
+INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097000257655,SYSDATE,1);
 
 
 COMMIT;
 COMMIT;
+
 
