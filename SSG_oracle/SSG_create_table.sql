@@ -56,7 +56,8 @@ drop sequence agreement_seq;
 drop sequence terms_seq;
 drop sequence interestGoods_seq;
 drop sequence division_seq;
-
+drop sequence shoppingcart_seq;
+drop sequence applicant_seq;
 
 CREATE TABLE payrecord (
     id number NOT NULL,
@@ -177,12 +178,10 @@ CREATE TABLE review (
     reviewContent VARCHAR2(3000) NULL,
     reviewDate VARCHAR2(100) NULL,
     reviewType VARCHAR2(100) NULL,
-    productType VARCHAR2(100) NULL,
     grade NUMBER(3,2) NOT NULL,
     q1 VARCHAR2(100) NULL,
     q2 VARCHAR2(100) NULL,
-    q3 VARCHAR2(100) NULL,
-    q4 VARCHAR2(100) NULL
+    q3 VARCHAR2(100) NULL
 );
 
 CREATE TABLE category (
@@ -255,7 +254,7 @@ CREATE TABLE quitMember (
 CREATE TABLE reviewImg (
     id NUMBER NOT NULL,
     reviewId NUMBER NOT NULL,
-    reviewImgUrl VARCHAR2(100) NULL
+    reviewImgUrl VARCHAR2(1000) NULL
 );
 
 CREATE TABLE qna (

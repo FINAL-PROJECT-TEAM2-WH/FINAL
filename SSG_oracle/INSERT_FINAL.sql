@@ -101,6 +101,13 @@ increment by 1
 nocache 
 nocycle;
 
+create sequence shoppingcart_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
+
+
 
 -- 카테고리 INSERT 프로시저
 CREATE OR REPLACE PROCEDURE insert_category(
@@ -193,122 +200,6 @@ END;
 -- 이미지 입력받는곳 경로 결정하고 추가하는걸로..
 
 
----- 배송정보 테이블 insert 프로시저
---CREATE OR REPLACE PROCEDURE up_insert_shipinfo
---(
---    porderid payrecord.id%TYPE,
---    pmemid payrecord.memid%TYPE,
---    pshippingmsg shippinginformation.shippingmsg%TYPE,
---    pshippingstate shippinginformation.shippingstate%TYPE,
---    pshippingrequest  shippinginformation.shippingrequest%TYPE,
---    preceiveposition shippinginformation.receiveposition%TYPE,
---    pentrance shippinginformation.entrance%TYPE,
---    pshippingenddate shippinginformation.shippingenddate%TYPE
---)
---IS
---    vplaceid NUMBER;
---    vplacecount NUMBER;
---    vmemcount NUMBER;
---    vmemid VARCHAR2(300);
---BEGIN
---    SELECT COUNT(id), id
---        INTO vmemcount, vmemid
---    FROM member
---    GROUP BY id
---    HAVING id = pmemid;
---    
---    SELECT id
---        INTO vplaceid 
---    FROM shippingplaceinformation
---    WHERE memid = vmemid AND defaultshipping IN('기본배송지' ,'이번만배송지');
---    
---    SELECT COUNT(id)
---        INTO vplacecount 
---    FROM shippingplaceinformation
---    WHERE id = vplaceid;
---    
---    IF vmemcount < 1 THEN
---    RAISE_APPLICATION_ERROR(-20001, '없는 회원번호입니다.');
---    ELSIF vplacecount < 1 THEN
---    RAISE_APPLICATION_ERROR(-20002, '없는 주소번호입니다.');
---    ELSE 
---    INSERT INTO shippinginformation ( id, orderid, shippingplaceid, shippingmsg, shippingstate, shippingrequest, receiveposition, entrance, shippingenddate  )
---    VALUES ( seq_shippingid.NEXTVAL , porderid, vplaceid, pshippingmsg, pshippingstate, pshippingrequest, preceiveposition, pentrance, pshippingenddate );
---    COMMIT;
---    END IF;
---    
-----EXCEPTION
---END;
-
-
--- 배송지 정보 테이블 INSERT 프로시저
-CREATE OR REPLACE PROCEDURE ps_insert_shipPlaceInfo
-(
-    pmemid shippingplaceinformation.memid%TYPE,
-    paddrnick shippingplaceinformation.addressnick%TYPE,
-    preceivemem shippingplaceinformation.receivemem%TYPE,
-    proadAddress shippingplaceinformation.roadAddress%TYPE,
-	pjibunAddress shippingplaceinformation.jibunAddress%TYPE,
-	pdetailAddress shippingplaceinformation.detailAddress%TYPE,
-    ptel shippingplaceinformation.tel%TYPE,
-    ppostnum shippingplaceinformation.postnum%TYPE,
-    pdefaultship shippingplaceinformation.defaultshipping%TYPE
-)
-IS
-    vmemid VARCHAR2(300);
-    vcount NUMBER;
-BEGIN
-    SELECT COUNT(id) 
-        INTO vcount
-    FROM member
-    WHERE id = pmemid;
-
-    SELECT id 
-        INTO vmemid
-    FROM member
-    WHERE id = pmemid;
-    
-    IF vcount < 1 THEN
-    RAISE_APPLICATION_ERROR(-20001, '없는 회원번호입니다.');
-    ELSE 
-    INSERT INTO shippingplaceinformation ( id, memid, addressnick, receivemem, roadAddress, jibunAddress, detailAddress, tel, postnum, defaultshipping)
-    VALUES ( seqshipplaceinfo.NEXTVAL , vmemid, paddrnick, preceivemem, proadAddress, pjibunAddress, pdetailAddress, ptel, ppostnum, pdefaultship );
-    COMMIT;
-    END IF;
---EXCEPTION
-END;
-
-
--- 검색 테이블 인서트 프로시저
-CREATE OR REPLACE PROCEDURE up_insert_search
-(   
-    pmemid search.memid%TYPE,
-    psearchword search.searchword%TYPE
-)
-IS
-    vmemid VARCHAR2(300);
-    vcount NUMBER;
-BEGIN
-    SELECT COUNT(id) 
-        INTO vcount
-    FROM member
-    WHERE id = pmemid;
-    
-    SELECT id 
-        INTO vmemid
-    FROM member
-    WHERE id = pmemid;
-    
-    IF vcount < 1 THEN
-    RAISE_APPLICATION_ERROR(-20001, '없는 회원번호입니다.');
-    ELSE 
-    INSERT INTO search ( id, memid, searchword, searchhour )
-    VALUES ( seq_search.NEXTVAL , vmemid, psearchword, SYSDATE );
-    COMMIT;
-    END IF;
-
---EXCEPTION
-END;
 
 
 -- 회원 INSERT
@@ -988,119 +879,60 @@ INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
 
     
     
-INSERT INTO ShoppingCart  VALUES
-    (1, 'minziZzang', sysdate , 47 , 1);
-
-INSERT INTO ShoppingCart  VALUES
-    (2, 'hive', sysdate , 47 , 1);
-
-INSERT INTO ShoppingCart  VALUES
-    (3, 'hive', sysdate , 47 , 1);
-
-INSERT INTO ShoppingCart  VALUES
-    (4, 'daetu01', sysdate , 47 , 1);
-
-INSERT INTO ShoppingCart  VALUES
-    (5, 'hive', sysdate , 47 , 1);
-
-INSERT INTO ShoppingCart VALUES
-    (6, 'minziZzang', sysdate , 47 , 1);
-
-INSERT INTO ShoppingCart VALUES
-    (7, 'hive', sysdate , 47 , 1);
-
-INSERT INTO ShoppingCart  VALUES
-    (8, 'daetu01', sysdate , 47 , 1);
-
-INSERT INTO ShoppingCart  VALUES
-    (9, 'hive', sysdate , 47 , 1);
-
-INSERT INTO ShoppingCart  VALUES
-    (10, 'daetu01', sysdate , 47 , 1);
-
 
 
 
 -----------------------------------------------------------------------------
 -- 배송 정보, 배송지 정보, 검색 테이블
 -- 배송번호, 주문번호, 배송지번호, 배송요청사항, 배송상태, 택배 배송 요청사항, 수령위치, 현관출입방법, 배송 종료일
--- 배송에 따라 다르게 구분?? -> SSG1 , SSGDAWN1, COMMON1 
--- 배송 원하는 시간 + 날짜도 속성으로 들어가야한다. 회원도 넣을지 말지??
--- 배송 상태는 일단 디폴트값으로 배송전을 넣자.
--- 공동 현관 출입방법은 무조건 문앞에 놓아주세요를 선택했을때만 넣을 수 있다.
--- 멤버 아이디 통일시켜야 할듯
--- ADDRESS 없애고 도로명주소, 지번주소, 상세주소 추가
---    pmemid shippingplaceinformation.memid%TYPE,
---    paddrnick shippingplaceinformation.addressnick%TYPE,
---    preceivemem shippingplaceinformation.receivemem%TYPE,
---    proadAddress shippingplaceinformation.roadAddress%TYPE,
---	  pjibunAddress shippingplaceinformation.jibunAddress%TYPE,
---	  pdetailAddress shippingplaceinformation.detailAddress%TYPE,
---    ptel shippingplaceinformation.tel%TYPE,
---    ppostnum shippingplaceinformation.postnum%TYPE,
---    pdefaultship shippingplaceinformation.defaultshipping%TYPE
 
-EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'daetu01', 'daetu', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X');
 
--- 지번 : 서울특별시 중구 태평로1가 31 서울특별시청
--- 상세주소 : 서울특별시청
-EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '서울특별시 중구 세종대로 110', '서울특별시 중구 태평로1가 31', '서울특별시청',  '010-1234-5678', '04524', 'X' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'daetu01', 'daetu', '서울특별시 중구 세종대로 110', '서울특별시 중구 태평로1가 31', '서울특별시청', '010-1234-5678', '04524', 'X');
 
--- 지번 : 경기도 수원시 장안구 조원동 10 아토피센터 2층
--- 상세주소 : 아토피센터 2층
-EXECUTE ps_insert_shipplaceinfo( 'daetu01', 'daetu', 'daetu', '경기도 수원시 장안구 수일로233번길 144', '경기도 수원시 장안구 조원동 10 아토피센터 2층', '아토피센터 2층', '010-1234-5678', '05343', '이번만배송지' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'daetu01', 'daetu', '경기도 수원시 장안구 수일로233번길 144', '경기도 수원시 장안구 조원동 10 아토피센터 2층', '아토피센터 2층', '010-1234-5678', '05343', '이번만배송지');
 
--- 지번 : 서울특별시 강남구 역삼동 735 8층 쌍용교육센터
--- 상세주소 : 8층 쌍용교육센터
-EXECUTE ps_insert_shipplaceinfo( 'm_eum01', '맑음학원', '맑음', '서울특별시 강남구 테헤란로 132', '서울특별시 강남구 역삼동 735 8층 쌍용교육센터', '8층 쌍용교육센터', '010-1010-2020', '06235', '기본배송지' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'm_eum01', '맑음학원', '맑음', '서울특별시 강남구 테헤란로 132', '서울특별시 강남구 역삼동 735 8층 쌍용교육센터', '8층 쌍용교육센터', '010-1010-2020', '06235', '기본배송지');
 
--- 지번 : 강원특별자치도 평창군 평창읍 약수리 15-4 약수 클산종합가구
--- 상세주소 : 클산종합가구
-EXECUTE ps_insert_shipplaceinfo( 'm_eum01', '맑음', '맑음', '강원특별자치도 평창군 평창읍 평창강로 1236-4', '강원특별자치도 평창군 평창읍 약수리 15-4 약수 클산종합가구', '클산종합가구',  '010-1010-2020', '25373', 'X' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'm_eum01', '맑음', '맑음', '강원특별자치도 평창군 평창읍 평창강로 1236-4', '강원특별자치도 평창군 평창읍 약수리 15-4 약수 클산종합가구', '클산종합가구', '010-1010-2020', '25373', 'X');
 
--- 지번 : 경기도 화성시 신동 산179 호반써밋 동탄 101동 101호
--- 상세주소 : 101동 101호 (신동, 호반써밋 동탄)
-EXECUTE ps_insert_shipplaceinfo( 'd_Chan01', '동찬집', '동찬', '경기 화성시 동탄신리천로4길 48', '경기도 화성시 신동 산179 호반써밋 동탄 101동 101호', '101동 101호 (신동, 호반써밋 동탄)', '010-1111-2222', '18495', '기본배송지' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'd_Chan01', '동찬집', '동찬', '경기 화성시 동탄신리천로4길 48', '경기도 화성시 신동 산179 호반써밋 동탄 101동 101호', '101동 101호 (신동, 호반써밋 동탄)', '010-1111-2222', '18495', '기본배송지');
 
--- 지번 : 서울특별시 강남구 역삼동 825 미진프라자 스타벅스
--- 상세주소 : 스타벅스
-EXECUTE ps_insert_shipplaceinfo( 'd_Chan01', '카페', '카페', '서울특별시 강남구 강남대로 390', '서울특별시 강남구 역삼동 825 미진프라자 스타벅스', '스타벅스', '010-1111-2222', '06232', 'X' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'd_Chan01', '카페', '카페', '서울특별시 강남구 강남대로 390', '서울특별시 강남구 역삼동 825 미진프라자 스타벅스', '스타벅스', '010-1111-2222', '06232', 'X');
 
--- 지번 : 서울특별시 강남구 역삼동 645-20 역삼생화 308호
--- 상세주소 : 역삼생활 308호
-EXECUTE ps_insert_shipplaceinfo( 'dyoung01', '동영집', '동스', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20 역삼생화 308호', '역삼생활 308호', '010-3333-4444', '06131', '기본배송지' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'dyoung01', '동영집', '동스', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20 역삼생화 308호', '역삼생활 308호', '010-3333-4444', '06131', '기본배송지');
 
--- 지번 : 서울특별시 종로구 관철동 43-15 숙달돼지
--- 상세주소 : 숙달돼지
-EXECUTE ps_insert_shipplaceinfo( 'dyoung01', '동스', '동스', '서울 종로구 종로8길 15', '서울특별시 종로구 관철동 43-15 숙달돼지', '숙달돼지', '010-3333-4444', '03189', 'X' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'dyoung01', '동스', '동스', '서울 종로구 종로8길 15', '서울특별시 종로구 관철동 43-15 숙달돼지', '숙달돼지', '010-3333-4444', '03189', 'X');
 
--- 지번 : 경기도 성남시 분당구 정자동 178-4 네이버 1784 1층
--- 상세주소 : 네이버 1784 1층
-EXECUTE ps_insert_shipplaceinfo( 'mggun01', '직장', '명스', '경기도 성남시 분당구 정자일로 95', '경기도 성남시 분당구 정자동 178-4 네이버 1784 1층', '네이버 1784 1층', '010-4444-5555', '13561', '기본배송지' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'mggun01', '직장', '명스', '경기도 성남시 분당구 정자일로 95', '경기도 성남시 분당구 정자동 178-4 네이버 1784 1층', '네이버 1784 1층', '010-4444-5555', '13561', '기본배송지');
 
--- 지번 : 부산광역시 수영구 남천동 148-4 비치아파트 101동 101호
--- 상세주소 : 비치아파트 101동 101호
-EXECUTE ps_insert_shipplaceinfo( 'mggun01', '명건', '명건', '부산광역시 수영구 광안해변로 100', '부산광역시 수영구 남천동 148-4 비치아파트 101동 101호', '비치아파트 101동 101호', '010-4444-5555', '48305', 'X' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'mggun01', '명건', '명건', '부산광역시 수영구 광안해변로 100', '부산광역시 수영구 남천동 148-4 비치아파트 101동 101호', '비치아파트 101동 101호', '010-4444-5555', '48305', 'X');
 
--- 지번 : 서울특별시 강남구 삼성동 16-1 강남구청 1층
--- 상세주소 :  1층 (삼성동)
-EXECUTE ps_insert_shipplaceinfo( 'mggun01', '강남구청', '명건', '서울특별시 강남구 학동로 426', '서울특별시 강남구 삼성동 16-1 강남구청 1층', '1층 (삼성동)', '010-4444-5555', '06090', 'X' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'mggun01', '강남구청', '명건', '서울특별시 강남구 학동로 426', '서울특별시 강남구 삼성동 16-1 강남구청 1층', '1층 (삼성동)', '010-4444-5555', '06090', 'X');
 
--- 지번 : 서울특별시 노원구 상계동 701-1 노원구청 2층
--- 상세주소 : 노원구청 2층
-EXECUTE ps_insert_shipplaceinfo( 'whyun01', '우현', '우현', '서울특별시 노원구 노해로 437', '서울특별시 노원구 상계동 701-1 노원구청 2층', '노원구청 2층', '010-5555-6666', '01689', 'X' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'whyun01', '우현', '우현', '서울특별시 노원구 노해로 437', '서울특별시 노원구 상계동 701-1 노원구청 2층', '노원구청 2층', '010-5555-6666', '01689', 'X');
 
--- 지번 : 서울특별시 노원구 공릉동 744 건영장미아파트 101동 101호
--- 상세주소 : 101동 101호 (공릉동, 건영장미아파트)
-EXECUTE ps_insert_shipplaceinfo( 'whyun01', '우현집', '우현', '서울특별시 노원구 공릉로51길 14-17)', '서울특별시 노원구 공릉동 744 건영장미아파트 101동 101호', '101동 101호 (공릉동, 건영장미아파트)', '010-6666-7777', '01833', '기본배송지' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'whyun01', '우현집', '우현', '서울특별시 노원구 공릉로51길 14-17)', '서울특별시 노원구 공릉동 744 건영장미아파트 101동 101호', '101동 101호 (공릉동, 건영장미아파트)', '010-6666-7777', '01833', '기본배송지');
 
--- 지번 : 서울특별시 용산구 한강로3가 65-9
--- 상세주소 : 하이브
-EXECUTE ps_insert_shipplaceinfo( 'minziZzang', '하이브', '민지', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-9999-9999', '04389', '기본배송지' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'minziZzang', '하이브', '민지', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-9999-9999', '04389', '기본배송지');
 
--- 지번 : 서울특별시 용산구 한강로3가 65-9
--- 상세주소 : 하이브
-EXECUTE ps_insert_shipplaceinfo( 'hive', '하이브', '하이브', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-8888-9999', '04389', '기본배송지' );
+INSERT INTO shippingplaceinfomation VALUES
+( seqshippingplaceinfo.NEXTVAL, 'hive', '하이브', '하이브', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-8888-9999', '04389', '기본배송지');
 
 
 -- 배송정보 INSERT 프로시저 실행
@@ -1116,133 +948,86 @@ EXECUTE ps_insert_shipplaceinfo( 'hive', '하이브', '하이브', '서울특별
 --EXECUTE up_insert_shipinfo ( 9, 'whyun01',  '잘전달해주세요~', '배송전', '부드러운 소포에 담아주세요.', '3층 택배보관함 보관해주세요',  null , null);
 --EXECUTE up_insert_shipinfo ( 10, 'minziZzang',  '잘전달해주세요~', '배송전', '배송 잘 부탁드립니다.', '문앞에 놓아주세요',  '공동현관 출입번호-(#3300)' , null);
 
---    porderid payrecord.id%TYPE,
---    pmemid payrecord.memid%TYPE,
---    pshippingmsg shippinginformation.shippingmsg%TYPE,
---    pshippingstate shippinginformation.shippingstate%TYPE,
---    pshippingrequest  shippinginformation.shippingrequest%TYPE,
---    preceiveposition shippinginformation.receiveposition%TYPE,
---    pentrance shippinginformation.entrance%TYPE,
---    pshippingenddate shippinginformation.shippingenddate%TYPE
--- 배송지 테이블 INSERT 프로시저 실행
--- 지번 : 서울특별시 강남구 역삼동 645-20 
--- 상세주소 : 역삼생활 307호
 
 
 --SELECT *
 --FROM shippingplaceinformation;
 
 -- 검색테이블 INSERT 프로시저 실행
-EXECUTE up_insert_search ( 'daetu01', '키보드');
-EXECUTE up_insert_search ( 'daetu01', '노트북');
-EXECUTE up_insert_search ( 'daetu01', '김치');
-EXECUTE up_insert_search ( 'daetu01', '참깨스틱');
-EXECUTE up_insert_search ( 'm_eum01', '계란');
-EXECUTE up_insert_search ( 'm_eum01', '대파');
-EXECUTE up_insert_search ( 'd_Chan01', '간장');
-EXECUTE up_insert_search ( 'd_Chan01', '데스크톱');
-EXECUTE up_insert_search ( 'dyoung01', '삼다수');
-EXECUTE up_insert_search ( 'dyoung01', '오레오오즈');
-EXECUTE up_insert_search ( 'mggun01', '키보드');
-EXECUTE up_insert_search ( 'mggun01', '로션');
-EXECUTE up_insert_search ( 'whyun01', '감자');
-EXECUTE up_insert_search ( 'whyun01', '참치');
-EXECUTE up_insert_search ( 'whyun01', '마우스');
-EXECUTE up_insert_search ( 'minziZzang', '뉴진스앨범');
-EXECUTE up_insert_search ( 'hive', '민희진모자');
-EXECUTE up_insert_search ( 'hive', '방탄소년단앨범');
-EXECUTE up_insert_search ( 'daetu01', '키보드');
-EXECUTE up_insert_search ( 'daetu01', '노트북');
-EXECUTE up_insert_search ( 'daetu01', '김치');
-EXECUTE up_insert_search ( 'daetu01', '참깨스틱');
-EXECUTE up_insert_search ( 'm_eum01', '계란');
-EXECUTE up_insert_search ( 'm_eum01', '대파');
-EXECUTE up_insert_search ( 'd_Chan01', '간장');
-EXECUTE up_insert_search ( 'd_Chan01', '데스크톱');
-EXECUTE up_insert_search ( 'dyoung01', '삼다수');
-EXECUTE up_insert_search ( 'dyoung01', '오레오오즈');
-EXECUTE up_insert_search ( 'mggun01', '키보드');
-EXECUTE up_insert_search ( 'mggun01', '로션');
-EXECUTE up_insert_search ( 'whyun01', '감자');
-EXECUTE up_insert_search ( 'whyun01', '참치');
-EXECUTE up_insert_search ( 'whyun01', '마우스');
-EXECUTE up_insert_search ( 'minziZzang', '뉴진스앨범');
-EXECUTE up_insert_search ( 'hive', '민희진모자');
-EXECUTE up_insert_search ( 'hive', '방탄소년단앨범');
-EXECUTE up_insert_search ( 'daetu01', '키보드');
-EXECUTE up_insert_search ( 'daetu01', '노트북');
-EXECUTE up_insert_search ( 'daetu01', '김치');
-EXECUTE up_insert_search ( 'daetu01', '참깨스틱');
-EXECUTE up_insert_search ( 'm_eum01', '계란');
-EXECUTE up_insert_search ( 'm_eum01', '대파');
-EXECUTE up_insert_search ( 'd_Chan01', '간장');
-EXECUTE up_insert_search ( 'd_Chan01', '데스크톱');
-EXECUTE up_insert_search ( 'dyoung01', '삼다수');
-EXECUTE up_insert_search ( 'dyoung01', '오레오오즈');
-EXECUTE up_insert_search ( 'mggun01', '키보드');
-EXECUTE up_insert_search ( 'mggun01', '로션');
-EXECUTE up_insert_search ( 'whyun01', '감자');
-EXECUTE up_insert_search ( 'whyun01', '참치');
-EXECUTE up_insert_search ( 'whyun01', '마우스');
-EXECUTE up_insert_search ( 'minziZzang', '뉴진스앨범');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
-EXECUTE up_insert_search ( 'hive', '컴퓨터');
-EXECUTE up_insert_search ( 'hive', '키보드');
-EXECUTE up_insert_search ( 'whyun01', '호박');
-EXECUTE up_insert_search ( 'whyun01', '대파');
-EXECUTE up_insert_search ( 'whyun01', '스팸');
-EXECUTE up_insert_search ( 'minziZzang', '고구마');
-EXECUTE up_insert_search ( 'hive', '명란');
-EXECUTE up_insert_search ( 'hive', '핫도그');
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '노트북', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '김치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '참깨스틱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '계란', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '간장', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '데스크톱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '삼다수', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '오레오오즈', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '로션', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '감자', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '참치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '마우스', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '뉴진스앨범', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '민희진모자', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '방탄소년단앨범', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '노트북', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '김치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '참깨스틱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '계란', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '간장', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '데스크톱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '삼다수', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '오레오오즈', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '로션', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '감자', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '참치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '마우스', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '뉴진스앨범', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '민희진모자', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '방탄소년단앨범', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '노트북', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '김치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '참깨스틱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '계란', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '간장', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '데스크톱', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '삼다수', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '오레오오즈', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '로션', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '감자', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '참치', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '마우스', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '뉴진스앨범', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '컴퓨터', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '호박', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '스팸', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '고구마', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '명란', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '핫도그', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '컴퓨터', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '호박', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '스팸', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '고구마', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '명란', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '핫도그', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '컴퓨터', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '키보드', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '호박', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '대파', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '스팸', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '고구마', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
 
 
 
