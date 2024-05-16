@@ -160,13 +160,31 @@ INSERT INTO MEMBER VALUES('cap','cap@gmail.com','010-5124-5665','하남자','123
 
 -------------------------------------------------------------------------------------------
 -- 판매자 페이지, 브랜드 페이지, 상품 카테고리 테이블
+INSERT INTO category VALUES ('04010000', '뷰티', '메이크업', '', '');
+INSERT INTO category VALUES ('04020000', '뷰티', '스킨케어', '', '');
+INSERT INTO category VALUES ('04030000', '뷰티', '향수', '', '');
+INSERT INTO category VALUES ('04040000', '뷰티', '헤어케어', '', '');
+INSERT INTO category VALUES ('04040100', '뷰티', '헤어케어', '샴푸', '');
+INSERT INTO category VALUES ('04040200', '뷰티', '헤어케어', '린스/컨디셔너', '');
+INSERT INTO category VALUES ('04040300', '뷰티', '헤어케어', '트리트먼트/케어', '');
 INSERT INTO category VALUES ('04040301', '뷰티', '헤어케어', '트리트먼트/케어', '헤어트리트먼트');
-
 INSERT INTO category VALUES ('04040302', '뷰티', '헤어케어', '트리트먼트/케어', '헤어팩/마스크');
-
 INSERT INTO category VALUES ('04040303', '뷰티', '헤어케어', '트리트먼트/케어', '헤어에센스/오일/세럼');
-
 INSERT INTO category VALUES ('04040304', '뷰티', '헤어케어', '트리트먼트/케어', '헤어퍼퓸/헤어미스트');
+INSERT INTO category VALUES ('04040400', '뷰티', '헤어케어', '헤어스타일링', '');
+INSERT INTO category VALUES ('04040500', '뷰티', '헤어케어', '헤어컬러/펌', '');
+INSERT INTO category VALUES ('04050000', '뷰티', '바디케어', '', '');
+INSERT INTO category VALUES ('04060000', '뷰티', '미용기기/소품', '', '');
+INSERT INTO category VALUES ('04070000', '뷰티', '남성화장품', '', '');
+INSERT INTO category VALUES ('04080000', '뷰티', '뷰티선물세트', '', '');
+
+
+
+
+
+
+
+
 
 INSERT INTO category VALUES ('06010101', '생활/주방', '화장지/생리대', '화장지', '롤화장지');
 
