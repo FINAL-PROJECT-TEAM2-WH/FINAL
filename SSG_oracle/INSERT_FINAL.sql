@@ -95,6 +95,7 @@ increment by 1
 nocache 
 nocycle;
 
+
 -- 회원insert 프로시저 
 create or replace PROCEDURE ins_member 
 (
