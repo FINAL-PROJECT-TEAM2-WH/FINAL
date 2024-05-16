@@ -53,10 +53,16 @@ drop sequence paydetail_seq;
 drop sequence agreement_seq;
 drop sequence terms_seq;
 drop sequence interestGoods_seq;
+<<<<<<< HEAD
 drop sequence category_seq;
 drop sequence brand_seq;
 drop sequence seller_seq;
 
+=======
+drop sequence shoppingcart_seq;
+drop sequence applicant_seq;
+drop sequence productimg_seq;
+>>>>>>> 29a8c037f965ec723f73042d1d696ed7513a2f00
 
 CREATE TABLE payrecord (
     id number NOT NULL,
@@ -94,7 +100,7 @@ CREATE TABLE product (
     specialPriceId NUMBER NULL,
     shippingOptionId NUMBER NOT NULL,
     sellerStoreId VARCHAR2(20) NOT NULL,
-    brandId VARCHAR2(20) NOT NULL,
+    brandId VARCHAR2(300) NOT NULL,
     pdName VARCHAR2(300) NULL,
     pcontent VARCHAR2(3000) NULL,
     updateDay DATE NULL
@@ -148,12 +154,13 @@ CREATE TABLE productImg (
     imgcontent VARCHAR2(100) NULL
 );
 
+
 CREATE TABLE productOption (
     id NUMBER NOT NULL,
     productId NUMBER NOT NULL,
     optionName VARCHAR2(100) NULL,
     optionDesc VARCHAR2(100) NULL,
-    optionRef VARCHAR2(50) NULL,
+    optionRef NUMBER NULL,
     optionPrice NUMBER(10) NULL,
     optionStock NUMBER(10) NULL
 );
