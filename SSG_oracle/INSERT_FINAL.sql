@@ -939,54 +939,56 @@ INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
 -----------------------------------------------------------------------------
 -- 배송 정보, 배송지 정보, 검색 테이블
 -- 배송번호, 주문번호, 배송지번호, 배송요청사항, 배송상태, 택배 배송 요청사항, 수령위치, 현관출입방법, 배송 종료일
+//SELECT * FROM SHIPPINGPLACEINFORMATION;
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'daetu01', 'daetu', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20', '역삼생활307호', '010-1234-5678', '06131', 'X');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'daetu01', 'daetu', '서울특별시 중구 세종대로 110', '서울특별시 중구 태평로1가 31', '서울특별시청', '010-1234-5678', '04524', 'X');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '서울특별시 중구 세종대로 110', '서울특별시 중구 태평로1가 31', '서울특별시청', '010-1234-5678', '04524', 'X');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'daetu01', 'daetu', '경기도 수원시 장안구 수일로233번길 144', '경기도 수원시 장안구 조원동 10 아토피센터 2층', '아토피센터 2층', '010-1234-5678', '05343', '이번만배송지');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '경기도 수원시 장안구 수일로233번길 144', '경기도 수원시 장안구 조원동 10 아토피센터 2층', '아토피센터 2층', '010-1234-5678', '05343', '이번만배송지');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'm_eum01', '맑음학원', '맑음', '서울특별시 강남구 테헤란로 132', '서울특별시 강남구 역삼동 735 8층 쌍용교육센터', '8층 쌍용교육센터', '010-1010-2020', '06235', '기본배송지');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'm_eum01', '맑음학원', '맑음', '서울특별시 강남구 테헤란로 132', '서울특별시 강남구 역삼동 735 8층 쌍용교육센터', '8층 쌍용교육센터', '010-1010-2020', '06235', '기본배송지');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'm_eum01', '맑음', '맑음', '강원특별자치도 평창군 평창읍 평창강로 1236-4', '강원특별자치도 평창군 평창읍 약수리 15-4 약수 클산종합가구', '클산종합가구', '010-1010-2020', '25373', 'X');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'm_eum01', '맑음', '맑음', '강원특별자치도 평창군 평창읍 평창강로 1236-4', '강원특별자치도 평창군 평창읍 약수리 15-4 약수 클산종합가구', '클산종합가구', '010-1010-2020', '25373', 'X');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'd_Chan01', '동찬집', '동찬', '경기 화성시 동탄신리천로4길 48', '경기도 화성시 신동 산179 호반써밋 동탄 101동 101호', '101동 101호 (신동, 호반써밋 동탄)', '010-1111-2222', '18495', '기본배송지');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'd_Chan01', '동찬집', '동찬', '경기 화성시 동탄신리천로4길 48', '경기도 화성시 신동 산179 호반써밋 동탄 101동 101호', '101동 101호 (신동, 호반써밋 동탄)', '010-1111-2222', '18495', '기본배송지');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'd_Chan01', '카페', '카페', '서울특별시 강남구 강남대로 390', '서울특별시 강남구 역삼동 825 미진프라자 스타벅스', '스타벅스', '010-1111-2222', '06232', 'X');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'd_Chan01', '카페', '카페', '서울특별시 강남구 강남대로 390', '서울특별시 강남구 역삼동 825 미진프라자 스타벅스', '스타벅스', '010-1111-2222', '06232', 'X');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'dyoung01', '동영집', '동스', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20 역삼생화 308호', '역삼생활 308호', '010-3333-4444', '06131', '기본배송지');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'dyoung01', '동영집', '동스', '서울특별시 강남구 강남대로94길 83', '서울특별시 강남구 역삼동 645-20 역삼생화 308호', '역삼생활 308호', '010-3333-4444', '06131', '기본배송지');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'dyoung01', '동스', '동스', '서울 종로구 종로8길 15', '서울특별시 종로구 관철동 43-15 숙달돼지', '숙달돼지', '010-3333-4444', '03189', 'X');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'dyoung01', '동스', '동스', '서울 종로구 종로8길 15', '서울특별시 종로구 관철동 43-15 숙달돼지', '숙달돼지', '010-3333-4444', '03189', 'X');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'mggun01', '직장', '명스', '경기도 성남시 분당구 정자일로 95', '경기도 성남시 분당구 정자동 178-4 네이버 1784 1층', '네이버 1784 1층', '010-4444-5555', '13561', '기본배송지');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', '직장', '명스', '경기도 성남시 분당구 정자일로 95', '경기도 성남시 분당구 정자동 178-4 네이버 1784 1층', '네이버 1784 1층', '010-4444-5555', '13561', '기본배송지');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'mggun01', '명건', '명건', '부산광역시 수영구 광안해변로 100', '부산광역시 수영구 남천동 148-4 비치아파트 101동 101호', '비치아파트 101동 101호', '010-4444-5555', '48305', 'X');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', '명건', '명건', '부산광역시 수영구 광안해변로 100', '부산광역시 수영구 남천동 148-4 비치아파트 101동 101호', '비치아파트 101동 101호', '010-4444-5555', '48305', 'X');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'mggun01', '강남구청', '명건', '서울특별시 강남구 학동로 426', '서울특별시 강남구 삼성동 16-1 강남구청 1층', '1층 (삼성동)', '010-4444-5555', '06090', 'X');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', '강남구청', '명건', '서울특별시 강남구 학동로 426', '서울특별시 강남구 삼성동 16-1 강남구청 1층', '1층 (삼성동)', '010-4444-5555', '06090', 'X');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'whyun01', '우현', '우현', '서울특별시 노원구 노해로 437', '서울특별시 노원구 상계동 701-1 노원구청 2층', '노원구청 2층', '010-5555-6666', '01689', 'X');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'whyun01', '우현', '우현', '서울특별시 노원구 노해로 437', '서울특별시 노원구 상계동 701-1 노원구청 2층', '노원구청 2층', '010-5555-6666', '01689', 'X');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'whyun01', '우현집', '우현', '서울특별시 노원구 공릉로51길 14-17)', '서울특별시 노원구 공릉동 744 건영장미아파트 101동 101호', '101동 101호 (공릉동, 건영장미아파트)', '010-6666-7777', '01833', '기본배송지');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'whyun01', '우현집', '우현', '서울특별시 노원구 공릉로51길 14-17)', '서울특별시 노원구 공릉동 744 건영장미아파트 101동 101호', '101동 101호 (공릉동, 건영장미아파트)', '010-6666-7777', '01833', '기본배송지');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'minziZzang', '하이브', '민지', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-9999-9999', '04389', '기본배송지');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'minziZzang', '하이브', '민지', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-9999-9999', '04389', '기본배송지');
 
-INSERT INTO shippingplaceinfomation VALUES
-( seqshippingplaceinfo.NEXTVAL, 'hive', '하이브', '하이브', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-8888-9999', '04389', '기본배송지');
+INSERT INTO SHIPPINGPLACEINFORMATION VALUES
+( SEQSHIPPLACEINFO.NEXTVAL, 'hive', '하이브', '하이브', '서울특별시 용산구 한강대로 42', '서울특별시 용산구 한강로3가 65-9', '하이브', '010-8888-9999', '04389', '기본배송지');
+
 
 
 -- 배송정보 INSERT 프로시저 실행
