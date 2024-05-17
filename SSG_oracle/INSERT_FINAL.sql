@@ -1287,6 +1287,122 @@ INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',20970013082
 INSERT INTO interestgoods VALUES(interestGoods_seq.NEXTVAL,'daetu01',2097000257655,SYSDATE,1);
 
 
+
+
+--1
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000026532717,'\SSGSSAK\pay\image\1000026532717_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000026532717,'\SSGSSAK\pay\image\1000026532717_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000026532717,'\SSGSSAK\pay\image\1000026532717_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000026532717,'\SSGSSAK\pay\image\RESISTANCE_CIMENT-THERMIQUE_150ml_01.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000026532717,'\SSGSSAK\pay\image\RESISTANCE_CIMENT-THERMIQUE_150ml_02.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000026532717,'\SSGSSAK\pay\image\1000026532717_i4_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000026532717,'\SSGSSAK\pay\image\1000026532717_i5_500.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000026532717,'\SSGSSAK\pay\image\1000026532717_i6_500.avif','other');
+
+--2
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000544937242,'\SSGSSAK\pay\image\1000544937242_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000544937242,'\SSGSSAK\pay\image\1000544937242_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000544937242,'\SSGSSAK\pay\image\1000544937242_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000544937242,'\SSGSSAK\pay\image\스크린샷 2024-04-27 205657.png','other');
+
+--3
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000587702102,'\SSGSSAK\pay\image\1000587702102_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000587702102,'\SSGSSAK\pay\image\1000587702102_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000587702102,'\SSGSSAK\pay\image\1000587702102_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000587702102,'\SSGSSAK\pay\image\232023082723003163334000274400_472.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000587702102,'\SSGSSAK\pay\image\232023082723003167886667889666_544.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000587702102,'\SSGSSAK\pay\image\172024032617302430518027743802_887.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000587702102,'\SSGSSAK\pay\image\172024032617292302764937397493_495.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000587702102,'\SSGSSAK\pay\image\172024032617292341355874506587_142.avif','other');
+
+--4
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay\image\2097001577943_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay\image\2097001577943_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay\image\2097001577943_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay\image\2097001577943_i4_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay\image\2097001577943_i5_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay\image\스크린샷 2024-04-27 210640.png','other');
+
+--5
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000582326954,'\SSGSSAK\pay\image\1000582326954_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000582326954,'\SSGSSAK\pay\image\1000582326954_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000582326954,'\SSGSSAK\pay\image\1000582326954_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000582326954,'\SSGSSAK\pay\image\s24_SM-S921_1_simple.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000582326954,'\SSGSSAK\pay\image\notice_online_only.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000582326954,'\SSGSSAK\pay\image\notice_self_phone.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000582326954,'\SSGSSAK\pay\image\1000582326954_i4_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000582326954,'\SSGSSAK\pay\image\notice_time.gif','other');
+
+--6
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000398650979,'\SSGSSAK\pay\image\1000398650979_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000398650979,'\SSGSSAK\pay\image\1000398650979_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000398650979,'\SSGSSAK\pay\image\1000398650979_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000398650979,'\SSGSSAK\pay\image\132022051913351854247560918756_938.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000398650979,'\SSGSSAK\pay\image\072022041407203671239309585930_899.webp','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000398650979,'\SSGSSAK\pay\image\172022041216502949183771830477_918.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000398650979,'\SSGSSAK\pay\image\172022041216485133914750244475_185.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000398650979,'\SSGSSAK\pay\image\072022041407205138457954049795_57.avif','other');
+
+--7
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000014118201,'\SSGSSAK\pay\image\1000014118201_i2_1200.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000014118201,'\SSGSSAK\pay\image\1000014118201_i4_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000014118201,'\SSGSSAK\pay\image\122023021312013050936929585692_950.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000014118201,'\SSGSSAK\pay\image\122024010412443223241851958185_388.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000014118201,'\SSGSSAK\pay\image\8becca4e49f737a5f845a31dcf8e96b2b7a8771652b04cefbea97c7b5c67.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000014118201,'\SSGSSAK\pay\image\8becca4e49f737a5f845a31dcf8e96b2b7a8771652b04cefbea97c7b5c67.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000014118201,'\SSGSSAK\pay\image\212023072721014144381094490209_619.avif','other'); 
+
+--8
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001308233,'\SSGSSAK\pay\image\2097001308233_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001308233,'\SSGSSAK\pay\image\2097001308233_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001308233,'\SSGSSAK\pay\image\2097001308233_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001308233,'\SSGSSAK\pay\image\132097001308233_d1.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001308233,'\SSGSSAK\pay\image\2097001308233_i4_1200.avif','other');
+
+--9
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097000257655,'\SSGSSAK\pay\image\2097000257655_i1_1200.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097000257655,'\SSGSSAK\pay\image\2097000257655_i2_1200.webp','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097000257655,'\SSGSSAK\pay\image\동영상대체텍스트2.mp4','other');
+
+
+
+--10
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\2097001557433_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\2097001557433_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\2097001557433_i3_1200.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\R2097001557433_i4_1200.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\스크린샷 2024-04-27 212503.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\스크린샷 2024-04-27 212526.png','other');
+
+--11
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\1000579723160_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\1000579723160_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\1000579723160_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\162024020616351412651769639176_804.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\스크린샷 2024-04-27 212717.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\스크린샷 2024-04-27 212722.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\스크린샷 2024-04-27 212727.png','other');
+
+--13
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000059288917,'\SSGSSAK\pay\image\1000059288917_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000059288917,'\SSGSSAK\pay\image\1000059288917_i2_1200.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000059288917,'\SSGSSAK\pay\image\1000059288917_i3_1200.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000059288917,'\SSGSSAK\pay\image\GO3_TOP_02.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000059288917,'\SSGSSAK\pay\image\GO3_TOP_01.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000059288917,'\SSGSSAK\pay\image\GO3_TOP_03.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000059288917,'\SSGSSAK\pay\image\new_2.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000059288917,'\SSGSSAK\pay\image\samsung_cer.gif','other');
+
+--14
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay\image\2097001432075_i1_1200.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay\image\2097001432075_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay\image\2097001432075_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay\image\2097001432075_i4_1200.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay\image\2097001432075_i5_1200.webp','other');
+
+
+
+
 COMMIT;
 COMMIT;
 
