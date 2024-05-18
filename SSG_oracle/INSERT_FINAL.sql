@@ -129,15 +129,7 @@ nocache
 nocycle;
 
 
---BEGIN
---    SSGPRO.INSERT_PRODUCTIMG(
---        p_id          => 'img001',
---        p_productid   => '1000026532717',
---        p_imgurl      => 'C:\E\Class\PROJECTSPACE\dcha\SSG_oracle\PRODUCTIMG\1000026532717_i1_1100.avif',
---        p_imgcontent  => 'thumbnail'
---    );
---END;
--- 이미지 입력받는곳 경로 결정하고 추가하는걸로..
+
 
 
 
@@ -1201,20 +1193,6 @@ INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'minziZzang', '신청해
 INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'hive', '신청합니다.', TO_DATE('2024-05-28'), '당첨',null);
 
 
-
-insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
-insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
-insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
-insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
-insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
-insert into productimg values ( productimg_seq.nextval , 2097001432075 , null ,null );
-insert into productimg values ( productimg_seq.nextval , 1000587702102 , null ,null );
-insert into productimg values ( productimg_seq.nextval , 1000587702102 , null ,null );
-insert into productimg values ( productimg_seq.nextval , 1000587702102 , null ,null );
-insert into productimg values (productimg_seq.nextval , 1000587702102 , null ,null );
-insert into productimg values ( productimg_seq.nextval , 1000544937242 , null ,null );
-insert into productimg values ( productimg_seq.nextval , 1000544937242 , null ,null );
-insert into productimg values ( productimg_seq.nextval , 1000544937242 , null ,null );
 
 
 --INSERT INTO applicant VALUES (1, 1, 'daetu01', '딱 저희 아이의 탈취제가 필요했는데 신청합니다.', TO_DATE('2024-04-22'), '당첨');
