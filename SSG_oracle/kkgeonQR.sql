@@ -5,7 +5,7 @@ WHERE p.id = 1000026532717;
 
 SELECT DISTINCT middleCateName, id 
 				FROM category 
-				WHERE id LIKE SUBSTR('04040303', 1, 2) || '%0000'
+				WHERE id LIKE SUBSTR('12030104', 1, 2) || '%0000'
 				AND middleCateName IS NOT NULL
 
 SELECT DISTINCT c.middleCateName
@@ -21,11 +21,21 @@ AND c.middleCateName IS NOT NULL;
 SELECT DISTINCT c.middleCateName, c.id
 FROM category c
 JOIN product p ON SUBSTR(p.categoryId, 1, 2) = SUBSTR(c.id, 1, 2)
-WHERE p.id = 1000026532717
+WHERE p.id = 1000014118201
 AND SUBSTR(c.id, 5, 8) = '0000'
-AND c.middleCateName IS NOT NULL;
+AND c.middleCateName IS NOT NULL
 
+SELECT DISTINCT c.miniCateName, c.id
+FROM category c
+JOIN product p ON SUBSTR(p.categoryId, 1, 6) = SUBSTR(c.id, 1, 6)
+WHERE p.id = 1000014118201
+AND c.miniCateName IS NOT NULL
+SELECT *
+FROM product
 
+SELECT DISTINCT majorCateName, id    
+FROM category   WHERE id LIKE '%000000' 
+AND majorCateName IS NOT NULL;
 
 SELECT *
 FROM member;
