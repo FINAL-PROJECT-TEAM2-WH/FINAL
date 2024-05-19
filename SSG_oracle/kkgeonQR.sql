@@ -1,3 +1,31 @@
+SELECT c.id,  c.majorcatename,c.middlecatename,c.subcatename, c.minicatename
+FROM product p JOIN category c ON p.categoryid = c.id
+WHERE p.id = 1000026532717;
+--상품용현재카테쿼리
+
+SELECT DISTINCT middleCateName, id 
+				FROM category 
+				WHERE id LIKE SUBSTR('04040303', 1, 2) || '%0000'
+				AND middleCateName IS NOT NULL
+
+SELECT DISTINCT c.middleCateName
+FROM category c
+WHERE SUBSTR(c.id, 1, 2) = SUBSTR((SELECT categoryId FROM product WHERE id = 1000026532717), 1, 2)
+AND c.middleCateName IS NOT NULL;
+
+SELECT DISTINCT c.middleCateName
+FROM category c
+WHERE c.id LIKE SUBSTR((SELECT categoryId FROM product WHERE id = 1000026532717), 1, 2) || '%0000'
+AND c.middleCateName IS NOT NULL;
+
+SELECT DISTINCT c.middleCateName, c.id
+FROM category c
+JOIN product p ON SUBSTR(p.categoryId, 1, 2) = SUBSTR(c.id, 1, 2)
+WHERE p.id = 1000026532717
+AND SUBSTR(c.id, 5, 8) = '0000'
+AND c.middleCateName IS NOT NULL;
+
+
 
 SELECT *
 FROM member;

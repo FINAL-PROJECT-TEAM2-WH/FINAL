@@ -549,6 +549,7 @@ INSERT INTO category VALUES ('11060000', '신선식품', '친환경/유기농', 
 INSERT INTO category VALUES ('12000000', '가공/건강식품', '', '', '');
 
 -- 우유/유제품
+INSERT INTO category VALUES ('12010000', '가공/건강식품', '우유/유제품', '', '');
 INSERT INTO category VALUES ('12010100', '가공/건강식품', '우유/유제품', '우유', '');
 INSERT INTO category VALUES ('12010200', '가공/건강식품', '우유/유제품', '요거트/요구르트', '');
 INSERT INTO category VALUES ('12010300', '가공/건강식품', '우유/유제품', '두유', '');
@@ -556,6 +557,7 @@ INSERT INTO category VALUES ('12010400', '가공/건강식품', '우유/유제�
 INSERT INTO category VALUES ('12010500', '가공/건강식품', '우유/유제품', '버터/생크림/연유', '');
 
 -- 밀키트/간편식
+INSERT INTO category VALUES ('12020000', '가공/건강식품', '밀키트/간편식', '', '');
 INSERT INTO category VALUES ('12020100', '가공/건강식품', '밀키트/간편식', '밀키트', '');
 INSERT INTO category VALUES ('12020200', '가공/건강식품', '밀키트/간편식', '볶음밥/찌개/죽/스프', '');
 INSERT INTO category VALUES ('12020300', '가공/건강식품', '밀키트/간편식', '만두/돈가스/치킨/튀김', '');
@@ -569,6 +571,7 @@ INSERT INTO category VALUES ('12021000', '가공/건강식품', '밀키트/간�
 INSERT INTO category VALUES ('12021100', '가공/건강식품', '밀키트/간편식', '카레/짜장/즉석요리', '');
 
 -- 김치/반찬/델리
+INSERT INTO category VALUES ('12030000', '가공/건강식품', '김치/반찬/델리', '', '');
 INSERT INTO category VALUES ('12030100', '가공/건강식품', '김치/반찬/델리', '김치', '');
 INSERT INTO category VALUES ('12030101', '가공/건강식품', '김치/반찬/델리', '김치', '포기/배추김치');
 INSERT INTO category VALUES ('12030102', '가공/건강식품', '김치/반찬/델리', '김치', '무/열무김치');
@@ -580,6 +583,7 @@ INSERT INTO category VALUES ('12030400', '가공/건강식품', '김치/반찬/�
 INSERT INTO category VALUES ('12030500', '가공/건강식품', '김치/반찬/델리', '매장즉석조리식품', '');
 
 -- 면류/통조림
+INSERT INTO category VALUES ('12040000', '가공/건강식품', '면류/통조림', '', '');
 INSERT INTO category VALUES ('12040100', '가공/건강식품', '면류/통조림', '라면', '');
 INSERT INTO category VALUES ('12040200', '가공/건강식품', '면류/통조림', '즉석면요리', '');
 INSERT INTO category VALUES ('12040300', '가공/건강식품', '면류/통조림', '파스타면/생면/건면', '');
@@ -588,6 +592,7 @@ INSERT INTO category VALUES ('12040500', '가공/건강식품', '면류/통조�
 INSERT INTO category VALUES ('12040600', '가공/건강식품', '면류/통조림', '통조림선물세트', '');
 
 -- 생수/음료/주류
+INSERT INTO category VALUES ('12050000', '가공/건강식품', '생수/음료/주류', '', '');
 INSERT INTO category VALUES ('12050100', '가공/건강식품', '생수/음료/주류', '생수', '');
 INSERT INTO category VALUES ('12050200', '가공/건강식품', '생수/음료/주류', '탄산수', '');
 INSERT INTO category VALUES ('12050300', '가공/건강식품', '생수/음료/주류', '탄산음료', '');
@@ -600,6 +605,7 @@ INSERT INTO category VALUES ('12050900', '가공/건강식품', '생수/음료/�
 INSERT INTO category VALUES ('12051000', '가공/건강식품', '생수/음료/주류', '무알콜맥주/칵테일', '');
 
 -- 커피/원두/차
+INSERT INTO category VALUES ('12060000', '가공/건강식품', '커피/원두/차', '', '');
 INSERT INTO category VALUES ('12060100', '가공/건강식품', '커피/원두/차', '커피믹스', '');
 INSERT INTO category VALUES ('12060200', '가공/건강식품', '커피/원두/차', '원두/생두', '');
 INSERT INTO category VALUES ('12060300', '가공/건강식품', '커피/원두/차', '드립백/캡슐/더치커피', '');
@@ -613,6 +619,7 @@ INSERT INTO category VALUES ('12061000', '가공/건강식품', '커피/원두/�
 INSERT INTO category VALUES ('12061100', '가공/건강식품', '커피/원두/차', '커피/차선물세트', '');
 
 -- 과자/간식/시리얼/빙과
+INSERT INTO category VALUES ('12070000', '가공/건강식품', '과자/간식/시리얼/빙과', '', '');
 INSERT INTO category VALUES ('12070100', '가공/건강식품', '과자/간식/시리얼/빙과', '과자/쿠키/파이', '');
 INSERT INTO category VALUES ('12070200', '가공/건강식품', '과자/간식/시리얼/빙과', '떡/한과/전통과자', '');
 INSERT INTO category VALUES ('12070300', '가공/건강식품', '과자/간식/시리얼/빙과', '소시지/원물/안주스낵', '');
@@ -624,6 +631,7 @@ INSERT INTO category VALUES ('12070800', '가공/건강식품', '과자/간식/�
 INSERT INTO category VALUES ('12070900', '가공/건강식품', '과자/간식/시리얼/빙과', '얼음/빙수재료', '');
 
 -- 친환경/유기농
+INSERT INTO category VALUES ('12080000', '가공/건강식품', '친환경/유기농', '', '');
 INSERT INTO category VALUES ('12080100', '가공/건강식품', '친환경/유기농', '과일/채소', '');
 INSERT INTO category VALUES ('12080200', '가공/건강식품', '친환경/유기농', '정육/계란류', '');
 INSERT INTO category VALUES ('12080300', '가공/건강식품', '친환경/유기농', '쌀/잡곡/견과', '');
@@ -638,6 +646,7 @@ INSERT INTO category VALUES ('12081100', '가공/건강식품', '친환경/유�
 INSERT INTO category VALUES ('12081200', '가공/건강식품', '친환경/유기농', '유기농/친환경선물세트', '');
 
 -- 장류/양념/가루/오일
+INSERT INTO category VALUES ('12090000', '가공/건강식품', '장류/양념/가루/오일', '', '');
 INSERT INTO category VALUES ('12090100', '가공/건강식품', '장류/양념/가루/오일', '장류/양념', '');
 INSERT INTO category VALUES ('12090200', '가공/건강식품', '장류/양념/가루/오일', '파스타소스/페스토', '');
 INSERT INTO category VALUES ('12090300', '가공/건강식품', '장류/양념/가루/오일', '케찹/마요네즈/디핑소스', '');
@@ -652,6 +661,7 @@ INSERT INTO category VALUES ('12091100', '가공/건강식품', '장류/양념/�
 INSERT INTO category VALUES ('12091200', '가공/건강식품', '장류/양념/가루/오일', '시럽/제빵믹스/재료', '');
 
 -- 베이커리/잼
+INSERT INTO category VALUES ('12100000', '가공/건강식품', '베이커리/잼', '', '');
 INSERT INTO category VALUES ('12100100', '가공/건강식품', '베이커리/잼', '식빵', '');
 INSERT INTO category VALUES ('12100200', '가공/건강식품', '베이커리/잼', '베이커리빵', '');
 INSERT INTO category VALUES ('12100300', '가공/건강식품', '베이커리/잼', '쿠키/디저트/케이크', '');
@@ -661,6 +671,7 @@ INSERT INTO category VALUES ('12100600', '가공/건강식품', '베이커리/�
 INSERT INTO category VALUES ('12100700', '가공/건강식품', '베이커리/잼', '생지/냉동반죽', '');
 INSERT INTO category VALUES ('12100800', '가공/건강식품', '베이커리/잼', '잼/스프레드', '');
 -- 건강식품
+INSERT INTO category VALUES ('12110000', '가공/건강식품', '건강식품', '', '');
 INSERT INTO category VALUES ('12110100', '가공/건강식품', '건강식품', '홍삼/인삼/녹용', '');
 INSERT INTO category VALUES ('12110200', '가공/건강식품', '건강식품', '건강즙/건강액', '');
 INSERT INTO category VALUES ('12110300', '가공/건강식품', '건강식품', '건강분말/건강환', '');
