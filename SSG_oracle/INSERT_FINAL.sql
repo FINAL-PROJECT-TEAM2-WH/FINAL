@@ -157,9 +157,35 @@ INSERT INTO MEMBER VALUES('cap','cap@gmail.com','010-5124-5665','하남자','123
 
 -------------------------------------------------------------------------------------------
 -- 판매자 페이지, 브랜드 페이지, 상품 카테고리 테이블
+
+INSERT INTO category VALUES ('04000000', '뷰티', '', '', '');
 INSERT INTO category VALUES ('04010000', '뷰티', '메이크업', '', '');
+INSERT INTO category VALUES ('04010100', '뷰티', '메이크업', '베이스메이크업', '');
+INSERT INTO category VALUES ('04010200', '뷰티', '메이크업', '립메이크업', '');
+INSERT INTO category VALUES ('04010300', '뷰티', '메이크업', '아이메이크업', '');
+INSERT INTO category VALUES ('04010400', '뷰티', '메이크업', '치크/하이라이터', '');
+INSERT INTO category VALUES ('04010500', '뷰티', '메이크업', '남성메이크업', '');
+INSERT INTO category VALUES ('04010600', '뷰티', '메이크업', '네일', '');
+
 INSERT INTO category VALUES ('04020000', '뷰티', '스킨케어', '', '');
+INSERT INTO category VALUES ('04020100', '뷰티', '스킨케어', '스킨/토너/미스트', '');
+INSERT INTO category VALUES ('04020200', '뷰티', '스킨케어', '에센스/세럼', '');
+INSERT INTO category VALUES ('04020300', '뷰티', '스킨케어', '로션/에멀전/크림', '');
+INSERT INTO category VALUES ('04020400', '뷰티', '스킨케어', '아이/넥케어', '');
+INSERT INTO category VALUES ('04020500', '뷰티', '스킨케어', '클렌징/스크럽', '');
+INSERT INTO category VALUES ('04020600', '뷰티', '스킨케어', '선케어', '');
+INSERT INTO category VALUES ('04020700', '뷰티', '스킨케어', '스킨케어세트', '');
+INSERT INTO category VALUES ('04020800', '뷰티', '스킨케어', '팩/마스크', '');
+INSERT INTO category VALUES ('04020900', '뷰티', '스킨케어', '남성스킨케어', '');
+
 INSERT INTO category VALUES ('04030000', '뷰티', '향수', '', '');
+INSERT INTO category VALUES ('04030100', '뷰티', '향수', '여성향수', '');
+INSERT INTO category VALUES ('04030200', '뷰티', '향수', '남성향수', '');
+INSERT INTO category VALUES ('04030300', '뷰티', '향수', '유니섹스향수', '');
+INSERT INTO category VALUES ('04030400', '뷰티', '향수', '드레스/패브릭퍼퓸/룸스프레이', '');
+INSERT INTO category VALUES ('04030500', '뷰티', '향수', '캔들/디퓨저/아로마', '');
+INSERT INTO category VALUES ('04030600', '뷰티', '향수', '고체/기타 향수', '');
+
 INSERT INTO category VALUES ('04040000', '뷰티', '헤어케어', '', '');
 INSERT INTO category VALUES ('04040100', '뷰티', '헤어케어', '샴푸', '');
 INSERT INTO category VALUES ('04040200', '뷰티', '헤어케어', '린스/컨디셔너', '');
@@ -170,109 +196,763 @@ INSERT INTO category VALUES ('04040303', '뷰티', '헤어케어', '트리트먼
 INSERT INTO category VALUES ('04040304', '뷰티', '헤어케어', '트리트먼트/케어', '헤어퍼퓸/헤어미스트');
 INSERT INTO category VALUES ('04040400', '뷰티', '헤어케어', '헤어스타일링', '');
 INSERT INTO category VALUES ('04040500', '뷰티', '헤어케어', '헤어컬러/펌', '');
+
 INSERT INTO category VALUES ('04050000', '뷰티', '바디케어', '', '');
+INSERT INTO category VALUES ('04050100', '뷰티', '바디케어', '바디로션/크림/오일', '');
+INSERT INTO category VALUES ('04050200', '뷰티', '바디케어', '바디워시/스크럽', '');
+INSERT INTO category VALUES ('04050300', '뷰티', '바디케어', '바디미스트', '');
+INSERT INTO category VALUES ('04050400', '뷰티', '바디케어', '풋/핸드/데오케어', '');
+INSERT INTO category VALUES ('04050500', '뷰티', '바디케어', '샤워/입욕제', '');
+INSERT INTO category VALUES ('04050600', '뷰티', '바디케어', '면도/제모용품', '');
+INSERT INTO category VALUES ('04050700', '뷰티', '바디케어', '슬리밍/청결제', '');
+INSERT INTO category VALUES ('04050800', '뷰티', '바디케어', '기타바디용품', '');
+
 INSERT INTO category VALUES ('04060000', '뷰티', '미용기기/소품', '', '');
+INSERT INTO category VALUES ('04060100', '뷰티', '미용기기/소품', '페이스관리기기', '');
+INSERT INTO category VALUES ('04060200', '뷰티', '미용기기/소품', '페이스소품', '');
+INSERT INTO category VALUES ('04060300', '뷰티', '미용기기/소품', '메이크업브러쉬', '');
+INSERT INTO category VALUES ('04060400', '뷰티', '미용기기/소품', '아이소품', '');
+INSERT INTO category VALUES ('04060500', '뷰티', '미용기기/소품', '바디관리기기', '');
+INSERT INTO category VALUES ('04060600', '뷰티', '미용기기/소품', '헤어관리기기', '');
+INSERT INTO category VALUES ('04060700', '뷰티', '미용기기/소품', '헤어소품', '');
+INSERT INTO category VALUES ('04060800', '뷰티', '미용기기/소품', '파우치', '');
+INSERT INTO category VALUES ('04060900', '뷰티', '미용기기/소품', '거울/용기/기타소품', '');
+
 INSERT INTO category VALUES ('04070000', '뷰티', '남성화장품', '', '');
+INSERT INTO category VALUES ('04070100', '뷰티', '남성화장품', '클렌징/쉐이빙', '');
+INSERT INTO category VALUES ('04070200', '뷰티', '남성화장품', '스킨/애프터쉐이브', '');
+INSERT INTO category VALUES ('04070300', '뷰티', '남성화장품', '로션', '');
+INSERT INTO category VALUES ('04070400', '뷰티', '남성화장품', '에센스', '');
+INSERT INTO category VALUES ('04070500', '뷰티', '남성화장품', '크림', '');
+INSERT INTO category VALUES ('04070600', '뷰티', '남성화장품', '올인원', '');
+INSERT INTO category VALUES ('04070700', '뷰티', '남성화장품', '마스크/팩', '');
+INSERT INTO category VALUES ('04070800', '뷰티', '남성화장품', '스킨케어세트', '');
+INSERT INTO category VALUES ('04070900', '뷰티', '남성화장품', '선케어/BB크림', '');
+INSERT INTO category VALUES ('04071000', '뷰티', '남성화장품', '남성메이크업', '');
+
 INSERT INTO category VALUES ('04080000', '뷰티', '뷰티선물세트', '', '');
+INSERT INTO category VALUES ('04080100', '뷰티', '뷰티선물세트', '메이크업', '');
+INSERT INTO category VALUES ('04080200', '뷰티', '뷰티선물세트', '스킨케어', '');
+INSERT INTO category VALUES ('04080300', '뷰티', '뷰티선물세트', '향수', '');
+INSERT INTO category VALUES ('04080400', '뷰티', '뷰티선물세트', '바디케어', '');
+INSERT INTO category VALUES ('04080500', '뷰티', '뷰티선물세트', '헤어케어', '');
 
 
 
+
+
+-- 화장지/생리대
+INSERT INTO category VALUES ('06000000', '생활/주방', '', '', '');
+INSERT INTO category VALUES ('06010000', '생활/주방', '화장지/생리대', '', '');
+INSERT INTO category VALUES ('06010100', '생활/주방', '화장지/생리대', '화장지', '');
 INSERT INTO category VALUES ('06010101', '생활/주방', '화장지/생리대', '화장지', '롤화장지');
 INSERT INTO category VALUES ('06010102', '생활/주방', '화장지/생리대', '화장지', '고급화장지');
 INSERT INTO category VALUES ('06010103', '생활/주방', '화장지/생리대', '화장지', '점포롤화장지');
 INSERT INTO category VALUES ('06010104', '생활/주방', '화장지/생리대', '화장지', '페이퍼타올');
 INSERT INTO category VALUES ('06010105', '생활/주방', '화장지/생리대', '화장지', '냅킨');
+INSERT INTO category VALUES ('06010200', '생활/주방', '화장지/생리대', '물티슈', '');
+INSERT INTO category VALUES ('06010300', '생활/주방', '화장지/생리대', '미용티슈', '');
+INSERT INTO category VALUES ('06010400', '생활/주방', '화장지/생리대', '생리대', '');
+INSERT INTO category VALUES ('06010500', '생활/주방', '화장지/생리대', '성인기저귀', '');
+
+-- 세제/청소용품
+
+INSERT INTO category VALUES ('06020000', '생활/주방', '세제/청소용품', '', '');
+INSERT INTO category VALUES ('06020100', '생활/주방', '세제/청소용품', '세탁세제', '');
+INSERT INTO category VALUES ('06020200', '생활/주방', '세제/청소용품', '주방/청소세제', '');
+INSERT INTO category VALUES ('06020300', '생활/주방', '세제/청소용품', '세탁용품', '');
+INSERT INTO category VALUES ('06020400', '생활/주방', '세제/청소용품', '탈취/방향제', '');
+INSERT INTO category VALUES ('06020500', '생활/주방', '세제/청소용품', '살충제/방충제', '');
+INSERT INTO category VALUES ('06020600', '생활/주방', '세제/청소용품', '세제선물세트', '');
+INSERT INTO category VALUES ('06020700', '생활/주방', '세제/청소용품', '밀대/청소포', '');
+INSERT INTO category VALUES ('06020800', '생활/주방', '세제/청소용품', '크리너', '');
+INSERT INTO category VALUES ('06020900', '생활/주방', '세제/청소용품', '욕실청소용품', '');
+INSERT INTO category VALUES ('06021000', '생활/주방', '세제/청소용품', '기타청소도구', '');
+INSERT INTO category VALUES ('06021100', '생활/주방', '세제/청소용품', '청소용품', '');
+
+-- 건강/위생용품
+INSERT INTO category VALUES ('06030000', '생활/주방', '건강/위생용품', '', '');
+INSERT INTO category VALUES ('06030100', '생활/주방', '건강/위생용품', '마스크', '');
+INSERT INTO category VALUES ('06030200', '생활/주방', '건강/위생용품', '칫솔/치약/구강청결', '');
+INSERT INTO category VALUES ('06030300', '생활/주방', '건강/위생용품', '면도/제모용품', '');
+INSERT INTO category VALUES ('06030400', '생활/주방', '건강/위생용품', '눈건강/렌즈관리', '');
+INSERT INTO category VALUES ('06030500', '생활/주방', '건강/위생용품', '혈압/혈당/체온/체지방계', '');
+INSERT INTO category VALUES ('06030600', '생활/주방', '건강/위생용품', '체중계/온습도계/만보계', '');
+INSERT INTO category VALUES ('06030700', '생활/주방', '건강/위생용품', '안마의자/마사지용품', '');
+INSERT INTO category VALUES ('06030800', '생활/주방', '건강/위생용품', '보호대/교정용품', '');
+INSERT INTO category VALUES ('06030900', '생활/주방', '건강/위생용품', '환자/재활/실버용품', '');
+INSERT INTO category VALUES ('06031000', '생활/주방', '건강/위생용품', '찜질/부항/훈증/뜸', '');
+INSERT INTO category VALUES ('06031100', '생활/주방', '건강/위생용품', '가정의료용품', '');
+INSERT INTO category VALUES ('06031200', '생활/주방', '건강/위생용품', '성인용품', '');
+INSERT INTO category VALUES ('06031300', '생활/주방', '건강/위생용품', '기타건강용품', '');
+
+-- 주방용품
+INSERT INTO category VALUES ('06040000', '생활/주방', '주방용품', '', '');
+INSERT INTO category VALUES ('06040100', '생활/주방', '주방용품', '식기/그릇', '');
+INSERT INTO category VALUES ('06040200', '생활/주방', '주방용품', '잔/컵/물병', '');
+INSERT INTO category VALUES ('06040300', '생활/주방', '주방용품', '밀폐/보관/저장용기', '');
+INSERT INTO category VALUES ('06040400', '생활/주방', '주방용품', '수저/양식기', '');
+INSERT INTO category VALUES ('06040500', '생활/주방', '주방용품', '보온/보냉용품', '');
+INSERT INTO category VALUES ('06040600', '생활/주방', '주방용품', '프라이팬/그릴', '');
+INSERT INTO category VALUES ('06040700', '생활/주방', '주방용품', '냄비/솥/주전자', '');
+INSERT INTO category VALUES ('06040800', '생활/주방', '주방용품', '조리기구', '');
+INSERT INTO category VALUES ('06040900', '생활/주방', '주방용품', '칼/도마/채칼', '');
+INSERT INTO category VALUES ('06041000', '생활/주방', '주방용품', '제과/제빵용품', '');
+INSERT INTO category VALUES ('06041100', '생활/주방', '주방용품', '커피/티용품', '');
+INSERT INTO category VALUES ('06041200', '생활/주방', '주방용품', '와인용품', '');
+INSERT INTO category VALUES ('06041300', '생활/주방', '주방용품', '랩/호일/키친타올', '');
+INSERT INTO category VALUES ('06041400', '생활/주방', '주방용품', '수세미/행주/고무장갑', '');
+INSERT INTO category VALUES ('06041500', '생활/주방', '주방용품', '일회용품 /위생백', '');
+INSERT INTO category VALUES ('06041600', '생활/주방', '주방용품', '앞치마/장갑', '');
+INSERT INTO category VALUES ('06041700', '생활/주방', '주방용품', '아웃도어키친', '');
+INSERT INTO category VALUES ('06041800', '생활/주방', '주방용품', '기타 주방잡화', '');
+INSERT INTO category VALUES ('06041900', '생활/주방', '주방용품', '수납정리용품', '');
+INSERT INTO category VALUES ('06042000', '생활/주방', '주방용품', '제수용품', '');
+
+-- 욕실용품
+INSERT INTO category VALUES ('06050000', '생활/주방', '욕실용품', '', '');
+INSERT INTO category VALUES ('06050100', '생활/주방', '욕실용품', '샤워기/수전용품', '');
+INSERT INTO category VALUES ('06050200', '생활/주방', '욕실용품', '세면기/변기/비데', '');
+INSERT INTO category VALUES ('06050300', '생활/주방', '욕실용품', '욕조덮개', '');
+INSERT INTO category VALUES ('06050400', '생활/주방', '욕실용품', '변기시트/커버', '');
+INSERT INTO category VALUES ('06050500', '생활/주방', '욕실용품', '욕실소품', '');
+INSERT INTO category VALUES ('06050600', '생활/주방', '욕실용품', '기타욕실용품', '');
+INSERT INTO category VALUES ('06050700', '생활/주방', '욕실용품', '타월/목욕가운', '');
+
+-- 생활잡화/공구
+INSERT INTO category VALUES ('06060000', '생활/주방', '생활잡화/공구', '', '');
+INSERT INTO category VALUES ('06060100', '생활/주방', '생활잡화/공구', '수납/정리용품', '');
+INSERT INTO category VALUES ('06060200', '생활/주방', '생활잡화/공구', '방한용품', '');
+INSERT INTO category VALUES ('06060300', '생활/주방', '생활잡화/공구', '전기/생활매트', '');
+INSERT INTO category VALUES ('06060400', '생활/주방', '생활잡화/공구', '멀티탭/건전지', '');
+INSERT INTO category VALUES ('06060500', '생활/주방', '생활잡화/공구', '안전보호용품', '');
+INSERT INTO category VALUES ('06060600', '생활/주방', '생활잡화/공구', '보안/호신용품', '');
+INSERT INTO category VALUES ('06060700', '생활/주방', '생활잡화/공구', '공구용품', '');
+INSERT INTO category VALUES ('06060800', '생활/주방', '생활잡화/공구', '기타 생활잡화', '');
+
+-- 자동차용품
+INSERT INTO category VALUES ('06070000', '생활/주방', '자동차용품', '', '');
+INSERT INTO category VALUES ('06070100', '생활/주방', '자동차용품', '차량관리/세차용품', '');
+INSERT INTO category VALUES ('06070200', '생활/주방', '자동차용품', '인테리어용품', '');
+INSERT INTO category VALUES ('06070300', '생활/주방', '자동차용품', '익스테리어용품', '');
+INSERT INTO category VALUES ('06070400', '생활/주방', '자동차용품', '안전/편의/계절용품', '');
+INSERT INTO category VALUES ('06070500', '생활/주방', '자동차용품', '오토바이용품', '');
+INSERT INTO category VALUES ('06070600', '생활/주방', '자동차용품', '수입차', '');
+INSERT INTO category VALUES ('06070700', '생활/주방', '자동차용품', '타이어', '');
+
+
+
+
+
+-- 여성브랜드패션
+INSERT INTO category VALUES ('01000000', '패션의류', '', '', '');
+INSERT INTO category VALUES ('01040000', '패션의류', '여성브랜드패션', '', '');
+INSERT INTO category VALUES ('01040100', '패션의류', '여성브랜드패션', '가디건', '');
+INSERT INTO category VALUES ('01040200', '패션의류', '여성브랜드패션', '니트/베스트', '');
+INSERT INTO category VALUES ('01040300', '패션의류', '여성브랜드패션', '스커트', '');
+INSERT INTO category VALUES ('01040400', '패션의류', '여성브랜드패션', '원피스', '');
+INSERT INTO category VALUES ('01040500', '패션의류', '여성브랜드패션', '정장', '');
+INSERT INTO category VALUES ('01040600', '패션의류', '여성브랜드패션', '자켓', '');
+INSERT INTO category VALUES ('01040700', '패션의류', '여성브랜드패션', '점퍼/패딩', '');
+INSERT INTO category VALUES ('01040800', '패션의류', '여성브랜드패션', '코트', '');
+INSERT INTO category VALUES ('01040900', '패션의류', '여성브랜드패션', '무스탕/퍼', '');
+INSERT INTO category VALUES ('01041000', '패션의류', '여성브랜드패션', '맨투맨/후드/티셔츠', '');
+INSERT INTO category VALUES ('01041100', '패션의류', '여성브랜드패션', '블라우스/셔츠', '');
+INSERT INTO category VALUES ('01041200', '패션의류', '여성브랜드패션', '팬츠', '');
+
+-- 여성트렌드패션
+INSERT INTO category VALUES ('01050000', '패션의류', '여성트렌드패션', '', '');
+INSERT INTO category VALUES ('01050100', '패션의류', '여성트렌드패션', '가디건', '');
+INSERT INTO category VALUES ('01050200', '패션의류', '여성트렌드패션', '니트/베스트', '');
+INSERT INTO category VALUES ('01050300', '패션의류', '여성트렌드패션', '스커트', '');
+INSERT INTO category VALUES ('01050400', '패션의류', '여성트렌드패션', '원피스', '');
+INSERT INTO category VALUES ('01050500', '패션의류', '여성트렌드패션', '정장', '');
+INSERT INTO category VALUES ('01050600', '패션의류', '여성트렌드패션', '자켓', '');
+INSERT INTO category VALUES ('01050700', '패션의류', '여성트렌드패션', '점퍼/패딩', '');
+INSERT INTO category VALUES ('01050800', '패션의류', '여성트렌드패션', '코트', '');
+INSERT INTO category VALUES ('01050900', '패션의류', '여성트렌드패션', '무스탕/퍼', '');
+INSERT INTO category VALUES ('01051000', '패션의류', '여성트렌드패션', '맨투맨/후드/티셔츠', '');
+INSERT INTO category VALUES ('01051100', '패션의류', '여성트렌드패션', '블라우스/셔츠', '');
+INSERT INTO category VALUES ('01051200', '패션의류', '여성트렌드패션', '팬츠', '');
+
+-- 남성패션
+INSERT INTO category VALUES ('01060000', '패션의류', '남성패션', '', '');
+INSERT INTO category VALUES ('01060100', '패션의류', '남성패션', '가디건', '');
+INSERT INTO category VALUES ('01060200', '패션의류', '남성패션', '니트/베스트', '');
+INSERT INTO category VALUES ('01060300', '패션의류', '남성패션', '셔츠/남방', '');
+INSERT INTO category VALUES ('01060400', '패션의류', '남성패션', '자켓', '');
+INSERT INTO category VALUES ('01060500', '패션의류', '남성패션', '점퍼/패딩', '');
+INSERT INTO category VALUES ('01060600', '패션의류', '남성패션', '정장/수트', '');
 INSERT INTO category VALUES ('01030601', '패션의류', '남성패션', '정장/수트', '솔리드정장세트');
 INSERT INTO category VALUES ('01030602', '패션의류', '남성패션', '정장/수트', '패턴정장세트');
 INSERT INTO category VALUES ('01030603', '패션의류', '남성패션', '정장/수트', '정장바지');
 INSERT INTO category VALUES ('01030604', '패션의류', '남성패션', '정장/수트', '정장자켓');
+INSERT INTO category VALUES ('01060700', '패션의류', '남성패션', '코트', '');
+INSERT INTO category VALUES ('01060800', '패션의류', '남성패션', '맨투맨/후드/티셔츠', '');
+INSERT INTO category VALUES ('01060900', '패션의류', '남성패션', '팬츠', '');
+
+-- 캐주얼/유니섹스
+INSERT INTO category VALUES ('01070000', '패션의류', '캐주얼/유니섹스', '', '');
+INSERT INTO category VALUES ('01070100', '패션의류', '캐주얼/유니섹스', '원피스/스커트', '');
+INSERT INTO category VALUES ('01070200', '패션의류', '캐주얼/유니섹스', '점퍼/패딩', '');
+INSERT INTO category VALUES ('01070300', '패션의류', '캐주얼/유니섹스', '자켓', '');
+INSERT INTO category VALUES ('01070400', '패션의류', '캐주얼/유니섹스','맨투맨/후드/티셔츠', '');
+INSERT INTO category VALUES ('01070500', '패션의류', '캐주얼/유니섹스', '셔츠/남방', '');
+INSERT INTO category VALUES ('01070600', '패션의류', '캐주얼/유니섹스', '가디건', '');
+INSERT INTO category VALUES ('01070700', '패션의류', '캐주얼/유니섹스', '니트/베스트', '');
+INSERT INTO category VALUES ('01070800', '패션의류', '캐주얼/유니섹스', '코트', '');
+INSERT INTO category VALUES ('01070900', '패션의류', '캐주얼/유니섹스', '팬츠', '');
+
+-- 언더웨어
+INSERT INTO category VALUES ('01080000', '패션의류', '언더웨어', '', '');
+INSERT INTO category VALUES ('01080100', '패션의류', '언더웨어', '여성잠옷/홈웨어', '');
+INSERT INTO category VALUES ('01080200', '패션의류', '언더웨어', '남성잠옷/홈웨어', '');
+INSERT INTO category VALUES ('01080300', '패션의류', '언더웨어', '여성속옷상의', '');
+INSERT INTO category VALUES ('01080400', '패션의류', '언더웨어', '여성속옷하의', '');
+INSERT INTO category VALUES ('01080500', '패션의류', '언더웨어', '브래지어/팬티세트', '');
+INSERT INTO category VALUES ('01080600', '패션의류', '언더웨어', '남성속옷', '');
+INSERT INTO category VALUES ('01080700', '패션의류', '언더웨어', '커플잠옷/속옷세트', '');
+INSERT INTO category VALUES ('01080800', '패션의류', '언더웨어', '내복', '');
+INSERT INTO category VALUES ('01080900', '패션의류', '언더웨어', '주니어언더웨어', '');
+
+-- 디자이너샵
+INSERT INTO category VALUES ('01090000', '패션의류', '디자이너샵', '', '');
+INSERT INTO category VALUES ('01090100', '패션의류', '디자이너샵', '여성 아우터', '');
+INSERT INTO category VALUES ('01090200', '패션의류', '디자이너샵', '여성 상의', '');
+INSERT INTO category VALUES ('01090300', '패션의류', '디자이너샵', '여성 팬츠/셋업', '');
+INSERT INTO category VALUES ('01090400', '패션의류', '디자이너샵', '스커트/원피스', '');
+INSERT INTO category VALUES ('01090500', '패션의류', '디자이너샵', '여성 언더웨어/이지웨어', '');
+INSERT INTO category VALUES ('01090600', '패션의류', '디자이너샵', '남성 아우터', '');
+INSERT INTO category VALUES ('01090700', '패션의류', '디자이너샵', '남성 상의', '');
+INSERT INTO category VALUES ('01090800', '패션의류', '디자이너샵', '남성 팬츠/셋업', '');
+INSERT INTO category VALUES ('01090900', '패션의류', '디자이너샵', '남성 언더웨어/이지웨어', '');
+INSERT INTO category VALUES ('01091000', '패션의류', '디자이너샵', '커플 언더웨어/이지웨어', '');
+
+
+
+
+
+-- 신선식품의 최상위 카테고리
+INSERT INTO category VALUES ('11000000', '신선식품', '', '', '');
+
+INSERT INTO category VALUES ('11010000', '신선식품', '과일', '', '');
+INSERT INTO category VALUES ('11010100', '신선식품', '과일', '수박/멜론/참외/토마토', '');
+INSERT INTO category VALUES ('11010200', '신선식품', '과일', '포도/자두/복숭아', '');
+INSERT INTO category VALUES ('11010300', '신선식품', '과일', '바나나/파인애플', '');
+INSERT INTO category VALUES ('11010301', '신선식품', '과일', '바나나/파인애플', '바나나');
+INSERT INTO category VALUES ('11010302', '신선식품', '과일', '바나나/파인애플', '파인애플');
+INSERT INTO category VALUES ('11010400', '신선식품', '과일', '오렌지/자몽/레몬', '');
+INSERT INTO category VALUES ('11010500', '신선식품', '과일', '사과/배', '');
+INSERT INTO category VALUES ('11010501', '신선식품', '과일', '사과/배', '사과');
+INSERT INTO category VALUES ('11010502', '신선식품', '과일', '사과/배', '배');
+INSERT INTO category VALUES ('11010600', '신선식품', '과일', '딸기/키위/블루베리', '');
+INSERT INTO category VALUES ('11010700', '신선식품', '과일', '감귤/만감류', '');
+INSERT INTO category VALUES ('11010800', '신선식품', '과일', '감/곶감', '');
+INSERT INTO category VALUES ('11010900', '신선식품', '과일', '망고/열대과일', '');
+INSERT INTO category VALUES ('11011000', '신선식품', '과일', '체리/석류/아보카도', '');
+INSERT INTO category VALUES ('11011100', '신선식품', '과일', '건과일/분말', '');
+INSERT INTO category VALUES ('11011200', '신선식품', '과일', '냉동/간편과일', '');
+INSERT INTO category VALUES ('11011300', '신선식품', '과일', '기타과일', '');
+INSERT INTO category VALUES ('11011400', '신선식품', '과일', '과일세트', '');
+
+
+
+
+
+-- 채소
+INSERT INTO category VALUES ('11020000', '신선식품', '채소', '', '');
+INSERT INTO category VALUES ('11020100', '신선식품', '채소', '두부/콩나물/숙주나물', '');
+INSERT INTO category VALUES ('11020200', '신선식품', '채소', '고구마/감자', '');
+INSERT INTO category VALUES ('11020300', '신선식품', '채소', '양파/마늘/파/생강', '');
+INSERT INTO category VALUES ('11020400', '신선식품', '채소', '오이/가지/호박/옥수수', '');
+INSERT INTO category VALUES ('11020500', '신선식품', '채소', '상추/깻잎/쌈채소', '');
+INSERT INTO category VALUES ('11020600', '신선식품', '채소', '고추/피망/파프리카', '');
+INSERT INTO category VALUES ('11020700', '신선식품', '채소', '시금치/부추/나물', '');
+INSERT INTO category VALUES ('11020800', '신선식품', '채소', '양배추/양상추/브로콜리', '');
+INSERT INTO category VALUES ('11020900', '신선식품', '채소', '샐러드/어린잎채소', '');
+INSERT INTO category VALUES ('11021000', '신선식품', '채소', '당근/우엉/연근/마', '');
+INSERT INTO category VALUES ('11021100', '신선식품', '채소', '버섯', '');
+INSERT INTO category VALUES ('11021200', '신선식품', '채소', '배추/무/김장채소', '');
+INSERT INTO category VALUES ('11021300', '신선식품', '채소', '아스파라거스/허브류/기타', '');
+INSERT INTO category VALUES ('11021400', '신선식품', '채소', '인삼/더덕/약선재료', '');
+INSERT INTO category VALUES ('11021500', '신선식품', '채소', '간편채소', '');
+INSERT INTO category VALUES ('11021600', '신선식품', '채소', '채소세트', '');
+
+-- 쌀/잡곡/견과
+INSERT INTO category VALUES ('11030000', '신선식품', '쌀/잡곡/견과', '', '');
+INSERT INTO category VALUES ('11030100', '신선식품', '쌀/잡곡/견과', '백미', '');
+INSERT INTO category VALUES ('11030200', '신선식품', '쌀/잡곡/견과', '찹쌀/현미/흑미', '');
+INSERT INTO category VALUES ('11030300', '신선식품', '쌀/잡곡/견과', '혼합곡', '');
+INSERT INTO category VALUES ('11030400', '신선식품', '쌀/잡곡/견과', '콩/팥/보리/귀리', '');
+INSERT INTO category VALUES ('11030500', '신선식품', '쌀/잡곡/견과', '수수/조/깨/잡곡', '');
+INSERT INTO category VALUES ('11030600', '신선식품', '쌀/잡곡/견과', '견과류', '');
+INSERT INTO category VALUES ('11030700', '신선식품', '쌀/잡곡/견과', '선식/곡물가공', '');
+INSERT INTO category VALUES ('11030800', '신선식품', '쌀/잡곡/견과', '쌀/잡곡선물세트', '');
+
+-- 수산물/건해산
+INSERT INTO category VALUES ('11040000', '신선식품', '수산물/건해산', '', '');
+INSERT INTO category VALUES ('11040100', '신선식품', '수산물/건해산', '생선', '');
+INSERT INTO category VALUES ('11040200', '신선식품', '수산물/건해산', '오징어/낙지/주꾸미/문어', '');
+INSERT INTO category VALUES ('11040300', '신선식품', '수산물/건해산', '새우/게/랍스터', '');
 INSERT INTO category VALUES ('11040301', '신선식품', '수산물/건해산', '새우/게/랍스터', '새우');
 INSERT INTO category VALUES ('11040302', '신선식품', '수산물/건해산', '새우/게/랍스터', '꽃게/대게/킹크랩');
 INSERT INTO category VALUES ('11040303', '신선식품', '수산물/건해산', '새우/게/랍스터', '랍스터');
-INSERT INTO category VALUES ('09100400', '디지털/렌탈', '휴대폰/스마트기기', '자급제폰/공기계', '');
+INSERT INTO category VALUES ('11040400', '신선식품', '수산물/건해산', '전복/굴/멍게/조개류', '');
+INSERT INTO category VALUES ('11040500', '신선식품', '수산물/건해산', '회/명란/날치알/장', '');
+INSERT INTO category VALUES ('11040600', '신선식품', '수산물/건해산', '김/미역/기타해조류', '');
+INSERT INTO category VALUES ('11040700', '신선식품', '수산물/건해산', '멸치/황태/노가리', '');
+INSERT INTO category VALUES ('11040800', '신선식품', '수산물/건해산', '건오징어/건어물/다시팩', '');
+INSERT INTO category VALUES ('11040900', '신선식품', '수산물/건해산', '간편/모듬수산물', '');
+INSERT INTO category VALUES ('11041000', '신선식품', '수산물/건해산', '수산/건해산세트', '');
+
+-- 정육/계란
+INSERT INTO category VALUES ('11050000', '신선식품', '정육/계란류', '', '');
+INSERT INTO category VALUES ('11050100', '신선식품', '정육/계란류', '계란/알류', '');
+INSERT INTO category VALUES ('11050200', '신선식품', '정육/계란류', '닭/오리고기', '');
+INSERT INTO category VALUES ('11050300', '신선식품', '정육/계란류', '양고기', '');
+INSERT INTO category VALUES ('11050400', '신선식품', '정육/계란류', '돼지고기', '');
+INSERT INTO category VALUES ('11050500', '신선식품', '정육/계란류', '국내산소고기', '');
 INSERT INTO category VALUES ('11050501', '신선식품', '정육/계란류', '국내산소고기', '국거리');
-
 INSERT INTO category VALUES ('11050502', '신선식품', '정육/계란류', '국내산소고기', '장조림/갈비/찜');
-
 INSERT INTO category VALUES ('11050503', '신선식품', '정육/계란류', '국내산소고기', '구이/스테이크');
-
 INSERT INTO category VALUES ('11050504', '신선식품', '정육/계란류', '국내산소고기', '불고기/잡채/샤브샤브용');
-
 INSERT INTO category VALUES ('11050505', '신선식품', '정육/계란류', '국내산소고기', '다짐육/이유식');
-
 INSERT INTO category VALUES ('11050506', '신선식품', '정육/계란류', '국내산소고기', '사골/곰탕');
-
-INSERT INTO category VALUES ('12030101', '가공/건강식품', '김치/반찬/델리', '김치', '포기/배추김치');
-
-INSERT INTO category VALUES ('12030102', '가공/건강식품', '김치/반찬/델리', '김치', '무/열무김치');
-
-INSERT INTO category VALUES ('12030103', '가공/건강식품', '김치/반찬/델리', '김치', '물김치');
-
-INSERT INTO category VALUES ('12030104', '가공/건강식품', '김치/반찬/델리', '김치', '갓김치/기타김치');
-
-INSERT INTO category VALUES ('11010301', '신선식품', '과일', '바나나/파인애플', '바나나');
-
-INSERT INTO category VALUES ('11010302', '신선식품', '과일', '바나나/파인애플', '파인애플');
-
+INSERT INTO category VALUES ('11050600', '신선식품', '정육/계란류', '수입산소고기', '');
+INSERT INTO category VALUES ('11050700', '신선식품', '정육/계란류', '양념육/가공육', '');
 INSERT INTO category VALUES ('11050701', '신선식품', '정육/계란류', '양념육/가공육', '소고기');
-
 INSERT INTO category VALUES ('11050702', '신선식품', '정육/계란류', '양념육/가공육', '돼지고기');
-
 INSERT INTO category VALUES ('11050703', '신선식품', '정육/계란류', '양념육/가공육', '닭고기');
-
 INSERT INTO category VALUES ('11050704', '신선식품', '정육/계란류', '양념육/가공육', '오리고기');
-
 INSERT INTO category VALUES ('11050705', '신선식품', '정육/계란류', '양념육/가공육', '양고기');
-
 INSERT INTO category VALUES ('11050706', '신선식품', '정육/계란류', '양념육/가공육', '기타 가공육');
+INSERT INTO category VALUES ('11050800', '신선식품', '정육/계란류', '축산선물세트', '');
 
-INSERT INTO category VALUES ('11010501', '신선식품', '과일', '사과/배', '사과');
+-- 친환경/유기농
+INSERT INTO category VALUES ('11060000', '신선식품', '친환경/유기농', '', '');
 
-INSERT INTO category VALUES ('11010502', '신선식품', '과일', '사과/배', '배');
 
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO category VALUES ('12000000', '가공/건강식품', '', '', '');
+
+-- 우유/유제품
+INSERT INTO category VALUES ('12010000', '가공/건강식품', '우유/유제품', '', '');
+INSERT INTO category VALUES ('12010100', '가공/건강식품', '우유/유제품', '우유', '');
+INSERT INTO category VALUES ('12010200', '가공/건강식품', '우유/유제품', '요거트/요구르트', '');
+INSERT INTO category VALUES ('12010300', '가공/건강식품', '우유/유제품', '두유', '');
+INSERT INTO category VALUES ('12010400', '가공/건강식품', '우유/유제품', '치즈', '');
+INSERT INTO category VALUES ('12010500', '가공/건강식품', '우유/유제품', '버터/생크림/연유', '');
+
+-- 밀키트/간편식
+INSERT INTO category VALUES ('12020000', '가공/건강식품', '밀키트/간편식', '', '');
+INSERT INTO category VALUES ('12020100', '가공/건강식품', '밀키트/간편식', '밀키트', '');
+INSERT INTO category VALUES ('12020200', '가공/건강식품', '밀키트/간편식', '볶음밥/찌개/죽/스프', '');
+INSERT INTO category VALUES ('12020300', '가공/건강식품', '밀키트/간편식', '만두/돈가스/치킨/튀김', '');
+INSERT INTO category VALUES ('12020400', '가공/건강식품', '밀키트/간편식', '떡갈비/스테이크/전', '');
+INSERT INTO category VALUES ('12020500', '가공/건강식품', '밀키트/간편식', '햄/단무지/어묵/맛살', '');
+INSERT INTO category VALUES ('12020600', '가공/건강식품', '밀키트/간편식', '유부/묵/떡', '');
+INSERT INTO category VALUES ('12020700', '가공/건강식품', '밀키트/간편식', '피자/핫도그/파스타/떡볶이', '');
+INSERT INTO category VALUES ('12020800', '가공/건강식품', '밀키트/간편식', '중식/일식/세계요리', '');
+INSERT INTO category VALUES ('12020900', '가공/건강식품', '밀키트/간편식', '훈제오리/족발/곱창/볶음/찜', '');
+INSERT INTO category VALUES ('12021000', '가공/건강식품', '밀키트/간편식', '즉석밥/컵밥', '');
+INSERT INTO category VALUES ('12021100', '가공/건강식품', '밀키트/간편식', '카레/짜장/즉석요리', '');
+
+-- 김치/반찬/델리
+INSERT INTO category VALUES ('12030000', '가공/건강식품', '김치/반찬/델리', '', '');
+INSERT INTO category VALUES ('12030100', '가공/건강식품', '김치/반찬/델리', '김치', '');
+INSERT INTO category VALUES ('12030101', '가공/건강식품', '김치/반찬/델리', '김치', '포기/배추김치');
+INSERT INTO category VALUES ('12030102', '가공/건강식품', '김치/반찬/델리', '김치', '무/열무김치');
+INSERT INTO category VALUES ('12030103', '가공/건강식품', '김치/반찬/델리', '김치', '물김치');
+INSERT INTO category VALUES ('12030104', '가공/건강식품', '김치/반찬/델리', '김치', '갓김치/기타김치');
+INSERT INTO category VALUES ('12030200', '가공/건강식품', '김치/반찬/델리', '반찬/젓갈', '');
+INSERT INTO category VALUES ('12030300', '가공/건강식품', '김치/반찬/델리', '김밥/도시락/델리', '');
+INSERT INTO category VALUES ('12030400', '가공/건강식품', '김치/반찬/델리', '샐러드', '');
+INSERT INTO category VALUES ('12030500', '가공/건강식품', '김치/반찬/델리', '매장즉석조리식품', '');
+
+-- 면류/통조림
+INSERT INTO category VALUES ('12040000', '가공/건강식품', '면류/통조림', '', '');
+INSERT INTO category VALUES ('12040100', '가공/건강식품', '면류/통조림', '라면', '');
+INSERT INTO category VALUES ('12040200', '가공/건강식품', '면류/통조림', '즉석면요리', '');
+INSERT INTO category VALUES ('12040300', '가공/건강식품', '면류/통조림', '파스타면/생면/건면', '');
+INSERT INTO category VALUES ('12040400', '가공/건강식품', '면류/통조림', '참치/스팸/축수산통조림', '');
+INSERT INTO category VALUES ('12040500', '가공/건강식품', '면류/통조림', '옥수수/피클/과일통조림', '');
+INSERT INTO category VALUES ('12040600', '가공/건강식품', '면류/통조림', '통조림선물세트', '');
+
+-- 생수/음료/주류
+INSERT INTO category VALUES ('12050000', '가공/건강식품', '생수/음료/주류', '', '');
+INSERT INTO category VALUES ('12050100', '가공/건강식품', '생수/음료/주류', '생수', '');
+INSERT INTO category VALUES ('12050200', '가공/건강식품', '생수/음료/주류', '탄산수', '');
+INSERT INTO category VALUES ('12050300', '가공/건강식품', '생수/음료/주류', '탄산음료', '');
+INSERT INTO category VALUES ('12050400', '가공/건강식품', '생수/음료/주류', '과일/야채음료', '');
+INSERT INTO category VALUES ('12050500', '가공/건강식품', '생수/음료/주류', '스포츠/건강음료', '');
+INSERT INTO category VALUES ('12050600', '가공/건강식품', '생수/음료/주류', '전통/차/기타음료', '');
+INSERT INTO category VALUES ('12050700', '가공/건강식품', '생수/음료/주류', '음료선물세트', '');
+INSERT INTO category VALUES ('12050800', '가공/건강식품', '생수/음료/주류', '전통주', '');
+INSERT INTO category VALUES ('12050900', '가공/건강식품', '생수/음료/주류', '와인/양주매장픽업', '');
+INSERT INTO category VALUES ('12051000', '가공/건강식품', '생수/음료/주류', '무알콜맥주/칵테일', '');
+
+-- 커피/원두/차
+INSERT INTO category VALUES ('12060000', '가공/건강식품', '커피/원두/차', '', '');
+INSERT INTO category VALUES ('12060100', '가공/건강식품', '커피/원두/차', '커피믹스', '');
+INSERT INTO category VALUES ('12060200', '가공/건강식품', '커피/원두/차', '원두/생두', '');
+INSERT INTO category VALUES ('12060300', '가공/건강식품', '커피/원두/차', '드립백/캡슐/더치커피', '');
+INSERT INTO category VALUES ('12060400', '가공/건강식품', '커피/원두/차', '커피음료', '');
+INSERT INTO category VALUES ('12060500', '가공/건강식품', '커피/원두/차', '홈카페재료', '');
+INSERT INTO category VALUES ('12060600', '가공/건강식품', '커피/원두/차', '녹차/보리차/뿌리차', '');
+INSERT INTO category VALUES ('12060700', '가공/건강식품', '커피/원두/차', '홍차/밀크티', '');
+INSERT INTO category VALUES ('12060800', '가공/건강식품', '커피/원두/차', '보이차/허브차/꽃차', '');
+INSERT INTO category VALUES ('12060900', '가공/건강식품', '커피/원두/차', '과실/곡물/전통차', '');
+INSERT INTO category VALUES ('12061000', '가공/건강식품', '커피/원두/차', '코코아/핫초코', '');
+INSERT INTO category VALUES ('12061100', '가공/건강식품', '커피/원두/차', '커피/차선물세트', '');
+
+-- 과자/간식/시리얼/빙과
+INSERT INTO category VALUES ('12070000', '가공/건강식품', '과자/간식/시리얼/빙과', '', '');
+INSERT INTO category VALUES ('12070100', '가공/건강식품', '과자/간식/시리얼/빙과', '과자/쿠키/파이', '');
+INSERT INTO category VALUES ('12070200', '가공/건강식품', '과자/간식/시리얼/빙과', '떡/한과/전통과자', '');
+INSERT INTO category VALUES ('12070300', '가공/건강식품', '과자/간식/시리얼/빙과', '소시지/원물/안주스낵', '');
+INSERT INTO category VALUES ('12070400', '가공/건강식품', '과자/간식/시리얼/빙과', '사탕/캬라멜/껌', '');
+INSERT INTO category VALUES ('12070500', '가공/건강식품', '과자/간식/시리얼/빙과', '젤리/푸딩', '');
+INSERT INTO category VALUES ('12070600', '가공/건강식품', '과자/간식/시리얼/빙과', '초콜릿/초코바', '');
+INSERT INTO category VALUES ('12070700', '가공/건강식품', '과자/간식/시리얼/빙과', '시리얼', '');
+INSERT INTO category VALUES ('12070800', '가공/건강식품', '과자/간식/시리얼/빙과', '빙과/아이스크림', '');
+INSERT INTO category VALUES ('12070900', '가공/건강식품', '과자/간식/시리얼/빙과', '얼음/빙수재료', '');
+
+-- 친환경/유기농
+INSERT INTO category VALUES ('12080000', '가공/건강식품', '친환경/유기농', '', '');
+INSERT INTO category VALUES ('12080100', '가공/건강식품', '친환경/유기농', '과일/채소', '');
+INSERT INTO category VALUES ('12080200', '가공/건강식품', '친환경/유기농', '정육/계란류', '');
+INSERT INTO category VALUES ('12080300', '가공/건강식품', '친환경/유기농', '쌀/잡곡/견과', '');
+INSERT INTO category VALUES ('12080400', '가공/건강식품', '친환경/유기농', '수산물/건해산물', '');
+INSERT INTO category VALUES ('12080500', '가공/건강식품', '친환경/유기농', '우유/유제품/유아식', '');
+INSERT INTO category VALUES ('12080600', '가공/건강식품', '친환경/유기농', '냉장/냉동/간편식', '');
+INSERT INTO category VALUES ('12080700', '가공/건강식품', '친환경/유기농', '장류/양념/분말/오일', '');
+INSERT INTO category VALUES ('12080800', '가공/건강식품', '친환경/유기농', '라면/즉석식품/통조림', '');
+INSERT INTO category VALUES ('12080900', '가공/건강식품', '친환경/유기농', '차/음료/커피', '');
+INSERT INTO category VALUES ('12081000', '가공/건강식품', '친환경/유기농', '과자/스낵/시리얼', '');
+INSERT INTO category VALUES ('12081100', '가공/건강식품', '친환경/유기농', '건강식품/즙', '');
+INSERT INTO category VALUES ('12081200', '가공/건강식품', '친환경/유기농', '유기농/친환경선물세트', '');
+
+-- 장류/양념/가루/오일
+INSERT INTO category VALUES ('12090000', '가공/건강식품', '장류/양념/가루/오일', '', '');
+INSERT INTO category VALUES ('12090100', '가공/건강식품', '장류/양념/가루/오일', '장류/양념', '');
+INSERT INTO category VALUES ('12090200', '가공/건강식품', '장류/양념/가루/오일', '파스타소스/페스토', '');
+INSERT INTO category VALUES ('12090300', '가공/건강식품', '장류/양념/가루/오일', '케찹/마요네즈/디핑소스', '');
+INSERT INTO category VALUES ('12090400', '가공/건강식품', '장류/양념/가루/오일', '돈까스/스테이크소스', '');
+INSERT INTO category VALUES ('12090500', '가공/건강식품', '장류/양념/가루/오일', '중식/일식/기타소스', '');
+INSERT INTO category VALUES ('12090600', '가공/건강식품', '장류/양념/가루/오일', '샐러드드레싱', '');
+INSERT INTO category VALUES ('12090700', '가공/건강식품', '장류/양념/가루/오일', '밀가루/부침가루/곡분류', '');
+INSERT INTO category VALUES ('12090800', '가공/건강식품', '장류/양념/가루/오일', '소금/설탕/후추/향신료', '');
+INSERT INTO category VALUES ('12090900', '가공/건강식품', '장류/양념/가루/오일', '조미료/액젓/물엿/식초', '');
+INSERT INTO category VALUES ('12091000', '가공/건강식품', '장류/양념/가루/오일', '식용유/참기름/오일류', '');
+INSERT INTO category VALUES ('12091100', '가공/건강식품', '장류/양념/가루/오일', '조미료/오일선물세트', '');
+INSERT INTO category VALUES ('12091200', '가공/건강식품', '장류/양념/가루/오일', '시럽/제빵믹스/재료', '');
+
+-- 베이커리/잼
+INSERT INTO category VALUES ('12100000', '가공/건강식품', '베이커리/잼', '', '');
+INSERT INTO category VALUES ('12100100', '가공/건강식품', '베이커리/잼', '식빵', '');
+INSERT INTO category VALUES ('12100200', '가공/건강식품', '베이커리/잼', '베이커리빵', '');
+INSERT INTO category VALUES ('12100300', '가공/건강식품', '베이커리/잼', '쿠키/디저트/케이크', '');
+INSERT INTO category VALUES ('12100400', '가공/건강식품', '베이커리/잼', '샌드위치', '');
+INSERT INTO category VALUES ('12100500', '가공/건강식품', '베이커리/잼', '일반빵', '');
+INSERT INTO category VALUES ('12100600', '가공/건강식품', '베이커리/잼', '호빵/찐빵', '');
+INSERT INTO category VALUES ('12100700', '가공/건강식품', '베이커리/잼', '생지/냉동반죽', '');
+INSERT INTO category VALUES ('12100800', '가공/건강식품', '베이커리/잼', '잼/스프레드', '');
+-- 건강식품
+INSERT INTO category VALUES ('12110000', '가공/건강식품', '건강식품', '', '');
+INSERT INTO category VALUES ('12110100', '가공/건강식품', '건강식품', '홍삼/인삼/녹용', '');
+INSERT INTO category VALUES ('12110200', '가공/건강식품', '건강식품', '건강즙/건강액', '');
+INSERT INTO category VALUES ('12110300', '가공/건강식품', '건강식품', '건강분말/건강환', '');
+INSERT INTO category VALUES ('12110400', '가공/건강식품', '건강식품', '건강차/건강재료', '');
+INSERT INTO category VALUES ('12110500', '가공/건강식품', '건강식품', '꿀/로얄젤리/프로폴리스', '');
+INSERT INTO category VALUES ('12110600', '가공/건강식품', '건강식품', '비타민', '');
+INSERT INTO category VALUES ('12110700', '가공/건강식품', '건강식품', '유산균', '');
+INSERT INTO category VALUES ('12110800', '가공/건강식품', '건강식품', '미네랄', '');
+INSERT INTO category VALUES ('12110900', '가공/건강식품', '건강식품', '영양제/건강기능식품', '');
+INSERT INTO category VALUES ('12111000', '가공/건강식품', '건강식품', '다이어트/뷰티', '');
+INSERT INTO category VALUES ('12111100', '가공/건강식품', '건강식품', '헬스보충제', '');
+INSERT INTO category VALUES ('12111200', '가공/건강식품', '건강식품', '영양식/기타 건강식품', '');
+INSERT INTO category VALUES ('12111300', '가공/건강식품', '건강식품', '기능별건강식품', '');
+INSERT INTO category VALUES ('12111400', '가공/건강식품', '건강식품', '대상별건강식품', '');
+
+
+
+
+-- 시계/쥬얼리
+INSERT INTO category VALUES ('02000000', '패션잡화', '', '', '');
+INSERT INTO category VALUES ('02030000', '패션잡화', '시계/쥬얼리', '', '');
+INSERT INTO category VALUES ('02030100', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '');
 INSERT INTO category VALUES ('02030101', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '14/18k목걸이');
-
 INSERT INTO category VALUES ('02030102', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '실버목걸이');
-
 INSERT INTO category VALUES ('02030103', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '패션목걸이');
-
 INSERT INTO category VALUES ('02030104', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '진주/원석목걸이');
-
 INSERT INTO category VALUES ('02030105', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '다이아몬드목걸이');
-
 INSERT INTO category VALUES ('02030106', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '랩그로운 다이아몬드목걸이');
-
 INSERT INTO category VALUES ('02030107', '패션잡화', '시계/쥬얼리', '목걸이/팬던트', '팬던트');
+INSERT INTO category VALUES ('02030200', '패션잡화', '시계/쥬얼리', '귀걸이', '');
+INSERT INTO category VALUES ('02030300', '패션잡화', '시계/쥬얼리', '팔찌', '');
+INSERT INTO category VALUES ('02030400', '패션잡화', '시계/쥬얼리', '발찌', '');
+INSERT INTO category VALUES ('02030500', '패션잡화', '시계/쥬얼리', '반지', '');
+INSERT INTO category VALUES ('02030600', '패션잡화', '시계/쥬얼리', '순금', '');
+INSERT INTO category VALUES ('02030700', '패션잡화', '시계/쥬얼리', '쥬얼리세트', '');
+INSERT INTO category VALUES ('02030800', '패션잡화', '시계/쥬얼리', '남성쥬얼리', '');
+INSERT INTO category VALUES ('02030900', '패션잡화', '시계/쥬얼리', '쥬얼리함/기타ACC', '');
+INSERT INTO category VALUES ('02031000', '패션잡화', '시계/쥬얼리', '시계', '');
 
+-- 가방/지갑
+INSERT INTO category VALUES ('02040000', '패션잡화', '가방/지갑', '', '');
+INSERT INTO category VALUES ('02040100', '패션잡화', '가방/지갑', '여성가방', '');
+INSERT INTO category VALUES ('02040200', '패션잡화', '가방/지갑', '남성가방', '');
+INSERT INTO category VALUES ('02040300', '패션잡화', '가방/지갑', '캐주얼가방', '');
+INSERT INTO category VALUES ('02040400', '패션잡화', '가방/지갑', '여행용가방', '');
+INSERT INTO category VALUES ('02040500', '패션잡화', '가방/지갑', '지갑', '');
+INSERT INTO category VALUES ('02040600', '패션잡화', '가방/지갑', '가방액세서리', '');
+
+-- 모자/장갑/ACC
+INSERT INTO category VALUES ('02050000', '패션잡화', '모자/장갑/ACC', '', '');
+INSERT INTO category VALUES ('02050100', '패션잡화', '모자/장갑/ACC', '모자', '');
+INSERT INTO category VALUES ('02050200', '패션잡화', '모자/장갑/ACC', '벨트/ACC', '');
+INSERT INTO category VALUES ('02050300', '패션잡화', '모자/장갑/ACC', '머플러/스카프', '');
+INSERT INTO category VALUES ('02050400', '패션잡화', '모자/장갑/ACC', '장갑/ACC', '');
+INSERT INTO category VALUES ('02050500', '패션잡화', '모자/장갑/ACC', '넥타이/브로치/타이ACC', '');
+INSERT INTO category VALUES ('02050600', '패션잡화', '모자/장갑/ACC', '선글라스/안경', '');
+INSERT INTO category VALUES ('02050700', '패션잡화', '모자/장갑/ACC', '헤어액세서리', '');
+INSERT INTO category VALUES ('02050800', '패션잡화', '모자/장갑/ACC', '양말/ACC', '');
+INSERT INTO category VALUES ('02050900', '패션잡화', '모자/장갑/ACC', '스타킹/레깅스', '');
+INSERT INTO category VALUES ('02051000', '패션잡화', '모자/장갑/ACC', '우산/양산', '');
+INSERT INTO category VALUES ('02051100', '패션잡화', '모자/장갑/ACC', '손수건/행커치프', '');
+
+-- 슈즈/운동화
+INSERT INTO category VALUES ('02060000', '패션잡화', '슈즈/운동화', '', '');
+INSERT INTO category VALUES ('02060100', '패션잡화', '슈즈/운동화', 'SEASONAL', '');
+INSERT INTO category VALUES ('02060200', '패션잡화', '슈즈/운동화', '여성신발', '');
+INSERT INTO category VALUES ('02060300', '패션잡화', '슈즈/운동화', '남성신발', '');
+INSERT INTO category VALUES ('02060400', '패션잡화', '슈즈/운동화', '아동신발', '');
+INSERT INTO category VALUES ('02060500', '패션잡화', '슈즈/운동화', '슈즈용품', '');
+
+
+
+
+INSERT INTO category VALUES ('07000000', '가구/인테리어', '', '', '');
 INSERT INTO category VALUES ('07040201', '가구/인테리어', '침구/패브릭', '침구단품', '매트/침대커버');
-
 INSERT INTO category VALUES ('07040202', '가구/인테리어', '침구/패브릭', '침구단품', '베개/베개커버');
-
 INSERT INTO category VALUES ('07040203', '가구/인테리어', '침구/패브릭', '침구단품', '양모/솜이불');
-
 INSERT INTO category VALUES ('07040204', '가구/인테리어', '침구/패브릭', '침구단품', '거위털/오리털이불');
-
 INSERT INTO category VALUES ('07040205', '가구/인테리어', '침구/패브릭', '침구단품', '담요/패드');
-
 INSERT INTO category VALUES ('07040206', '가구/인테리어', '침구/패브릭', '침구단품', '요/요커버');
-
 INSERT INTO category VALUES ('07040207', '가구/인테리어', '침구/패브릭', '침구단품', '난방텐트');
+-- 침실가구
+INSERT INTO category VALUES ('07010000', '가구/인테리어', '침실가구', '', '');
+INSERT INTO category VALUES ('07010100', '가구/인테리어', '침실가구', '침대', '');
+INSERT INTO category VALUES ('07010200', '가구/인테리어', '침실가구', '매트리스', '');
+INSERT INTO category VALUES ('07010300', '가구/인테리어', '침실가구', '베드벤치', '');
+INSERT INTO category VALUES ('07010400', '가구/인테리어', '침실가구', '협탁', '');
+INSERT INTO category VALUES ('07010500', '가구/인테리어', '침실가구', '옷장', '');
+INSERT INTO category VALUES ('07010600', '가구/인테리어', '침실가구', '붙박이장', '');
+INSERT INTO category VALUES ('07010700', '가구/인테리어', '침실가구', '행거', '');
+INSERT INTO category VALUES ('07010800', '가구/인테리어', '침실가구', '서랍장', '');
+INSERT INTO category VALUES ('07010900', '가구/인테리어', '침실가구', '화장대', '');
+INSERT INTO category VALUES ('07011000', '가구/인테리어', '침실가구', '거울', '');
 
+-- 거실/주방가구
+INSERT INTO category VALUES ('07020000', '가구/인테리어', '거실/주방가구', '', '');
+INSERT INTO category VALUES ('07020100', '가구/인테리어', '거실/주방가구', '소파', '');
+INSERT INTO category VALUES ('07020200', '가구/인테리어', '거실/주방가구', '거실장', '');
+INSERT INTO category VALUES ('07020300', '가구/인테리어', '거실/주방가구', '테이블', '');
+INSERT INTO category VALUES ('07020400', '가구/인테리어', '거실/주방가구', '식탁', '');
+INSERT INTO category VALUES ('07020500', '가구/인테리어', '거실/주방가구', '수납정리가구', '');
+INSERT INTO category VALUES ('07020600', '가구/인테리어', '거실/주방가구', '주방수납가구', '');
+
+-- 서재/유아동 가구
+INSERT INTO category VALUES ('07030000', '가구/인테리어', '서재/유아동 가구', '', '');
+INSERT INTO category VALUES ('07030100', '가구/인테리어', '서재/유아동 가구', '책상', '');
+INSERT INTO category VALUES ('07030200', '가구/인테리어', '서재/유아동 가구', '책장', '');
+INSERT INTO category VALUES ('07030300', '가구/인테리어', '서재/유아동 가구', '의자', '');
+INSERT INTO category VALUES ('07030400', '가구/인테리어', '서재/유아동 가구', '유아동가구', '');
+INSERT INTO category VALUES ('07030500', '가구/인테리어', '서재/유아동 가구', '사무용가구', '');
+INSERT INTO category VALUES ('07030600', '가구/인테리어', '서재/유아동 가구', '교구용가구', '');
+INSERT INTO category VALUES ('07030700', '가구/인테리어', '서재/유아동 가구', '야외가구', '');
+-- 침구/패브릭
+INSERT INTO category VALUES ('07040000', '가구/인테리어', '침구/패브릭', '', '');
+INSERT INTO category VALUES ('07040100', '가구/인테리어', '침구/패브릭', '침구세트', '');
+INSERT INTO category VALUES ('07040200', '가구/인테리어', '침구/패브릭', '침구단품', '');
+INSERT INTO category VALUES ('07040300', '가구/인테리어', '침구/패브릭', '유아침구', '');
+INSERT INTO category VALUES ('07040400', '가구/인테리어', '침구/패브릭', '계절침구', '');
+INSERT INTO category VALUES ('07040500', '가구/인테리어', '침구/패브릭', '커튼', '');
+INSERT INTO category VALUES ('07040600', '가구/인테리어', '침구/패브릭', '라텍스/기능성침구', '');
+INSERT INTO category VALUES ('07040700', '가구/인테리어', '침구/패브릭', '충전재', '');
+INSERT INTO category VALUES ('07040800', '가구/인테리어', '침구/패브릭', '블라인드', '');
+INSERT INTO category VALUES ('07040900', '가구/인테리어', '침구/패브릭', '러그/카페트', '');
+INSERT INTO category VALUES ('07041000', '가구/인테리어', '침구/패브릭', '타월', '');
+INSERT INTO category VALUES ('07041100', '가구/인테리어', '침구/패브릭', '쿠션/방석', '');
+INSERT INTO category VALUES ('07041200', '가구/인테리어', '침구/패브릭', '생활소품/커버류', '');
+
+-- 갤러리/인테리어소품
+INSERT INTO category VALUES ('07050000', '가구/인테리어', '갤러리/인테리어소품', '', '');
+INSERT INTO category VALUES ('07050100', '가구/인테리어', '갤러리/인테리어소품', '갤러리', '');
+INSERT INTO category VALUES ('07050200', '가구/인테리어', '갤러리/인테리어소품', '조명램프', '');
+INSERT INTO category VALUES ('07050300', '가구/인테리어', '갤러리/인테리어소품', '인테리어조명', '');
+INSERT INTO category VALUES ('07050400', '가구/인테리어', '갤러리/인테리어소품', '스탠드', '');
+INSERT INTO category VALUES ('07050500', '가구/인테리어', '갤러리/인테리어소품', '캔들/디퓨저', '');
+INSERT INTO category VALUES ('07050600', '가구/인테리어', '갤러리/인테리어소품', '시계', '');
+INSERT INTO category VALUES ('07050700', '가구/인테리어', '갤러리/인테리어소품', '원예/가드닝/화훼', '');
+INSERT INTO category VALUES ('07050800', '가구/인테리어', '갤러리/인테리어소품', '데코 소품', '');
+INSERT INTO category VALUES ('07050900', '가구/인테리어', '갤러리/인테리어소품', '인테리어파티션', '');
+INSERT INTO category VALUES ('07051000', '가구/인테리어', '갤러리/인테리어소품', '수공예', '');
+INSERT INTO category VALUES ('07051100', '가구/인테리어', '갤러리/인테리어소품', '홈파티용품', '');
+INSERT INTO category VALUES ('07051200', '가구/인테리어', '갤러리/인테리어소품', '미술관/아트샵', '');
+
+-- DIY/시공
+INSERT INTO category VALUES ('07060000', '가구/인테리어', 'DIY/시공', '', '');
+INSERT INTO category VALUES ('07060100', '가구/인테리어', 'DIY/시공', '벽지바닥시공', '');
+INSERT INTO category VALUES ('07060200', '가구/인테리어', 'DIY/시공', '도어/중문시공', '');
+INSERT INTO category VALUES ('07060300', '가구/인테리어', 'DIY/시공', '창호시공', '');
+INSERT INTO category VALUES ('07060400', '가구/인테리어', 'DIY/시공', '도어/창호 용품', '');
+INSERT INTO category VALUES ('07060500', '가구/인테리어', 'DIY/시공', '욕실시공', '');
+INSERT INTO category VALUES ('07060600', '가구/인테리어', 'DIY/시공', '주방시공', '');
+INSERT INTO category VALUES ('07060700', '가구/인테리어', 'DIY/시공', '페인트시공', '');
+INSERT INTO category VALUES ('07060800', '가구/인테리어', 'DIY/시공', '벽지/도배용품', '');
+INSERT INTO category VALUES ('07060900', '가구/인테리어', 'DIY/시공', '페인트/페인트용품', '');
+INSERT INTO category VALUES ('07061000', '가구/인테리어', 'DIY/시공', '바닥재/타일/기타자재', '');
+INSERT INTO category VALUES ('07061100', '가구/인테리어', 'DIY/시공', '시트지/스티커', '');
+INSERT INTO category VALUES ('07061200', '가구/인테리어', 'DIY/시공', '기타DIY용품', '');
+
+
+
+
+
+
+
+
+
+-- 컴퓨터/노트북/태블릿 카테고리
+INSERT INTO category VALUES ('09000000', '디지털/렌탈', '', '', '');
+INSERT INTO category VALUES ('09010000', '디지털/렌탈', '컴퓨터/노트북/태블릿', '', '');
+INSERT INTO category VALUES ('09010100', '디지털/렌탈', '컴퓨터/노트북/태블릿', '노트북', '');
 INSERT INTO category VALUES ('09090101', '디지털/렌탈', '영상/음향가전', '스피커', '일반스피커');
-
 INSERT INTO category VALUES ('09090102', '디지털/렌탈', '영상/음향가전', '스피커', '블루투스스피커');
-
 INSERT INTO category VALUES ('09090103', '디지털/렌탈', '영상/음향가전', '스피커', 'AI스피커');
-
 INSERT INTO category VALUES ('09090104', '디지털/렌탈', '영상/음향가전', '스피커', '채널스피커');
-
 INSERT INTO category VALUES ('09090105', '디지털/렌탈', '영상/음향가전', '스피커', 'PC스피커');
-
 INSERT INTO category VALUES ('09090106', '디지털/렌탈', '영상/음향가전', '스피커', '사운드바');
-
-INSERT INTO category VALUES ('12090100', '가공/건강식품', '베이커리/잼', '식빵', '');
-
 INSERT INTO category VALUES ('09010200', '디지털/렌탈', '컴퓨터/노트북/태블릿', '태블릿PC/패드', '');
+INSERT INTO category VALUES ('09010300', '디지털/렌탈', '컴퓨터/노트북/태블릿', '리퍼 노트북', '');
+INSERT INTO category VALUES ('09010400', '디지털/렌탈', '컴퓨터/노트북/태블릿', '노트북 액세서리', '');
+INSERT INTO category VALUES ('09010500', '디지털/렌탈', '컴퓨터/노트북/태블릿', '태블릿PC 액세서리', '');
+INSERT INTO category VALUES ('09010600', '디지털/렌탈', '컴퓨터/노트북/태블릿', '모니터', '');
+INSERT INTO category VALUES ('09010700', '디지털/렌탈', '컴퓨터/노트북/태블릿', '데스크탑', '');
+
+-- 게임/타이틀 카테고리
+INSERT INTO category VALUES ('09020000', '디지털/렌탈', '게임/타이틀', '', '');
+INSERT INTO category VALUES ('09020100', '디지털/렌탈', '게임/타이틀', '게임기', '');
+INSERT INTO category VALUES ('09020200', '디지털/렌탈', '게임/타이틀', '게임 타이틀', '');
+INSERT INTO category VALUES ('09020300', '디지털/렌탈', '게임/타이틀', '게임 주변기기', '');
+INSERT INTO category VALUES ('09020400', '디지털/렌탈', '게임/타이틀', '플레이스테이션', '');
+INSERT INTO category VALUES ('09020500', '디지털/렌탈', '게임/타이틀', '닌텐도', '');
+INSERT INTO category VALUES ('09020600', '디지털/렌탈', '게임/타이틀', '오큘러스', '');
+INSERT INTO category VALUES ('09020700', '디지털/렌탈', '게임/타이틀', 'XBOX', '');
+
+-- PC주변기기/저장장치 카테고리
+INSERT INTO category VALUES ('09030000', '디지털/렌탈', 'PC주변기기/저장장치', '', '');
+INSERT INTO category VALUES ('09030100', '디지털/렌탈', 'PC주변기기/저장장치', '키보드/마우스', '');
+INSERT INTO category VALUES ('09030200', '디지털/렌탈', 'PC주변기기/저장장치', 'PC액세서리/케이블', '');
+INSERT INTO category VALUES ('09030300', '디지털/렌탈', 'PC주변기기/저장장치', 'PC부품/CPU', '');
+INSERT INTO category VALUES ('09030400', '디지털/렌탈', 'PC주변기기/저장장치', 'PC주변기기', '');
+INSERT INTO category VALUES ('09030500', '디지털/렌탈', 'PC주변기기/저장장치', '미디어 장비', '');
+INSERT INTO category VALUES ('09030600', '디지털/렌탈', 'PC주변기기/저장장치', '저장장치', '');
+INSERT INTO category VALUES ('09030700', '디지털/렌탈', 'PC주변기기/저장장치', '프린터/복합기', '');
+
+-- 카메라/캠코더 카테고리
+INSERT INTO category VALUES ('09040000', '디지털/렌탈', '카메라/캠코더', '', '');
+INSERT INTO category VALUES ('09040100', '디지털/렌탈', '카메라/캠코더', '디지털카메라/액션캠', '');
+INSERT INTO category VALUES ('09040200', '디지털/렌탈', '카메라/캠코더', '렌즈/렌즈용품', '');
+INSERT INTO category VALUES ('09040300', '디지털/렌탈', '카메라/캠코더', '즉석/필름카메라', '');
+INSERT INTO category VALUES ('09040400', '디지털/렌탈', '카메라/캠코더', '카메라/캠코더용품', '');
+INSERT INTO category VALUES ('09040500', '디지털/렌탈', '카메라/캠코더', '삼각대/케이스', '');
+INSERT INTO category VALUES ('09040600', '디지털/렌탈', '카메라/캠코더', '촬영용 드론', '');
+INSERT INTO category VALUES ('09040700', '디지털/렌탈', '카메라/캠코더', '1인미디어 전용관', '');
+INSERT INTO category VALUES ('09040800', '디지털/렌탈', '카메라/캠코더', 'CCTV', '');
+
+-- 에어컨/계절가전 카테고리
+INSERT INTO category VALUES ('09050000', '디지털/렌탈', '에어컨/계절가전', '', '');
+INSERT INTO category VALUES ('09050100', '디지털/렌탈', '에어컨/계절가전', '난방용품', '');
+INSERT INTO category VALUES ('09050200', '디지털/렌탈', '에어컨/계절가전', '제습기/공기청정기', '');
+INSERT INTO category VALUES ('09050300', '디지털/렌탈', '에어컨/계절가전', '선풍기/냉풍기', '');
+INSERT INTO category VALUES ('09050400', '디지털/렌탈', '에어컨/계절가전', '에어컨', '');
+
+-- 내비/블랙박스 카테고리
+INSERT INTO category VALUES ('09060000', '디지털/렌탈', '내비/블랙박스', '', '');
+INSERT INTO category VALUES ('09060100', '디지털/렌탈', '내비/블랙박스', '내비게이션/용품', '');
+INSERT INTO category VALUES ('09060200', '디지털/렌탈', '내비/블랙박스', '블랙박스', '');
+INSERT INTO category VALUES ('09060300', '디지털/렌탈', '내비/블랙박스', '하이패스', '');
+
+-- 세탁기/생활가전 카테고리
+INSERT INTO category VALUES ('09070000', '디지털/렌탈', '세탁기/생활가전', '', '');
+INSERT INTO category VALUES ('09070100', '디지털/렌탈', '세탁기/생활가전', '다이슨', '');
+INSERT INTO category VALUES ('09070200', '디지털/렌탈', '세탁기/생활가전', '세탁기/건조기/의류관리기', '');
+INSERT INTO category VALUES ('09070300', '디지털/렌탈', '세탁기/생활가전', '청소기', '');
+INSERT INTO category VALUES ('09070400', '디지털/렌탈', '세탁기/생활가전', '전화기/무전기', '');
+INSERT INTO category VALUES ('09070500', '디지털/렌탈', '세탁기/생활가전', '다리미/재봉/보풀', '');
+
+-- 냉장고/주방가전 카테고리
+INSERT INTO category VALUES ('09080000', '디지털/렌탈', '냉장고/주방가전', '', '');
+INSERT INTO category VALUES ('09080100', '디지털/렌탈', '냉장고/주방가전', '냉장고/김치냉장고', '');
+INSERT INTO category VALUES ('09080200', '디지털/렌탈', '냉장고/주방가전', '전기밥솥', '');
+INSERT INTO category VALUES ('09080300', '디지털/렌탈', '냉장고/주방가전', '가스/전기레인지', '');
+INSERT INTO category VALUES ('09080400', '디지털/렌탈', '냉장고/주방가전', '오븐/전자레인지', '');
+INSERT INTO category VALUES ('09080500', '디지털/렌탈', '냉장고/주방가전', '식기세척/음식물처리기', '');
+INSERT INTO category VALUES ('09080600', '디지털/렌탈', '냉장고/주방가전', '믹서/착즙기', '');
+INSERT INTO category VALUES ('09080700', '디지털/렌탈', '냉장고/주방가전', '주방소형가전', '');
+INSERT INTO category VALUES ('09080800', '디지털/렌탈', '냉장고/주방가전', '커피머신/커피메이커', '');
+INSERT INTO category VALUES ('09080900', '디지털/렌탈', '냉장고/주방가전', '정수기/필터', '');
+
+-- 영상/음향가전 카테고리
+INSERT INTO category VALUES ('09090000', '디지털/렌탈', '영상/음향가전', '', '');
+INSERT INTO category VALUES ('09090100', '디지털/렌탈', '영상/음향가전', '스피커', '');
+INSERT INTO category VALUES ('09090200', '디지털/렌탈', '영상/음향가전', '이어폰/헤드폰', '');
+INSERT INTO category VALUES ('09090300', '디지털/렌탈', '영상/음향가전', '오디오/HiFi', '');
+INSERT INTO category VALUES ('09090400', '디지털/렌탈', '영상/음향가전', '학습기기/기타음향', '');
+INSERT INTO category VALUES ('09090500', '디지털/렌탈', '영상/음향가전', 'TV', '');
+INSERT INTO category VALUES ('09090600', '디지털/렌탈', '영상/음향가전', '홈시어터/DVD', '');
+
+-- 휴대폰/스마트기기 카테고리
+INSERT INTO category VALUES ('09100000', '디지털/렌탈', '휴대폰/스마트기기', '', '');
+INSERT INTO category VALUES ('09100100', '디지털/렌탈', '휴대폰/스마트기기', '신규가입', '');
+INSERT INTO category VALUES ('09100200', '디지털/렌탈', '휴대폰/스마트기기', '번호이동', '');
+INSERT INTO category VALUES ('09100300', '디지털/렌탈', '휴대폰/스마트기기', '기기변경', '');
+INSERT INTO category VALUES ('09100400', '디지털/렌탈', '휴대폰/스마트기기', '자급제폰/공기계', '');
+INSERT INTO category VALUES ('09100500', '디지털/렌탈', '휴대폰/스마트기기', '휴대폰 케이스', '');
+INSERT INTO category VALUES ('09100600', '디지털/렌탈', '휴대폰/스마트기기', '휴대폰액세서리', '');
+INSERT INTO category VALUES ('09100700', '디지털/렌탈', '휴대폰/스마트기기', '스마트워치/밴드', '');
+
+-- 렌탈 카테고리
+INSERT INTO category VALUES ('09110000', '디지털/렌탈', '렌탈', '', '');
+INSERT INTO category VALUES ('09110100', '디지털/렌탈', '렌탈', '정수기', '');
+INSERT INTO category VALUES ('09110200', '디지털/렌탈', '렌탈', '공기청정기/제습기', '');
+INSERT INTO category VALUES ('09110300', '디지털/렌탈', '렌탈', '비데', '');
+INSERT INTO category VALUES ('09110400', '디지털/렌탈', '렌탈', '에어컨', '');
+INSERT INTO category VALUES ('09110500', '디지털/렌탈', '렌탈', '세탁기/건조기/스타일러', '');
+INSERT INTO category VALUES ('09110600', '디지털/렌탈', '렌탈', '식기세척기/주방가전', '');
+INSERT INTO category VALUES ('09110700', '디지털/렌탈', '렌탈', '냉장고', '');
+INSERT INTO category VALUES ('09110800', '디지털/렌탈', '렌탈', '안마의자', '');
+INSERT INTO category VALUES ('09110900', '디지털/렌탈', '렌탈', '침대/매트리스', '');
+INSERT INTO category VALUES ('09111000', '디지털/렌탈', '렌탈', 'TV', '');
+INSERT INTO category VALUES ('09111100', '디지털/렌탈', '렌탈', '헬스케어', '');
+INSERT INTO category VALUES ('09111200', '디지털/렌탈', '렌탈', '렌터카/타이어', '');
+INSERT INTO category VALUES ('09111300', '디지털/렌탈', '렌탈', '반려용품', '');
+INSERT INTO category VALUES ('09111400', '디지털/렌탈', '렌탈', '기타 렌탈상품', '');
+
+INSERT INTO category VALUES ('10000000', '여행/e쿠폰/문구/도서', '', '', '');
 
 
 
