@@ -61,6 +61,7 @@ drop sequence shoppingcart_seq;
 drop sequence applicant_seq;
 drop sequence review_seq;
 drop sequence reviewimg_seq;
+drop sequence loginLog_seq;
 
 CREATE TABLE payrecord (
     id number NOT NULL,
