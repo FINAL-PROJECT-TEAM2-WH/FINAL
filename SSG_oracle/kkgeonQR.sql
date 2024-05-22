@@ -1,3 +1,17 @@
+SELECT * 
+FROM productimg pi 
+JOIN product p ON p.id = pi.productid
+WHERE p.categoryid = ?;
+	SELECT d.deptno, dname, loc
+		, COUNT(e.empno) numberOfEmps
+	FROM dept d FULL JOIN emp e ON d.deptno = e.deptno
+	GROUP BY d.deptno,dname,loc
+	ORDER BY deptno ASC;
+SELECT *
+FROM category;
+SELECT *
+FROM dept;
+
 SELECT c.id,  c.majorcatename,c.middlecatename,c.subcatename, c.minicatename
 FROM product p JOIN category c ON p.categoryid = c.id
 WHERE p.id = 1000026532717;
@@ -188,6 +202,32 @@ WHERE rnum BETWEEN 1 AND 80;
 
 
 
+SELECT *  
+    FROM (     SELECT ROWNUM no, t.*     
+        FROM (        
+            SELECT             
+                p.ID, MAX(p.SHIPPINGOPTIONID) AS SHIPPINGOPTIONID,
+                MAX(p.sellerstoreid) AS SELLERSTOREID, MAX(s.SELLERNAME) AS SELLERNAME,
+                MAX(p.brandid) AS BRANDID, MAX(b.brandname) AS BRANDNAME,
+                MAX(p.PDNAME) AS PDNAME, MAX(p.UPDATEDAY) AS UPDATEDAY,
+                COALESCE(MAX(o.optionPrice), 0) AS optionPrice, 
+                COALESCE(MAX(o.optionPrice) - ((MAX(o.optionPrice) / 100) * MAX(c.spclDscnRt)), 0) AS sprice,
+                COALESCE(MAX(c.spclDscnRt), 0) AS discount, COALESCE(MAX(reviewData.reviewCount), 0) AS reviewCount,
+                COALESCE(MAX(reviewData.averageGrade), 0) AS averageGrade         
+                FROM             
+                PRODUCT p JOIN BRAND b ON p.BRANDID = b.ID                       
+                JOIN sellerstore s ON p.SELLERSTOREID = s.id                   
+                LEFT JOIN productOption o ON p.ID = o.productid                   
+                LEFT JOIN specialprice c ON p.specialPriceId = c.id                   
+                LEFT JOIN ( SELECT productId, COUNT(*) AS reviewCount, AVG(grade) AS averageGrade                              
+                            FROM review GROUP BY productId                            
+                            ) reviewData ON p.ID = reviewData.productId        		
+                WHERE TO_CHAR(p.CATEGORYID) LIKE '0404' || '%' GROUP BY p.id     
+            ) t  
+        ) b  
+    WHERE no BETWEEN 1 AND 100
+
+
 
 
 
@@ -197,3 +237,40 @@ WHERE rnum BETWEEN 1 AND 80;
 
 
  SELECT *  FROM (     SELECT ROWNUM no, t.*     FROM (        SELECT             p.ID, MAX(p.CATEGORYID) AS CATEGORYID, MAX(p.SHIPPINGOPTIONID) AS SHIPPINGOPTIONID,             MAX(p.sellerstoreid) AS SELLERSTOREID, MAX(s.SELLERNAME) AS SELLERNAME,             MAX(p.brandid) AS BRANDID, MAX(b.brandname) AS BRANDNAME,             MAX(p.PDNAME) AS PDNAME, MAX(p.UPDATEDAY) AS UPDATEDAY,             COALESCE(MAX(o.optionPrice), 0) AS optionPrice, COALESCE(MAX(o.optionPrice) - ((MAX(o.optionPrice) / 100) * MAX(c.spclDscnRt)), 0) AS sprice,             COALESCE(MAX(c.spclDscnRt), 0) AS discount, COALESCE(MAX(reviewData.reviewCount), 0) AS reviewCount,             COALESCE(MAX(reviewData.averageGrade), 0) AS averageGrade         FROM             PRODUCT p JOIN BRAND b ON p.BRANDID = b.ID                       JOIN sellerstore s ON p.SELLERSTOREID = s.id                   LEFT JOIN productOption o ON p.ID = o.productid                   LEFT JOIN specialprice c ON p.specialPriceId = c.id                   LEFT JOIN ( SELECT productId, COUNT(*) AS reviewCount, AVG(grade) AS averageGrade                              FROM review GROUP BY productId                            ) reviewData ON p.ID = reviewData.productId         WHERE TO_CHAR(p.CATEGORYID) LIKE '04040303' || '%' GROUP BY p.id     ) t  ) b  WHERE no BETWEEN 1 AND 100;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ SELECT *
+ FROM tbl_board;
+ 
+ 	SELECT seq_board.nextval
+	FROM dual
+ 
+ --240522 게시판만들기 SL02
+ 
+        CREATE TABLE tbl_board
+    (
+        bno number(10)
+      , title varchar2(200) not null
+      , content varchar2(2000) not null
+      , writer varchar2(50) not null
+      , regdate date default sysdate
+      , updatedate date default sysdate
+    );
+    
+    alter table tbl_board add constraint pk_tblboard_bno primary key(bno);
+    
+     CREATE SEQUENCE seq_board;  
