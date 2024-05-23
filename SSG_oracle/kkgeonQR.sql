@@ -55,6 +55,19 @@ SELECT *
 FROM member;
 
 SELECT *
+FROM product;
+
+SELECT *
+FROM shippingOption;
+
+SELECT *
+FROM coupon;
+
+SELECT *
+FROM productImg
+WHERE productid = 1000280142269;
+
+SELECT *
 FROM review;
 
 SELECT COUNT(*)
