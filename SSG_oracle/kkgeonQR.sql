@@ -225,7 +225,7 @@ SELECT *
                 WHERE TO_CHAR(p.CATEGORYID) LIKE '0404' || '%' GROUP BY p.id     
             ) t  
         ) b  
-    WHERE no BETWEEN 1 AND 100
+    WHERE no BETWEEN 1 AND 100;
 
 
 
@@ -257,7 +257,7 @@ SELECT *
  FROM tbl_board;
  
  	SELECT seq_board.nextval
-	FROM dual
+	FROM dual;
  
  --240522 게시판만들기 SL02
  
@@ -274,3 +274,36 @@ SELECT *
     alter table tbl_board add constraint pk_tblboard_bno primary key(bno);
     
      CREATE SEQUENCE seq_board;  
+     
+--     실행할 때 인덱스를 사용해서 실행
+     
+     SELECT 
+     /*+ index_DESC(tbl_board pk_tblboard_bno) */
+     *
+     FROM tbl_board
+     WHERE bno >0
+--     ORDER BY bno DESC;
+
+
+BEGIN
+    FOR i IN 1 .. 158
+    LOOP 
+      INSERT INTO tbl_board (bno, title, content, writer)
+      VALUES ( seq_board.nextval ,  'PL SQL-' || i, 'PL SQL-' || i, '홍길동' ) ;
+    END LOOP;  
+END;
+COMMIT;
+
+
+
+BEGIN
+    FOR i IN 1 .. 158
+    LOOP 
+      IF MOD(i,5)=0 OR MOD(i, 17)=0 THEN
+        UPDATE tbl_board
+        SET title = '자바-' || i        
+        WHERE bno = i;
+      END IF; 
+    END LOOP;  
+END;
+COMMIT;
