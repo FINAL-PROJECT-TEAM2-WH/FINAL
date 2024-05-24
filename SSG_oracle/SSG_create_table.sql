@@ -62,6 +62,10 @@ drop sequence applicant_seq;
 drop sequence review_seq;
 drop sequence reviewimg_seq;
 drop sequence loginLog_seq;
+drop sequence brand_seq;
+drop sequence seller_seq;
+
+-- sellerstore 시퀀스 , brand 시퀀스 작업 및 팀원들한테 컨펌 받아야함. 
 
 CREATE TABLE payrecord (
     id number NOT NULL,
@@ -98,8 +102,8 @@ CREATE TABLE product (
     categoryId VARCHAR2(20) NOT NULL,
     specialPriceId NUMBER NULL,
     shippingOptionId NUMBER NOT NULL,
-    sellerStoreId VARCHAR2(20) NOT NULL,
-    brandId VARCHAR2(300) NOT NULL,
+    sellerStoreId number NOT NULL,
+    brandId number NOT NULL,
     pdName VARCHAR2(300) NULL,
     pcontent VARCHAR2(3000) NULL,
     updateDay DATE NULL
@@ -126,7 +130,7 @@ CREATE TABLE member (
 CREATE TABLE interestBrand (
     id NUMBER NOT NULL,
     memid varchar2(300) NOT NULL,
-    sellerID VARCHAR2(200) NOT NULL,
+    brandId number NOT NULL,
     RecordDate DATE DEFAULT SYSDATE NULL,
     folderId number NOT NULL
 );
@@ -323,12 +327,12 @@ CREATE TABLE Search (
 );
 
 CREATE TABLE sellerstore (
-    id VARCHAR2(20) NOT NULL,
+    id number NOT NULL,
     sellerName varchar2(300) NULL
 );
 
 CREATE TABLE brand (
-    id VARCHAR2(300) NOT NULL,
+    id number NOT NULL,
     brandImg VARCHAR2(3000) NULL,
     brandName VARCHAR2(300) NULL
 );
@@ -390,6 +394,8 @@ memid varchar2(300) NOT NULL,
 name varchar2(300) DEFAULT '모아보기' NULL ,
 createDate DATE DEFAULT SYSDATE NULL
 );
+
+
 
 
 ALTER TABLE ShoppingCart ADD CONSTRAINT PK_SHOPPINGCART PRIMARY KEY (
@@ -582,7 +588,7 @@ ALTER TABLE product ADD CONSTRAINT FK_brand_TO_product_1 FOREIGN KEY (
     brandId
 )
 REFERENCES brand (
-    id
+    id   
 );
 
 ALTER TABLE interestBrand ADD CONSTRAINT FK_member_TO_interestBrand_1 FOREIGN KEY (
@@ -593,7 +599,7 @@ REFERENCES member (
 );
 
 ALTER TABLE interestBrand ADD CONSTRAINT FK_brand_TO_interestBrand_1 FOREIGN KEY (
-    sellerID
+    brandId
 )
 REFERENCES brand (
     id
@@ -834,5 +840,4 @@ ALTER TABLE divisionFolder ADD CONSTRAINT FK__member_TO_divisionF_1 FOREIGN KEY 
 ) REFERENCES member (
     id
 );
-
 

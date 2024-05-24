@@ -12,6 +12,10 @@ FROM category;
 SELECT *
 FROM dept;
 
+
+
+SELECT COUNT(*) FROM tbl_cstvsboard;
+
 SELECT c.id,  c.majorcatename,c.middlecatename,c.subcatename, c.minicatename
 FROM product p JOIN category c ON p.categoryid = c.id
 WHERE p.id = 1000026532717;
