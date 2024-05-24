@@ -92,7 +92,7 @@ FROM (
                 JOIN sellerstore s ON p.SELLERSTOREID = s.id 
                 LEFT JOIN productOption o ON p.ID = o.productid 
                 LEFT JOIN specialprice c ON p.specialPriceId = c.id 
-                WHERE TO_CHAR(p.CATEGORYID) LIKE '04' || '%'
+                WHERE TO_CHAR(p.CATEGORYID) LIKE '07' || '%'
                 GROUP BY p.id
              ) t 
      ) b 

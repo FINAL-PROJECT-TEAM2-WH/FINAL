@@ -1061,6 +1061,12 @@ INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70201, '쿨슬�
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i2_1200.avif','other');
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+
 
 INSERT INTO product VALUES (70202, '07040202', NULL, 9, 'sellStore009', 'brand012', '사계절 무형광 순면 베개 커버_70x50cm_베이지', '상품번호 : 70202', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70202, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '사계절 무형광 순면 베개 커버_70x50cm_베이지',NULL ,9900, NULL);
