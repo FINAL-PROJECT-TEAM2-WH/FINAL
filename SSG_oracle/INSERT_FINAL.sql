@@ -1058,7 +1058,7 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --명건상품
 
 
-INSERT INTO product VALUES (70201, '07040202', NULL, 9, 8, 11, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '상품번호 : 70201', SYSDATE);
+INSERT INTO product VALUES (70201, '07040202', 0, 9, 8, 11, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '상품번호 : 70201', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70201, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)',NULL ,19900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','other');
@@ -1070,7 +1070,7 @@ INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰�
 INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70202, '07040202', NULL, 9, 8, 11, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '상품번호 : 70202', SYSDATE);
+INSERT INTO product VALUES (70202, '07040202', 0, 9, 8, 11, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '상품번호 : 70202', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70202, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '사계절 무형광 순면 베개 커버_70x50cm_베이지',NULL ,9900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i2_1200.avif','other');
@@ -1082,7 +1082,7 @@ INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'dyoung01',null,'원래 쓰�
 INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70203, '07040202', NULL, 9, 8, 11, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '상품번호 : 70203', SYSDATE);
+INSERT INTO product VALUES (70203, '07040202', 0, 9, 8, 11, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '상품번호 : 70203', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70203, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '[본사정품] 템퍼 컴포트 베개 소프트(NEW)',NULL ,158400, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70203,'\SSGSSAK\pay\image\70203_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70203,'\SSGSSAK\pay\image\70203_i1_1100.avif','other');
@@ -1092,7 +1092,7 @@ INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'d_Chan01',null,'조아용',
 INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
 INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
-INSERT INTO product VALUES (70204, '07040202', NULL, 9, 8, 11, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '상품번호 : 70204', SYSDATE);
+INSERT INTO product VALUES (70204, '07040202', 0, 9, 8, 11, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '상품번호 : 70204', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70204, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70',NULL ,8455, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i2_1200.avif','other');
@@ -1103,7 +1103,7 @@ INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'d_Chan01',null,'조아용',
 INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
 INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
-INSERT INTO product VALUES (70205, '07040202', NULL, 9, 8, 11, '그루잠숯메모리폼베개', '상품번호 : 70205', SYSDATE);
+INSERT INTO product VALUES (70205, '07040202', 0, 9, 8, 11, '그루잠숯메모리폼베개', '상품번호 : 70205', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70205, '그루잠숯메모리폼베개', '그루잠숯메모리폼베개',NULL ,33900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i2_1200.avif','other');
@@ -1114,7 +1114,7 @@ INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'d_Chan01',null,'조아용',
 INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
 INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
-INSERT INTO product VALUES (70206, '07040202', NULL, 9, 8, 11, 'EVERREST 포터블 메모리폼 베개', '상품번호 : 70206', SYSDATE);
+INSERT INTO product VALUES (70206, '07040202', 0, 9, 8, 11, 'EVERREST 포터블 메모리폼 베개', '상품번호 : 70206', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70206, 'EVERREST 포터블 메모리폼 베개', 'EVERREST 포터블 메모리폼 베개',NULL ,21480, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','other');
@@ -1126,7 +1126,7 @@ INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'dyoung01',null,'원래 쓰�
 INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70207, '07040202', NULL, 9, 8, 11, '항균 경추 베개솜 50x70 2P', '상품번호 : 70207', SYSDATE);
+INSERT INTO product VALUES (70207, '07040202', 0, 9, 8, 11, '항균 경추 베개솜 50x70 2P', '상품번호 : 70207', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70207, '항균 경추 베개솜 50x70 2P', '항균 경추 베개솜 50x70 2P',NULL ,22015, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.webp','other');
@@ -1138,7 +1138,7 @@ INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'dyoung01',null,'원래 쓰�
 INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70208, '07040202', NULL, 9, 8, 11, '순면 누빔 피그먼트 사계절 베개 커버 ', '상품번호 : 70208', SYSDATE);
+INSERT INTO product VALUES (70208, '07040202', 0, 9, 8, 11, '순면 누빔 피그먼트 사계절 베개 커버 ', '상품번호 : 70208', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70208, '순면 누빔 피그먼트 사계절 베개 커버 ', '순면 누빔 피그먼트 사계절 베개 커버 ',NULL ,7275, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.webp','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.webp','other');
@@ -1149,7 +1149,7 @@ INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'dyoung01',null,'원래 쓰�
 INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70209, '07040202', NULL, 9, 8, 11, 'HT)세미그레이베개커버', '상품번호 : 70209', SYSDATE);
+INSERT INTO product VALUES (70209, '07040202', 0, 9, 8, 11, 'HT)세미그레이베개커버', '상품번호 : 70209', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70209, 'HT)세미그레이베개커버', 'HT)세미그레이베개커버',NULL ,7900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.webp','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.webp','other');
@@ -1161,7 +1161,7 @@ INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'dyoung01',null,'원래 쓰�
 INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70210, '07040202', NULL, 9, 8, 11, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '상품번호 : 70210', SYSDATE);
+INSERT INTO product VALUES (70210, '07040202', 0, 9, 8, 11, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '상품번호 : 70210', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70210, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '고밀도 40수 순면 리버시블 베개커버 40*60 NY',NULL ,8900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.webp','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.webp','other');
