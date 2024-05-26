@@ -1058,7 +1058,7 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --명건상품
 
 
-INSERT INTO product VALUES (70201, '07040202', NULL, 9, 11, 8, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '상품번호 : 70201', SYSDATE);
+INSERT INTO product VALUES (70201, '07040202', NULL, 9, 8, 11, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '상품번호 : 70201', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70201, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)',NULL ,19900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','other');
@@ -1070,98 +1070,98 @@ INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰�
 INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70202, '07040202', NULL, 9, 11, 8, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '상품번호 : 70202', SYSDATE);
+INSERT INTO product VALUES (70202, '07040202', NULL, 9, 8, 11, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '상품번호 : 70202', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70202, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '사계절 무형광 순면 베개 커버_70x50cm_베이지',NULL ,9900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i2_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i3_1200.avif','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70203, '07040202', NULL, 9, 11, 8, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '상품번호 : 70203', SYSDATE);
+INSERT INTO product VALUES (70203, '07040202', NULL, 9, 8, 11, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '상품번호 : 70203', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70203, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '[본사정품] 템퍼 컴포트 베개 소프트(NEW)',NULL ,158400, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70203,'\SSGSSAK\pay\image\70203_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70203,'\SSGSSAK\pay\image\70203_i1_1100.avif','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
-INSERT INTO product VALUES (70204, '07040202', NULL, 1, 11, 8, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '상품번호 : 70204', SYSDATE);
+INSERT INTO product VALUES (70204, '07040202', NULL, 9, 8, 11, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '상품번호 : 70204', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70204, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70',NULL ,8455, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i2_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i3_1200.avif','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
-INSERT INTO product VALUES (70205, '07040202', NULL, 9, 11, 8, '그루잠숯메모리폼베개', '상품번호 : 70205', SYSDATE);
+INSERT INTO product VALUES (70205, '07040202', NULL, 9, 8, 11, '그루잠숯메모리폼베개', '상품번호 : 70205', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70205, '그루잠숯메모리폼베개', '그루잠숯메모리폼베개',NULL ,33900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i2_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i3_1200.avif','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
-INSERT INTO product VALUES (70206, '07040202', NULL, 9, 11, 8, 'EVERREST 포터블 메모리폼 베개', '상품번호 : 70206', SYSDATE);
+INSERT INTO product VALUES (70206, '07040202', NULL, 9, 8, 11, 'EVERREST 포터블 메모리폼 베개', '상품번호 : 70206', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70206, 'EVERREST 포터블 메모리폼 베개', 'EVERREST 포터블 메모리폼 베개',NULL ,21480, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i2_1200.avif','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70207, '07040202', NULL, 9, 11, 8, '항균 경추 베개솜 50x70 2P', '상품번호 : 70207', SYSDATE);
+INSERT INTO product VALUES (70207, '07040202', NULL, 9, 8, 11, '항균 경추 베개솜 50x70 2P', '상품번호 : 70207', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70207, '항균 경추 베개솜 50x70 2P', '항균 경추 베개솜 50x70 2P',NULL ,22015, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.webp','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i2_1200.webp','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70208, '07040202', NULL, 9, 11, 8, '순면 누빔 피그먼트 사계절 베개 커버 ', '상품번호 : 70208', SYSDATE);
+INSERT INTO product VALUES (70208, '07040202', NULL, 9, 8, 11, '순면 누빔 피그먼트 사계절 베개 커버 ', '상품번호 : 70208', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70208, '순면 누빔 피그먼트 사계절 베개 커버 ', '순면 누빔 피그먼트 사계절 베개 커버 ',NULL ,7275, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.webp','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.webp','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70209, '07040202', NULL, 9, 11, 8, 'HT)세미그레이베개커버', '상품번호 : 70209', SYSDATE);
+INSERT INTO product VALUES (70209, '07040202', NULL, 9, 8, 11, 'HT)세미그레이베개커버', '상품번호 : 70209', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70209, 'HT)세미그레이베개커버', 'HT)세미그레이베개커버',NULL ,7900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.webp','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.webp','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i2_1200.webp','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
-INSERT INTO product VALUES (70210, '07040202', NULL, 9, 11, 8, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '상품번호 : 70210', SYSDATE);
+INSERT INTO product VALUES (70210, '07040202', NULL, 9, 8, 11, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '상품번호 : 70210', SYSDATE);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70210, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '고밀도 40수 순면 리버시블 베개커버 40*60 NY',NULL ,8900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.webp','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.webp','other');
@@ -1183,60 +1183,60 @@ INSERT INTO product VALUES (1000026532717, '04040303', 2, 1, 1, 1,
 
 --2
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000544937242, '06010101', 0, '2', 2, 2, '노브랜드 3겹 화장지 33M X 30롤', '상품번호 : 1000544937242', '2024-04-10');
+VALUES (1000544937242, '06010101', 0, 2, 2, 2, '노브랜드 3겹 화장지 33M X 30롤', '상품번호 : 1000544937242', '2024-04-10');
 
 --3
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000587702102, '01030601', 0, '3', 3, 3, '지이크 24S/S 프리미엄 맥스 모던 정장슈트 3종택1 PIJ2000BK', '지이크 24S/S 프리미엄 맥스 모던 정장슈트 3종택1 PIJ2000BK" S/S 시즌 봄여름슈트입니다 지이크에서 진행하는 2024 S/S 신상품으로 운영하는 슈트다보니 조기품절 될수있는점 양해부탁드립니다 ! [1] [2027] 기본네이비 베이직 슈트 기본네이비 베이직 수트로써 각종 경조사 및 행사용으로 또는 데일리용도로 사용하시기 적합하게 출시된 모델입니다 2024년도 신상품으로 출시가되었으며 두께감이 두껍지않아 봄여름계절 계절에 가장 알맞고티셔츠나 티에리 니트와 같이 셋업용도로 코디하시기에도 좋습니다', '2024-02-02');
+VALUES (1000587702102, '01030601', 0, 3, 3, 3, '지이크 24S/S 프리미엄 맥스 모던 정장슈트 3종택1 PIJ2000BK', '지이크 24S/S 프리미엄 맥스 모던 정장슈트 3종택1 PIJ2000BK" S/S 시즌 봄여름슈트입니다 지이크에서 진행하는 2024 S/S 신상품으로 운영하는 슈트다보니 조기품절 될수있는점 양해부탁드립니다 ! [1] [2027] 기본네이비 베이직 슈트 기본네이비 베이직 수트로써 각종 경조사 및 행사용으로 또는 데일리용도로 사용하시기 적합하게 출시된 모델입니다 2024년도 신상품으로 출시가되었으며 두께감이 두껍지않아 봄여름계절 계절에 가장 알맞고티셔츠나 티에리 니트와 같이 셋업용도로 코디하시기에도 좋습니다', '2024-02-02');
 
 --4
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (2097001577943, '11040301', 0, '4',4, 4, '[냉동][베트남] ASC인증 칵테일새우 (대, 21-25, 900g)', '상품번호 : 2097001577943', '2024-04-10');
+VALUES (2097001577943, '11040301', 0, 4,4, 4, '[냉동][베트남] ASC인증 칵테일새우 (대, 21-25, 900g)', '상품번호 : 2097001577943', '2024-04-10');
 
 --5
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000582326954, '04040303', 0, '5', 5, 5, '[정품/당일출고] 삼성 갤럭시S24 256G 자급제 SM-S921N', '상품번호 : 1000582326954 모델번호 : SMS921N256C3.', '2024-04-10');
+VALUES (1000582326954, '04040303', 0, 5, 5, 5, '[정품/당일출고] 삼성 갤럭시S24 256G 자급제 SM-S921N', '상품번호 : 1000582326954 모델번호 : SMS921N256C3.', '2024-04-10');
 
 
 --6
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000398650979, '11050503', 0, '6', 6, 6, '[냉장] 1++(8)등급 한우암소 채끝 구이용/스테이크용 600g', '상품번호 : 1000398650979 모델번호 : 한우비채끝2', '2024-04-10');
+VALUES (1000398650979, '11050503', 0, 6, 6, 6, '[냉장] 1++(8)등급 한우암소 채끝 구이용/스테이크용 600g', '상품번호 : 1000398650979 모델번호 : 한우비채끝2', '2024-04-10');
 
 --7
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000014118201, '12030104', 0, '7', 7, 7, '여수 나래식품 전라도 별미 김치 1kg 기획전 돌산 갓김치 파김치 고들빼기 김치 총각김치 부추김치 열무김치 맛김치', '나래밥상의 김치는 100% 국내산 원재료만을 사용합니다. 기후와 토양, 해풍까지 겸비하여 무, 알타리 파, 돌산갓등 각종 농작물들이 자라기에 최적의 조건을 가진 전라남도 여수!!! 전통 남도식 김치가 무엇인지 진하면서도 시원하고 개운한 맛이 무엇인지 제대로 보여드리겠습니다.', '2024-02-15');
+VALUES (1000014118201, '12030104', 0, 7, 7, 7, '여수 나래식품 전라도 별미 김치 1kg 기획전 돌산 갓김치 파김치 고들빼기 김치 총각김치 부추김치 열무김치 맛김치', '나래밥상의 김치는 100% 국내산 원재료만을 사용합니다. 기후와 토양, 해풍까지 겸비하여 무, 알타리 파, 돌산갓등 각종 농작물들이 자라기에 최적의 조건을 가진 전라남도 여수!!! 전통 남도식 김치가 무엇인지 진하면서도 시원하고 개운한 맛이 무엇인지 제대로 보여드리겠습니다.', '2024-02-15');
 
 --8
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (2097001308233, '11010301', 0, '8', 8, 8, '에콰도르 치키타 바나나 1.2kg (봉)', '상품번호 : 2097001308233', '2024-03-10');
+VALUES (2097001308233, '11010301', 0, 8, 8, 8, '에콰도르 치키타 바나나 1.2kg (봉)', '상품번호 : 2097001308233', '2024-03-10');
 
 --9
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (2097000257655, '11050702', 0, '8', 9, 9, '[냉장][김해축협] 한돈 고추장 제육볶음 1,000g', '상품번호 : 2097000257655', '2024-04-20');
+VALUES (2097000257655, '11050702', 0, 8, 9, 9, '[냉장][김해축협] 한돈 고추장 제육볶음 1,000g', '상품번호 : 2097000257655', '2024-04-20');
 
 --10
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (2097001557433, '04040303', 0, '3', 2, 10, 'I`mperfect 당도선별 못난이사과 2kg (봉)', '상품번호 : 2097001557433', '2024-04-15');
+VALUES (2097001557433, '04040303', 0, 3, 2, 10, 'I`mperfect 당도선별 못난이사과 2kg (봉)', '상품번호 : 2097001557433', '2024-04-15');
 --11
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000579723160, '02030102', 1, '8', 4, 11, 'COLORLESS PADLOCK SILVER NECKLACE', '상품번호 : 1000579723160 모델번호 : COLORLESSPADLOCKSILVERNECKLACE.', '2024-01-10');
+VALUES (1000579723160, '02030102', 1, 8, 4, 11, 'COLORLESS PADLOCK SILVER NECKLACE', '상품번호 : 1000579723160 모델번호 : COLORLESSPADLOCKSILVERNECKLACE.', '2024-01-10');
 
 --12
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000280142269, '07040202', 2, '8', 9, 12, '[템퍼/닥터파베/수면공감]기능성베개 모음전', '상품번호 : 1000280142269', '2024-04-10');
+VALUES (1000280142269, '07040202', 2, 8, 9, 12, '[템퍼/닥터파베/수면공감]기능성베개 모음전', '상품번호 : 1000280142269', '2024-04-10');
 
 --13
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000059288917, '09090102', 0, '9', 10, 5, '삼성공식파트너 JBL GO3 (고3) 블루투스 방수 스피커', '상품번호 : 1000059288917 모델번호 : JBLGO3.', '2024-04-10');
+VALUES (1000059288917, '09090102', 0, 9, 5, 5, '삼성공식파트너 JBL GO3 (고3) 블루투스 방수 스피커', '상품번호 : 1000059288917 모델번호 : JBLGO3.', '2024-04-10');
 
 
 --14
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (2097001432075, '12090100', 0, '10', 2, 13, '[밀도] 담백식빵 480g', '하얀 속살의 보들 보들한 매력 결대로 쭉 찢어서 한입 먹으면 입안에서 사르르 녹는 부드러움에 반하실 거예요. 식빵 그 자체만으로도 매력적인 밀도의 시그니처 담백식빵을 줄 서는 번거로움 없이 편하게 집에서 만나보세요.', '2024-03-17');
+VALUES (2097001432075, '12090100', 0, 10, 2, 13, '[밀도] 담백식빵 480g', '하얀 속살의 보들 보들한 매력 결대로 쭉 찢어서 한입 먹으면 입안에서 사르르 녹는 부드러움에 반하실 거예요. 식빵 그 자체만으로도 매력적인 밀도의 시그니처 담백식빵을 줄 서는 번거로움 없이 편하게 집에서 만나보세요.', '2024-03-17');
 
 --15
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000067576484, '09010200', 0 , '10', 5, 5, '갤럭시탭 Trade-in OPEN', '상품번호 : 1000067576484', '2024-04-10');
+VALUES (1000067576484, '09010200', 0 , 10, 5, 5, '갤럭시탭 Trade-in OPEN', '상품번호 : 1000067576484', '2024-04-10');
 
 
 
