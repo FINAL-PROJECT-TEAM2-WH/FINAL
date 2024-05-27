@@ -1,26 +1,26 @@
 
 
--- ë°°ì†¡ì˜µì…˜ ì‹œí€€ìŠ¤
+-- ¹è¼Û¿É¼Ç ½ÃÄö½º
 CREATE SEQUENCE shippingoption_id_seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE
 NOCYCLE;
 
---ìƒí’ˆ ì‹œí€€ìŠ¤
+--»óÇ° ½ÃÄö½º
 CREATE SEQUENCE product_id_seq
 START WITH 3000000000000
 INCREMENT BY 1
 NOCACHE
 NOCYCLE;
---ìƒí’ˆì˜µì…˜ì‹œí€€ìŠ¤
+--»óÇ°¿É¼Ç½ÃÄö½º
 CREATE SEQUENCE productoption_id_seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE
 NOCYCLE;
 
--- ë°°ì†¡ ì •ë³´ ì‹œí€€ìŠ¤
+-- ¹è¼Û Á¤º¸ ½ÃÄö½º
 CREATE SEQUENCE 
 seq_shippingid 
 START WITH 1 
@@ -28,14 +28,14 @@ INCREMENT BY 1
 NOCYCLE NOCACHE;
 
 
--- ë°°ì†¡ì§€ ì •ë³´ í…Œì´ë¸” ì‹œí€€ìŠ¤ìƒì„±
+-- ¹è¼ÛÁö Á¤º¸ Å×ÀÌºí ½ÃÄö½º»ý¼º
 CREATE SEQUENCE 
 seqshipplaceinfo 
 START WITH 1 
 INCREMENT BY 1 
 NOCYCLE NOCACHE;
 
--- ê²€ìƒ‰ í…Œì´ë¸” ì‹œí€€ìŠ¤
+-- °Ë»ö Å×ÀÌºí ½ÃÄö½º
 CREATE SEQUENCE 
 seq_search 
 START WITH 1 
@@ -43,28 +43,28 @@ INCREMENT BY 1
 NOCACHE NOCYCLE;
 
 
--- ì£¼ë¬¸ ì‹œí€€ìŠ¤
+-- ÁÖ¹® ½ÃÄö½º
 create sequence payrecord_seq
 start with 1 
 increment by 1 
 nocache 
 nocycle;
 
--- í¬ì¸íŠ¸ë‚´ì—­ ì‹œí€€ìŠ¤
+-- Æ÷ÀÎÆ®³»¿ª ½ÃÄö½º
 create sequence pointrecord_seq
 start with 1 
 increment by 1 
 nocache 
 nocycle;
 
--- ì¿ í°ë‚´ì—­ ì‹œí€€ìŠ¤
+-- ÄíÆù³»¿ª ½ÃÄö½º
 create sequence couponrecord_seq
 start with 1 
 increment by 1 
 nocache 
 nocycle;
 
--- ê²°ì œì„¸ë¶€ë‚´ì—­ ì‹œí€€ìŠ¤
+-- °áÁ¦¼¼ºÎ³»¿ª ½ÃÄö½º
 create sequence paydetail_seq
 start with 1 
 increment by 1 
@@ -77,14 +77,14 @@ INCREMENT BY 1
 NOCACHE 
 NOCYCLE;
 
--- ì•½ê´€ ì‹œí€€ìŠ¤
+-- ¾à°ü ½ÃÄö½º
 create sequence terms_seq
 start with 1 
 increment by 1
 nocache
 nocycle;
 
--- ì•½ê´€ë™ì˜ ì‹œí€€ìŠ¤ 
+-- ¾à°üµ¿ÀÇ ½ÃÄö½º 
 CREATE sequence agreement_seq
 start with 1 
 increment by 1 
@@ -109,7 +109,7 @@ start with 1
 increment by 1 
 nocache 
 nocycle;
---ë¦¬ë·° ì‹œí€€ìŠ¤
+--¸®ºä ½ÃÄö½º
 CREATE SEQUENCE review_seq
 START WITH 1
 INCREMENT BY 1
@@ -152,1375 +152,1748 @@ nocycle;
 
 
 
--- íšŒì› INSERT
--- ë”ë¯¸ë°ì´í„° 
-INSERT INTO MEMBER VALUES('daetu01','daetu01@gmail.com','010-1111-1111','ì›ëŒ€ë§Œ','1234','1978-05-29',SYSDATE,SYSDATE,'0','0','member');
-INSERT INTO MEMBER VALUES('m_eum01','m_eum01@naver.com','010-4142-2134','ê¶Œë§‘ìŒ','1234','1998-09-12',SYSDATE,SYSDATE,'0','0','member');
-INSERT INTO MEMBER VALUES('d_Chan01','d_Chan01@daum.com','010-1231-2685','ì´ë™ì°¬','1234','1995-11-20',SYSDATE,SYSDATE,'0','0','member');
-INSERT INTO MEMBER VALUES('dyoung01','dyoung01@gmail.com','010-1245-5415','ì´ë™ì˜','1234','1990-01-02',SYSDATE,SYSDATE,'0','0','member');
-INSERT INTO MEMBER VALUES('mggun01','mggun01@gmail.com','010-6733-3573','ê°•ëª…ê±´','1234','1993-05-20',SYSDATE,SYSDATE,'0','0','member');
-INSERT INTO MEMBER VALUES('whyun01','whyun01@gmail.com','010-2351-6738','ë°•ìš°í˜„','1234','1992-10-01',SYSDATE,SYSDATE,'0','0','member');
+-- È¸¿ø INSERT
+-- ´õ¹Ìµ¥ÀÌÅÍ 
+INSERT INTO MEMBER VALUES('daetu01','daetu01@gmail.com','010-1111-1111','¿ø´ë¸¸','1234','1978-05-29',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('m_eum01','m_eum01@naver.com','010-4142-2134','±Ç¸¼À½','1234','1998-09-12',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('d_Chan01','d_Chan01@daum.com','010-1231-2685','ÀÌµ¿Âù','1234','1995-11-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('dyoung01','dyoung01@gmail.com','010-1245-5415','ÀÌµ¿¿µ','1234','1990-01-02',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('mggun01','mggun01@gmail.com','010-6733-3573','°­¸í°Ç','1234','1993-05-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('whyun01','whyun01@gmail.com','010-2351-6738','¹Ú¿ìÇö','1234','1992-10-01',SYSDATE,SYSDATE,'0','0','member');
 
-INSERT INTO MEMBER VALUES('minziZzang','minziZzang@gmail.com','010-1461-1245','ê¹€ë¯¼ì§€','1234','2003-02-10',SYSDATE,SYSDATE,'0','0','member');
-INSERT INTO MEMBER VALUES('hive','hive@gmail.com','010-5242-6642','ì˜¤í•¨ë§ˆ','1234','2006-03-20',SYSDATE,SYSDATE,'0','0','member');
-INSERT INTO MEMBER VALUES('newjeans','newjeans@gmail.com','010-6645-2411','ë°•ë°”ì§€','1234','2007-01-20',SYSDATE,SYSDATE,'0','0','member');
-INSERT INTO MEMBER VALUES('cap','cap@gmail.com','010-5124-5665','í•˜ë‚¨ìž','1234','2002-06-06',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('minziZzang','minziZzang@gmail.com','010-1461-1245','±è¹ÎÁö','1234','2003-02-10',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('hive','hive@gmail.com','010-5242-6642','¿ÀÇÔ¸¶','1234','2006-03-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('newjeans','newjeans@gmail.com','010-6645-2411','¹Ú¹ÙÁö','1234','2007-01-20',SYSDATE,SYSDATE,'0','0','member');
+INSERT INTO MEMBER VALUES('cap','cap@gmail.com','010-5124-5665','ÇÏ³²ÀÚ','1234','2002-06-06',SYSDATE,SYSDATE,'0','0','member');
 
 
 -------------------------------------------------------------------------------------------
--- íŒë§¤ìž íŽ˜ì´ì§€, ë¸Œëžœë“œ íŽ˜ì´ì§€, ìƒí’ˆ ì¹´í…Œê³ ë¦¬ í…Œì´ë¸”
-
-INSERT INTO category VALUES ('04000000', 'ë·°í‹°', '', '', '');
-INSERT INTO category VALUES ('04010000', 'ë·°í‹°', 'ë©”ì´í¬ì—…', '', '');
-INSERT INTO category VALUES ('04010100', 'ë·°í‹°', 'ë©”ì´í¬ì—…', 'ë² ì´ìŠ¤ë©”ì´í¬ì—…', '');
-INSERT INTO category VALUES ('04010200', 'ë·°í‹°', 'ë©”ì´í¬ì—…', 'ë¦½ë©”ì´í¬ì—…', '');
-INSERT INTO category VALUES ('04010300', 'ë·°í‹°', 'ë©”ì´í¬ì—…', 'ì•„ì´ë©”ì´í¬ì—…', '');
-INSERT INTO category VALUES ('04010400', 'ë·°í‹°', 'ë©”ì´í¬ì—…', 'ì¹˜í¬/í•˜ì´ë¼ì´í„°', '');
-INSERT INTO category VALUES ('04010500', 'ë·°í‹°', 'ë©”ì´í¬ì—…', 'ë‚¨ì„±ë©”ì´í¬ì—…', '');
-INSERT INTO category VALUES ('04010600', 'ë·°í‹°', 'ë©”ì´í¬ì—…', 'ë„¤ì¼', '');
-
-INSERT INTO category VALUES ('04020000', 'ë·°í‹°', 'ìŠ¤í‚¨ì¼€ì–´', '', '');
-INSERT INTO category VALUES ('04020100', 'ë·°í‹°', 'ìŠ¤í‚¨ì¼€ì–´', 'ìŠ¤í‚¨/í† ë„ˆ/ë¯¸ìŠ¤íŠ¸', '');
-INSERT INTO category VALUES ('04020200', 'ë·°í‹°', 'ìŠ¤í‚¨ì¼€ì–´', 'ì—ì„¼ìŠ¤/ì„¸ëŸ¼', '');
-INSERT INTO category VALUES ('04020300', 'ë·°í‹°', 'ìŠ¤í‚¨ì¼€ì–´', 'ë¡œì…˜/ì—ë©€ì „/í¬ë¦¼', '');
-INSERT INTO category VALUES ('04020400', 'ë·°í‹°', 'ìŠ¤í‚¨ì¼€ì–´', 'ì•„ì´/ë„¥ì¼€ì–´', '');
-INSERT INTO category VALUES ('04020500', 'ë·°í‹°', 'ìŠ¤í‚¨ì¼€ì–´', 'í´ë Œì§•/ìŠ¤í¬ëŸ½', '');
-INSERT INTO category VALUES ('04020600', 'ë·°í‹°', 'ìŠ¤í‚¨ì¼€ì–´', 'ì„ ì¼€ì–´', '');
-INSERT INTO category VALUES ('04020700', 'ë·°í‹°', 'ìŠ¤í‚¨ì¼€ì–´', 'ìŠ¤í‚¨ì¼€ì–´ì„¸íŠ¸', '');
-INSERT INTO category VALUES ('04020800', 'ë·°í‹°', 'ìŠ¤í‚¨ì¼€ì–´', 'íŒ©/ë§ˆìŠ¤í¬', '');
-INSERT INTO category VALUES ('04020900', 'ë·°í‹°', 'ìŠ¤í‚¨ì¼€ì–´', 'ë‚¨ì„±ìŠ¤í‚¨ì¼€ì–´', '');
-
-INSERT INTO category VALUES ('04030000', 'ë·°í‹°', 'í–¥ìˆ˜', '', '');
-INSERT INTO category VALUES ('04030100', 'ë·°í‹°', 'í–¥ìˆ˜', 'ì—¬ì„±í–¥ìˆ˜', '');
-INSERT INTO category VALUES ('04030200', 'ë·°í‹°', 'í–¥ìˆ˜', 'ë‚¨ì„±í–¥ìˆ˜', '');
-INSERT INTO category VALUES ('04030300', 'ë·°í‹°', 'í–¥ìˆ˜', 'ìœ ë‹ˆì„¹ìŠ¤í–¥ìˆ˜', '');
-INSERT INTO category VALUES ('04030400', 'ë·°í‹°', 'í–¥ìˆ˜', 'ë“œë ˆìŠ¤/íŒ¨ë¸Œë¦­í¼í“¸/ë£¸ìŠ¤í”„ë ˆì´', '');
-INSERT INTO category VALUES ('04030500', 'ë·°í‹°', 'í–¥ìˆ˜', 'ìº”ë“¤/ë””í“¨ì €/ì•„ë¡œë§ˆ', '');
-INSERT INTO category VALUES ('04030600', 'ë·°í‹°', 'í–¥ìˆ˜', 'ê³ ì²´/ê¸°íƒ€ í–¥ìˆ˜', '');
-
-INSERT INTO category VALUES ('04040000', 'ë·°í‹°', 'í—¤ì–´ì¼€ì–´', '', '');
-INSERT INTO category VALUES ('04040100', 'ë·°í‹°', 'í—¤ì–´ì¼€ì–´', 'ìƒ´í‘¸', '');
-INSERT INTO category VALUES ('04040200', 'ë·°í‹°', 'í—¤ì–´ì¼€ì–´', 'ë¦°ìŠ¤/ì»¨ë””ì…”ë„ˆ', '');
-INSERT INTO category VALUES ('04040300', 'ë·°í‹°', 'í—¤ì–´ì¼€ì–´', 'íŠ¸ë¦¬íŠ¸ë¨¼íŠ¸/ì¼€ì–´', '');
-INSERT INTO category VALUES ('04040301', 'ë·°í‹°', 'í—¤ì–´ì¼€ì–´', 'íŠ¸ë¦¬íŠ¸ë¨¼íŠ¸/ì¼€ì–´', 'í—¤ì–´íŠ¸ë¦¬íŠ¸ë¨¼íŠ¸');
-INSERT INTO category VALUES ('04040302', 'ë·°í‹°', 'í—¤ì–´ì¼€ì–´', 'íŠ¸ë¦¬íŠ¸ë¨¼íŠ¸/ì¼€ì–´', 'í—¤ì–´íŒ©/ë§ˆìŠ¤í¬');
-INSERT INTO category VALUES ('04040303', 'ë·°í‹°', 'í—¤ì–´ì¼€ì–´', 'íŠ¸ë¦¬íŠ¸ë¨¼íŠ¸/ì¼€ì–´', 'í—¤ì–´ì—ì„¼ìŠ¤/ì˜¤ì¼/ì„¸ëŸ¼');
-INSERT INTO category VALUES ('04040304', 'ë·°í‹°', 'í—¤ì–´ì¼€ì–´', 'íŠ¸ë¦¬íŠ¸ë¨¼íŠ¸/ì¼€ì–´', 'í—¤ì–´í¼í“¸/í—¤ì–´ë¯¸ìŠ¤íŠ¸');
-INSERT INTO category VALUES ('04040400', 'ë·°í‹°', 'í—¤ì–´ì¼€ì–´', 'í—¤ì–´ìŠ¤íƒ€ì¼ë§', '');
-INSERT INTO category VALUES ('04040500', 'ë·°í‹°', 'í—¤ì–´ì¼€ì–´', 'í—¤ì–´ì»¬ëŸ¬/íŽŒ', '');
-
-INSERT INTO category VALUES ('04050000', 'ë·°í‹°', 'ë°”ë””ì¼€ì–´', '', '');
-INSERT INTO category VALUES ('04050100', 'ë·°í‹°', 'ë°”ë””ì¼€ì–´', 'ë°”ë””ë¡œì…˜/í¬ë¦¼/ì˜¤ì¼', '');
-INSERT INTO category VALUES ('04050200', 'ë·°í‹°', 'ë°”ë””ì¼€ì–´', 'ë°”ë””ì›Œì‹œ/ìŠ¤í¬ëŸ½', '');
-INSERT INTO category VALUES ('04050300', 'ë·°í‹°', 'ë°”ë””ì¼€ì–´', 'ë°”ë””ë¯¸ìŠ¤íŠ¸', '');
-INSERT INTO category VALUES ('04050400', 'ë·°í‹°', 'ë°”ë””ì¼€ì–´', 'í’‹/í•¸ë“œ/ë°ì˜¤ì¼€ì–´', '');
-INSERT INTO category VALUES ('04050500', 'ë·°í‹°', 'ë°”ë””ì¼€ì–´', 'ìƒ¤ì›Œ/ìž…ìš•ì œ', '');
-INSERT INTO category VALUES ('04050600', 'ë·°í‹°', 'ë°”ë””ì¼€ì–´', 'ë©´ë„/ì œëª¨ìš©í’ˆ', '');
-INSERT INTO category VALUES ('04050700', 'ë·°í‹°', 'ë°”ë””ì¼€ì–´', 'ìŠ¬ë¦¬ë°/ì²­ê²°ì œ', '');
-INSERT INTO category VALUES ('04050800', 'ë·°í‹°', 'ë°”ë””ì¼€ì–´', 'ê¸°íƒ€ë°”ë””ìš©í’ˆ', '');
-
-INSERT INTO category VALUES ('04060000', 'ë·°í‹°', 'ë¯¸ìš©ê¸°ê¸°/ì†Œí’ˆ', '', '');
-INSERT INTO category VALUES ('04060100', 'ë·°í‹°', 'ë¯¸ìš©ê¸°ê¸°/ì†Œí’ˆ', 'íŽ˜ì´ìŠ¤ê´€ë¦¬ê¸°ê¸°', '');
-INSERT INTO category VALUES ('04060200', 'ë·°í‹°', 'ë¯¸ìš©ê¸°ê¸°/ì†Œí’ˆ', 'íŽ˜ì´ìŠ¤ì†Œí’ˆ', '');
-INSERT INTO category VALUES ('04060300', 'ë·°í‹°', 'ë¯¸ìš©ê¸°ê¸°/ì†Œí’ˆ', 'ë©”ì´í¬ì—…ë¸ŒëŸ¬ì‰¬', '');
-INSERT INTO category VALUES ('04060400', 'ë·°í‹°', 'ë¯¸ìš©ê¸°ê¸°/ì†Œí’ˆ', 'ì•„ì´ì†Œí’ˆ', '');
-INSERT INTO category VALUES ('04060500', 'ë·°í‹°', 'ë¯¸ìš©ê¸°ê¸°/ì†Œí’ˆ', 'ë°”ë””ê´€ë¦¬ê¸°ê¸°', '');
-INSERT INTO category VALUES ('04060600', 'ë·°í‹°', 'ë¯¸ìš©ê¸°ê¸°/ì†Œí’ˆ', 'í—¤ì–´ê´€ë¦¬ê¸°ê¸°', '');
-INSERT INTO category VALUES ('04060700', 'ë·°í‹°', 'ë¯¸ìš©ê¸°ê¸°/ì†Œí’ˆ', 'í—¤ì–´ì†Œí’ˆ', '');
-INSERT INTO category VALUES ('04060800', 'ë·°í‹°', 'ë¯¸ìš©ê¸°ê¸°/ì†Œí’ˆ', 'íŒŒìš°ì¹˜', '');
-INSERT INTO category VALUES ('04060900', 'ë·°í‹°', 'ë¯¸ìš©ê¸°ê¸°/ì†Œí’ˆ', 'ê±°ìš¸/ìš©ê¸°/ê¸°íƒ€ì†Œí’ˆ', '');
-
-INSERT INTO category VALUES ('04070000', 'ë·°í‹°', 'ë‚¨ì„±í™”ìž¥í’ˆ', '', '');
-INSERT INTO category VALUES ('04070100', 'ë·°í‹°', 'ë‚¨ì„±í™”ìž¥í’ˆ', 'í´ë Œì§•/ì‰ì´ë¹™', '');
-INSERT INTO category VALUES ('04070200', 'ë·°í‹°', 'ë‚¨ì„±í™”ìž¥í’ˆ', 'ìŠ¤í‚¨/ì• í”„í„°ì‰ì´ë¸Œ', '');
-INSERT INTO category VALUES ('04070300', 'ë·°í‹°', 'ë‚¨ì„±í™”ìž¥í’ˆ', 'ë¡œì…˜', '');
-INSERT INTO category VALUES ('04070400', 'ë·°í‹°', 'ë‚¨ì„±í™”ìž¥í’ˆ', 'ì—ì„¼ìŠ¤', '');
-INSERT INTO category VALUES ('04070500', 'ë·°í‹°', 'ë‚¨ì„±í™”ìž¥í’ˆ', 'í¬ë¦¼', '');
-INSERT INTO category VALUES ('04070600', 'ë·°í‹°', 'ë‚¨ì„±í™”ìž¥í’ˆ', 'ì˜¬ì¸ì›', '');
-INSERT INTO category VALUES ('04070700', 'ë·°í‹°', 'ë‚¨ì„±í™”ìž¥í’ˆ', 'ë§ˆìŠ¤í¬/íŒ©', '');
-INSERT INTO category VALUES ('04070800', 'ë·°í‹°', 'ë‚¨ì„±í™”ìž¥í’ˆ', 'ìŠ¤í‚¨ì¼€ì–´ì„¸íŠ¸', '');
-INSERT INTO category VALUES ('04070900', 'ë·°í‹°', 'ë‚¨ì„±í™”ìž¥í’ˆ', 'ì„ ì¼€ì–´/BBí¬ë¦¼', '');
-INSERT INTO category VALUES ('04071000', 'ë·°í‹°', 'ë‚¨ì„±í™”ìž¥í’ˆ', 'ë‚¨ì„±ë©”ì´í¬ì—…', '');
-
-INSERT INTO category VALUES ('04080000', 'ë·°í‹°', 'ë·°í‹°ì„ ë¬¼ì„¸íŠ¸', '', '');
-INSERT INTO category VALUES ('04080100', 'ë·°í‹°', 'ë·°í‹°ì„ ë¬¼ì„¸íŠ¸', 'ë©”ì´í¬ì—…', '');
-INSERT INTO category VALUES ('04080200', 'ë·°í‹°', 'ë·°í‹°ì„ ë¬¼ì„¸íŠ¸', 'ìŠ¤í‚¨ì¼€ì–´', '');
-INSERT INTO category VALUES ('04080300', 'ë·°í‹°', 'ë·°í‹°ì„ ë¬¼ì„¸íŠ¸', 'í–¥ìˆ˜', '');
-INSERT INTO category VALUES ('04080400', 'ë·°í‹°', 'ë·°í‹°ì„ ë¬¼ì„¸íŠ¸', 'ë°”ë””ì¼€ì–´', '');
-INSERT INTO category VALUES ('04080500', 'ë·°í‹°', 'ë·°í‹°ì„ ë¬¼ì„¸íŠ¸', 'í—¤ì–´ì¼€ì–´', '');
-
-
-
-
-
--- í™”ìž¥ì§€/ìƒë¦¬ëŒ€
-INSERT INTO category VALUES ('06000000', 'ìƒí™œ/ì£¼ë°©', '', '', '');
-INSERT INTO category VALUES ('06010000', 'ìƒí™œ/ì£¼ë°©', 'í™”ìž¥ì§€/ìƒë¦¬ëŒ€', '', '');
-INSERT INTO category VALUES ('06010100', 'ìƒí™œ/ì£¼ë°©', 'í™”ìž¥ì§€/ìƒë¦¬ëŒ€', 'í™”ìž¥ì§€', '');
-INSERT INTO category VALUES ('06010101', 'ìƒí™œ/ì£¼ë°©', 'í™”ìž¥ì§€/ìƒë¦¬ëŒ€', 'í™”ìž¥ì§€', 'ë¡¤í™”ìž¥ì§€');
-INSERT INTO category VALUES ('06010102', 'ìƒí™œ/ì£¼ë°©', 'í™”ìž¥ì§€/ìƒë¦¬ëŒ€', 'í™”ìž¥ì§€', 'ê³ ê¸‰í™”ìž¥ì§€');
-INSERT INTO category VALUES ('06010103', 'ìƒí™œ/ì£¼ë°©', 'í™”ìž¥ì§€/ìƒë¦¬ëŒ€', 'í™”ìž¥ì§€', 'ì í¬ë¡¤í™”ìž¥ì§€');
-INSERT INTO category VALUES ('06010104', 'ìƒí™œ/ì£¼ë°©', 'í™”ìž¥ì§€/ìƒë¦¬ëŒ€', 'í™”ìž¥ì§€', 'íŽ˜ì´í¼íƒ€ì˜¬');
-INSERT INTO category VALUES ('06010105', 'ìƒí™œ/ì£¼ë°©', 'í™”ìž¥ì§€/ìƒë¦¬ëŒ€', 'í™”ìž¥ì§€', 'ëƒ…í‚¨');
-INSERT INTO category VALUES ('06010200', 'ìƒí™œ/ì£¼ë°©', 'í™”ìž¥ì§€/ìƒë¦¬ëŒ€', 'ë¬¼í‹°ìŠˆ', '');
-INSERT INTO category VALUES ('06010300', 'ìƒí™œ/ì£¼ë°©', 'í™”ìž¥ì§€/ìƒë¦¬ëŒ€', 'ë¯¸ìš©í‹°ìŠˆ', '');
-INSERT INTO category VALUES ('06010400', 'ìƒí™œ/ì£¼ë°©', 'í™”ìž¥ì§€/ìƒë¦¬ëŒ€', 'ìƒë¦¬ëŒ€', '');
-INSERT INTO category VALUES ('06010500', 'ìƒí™œ/ì£¼ë°©', 'í™”ìž¥ì§€/ìƒë¦¬ëŒ€', 'ì„±ì¸ê¸°ì €ê·€', '');
-
--- ì„¸ì œ/ì²­ì†Œìš©í’ˆ
-
-INSERT INTO category VALUES ('06020000', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', '', '');
-INSERT INTO category VALUES ('06020100', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', 'ì„¸íƒì„¸ì œ', '');
-INSERT INTO category VALUES ('06020200', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', 'ì£¼ë°©/ì²­ì†Œì„¸ì œ', '');
-INSERT INTO category VALUES ('06020300', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', 'ì„¸íƒìš©í’ˆ', '');
-INSERT INTO category VALUES ('06020400', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', 'íƒˆì·¨/ë°©í–¥ì œ', '');
-INSERT INTO category VALUES ('06020500', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', 'ì‚´ì¶©ì œ/ë°©ì¶©ì œ', '');
-INSERT INTO category VALUES ('06020600', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', 'ì„¸ì œì„ ë¬¼ì„¸íŠ¸', '');
-INSERT INTO category VALUES ('06020700', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', 'ë°€ëŒ€/ì²­ì†Œí¬', '');
-INSERT INTO category VALUES ('06020800', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', 'í¬ë¦¬ë„ˆ', '');
-INSERT INTO category VALUES ('06020900', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', 'ìš•ì‹¤ì²­ì†Œìš©í’ˆ', '');
-INSERT INTO category VALUES ('06021000', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', 'ê¸°íƒ€ì²­ì†Œë„êµ¬', '');
-INSERT INTO category VALUES ('06021100', 'ìƒí™œ/ì£¼ë°©', 'ì„¸ì œ/ì²­ì†Œìš©í’ˆ', 'ì²­ì†Œìš©í’ˆ', '');
-
--- ê±´ê°•/ìœ„ìƒìš©í’ˆ
-INSERT INTO category VALUES ('06030000', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', '', '');
-INSERT INTO category VALUES ('06030100', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'ë§ˆìŠ¤í¬', '');
-INSERT INTO category VALUES ('06030200', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'ì¹«ì†”/ì¹˜ì•½/êµ¬ê°•ì²­ê²°', '');
-INSERT INTO category VALUES ('06030300', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'ë©´ë„/ì œëª¨ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06030400', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'ëˆˆê±´ê°•/ë Œì¦ˆê´€ë¦¬', '');
-INSERT INTO category VALUES ('06030500', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'í˜ˆì••/í˜ˆë‹¹/ì²´ì˜¨/ì²´ì§€ë°©ê³„', '');
-INSERT INTO category VALUES ('06030600', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'ì²´ì¤‘ê³„/ì˜¨ìŠµë„ê³„/ë§Œë³´ê³„', '');
-INSERT INTO category VALUES ('06030700', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'ì•ˆë§ˆì˜ìž/ë§ˆì‚¬ì§€ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06030800', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'ë³´í˜¸ëŒ€/êµì •ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06030900', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'í™˜ìž/ìž¬í™œ/ì‹¤ë²„ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06031000', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'ì°œì§ˆ/ë¶€í•­/í›ˆì¦/ëœ¸', '');
-INSERT INTO category VALUES ('06031100', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'ê°€ì •ì˜ë£Œìš©í’ˆ', '');
-INSERT INTO category VALUES ('06031200', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'ì„±ì¸ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06031300', 'ìƒí™œ/ì£¼ë°©', 'ê±´ê°•/ìœ„ìƒìš©í’ˆ', 'ê¸°íƒ€ê±´ê°•ìš©í’ˆ', '');
-
--- ì£¼ë°©ìš©í’ˆ
-INSERT INTO category VALUES ('06040000', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', '', '');
-INSERT INTO category VALUES ('06040100', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ì‹ê¸°/ê·¸ë¦‡', '');
-INSERT INTO category VALUES ('06040200', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ìž”/ì»µ/ë¬¼ë³‘', '');
-INSERT INTO category VALUES ('06040300', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ë°€í/ë³´ê´€/ì €ìž¥ìš©ê¸°', '');
-INSERT INTO category VALUES ('06040400', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ìˆ˜ì €/ì–‘ì‹ê¸°', '');
-INSERT INTO category VALUES ('06040500', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ë³´ì˜¨/ë³´ëƒ‰ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06040600', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'í”„ë¼ì´íŒ¬/ê·¸ë¦´', '');
-INSERT INTO category VALUES ('06040700', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ëƒ„ë¹„/ì†¥/ì£¼ì „ìž', '');
-INSERT INTO category VALUES ('06040800', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ì¡°ë¦¬ê¸°êµ¬', '');
-INSERT INTO category VALUES ('06040900', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ì¹¼/ë„ë§ˆ/ì±„ì¹¼', '');
-INSERT INTO category VALUES ('06041000', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ì œê³¼/ì œë¹µìš©í’ˆ', '');
-INSERT INTO category VALUES ('06041100', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ì»¤í”¼/í‹°ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06041200', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ì™€ì¸ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06041300', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ëž©/í˜¸ì¼/í‚¤ì¹œíƒ€ì˜¬', '');
-INSERT INTO category VALUES ('06041400', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ìˆ˜ì„¸ë¯¸/í–‰ì£¼/ê³ ë¬´ìž¥ê°‘', '');
-INSERT INTO category VALUES ('06041500', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ì¼íšŒìš©í’ˆ /ìœ„ìƒë°±', '');
-INSERT INTO category VALUES ('06041600', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ì•žì¹˜ë§ˆ/ìž¥ê°‘', '');
-INSERT INTO category VALUES ('06041700', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ì•„ì›ƒë„ì–´í‚¤ì¹œ', '');
-INSERT INTO category VALUES ('06041800', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ê¸°íƒ€ ì£¼ë°©ìž¡í™”', '');
-INSERT INTO category VALUES ('06041900', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ìˆ˜ë‚©ì •ë¦¬ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06042000', 'ìƒí™œ/ì£¼ë°©', 'ì£¼ë°©ìš©í’ˆ', 'ì œìˆ˜ìš©í’ˆ', '');
-
--- ìš•ì‹¤ìš©í’ˆ
-INSERT INTO category VALUES ('06050000', 'ìƒí™œ/ì£¼ë°©', 'ìš•ì‹¤ìš©í’ˆ', '', '');
-INSERT INTO category VALUES ('06050100', 'ìƒí™œ/ì£¼ë°©', 'ìš•ì‹¤ìš©í’ˆ', 'ìƒ¤ì›Œê¸°/ìˆ˜ì „ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06050200', 'ìƒí™œ/ì£¼ë°©', 'ìš•ì‹¤ìš©í’ˆ', 'ì„¸ë©´ê¸°/ë³€ê¸°/ë¹„ë°', '');
-INSERT INTO category VALUES ('06050300', 'ìƒí™œ/ì£¼ë°©', 'ìš•ì‹¤ìš©í’ˆ', 'ìš•ì¡°ë®ê°œ', '');
-INSERT INTO category VALUES ('06050400', 'ìƒí™œ/ì£¼ë°©', 'ìš•ì‹¤ìš©í’ˆ', 'ë³€ê¸°ì‹œíŠ¸/ì»¤ë²„', '');
-INSERT INTO category VALUES ('06050500', 'ìƒí™œ/ì£¼ë°©', 'ìš•ì‹¤ìš©í’ˆ', 'ìš•ì‹¤ì†Œí’ˆ', '');
-INSERT INTO category VALUES ('06050600', 'ìƒí™œ/ì£¼ë°©', 'ìš•ì‹¤ìš©í’ˆ', 'ê¸°íƒ€ìš•ì‹¤ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06050700', 'ìƒí™œ/ì£¼ë°©', 'ìš•ì‹¤ìš©í’ˆ', 'íƒ€ì›”/ëª©ìš•ê°€ìš´', '');
-
--- ìƒí™œìž¡í™”/ê³µêµ¬
-INSERT INTO category VALUES ('06060000', 'ìƒí™œ/ì£¼ë°©', 'ìƒí™œìž¡í™”/ê³µêµ¬', '', '');
-INSERT INTO category VALUES ('06060100', 'ìƒí™œ/ì£¼ë°©', 'ìƒí™œìž¡í™”/ê³µêµ¬', 'ìˆ˜ë‚©/ì •ë¦¬ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06060200', 'ìƒí™œ/ì£¼ë°©', 'ìƒí™œìž¡í™”/ê³µêµ¬', 'ë°©í•œìš©í’ˆ', '');
-INSERT INTO category VALUES ('06060300', 'ìƒí™œ/ì£¼ë°©', 'ìƒí™œìž¡í™”/ê³µêµ¬', 'ì „ê¸°/ìƒí™œë§¤íŠ¸', '');
-INSERT INTO category VALUES ('06060400', 'ìƒí™œ/ì£¼ë°©', 'ìƒí™œìž¡í™”/ê³µêµ¬', 'ë©€í‹°íƒ­/ê±´ì „ì§€', '');
-INSERT INTO category VALUES ('06060500', 'ìƒí™œ/ì£¼ë°©', 'ìƒí™œìž¡í™”/ê³µêµ¬', 'ì•ˆì „ë³´í˜¸ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06060600', 'ìƒí™œ/ì£¼ë°©', 'ìƒí™œìž¡í™”/ê³µêµ¬', 'ë³´ì•ˆ/í˜¸ì‹ ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06060700', 'ìƒí™œ/ì£¼ë°©', 'ìƒí™œìž¡í™”/ê³µêµ¬', 'ê³µêµ¬ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06060800', 'ìƒí™œ/ì£¼ë°©', 'ìƒí™œìž¡í™”/ê³µêµ¬', 'ê¸°íƒ€ ìƒí™œìž¡í™”', '');
-
--- ìžë™ì°¨ìš©í’ˆ
-INSERT INTO category VALUES ('06070000', 'ìƒí™œ/ì£¼ë°©', 'ìžë™ì°¨ìš©í’ˆ', '', '');
-INSERT INTO category VALUES ('06070100', 'ìƒí™œ/ì£¼ë°©', 'ìžë™ì°¨ìš©í’ˆ', 'ì°¨ëŸ‰ê´€ë¦¬/ì„¸ì°¨ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06070200', 'ìƒí™œ/ì£¼ë°©', 'ìžë™ì°¨ìš©í’ˆ', 'ì¸í…Œë¦¬ì–´ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06070300', 'ìƒí™œ/ì£¼ë°©', 'ìžë™ì°¨ìš©í’ˆ', 'ìµìŠ¤í…Œë¦¬ì–´ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06070400', 'ìƒí™œ/ì£¼ë°©', 'ìžë™ì°¨ìš©í’ˆ', 'ì•ˆì „/íŽ¸ì˜/ê³„ì ˆìš©í’ˆ', '');
-INSERT INTO category VALUES ('06070500', 'ìƒí™œ/ì£¼ë°©', 'ìžë™ì°¨ìš©í’ˆ', 'ì˜¤í† ë°”ì´ìš©í’ˆ', '');
-INSERT INTO category VALUES ('06070600', 'ìƒí™œ/ì£¼ë°©', 'ìžë™ì°¨ìš©í’ˆ', 'ìˆ˜ìž…ì°¨', '');
-INSERT INTO category VALUES ('06070700', 'ìƒí™œ/ì£¼ë°©', 'ìžë™ì°¨ìš©í’ˆ', 'íƒ€ì´ì–´', '');
-
-
-
-
-
--- ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜
-INSERT INTO category VALUES ('01000000', 'íŒ¨ì…˜ì˜ë¥˜', '', '', '');
-INSERT INTO category VALUES ('01040000', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', '', '');
-INSERT INTO category VALUES ('01040100', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'ê°€ë””ê±´', '');
-INSERT INTO category VALUES ('01040200', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'ë‹ˆíŠ¸/ë² ìŠ¤íŠ¸', '');
-INSERT INTO category VALUES ('01040300', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'ìŠ¤ì»¤íŠ¸', '');
-INSERT INTO category VALUES ('01040400', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'ì›í”¼ìŠ¤', '');
-INSERT INTO category VALUES ('01040500', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'ì •ìž¥', '');
-INSERT INTO category VALUES ('01040600', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'ìžì¼“', '');
-INSERT INTO category VALUES ('01040700', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'ì í¼/íŒ¨ë”©', '');
-INSERT INTO category VALUES ('01040800', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'ì½”íŠ¸', '');
-INSERT INTO category VALUES ('01040900', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'ë¬´ìŠ¤íƒ•/í¼', '');
-INSERT INTO category VALUES ('01041000', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'ë§¨íˆ¬ë§¨/í›„ë“œ/í‹°ì…”ì¸ ', '');
-INSERT INTO category VALUES ('01041100', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'ë¸”ë¼ìš°ìŠ¤/ì…”ì¸ ', '');
-INSERT INTO category VALUES ('01041200', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±ë¸Œëžœë“œíŒ¨ì…˜', 'íŒ¬ì¸ ', '');
-
--- ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜
-INSERT INTO category VALUES ('01050000', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', '', '');
-INSERT INTO category VALUES ('01050100', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'ê°€ë””ê±´', '');
-INSERT INTO category VALUES ('01050200', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'ë‹ˆíŠ¸/ë² ìŠ¤íŠ¸', '');
-INSERT INTO category VALUES ('01050300', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'ìŠ¤ì»¤íŠ¸', '');
-INSERT INTO category VALUES ('01050400', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'ì›í”¼ìŠ¤', '');
-INSERT INTO category VALUES ('01050500', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'ì •ìž¥', '');
-INSERT INTO category VALUES ('01050600', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'ìžì¼“', '');
-INSERT INTO category VALUES ('01050700', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'ì í¼/íŒ¨ë”©', '');
-INSERT INTO category VALUES ('01050800', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'ì½”íŠ¸', '');
-INSERT INTO category VALUES ('01050900', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'ë¬´ìŠ¤íƒ•/í¼', '');
-INSERT INTO category VALUES ('01051000', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'ë§¨íˆ¬ë§¨/í›„ë“œ/í‹°ì…”ì¸ ', '');
-INSERT INTO category VALUES ('01051100', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'ë¸”ë¼ìš°ìŠ¤/ì…”ì¸ ', '');
-INSERT INTO category VALUES ('01051200', 'íŒ¨ì…˜ì˜ë¥˜', 'ì—¬ì„±íŠ¸ë Œë“œíŒ¨ì…˜', 'íŒ¬ì¸ ', '');
-
--- ë‚¨ì„±íŒ¨ì…˜
-INSERT INTO category VALUES ('01060000', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', '', '');
-INSERT INTO category VALUES ('01060100', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ê°€ë””ê±´', '');
-INSERT INTO category VALUES ('01060200', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ë‹ˆíŠ¸/ë² ìŠ¤íŠ¸', '');
-INSERT INTO category VALUES ('01060300', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ì…”ì¸ /ë‚¨ë°©', '');
-INSERT INTO category VALUES ('01060400', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ìžì¼“', '');
-INSERT INTO category VALUES ('01060500', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ì í¼/íŒ¨ë”©', '');
-INSERT INTO category VALUES ('01060600', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ì •ìž¥/ìˆ˜íŠ¸', '');
-INSERT INTO category VALUES ('01030601', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ì •ìž¥/ìˆ˜íŠ¸', 'ì†”ë¦¬ë“œì •ìž¥ì„¸íŠ¸');
-INSERT INTO category VALUES ('01030602', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ì •ìž¥/ìˆ˜íŠ¸', 'íŒ¨í„´ì •ìž¥ì„¸íŠ¸');
-INSERT INTO category VALUES ('01030603', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ì •ìž¥/ìˆ˜íŠ¸', 'ì •ìž¥ë°”ì§€');
-INSERT INTO category VALUES ('01030604', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ì •ìž¥/ìˆ˜íŠ¸', 'ì •ìž¥ìžì¼“');
-INSERT INTO category VALUES ('01060700', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ì½”íŠ¸', '');
-INSERT INTO category VALUES ('01060800', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'ë§¨íˆ¬ë§¨/í›„ë“œ/í‹°ì…”ì¸ ', '');
-INSERT INTO category VALUES ('01060900', 'íŒ¨ì…˜ì˜ë¥˜', 'ë‚¨ì„±íŒ¨ì…˜', 'íŒ¬ì¸ ', '');
-
--- ìºì£¼ì–¼/ìœ ë‹ˆì„¹ìŠ¤
-INSERT INTO category VALUES ('01070000', 'íŒ¨ì…˜ì˜ë¥˜', 'ìºì£¼ì–¼/ìœ ë‹ˆì„¹ìŠ¤', '', '');
-INSERT INTO category VALUES ('01070100', 'íŒ¨ì…˜ì˜ë¥˜', 'ìºì£¼ì–¼/ìœ ë‹ˆì„¹ìŠ¤', 'ì›í”¼ìŠ¤/ìŠ¤ì»¤íŠ¸', '');
-INSERT INTO category VALUES ('01070200', 'íŒ¨ì…˜ì˜ë¥˜', 'ìºì£¼ì–¼/ìœ ë‹ˆì„¹ìŠ¤', 'ì í¼/íŒ¨ë”©', '');
-INSERT INTO category VALUES ('01070300', 'íŒ¨ì…˜ì˜ë¥˜', 'ìºì£¼ì–¼/ìœ ë‹ˆì„¹ìŠ¤', 'ìžì¼“', '');
-INSERT INTO category VALUES ('01070400', 'íŒ¨ì…˜ì˜ë¥˜', 'ìºì£¼ì–¼/ìœ ë‹ˆì„¹ìŠ¤','ë§¨íˆ¬ë§¨/í›„ë“œ/í‹°ì…”ì¸ ', '');
-INSERT INTO category VALUES ('01070500', 'íŒ¨ì…˜ì˜ë¥˜', 'ìºì£¼ì–¼/ìœ ë‹ˆì„¹ìŠ¤', 'ì…”ì¸ /ë‚¨ë°©', '');
-INSERT INTO category VALUES ('01070600', 'íŒ¨ì…˜ì˜ë¥˜', 'ìºì£¼ì–¼/ìœ ë‹ˆì„¹ìŠ¤', 'ê°€ë””ê±´', '');
-INSERT INTO category VALUES ('01070700', 'íŒ¨ì…˜ì˜ë¥˜', 'ìºì£¼ì–¼/ìœ ë‹ˆì„¹ìŠ¤', 'ë‹ˆíŠ¸/ë² ìŠ¤íŠ¸', '');
-INSERT INTO category VALUES ('01070800', 'íŒ¨ì…˜ì˜ë¥˜', 'ìºì£¼ì–¼/ìœ ë‹ˆì„¹ìŠ¤', 'ì½”íŠ¸', '');
-INSERT INTO category VALUES ('01070900', 'íŒ¨ì…˜ì˜ë¥˜', 'ìºì£¼ì–¼/ìœ ë‹ˆì„¹ìŠ¤', 'íŒ¬ì¸ ', '');
-
--- ì–¸ë”ì›¨ì–´
-INSERT INTO category VALUES ('01080000', 'íŒ¨ì…˜ì˜ë¥˜', 'ì–¸ë”ì›¨ì–´', '', '');
-INSERT INTO category VALUES ('01080100', 'íŒ¨ì…˜ì˜ë¥˜', 'ì–¸ë”ì›¨ì–´', 'ì—¬ì„±ìž ì˜·/í™ˆì›¨ì–´', '');
-INSERT INTO category VALUES ('01080200', 'íŒ¨ì…˜ì˜ë¥˜', 'ì–¸ë”ì›¨ì–´', 'ë‚¨ì„±ìž ì˜·/í™ˆì›¨ì–´', '');
-INSERT INTO category VALUES ('01080300', 'íŒ¨ì…˜ì˜ë¥˜', 'ì–¸ë”ì›¨ì–´', 'ì—¬ì„±ì†ì˜·ìƒì˜', '');
-INSERT INTO category VALUES ('01080400', 'íŒ¨ì…˜ì˜ë¥˜', 'ì–¸ë”ì›¨ì–´', 'ì—¬ì„±ì†ì˜·í•˜ì˜', '');
-INSERT INTO category VALUES ('01080500', 'íŒ¨ì…˜ì˜ë¥˜', 'ì–¸ë”ì›¨ì–´', 'ë¸Œëž˜ì§€ì–´/íŒ¬í‹°ì„¸íŠ¸', '');
-INSERT INTO category VALUES ('01080600', 'íŒ¨ì…˜ì˜ë¥˜', 'ì–¸ë”ì›¨ì–´', 'ë‚¨ì„±ì†ì˜·', '');
-INSERT INTO category VALUES ('01080700', 'íŒ¨ì…˜ì˜ë¥˜', 'ì–¸ë”ì›¨ì–´', 'ì»¤í”Œìž ì˜·/ì†ì˜·ì„¸íŠ¸', '');
-INSERT INTO category VALUES ('01080800', 'íŒ¨ì…˜ì˜ë¥˜', 'ì–¸ë”ì›¨ì–´', 'ë‚´ë³µ', '');
-INSERT INTO category VALUES ('01080900', 'íŒ¨ì…˜ì˜ë¥˜', 'ì–¸ë”ì›¨ì–´', 'ì£¼ë‹ˆì–´ì–¸ë”ì›¨ì–´', '');
-
--- ë””ìžì´ë„ˆìƒµ
-INSERT INTO category VALUES ('01090000', 'íŒ¨ì…˜ì˜ë¥˜', 'ë””ìžì´ë„ˆìƒµ', '', '');
-INSERT INTO category VALUES ('01090100', 'íŒ¨ì…˜ì˜ë¥˜', 'ë””ìžì´ë„ˆìƒµ', 'ì—¬ì„± ì•„ìš°í„°', '');
-INSERT INTO category VALUES ('01090200', 'íŒ¨ì…˜ì˜ë¥˜', 'ë””ìžì´ë„ˆìƒµ', 'ì—¬ì„± ìƒì˜', '');
-INSERT INTO category VALUES ('01090300', 'íŒ¨ì…˜ì˜ë¥˜', 'ë””ìžì´ë„ˆìƒµ', 'ì—¬ì„± íŒ¬ì¸ /ì…‹ì—…', '');
-INSERT INTO category VALUES ('01090400', 'íŒ¨ì…˜ì˜ë¥˜', 'ë””ìžì´ë„ˆìƒµ', 'ìŠ¤ì»¤íŠ¸/ì›í”¼ìŠ¤', '');
-INSERT INTO category VALUES ('01090500', 'íŒ¨ì…˜ì˜ë¥˜', 'ë””ìžì´ë„ˆìƒµ', 'ì—¬ì„± ì–¸ë”ì›¨ì–´/ì´ì§€ì›¨ì–´', '');
-INSERT INTO category VALUES ('01090600', 'íŒ¨ì…˜ì˜ë¥˜', 'ë””ìžì´ë„ˆìƒµ', 'ë‚¨ì„± ì•„ìš°í„°', '');
-INSERT INTO category VALUES ('01090700', 'íŒ¨ì…˜ì˜ë¥˜', 'ë””ìžì´ë„ˆìƒµ', 'ë‚¨ì„± ìƒì˜', '');
-INSERT INTO category VALUES ('01090800', 'íŒ¨ì…˜ì˜ë¥˜', 'ë””ìžì´ë„ˆìƒµ', 'ë‚¨ì„± íŒ¬ì¸ /ì…‹ì—…', '');
-INSERT INTO category VALUES ('01090900', 'íŒ¨ì…˜ì˜ë¥˜', 'ë””ìžì´ë„ˆìƒµ', 'ë‚¨ì„± ì–¸ë”ì›¨ì–´/ì´ì§€ì›¨ì–´', '');
-INSERT INTO category VALUES ('01091000', 'íŒ¨ì…˜ì˜ë¥˜', 'ë””ìžì´ë„ˆìƒµ', 'ì»¤í”Œ ì–¸ë”ì›¨ì–´/ì´ì§€ì›¨ì–´', '');
-
-
-
-
-
--- ì‹ ì„ ì‹í’ˆì˜ ìµœìƒìœ„ ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('11000000', 'ì‹ ì„ ì‹í’ˆ', '', '', '');
-
-INSERT INTO category VALUES ('11010000', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', '', '');
-INSERT INTO category VALUES ('11010100', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ìˆ˜ë°•/ë©œë¡ /ì°¸ì™¸/í† ë§ˆí† ', '');
-INSERT INTO category VALUES ('11010200', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'í¬ë„/ìžë‘/ë³µìˆ­ì•„', '');
-INSERT INTO category VALUES ('11010300', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ë°”ë‚˜ë‚˜/íŒŒì¸ì• í”Œ', '');
-INSERT INTO category VALUES ('11010301', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ë°”ë‚˜ë‚˜/íŒŒì¸ì• í”Œ', 'ë°”ë‚˜ë‚˜');
-INSERT INTO category VALUES ('11010302', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ë°”ë‚˜ë‚˜/íŒŒì¸ì• í”Œ', 'íŒŒì¸ì• í”Œ');
-INSERT INTO category VALUES ('11010400', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ì˜¤ë Œì§€/ìžëª½/ë ˆëª¬', '');
-INSERT INTO category VALUES ('11010500', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ì‚¬ê³¼/ë°°', '');
-INSERT INTO category VALUES ('11010501', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ì‚¬ê³¼/ë°°', 'ì‚¬ê³¼');
-INSERT INTO category VALUES ('11010502', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ì‚¬ê³¼/ë°°', 'ë°°');
-INSERT INTO category VALUES ('11010600', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ë”¸ê¸°/í‚¤ìœ„/ë¸”ë£¨ë² ë¦¬', '');
-INSERT INTO category VALUES ('11010700', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ê°ê·¤/ë§Œê°ë¥˜', '');
-INSERT INTO category VALUES ('11010800', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ê°/ê³¶ê°', '');
-INSERT INTO category VALUES ('11010900', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ë§ê³ /ì—´ëŒ€ê³¼ì¼', '');
-INSERT INTO category VALUES ('11011000', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ì²´ë¦¬/ì„ë¥˜/ì•„ë³´ì¹´ë„', '');
-INSERT INTO category VALUES ('11011100', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ê±´ê³¼ì¼/ë¶„ë§', '');
-INSERT INTO category VALUES ('11011200', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ëƒ‰ë™/ê°„íŽ¸ê³¼ì¼', '');
-INSERT INTO category VALUES ('11011300', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ê¸°íƒ€ê³¼ì¼', '');
-INSERT INTO category VALUES ('11011400', 'ì‹ ì„ ì‹í’ˆ', 'ê³¼ì¼', 'ê³¼ì¼ì„¸íŠ¸', '');
-
-
-
-
-
--- ì±„ì†Œ
-INSERT INTO category VALUES ('11020000', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', '', '');
-INSERT INTO category VALUES ('11020100', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ë‘ë¶€/ì½©ë‚˜ë¬¼/ìˆ™ì£¼ë‚˜ë¬¼', '');
-INSERT INTO category VALUES ('11020200', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ê³ êµ¬ë§ˆ/ê°ìž', '');
-INSERT INTO category VALUES ('11020300', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ì–‘íŒŒ/ë§ˆëŠ˜/íŒŒ/ìƒê°•', '');
-INSERT INTO category VALUES ('11020400', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ì˜¤ì´/ê°€ì§€/í˜¸ë°•/ì˜¥ìˆ˜ìˆ˜', '');
-INSERT INTO category VALUES ('11020500', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ìƒì¶”/ê¹»ìžŽ/ìŒˆì±„ì†Œ', '');
-INSERT INTO category VALUES ('11020600', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ê³ ì¶”/í”¼ë§/íŒŒí”„ë¦¬ì¹´', '');
-INSERT INTO category VALUES ('11020700', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ì‹œê¸ˆì¹˜/ë¶€ì¶”/ë‚˜ë¬¼', '');
-INSERT INTO category VALUES ('11020800', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ì–‘ë°°ì¶”/ì–‘ìƒì¶”/ë¸Œë¡œì½œë¦¬', '');
-INSERT INTO category VALUES ('11020900', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ìƒëŸ¬ë“œ/ì–´ë¦°ìžŽì±„ì†Œ', '');
-INSERT INTO category VALUES ('11021000', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ë‹¹ê·¼/ìš°ì—‰/ì—°ê·¼/ë§ˆ', '');
-INSERT INTO category VALUES ('11021100', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ë²„ì„¯', '');
-INSERT INTO category VALUES ('11021200', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ë°°ì¶”/ë¬´/ê¹€ìž¥ì±„ì†Œ', '');
-INSERT INTO category VALUES ('11021300', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ì•„ìŠ¤íŒŒë¼ê±°ìŠ¤/í—ˆë¸Œë¥˜/ê¸°íƒ€', '');
-INSERT INTO category VALUES ('11021400', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ì¸ì‚¼/ë”ë•/ì•½ì„ ìž¬ë£Œ', '');
-INSERT INTO category VALUES ('11021500', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ê°„íŽ¸ì±„ì†Œ', '');
-INSERT INTO category VALUES ('11021600', 'ì‹ ì„ ì‹í’ˆ', 'ì±„ì†Œ', 'ì±„ì†Œì„¸íŠ¸', '');
-
--- ìŒ€/ìž¡ê³¡/ê²¬ê³¼
-INSERT INTO category VALUES ('11030000', 'ì‹ ì„ ì‹í’ˆ', 'ìŒ€/ìž¡ê³¡/ê²¬ê³¼', '', '');
-INSERT INTO category VALUES ('11030100', 'ì‹ ì„ ì‹í’ˆ', 'ìŒ€/ìž¡ê³¡/ê²¬ê³¼', 'ë°±ë¯¸', '');
-INSERT INTO category VALUES ('11030200', 'ì‹ ì„ ì‹í’ˆ', 'ìŒ€/ìž¡ê³¡/ê²¬ê³¼', 'ì°¹ìŒ€/í˜„ë¯¸/í‘ë¯¸', '');
-INSERT INTO category VALUES ('11030300', 'ì‹ ì„ ì‹í’ˆ', 'ìŒ€/ìž¡ê³¡/ê²¬ê³¼', 'í˜¼í•©ê³¡', '');
-INSERT INTO category VALUES ('11030400', 'ì‹ ì„ ì‹í’ˆ', 'ìŒ€/ìž¡ê³¡/ê²¬ê³¼', 'ì½©/íŒ¥/ë³´ë¦¬/ê·€ë¦¬', '');
-INSERT INTO category VALUES ('11030500', 'ì‹ ì„ ì‹í’ˆ', 'ìŒ€/ìž¡ê³¡/ê²¬ê³¼', 'ìˆ˜ìˆ˜/ì¡°/ê¹¨/ìž¡ê³¡', '');
-INSERT INTO category VALUES ('11030600', 'ì‹ ì„ ì‹í’ˆ', 'ìŒ€/ìž¡ê³¡/ê²¬ê³¼', 'ê²¬ê³¼ë¥˜', '');
-INSERT INTO category VALUES ('11030700', 'ì‹ ì„ ì‹í’ˆ', 'ìŒ€/ìž¡ê³¡/ê²¬ê³¼', 'ì„ ì‹/ê³¡ë¬¼ê°€ê³µ', '');
-INSERT INTO category VALUES ('11030800', 'ì‹ ì„ ì‹í’ˆ', 'ìŒ€/ìž¡ê³¡/ê²¬ê³¼', 'ìŒ€/ìž¡ê³¡ì„ ë¬¼ì„¸íŠ¸', '');
-
--- ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°
-INSERT INTO category VALUES ('11040000', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', '', '');
-INSERT INTO category VALUES ('11040100', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ìƒì„ ', '');
-INSERT INTO category VALUES ('11040200', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ì˜¤ì§•ì–´/ë‚™ì§€/ì£¼ê¾¸ë¯¸/ë¬¸ì–´', '');
-INSERT INTO category VALUES ('11040300', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ìƒˆìš°/ê²Œ/ëžìŠ¤í„°', '');
-INSERT INTO category VALUES ('11040301', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ìƒˆìš°/ê²Œ/ëžìŠ¤í„°', 'ìƒˆìš°');
-INSERT INTO category VALUES ('11040302', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ìƒˆìš°/ê²Œ/ëžìŠ¤í„°', 'ê½ƒê²Œ/ëŒ€ê²Œ/í‚¹í¬ëž©');
-INSERT INTO category VALUES ('11040303', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ìƒˆìš°/ê²Œ/ëžìŠ¤í„°', 'ëžìŠ¤í„°');
-INSERT INTO category VALUES ('11040400', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ì „ë³µ/êµ´/ë©ê²Œ/ì¡°ê°œë¥˜', '');
-INSERT INTO category VALUES ('11040500', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'íšŒ/ëª…ëž€/ë‚ ì¹˜ì•Œ/ìž¥', '');
-INSERT INTO category VALUES ('11040600', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ê¹€/ë¯¸ì—­/ê¸°íƒ€í•´ì¡°ë¥˜', '');
-INSERT INTO category VALUES ('11040700', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ë©¸ì¹˜/í™©íƒœ/ë…¸ê°€ë¦¬', '');
-INSERT INTO category VALUES ('11040800', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ê±´ì˜¤ì§•ì–´/ê±´ì–´ë¬¼/ë‹¤ì‹œíŒ©', '');
-INSERT INTO category VALUES ('11040900', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ê°„íŽ¸/ëª¨ë“¬ìˆ˜ì‚°ë¬¼', '');
-INSERT INTO category VALUES ('11041000', 'ì‹ ì„ ì‹í’ˆ', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°', 'ìˆ˜ì‚°/ê±´í•´ì‚°ì„¸íŠ¸', '');
-
--- ì •ìœ¡/ê³„ëž€
-INSERT INTO category VALUES ('11050000', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', '', '');
-INSERT INTO category VALUES ('11050100', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ê³„ëž€/ì•Œë¥˜', '');
-INSERT INTO category VALUES ('11050200', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ë‹­/ì˜¤ë¦¬ê³ ê¸°', '');
-INSERT INTO category VALUES ('11050300', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ì–‘ê³ ê¸°', '');
-INSERT INTO category VALUES ('11050400', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ë¼ì§€ê³ ê¸°', '');
-INSERT INTO category VALUES ('11050500', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'êµ­ë‚´ì‚°ì†Œê³ ê¸°', '');
-INSERT INTO category VALUES ('11050501', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'êµ­ë‚´ì‚°ì†Œê³ ê¸°', 'êµ­ê±°ë¦¬');
-INSERT INTO category VALUES ('11050502', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'êµ­ë‚´ì‚°ì†Œê³ ê¸°', 'ìž¥ì¡°ë¦¼/ê°ˆë¹„/ì°œ');
-INSERT INTO category VALUES ('11050503', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'êµ­ë‚´ì‚°ì†Œê³ ê¸°', 'êµ¬ì´/ìŠ¤í…Œì´í¬');
-INSERT INTO category VALUES ('11050504', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'êµ­ë‚´ì‚°ì†Œê³ ê¸°', 'ë¶ˆê³ ê¸°/ìž¡ì±„/ìƒ¤ë¸Œìƒ¤ë¸Œìš©');
-INSERT INTO category VALUES ('11050505', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'êµ­ë‚´ì‚°ì†Œê³ ê¸°', 'ë‹¤ì§ìœ¡/ì´ìœ ì‹');
-INSERT INTO category VALUES ('11050506', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'êµ­ë‚´ì‚°ì†Œê³ ê¸°', 'ì‚¬ê³¨/ê³°íƒ•');
-INSERT INTO category VALUES ('11050600', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ìˆ˜ìž…ì‚°ì†Œê³ ê¸°', '');
-INSERT INTO category VALUES ('11050700', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ì–‘ë…ìœ¡/ê°€ê³µìœ¡', '');
-INSERT INTO category VALUES ('11050701', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ì–‘ë…ìœ¡/ê°€ê³µìœ¡', 'ì†Œê³ ê¸°');
-INSERT INTO category VALUES ('11050702', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ì–‘ë…ìœ¡/ê°€ê³µìœ¡', 'ë¼ì§€ê³ ê¸°');
-INSERT INTO category VALUES ('11050703', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ì–‘ë…ìœ¡/ê°€ê³µìœ¡', 'ë‹­ê³ ê¸°');
-INSERT INTO category VALUES ('11050704', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ì–‘ë…ìœ¡/ê°€ê³µìœ¡', 'ì˜¤ë¦¬ê³ ê¸°');
-INSERT INTO category VALUES ('11050705', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ì–‘ë…ìœ¡/ê°€ê³µìœ¡', 'ì–‘ê³ ê¸°');
-INSERT INTO category VALUES ('11050706', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ì–‘ë…ìœ¡/ê°€ê³µìœ¡', 'ê¸°íƒ€ ê°€ê³µìœ¡');
-INSERT INTO category VALUES ('11050800', 'ì‹ ì„ ì‹í’ˆ', 'ì •ìœ¡/ê³„ëž€ë¥˜', 'ì¶•ì‚°ì„ ë¬¼ì„¸íŠ¸', '');
-
--- ì¹œí™˜ê²½/ìœ ê¸°ë†
-INSERT INTO category VALUES ('11060000', 'ì‹ ì„ ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', '', '');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-INSERT INTO category VALUES ('12000000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', '', '', '');
-
--- ìš°ìœ /ìœ ì œí’ˆ
-INSERT INTO category VALUES ('12010000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìš°ìœ /ìœ ì œí’ˆ', '', '');
-INSERT INTO category VALUES ('12010100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìš°ìœ /ìœ ì œí’ˆ', 'ìš°ìœ ', '');
-INSERT INTO category VALUES ('12010200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìš°ìœ /ìœ ì œí’ˆ', 'ìš”ê±°íŠ¸/ìš”êµ¬ë¥´íŠ¸', '');
-INSERT INTO category VALUES ('12010300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìš°ìœ /ìœ ì œí’ˆ', 'ë‘ìœ ', '');
-INSERT INTO category VALUES ('12010400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìš°ìœ /ìœ ì œí’ˆ', 'ì¹˜ì¦ˆ', '');
-INSERT INTO category VALUES ('12010500', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìš°ìœ /ìœ ì œí’ˆ', 'ë²„í„°/ìƒí¬ë¦¼/ì—°ìœ ', '');
-
--- ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹
-INSERT INTO category VALUES ('12020000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', '', '');
-INSERT INTO category VALUES ('12020100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', 'ë°€í‚¤íŠ¸', '');
-INSERT INTO category VALUES ('12020200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', 'ë³¶ìŒë°¥/ì°Œê°œ/ì£½/ìŠ¤í”„', '');
-INSERT INTO category VALUES ('12020300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', 'ë§Œë‘/ëˆê°€ìŠ¤/ì¹˜í‚¨/íŠ€ê¹€', '');
-INSERT INTO category VALUES ('12020400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', 'ë–¡ê°ˆë¹„/ìŠ¤í…Œì´í¬/ì „', '');
-INSERT INTO category VALUES ('12020500', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', 'í–„/ë‹¨ë¬´ì§€/ì–´ë¬µ/ë§›ì‚´', '');
-INSERT INTO category VALUES ('12020600', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', 'ìœ ë¶€/ë¬µ/ë–¡', '');
-INSERT INTO category VALUES ('12020700', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', 'í”¼ìž/í•«ë„ê·¸/íŒŒìŠ¤íƒ€/ë–¡ë³¶ì´', '');
-INSERT INTO category VALUES ('12020800', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', 'ì¤‘ì‹/ì¼ì‹/ì„¸ê³„ìš”ë¦¬', '');
-INSERT INTO category VALUES ('12020900', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', 'í›ˆì œì˜¤ë¦¬/ì¡±ë°œ/ê³±ì°½/ë³¶ìŒ/ì°œ', '');
-INSERT INTO category VALUES ('12021000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', 'ì¦‰ì„ë°¥/ì»µë°¥', '');
-INSERT INTO category VALUES ('12021100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë°€í‚¤íŠ¸/ê°„íŽ¸ì‹', 'ì¹´ë ˆ/ì§œìž¥/ì¦‰ì„ìš”ë¦¬', '');
-
--- ê¹€ì¹˜/ë°˜ì°¬/ë¸ë¦¬
-INSERT INTO category VALUES ('12030000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê¹€ì¹˜/ë°˜ì°¬/ë¸ë¦¬', '', '');
-INSERT INTO category VALUES ('12030100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê¹€ì¹˜/ë°˜ì°¬/ë¸ë¦¬', 'ê¹€ì¹˜', '');
-INSERT INTO category VALUES ('12030101', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê¹€ì¹˜/ë°˜ì°¬/ë¸ë¦¬', 'ê¹€ì¹˜', 'í¬ê¸°/ë°°ì¶”ê¹€ì¹˜');
-INSERT INTO category VALUES ('12030102', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê¹€ì¹˜/ë°˜ì°¬/ë¸ë¦¬', 'ê¹€ì¹˜', 'ë¬´/ì—´ë¬´ê¹€ì¹˜');
-INSERT INTO category VALUES ('12030103', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê¹€ì¹˜/ë°˜ì°¬/ë¸ë¦¬', 'ê¹€ì¹˜', 'ë¬¼ê¹€ì¹˜');
-INSERT INTO category VALUES ('12030104', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê¹€ì¹˜/ë°˜ì°¬/ë¸ë¦¬', 'ê¹€ì¹˜', 'ê°“ê¹€ì¹˜/ê¸°íƒ€ê¹€ì¹˜');
-INSERT INTO category VALUES ('12030200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê¹€ì¹˜/ë°˜ì°¬/ë¸ë¦¬', 'ë°˜ì°¬/ì “ê°ˆ', '');
-INSERT INTO category VALUES ('12030300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê¹€ì¹˜/ë°˜ì°¬/ë¸ë¦¬', 'ê¹€ë°¥/ë„ì‹œë½/ë¸ë¦¬', '');
-INSERT INTO category VALUES ('12030400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê¹€ì¹˜/ë°˜ì°¬/ë¸ë¦¬', 'ìƒëŸ¬ë“œ', '');
-INSERT INTO category VALUES ('12030500', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê¹€ì¹˜/ë°˜ì°¬/ë¸ë¦¬', 'ë§¤ìž¥ì¦‰ì„ì¡°ë¦¬ì‹í’ˆ', '');
-
--- ë©´ë¥˜/í†µì¡°ë¦¼
-INSERT INTO category VALUES ('12040000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë©´ë¥˜/í†µì¡°ë¦¼', '', '');
-INSERT INTO category VALUES ('12040100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë©´ë¥˜/í†µì¡°ë¦¼', 'ë¼ë©´', '');
-INSERT INTO category VALUES ('12040200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë©´ë¥˜/í†µì¡°ë¦¼', 'ì¦‰ì„ë©´ìš”ë¦¬', '');
-INSERT INTO category VALUES ('12040300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë©´ë¥˜/í†µì¡°ë¦¼', 'íŒŒìŠ¤íƒ€ë©´/ìƒë©´/ê±´ë©´', '');
-INSERT INTO category VALUES ('12040400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë©´ë¥˜/í†µì¡°ë¦¼', 'ì°¸ì¹˜/ìŠ¤íŒ¸/ì¶•ìˆ˜ì‚°í†µì¡°ë¦¼', '');
-INSERT INTO category VALUES ('12040500', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë©´ë¥˜/í†µì¡°ë¦¼', 'ì˜¥ìˆ˜ìˆ˜/í”¼í´/ê³¼ì¼í†µì¡°ë¦¼', '');
-INSERT INTO category VALUES ('12040600', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë©´ë¥˜/í†µì¡°ë¦¼', 'í†µì¡°ë¦¼ì„ ë¬¼ì„¸íŠ¸', '');
-
--- ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜
-INSERT INTO category VALUES ('12050000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜', '', '');
-INSERT INTO category VALUES ('12050100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜', 'ìƒìˆ˜', '');
-INSERT INTO category VALUES ('12050200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜', 'íƒ„ì‚°ìˆ˜', '');
-INSERT INTO category VALUES ('12050300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜', 'íƒ„ì‚°ìŒë£Œ', '');
-INSERT INTO category VALUES ('12050400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜', 'ê³¼ì¼/ì•¼ì±„ìŒë£Œ', '');
-INSERT INTO category VALUES ('12050500', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜', 'ìŠ¤í¬ì¸ /ê±´ê°•ìŒë£Œ', '');
-INSERT INTO category VALUES ('12050600', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜', 'ì „í†µ/ì°¨/ê¸°íƒ€ìŒë£Œ', '');
-INSERT INTO category VALUES ('12050700', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜', 'ìŒë£Œì„ ë¬¼ì„¸íŠ¸', '');
-INSERT INTO category VALUES ('12050800', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜', 'ì „í†µì£¼', '');
-INSERT INTO category VALUES ('12050900', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜', 'ì™€ì¸/ì–‘ì£¼ë§¤ìž¥í”½ì—…', '');
-INSERT INTO category VALUES ('12051000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìƒìˆ˜/ìŒë£Œ/ì£¼ë¥˜', 'ë¬´ì•Œì½œë§¥ì£¼/ì¹µí…Œì¼', '');
-
--- ì»¤í”¼/ì›ë‘/ì°¨
-INSERT INTO category VALUES ('12060000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', '', '');
-INSERT INTO category VALUES ('12060100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', 'ì»¤í”¼ë¯¹ìŠ¤', '');
-INSERT INTO category VALUES ('12060200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', 'ì›ë‘/ìƒë‘', '');
-INSERT INTO category VALUES ('12060300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', 'ë“œë¦½ë°±/ìº¡ìŠ/ë”ì¹˜ì»¤í”¼', '');
-INSERT INTO category VALUES ('12060400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', 'ì»¤í”¼ìŒë£Œ', '');
-INSERT INTO category VALUES ('12060500', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', 'í™ˆì¹´íŽ˜ìž¬ë£Œ', '');
-INSERT INTO category VALUES ('12060600', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', 'ë…¹ì°¨/ë³´ë¦¬ì°¨/ë¿Œë¦¬ì°¨', '');
-INSERT INTO category VALUES ('12060700', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', 'í™ì°¨/ë°€í¬í‹°', '');
-INSERT INTO category VALUES ('12060800', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', 'ë³´ì´ì°¨/í—ˆë¸Œì°¨/ê½ƒì°¨', '');
-INSERT INTO category VALUES ('12060900', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', 'ê³¼ì‹¤/ê³¡ë¬¼/ì „í†µì°¨', '');
-INSERT INTO category VALUES ('12061000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', 'ì½”ì½”ì•„/í•«ì´ˆì½”', '');
-INSERT INTO category VALUES ('12061100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì»¤í”¼/ì›ë‘/ì°¨', 'ì»¤í”¼/ì°¨ì„ ë¬¼ì„¸íŠ¸', '');
-
--- ê³¼ìž/ê°„ì‹/ì‹œë¦¬ì–¼/ë¹™ê³¼
-INSERT INTO category VALUES ('12070000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê³¼ìž/ê°„ì‹/ì‹œë¦¬ì–¼/ë¹™ê³¼', '', '');
-INSERT INTO category VALUES ('12070100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê³¼ìž/ê°„ì‹/ì‹œë¦¬ì–¼/ë¹™ê³¼', 'ê³¼ìž/ì¿ í‚¤/íŒŒì´', '');
-INSERT INTO category VALUES ('12070200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê³¼ìž/ê°„ì‹/ì‹œë¦¬ì–¼/ë¹™ê³¼', 'ë–¡/í•œê³¼/ì „í†µê³¼ìž', '');
-INSERT INTO category VALUES ('12070300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê³¼ìž/ê°„ì‹/ì‹œë¦¬ì–¼/ë¹™ê³¼', 'ì†Œì‹œì§€/ì›ë¬¼/ì•ˆì£¼ìŠ¤ë‚µ', '');
-INSERT INTO category VALUES ('12070400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê³¼ìž/ê°„ì‹/ì‹œë¦¬ì–¼/ë¹™ê³¼', 'ì‚¬íƒ•/ìº¬ë¼ë©œ/ê»Œ', '');
-INSERT INTO category VALUES ('12070500', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê³¼ìž/ê°„ì‹/ì‹œë¦¬ì–¼/ë¹™ê³¼', 'ì ¤ë¦¬/í‘¸ë”©', '');
-INSERT INTO category VALUES ('12070600', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê³¼ìž/ê°„ì‹/ì‹œë¦¬ì–¼/ë¹™ê³¼', 'ì´ˆì½œë¦¿/ì´ˆì½”ë°”', '');
-INSERT INTO category VALUES ('12070700', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê³¼ìž/ê°„ì‹/ì‹œë¦¬ì–¼/ë¹™ê³¼', 'ì‹œë¦¬ì–¼', '');
-INSERT INTO category VALUES ('12070800', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê³¼ìž/ê°„ì‹/ì‹œë¦¬ì–¼/ë¹™ê³¼', 'ë¹™ê³¼/ì•„ì´ìŠ¤í¬ë¦¼', '');
-INSERT INTO category VALUES ('12070900', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê³¼ìž/ê°„ì‹/ì‹œë¦¬ì–¼/ë¹™ê³¼', 'ì–¼ìŒ/ë¹™ìˆ˜ìž¬ë£Œ', '');
-
--- ì¹œí™˜ê²½/ìœ ê¸°ë†
-INSERT INTO category VALUES ('12080000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', '', '');
-INSERT INTO category VALUES ('12080100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ê³¼ì¼/ì±„ì†Œ', '');
-INSERT INTO category VALUES ('12080200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ì •ìœ¡/ê³„ëž€ë¥˜', '');
-INSERT INTO category VALUES ('12080300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ìŒ€/ìž¡ê³¡/ê²¬ê³¼', '');
-INSERT INTO category VALUES ('12080400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ìˆ˜ì‚°ë¬¼/ê±´í•´ì‚°ë¬¼', '');
-INSERT INTO category VALUES ('12080500', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ìš°ìœ /ìœ ì œí’ˆ/ìœ ì•„ì‹', '');
-INSERT INTO category VALUES ('12080600', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ëƒ‰ìž¥/ëƒ‰ë™/ê°„íŽ¸ì‹', '');
-INSERT INTO category VALUES ('12080700', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ìž¥ë¥˜/ì–‘ë…/ë¶„ë§/ì˜¤ì¼', '');
-INSERT INTO category VALUES ('12080800', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ë¼ë©´/ì¦‰ì„ì‹í’ˆ/í†µì¡°ë¦¼', '');
-INSERT INTO category VALUES ('12080900', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ì°¨/ìŒë£Œ/ì»¤í”¼', '');
-INSERT INTO category VALUES ('12081000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ê³¼ìž/ìŠ¤ë‚µ/ì‹œë¦¬ì–¼', '');
-INSERT INTO category VALUES ('12081100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ê±´ê°•ì‹í’ˆ/ì¦™', '');
-INSERT INTO category VALUES ('12081200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ì¹œí™˜ê²½/ìœ ê¸°ë†', 'ìœ ê¸°ë†/ì¹œí™˜ê²½ì„ ë¬¼ì„¸íŠ¸', '');
-
--- ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼
-INSERT INTO category VALUES ('12090000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', '', '');
-INSERT INTO category VALUES ('12090100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'ìž¥ë¥˜/ì–‘ë…', '');
-INSERT INTO category VALUES ('12090200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'íŒŒìŠ¤íƒ€ì†ŒìŠ¤/íŽ˜ìŠ¤í† ', '');
-INSERT INTO category VALUES ('12090300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'ì¼€ì°¹/ë§ˆìš”ë„¤ì¦ˆ/ë””í•‘ì†ŒìŠ¤', '');
-INSERT INTO category VALUES ('12090400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'ëˆê¹ŒìŠ¤/ìŠ¤í…Œì´í¬ì†ŒìŠ¤', '');
-INSERT INTO category VALUES ('12090500', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'ì¤‘ì‹/ì¼ì‹/ê¸°íƒ€ì†ŒìŠ¤', '');
-INSERT INTO category VALUES ('12090600', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'ìƒëŸ¬ë“œë“œë ˆì‹±', '');
-INSERT INTO category VALUES ('12090700', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'ë°€ê°€ë£¨/ë¶€ì¹¨ê°€ë£¨/ê³¡ë¶„ë¥˜', '');
-INSERT INTO category VALUES ('12090800', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'ì†Œê¸ˆ/ì„¤íƒ•/í›„ì¶”/í–¥ì‹ ë£Œ', '');
-INSERT INTO category VALUES ('12090900', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'ì¡°ë¯¸ë£Œ/ì•¡ì “/ë¬¼ì—¿/ì‹ì´ˆ', '');
-INSERT INTO category VALUES ('12091000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'ì‹ìš©ìœ /ì°¸ê¸°ë¦„/ì˜¤ì¼ë¥˜', '');
-INSERT INTO category VALUES ('12091100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'ì¡°ë¯¸ë£Œ/ì˜¤ì¼ì„ ë¬¼ì„¸íŠ¸', '');
-INSERT INTO category VALUES ('12091200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ìž¥ë¥˜/ì–‘ë…/ê°€ë£¨/ì˜¤ì¼', 'ì‹œëŸ½/ì œë¹µë¯¹ìŠ¤/ìž¬ë£Œ', '');
-
--- ë² ì´ì»¤ë¦¬/ìž¼
-INSERT INTO category VALUES ('12100000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë² ì´ì»¤ë¦¬/ìž¼', '', '');
-INSERT INTO category VALUES ('12100100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë² ì´ì»¤ë¦¬/ìž¼', 'ì‹ë¹µ', '');
-INSERT INTO category VALUES ('12100200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë² ì´ì»¤ë¦¬/ìž¼', 'ë² ì´ì»¤ë¦¬ë¹µ', '');
-INSERT INTO category VALUES ('12100300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë² ì´ì»¤ë¦¬/ìž¼', 'ì¿ í‚¤/ë””ì €íŠ¸/ì¼€ì´í¬', '');
-INSERT INTO category VALUES ('12100400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë² ì´ì»¤ë¦¬/ìž¼', 'ìƒŒë“œìœ„ì¹˜', '');
-INSERT INTO category VALUES ('12100500', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë² ì´ì»¤ë¦¬/ìž¼', 'ì¼ë°˜ë¹µ', '');
-INSERT INTO category VALUES ('12100600', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë² ì´ì»¤ë¦¬/ìž¼', 'í˜¸ë¹µ/ì°ë¹µ', '');
-INSERT INTO category VALUES ('12100700', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë² ì´ì»¤ë¦¬/ìž¼', 'ìƒì§€/ëƒ‰ë™ë°˜ì£½', '');
-INSERT INTO category VALUES ('12100800', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ë² ì´ì»¤ë¦¬/ìž¼', 'ìž¼/ìŠ¤í”„ë ˆë“œ', '');
--- ê±´ê°•ì‹í’ˆ
-INSERT INTO category VALUES ('12110000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', '', '');
-INSERT INTO category VALUES ('12110100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'í™ì‚¼/ì¸ì‚¼/ë…¹ìš©', '');
-INSERT INTO category VALUES ('12110200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì¦™/ê±´ê°•ì•¡', '');
-INSERT INTO category VALUES ('12110300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ë¶„ë§/ê±´ê°•í™˜', '');
-INSERT INTO category VALUES ('12110400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì°¨/ê±´ê°•ìž¬ë£Œ', '');
-INSERT INTO category VALUES ('12110500', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ê¿€/ë¡œì–„ì ¤ë¦¬/í”„ë¡œí´ë¦¬ìŠ¤', '');
-INSERT INTO category VALUES ('12110600', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ë¹„íƒ€ë¯¼', '');
-INSERT INTO category VALUES ('12110700', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ìœ ì‚°ê· ', '');
-INSERT INTO category VALUES ('12110800', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ë¯¸ë„¤ëž„', '');
-INSERT INTO category VALUES ('12110900', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ì˜ì–‘ì œ/ê±´ê°•ê¸°ëŠ¥ì‹í’ˆ', '');
-INSERT INTO category VALUES ('12111000', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ë‹¤ì´ì–´íŠ¸/ë·°í‹°', '');
-INSERT INTO category VALUES ('12111100', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'í—¬ìŠ¤ë³´ì¶©ì œ', '');
-INSERT INTO category VALUES ('12111200', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ì˜ì–‘ì‹/ê¸°íƒ€ ê±´ê°•ì‹í’ˆ', '');
-INSERT INTO category VALUES ('12111300', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ê¸°ëŠ¥ë³„ê±´ê°•ì‹í’ˆ', '');
-INSERT INTO category VALUES ('12111400', 'ê°€ê³µ/ê±´ê°•ì‹í’ˆ', 'ê±´ê°•ì‹í’ˆ', 'ëŒ€ìƒë³„ê±´ê°•ì‹í’ˆ', '');
-
-
-
-
--- ì‹œê³„/ì¥¬ì–¼ë¦¬
-INSERT INTO category VALUES ('02000000', 'íŒ¨ì…˜ìž¡í™”', '', '', '');
-INSERT INTO category VALUES ('02030000', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', '', '');
-INSERT INTO category VALUES ('02030100', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ëª©ê±¸ì´/íŒ¬ë˜íŠ¸', '');
-INSERT INTO category VALUES ('02030101', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ëª©ê±¸ì´/íŒ¬ë˜íŠ¸', '14/18këª©ê±¸ì´');
-INSERT INTO category VALUES ('02030102', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ëª©ê±¸ì´/íŒ¬ë˜íŠ¸', 'ì‹¤ë²„ëª©ê±¸ì´');
-INSERT INTO category VALUES ('02030103', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ëª©ê±¸ì´/íŒ¬ë˜íŠ¸', 'íŒ¨ì…˜ëª©ê±¸ì´');
-INSERT INTO category VALUES ('02030104', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ëª©ê±¸ì´/íŒ¬ë˜íŠ¸', 'ì§„ì£¼/ì›ì„ëª©ê±¸ì´');
-INSERT INTO category VALUES ('02030105', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ëª©ê±¸ì´/íŒ¬ë˜íŠ¸', 'ë‹¤ì´ì•„ëª¬ë“œëª©ê±¸ì´');
-INSERT INTO category VALUES ('02030106', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ëª©ê±¸ì´/íŒ¬ë˜íŠ¸', 'ëž©ê·¸ë¡œìš´ ë‹¤ì´ì•„ëª¬ë“œëª©ê±¸ì´');
-INSERT INTO category VALUES ('02030107', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ëª©ê±¸ì´/íŒ¬ë˜íŠ¸', 'íŒ¬ë˜íŠ¸');
-INSERT INTO category VALUES ('02030200', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ê·€ê±¸ì´', '');
-INSERT INTO category VALUES ('02030300', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'íŒ”ì°Œ', '');
-INSERT INTO category VALUES ('02030400', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ë°œì°Œ', '');
-INSERT INTO category VALUES ('02030500', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ë°˜ì§€', '');
-INSERT INTO category VALUES ('02030600', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ìˆœê¸ˆ', '');
-INSERT INTO category VALUES ('02030700', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ì¥¬ì–¼ë¦¬ì„¸íŠ¸', '');
-INSERT INTO category VALUES ('02030800', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ë‚¨ì„±ì¥¬ì–¼ë¦¬', '');
-INSERT INTO category VALUES ('02030900', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ì¥¬ì–¼ë¦¬í•¨/ê¸°íƒ€ACC', '');
-INSERT INTO category VALUES ('02031000', 'íŒ¨ì…˜ìž¡í™”', 'ì‹œê³„/ì¥¬ì–¼ë¦¬', 'ì‹œê³„', '');
-
--- ê°€ë°©/ì§€ê°‘
-INSERT INTO category VALUES ('02040000', 'íŒ¨ì…˜ìž¡í™”', 'ê°€ë°©/ì§€ê°‘', '', '');
-INSERT INTO category VALUES ('02040100', 'íŒ¨ì…˜ìž¡í™”', 'ê°€ë°©/ì§€ê°‘', 'ì—¬ì„±ê°€ë°©', '');
-INSERT INTO category VALUES ('02040200', 'íŒ¨ì…˜ìž¡í™”', 'ê°€ë°©/ì§€ê°‘', 'ë‚¨ì„±ê°€ë°©', '');
-INSERT INTO category VALUES ('02040300', 'íŒ¨ì…˜ìž¡í™”', 'ê°€ë°©/ì§€ê°‘', 'ìºì£¼ì–¼ê°€ë°©', '');
-INSERT INTO category VALUES ('02040400', 'íŒ¨ì…˜ìž¡í™”', 'ê°€ë°©/ì§€ê°‘', 'ì—¬í–‰ìš©ê°€ë°©', '');
-INSERT INTO category VALUES ('02040500', 'íŒ¨ì…˜ìž¡í™”', 'ê°€ë°©/ì§€ê°‘', 'ì§€ê°‘', '');
-INSERT INTO category VALUES ('02040600', 'íŒ¨ì…˜ìž¡í™”', 'ê°€ë°©/ì§€ê°‘', 'ê°€ë°©ì•¡ì„¸ì„œë¦¬', '');
-
--- ëª¨ìž/ìž¥ê°‘/ACC
-INSERT INTO category VALUES ('02050000', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', '', '');
-INSERT INTO category VALUES ('02050100', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', 'ëª¨ìž', '');
-INSERT INTO category VALUES ('02050200', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', 'ë²¨íŠ¸/ACC', '');
-INSERT INTO category VALUES ('02050300', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', 'ë¨¸í”ŒëŸ¬/ìŠ¤ì¹´í”„', '');
-INSERT INTO category VALUES ('02050400', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', 'ìž¥ê°‘/ACC', '');
-INSERT INTO category VALUES ('02050500', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', 'ë„¥íƒ€ì´/ë¸Œë¡œì¹˜/íƒ€ì´ACC', '');
-INSERT INTO category VALUES ('02050600', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', 'ì„ ê¸€ë¼ìŠ¤/ì•ˆê²½', '');
-INSERT INTO category VALUES ('02050700', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', 'í—¤ì–´ì•¡ì„¸ì„œë¦¬', '');
-INSERT INTO category VALUES ('02050800', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', 'ì–‘ë§/ACC', '');
-INSERT INTO category VALUES ('02050900', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', 'ìŠ¤íƒ€í‚¹/ë ˆê¹…ìŠ¤', '');
-INSERT INTO category VALUES ('02051000', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', 'ìš°ì‚°/ì–‘ì‚°', '');
-INSERT INTO category VALUES ('02051100', 'íŒ¨ì…˜ìž¡í™”', 'ëª¨ìž/ìž¥ê°‘/ACC', 'ì†ìˆ˜ê±´/í–‰ì»¤ì¹˜í”„', '');
-
--- ìŠˆì¦ˆ/ìš´ë™í™”
-INSERT INTO category VALUES ('02060000', 'íŒ¨ì…˜ìž¡í™”', 'ìŠˆì¦ˆ/ìš´ë™í™”', '', '');
-INSERT INTO category VALUES ('02060100', 'íŒ¨ì…˜ìž¡í™”', 'ìŠˆì¦ˆ/ìš´ë™í™”', 'SEASONAL', '');
-INSERT INTO category VALUES ('02060200', 'íŒ¨ì…˜ìž¡í™”', 'ìŠˆì¦ˆ/ìš´ë™í™”', 'ì—¬ì„±ì‹ ë°œ', '');
-INSERT INTO category VALUES ('02060300', 'íŒ¨ì…˜ìž¡í™”', 'ìŠˆì¦ˆ/ìš´ë™í™”', 'ë‚¨ì„±ì‹ ë°œ', '');
-INSERT INTO category VALUES ('02060400', 'íŒ¨ì…˜ìž¡í™”', 'ìŠˆì¦ˆ/ìš´ë™í™”', 'ì•„ë™ì‹ ë°œ', '');
-INSERT INTO category VALUES ('02060500', 'íŒ¨ì…˜ìž¡í™”', 'ìŠˆì¦ˆ/ìš´ë™í™”', 'ìŠˆì¦ˆìš©í’ˆ', '');
-
-
-
-
-INSERT INTO category VALUES ('07000000', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', '', '', '');
-INSERT INTO category VALUES ('07040201', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì¹¨êµ¬ë‹¨í’ˆ', 'ë§¤íŠ¸/ì¹¨ëŒ€ì»¤ë²„');
-INSERT INTO category VALUES ('07040202', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì¹¨êµ¬ë‹¨í’ˆ', 'ë² ê°œ/ë² ê°œì»¤ë²„');
-INSERT INTO category VALUES ('07040203', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì¹¨êµ¬ë‹¨í’ˆ', 'ì–‘ëª¨/ì†œì´ë¶ˆ');
-INSERT INTO category VALUES ('07040204', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì¹¨êµ¬ë‹¨í’ˆ', 'ê±°ìœ„í„¸/ì˜¤ë¦¬í„¸ì´ë¶ˆ');
-INSERT INTO category VALUES ('07040205', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì¹¨êµ¬ë‹¨í’ˆ', 'ë‹´ìš”/íŒ¨ë“œ');
-INSERT INTO category VALUES ('07040206', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì¹¨êµ¬ë‹¨í’ˆ', 'ìš”/ìš”ì»¤ë²„');
-INSERT INTO category VALUES ('07040207', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì¹¨êµ¬ë‹¨í’ˆ', 'ë‚œë°©í…íŠ¸');
--- ì¹¨ì‹¤ê°€êµ¬
-INSERT INTO category VALUES ('07010000', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨ì‹¤ê°€êµ¬', '', '');
-INSERT INTO category VALUES ('07010100', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨ì‹¤ê°€êµ¬', 'ì¹¨ëŒ€', '');
-INSERT INTO category VALUES ('07010200', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨ì‹¤ê°€êµ¬', 'ë§¤íŠ¸ë¦¬ìŠ¤', '');
-INSERT INTO category VALUES ('07010300', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨ì‹¤ê°€êµ¬', 'ë² ë“œë²¤ì¹˜', '');
-INSERT INTO category VALUES ('07010400', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨ì‹¤ê°€êµ¬', 'í˜‘íƒ', '');
-INSERT INTO category VALUES ('07010500', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨ì‹¤ê°€êµ¬', 'ì˜·ìž¥', '');
-INSERT INTO category VALUES ('07010600', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨ì‹¤ê°€êµ¬', 'ë¶™ë°•ì´ìž¥', '');
-INSERT INTO category VALUES ('07010700', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨ì‹¤ê°€êµ¬', 'í–‰ê±°', '');
-INSERT INTO category VALUES ('07010800', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨ì‹¤ê°€êµ¬', 'ì„œëžìž¥', '');
-INSERT INTO category VALUES ('07010900', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨ì‹¤ê°€êµ¬', 'í™”ìž¥ëŒ€', '');
-INSERT INTO category VALUES ('07011000', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨ì‹¤ê°€êµ¬', 'ê±°ìš¸', '');
-
--- ê±°ì‹¤/ì£¼ë°©ê°€êµ¬
-INSERT INTO category VALUES ('07020000', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê±°ì‹¤/ì£¼ë°©ê°€êµ¬', '', '');
-INSERT INTO category VALUES ('07020100', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê±°ì‹¤/ì£¼ë°©ê°€êµ¬', 'ì†ŒíŒŒ', '');
-INSERT INTO category VALUES ('07020200', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê±°ì‹¤/ì£¼ë°©ê°€êµ¬', 'ê±°ì‹¤ìž¥', '');
-INSERT INTO category VALUES ('07020300', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê±°ì‹¤/ì£¼ë°©ê°€êµ¬', 'í…Œì´ë¸”', '');
-INSERT INTO category VALUES ('07020400', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê±°ì‹¤/ì£¼ë°©ê°€êµ¬', 'ì‹íƒ', '');
-INSERT INTO category VALUES ('07020500', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê±°ì‹¤/ì£¼ë°©ê°€êµ¬', 'ìˆ˜ë‚©ì •ë¦¬ê°€êµ¬', '');
-INSERT INTO category VALUES ('07020600', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê±°ì‹¤/ì£¼ë°©ê°€êµ¬', 'ì£¼ë°©ìˆ˜ë‚©ê°€êµ¬', '');
-
--- ì„œìž¬/ìœ ì•„ë™ ê°€êµ¬
-INSERT INTO category VALUES ('07030000', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì„œìž¬/ìœ ì•„ë™ ê°€êµ¬', '', '');
-INSERT INTO category VALUES ('07030100', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì„œìž¬/ìœ ì•„ë™ ê°€êµ¬', 'ì±…ìƒ', '');
-INSERT INTO category VALUES ('07030200', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì„œìž¬/ìœ ì•„ë™ ê°€êµ¬', 'ì±…ìž¥', '');
-INSERT INTO category VALUES ('07030300', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì„œìž¬/ìœ ì•„ë™ ê°€êµ¬', 'ì˜ìž', '');
-INSERT INTO category VALUES ('07030400', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì„œìž¬/ìœ ì•„ë™ ê°€êµ¬', 'ìœ ì•„ë™ê°€êµ¬', '');
-INSERT INTO category VALUES ('07030500', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì„œìž¬/ìœ ì•„ë™ ê°€êµ¬', 'ì‚¬ë¬´ìš©ê°€êµ¬', '');
-INSERT INTO category VALUES ('07030600', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì„œìž¬/ìœ ì•„ë™ ê°€êµ¬', 'êµêµ¬ìš©ê°€êµ¬', '');
-INSERT INTO category VALUES ('07030700', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì„œìž¬/ìœ ì•„ë™ ê°€êµ¬', 'ì•¼ì™¸ê°€êµ¬', '');
--- ì¹¨êµ¬/íŒ¨ë¸Œë¦­
-INSERT INTO category VALUES ('07040000', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', '', '');
-INSERT INTO category VALUES ('07040100', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì¹¨êµ¬ì„¸íŠ¸', '');
-INSERT INTO category VALUES ('07040200', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì¹¨êµ¬ë‹¨í’ˆ', '');
-INSERT INTO category VALUES ('07040300', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ìœ ì•„ì¹¨êµ¬', '');
-INSERT INTO category VALUES ('07040400', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ê³„ì ˆì¹¨êµ¬', '');
-INSERT INTO category VALUES ('07040500', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì»¤íŠ¼', '');
-INSERT INTO category VALUES ('07040600', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ë¼í…ìŠ¤/ê¸°ëŠ¥ì„±ì¹¨êµ¬', '');
-INSERT INTO category VALUES ('07040700', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì¶©ì „ìž¬', '');
-INSERT INTO category VALUES ('07040800', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ë¸”ë¼ì¸ë“œ', '');
-INSERT INTO category VALUES ('07040900', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ëŸ¬ê·¸/ì¹´íŽ˜íŠ¸', '');
-INSERT INTO category VALUES ('07041000', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'íƒ€ì›”', '');
-INSERT INTO category VALUES ('07041100', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ì¿ ì…˜/ë°©ì„', '');
-INSERT INTO category VALUES ('07041200', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ì¹¨êµ¬/íŒ¨ë¸Œë¦­', 'ìƒí™œì†Œí’ˆ/ì»¤ë²„ë¥˜', '');
-
--- ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ
-INSERT INTO category VALUES ('07050000', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', '', '');
-INSERT INTO category VALUES ('07050100', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'ê°¤ëŸ¬ë¦¬', '');
-INSERT INTO category VALUES ('07050200', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'ì¡°ëª…ëž¨í”„', '');
-INSERT INTO category VALUES ('07050300', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'ì¸í…Œë¦¬ì–´ì¡°ëª…', '');
-INSERT INTO category VALUES ('07050400', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'ìŠ¤íƒ ë“œ', '');
-INSERT INTO category VALUES ('07050500', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'ìº”ë“¤/ë””í“¨ì €', '');
-INSERT INTO category VALUES ('07050600', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'ì‹œê³„', '');
-INSERT INTO category VALUES ('07050700', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'ì›ì˜ˆ/ê°€ë“œë‹/í™”í›¼', '');
-INSERT INTO category VALUES ('07050800', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'ë°ì½” ì†Œí’ˆ', '');
-INSERT INTO category VALUES ('07050900', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'ì¸í…Œë¦¬ì–´íŒŒí‹°ì…˜', '');
-INSERT INTO category VALUES ('07051000', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'ìˆ˜ê³µì˜ˆ', '');
-INSERT INTO category VALUES ('07051100', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'í™ˆíŒŒí‹°ìš©í’ˆ', '');
-INSERT INTO category VALUES ('07051200', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'ê°¤ëŸ¬ë¦¬/ì¸í…Œë¦¬ì–´ì†Œí’ˆ', 'ë¯¸ìˆ ê´€/ì•„íŠ¸ìƒµ', '');
-
--- DIY/ì‹œê³µ
-INSERT INTO category VALUES ('07060000', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', '', '');
-INSERT INTO category VALUES ('07060100', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'ë²½ì§€ë°”ë‹¥ì‹œê³µ', '');
-INSERT INTO category VALUES ('07060200', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'ë„ì–´/ì¤‘ë¬¸ì‹œê³µ', '');
-INSERT INTO category VALUES ('07060300', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'ì°½í˜¸ì‹œê³µ', '');
-INSERT INTO category VALUES ('07060400', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'ë„ì–´/ì°½í˜¸ ìš©í’ˆ', '');
-INSERT INTO category VALUES ('07060500', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'ìš•ì‹¤ì‹œê³µ', '');
-INSERT INTO category VALUES ('07060600', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'ì£¼ë°©ì‹œê³µ', '');
-INSERT INTO category VALUES ('07060700', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'íŽ˜ì¸íŠ¸ì‹œê³µ', '');
-INSERT INTO category VALUES ('07060800', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'ë²½ì§€/ë„ë°°ìš©í’ˆ', '');
-INSERT INTO category VALUES ('07060900', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'íŽ˜ì¸íŠ¸/íŽ˜ì¸íŠ¸ìš©í’ˆ', '');
-INSERT INTO category VALUES ('07061000', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'ë°”ë‹¥ìž¬/íƒ€ì¼/ê¸°íƒ€ìžìž¬', '');
-INSERT INTO category VALUES ('07061100', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'ì‹œíŠ¸ì§€/ìŠ¤í‹°ì»¤', '');
-INSERT INTO category VALUES ('07061200', 'ê°€êµ¬/ì¸í…Œë¦¬ì–´', 'DIY/ì‹œê³µ', 'ê¸°íƒ€DIYìš©í’ˆ', '');
-
-
-
-
-
-
-
-
-
--- ì»´í“¨í„°/ë…¸íŠ¸ë¶/íƒœë¸”ë¦¿ ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('09000000', 'ë””ì§€í„¸/ë Œíƒˆ', '', '', '');
-INSERT INTO category VALUES ('09010000', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì»´í“¨í„°/ë…¸íŠ¸ë¶/íƒœë¸”ë¦¿', '', '');
-INSERT INTO category VALUES ('09010100', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì»´í“¨í„°/ë…¸íŠ¸ë¶/íƒœë¸”ë¦¿', 'ë…¸íŠ¸ë¶', '');
-INSERT INTO category VALUES ('09090101', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'ìŠ¤í”¼ì»¤', 'ì¼ë°˜ìŠ¤í”¼ì»¤');
-INSERT INTO category VALUES ('09090102', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'ìŠ¤í”¼ì»¤', 'ë¸”ë£¨íˆ¬ìŠ¤ìŠ¤í”¼ì»¤');
-INSERT INTO category VALUES ('09090103', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'ìŠ¤í”¼ì»¤', 'AIìŠ¤í”¼ì»¤');
-INSERT INTO category VALUES ('09090104', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'ìŠ¤í”¼ì»¤', 'ì±„ë„ìŠ¤í”¼ì»¤');
-INSERT INTO category VALUES ('09090105', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'ìŠ¤í”¼ì»¤', 'PCìŠ¤í”¼ì»¤');
-INSERT INTO category VALUES ('09090106', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'ìŠ¤í”¼ì»¤', 'ì‚¬ìš´ë“œë°”');
-INSERT INTO category VALUES ('09010200', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì»´í“¨í„°/ë…¸íŠ¸ë¶/íƒœë¸”ë¦¿', 'íƒœë¸”ë¦¿PC/íŒ¨ë“œ', '');
-INSERT INTO category VALUES ('09010300', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì»´í“¨í„°/ë…¸íŠ¸ë¶/íƒœë¸”ë¦¿', 'ë¦¬í¼ ë…¸íŠ¸ë¶', '');
-INSERT INTO category VALUES ('09010400', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì»´í“¨í„°/ë…¸íŠ¸ë¶/íƒœë¸”ë¦¿', 'ë…¸íŠ¸ë¶ ì•¡ì„¸ì„œë¦¬', '');
-INSERT INTO category VALUES ('09010500', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì»´í“¨í„°/ë…¸íŠ¸ë¶/íƒœë¸”ë¦¿', 'íƒœë¸”ë¦¿PC ì•¡ì„¸ì„œë¦¬', '');
-INSERT INTO category VALUES ('09010600', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì»´í“¨í„°/ë…¸íŠ¸ë¶/íƒœë¸”ë¦¿', 'ëª¨ë‹ˆí„°', '');
-INSERT INTO category VALUES ('09010700', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì»´í“¨í„°/ë…¸íŠ¸ë¶/íƒœë¸”ë¦¿', 'ë°ìŠ¤í¬íƒ‘', '');
-
--- ê²Œìž„/íƒ€ì´í‹€ ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('09020000', 'ë””ì§€í„¸/ë Œíƒˆ', 'ê²Œìž„/íƒ€ì´í‹€', '', '');
-INSERT INTO category VALUES ('09020100', 'ë””ì§€í„¸/ë Œíƒˆ', 'ê²Œìž„/íƒ€ì´í‹€', 'ê²Œìž„ê¸°', '');
-INSERT INTO category VALUES ('09020200', 'ë””ì§€í„¸/ë Œíƒˆ', 'ê²Œìž„/íƒ€ì´í‹€', 'ê²Œìž„ íƒ€ì´í‹€', '');
-INSERT INTO category VALUES ('09020300', 'ë””ì§€í„¸/ë Œíƒˆ', 'ê²Œìž„/íƒ€ì´í‹€', 'ê²Œìž„ ì£¼ë³€ê¸°ê¸°', '');
-INSERT INTO category VALUES ('09020400', 'ë””ì§€í„¸/ë Œíƒˆ', 'ê²Œìž„/íƒ€ì´í‹€', 'í”Œë ˆì´ìŠ¤í…Œì´ì…˜', '');
-INSERT INTO category VALUES ('09020500', 'ë””ì§€í„¸/ë Œíƒˆ', 'ê²Œìž„/íƒ€ì´í‹€', 'ë‹Œí…ë„', '');
-INSERT INTO category VALUES ('09020600', 'ë””ì§€í„¸/ë Œíƒˆ', 'ê²Œìž„/íƒ€ì´í‹€', 'ì˜¤í˜ëŸ¬ìŠ¤', '');
-INSERT INTO category VALUES ('09020700', 'ë””ì§€í„¸/ë Œíƒˆ', 'ê²Œìž„/íƒ€ì´í‹€', 'XBOX', '');
-
--- PCì£¼ë³€ê¸°ê¸°/ì €ìž¥ìž¥ì¹˜ ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('09030000', 'ë””ì§€í„¸/ë Œíƒˆ', 'PCì£¼ë³€ê¸°ê¸°/ì €ìž¥ìž¥ì¹˜', '', '');
-INSERT INTO category VALUES ('09030100', 'ë””ì§€í„¸/ë Œíƒˆ', 'PCì£¼ë³€ê¸°ê¸°/ì €ìž¥ìž¥ì¹˜', 'í‚¤ë³´ë“œ/ë§ˆìš°ìŠ¤', '');
-INSERT INTO category VALUES ('09030200', 'ë””ì§€í„¸/ë Œíƒˆ', 'PCì£¼ë³€ê¸°ê¸°/ì €ìž¥ìž¥ì¹˜', 'PCì•¡ì„¸ì„œë¦¬/ì¼€ì´ë¸”', '');
-INSERT INTO category VALUES ('09030300', 'ë””ì§€í„¸/ë Œíƒˆ', 'PCì£¼ë³€ê¸°ê¸°/ì €ìž¥ìž¥ì¹˜', 'PCë¶€í’ˆ/CPU', '');
-INSERT INTO category VALUES ('09030400', 'ë””ì§€í„¸/ë Œíƒˆ', 'PCì£¼ë³€ê¸°ê¸°/ì €ìž¥ìž¥ì¹˜', 'PCì£¼ë³€ê¸°ê¸°', '');
-INSERT INTO category VALUES ('09030500', 'ë””ì§€í„¸/ë Œíƒˆ', 'PCì£¼ë³€ê¸°ê¸°/ì €ìž¥ìž¥ì¹˜', 'ë¯¸ë””ì–´ ìž¥ë¹„', '');
-INSERT INTO category VALUES ('09030600', 'ë””ì§€í„¸/ë Œíƒˆ', 'PCì£¼ë³€ê¸°ê¸°/ì €ìž¥ìž¥ì¹˜', 'ì €ìž¥ìž¥ì¹˜', '');
-INSERT INTO category VALUES ('09030700', 'ë””ì§€í„¸/ë Œíƒˆ', 'PCì£¼ë³€ê¸°ê¸°/ì €ìž¥ìž¥ì¹˜', 'í”„ë¦°í„°/ë³µí•©ê¸°', '');
-
--- ì¹´ë©”ë¼/ìº ì½”ë” ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('09040000', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì¹´ë©”ë¼/ìº ì½”ë”', '', '');
-INSERT INTO category VALUES ('09040100', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì¹´ë©”ë¼/ìº ì½”ë”', 'ë””ì§€í„¸ì¹´ë©”ë¼/ì•¡ì…˜ìº ', '');
-INSERT INTO category VALUES ('09040200', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì¹´ë©”ë¼/ìº ì½”ë”', 'ë Œì¦ˆ/ë Œì¦ˆìš©í’ˆ', '');
-INSERT INTO category VALUES ('09040300', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì¹´ë©”ë¼/ìº ì½”ë”', 'ì¦‰ì„/í•„ë¦„ì¹´ë©”ë¼', '');
-INSERT INTO category VALUES ('09040400', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì¹´ë©”ë¼/ìº ì½”ë”', 'ì¹´ë©”ë¼/ìº ì½”ë”ìš©í’ˆ', '');
-INSERT INTO category VALUES ('09040500', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì¹´ë©”ë¼/ìº ì½”ë”', 'ì‚¼ê°ëŒ€/ì¼€ì´ìŠ¤', '');
-INSERT INTO category VALUES ('09040600', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì¹´ë©”ë¼/ìº ì½”ë”', 'ì´¬ì˜ìš© ë“œë¡ ', '');
-INSERT INTO category VALUES ('09040700', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì¹´ë©”ë¼/ìº ì½”ë”', '1ì¸ë¯¸ë””ì–´ ì „ìš©ê´€', '');
-INSERT INTO category VALUES ('09040800', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì¹´ë©”ë¼/ìº ì½”ë”', 'CCTV', '');
-
--- ì—ì–´ì»¨/ê³„ì ˆê°€ì „ ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('09050000', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì—ì–´ì»¨/ê³„ì ˆê°€ì „', '', '');
-INSERT INTO category VALUES ('09050100', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì—ì–´ì»¨/ê³„ì ˆê°€ì „', 'ë‚œë°©ìš©í’ˆ', '');
-INSERT INTO category VALUES ('09050200', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì—ì–´ì»¨/ê³„ì ˆê°€ì „', 'ì œìŠµê¸°/ê³µê¸°ì²­ì •ê¸°', '');
-INSERT INTO category VALUES ('09050300', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì—ì–´ì»¨/ê³„ì ˆê°€ì „', 'ì„ í’ê¸°/ëƒ‰í’ê¸°', '');
-INSERT INTO category VALUES ('09050400', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì—ì–´ì»¨/ê³„ì ˆê°€ì „', 'ì—ì–´ì»¨', '');
-
--- ë‚´ë¹„/ë¸”ëž™ë°•ìŠ¤ ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('09060000', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë‚´ë¹„/ë¸”ëž™ë°•ìŠ¤', '', '');
-INSERT INTO category VALUES ('09060100', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë‚´ë¹„/ë¸”ëž™ë°•ìŠ¤', 'ë‚´ë¹„ê²Œì´ì…˜/ìš©í’ˆ', '');
-INSERT INTO category VALUES ('09060200', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë‚´ë¹„/ë¸”ëž™ë°•ìŠ¤', 'ë¸”ëž™ë°•ìŠ¤', '');
-INSERT INTO category VALUES ('09060300', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë‚´ë¹„/ë¸”ëž™ë°•ìŠ¤', 'í•˜ì´íŒ¨ìŠ¤', '');
-
--- ì„¸íƒê¸°/ìƒí™œê°€ì „ ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('09070000', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì„¸íƒê¸°/ìƒí™œê°€ì „', '', '');
-INSERT INTO category VALUES ('09070100', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì„¸íƒê¸°/ìƒí™œê°€ì „', 'ë‹¤ì´ìŠ¨', '');
-INSERT INTO category VALUES ('09070200', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì„¸íƒê¸°/ìƒí™œê°€ì „', 'ì„¸íƒê¸°/ê±´ì¡°ê¸°/ì˜ë¥˜ê´€ë¦¬ê¸°', '');
-INSERT INTO category VALUES ('09070300', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì„¸íƒê¸°/ìƒí™œê°€ì „', 'ì²­ì†Œê¸°', '');
-INSERT INTO category VALUES ('09070400', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì„¸íƒê¸°/ìƒí™œê°€ì „', 'ì „í™”ê¸°/ë¬´ì „ê¸°', '');
-INSERT INTO category VALUES ('09070500', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì„¸íƒê¸°/ìƒí™œê°€ì „', 'ë‹¤ë¦¬ë¯¸/ìž¬ë´‰/ë³´í’€', '');
-
--- ëƒ‰ìž¥ê³ /ì£¼ë°©ê°€ì „ ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('09080000', 'ë””ì§€í„¸/ë Œíƒˆ', 'ëƒ‰ìž¥ê³ /ì£¼ë°©ê°€ì „', '', '');
-INSERT INTO category VALUES ('09080100', 'ë””ì§€í„¸/ë Œíƒˆ', 'ëƒ‰ìž¥ê³ /ì£¼ë°©ê°€ì „', 'ëƒ‰ìž¥ê³ /ê¹€ì¹˜ëƒ‰ìž¥ê³ ', '');
-INSERT INTO category VALUES ('09080200', 'ë””ì§€í„¸/ë Œíƒˆ', 'ëƒ‰ìž¥ê³ /ì£¼ë°©ê°€ì „', 'ì „ê¸°ë°¥ì†¥', '');
-INSERT INTO category VALUES ('09080300', 'ë””ì§€í„¸/ë Œíƒˆ', 'ëƒ‰ìž¥ê³ /ì£¼ë°©ê°€ì „', 'ê°€ìŠ¤/ì „ê¸°ë ˆì¸ì§€', '');
-INSERT INTO category VALUES ('09080400', 'ë””ì§€í„¸/ë Œíƒˆ', 'ëƒ‰ìž¥ê³ /ì£¼ë°©ê°€ì „', 'ì˜¤ë¸/ì „ìžë ˆì¸ì§€', '');
-INSERT INTO category VALUES ('09080500', 'ë””ì§€í„¸/ë Œíƒˆ', 'ëƒ‰ìž¥ê³ /ì£¼ë°©ê°€ì „', 'ì‹ê¸°ì„¸ì²™/ìŒì‹ë¬¼ì²˜ë¦¬ê¸°', '');
-INSERT INTO category VALUES ('09080600', 'ë””ì§€í„¸/ë Œíƒˆ', 'ëƒ‰ìž¥ê³ /ì£¼ë°©ê°€ì „', 'ë¯¹ì„œ/ì°©ì¦™ê¸°', '');
-INSERT INTO category VALUES ('09080700', 'ë””ì§€í„¸/ë Œíƒˆ', 'ëƒ‰ìž¥ê³ /ì£¼ë°©ê°€ì „', 'ì£¼ë°©ì†Œí˜•ê°€ì „', '');
-INSERT INTO category VALUES ('09080800', 'ë””ì§€í„¸/ë Œíƒˆ', 'ëƒ‰ìž¥ê³ /ì£¼ë°©ê°€ì „', 'ì»¤í”¼ë¨¸ì‹ /ì»¤í”¼ë©”ì´ì»¤', '');
-INSERT INTO category VALUES ('09080900', 'ë””ì§€í„¸/ë Œíƒˆ', 'ëƒ‰ìž¥ê³ /ì£¼ë°©ê°€ì „', 'ì •ìˆ˜ê¸°/í•„í„°', '');
-
--- ì˜ìƒ/ìŒí–¥ê°€ì „ ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('09090000', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', '', '');
-INSERT INTO category VALUES ('09090100', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'ìŠ¤í”¼ì»¤', '');
-INSERT INTO category VALUES ('09090200', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'ì´ì–´í°/í—¤ë“œí°', '');
-INSERT INTO category VALUES ('09090300', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'ì˜¤ë””ì˜¤/HiFi', '');
-INSERT INTO category VALUES ('09090400', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'í•™ìŠµê¸°ê¸°/ê¸°íƒ€ìŒí–¥', '');
-INSERT INTO category VALUES ('09090500', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'TV', '');
-INSERT INTO category VALUES ('09090600', 'ë””ì§€í„¸/ë Œíƒˆ', 'ì˜ìƒ/ìŒí–¥ê°€ì „', 'í™ˆì‹œì–´í„°/DVD', '');
-
--- íœ´ëŒ€í°/ìŠ¤ë§ˆíŠ¸ê¸°ê¸° ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('09100000', 'ë””ì§€í„¸/ë Œíƒˆ', 'íœ´ëŒ€í°/ìŠ¤ë§ˆíŠ¸ê¸°ê¸°', '', '');
-INSERT INTO category VALUES ('09100100', 'ë””ì§€í„¸/ë Œíƒˆ', 'íœ´ëŒ€í°/ìŠ¤ë§ˆíŠ¸ê¸°ê¸°', 'ì‹ ê·œê°€ìž…', '');
-INSERT INTO category VALUES ('09100200', 'ë””ì§€í„¸/ë Œíƒˆ', 'íœ´ëŒ€í°/ìŠ¤ë§ˆíŠ¸ê¸°ê¸°', 'ë²ˆí˜¸ì´ë™', '');
-INSERT INTO category VALUES ('09100300', 'ë””ì§€í„¸/ë Œíƒˆ', 'íœ´ëŒ€í°/ìŠ¤ë§ˆíŠ¸ê¸°ê¸°', 'ê¸°ê¸°ë³€ê²½', '');
-INSERT INTO category VALUES ('09100400', 'ë””ì§€í„¸/ë Œíƒˆ', 'íœ´ëŒ€í°/ìŠ¤ë§ˆíŠ¸ê¸°ê¸°', 'ìžê¸‰ì œí°/ê³µê¸°ê³„', '');
-INSERT INTO category VALUES ('09100500', 'ë””ì§€í„¸/ë Œíƒˆ', 'íœ´ëŒ€í°/ìŠ¤ë§ˆíŠ¸ê¸°ê¸°', 'íœ´ëŒ€í° ì¼€ì´ìŠ¤', '');
-INSERT INTO category VALUES ('09100600', 'ë””ì§€í„¸/ë Œíƒˆ', 'íœ´ëŒ€í°/ìŠ¤ë§ˆíŠ¸ê¸°ê¸°', 'íœ´ëŒ€í°ì•¡ì„¸ì„œë¦¬', '');
-INSERT INTO category VALUES ('09100700', 'ë””ì§€í„¸/ë Œíƒˆ', 'íœ´ëŒ€í°/ìŠ¤ë§ˆíŠ¸ê¸°ê¸°', 'ìŠ¤ë§ˆíŠ¸ì›Œì¹˜/ë°´ë“œ', '');
-
--- ë Œíƒˆ ì¹´í…Œê³ ë¦¬
-INSERT INTO category VALUES ('09110000', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', '', '');
-INSERT INTO category VALUES ('09110100', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ì •ìˆ˜ê¸°', '');
-INSERT INTO category VALUES ('09110200', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ê³µê¸°ì²­ì •ê¸°/ì œìŠµê¸°', '');
-INSERT INTO category VALUES ('09110300', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ë¹„ë°', '');
-INSERT INTO category VALUES ('09110400', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ì—ì–´ì»¨', '');
-INSERT INTO category VALUES ('09110500', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ì„¸íƒê¸°/ê±´ì¡°ê¸°/ìŠ¤íƒ€ì¼ëŸ¬', '');
-INSERT INTO category VALUES ('09110600', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ì‹ê¸°ì„¸ì²™ê¸°/ì£¼ë°©ê°€ì „', '');
-INSERT INTO category VALUES ('09110700', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ëƒ‰ìž¥ê³ ', '');
-INSERT INTO category VALUES ('09110800', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ì•ˆë§ˆì˜ìž', '');
-INSERT INTO category VALUES ('09110900', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ì¹¨ëŒ€/ë§¤íŠ¸ë¦¬ìŠ¤', '');
-INSERT INTO category VALUES ('09111000', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'TV', '');
-INSERT INTO category VALUES ('09111100', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'í—¬ìŠ¤ì¼€ì–´', '');
-INSERT INTO category VALUES ('09111200', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ë Œí„°ì¹´/íƒ€ì´ì–´', '');
-INSERT INTO category VALUES ('09111300', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ë°˜ë ¤ìš©í’ˆ', '');
-INSERT INTO category VALUES ('09111400', 'ë””ì§€í„¸/ë Œíƒˆ', 'ë Œíƒˆ', 'ê¸°íƒ€ ë Œíƒˆìƒí’ˆ', '');
-
-INSERT INTO category VALUES ('10000000', 'ì—¬í–‰/eì¿ í°/ë¬¸êµ¬/ë„ì„œ', '', '', '');
-
-
-
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ì¼€ë¼ìŠ¤íƒ€ì¦ˆ');
-
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, 'https://sui.ssgcdn.com/cmpt/banner/201708/2017081013263780463968040496_758.jpg', 'ë…¸ë¸Œëžœë“œ');
-
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ì§€ì´í¬');
-
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ìƒˆìš°íŒ”ì•„');
-
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ì‚¼ì„±ê³µì‹ìŠ¤í† ì–´');
-
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'í•œìš°ë¹„');
-
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ë‚˜ëž˜ì‹í’ˆ');
-
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ì¹˜í‚¤íƒ€(ë°”ë‚˜ë‚˜/ë”ë¯¸)');
-
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ë†í˜‘');
-
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ì½œë“œí”Œë ˆìž„');
-
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'í…œí¼');
+-- ÆÇ¸ÅÀÚ ÆäÀÌÁö, ºê·£µå ÆäÀÌÁö, »óÇ° Ä«Å×°í¸® Å×ÀÌºí
+
+INSERT INTO category VALUES ('04000000', 'ºäÆ¼', '', '', '');
+INSERT INTO category VALUES ('04010000', 'ºäÆ¼', '¸ÞÀÌÅ©¾÷', '', '');
+INSERT INTO category VALUES ('04010100', 'ºäÆ¼', '¸ÞÀÌÅ©¾÷', 'º£ÀÌ½º¸ÞÀÌÅ©¾÷', '');
+INSERT INTO category VALUES ('04010200', 'ºäÆ¼', '¸ÞÀÌÅ©¾÷', '¸³¸ÞÀÌÅ©¾÷', '');
+INSERT INTO category VALUES ('04010300', 'ºäÆ¼', '¸ÞÀÌÅ©¾÷', '¾ÆÀÌ¸ÞÀÌÅ©¾÷', '');
+INSERT INTO category VALUES ('04010400', 'ºäÆ¼', '¸ÞÀÌÅ©¾÷', 'Ä¡Å©/ÇÏÀÌ¶óÀÌÅÍ', '');
+INSERT INTO category VALUES ('04010500', 'ºäÆ¼', '¸ÞÀÌÅ©¾÷', '³²¼º¸ÞÀÌÅ©¾÷', '');
+INSERT INTO category VALUES ('04010600', 'ºäÆ¼', '¸ÞÀÌÅ©¾÷', '³×ÀÏ', '');
+
+INSERT INTO category VALUES ('04020000', 'ºäÆ¼', '½ºÅ²ÄÉ¾î', '', '');
+INSERT INTO category VALUES ('04020100', 'ºäÆ¼', '½ºÅ²ÄÉ¾î', '½ºÅ²/Åä³Ê/¹Ì½ºÆ®', '');
+INSERT INTO category VALUES ('04020200', 'ºäÆ¼', '½ºÅ²ÄÉ¾î', '¿¡¼¾½º/¼¼·³', '');
+INSERT INTO category VALUES ('04020300', 'ºäÆ¼', '½ºÅ²ÄÉ¾î', '·Î¼Ç/¿¡¸ÖÀü/Å©¸²', '');
+INSERT INTO category VALUES ('04020400', 'ºäÆ¼', '½ºÅ²ÄÉ¾î', '¾ÆÀÌ/³ØÄÉ¾î', '');
+INSERT INTO category VALUES ('04020500', 'ºäÆ¼', '½ºÅ²ÄÉ¾î', 'Å¬·»Â¡/½ºÅ©·´', '');
+INSERT INTO category VALUES ('04020600', 'ºäÆ¼', '½ºÅ²ÄÉ¾î', '¼±ÄÉ¾î', '');
+INSERT INTO category VALUES ('04020700', 'ºäÆ¼', '½ºÅ²ÄÉ¾î', '½ºÅ²ÄÉ¾î¼¼Æ®', '');
+INSERT INTO category VALUES ('04020800', 'ºäÆ¼', '½ºÅ²ÄÉ¾î', 'ÆÑ/¸¶½ºÅ©', '');
+INSERT INTO category VALUES ('04020900', 'ºäÆ¼', '½ºÅ²ÄÉ¾î', '³²¼º½ºÅ²ÄÉ¾î', '');
+
+INSERT INTO category VALUES ('04030000', 'ºäÆ¼', 'Çâ¼ö', '', '');
+INSERT INTO category VALUES ('04030100', 'ºäÆ¼', 'Çâ¼ö', '¿©¼ºÇâ¼ö', '');
+INSERT INTO category VALUES ('04030200', 'ºäÆ¼', 'Çâ¼ö', '³²¼ºÇâ¼ö', '');
+INSERT INTO category VALUES ('04030300', 'ºäÆ¼', 'Çâ¼ö', 'À¯´Ï¼½½ºÇâ¼ö', '');
+INSERT INTO category VALUES ('04030400', 'ºäÆ¼', 'Çâ¼ö', 'µå·¹½º/ÆÐºê¸¯ÆÛÇ¾/·ë½ºÇÁ·¹ÀÌ', '');
+INSERT INTO category VALUES ('04030500', 'ºäÆ¼', 'Çâ¼ö', 'Äµµé/µðÇ»Àú/¾Æ·Î¸¶', '');
+INSERT INTO category VALUES ('04030600', 'ºäÆ¼', 'Çâ¼ö', '°íÃ¼/±âÅ¸ Çâ¼ö', '');
+
+INSERT INTO category VALUES ('04040000', 'ºäÆ¼', 'Çì¾îÄÉ¾î', '', '');
+INSERT INTO category VALUES ('04040100', 'ºäÆ¼', 'Çì¾îÄÉ¾î', '¼¤Çª', '');
+INSERT INTO category VALUES ('04040200', 'ºäÆ¼', 'Çì¾îÄÉ¾î', '¸°½º/ÄÁµð¼Å³Ê', '');
+INSERT INTO category VALUES ('04040300', 'ºäÆ¼', 'Çì¾îÄÉ¾î', 'Æ®¸®Æ®¸ÕÆ®/ÄÉ¾î', '');
+INSERT INTO category VALUES ('04040301', 'ºäÆ¼', 'Çì¾îÄÉ¾î', 'Æ®¸®Æ®¸ÕÆ®/ÄÉ¾î', 'Çì¾îÆ®¸®Æ®¸ÕÆ®');
+INSERT INTO category VALUES ('04040302', 'ºäÆ¼', 'Çì¾îÄÉ¾î', 'Æ®¸®Æ®¸ÕÆ®/ÄÉ¾î', 'Çì¾îÆÑ/¸¶½ºÅ©');
+INSERT INTO category VALUES ('04040303', 'ºäÆ¼', 'Çì¾îÄÉ¾î', 'Æ®¸®Æ®¸ÕÆ®/ÄÉ¾î', 'Çì¾î¿¡¼¾½º/¿ÀÀÏ/¼¼·³');
+INSERT INTO category VALUES ('04040304', 'ºäÆ¼', 'Çì¾îÄÉ¾î', 'Æ®¸®Æ®¸ÕÆ®/ÄÉ¾î', 'Çì¾îÆÛÇ¾/Çì¾î¹Ì½ºÆ®');
+INSERT INTO category VALUES ('04040400', 'ºäÆ¼', 'Çì¾îÄÉ¾î', 'Çì¾î½ºÅ¸ÀÏ¸µ', '');
+INSERT INTO category VALUES ('04040500', 'ºäÆ¼', 'Çì¾îÄÉ¾î', 'Çì¾îÄÃ·¯/Æß', '');
+
+INSERT INTO category VALUES ('04050000', 'ºäÆ¼', '¹ÙµðÄÉ¾î', '', '');
+INSERT INTO category VALUES ('04050100', 'ºäÆ¼', '¹ÙµðÄÉ¾î', '¹Ùµð·Î¼Ç/Å©¸²/¿ÀÀÏ', '');
+INSERT INTO category VALUES ('04050200', 'ºäÆ¼', '¹ÙµðÄÉ¾î', '¹Ùµð¿ö½Ã/½ºÅ©·´', '');
+INSERT INTO category VALUES ('04050300', 'ºäÆ¼', '¹ÙµðÄÉ¾î', '¹Ùµð¹Ì½ºÆ®', '');
+INSERT INTO category VALUES ('04050400', 'ºäÆ¼', '¹ÙµðÄÉ¾î', 'Ç²/ÇÚµå/µ¥¿ÀÄÉ¾î', '');
+INSERT INTO category VALUES ('04050500', 'ºäÆ¼', '¹ÙµðÄÉ¾î', '»þ¿ö/ÀÔ¿åÁ¦', '');
+INSERT INTO category VALUES ('04050600', 'ºäÆ¼', '¹ÙµðÄÉ¾î', '¸éµµ/Á¦¸ð¿ëÇ°', '');
+INSERT INTO category VALUES ('04050700', 'ºäÆ¼', '¹ÙµðÄÉ¾î', '½½¸®¹Ö/Ã»°áÁ¦', '');
+INSERT INTO category VALUES ('04050800', 'ºäÆ¼', '¹ÙµðÄÉ¾î', '±âÅ¸¹Ùµð¿ëÇ°', '');
+
+INSERT INTO category VALUES ('04060000', 'ºäÆ¼', '¹Ì¿ë±â±â/¼ÒÇ°', '', '');
+INSERT INTO category VALUES ('04060100', 'ºäÆ¼', '¹Ì¿ë±â±â/¼ÒÇ°', 'ÆäÀÌ½º°ü¸®±â±â', '');
+INSERT INTO category VALUES ('04060200', 'ºäÆ¼', '¹Ì¿ë±â±â/¼ÒÇ°', 'ÆäÀÌ½º¼ÒÇ°', '');
+INSERT INTO category VALUES ('04060300', 'ºäÆ¼', '¹Ì¿ë±â±â/¼ÒÇ°', '¸ÞÀÌÅ©¾÷ºê·¯½¬', '');
+INSERT INTO category VALUES ('04060400', 'ºäÆ¼', '¹Ì¿ë±â±â/¼ÒÇ°', '¾ÆÀÌ¼ÒÇ°', '');
+INSERT INTO category VALUES ('04060500', 'ºäÆ¼', '¹Ì¿ë±â±â/¼ÒÇ°', '¹Ùµð°ü¸®±â±â', '');
+INSERT INTO category VALUES ('04060600', 'ºäÆ¼', '¹Ì¿ë±â±â/¼ÒÇ°', 'Çì¾î°ü¸®±â±â', '');
+INSERT INTO category VALUES ('04060700', 'ºäÆ¼', '¹Ì¿ë±â±â/¼ÒÇ°', 'Çì¾î¼ÒÇ°', '');
+INSERT INTO category VALUES ('04060800', 'ºäÆ¼', '¹Ì¿ë±â±â/¼ÒÇ°', 'ÆÄ¿ìÄ¡', '');
+INSERT INTO category VALUES ('04060900', 'ºäÆ¼', '¹Ì¿ë±â±â/¼ÒÇ°', '°Å¿ï/¿ë±â/±âÅ¸¼ÒÇ°', '');
+
+INSERT INTO category VALUES ('04070000', 'ºäÆ¼', '³²¼ºÈ­ÀåÇ°', '', '');
+INSERT INTO category VALUES ('04070100', 'ºäÆ¼', '³²¼ºÈ­ÀåÇ°', 'Å¬·»Â¡/½¦ÀÌºù', '');
+INSERT INTO category VALUES ('04070200', 'ºäÆ¼', '³²¼ºÈ­ÀåÇ°', '½ºÅ²/¾ÖÇÁÅÍ½¦ÀÌºê', '');
+INSERT INTO category VALUES ('04070300', 'ºäÆ¼', '³²¼ºÈ­ÀåÇ°', '·Î¼Ç', '');
+INSERT INTO category VALUES ('04070400', 'ºäÆ¼', '³²¼ºÈ­ÀåÇ°', '¿¡¼¾½º', '');
+INSERT INTO category VALUES ('04070500', 'ºäÆ¼', '³²¼ºÈ­ÀåÇ°', 'Å©¸²', '');
+INSERT INTO category VALUES ('04070600', 'ºäÆ¼', '³²¼ºÈ­ÀåÇ°', '¿ÃÀÎ¿ø', '');
+INSERT INTO category VALUES ('04070700', 'ºäÆ¼', '³²¼ºÈ­ÀåÇ°', '¸¶½ºÅ©/ÆÑ', '');
+INSERT INTO category VALUES ('04070800', 'ºäÆ¼', '³²¼ºÈ­ÀåÇ°', '½ºÅ²ÄÉ¾î¼¼Æ®', '');
+INSERT INTO category VALUES ('04070900', 'ºäÆ¼', '³²¼ºÈ­ÀåÇ°', '¼±ÄÉ¾î/BBÅ©¸²', '');
+INSERT INTO category VALUES ('04071000', 'ºäÆ¼', '³²¼ºÈ­ÀåÇ°', '³²¼º¸ÞÀÌÅ©¾÷', '');
+
+INSERT INTO category VALUES ('04080000', 'ºäÆ¼', 'ºäÆ¼¼±¹°¼¼Æ®', '', '');
+INSERT INTO category VALUES ('04080100', 'ºäÆ¼', 'ºäÆ¼¼±¹°¼¼Æ®', '¸ÞÀÌÅ©¾÷', '');
+INSERT INTO category VALUES ('04080200', 'ºäÆ¼', 'ºäÆ¼¼±¹°¼¼Æ®', '½ºÅ²ÄÉ¾î', '');
+INSERT INTO category VALUES ('04080300', 'ºäÆ¼', 'ºäÆ¼¼±¹°¼¼Æ®', 'Çâ¼ö', '');
+INSERT INTO category VALUES ('04080400', 'ºäÆ¼', 'ºäÆ¼¼±¹°¼¼Æ®', '¹ÙµðÄÉ¾î', '');
+INSERT INTO category VALUES ('04080500', 'ºäÆ¼', 'ºäÆ¼¼±¹°¼¼Æ®', 'Çì¾îÄÉ¾î', '');
+
+
+
+
+
+-- È­ÀåÁö/»ý¸®´ë
+INSERT INTO category VALUES ('06000000', '»ýÈ°/ÁÖ¹æ', '', '', '');
+INSERT INTO category VALUES ('06010000', '»ýÈ°/ÁÖ¹æ', 'È­ÀåÁö/»ý¸®´ë', '', '');
+INSERT INTO category VALUES ('06010100', '»ýÈ°/ÁÖ¹æ', 'È­ÀåÁö/»ý¸®´ë', 'È­ÀåÁö', '');
+INSERT INTO category VALUES ('06010101', '»ýÈ°/ÁÖ¹æ', 'È­ÀåÁö/»ý¸®´ë', 'È­ÀåÁö', '·ÑÈ­ÀåÁö');
+INSERT INTO category VALUES ('06010102', '»ýÈ°/ÁÖ¹æ', 'È­ÀåÁö/»ý¸®´ë', 'È­ÀåÁö', '°í±ÞÈ­ÀåÁö');
+INSERT INTO category VALUES ('06010103', '»ýÈ°/ÁÖ¹æ', 'È­ÀåÁö/»ý¸®´ë', 'È­ÀåÁö', 'Á¡Æ÷·ÑÈ­ÀåÁö');
+INSERT INTO category VALUES ('06010104', '»ýÈ°/ÁÖ¹æ', 'È­ÀåÁö/»ý¸®´ë', 'È­ÀåÁö', 'ÆäÀÌÆÛÅ¸¿Ã');
+INSERT INTO category VALUES ('06010105', '»ýÈ°/ÁÖ¹æ', 'È­ÀåÁö/»ý¸®´ë', 'È­ÀåÁö', '³ÀÅ²');
+INSERT INTO category VALUES ('06010200', '»ýÈ°/ÁÖ¹æ', 'È­ÀåÁö/»ý¸®´ë', '¹°Æ¼½´', '');
+INSERT INTO category VALUES ('06010300', '»ýÈ°/ÁÖ¹æ', 'È­ÀåÁö/»ý¸®´ë', '¹Ì¿ëÆ¼½´', '');
+INSERT INTO category VALUES ('06010400', '»ýÈ°/ÁÖ¹æ', 'È­ÀåÁö/»ý¸®´ë', '»ý¸®´ë', '');
+INSERT INTO category VALUES ('06010500', '»ýÈ°/ÁÖ¹æ', 'È­ÀåÁö/»ý¸®´ë', '¼ºÀÎ±âÀú±Í', '');
+
+-- ¼¼Á¦/Ã»¼Ò¿ëÇ°
+
+INSERT INTO category VALUES ('06020000', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', '', '');
+INSERT INTO category VALUES ('06020100', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', '¼¼Å¹¼¼Á¦', '');
+INSERT INTO category VALUES ('06020200', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', 'ÁÖ¹æ/Ã»¼Ò¼¼Á¦', '');
+INSERT INTO category VALUES ('06020300', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', '¼¼Å¹¿ëÇ°', '');
+INSERT INTO category VALUES ('06020400', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', 'Å»Ãë/¹æÇâÁ¦', '');
+INSERT INTO category VALUES ('06020500', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', '»ìÃæÁ¦/¹æÃæÁ¦', '');
+INSERT INTO category VALUES ('06020600', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', '¼¼Á¦¼±¹°¼¼Æ®', '');
+INSERT INTO category VALUES ('06020700', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', '¹Ð´ë/Ã»¼ÒÆ÷', '');
+INSERT INTO category VALUES ('06020800', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', 'Å©¸®³Ê', '');
+INSERT INTO category VALUES ('06020900', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', '¿å½ÇÃ»¼Ò¿ëÇ°', '');
+INSERT INTO category VALUES ('06021000', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', '±âÅ¸Ã»¼Òµµ±¸', '');
+INSERT INTO category VALUES ('06021100', '»ýÈ°/ÁÖ¹æ', '¼¼Á¦/Ã»¼Ò¿ëÇ°', 'Ã»¼Ò¿ëÇ°', '');
+
+-- °Ç°­/À§»ý¿ëÇ°
+INSERT INTO category VALUES ('06030000', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', '', '');
+INSERT INTO category VALUES ('06030100', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', '¸¶½ºÅ©', '');
+INSERT INTO category VALUES ('06030200', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', 'Ä©¼Ö/Ä¡¾à/±¸°­Ã»°á', '');
+INSERT INTO category VALUES ('06030300', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', '¸éµµ/Á¦¸ð¿ëÇ°', '');
+INSERT INTO category VALUES ('06030400', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', '´«°Ç°­/·»Áî°ü¸®', '');
+INSERT INTO category VALUES ('06030500', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', 'Ç÷¾Ð/Ç÷´ç/Ã¼¿Â/Ã¼Áö¹æ°è', '');
+INSERT INTO category VALUES ('06030600', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', 'Ã¼Áß°è/¿Â½Àµµ°è/¸¸º¸°è', '');
+INSERT INTO category VALUES ('06030700', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', '¾È¸¶ÀÇÀÚ/¸¶»çÁö¿ëÇ°', '');
+INSERT INTO category VALUES ('06030800', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', 'º¸È£´ë/±³Á¤¿ëÇ°', '');
+INSERT INTO category VALUES ('06030900', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', 'È¯ÀÚ/ÀçÈ°/½Ç¹ö¿ëÇ°', '');
+INSERT INTO category VALUES ('06031000', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', 'ÂòÁú/ºÎÇ×/ÈÆÁõ/¶ä', '');
+INSERT INTO category VALUES ('06031100', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', '°¡Á¤ÀÇ·á¿ëÇ°', '');
+INSERT INTO category VALUES ('06031200', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', '¼ºÀÎ¿ëÇ°', '');
+INSERT INTO category VALUES ('06031300', '»ýÈ°/ÁÖ¹æ', '°Ç°­/À§»ý¿ëÇ°', '±âÅ¸°Ç°­¿ëÇ°', '');
+
+-- ÁÖ¹æ¿ëÇ°
+INSERT INTO category VALUES ('06040000', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '', '');
+INSERT INTO category VALUES ('06040100', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '½Ä±â/±×¸©', '');
+INSERT INTO category VALUES ('06040200', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', 'ÀÜ/ÄÅ/¹°º´', '');
+INSERT INTO category VALUES ('06040300', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '¹ÐÆó/º¸°ü/ÀúÀå¿ë±â', '');
+INSERT INTO category VALUES ('06040400', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '¼öÀú/¾ç½Ä±â', '');
+INSERT INTO category VALUES ('06040500', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', 'º¸¿Â/º¸³Ã¿ëÇ°', '');
+INSERT INTO category VALUES ('06040600', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', 'ÇÁ¶óÀÌÆÒ/±×¸±', '');
+INSERT INTO category VALUES ('06040700', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '³¿ºñ/¼Ü/ÁÖÀüÀÚ', '');
+INSERT INTO category VALUES ('06040800', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', 'Á¶¸®±â±¸', '');
+INSERT INTO category VALUES ('06040900', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', 'Ä®/µµ¸¶/Ã¤Ä®', '');
+INSERT INTO category VALUES ('06041000', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', 'Á¦°ú/Á¦»§¿ëÇ°', '');
+INSERT INTO category VALUES ('06041100', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', 'Ä¿ÇÇ/Æ¼¿ëÇ°', '');
+INSERT INTO category VALUES ('06041200', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '¿ÍÀÎ¿ëÇ°', '');
+INSERT INTO category VALUES ('06041300', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '·¦/È£ÀÏ/Å°Ä£Å¸¿Ã', '');
+INSERT INTO category VALUES ('06041400', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '¼ö¼¼¹Ì/ÇàÁÖ/°í¹«Àå°©', '');
+INSERT INTO category VALUES ('06041500', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', 'ÀÏÈ¸¿ëÇ° /À§»ý¹é', '');
+INSERT INTO category VALUES ('06041600', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '¾ÕÄ¡¸¶/Àå°©', '');
+INSERT INTO category VALUES ('06041700', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '¾Æ¿ôµµ¾îÅ°Ä£', '');
+INSERT INTO category VALUES ('06041800', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '±âÅ¸ ÁÖ¹æÀâÈ­', '');
+INSERT INTO category VALUES ('06041900', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', '¼ö³³Á¤¸®¿ëÇ°', '');
+INSERT INTO category VALUES ('06042000', '»ýÈ°/ÁÖ¹æ', 'ÁÖ¹æ¿ëÇ°', 'Á¦¼ö¿ëÇ°', '');
+
+-- ¿å½Ç¿ëÇ°
+INSERT INTO category VALUES ('06050000', '»ýÈ°/ÁÖ¹æ', '¿å½Ç¿ëÇ°', '', '');
+INSERT INTO category VALUES ('06050100', '»ýÈ°/ÁÖ¹æ', '¿å½Ç¿ëÇ°', '»þ¿ö±â/¼öÀü¿ëÇ°', '');
+INSERT INTO category VALUES ('06050200', '»ýÈ°/ÁÖ¹æ', '¿å½Ç¿ëÇ°', '¼¼¸é±â/º¯±â/ºñµ¥', '');
+INSERT INTO category VALUES ('06050300', '»ýÈ°/ÁÖ¹æ', '¿å½Ç¿ëÇ°', '¿åÁ¶µ¤°³', '');
+INSERT INTO category VALUES ('06050400', '»ýÈ°/ÁÖ¹æ', '¿å½Ç¿ëÇ°', 'º¯±â½ÃÆ®/Ä¿¹ö', '');
+INSERT INTO category VALUES ('06050500', '»ýÈ°/ÁÖ¹æ', '¿å½Ç¿ëÇ°', '¿å½Ç¼ÒÇ°', '');
+INSERT INTO category VALUES ('06050600', '»ýÈ°/ÁÖ¹æ', '¿å½Ç¿ëÇ°', '±âÅ¸¿å½Ç¿ëÇ°', '');
+INSERT INTO category VALUES ('06050700', '»ýÈ°/ÁÖ¹æ', '¿å½Ç¿ëÇ°', 'Å¸¿ù/¸ñ¿å°¡¿î', '');
+
+-- »ýÈ°ÀâÈ­/°ø±¸
+INSERT INTO category VALUES ('06060000', '»ýÈ°/ÁÖ¹æ', '»ýÈ°ÀâÈ­/°ø±¸', '', '');
+INSERT INTO category VALUES ('06060100', '»ýÈ°/ÁÖ¹æ', '»ýÈ°ÀâÈ­/°ø±¸', '¼ö³³/Á¤¸®¿ëÇ°', '');
+INSERT INTO category VALUES ('06060200', '»ýÈ°/ÁÖ¹æ', '»ýÈ°ÀâÈ­/°ø±¸', '¹æÇÑ¿ëÇ°', '');
+INSERT INTO category VALUES ('06060300', '»ýÈ°/ÁÖ¹æ', '»ýÈ°ÀâÈ­/°ø±¸', 'Àü±â/»ýÈ°¸ÅÆ®', '');
+INSERT INTO category VALUES ('06060400', '»ýÈ°/ÁÖ¹æ', '»ýÈ°ÀâÈ­/°ø±¸', '¸ÖÆ¼ÅÇ/°ÇÀüÁö', '');
+INSERT INTO category VALUES ('06060500', '»ýÈ°/ÁÖ¹æ', '»ýÈ°ÀâÈ­/°ø±¸', '¾ÈÀüº¸È£¿ëÇ°', '');
+INSERT INTO category VALUES ('06060600', '»ýÈ°/ÁÖ¹æ', '»ýÈ°ÀâÈ­/°ø±¸', 'º¸¾È/È£½Å¿ëÇ°', '');
+INSERT INTO category VALUES ('06060700', '»ýÈ°/ÁÖ¹æ', '»ýÈ°ÀâÈ­/°ø±¸', '°ø±¸¿ëÇ°', '');
+INSERT INTO category VALUES ('06060800', '»ýÈ°/ÁÖ¹æ', '»ýÈ°ÀâÈ­/°ø±¸', '±âÅ¸ »ýÈ°ÀâÈ­', '');
+
+-- ÀÚµ¿Â÷¿ëÇ°
+INSERT INTO category VALUES ('06070000', '»ýÈ°/ÁÖ¹æ', 'ÀÚµ¿Â÷¿ëÇ°', '', '');
+INSERT INTO category VALUES ('06070100', '»ýÈ°/ÁÖ¹æ', 'ÀÚµ¿Â÷¿ëÇ°', 'Â÷·®°ü¸®/¼¼Â÷¿ëÇ°', '');
+INSERT INTO category VALUES ('06070200', '»ýÈ°/ÁÖ¹æ', 'ÀÚµ¿Â÷¿ëÇ°', 'ÀÎÅ×¸®¾î¿ëÇ°', '');
+INSERT INTO category VALUES ('06070300', '»ýÈ°/ÁÖ¹æ', 'ÀÚµ¿Â÷¿ëÇ°', 'ÀÍ½ºÅ×¸®¾î¿ëÇ°', '');
+INSERT INTO category VALUES ('06070400', '»ýÈ°/ÁÖ¹æ', 'ÀÚµ¿Â÷¿ëÇ°', '¾ÈÀü/ÆíÀÇ/°èÀý¿ëÇ°', '');
+INSERT INTO category VALUES ('06070500', '»ýÈ°/ÁÖ¹æ', 'ÀÚµ¿Â÷¿ëÇ°', '¿ÀÅä¹ÙÀÌ¿ëÇ°', '');
+INSERT INTO category VALUES ('06070600', '»ýÈ°/ÁÖ¹æ', 'ÀÚµ¿Â÷¿ëÇ°', '¼öÀÔÂ÷', '');
+INSERT INTO category VALUES ('06070700', '»ýÈ°/ÁÖ¹æ', 'ÀÚµ¿Â÷¿ëÇ°', 'Å¸ÀÌ¾î', '');
+
+
+
+
+
+-- ¿©¼ººê·£µåÆÐ¼Ç
+INSERT INTO category VALUES ('01000000', 'ÆÐ¼ÇÀÇ·ù', '', '', '');
+INSERT INTO category VALUES ('01040000', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', '', '');
+INSERT INTO category VALUES ('01040100', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', '°¡µð°Ç', '');
+INSERT INTO category VALUES ('01040200', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', '´ÏÆ®/º£½ºÆ®', '');
+INSERT INTO category VALUES ('01040300', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', '½ºÄ¿Æ®', '');
+INSERT INTO category VALUES ('01040400', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', '¿øÇÇ½º', '');
+INSERT INTO category VALUES ('01040500', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', 'Á¤Àå', '');
+INSERT INTO category VALUES ('01040600', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', 'ÀÚÄÏ', '');
+INSERT INTO category VALUES ('01040700', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', 'Á¡ÆÛ/ÆÐµù', '');
+INSERT INTO category VALUES ('01040800', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', 'ÄÚÆ®', '');
+INSERT INTO category VALUES ('01040900', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', '¹«½ºÅÁ/ÆÛ', '');
+INSERT INTO category VALUES ('01041000', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', '¸ÇÅõ¸Ç/ÈÄµå/Æ¼¼ÅÃ÷', '');
+INSERT INTO category VALUES ('01041100', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', 'ºí¶ó¿ì½º/¼ÅÃ÷', '');
+INSERT INTO category VALUES ('01041200', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ººê·£µåÆÐ¼Ç', 'ÆÒÃ÷', '');
+
+-- ¿©¼ºÆ®·»µåÆÐ¼Ç
+INSERT INTO category VALUES ('01050000', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', '', '');
+INSERT INTO category VALUES ('01050100', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', '°¡µð°Ç', '');
+INSERT INTO category VALUES ('01050200', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', '´ÏÆ®/º£½ºÆ®', '');
+INSERT INTO category VALUES ('01050300', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', '½ºÄ¿Æ®', '');
+INSERT INTO category VALUES ('01050400', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', '¿øÇÇ½º', '');
+INSERT INTO category VALUES ('01050500', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', 'Á¤Àå', '');
+INSERT INTO category VALUES ('01050600', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', 'ÀÚÄÏ', '');
+INSERT INTO category VALUES ('01050700', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', 'Á¡ÆÛ/ÆÐµù', '');
+INSERT INTO category VALUES ('01050800', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', 'ÄÚÆ®', '');
+INSERT INTO category VALUES ('01050900', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', '¹«½ºÅÁ/ÆÛ', '');
+INSERT INTO category VALUES ('01051000', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', '¸ÇÅõ¸Ç/ÈÄµå/Æ¼¼ÅÃ÷', '');
+INSERT INTO category VALUES ('01051100', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', 'ºí¶ó¿ì½º/¼ÅÃ÷', '');
+INSERT INTO category VALUES ('01051200', 'ÆÐ¼ÇÀÇ·ù', '¿©¼ºÆ®·»µåÆÐ¼Ç', 'ÆÒÃ÷', '');
+
+-- ³²¼ºÆÐ¼Ç
+INSERT INTO category VALUES ('01060000', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', '', '');
+INSERT INTO category VALUES ('01060100', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', '°¡µð°Ç', '');
+INSERT INTO category VALUES ('01060200', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', '´ÏÆ®/º£½ºÆ®', '');
+INSERT INTO category VALUES ('01060300', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', '¼ÅÃ÷/³²¹æ', '');
+INSERT INTO category VALUES ('01060400', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', 'ÀÚÄÏ', '');
+INSERT INTO category VALUES ('01060500', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', 'Á¡ÆÛ/ÆÐµù', '');
+INSERT INTO category VALUES ('01060600', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', 'Á¤Àå/¼öÆ®', '');
+INSERT INTO category VALUES ('01030601', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', 'Á¤Àå/¼öÆ®', '¼Ö¸®µåÁ¤Àå¼¼Æ®');
+INSERT INTO category VALUES ('01030602', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', 'Á¤Àå/¼öÆ®', 'ÆÐÅÏÁ¤Àå¼¼Æ®');
+INSERT INTO category VALUES ('01030603', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', 'Á¤Àå/¼öÆ®', 'Á¤Àå¹ÙÁö');
+INSERT INTO category VALUES ('01030604', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', 'Á¤Àå/¼öÆ®', 'Á¤ÀåÀÚÄÏ');
+INSERT INTO category VALUES ('01060700', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', 'ÄÚÆ®', '');
+INSERT INTO category VALUES ('01060800', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', '¸ÇÅõ¸Ç/ÈÄµå/Æ¼¼ÅÃ÷', '');
+INSERT INTO category VALUES ('01060900', 'ÆÐ¼ÇÀÇ·ù', '³²¼ºÆÐ¼Ç', 'ÆÒÃ÷', '');
+
+-- Ä³ÁÖ¾ó/À¯´Ï¼½½º
+INSERT INTO category VALUES ('01070000', 'ÆÐ¼ÇÀÇ·ù', 'Ä³ÁÖ¾ó/À¯´Ï¼½½º', '', '');
+INSERT INTO category VALUES ('01070100', 'ÆÐ¼ÇÀÇ·ù', 'Ä³ÁÖ¾ó/À¯´Ï¼½½º', '¿øÇÇ½º/½ºÄ¿Æ®', '');
+INSERT INTO category VALUES ('01070200', 'ÆÐ¼ÇÀÇ·ù', 'Ä³ÁÖ¾ó/À¯´Ï¼½½º', 'Á¡ÆÛ/ÆÐµù', '');
+INSERT INTO category VALUES ('01070300', 'ÆÐ¼ÇÀÇ·ù', 'Ä³ÁÖ¾ó/À¯´Ï¼½½º', 'ÀÚÄÏ', '');
+INSERT INTO category VALUES ('01070400', 'ÆÐ¼ÇÀÇ·ù', 'Ä³ÁÖ¾ó/À¯´Ï¼½½º','¸ÇÅõ¸Ç/ÈÄµå/Æ¼¼ÅÃ÷', '');
+INSERT INTO category VALUES ('01070500', 'ÆÐ¼ÇÀÇ·ù', 'Ä³ÁÖ¾ó/À¯´Ï¼½½º', '¼ÅÃ÷/³²¹æ', '');
+INSERT INTO category VALUES ('01070600', 'ÆÐ¼ÇÀÇ·ù', 'Ä³ÁÖ¾ó/À¯´Ï¼½½º', '°¡µð°Ç', '');
+INSERT INTO category VALUES ('01070700', 'ÆÐ¼ÇÀÇ·ù', 'Ä³ÁÖ¾ó/À¯´Ï¼½½º', '´ÏÆ®/º£½ºÆ®', '');
+INSERT INTO category VALUES ('01070800', 'ÆÐ¼ÇÀÇ·ù', 'Ä³ÁÖ¾ó/À¯´Ï¼½½º', 'ÄÚÆ®', '');
+INSERT INTO category VALUES ('01070900', 'ÆÐ¼ÇÀÇ·ù', 'Ä³ÁÖ¾ó/À¯´Ï¼½½º', 'ÆÒÃ÷', '');
+
+-- ¾ð´õ¿þ¾î
+INSERT INTO category VALUES ('01080000', 'ÆÐ¼ÇÀÇ·ù', '¾ð´õ¿þ¾î', '', '');
+INSERT INTO category VALUES ('01080100', 'ÆÐ¼ÇÀÇ·ù', '¾ð´õ¿þ¾î', '¿©¼ºÀá¿Ê/È¨¿þ¾î', '');
+INSERT INTO category VALUES ('01080200', 'ÆÐ¼ÇÀÇ·ù', '¾ð´õ¿þ¾î', '³²¼ºÀá¿Ê/È¨¿þ¾î', '');
+INSERT INTO category VALUES ('01080300', 'ÆÐ¼ÇÀÇ·ù', '¾ð´õ¿þ¾î', '¿©¼º¼Ó¿Ê»óÀÇ', '');
+INSERT INTO category VALUES ('01080400', 'ÆÐ¼ÇÀÇ·ù', '¾ð´õ¿þ¾î', '¿©¼º¼Ó¿ÊÇÏÀÇ', '');
+INSERT INTO category VALUES ('01080500', 'ÆÐ¼ÇÀÇ·ù', '¾ð´õ¿þ¾î', 'ºê·¡Áö¾î/ÆÒÆ¼¼¼Æ®', '');
+INSERT INTO category VALUES ('01080600', 'ÆÐ¼ÇÀÇ·ù', '¾ð´õ¿þ¾î', '³²¼º¼Ó¿Ê', '');
+INSERT INTO category VALUES ('01080700', 'ÆÐ¼ÇÀÇ·ù', '¾ð´õ¿þ¾î', 'Ä¿ÇÃÀá¿Ê/¼Ó¿Ê¼¼Æ®', '');
+INSERT INTO category VALUES ('01080800', 'ÆÐ¼ÇÀÇ·ù', '¾ð´õ¿þ¾î', '³»º¹', '');
+INSERT INTO category VALUES ('01080900', 'ÆÐ¼ÇÀÇ·ù', '¾ð´õ¿þ¾î', 'ÁÖ´Ï¾î¾ð´õ¿þ¾î', '');
+
+-- µðÀÚÀÌ³Ê¼¥
+INSERT INTO category VALUES ('01090000', 'ÆÐ¼ÇÀÇ·ù', 'µðÀÚÀÌ³Ê¼¥', '', '');
+INSERT INTO category VALUES ('01090100', 'ÆÐ¼ÇÀÇ·ù', 'µðÀÚÀÌ³Ê¼¥', '¿©¼º ¾Æ¿ìÅÍ', '');
+INSERT INTO category VALUES ('01090200', 'ÆÐ¼ÇÀÇ·ù', 'µðÀÚÀÌ³Ê¼¥', '¿©¼º »óÀÇ', '');
+INSERT INTO category VALUES ('01090300', 'ÆÐ¼ÇÀÇ·ù', 'µðÀÚÀÌ³Ê¼¥', '¿©¼º ÆÒÃ÷/¼Â¾÷', '');
+INSERT INTO category VALUES ('01090400', 'ÆÐ¼ÇÀÇ·ù', 'µðÀÚÀÌ³Ê¼¥', '½ºÄ¿Æ®/¿øÇÇ½º', '');
+INSERT INTO category VALUES ('01090500', 'ÆÐ¼ÇÀÇ·ù', 'µðÀÚÀÌ³Ê¼¥', '¿©¼º ¾ð´õ¿þ¾î/ÀÌÁö¿þ¾î', '');
+INSERT INTO category VALUES ('01090600', 'ÆÐ¼ÇÀÇ·ù', 'µðÀÚÀÌ³Ê¼¥', '³²¼º ¾Æ¿ìÅÍ', '');
+INSERT INTO category VALUES ('01090700', 'ÆÐ¼ÇÀÇ·ù', 'µðÀÚÀÌ³Ê¼¥', '³²¼º »óÀÇ', '');
+INSERT INTO category VALUES ('01090800', 'ÆÐ¼ÇÀÇ·ù', 'µðÀÚÀÌ³Ê¼¥', '³²¼º ÆÒÃ÷/¼Â¾÷', '');
+INSERT INTO category VALUES ('01090900', 'ÆÐ¼ÇÀÇ·ù', 'µðÀÚÀÌ³Ê¼¥', '³²¼º ¾ð´õ¿þ¾î/ÀÌÁö¿þ¾î', '');
+INSERT INTO category VALUES ('01091000', 'ÆÐ¼ÇÀÇ·ù', 'µðÀÚÀÌ³Ê¼¥', 'Ä¿ÇÃ ¾ð´õ¿þ¾î/ÀÌÁö¿þ¾î', '');
+
+
+
+
+
+-- ½Å¼±½ÄÇ°ÀÇ ÃÖ»óÀ§ Ä«Å×°í¸®
+INSERT INTO category VALUES ('11000000', '½Å¼±½ÄÇ°', '', '', '');
+
+INSERT INTO category VALUES ('11010000', '½Å¼±½ÄÇ°', '°úÀÏ', '', '');
+INSERT INTO category VALUES ('11010100', '½Å¼±½ÄÇ°', '°úÀÏ', '¼ö¹Ú/¸á·Ð/Âü¿Ü/Åä¸¶Åä', '');
+INSERT INTO category VALUES ('11010200', '½Å¼±½ÄÇ°', '°úÀÏ', 'Æ÷µµ/ÀÚµÎ/º¹¼þ¾Æ', '');
+INSERT INTO category VALUES ('11010300', '½Å¼±½ÄÇ°', '°úÀÏ', '¹Ù³ª³ª/ÆÄÀÎ¾ÖÇÃ', '');
+INSERT INTO category VALUES ('11010301', '½Å¼±½ÄÇ°', '°úÀÏ', '¹Ù³ª³ª/ÆÄÀÎ¾ÖÇÃ', '¹Ù³ª³ª');
+INSERT INTO category VALUES ('11010302', '½Å¼±½ÄÇ°', '°úÀÏ', '¹Ù³ª³ª/ÆÄÀÎ¾ÖÇÃ', 'ÆÄÀÎ¾ÖÇÃ');
+INSERT INTO category VALUES ('11010400', '½Å¼±½ÄÇ°', '°úÀÏ', '¿À·»Áö/ÀÚ¸ù/·¹¸ó', '');
+INSERT INTO category VALUES ('11010500', '½Å¼±½ÄÇ°', '°úÀÏ', '»ç°ú/¹è', '');
+INSERT INTO category VALUES ('11010501', '½Å¼±½ÄÇ°', '°úÀÏ', '»ç°ú/¹è', '»ç°ú');
+INSERT INTO category VALUES ('11010502', '½Å¼±½ÄÇ°', '°úÀÏ', '»ç°ú/¹è', '¹è');
+INSERT INTO category VALUES ('11010600', '½Å¼±½ÄÇ°', '°úÀÏ', 'µþ±â/Å°À§/ºí·çº£¸®', '');
+INSERT INTO category VALUES ('11010700', '½Å¼±½ÄÇ°', '°úÀÏ', '°¨±Ö/¸¸°¨·ù', '');
+INSERT INTO category VALUES ('11010800', '½Å¼±½ÄÇ°', '°úÀÏ', '°¨/°ù°¨', '');
+INSERT INTO category VALUES ('11010900', '½Å¼±½ÄÇ°', '°úÀÏ', '¸Á°í/¿­´ë°úÀÏ', '');
+INSERT INTO category VALUES ('11011000', '½Å¼±½ÄÇ°', '°úÀÏ', 'Ã¼¸®/¼®·ù/¾Æº¸Ä«µµ', '');
+INSERT INTO category VALUES ('11011100', '½Å¼±½ÄÇ°', '°úÀÏ', '°Ç°úÀÏ/ºÐ¸»', '');
+INSERT INTO category VALUES ('11011200', '½Å¼±½ÄÇ°', '°úÀÏ', '³Ãµ¿/°£Æí°úÀÏ', '');
+INSERT INTO category VALUES ('11011300', '½Å¼±½ÄÇ°', '°úÀÏ', '±âÅ¸°úÀÏ', '');
+INSERT INTO category VALUES ('11011400', '½Å¼±½ÄÇ°', '°úÀÏ', '°úÀÏ¼¼Æ®', '');
+
+
+
+
+
+-- Ã¤¼Ò
+INSERT INTO category VALUES ('11020000', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '', '');
+INSERT INTO category VALUES ('11020100', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', 'µÎºÎ/Äá³ª¹°/¼÷ÁÖ³ª¹°', '');
+INSERT INTO category VALUES ('11020200', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '°í±¸¸¶/°¨ÀÚ', '');
+INSERT INTO category VALUES ('11020300', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '¾çÆÄ/¸¶´Ã/ÆÄ/»ý°­', '');
+INSERT INTO category VALUES ('11020400', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '¿ÀÀÌ/°¡Áö/È£¹Ú/¿Á¼ö¼ö', '');
+INSERT INTO category VALUES ('11020500', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '»óÃß/²¢ÀÙ/½ÓÃ¤¼Ò', '');
+INSERT INTO category VALUES ('11020600', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '°íÃß/ÇÇ¸Á/ÆÄÇÁ¸®Ä«', '');
+INSERT INTO category VALUES ('11020700', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '½Ã±ÝÄ¡/ºÎÃß/³ª¹°', '');
+INSERT INTO category VALUES ('11020800', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '¾ç¹èÃß/¾ç»óÃß/ºê·ÎÄÝ¸®', '');
+INSERT INTO category VALUES ('11020900', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '»ø·¯µå/¾î¸°ÀÙÃ¤¼Ò', '');
+INSERT INTO category VALUES ('11021000', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '´ç±Ù/¿ì¾û/¿¬±Ù/¸¶', '');
+INSERT INTO category VALUES ('11021100', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '¹ö¼¸', '');
+INSERT INTO category VALUES ('11021200', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '¹èÃß/¹«/±èÀåÃ¤¼Ò', '');
+INSERT INTO category VALUES ('11021300', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '¾Æ½ºÆÄ¶ó°Å½º/Çãºê·ù/±âÅ¸', '');
+INSERT INTO category VALUES ('11021400', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', 'ÀÎ»ï/´õ´ö/¾à¼±Àç·á', '');
+INSERT INTO category VALUES ('11021500', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', '°£ÆíÃ¤¼Ò', '');
+INSERT INTO category VALUES ('11021600', '½Å¼±½ÄÇ°', 'Ã¤¼Ò', 'Ã¤¼Ò¼¼Æ®', '');
+
+-- ½Ò/Àâ°î/°ß°ú
+INSERT INTO category VALUES ('11030000', '½Å¼±½ÄÇ°', '½Ò/Àâ°î/°ß°ú', '', '');
+INSERT INTO category VALUES ('11030100', '½Å¼±½ÄÇ°', '½Ò/Àâ°î/°ß°ú', '¹é¹Ì', '');
+INSERT INTO category VALUES ('11030200', '½Å¼±½ÄÇ°', '½Ò/Àâ°î/°ß°ú', 'Âý½Ò/Çö¹Ì/Èæ¹Ì', '');
+INSERT INTO category VALUES ('11030300', '½Å¼±½ÄÇ°', '½Ò/Àâ°î/°ß°ú', 'È¥ÇÕ°î', '');
+INSERT INTO category VALUES ('11030400', '½Å¼±½ÄÇ°', '½Ò/Àâ°î/°ß°ú', 'Äá/ÆÏ/º¸¸®/±Í¸®', '');
+INSERT INTO category VALUES ('11030500', '½Å¼±½ÄÇ°', '½Ò/Àâ°î/°ß°ú', '¼ö¼ö/Á¶/±ú/Àâ°î', '');
+INSERT INTO category VALUES ('11030600', '½Å¼±½ÄÇ°', '½Ò/Àâ°î/°ß°ú', '°ß°ú·ù', '');
+INSERT INTO category VALUES ('11030700', '½Å¼±½ÄÇ°', '½Ò/Àâ°î/°ß°ú', '¼±½Ä/°î¹°°¡°ø', '');
+INSERT INTO category VALUES ('11030800', '½Å¼±½ÄÇ°', '½Ò/Àâ°î/°ß°ú', '½Ò/Àâ°î¼±¹°¼¼Æ®', '');
+
+-- ¼ö»ê¹°/°ÇÇØ»ê
+INSERT INTO category VALUES ('11040000', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '', '');
+INSERT INTO category VALUES ('11040100', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '»ý¼±', '');
+INSERT INTO category VALUES ('11040200', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '¿ÀÂ¡¾î/³«Áö/ÁÖ²Ù¹Ì/¹®¾î', '');
+INSERT INTO category VALUES ('11040300', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '»õ¿ì/°Ô/¶ø½ºÅÍ', '');
+INSERT INTO category VALUES ('11040301', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '»õ¿ì/°Ô/¶ø½ºÅÍ', '»õ¿ì');
+INSERT INTO category VALUES ('11040302', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '»õ¿ì/°Ô/¶ø½ºÅÍ', '²É°Ô/´ë°Ô/Å·Å©·¦');
+INSERT INTO category VALUES ('11040303', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '»õ¿ì/°Ô/¶ø½ºÅÍ', '¶ø½ºÅÍ');
+INSERT INTO category VALUES ('11040400', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', 'Àüº¹/±¼/¸Û°Ô/Á¶°³·ù', '');
+INSERT INTO category VALUES ('11040500', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', 'È¸/¸í¶õ/³¯Ä¡¾Ë/Àå', '');
+INSERT INTO category VALUES ('11040600', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '±è/¹Ì¿ª/±âÅ¸ÇØÁ¶·ù', '');
+INSERT INTO category VALUES ('11040700', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '¸êÄ¡/È²ÅÂ/³ë°¡¸®', '');
+INSERT INTO category VALUES ('11040800', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '°Ç¿ÀÂ¡¾î/°Ç¾î¹°/´Ù½ÃÆÑ', '');
+INSERT INTO category VALUES ('11040900', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '°£Æí/¸ðµë¼ö»ê¹°', '');
+INSERT INTO category VALUES ('11041000', '½Å¼±½ÄÇ°', '¼ö»ê¹°/°ÇÇØ»ê', '¼ö»ê/°ÇÇØ»ê¼¼Æ®', '');
+
+-- Á¤À°/°è¶õ
+INSERT INTO category VALUES ('11050000', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '', '');
+INSERT INTO category VALUES ('11050100', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '°è¶õ/¾Ë·ù', '');
+INSERT INTO category VALUES ('11050200', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '´ß/¿À¸®°í±â', '');
+INSERT INTO category VALUES ('11050300', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '¾ç°í±â', '');
+INSERT INTO category VALUES ('11050400', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', 'µÅÁö°í±â', '');
+INSERT INTO category VALUES ('11050500', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '±¹³»»ê¼Ò°í±â', '');
+INSERT INTO category VALUES ('11050501', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '±¹³»»ê¼Ò°í±â', '±¹°Å¸®');
+INSERT INTO category VALUES ('11050502', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '±¹³»»ê¼Ò°í±â', 'ÀåÁ¶¸²/°¥ºñ/Âò');
+INSERT INTO category VALUES ('11050503', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '±¹³»»ê¼Ò°í±â', '±¸ÀÌ/½ºÅ×ÀÌÅ©');
+INSERT INTO category VALUES ('11050504', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '±¹³»»ê¼Ò°í±â', 'ºÒ°í±â/ÀâÃ¤/»þºê»þºê¿ë');
+INSERT INTO category VALUES ('11050505', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '±¹³»»ê¼Ò°í±â', '´ÙÁüÀ°/ÀÌÀ¯½Ä');
+INSERT INTO category VALUES ('11050506', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '±¹³»»ê¼Ò°í±â', '»ç°ñ/°õÅÁ');
+INSERT INTO category VALUES ('11050600', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '¼öÀÔ»ê¼Ò°í±â', '');
+INSERT INTO category VALUES ('11050700', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '¾ç³äÀ°/°¡°øÀ°', '');
+INSERT INTO category VALUES ('11050701', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '¾ç³äÀ°/°¡°øÀ°', '¼Ò°í±â');
+INSERT INTO category VALUES ('11050702', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '¾ç³äÀ°/°¡°øÀ°', 'µÅÁö°í±â');
+INSERT INTO category VALUES ('11050703', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '¾ç³äÀ°/°¡°øÀ°', '´ß°í±â');
+INSERT INTO category VALUES ('11050704', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '¾ç³äÀ°/°¡°øÀ°', '¿À¸®°í±â');
+INSERT INTO category VALUES ('11050705', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '¾ç³äÀ°/°¡°øÀ°', '¾ç°í±â');
+INSERT INTO category VALUES ('11050706', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', '¾ç³äÀ°/°¡°øÀ°', '±âÅ¸ °¡°øÀ°');
+INSERT INTO category VALUES ('11050800', '½Å¼±½ÄÇ°', 'Á¤À°/°è¶õ·ù', 'Ãà»ê¼±¹°¼¼Æ®', '');
+
+-- Ä£È¯°æ/À¯±â³ó
+INSERT INTO category VALUES ('11060000', '½Å¼±½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', '', '');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO category VALUES ('12000000', '°¡°ø/°Ç°­½ÄÇ°', '', '', '');
+
+-- ¿ìÀ¯/À¯Á¦Ç°
+INSERT INTO category VALUES ('12010000', '°¡°ø/°Ç°­½ÄÇ°', '¿ìÀ¯/À¯Á¦Ç°', '', '');
+INSERT INTO category VALUES ('12010100', '°¡°ø/°Ç°­½ÄÇ°', '¿ìÀ¯/À¯Á¦Ç°', '¿ìÀ¯', '');
+INSERT INTO category VALUES ('12010200', '°¡°ø/°Ç°­½ÄÇ°', '¿ìÀ¯/À¯Á¦Ç°', '¿ä°ÅÆ®/¿ä±¸¸£Æ®', '');
+INSERT INTO category VALUES ('12010300', '°¡°ø/°Ç°­½ÄÇ°', '¿ìÀ¯/À¯Á¦Ç°', 'µÎÀ¯', '');
+INSERT INTO category VALUES ('12010400', '°¡°ø/°Ç°­½ÄÇ°', '¿ìÀ¯/À¯Á¦Ç°', 'Ä¡Áî', '');
+INSERT INTO category VALUES ('12010500', '°¡°ø/°Ç°­½ÄÇ°', '¿ìÀ¯/À¯Á¦Ç°', '¹öÅÍ/»ýÅ©¸²/¿¬À¯', '');
+
+-- ¹ÐÅ°Æ®/°£Æí½Ä
+INSERT INTO category VALUES ('12020000', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', '', '');
+INSERT INTO category VALUES ('12020100', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', '¹ÐÅ°Æ®', '');
+INSERT INTO category VALUES ('12020200', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', 'ººÀ½¹ä/Âî°³/Á×/½ºÇÁ', '');
+INSERT INTO category VALUES ('12020300', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', '¸¸µÎ/µ·°¡½º/Ä¡Å²/Æ¢±è', '');
+INSERT INTO category VALUES ('12020400', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', '¶±°¥ºñ/½ºÅ×ÀÌÅ©/Àü', '');
+INSERT INTO category VALUES ('12020500', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', 'ÇÜ/´Ü¹«Áö/¾î¹¬/¸À»ì', '');
+INSERT INTO category VALUES ('12020600', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', 'À¯ºÎ/¹¬/¶±', '');
+INSERT INTO category VALUES ('12020700', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', 'ÇÇÀÚ/ÇÖµµ±×/ÆÄ½ºÅ¸/¶±ººÀÌ', '');
+INSERT INTO category VALUES ('12020800', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', 'Áß½Ä/ÀÏ½Ä/¼¼°è¿ä¸®', '');
+INSERT INTO category VALUES ('12020900', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', 'ÈÆÁ¦¿À¸®/Á·¹ß/°öÃ¢/ººÀ½/Âò', '');
+INSERT INTO category VALUES ('12021000', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', 'Áï¼®¹ä/ÄÅ¹ä', '');
+INSERT INTO category VALUES ('12021100', '°¡°ø/°Ç°­½ÄÇ°', '¹ÐÅ°Æ®/°£Æí½Ä', 'Ä«·¹/Â¥Àå/Áï¼®¿ä¸®', '');
+
+-- ±èÄ¡/¹ÝÂù/µ¨¸®
+INSERT INTO category VALUES ('12030000', '°¡°ø/°Ç°­½ÄÇ°', '±èÄ¡/¹ÝÂù/µ¨¸®', '', '');
+INSERT INTO category VALUES ('12030100', '°¡°ø/°Ç°­½ÄÇ°', '±èÄ¡/¹ÝÂù/µ¨¸®', '±èÄ¡', '');
+INSERT INTO category VALUES ('12030101', '°¡°ø/°Ç°­½ÄÇ°', '±èÄ¡/¹ÝÂù/µ¨¸®', '±èÄ¡', 'Æ÷±â/¹èÃß±èÄ¡');
+INSERT INTO category VALUES ('12030102', '°¡°ø/°Ç°­½ÄÇ°', '±èÄ¡/¹ÝÂù/µ¨¸®', '±èÄ¡', '¹«/¿­¹«±èÄ¡');
+INSERT INTO category VALUES ('12030103', '°¡°ø/°Ç°­½ÄÇ°', '±èÄ¡/¹ÝÂù/µ¨¸®', '±èÄ¡', '¹°±èÄ¡');
+INSERT INTO category VALUES ('12030104', '°¡°ø/°Ç°­½ÄÇ°', '±èÄ¡/¹ÝÂù/µ¨¸®', '±èÄ¡', '°«±èÄ¡/±âÅ¸±èÄ¡');
+INSERT INTO category VALUES ('12030200', '°¡°ø/°Ç°­½ÄÇ°', '±èÄ¡/¹ÝÂù/µ¨¸®', '¹ÝÂù/Á£°¥', '');
+INSERT INTO category VALUES ('12030300', '°¡°ø/°Ç°­½ÄÇ°', '±èÄ¡/¹ÝÂù/µ¨¸®', '±è¹ä/µµ½Ã¶ô/µ¨¸®', '');
+INSERT INTO category VALUES ('12030400', '°¡°ø/°Ç°­½ÄÇ°', '±èÄ¡/¹ÝÂù/µ¨¸®', '»ø·¯µå', '');
+INSERT INTO category VALUES ('12030500', '°¡°ø/°Ç°­½ÄÇ°', '±èÄ¡/¹ÝÂù/µ¨¸®', '¸ÅÀåÁï¼®Á¶¸®½ÄÇ°', '');
+
+-- ¸é·ù/ÅëÁ¶¸²
+INSERT INTO category VALUES ('12040000', '°¡°ø/°Ç°­½ÄÇ°', '¸é·ù/ÅëÁ¶¸²', '', '');
+INSERT INTO category VALUES ('12040100', '°¡°ø/°Ç°­½ÄÇ°', '¸é·ù/ÅëÁ¶¸²', '¶ó¸é', '');
+INSERT INTO category VALUES ('12040200', '°¡°ø/°Ç°­½ÄÇ°', '¸é·ù/ÅëÁ¶¸²', 'Áï¼®¸é¿ä¸®', '');
+INSERT INTO category VALUES ('12040300', '°¡°ø/°Ç°­½ÄÇ°', '¸é·ù/ÅëÁ¶¸²', 'ÆÄ½ºÅ¸¸é/»ý¸é/°Ç¸é', '');
+INSERT INTO category VALUES ('12040400', '°¡°ø/°Ç°­½ÄÇ°', '¸é·ù/ÅëÁ¶¸²', 'ÂüÄ¡/½ºÆÔ/Ãà¼ö»êÅëÁ¶¸²', '');
+INSERT INTO category VALUES ('12040500', '°¡°ø/°Ç°­½ÄÇ°', '¸é·ù/ÅëÁ¶¸²', '¿Á¼ö¼ö/ÇÇÅ¬/°úÀÏÅëÁ¶¸²', '');
+INSERT INTO category VALUES ('12040600', '°¡°ø/°Ç°­½ÄÇ°', '¸é·ù/ÅëÁ¶¸²', 'ÅëÁ¶¸²¼±¹°¼¼Æ®', '');
+
+-- »ý¼ö/À½·á/ÁÖ·ù
+INSERT INTO category VALUES ('12050000', '°¡°ø/°Ç°­½ÄÇ°', '»ý¼ö/À½·á/ÁÖ·ù', '', '');
+INSERT INTO category VALUES ('12050100', '°¡°ø/°Ç°­½ÄÇ°', '»ý¼ö/À½·á/ÁÖ·ù', '»ý¼ö', '');
+INSERT INTO category VALUES ('12050200', '°¡°ø/°Ç°­½ÄÇ°', '»ý¼ö/À½·á/ÁÖ·ù', 'Åº»ê¼ö', '');
+INSERT INTO category VALUES ('12050300', '°¡°ø/°Ç°­½ÄÇ°', '»ý¼ö/À½·á/ÁÖ·ù', 'Åº»êÀ½·á', '');
+INSERT INTO category VALUES ('12050400', '°¡°ø/°Ç°­½ÄÇ°', '»ý¼ö/À½·á/ÁÖ·ù', '°úÀÏ/¾ßÃ¤À½·á', '');
+INSERT INTO category VALUES ('12050500', '°¡°ø/°Ç°­½ÄÇ°', '»ý¼ö/À½·á/ÁÖ·ù', '½ºÆ÷Ã÷/°Ç°­À½·á', '');
+INSERT INTO category VALUES ('12050600', '°¡°ø/°Ç°­½ÄÇ°', '»ý¼ö/À½·á/ÁÖ·ù', 'ÀüÅë/Â÷/±âÅ¸À½·á', '');
+INSERT INTO category VALUES ('12050700', '°¡°ø/°Ç°­½ÄÇ°', '»ý¼ö/À½·á/ÁÖ·ù', 'À½·á¼±¹°¼¼Æ®', '');
+INSERT INTO category VALUES ('12050800', '°¡°ø/°Ç°­½ÄÇ°', '»ý¼ö/À½·á/ÁÖ·ù', 'ÀüÅëÁÖ', '');
+INSERT INTO category VALUES ('12050900', '°¡°ø/°Ç°­½ÄÇ°', '»ý¼ö/À½·á/ÁÖ·ù', '¿ÍÀÎ/¾çÁÖ¸ÅÀåÇÈ¾÷', '');
+INSERT INTO category VALUES ('12051000', '°¡°ø/°Ç°­½ÄÇ°', '»ý¼ö/À½·á/ÁÖ·ù', '¹«¾ËÄÝ¸ÆÁÖ/Ä¬Å×ÀÏ', '');
+
+-- Ä¿ÇÇ/¿øµÎ/Â÷
+INSERT INTO category VALUES ('12060000', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', '', '');
+INSERT INTO category VALUES ('12060100', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', 'Ä¿ÇÇ¹Í½º', '');
+INSERT INTO category VALUES ('12060200', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', '¿øµÎ/»ýµÎ', '');
+INSERT INTO category VALUES ('12060300', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', 'µå¸³¹é/Ä¸½¶/´õÄ¡Ä¿ÇÇ', '');
+INSERT INTO category VALUES ('12060400', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', 'Ä¿ÇÇÀ½·á', '');
+INSERT INTO category VALUES ('12060500', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', 'È¨Ä«ÆäÀç·á', '');
+INSERT INTO category VALUES ('12060600', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', '³ìÂ÷/º¸¸®Â÷/»Ñ¸®Â÷', '');
+INSERT INTO category VALUES ('12060700', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', 'È«Â÷/¹ÐÅ©Æ¼', '');
+INSERT INTO category VALUES ('12060800', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', 'º¸ÀÌÂ÷/ÇãºêÂ÷/²ÉÂ÷', '');
+INSERT INTO category VALUES ('12060900', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', '°ú½Ç/°î¹°/ÀüÅëÂ÷', '');
+INSERT INTO category VALUES ('12061000', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', 'ÄÚÄÚ¾Æ/ÇÖÃÊÄÚ', '');
+INSERT INTO category VALUES ('12061100', '°¡°ø/°Ç°­½ÄÇ°', 'Ä¿ÇÇ/¿øµÎ/Â÷', 'Ä¿ÇÇ/Â÷¼±¹°¼¼Æ®', '');
+
+-- °úÀÚ/°£½Ä/½Ã¸®¾ó/ºù°ú
+INSERT INTO category VALUES ('12070000', '°¡°ø/°Ç°­½ÄÇ°', '°úÀÚ/°£½Ä/½Ã¸®¾ó/ºù°ú', '', '');
+INSERT INTO category VALUES ('12070100', '°¡°ø/°Ç°­½ÄÇ°', '°úÀÚ/°£½Ä/½Ã¸®¾ó/ºù°ú', '°úÀÚ/ÄíÅ°/ÆÄÀÌ', '');
+INSERT INTO category VALUES ('12070200', '°¡°ø/°Ç°­½ÄÇ°', '°úÀÚ/°£½Ä/½Ã¸®¾ó/ºù°ú', '¶±/ÇÑ°ú/ÀüÅë°úÀÚ', '');
+INSERT INTO category VALUES ('12070300', '°¡°ø/°Ç°­½ÄÇ°', '°úÀÚ/°£½Ä/½Ã¸®¾ó/ºù°ú', '¼Ò½ÃÁö/¿ø¹°/¾ÈÁÖ½º³¼', '');
+INSERT INTO category VALUES ('12070400', '°¡°ø/°Ç°­½ÄÇ°', '°úÀÚ/°£½Ä/½Ã¸®¾ó/ºù°ú', '»çÅÁ/Ä¼¶ó¸á/²­', '');
+INSERT INTO category VALUES ('12070500', '°¡°ø/°Ç°­½ÄÇ°', '°úÀÚ/°£½Ä/½Ã¸®¾ó/ºù°ú', 'Á©¸®/Çªµù', '');
+INSERT INTO category VALUES ('12070600', '°¡°ø/°Ç°­½ÄÇ°', '°úÀÚ/°£½Ä/½Ã¸®¾ó/ºù°ú', 'ÃÊÄÝ¸´/ÃÊÄÚ¹Ù', '');
+INSERT INTO category VALUES ('12070700', '°¡°ø/°Ç°­½ÄÇ°', '°úÀÚ/°£½Ä/½Ã¸®¾ó/ºù°ú', '½Ã¸®¾ó', '');
+INSERT INTO category VALUES ('12070800', '°¡°ø/°Ç°­½ÄÇ°', '°úÀÚ/°£½Ä/½Ã¸®¾ó/ºù°ú', 'ºù°ú/¾ÆÀÌ½ºÅ©¸²', '');
+INSERT INTO category VALUES ('12070900', '°¡°ø/°Ç°­½ÄÇ°', '°úÀÚ/°£½Ä/½Ã¸®¾ó/ºù°ú', '¾óÀ½/ºù¼öÀç·á', '');
+
+-- Ä£È¯°æ/À¯±â³ó
+INSERT INTO category VALUES ('12080000', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', '', '');
+INSERT INTO category VALUES ('12080100', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', '°úÀÏ/Ã¤¼Ò', '');
+INSERT INTO category VALUES ('12080200', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', 'Á¤À°/°è¶õ·ù', '');
+INSERT INTO category VALUES ('12080300', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', '½Ò/Àâ°î/°ß°ú', '');
+INSERT INTO category VALUES ('12080400', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', '¼ö»ê¹°/°ÇÇØ»ê¹°', '');
+INSERT INTO category VALUES ('12080500', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', '¿ìÀ¯/À¯Á¦Ç°/À¯¾Æ½Ä', '');
+INSERT INTO category VALUES ('12080600', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', '³ÃÀå/³Ãµ¿/°£Æí½Ä', '');
+INSERT INTO category VALUES ('12080700', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', 'Àå·ù/¾ç³ä/ºÐ¸»/¿ÀÀÏ', '');
+INSERT INTO category VALUES ('12080800', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', '¶ó¸é/Áï¼®½ÄÇ°/ÅëÁ¶¸²', '');
+INSERT INTO category VALUES ('12080900', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', 'Â÷/À½·á/Ä¿ÇÇ', '');
+INSERT INTO category VALUES ('12081000', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', '°úÀÚ/½º³¼/½Ã¸®¾ó', '');
+INSERT INTO category VALUES ('12081100', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', '°Ç°­½ÄÇ°/Áó', '');
+INSERT INTO category VALUES ('12081200', '°¡°ø/°Ç°­½ÄÇ°', 'Ä£È¯°æ/À¯±â³ó', 'À¯±â³ó/Ä£È¯°æ¼±¹°¼¼Æ®', '');
+
+-- Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ
+INSERT INTO category VALUES ('12090000', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', '', '');
+INSERT INTO category VALUES ('12090100', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', 'Àå·ù/¾ç³ä', '');
+INSERT INTO category VALUES ('12090200', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', 'ÆÄ½ºÅ¸¼Ò½º/Æä½ºÅä', '');
+INSERT INTO category VALUES ('12090300', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', 'ÄÉÂý/¸¶¿ä³×Áî/µðÇÎ¼Ò½º', '');
+INSERT INTO category VALUES ('12090400', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', 'µ·±î½º/½ºÅ×ÀÌÅ©¼Ò½º', '');
+INSERT INTO category VALUES ('12090500', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', 'Áß½Ä/ÀÏ½Ä/±âÅ¸¼Ò½º', '');
+INSERT INTO category VALUES ('12090600', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', '»ø·¯µåµå·¹½Ì', '');
+INSERT INTO category VALUES ('12090700', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', '¹Ð°¡·ç/ºÎÄ§°¡·ç/°îºÐ·ù', '');
+INSERT INTO category VALUES ('12090800', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', '¼Ò±Ý/¼³ÅÁ/ÈÄÃß/Çâ½Å·á', '');
+INSERT INTO category VALUES ('12090900', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', 'Á¶¹Ì·á/¾×Á£/¹°¿³/½ÄÃÊ', '');
+INSERT INTO category VALUES ('12091000', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', '½Ä¿ëÀ¯/Âü±â¸§/¿ÀÀÏ·ù', '');
+INSERT INTO category VALUES ('12091100', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', 'Á¶¹Ì·á/¿ÀÀÏ¼±¹°¼¼Æ®', '');
+INSERT INTO category VALUES ('12091200', '°¡°ø/°Ç°­½ÄÇ°', 'Àå·ù/¾ç³ä/°¡·ç/¿ÀÀÏ', '½Ã·´/Á¦»§¹Í½º/Àç·á', '');
+
+-- º£ÀÌÄ¿¸®/Àë
+INSERT INTO category VALUES ('12100000', '°¡°ø/°Ç°­½ÄÇ°', 'º£ÀÌÄ¿¸®/Àë', '', '');
+INSERT INTO category VALUES ('12100100', '°¡°ø/°Ç°­½ÄÇ°', 'º£ÀÌÄ¿¸®/Àë', '½Ä»§', '');
+INSERT INTO category VALUES ('12100200', '°¡°ø/°Ç°­½ÄÇ°', 'º£ÀÌÄ¿¸®/Àë', 'º£ÀÌÄ¿¸®»§', '');
+INSERT INTO category VALUES ('12100300', '°¡°ø/°Ç°­½ÄÇ°', 'º£ÀÌÄ¿¸®/Àë', 'ÄíÅ°/µðÀúÆ®/ÄÉÀÌÅ©', '');
+INSERT INTO category VALUES ('12100400', '°¡°ø/°Ç°­½ÄÇ°', 'º£ÀÌÄ¿¸®/Àë', '»÷µåÀ§Ä¡', '');
+INSERT INTO category VALUES ('12100500', '°¡°ø/°Ç°­½ÄÇ°', 'º£ÀÌÄ¿¸®/Àë', 'ÀÏ¹Ý»§', '');
+INSERT INTO category VALUES ('12100600', '°¡°ø/°Ç°­½ÄÇ°', 'º£ÀÌÄ¿¸®/Àë', 'È£»§/Âð»§', '');
+INSERT INTO category VALUES ('12100700', '°¡°ø/°Ç°­½ÄÇ°', 'º£ÀÌÄ¿¸®/Àë', '»ýÁö/³Ãµ¿¹ÝÁ×', '');
+INSERT INTO category VALUES ('12100800', '°¡°ø/°Ç°­½ÄÇ°', 'º£ÀÌÄ¿¸®/Àë', 'Àë/½ºÇÁ·¹µå', '');
+-- °Ç°­½ÄÇ°
+INSERT INTO category VALUES ('12110000', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', '', '');
+INSERT INTO category VALUES ('12110100', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', 'È«»ï/ÀÎ»ï/³ì¿ë', '');
+INSERT INTO category VALUES ('12110200', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', '°Ç°­Áó/°Ç°­¾×', '');
+INSERT INTO category VALUES ('12110300', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', '°Ç°­ºÐ¸»/°Ç°­È¯', '');
+INSERT INTO category VALUES ('12110400', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', '°Ç°­Â÷/°Ç°­Àç·á', '');
+INSERT INTO category VALUES ('12110500', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', '²Ü/·Î¾âÁ©¸®/ÇÁ·ÎÆú¸®½º', '');
+INSERT INTO category VALUES ('12110600', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', 'ºñÅ¸¹Î', '');
+INSERT INTO category VALUES ('12110700', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', 'À¯»ê±Õ', '');
+INSERT INTO category VALUES ('12110800', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', '¹Ì³×¶ö', '');
+INSERT INTO category VALUES ('12110900', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', '¿µ¾çÁ¦/°Ç°­±â´É½ÄÇ°', '');
+INSERT INTO category VALUES ('12111000', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', '´ÙÀÌ¾îÆ®/ºäÆ¼', '');
+INSERT INTO category VALUES ('12111100', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', 'Çï½ºº¸ÃæÁ¦', '');
+INSERT INTO category VALUES ('12111200', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', '¿µ¾ç½Ä/±âÅ¸ °Ç°­½ÄÇ°', '');
+INSERT INTO category VALUES ('12111300', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', '±â´Éº°°Ç°­½ÄÇ°', '');
+INSERT INTO category VALUES ('12111400', '°¡°ø/°Ç°­½ÄÇ°', '°Ç°­½ÄÇ°', '´ë»óº°°Ç°­½ÄÇ°', '');
+
+
+
+
+-- ½Ã°è/Áê¾ó¸®
+INSERT INTO category VALUES ('02000000', 'ÆÐ¼ÇÀâÈ­', '', '', '');
+INSERT INTO category VALUES ('02030000', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '', '');
+INSERT INTO category VALUES ('02030100', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '¸ñ°ÉÀÌ/ÆÒ´øÆ®', '');
+INSERT INTO category VALUES ('02030101', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '¸ñ°ÉÀÌ/ÆÒ´øÆ®', '14/18k¸ñ°ÉÀÌ');
+INSERT INTO category VALUES ('02030102', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '¸ñ°ÉÀÌ/ÆÒ´øÆ®', '½Ç¹ö¸ñ°ÉÀÌ');
+INSERT INTO category VALUES ('02030103', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '¸ñ°ÉÀÌ/ÆÒ´øÆ®', 'ÆÐ¼Ç¸ñ°ÉÀÌ');
+INSERT INTO category VALUES ('02030104', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '¸ñ°ÉÀÌ/ÆÒ´øÆ®', 'ÁøÁÖ/¿ø¼®¸ñ°ÉÀÌ');
+INSERT INTO category VALUES ('02030105', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '¸ñ°ÉÀÌ/ÆÒ´øÆ®', '´ÙÀÌ¾Æ¸óµå¸ñ°ÉÀÌ');
+INSERT INTO category VALUES ('02030106', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '¸ñ°ÉÀÌ/ÆÒ´øÆ®', '·¦±×·Î¿î ´ÙÀÌ¾Æ¸óµå¸ñ°ÉÀÌ');
+INSERT INTO category VALUES ('02030107', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '¸ñ°ÉÀÌ/ÆÒ´øÆ®', 'ÆÒ´øÆ®');
+INSERT INTO category VALUES ('02030200', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '±Í°ÉÀÌ', '');
+INSERT INTO category VALUES ('02030300', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', 'ÆÈÂî', '');
+INSERT INTO category VALUES ('02030400', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '¹ßÂî', '');
+INSERT INTO category VALUES ('02030500', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '¹ÝÁö', '');
+INSERT INTO category VALUES ('02030600', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '¼ø±Ý', '');
+INSERT INTO category VALUES ('02030700', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', 'Áê¾ó¸®¼¼Æ®', '');
+INSERT INTO category VALUES ('02030800', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '³²¼ºÁê¾ó¸®', '');
+INSERT INTO category VALUES ('02030900', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', 'Áê¾ó¸®ÇÔ/±âÅ¸ACC', '');
+INSERT INTO category VALUES ('02031000', 'ÆÐ¼ÇÀâÈ­', '½Ã°è/Áê¾ó¸®', '½Ã°è', '');
+
+-- °¡¹æ/Áö°©
+INSERT INTO category VALUES ('02040000', 'ÆÐ¼ÇÀâÈ­', '°¡¹æ/Áö°©', '', '');
+INSERT INTO category VALUES ('02040100', 'ÆÐ¼ÇÀâÈ­', '°¡¹æ/Áö°©', '¿©¼º°¡¹æ', '');
+INSERT INTO category VALUES ('02040200', 'ÆÐ¼ÇÀâÈ­', '°¡¹æ/Áö°©', '³²¼º°¡¹æ', '');
+INSERT INTO category VALUES ('02040300', 'ÆÐ¼ÇÀâÈ­', '°¡¹æ/Áö°©', 'Ä³ÁÖ¾ó°¡¹æ', '');
+INSERT INTO category VALUES ('02040400', 'ÆÐ¼ÇÀâÈ­', '°¡¹æ/Áö°©', '¿©Çà¿ë°¡¹æ', '');
+INSERT INTO category VALUES ('02040500', 'ÆÐ¼ÇÀâÈ­', '°¡¹æ/Áö°©', 'Áö°©', '');
+INSERT INTO category VALUES ('02040600', 'ÆÐ¼ÇÀâÈ­', '°¡¹æ/Áö°©', '°¡¹æ¾×¼¼¼­¸®', '');
+
+-- ¸ðÀÚ/Àå°©/ACC
+INSERT INTO category VALUES ('02050000', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', '', '');
+INSERT INTO category VALUES ('02050100', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', '¸ðÀÚ', '');
+INSERT INTO category VALUES ('02050200', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', 'º§Æ®/ACC', '');
+INSERT INTO category VALUES ('02050300', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', '¸ÓÇÃ·¯/½ºÄ«ÇÁ', '');
+INSERT INTO category VALUES ('02050400', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', 'Àå°©/ACC', '');
+INSERT INTO category VALUES ('02050500', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', '³ØÅ¸ÀÌ/ºê·ÎÄ¡/Å¸ÀÌACC', '');
+INSERT INTO category VALUES ('02050600', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', '¼±±Û¶ó½º/¾È°æ', '');
+INSERT INTO category VALUES ('02050700', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', 'Çì¾î¾×¼¼¼­¸®', '');
+INSERT INTO category VALUES ('02050800', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', '¾ç¸»/ACC', '');
+INSERT INTO category VALUES ('02050900', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', '½ºÅ¸Å·/·¹±ë½º', '');
+INSERT INTO category VALUES ('02051000', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', '¿ì»ê/¾ç»ê', '');
+INSERT INTO category VALUES ('02051100', 'ÆÐ¼ÇÀâÈ­', '¸ðÀÚ/Àå°©/ACC', '¼Õ¼ö°Ç/ÇàÄ¿Ä¡ÇÁ', '');
+
+-- ½´Áî/¿îµ¿È­
+INSERT INTO category VALUES ('02060000', 'ÆÐ¼ÇÀâÈ­', '½´Áî/¿îµ¿È­', '', '');
+INSERT INTO category VALUES ('02060100', 'ÆÐ¼ÇÀâÈ­', '½´Áî/¿îµ¿È­', 'SEASONAL', '');
+INSERT INTO category VALUES ('02060200', 'ÆÐ¼ÇÀâÈ­', '½´Áî/¿îµ¿È­', '¿©¼º½Å¹ß', '');
+INSERT INTO category VALUES ('02060300', 'ÆÐ¼ÇÀâÈ­', '½´Áî/¿îµ¿È­', '³²¼º½Å¹ß', '');
+INSERT INTO category VALUES ('02060400', 'ÆÐ¼ÇÀâÈ­', '½´Áî/¿îµ¿È­', '¾Æµ¿½Å¹ß', '');
+INSERT INTO category VALUES ('02060500', 'ÆÐ¼ÇÀâÈ­', '½´Áî/¿îµ¿È­', '½´Áî¿ëÇ°', '');
+
+
+
+
+INSERT INTO category VALUES ('07000000', '°¡±¸/ÀÎÅ×¸®¾î', '', '', '');
+INSERT INTO category VALUES ('07040201', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Ä§±¸´ÜÇ°', '¸ÅÆ®/Ä§´ëÄ¿¹ö');
+INSERT INTO category VALUES ('07040202', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Ä§±¸´ÜÇ°', 'º£°³/º£°³Ä¿¹ö');
+INSERT INTO category VALUES ('07040203', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Ä§±¸´ÜÇ°', '¾ç¸ð/¼ØÀÌºÒ');
+INSERT INTO category VALUES ('07040204', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Ä§±¸´ÜÇ°', '°ÅÀ§ÅÐ/¿À¸®ÅÐÀÌºÒ');
+INSERT INTO category VALUES ('07040205', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Ä§±¸´ÜÇ°', '´ã¿ä/ÆÐµå');
+INSERT INTO category VALUES ('07040206', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Ä§±¸´ÜÇ°', '¿ä/¿äÄ¿¹ö');
+INSERT INTO category VALUES ('07040207', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Ä§±¸´ÜÇ°', '³­¹æÅÙÆ®');
+-- Ä§½Ç°¡±¸
+INSERT INTO category VALUES ('07010000', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§½Ç°¡±¸', '', '');
+INSERT INTO category VALUES ('07010100', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§½Ç°¡±¸', 'Ä§´ë', '');
+INSERT INTO category VALUES ('07010200', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§½Ç°¡±¸', '¸ÅÆ®¸®½º', '');
+INSERT INTO category VALUES ('07010300', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§½Ç°¡±¸', 'º£µåº¥Ä¡', '');
+INSERT INTO category VALUES ('07010400', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§½Ç°¡±¸', 'ÇùÅ¹', '');
+INSERT INTO category VALUES ('07010500', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§½Ç°¡±¸', '¿ÊÀå', '');
+INSERT INTO category VALUES ('07010600', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§½Ç°¡±¸', 'ºÙ¹ÚÀÌÀå', '');
+INSERT INTO category VALUES ('07010700', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§½Ç°¡±¸', 'Çà°Å', '');
+INSERT INTO category VALUES ('07010800', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§½Ç°¡±¸', '¼­¶øÀå', '');
+INSERT INTO category VALUES ('07010900', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§½Ç°¡±¸', 'È­Àå´ë', '');
+INSERT INTO category VALUES ('07011000', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§½Ç°¡±¸', '°Å¿ï', '');
+
+-- °Å½Ç/ÁÖ¹æ°¡±¸
+INSERT INTO category VALUES ('07020000', '°¡±¸/ÀÎÅ×¸®¾î', '°Å½Ç/ÁÖ¹æ°¡±¸', '', '');
+INSERT INTO category VALUES ('07020100', '°¡±¸/ÀÎÅ×¸®¾î', '°Å½Ç/ÁÖ¹æ°¡±¸', '¼ÒÆÄ', '');
+INSERT INTO category VALUES ('07020200', '°¡±¸/ÀÎÅ×¸®¾î', '°Å½Ç/ÁÖ¹æ°¡±¸', '°Å½ÇÀå', '');
+INSERT INTO category VALUES ('07020300', '°¡±¸/ÀÎÅ×¸®¾î', '°Å½Ç/ÁÖ¹æ°¡±¸', 'Å×ÀÌºí', '');
+INSERT INTO category VALUES ('07020400', '°¡±¸/ÀÎÅ×¸®¾î', '°Å½Ç/ÁÖ¹æ°¡±¸', '½ÄÅ¹', '');
+INSERT INTO category VALUES ('07020500', '°¡±¸/ÀÎÅ×¸®¾î', '°Å½Ç/ÁÖ¹æ°¡±¸', '¼ö³³Á¤¸®°¡±¸', '');
+INSERT INTO category VALUES ('07020600', '°¡±¸/ÀÎÅ×¸®¾î', '°Å½Ç/ÁÖ¹æ°¡±¸', 'ÁÖ¹æ¼ö³³°¡±¸', '');
+
+-- ¼­Àç/À¯¾Æµ¿ °¡±¸
+INSERT INTO category VALUES ('07030000', '°¡±¸/ÀÎÅ×¸®¾î', '¼­Àç/À¯¾Æµ¿ °¡±¸', '', '');
+INSERT INTO category VALUES ('07030100', '°¡±¸/ÀÎÅ×¸®¾î', '¼­Àç/À¯¾Æµ¿ °¡±¸', 'Ã¥»ó', '');
+INSERT INTO category VALUES ('07030200', '°¡±¸/ÀÎÅ×¸®¾î', '¼­Àç/À¯¾Æµ¿ °¡±¸', 'Ã¥Àå', '');
+INSERT INTO category VALUES ('07030300', '°¡±¸/ÀÎÅ×¸®¾î', '¼­Àç/À¯¾Æµ¿ °¡±¸', 'ÀÇÀÚ', '');
+INSERT INTO category VALUES ('07030400', '°¡±¸/ÀÎÅ×¸®¾î', '¼­Àç/À¯¾Æµ¿ °¡±¸', 'À¯¾Æµ¿°¡±¸', '');
+INSERT INTO category VALUES ('07030500', '°¡±¸/ÀÎÅ×¸®¾î', '¼­Àç/À¯¾Æµ¿ °¡±¸', '»ç¹«¿ë°¡±¸', '');
+INSERT INTO category VALUES ('07030600', '°¡±¸/ÀÎÅ×¸®¾î', '¼­Àç/À¯¾Æµ¿ °¡±¸', '±³±¸¿ë°¡±¸', '');
+INSERT INTO category VALUES ('07030700', '°¡±¸/ÀÎÅ×¸®¾î', '¼­Àç/À¯¾Æµ¿ °¡±¸', '¾ß¿Ü°¡±¸', '');
+-- Ä§±¸/ÆÐºê¸¯
+INSERT INTO category VALUES ('07040000', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', '', '');
+INSERT INTO category VALUES ('07040100', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Ä§±¸¼¼Æ®', '');
+INSERT INTO category VALUES ('07040200', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Ä§±¸´ÜÇ°', '');
+INSERT INTO category VALUES ('07040300', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'À¯¾ÆÄ§±¸', '');
+INSERT INTO category VALUES ('07040400', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', '°èÀýÄ§±¸', '');
+INSERT INTO category VALUES ('07040500', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Ä¿Æ°', '');
+INSERT INTO category VALUES ('07040600', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', '¶óÅØ½º/±â´É¼ºÄ§±¸', '');
+INSERT INTO category VALUES ('07040700', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'ÃæÀüÀç', '');
+INSERT INTO category VALUES ('07040800', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'ºí¶óÀÎµå', '');
+INSERT INTO category VALUES ('07040900', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', '·¯±×/Ä«ÆäÆ®', '');
+INSERT INTO category VALUES ('07041000', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Å¸¿ù', '');
+INSERT INTO category VALUES ('07041100', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', 'Äí¼Ç/¹æ¼®', '');
+INSERT INTO category VALUES ('07041200', '°¡±¸/ÀÎÅ×¸®¾î', 'Ä§±¸/ÆÐºê¸¯', '»ýÈ°¼ÒÇ°/Ä¿¹ö·ù', '');
+
+-- °¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°
+INSERT INTO category VALUES ('07050000', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', '', '');
+INSERT INTO category VALUES ('07050100', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', '°¶·¯¸®', '');
+INSERT INTO category VALUES ('07050200', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', 'Á¶¸í·¥ÇÁ', '');
+INSERT INTO category VALUES ('07050300', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', 'ÀÎÅ×¸®¾îÁ¶¸í', '');
+INSERT INTO category VALUES ('07050400', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', '½ºÅÄµå', '');
+INSERT INTO category VALUES ('07050500', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', 'Äµµé/µðÇ»Àú', '');
+INSERT INTO category VALUES ('07050600', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', '½Ã°è', '');
+INSERT INTO category VALUES ('07050700', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', '¿ø¿¹/°¡µå´×/È­ÈÑ', '');
+INSERT INTO category VALUES ('07050800', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', 'µ¥ÄÚ ¼ÒÇ°', '');
+INSERT INTO category VALUES ('07050900', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', 'ÀÎÅ×¸®¾îÆÄÆ¼¼Ç', '');
+INSERT INTO category VALUES ('07051000', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', '¼ö°ø¿¹', '');
+INSERT INTO category VALUES ('07051100', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', 'È¨ÆÄÆ¼¿ëÇ°', '');
+INSERT INTO category VALUES ('07051200', '°¡±¸/ÀÎÅ×¸®¾î', '°¶·¯¸®/ÀÎÅ×¸®¾î¼ÒÇ°', '¹Ì¼ú°ü/¾ÆÆ®¼¥', '');
+
+-- DIY/½Ã°ø
+INSERT INTO category VALUES ('07060000', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', '', '');
+INSERT INTO category VALUES ('07060100', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', 'º®Áö¹Ù´Ú½Ã°ø', '');
+INSERT INTO category VALUES ('07060200', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', 'µµ¾î/Áß¹®½Ã°ø', '');
+INSERT INTO category VALUES ('07060300', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', 'Ã¢È£½Ã°ø', '');
+INSERT INTO category VALUES ('07060400', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', 'µµ¾î/Ã¢È£ ¿ëÇ°', '');
+INSERT INTO category VALUES ('07060500', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', '¿å½Ç½Ã°ø', '');
+INSERT INTO category VALUES ('07060600', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', 'ÁÖ¹æ½Ã°ø', '');
+INSERT INTO category VALUES ('07060700', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', 'ÆäÀÎÆ®½Ã°ø', '');
+INSERT INTO category VALUES ('07060800', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', 'º®Áö/µµ¹è¿ëÇ°', '');
+INSERT INTO category VALUES ('07060900', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', 'ÆäÀÎÆ®/ÆäÀÎÆ®¿ëÇ°', '');
+INSERT INTO category VALUES ('07061000', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', '¹Ù´ÚÀç/Å¸ÀÏ/±âÅ¸ÀÚÀç', '');
+INSERT INTO category VALUES ('07061100', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', '½ÃÆ®Áö/½ºÆ¼Ä¿', '');
+INSERT INTO category VALUES ('07061200', '°¡±¸/ÀÎÅ×¸®¾î', 'DIY/½Ã°ø', '±âÅ¸DIY¿ëÇ°', '');
+
+
+
+
+
+
+
+
+
+-- ÄÄÇ»ÅÍ/³ëÆ®ºÏ/ÅÂºí¸´ Ä«Å×°í¸®
+INSERT INTO category VALUES ('09000000', 'µðÁöÅÐ/·»Å»', '', '', '');
+INSERT INTO category VALUES ('09010000', 'µðÁöÅÐ/·»Å»', 'ÄÄÇ»ÅÍ/³ëÆ®ºÏ/ÅÂºí¸´', '', '');
+INSERT INTO category VALUES ('09010100', 'µðÁöÅÐ/·»Å»', 'ÄÄÇ»ÅÍ/³ëÆ®ºÏ/ÅÂºí¸´', '³ëÆ®ºÏ', '');
+INSERT INTO category VALUES ('09090101', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', '½ºÇÇÄ¿', 'ÀÏ¹Ý½ºÇÇÄ¿');
+INSERT INTO category VALUES ('09090102', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', '½ºÇÇÄ¿', 'ºí·çÅõ½º½ºÇÇÄ¿');
+INSERT INTO category VALUES ('09090103', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', '½ºÇÇÄ¿', 'AI½ºÇÇÄ¿');
+INSERT INTO category VALUES ('09090104', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', '½ºÇÇÄ¿', 'Ã¤³Î½ºÇÇÄ¿');
+INSERT INTO category VALUES ('09090105', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', '½ºÇÇÄ¿', 'PC½ºÇÇÄ¿');
+INSERT INTO category VALUES ('09090106', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', '½ºÇÇÄ¿', '»ç¿îµå¹Ù');
+INSERT INTO category VALUES ('09010200', 'µðÁöÅÐ/·»Å»', 'ÄÄÇ»ÅÍ/³ëÆ®ºÏ/ÅÂºí¸´', 'ÅÂºí¸´PC/ÆÐµå', '');
+INSERT INTO category VALUES ('09010300', 'µðÁöÅÐ/·»Å»', 'ÄÄÇ»ÅÍ/³ëÆ®ºÏ/ÅÂºí¸´', '¸®ÆÛ ³ëÆ®ºÏ', '');
+INSERT INTO category VALUES ('09010400', 'µðÁöÅÐ/·»Å»', 'ÄÄÇ»ÅÍ/³ëÆ®ºÏ/ÅÂºí¸´', '³ëÆ®ºÏ ¾×¼¼¼­¸®', '');
+INSERT INTO category VALUES ('09010500', 'µðÁöÅÐ/·»Å»', 'ÄÄÇ»ÅÍ/³ëÆ®ºÏ/ÅÂºí¸´', 'ÅÂºí¸´PC ¾×¼¼¼­¸®', '');
+INSERT INTO category VALUES ('09010600', 'µðÁöÅÐ/·»Å»', 'ÄÄÇ»ÅÍ/³ëÆ®ºÏ/ÅÂºí¸´', '¸ð´ÏÅÍ', '');
+INSERT INTO category VALUES ('09010700', 'µðÁöÅÐ/·»Å»', 'ÄÄÇ»ÅÍ/³ëÆ®ºÏ/ÅÂºí¸´', 'µ¥½ºÅ©Å¾', '');
+
+-- °ÔÀÓ/Å¸ÀÌÆ² Ä«Å×°í¸®
+INSERT INTO category VALUES ('09020000', 'µðÁöÅÐ/·»Å»', '°ÔÀÓ/Å¸ÀÌÆ²', '', '');
+INSERT INTO category VALUES ('09020100', 'µðÁöÅÐ/·»Å»', '°ÔÀÓ/Å¸ÀÌÆ²', '°ÔÀÓ±â', '');
+INSERT INTO category VALUES ('09020200', 'µðÁöÅÐ/·»Å»', '°ÔÀÓ/Å¸ÀÌÆ²', '°ÔÀÓ Å¸ÀÌÆ²', '');
+INSERT INTO category VALUES ('09020300', 'µðÁöÅÐ/·»Å»', '°ÔÀÓ/Å¸ÀÌÆ²', '°ÔÀÓ ÁÖº¯±â±â', '');
+INSERT INTO category VALUES ('09020400', 'µðÁöÅÐ/·»Å»', '°ÔÀÓ/Å¸ÀÌÆ²', 'ÇÃ·¹ÀÌ½ºÅ×ÀÌ¼Ç', '');
+INSERT INTO category VALUES ('09020500', 'µðÁöÅÐ/·»Å»', '°ÔÀÓ/Å¸ÀÌÆ²', '´ÑÅÙµµ', '');
+INSERT INTO category VALUES ('09020600', 'µðÁöÅÐ/·»Å»', '°ÔÀÓ/Å¸ÀÌÆ²', '¿ÀÅ§·¯½º', '');
+INSERT INTO category VALUES ('09020700', 'µðÁöÅÐ/·»Å»', '°ÔÀÓ/Å¸ÀÌÆ²', 'XBOX', '');
+
+-- PCÁÖº¯±â±â/ÀúÀåÀåÄ¡ Ä«Å×°í¸®
+INSERT INTO category VALUES ('09030000', 'µðÁöÅÐ/·»Å»', 'PCÁÖº¯±â±â/ÀúÀåÀåÄ¡', '', '');
+INSERT INTO category VALUES ('09030100', 'µðÁöÅÐ/·»Å»', 'PCÁÖº¯±â±â/ÀúÀåÀåÄ¡', 'Å°º¸µå/¸¶¿ì½º', '');
+INSERT INTO category VALUES ('09030200', 'µðÁöÅÐ/·»Å»', 'PCÁÖº¯±â±â/ÀúÀåÀåÄ¡', 'PC¾×¼¼¼­¸®/ÄÉÀÌºí', '');
+INSERT INTO category VALUES ('09030300', 'µðÁöÅÐ/·»Å»', 'PCÁÖº¯±â±â/ÀúÀåÀåÄ¡', 'PCºÎÇ°/CPU', '');
+INSERT INTO category VALUES ('09030400', 'µðÁöÅÐ/·»Å»', 'PCÁÖº¯±â±â/ÀúÀåÀåÄ¡', 'PCÁÖº¯±â±â', '');
+INSERT INTO category VALUES ('09030500', 'µðÁöÅÐ/·»Å»', 'PCÁÖº¯±â±â/ÀúÀåÀåÄ¡', '¹Ìµð¾î Àåºñ', '');
+INSERT INTO category VALUES ('09030600', 'µðÁöÅÐ/·»Å»', 'PCÁÖº¯±â±â/ÀúÀåÀåÄ¡', 'ÀúÀåÀåÄ¡', '');
+INSERT INTO category VALUES ('09030700', 'µðÁöÅÐ/·»Å»', 'PCÁÖº¯±â±â/ÀúÀåÀåÄ¡', 'ÇÁ¸°ÅÍ/º¹ÇÕ±â', '');
+
+-- Ä«¸Þ¶ó/Ä·ÄÚ´õ Ä«Å×°í¸®
+INSERT INTO category VALUES ('09040000', 'µðÁöÅÐ/·»Å»', 'Ä«¸Þ¶ó/Ä·ÄÚ´õ', '', '');
+INSERT INTO category VALUES ('09040100', 'µðÁöÅÐ/·»Å»', 'Ä«¸Þ¶ó/Ä·ÄÚ´õ', 'µðÁöÅÐÄ«¸Þ¶ó/¾×¼ÇÄ·', '');
+INSERT INTO category VALUES ('09040200', 'µðÁöÅÐ/·»Å»', 'Ä«¸Þ¶ó/Ä·ÄÚ´õ', '·»Áî/·»Áî¿ëÇ°', '');
+INSERT INTO category VALUES ('09040300', 'µðÁöÅÐ/·»Å»', 'Ä«¸Þ¶ó/Ä·ÄÚ´õ', 'Áï¼®/ÇÊ¸§Ä«¸Þ¶ó', '');
+INSERT INTO category VALUES ('09040400', 'µðÁöÅÐ/·»Å»', 'Ä«¸Þ¶ó/Ä·ÄÚ´õ', 'Ä«¸Þ¶ó/Ä·ÄÚ´õ¿ëÇ°', '');
+INSERT INTO category VALUES ('09040500', 'µðÁöÅÐ/·»Å»', 'Ä«¸Þ¶ó/Ä·ÄÚ´õ', '»ï°¢´ë/ÄÉÀÌ½º', '');
+INSERT INTO category VALUES ('09040600', 'µðÁöÅÐ/·»Å»', 'Ä«¸Þ¶ó/Ä·ÄÚ´õ', 'ÃÔ¿µ¿ë µå·Ð', '');
+INSERT INTO category VALUES ('09040700', 'µðÁöÅÐ/·»Å»', 'Ä«¸Þ¶ó/Ä·ÄÚ´õ', '1ÀÎ¹Ìµð¾î Àü¿ë°ü', '');
+INSERT INTO category VALUES ('09040800', 'µðÁöÅÐ/·»Å»', 'Ä«¸Þ¶ó/Ä·ÄÚ´õ', 'CCTV', '');
+
+-- ¿¡¾îÄÁ/°èÀý°¡Àü Ä«Å×°í¸®
+INSERT INTO category VALUES ('09050000', 'µðÁöÅÐ/·»Å»', '¿¡¾îÄÁ/°èÀý°¡Àü', '', '');
+INSERT INTO category VALUES ('09050100', 'µðÁöÅÐ/·»Å»', '¿¡¾îÄÁ/°èÀý°¡Àü', '³­¹æ¿ëÇ°', '');
+INSERT INTO category VALUES ('09050200', 'µðÁöÅÐ/·»Å»', '¿¡¾îÄÁ/°èÀý°¡Àü', 'Á¦½À±â/°ø±âÃ»Á¤±â', '');
+INSERT INTO category VALUES ('09050300', 'µðÁöÅÐ/·»Å»', '¿¡¾îÄÁ/°èÀý°¡Àü', '¼±Ç³±â/³ÃÇ³±â', '');
+INSERT INTO category VALUES ('09050400', 'µðÁöÅÐ/·»Å»', '¿¡¾îÄÁ/°èÀý°¡Àü', '¿¡¾îÄÁ', '');
+
+-- ³»ºñ/ºí·¢¹Ú½º Ä«Å×°í¸®
+INSERT INTO category VALUES ('09060000', 'µðÁöÅÐ/·»Å»', '³»ºñ/ºí·¢¹Ú½º', '', '');
+INSERT INTO category VALUES ('09060100', 'µðÁöÅÐ/·»Å»', '³»ºñ/ºí·¢¹Ú½º', '³»ºñ°ÔÀÌ¼Ç/¿ëÇ°', '');
+INSERT INTO category VALUES ('09060200', 'µðÁöÅÐ/·»Å»', '³»ºñ/ºí·¢¹Ú½º', 'ºí·¢¹Ú½º', '');
+INSERT INTO category VALUES ('09060300', 'µðÁöÅÐ/·»Å»', '³»ºñ/ºí·¢¹Ú½º', 'ÇÏÀÌÆÐ½º', '');
+
+-- ¼¼Å¹±â/»ýÈ°°¡Àü Ä«Å×°í¸®
+INSERT INTO category VALUES ('09070000', 'µðÁöÅÐ/·»Å»', '¼¼Å¹±â/»ýÈ°°¡Àü', '', '');
+INSERT INTO category VALUES ('09070100', 'µðÁöÅÐ/·»Å»', '¼¼Å¹±â/»ýÈ°°¡Àü', '´ÙÀÌ½¼', '');
+INSERT INTO category VALUES ('09070200', 'µðÁöÅÐ/·»Å»', '¼¼Å¹±â/»ýÈ°°¡Àü', '¼¼Å¹±â/°ÇÁ¶±â/ÀÇ·ù°ü¸®±â', '');
+INSERT INTO category VALUES ('09070300', 'µðÁöÅÐ/·»Å»', '¼¼Å¹±â/»ýÈ°°¡Àü', 'Ã»¼Ò±â', '');
+INSERT INTO category VALUES ('09070400', 'µðÁöÅÐ/·»Å»', '¼¼Å¹±â/»ýÈ°°¡Àü', 'ÀüÈ­±â/¹«Àü±â', '');
+INSERT INTO category VALUES ('09070500', 'µðÁöÅÐ/·»Å»', '¼¼Å¹±â/»ýÈ°°¡Àü', '´Ù¸®¹Ì/ÀçºÀ/º¸Ç®', '');
+
+-- ³ÃÀå°í/ÁÖ¹æ°¡Àü Ä«Å×°í¸®
+INSERT INTO category VALUES ('09080000', 'µðÁöÅÐ/·»Å»', '³ÃÀå°í/ÁÖ¹æ°¡Àü', '', '');
+INSERT INTO category VALUES ('09080100', 'µðÁöÅÐ/·»Å»', '³ÃÀå°í/ÁÖ¹æ°¡Àü', '³ÃÀå°í/±èÄ¡³ÃÀå°í', '');
+INSERT INTO category VALUES ('09080200', 'µðÁöÅÐ/·»Å»', '³ÃÀå°í/ÁÖ¹æ°¡Àü', 'Àü±â¹ä¼Ü', '');
+INSERT INTO category VALUES ('09080300', 'µðÁöÅÐ/·»Å»', '³ÃÀå°í/ÁÖ¹æ°¡Àü', '°¡½º/Àü±â·¹ÀÎÁö', '');
+INSERT INTO category VALUES ('09080400', 'µðÁöÅÐ/·»Å»', '³ÃÀå°í/ÁÖ¹æ°¡Àü', '¿Àºì/ÀüÀÚ·¹ÀÎÁö', '');
+INSERT INTO category VALUES ('09080500', 'µðÁöÅÐ/·»Å»', '³ÃÀå°í/ÁÖ¹æ°¡Àü', '½Ä±â¼¼Ã´/À½½Ä¹°Ã³¸®±â', '');
+INSERT INTO category VALUES ('09080600', 'µðÁöÅÐ/·»Å»', '³ÃÀå°í/ÁÖ¹æ°¡Àü', '¹Í¼­/ÂøÁó±â', '');
+INSERT INTO category VALUES ('09080700', 'µðÁöÅÐ/·»Å»', '³ÃÀå°í/ÁÖ¹æ°¡Àü', 'ÁÖ¹æ¼ÒÇü°¡Àü', '');
+INSERT INTO category VALUES ('09080800', 'µðÁöÅÐ/·»Å»', '³ÃÀå°í/ÁÖ¹æ°¡Àü', 'Ä¿ÇÇ¸Ó½Å/Ä¿ÇÇ¸ÞÀÌÄ¿', '');
+INSERT INTO category VALUES ('09080900', 'µðÁöÅÐ/·»Å»', '³ÃÀå°í/ÁÖ¹æ°¡Àü', 'Á¤¼ö±â/ÇÊÅÍ', '');
+
+-- ¿µ»ó/À½Çâ°¡Àü Ä«Å×°í¸®
+INSERT INTO category VALUES ('09090000', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', '', '');
+INSERT INTO category VALUES ('09090100', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', '½ºÇÇÄ¿', '');
+INSERT INTO category VALUES ('09090200', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', 'ÀÌ¾îÆù/ÇìµåÆù', '');
+INSERT INTO category VALUES ('09090300', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', '¿Àµð¿À/HiFi', '');
+INSERT INTO category VALUES ('09090400', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', 'ÇÐ½À±â±â/±âÅ¸À½Çâ', '');
+INSERT INTO category VALUES ('09090500', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', 'TV', '');
+INSERT INTO category VALUES ('09090600', 'µðÁöÅÐ/·»Å»', '¿µ»ó/À½Çâ°¡Àü', 'È¨½Ã¾îÅÍ/DVD', '');
+
+-- ÈÞ´ëÆù/½º¸¶Æ®±â±â Ä«Å×°í¸®
+INSERT INTO category VALUES ('09100000', 'µðÁöÅÐ/·»Å»', 'ÈÞ´ëÆù/½º¸¶Æ®±â±â', '', '');
+INSERT INTO category VALUES ('09100100', 'µðÁöÅÐ/·»Å»', 'ÈÞ´ëÆù/½º¸¶Æ®±â±â', '½Å±Ô°¡ÀÔ', '');
+INSERT INTO category VALUES ('09100200', 'µðÁöÅÐ/·»Å»', 'ÈÞ´ëÆù/½º¸¶Æ®±â±â', '¹øÈ£ÀÌµ¿', '');
+INSERT INTO category VALUES ('09100300', 'µðÁöÅÐ/·»Å»', 'ÈÞ´ëÆù/½º¸¶Æ®±â±â', '±â±âº¯°æ', '');
+INSERT INTO category VALUES ('09100400', 'µðÁöÅÐ/·»Å»', 'ÈÞ´ëÆù/½º¸¶Æ®±â±â', 'ÀÚ±ÞÁ¦Æù/°ø±â°è', '');
+INSERT INTO category VALUES ('09100500', 'µðÁöÅÐ/·»Å»', 'ÈÞ´ëÆù/½º¸¶Æ®±â±â', 'ÈÞ´ëÆù ÄÉÀÌ½º', '');
+INSERT INTO category VALUES ('09100600', 'µðÁöÅÐ/·»Å»', 'ÈÞ´ëÆù/½º¸¶Æ®±â±â', 'ÈÞ´ëÆù¾×¼¼¼­¸®', '');
+INSERT INTO category VALUES ('09100700', 'µðÁöÅÐ/·»Å»', 'ÈÞ´ëÆù/½º¸¶Æ®±â±â', '½º¸¶Æ®¿öÄ¡/¹êµå', '');
+
+-- ·»Å» Ä«Å×°í¸®
+INSERT INTO category VALUES ('09110000', 'µðÁöÅÐ/·»Å»', '·»Å»', '', '');
+INSERT INTO category VALUES ('09110100', 'µðÁöÅÐ/·»Å»', '·»Å»', 'Á¤¼ö±â', '');
+INSERT INTO category VALUES ('09110200', 'µðÁöÅÐ/·»Å»', '·»Å»', '°ø±âÃ»Á¤±â/Á¦½À±â', '');
+INSERT INTO category VALUES ('09110300', 'µðÁöÅÐ/·»Å»', '·»Å»', 'ºñµ¥', '');
+INSERT INTO category VALUES ('09110400', 'µðÁöÅÐ/·»Å»', '·»Å»', '¿¡¾îÄÁ', '');
+INSERT INTO category VALUES ('09110500', 'µðÁöÅÐ/·»Å»', '·»Å»', '¼¼Å¹±â/°ÇÁ¶±â/½ºÅ¸ÀÏ·¯', '');
+INSERT INTO category VALUES ('09110600', 'µðÁöÅÐ/·»Å»', '·»Å»', '½Ä±â¼¼Ã´±â/ÁÖ¹æ°¡Àü', '');
+INSERT INTO category VALUES ('09110700', 'µðÁöÅÐ/·»Å»', '·»Å»', '³ÃÀå°í', '');
+INSERT INTO category VALUES ('09110800', 'µðÁöÅÐ/·»Å»', '·»Å»', '¾È¸¶ÀÇÀÚ', '');
+INSERT INTO category VALUES ('09110900', 'µðÁöÅÐ/·»Å»', '·»Å»', 'Ä§´ë/¸ÅÆ®¸®½º', '');
+INSERT INTO category VALUES ('09111000', 'µðÁöÅÐ/·»Å»', '·»Å»', 'TV', '');
+INSERT INTO category VALUES ('09111100', 'µðÁöÅÐ/·»Å»', '·»Å»', 'Çï½ºÄÉ¾î', '');
+INSERT INTO category VALUES ('09111200', 'µðÁöÅÐ/·»Å»', '·»Å»', '·»ÅÍÄ«/Å¸ÀÌ¾î', '');
+INSERT INTO category VALUES ('09111300', 'µðÁöÅÐ/·»Å»', '·»Å»', '¹Ý·Á¿ëÇ°', '');
+INSERT INTO category VALUES ('09111400', 'µðÁöÅÐ/·»Å»', '·»Å»', '±âÅ¸ ·»Å»»óÇ°', '');
+
+INSERT INTO category VALUES ('10000000', '¿©Çà/eÄíÆù/¹®±¸/µµ¼­', '', '', '');
+
+------------------------------------ ¿ìÇö Ä«Å×°í¸® 
+-- ¸íÇ°
+-- Ä«Å×°í¸® µ¥ÀÌÅÍ »ðÀÔ
+INSERT INTO category VALUES ('01020501', '¸íÇ°', '¿©¼º¸íÇ°', '»óÀÇ', '');
+INSERT INTO category VALUES ('01000000', '¸íÇ°', '', '', '');
+INSERT INTO category VALUES ('01020000', '¸íÇ°', '', '','');
+INSERT INTO category VALUES ('01020101', '¸íÇ°', '¿©¼º¸íÇ°', '°¡¹æ', '');
+INSERT INTO category VALUES ('01020202', '¸íÇ°', '¿©¼º¸íÇ°', 'Áö°©', '');
+INSERT INTO category VALUES ('01020303', '¸íÇ°', '¿©¼º¸íÇ°', '½´Áî', '');
+INSERT INTO category VALUES ('01020404', '¸íÇ°', '¿©¼º¸íÇ°', '¾Æ¿ìÅÍ', '');
+INSERT INTO category VALUES ('01020505', '¸íÇ°', '¿©¼º¸íÇ°', '»óÀÇ', '');
+INSERT INTO category VALUES ('01020606', '¸íÇ°', '¿©¼º¸íÇ°', 'ÇÏÀÇ', '');
+INSERT INTO category VALUES ('01020707', '¸íÇ°', '¿©¼º¸íÇ°', '¿øÇÇ½º', '');
+INSERT INTO category VALUES ('01020808', '¸íÇ°', '¿©¼º¸íÇ°', '½Ã°è', '');
+INSERT INTO category VALUES ('01020909', '¸íÇ°', '¿©¼º¸íÇ°', '¾È°æ/¼±±Û¶ó½º', '');
+INSERT INTO category VALUES ('01021010', '¸íÇ°', '¿©¼º¸íÇ°', 'À¯¾Æµ¿', '');
+
+
+INSERT INTO category VALUES ('01020212', '¸íÇ°', '³²¼º¸íÇ°', 'Áö°©', '');
+INSERT INTO category VALUES ('01020313', '¸íÇ°', '³²¼º¸íÇ°', '½´Áî', '');
+INSERT INTO category VALUES ('01020414', '¸íÇ°', '³²¼º¸íÇ°', '¾Æ¿ìÅÍ', '');
+INSERT INTO category VALUES ('01020515', '¸íÇ°', '³²¼º¸íÇ°', '»óÀÇ', '');
+INSERT INTO category VALUES ('01020616', '¸íÇ°', '³²¼º¸íÇ°', 'ÇÏÀÇ', '');
+INSERT INTO category VALUES ('01020717', '¸íÇ°', '³²¼º¸íÇ°', '¿øÇÇ½º', '');
+INSERT INTO category VALUES ('01020818', '¸íÇ°', '³²¼º¸íÇ°', '½Ã°è', '');
+INSERT INTO category VALUES ('01020919', '¸íÇ°', '³²¼º¸íÇ°', '¾È°æ/¼±±Û¶ó½º', '');
+INSERT INTO category VALUES ('01021020', '¸íÇ°', '³²¼º¸íÇ°', 'À¯¾Æµ¿', '');
+
+
+
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ÄÉ¶ó½ºÅ¸Áî');
+
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, 'https://sui.ssgcdn.com/cmpt/banner/201708/2017081013263780463968040496_758.jpg', '³ëºê·£µå');
+
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ÁöÀÌÅ©');
+
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '»õ¿ìÆÈ¾Æ');
+
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '»ï¼º°ø½Ä½ºÅä¾î');
+
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ÇÑ¿ìºñ');
+
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '³ª·¡½ÄÇ°');
+
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'Ä¡Å°Å¸(¹Ù³ª³ª/´õ¹Ì)');
+
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '³óÇù');
+
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ÄÝµåÇÃ·¹ÀÓ');
+
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ÅÛÆÛ');
 
 INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'JBL');
 
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, 'ë°€ë„');
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '¹Ðµµ');
 
 
+  -- µ¿Âù ºê·£µå
+ insert into brand values(brand_seq.NEXTVAL,NULL,'ÇÏ¸¸Ä«µ·');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'JBL');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'½îºø');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'Ææ´õ');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'¸¶¼£');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'Á¦³×¹Ù');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'¹ß·ÕµåÆÄ¸®');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'°ÔÀÌÁî¼¥');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'¸®½º´×·ë by ODE');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'·ÎÀÌÃ÷');
+ 
+
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'Á¾°¡Áý'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'ºñºñ°í'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'½ÇºñÁý'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'ÇÇÄÚÅ©'  );
 
 
-INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'ì‹œì½”ë¥´');
+INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '½ÃÄÚ¸£');
 
-INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'ì´ë§ˆíŠ¸');
+INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'ÀÌ¸¶Æ®');
 
-INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'ì§€ì´í¬');
+INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'ÁöÀÌÅ©');
 
-INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'ì½œë“œí”Œë ˆìž„');
+INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'ÄÝµåÇÃ·¹ÀÓ');
 
-INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'ì‹ ì„¸ê³„ë°±í™”ì ');
+INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '½Å¼¼°è¹éÈ­Á¡');
 
-INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'í•œìš°ë¹„');
+INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'ÇÑ¿ìºñ');
 
-INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'ë‚˜ëž˜ì‹í’ˆ');
+INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '³ª·¡½ÄÇ°');
 
-INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '(ì£¼)í…œí¼');
+INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '(ÁÖ)ÅÛÆÛ');
 
 INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, 'JBL');
 
 
+-- µ¿Âù ½ºÅä¾î
+ --¼¿·¯½ºÅä¾î
+ insert into sellerstore values(seller_seq.NEXTVAL,'»ï¼º¾¾¾Ø¿¡ÀÌÄ¡');
+ insert into sellerstore values(seller_seq.NEXTVAL,'»ï¼ºÇÏ¸¸¿Â¶óÀÎ½ºÅä¾î');
+ insert into sellerstore values(seller_seq.NEXTVAL,'½îºø');
+ insert into sellerstore values(seller_seq.NEXTVAL,'´õ±×·¦»ç¿îµå');
+ insert into sellerstore values(seller_seq.NEXTVAL,'´º¿å½ºÅä¸®');
+ insert into sellerstore values(seller_seq.NEXTVAL,'ITµñ¼Å³Ê¸®_´ÚÅÍ»ç¿îµå/´ë±¤ ÆÇ¸ÅÀÚ½ºÅä¾î');
+ insert into sellerstore values(seller_seq.NEXTVAL,'¹«ÄÉ·»½Ã¾Æ');
+ insert into sellerstore values(seller_seq.NEXTVAL,'°ÔÀÌÁî¼¥_·¹ÀÌºí·°/°­´ëÇÏ');
+
+-- µ¿¿µ ½ºÅä¾î
+INSERT INTO sellerstore VALUES( seller_seq.NEXTVAL ,'¹Ì¹ÌÀÇ¹ä»ó'  );
 ----------------------------------------------------------------------------------
--- ë°°ì†¡ì˜µì…˜ í…Œì´ë¸” ìƒì„±
--- ë°°ì†¡ì˜µì…˜ ì‹œí€€ìŠ¤ ìƒì„±
--- ë°°ì†¡ ì˜µì…˜ í…Œì´ë¸” ( ì•„ì´ë””, ë°°ì†¡íšŒì‚¬ì´ë¦„, ë°°ì†¡ì˜µì…˜ì´ë¦„, ë°°ì†¡ì„¤ëª…, ê¸°ë³¸ë°°ì†¡ë£Œ, ì§€ì—­ì´ë¦„. ë°°ì†¡ì—¬ë¶€)
+-- ¹è¼Û¿É¼Ç Å×ÀÌºí »ý¼º
+-- ¹è¼Û¿É¼Ç ½ÃÄö½º »ý¼º
+-- ¹è¼Û ¿É¼Ç Å×ÀÌºí ( ¾ÆÀÌµð, ¹è¼ÛÈ¸»çÀÌ¸§, ¹è¼Û¿É¼ÇÀÌ¸§, ¹è¼Û¼³¸í, ±âº»¹è¼Û·á, Áö¿ªÀÌ¸§. ¹è¼Û¿©ºÎ)
 
 
 INSERT INTO shippingoption (id, shippingcompanyname, shippingoptionname, shippingoptionexplain, defaultshippingfee, regionname, shppingcheck)
-VALUES (shippingoption_id_seq.NEXTVAL , 'ssg', 'ì“±ë°°ì†¡', 'ì§€ê¸ˆ ì£¼ë¬¸í•˜ë©´ 16ì‹œë¶€í„° ë„ì°©', 3000,  'ì„œìš¸', 'ë°°ì†¡ê°€ëŠ¥' );
+VALUES (shippingoption_id_seq.NEXTVAL , 'ssg', '¾³¹è¼Û', 'Áö±Ý ÁÖ¹®ÇÏ¸é 16½ÃºÎÅÍ µµÂø', 3000,  '¼­¿ï', '¹è¼Û°¡´É' );
 INSERT INTO shippingoption (id, shippingcompanyname, shippingoptionname, shippingoptionexplain, defaultshippingfee, regionname, shppingcheck)
-VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg', 'ì“±ë°°ì†¡', 'ì§€ê¸ˆ ì£¼ë¬¸í•˜ë©´ 10ì‹œë¶€í„° ë„ì°©', 3000, 'ê²½ê¸°', 'ë°°ì†¡ê°€ëŠ¥' );
+VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg', '¾³¹è¼Û', 'Áö±Ý ÁÖ¹®ÇÏ¸é 10½ÃºÎÅÍ µµÂø', 3000, '°æ±â', '¹è¼Û°¡´É' );
 INSERT INTO shippingoption (id, shippingcompanyname, shippingoptionname, shippingoptionexplain, defaultshippingfee, regionname, shppingcheck)
-VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg',  'ì“±ë°°ì†¡', 'ì§€ê¸ˆ ì£¼ë¬¸í•˜ë©´ 10ì‹œë¶€í„° ë„ì°©', 3000, 'ë¶€ì‚°', 'ë°°ì†¡ê°€ëŠ¥' );
+VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg',  '¾³¹è¼Û', 'Áö±Ý ÁÖ¹®ÇÏ¸é 10½ÃºÎÅÍ µµÂø', 3000, 'ºÎ»ê', '¹è¼Û°¡´É' );
 INSERT INTO shippingoption (id, shippingcompanyname, shippingoptionname, shippingoptionexplain, defaultshippingfee, regionname, shppingcheck)
-VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg',  'ìƒˆë²½ë°°ì†¡', 'ì§€ê¸ˆ ì£¼ë¬¸í•˜ë©´ ë‚´ì¼ ~06ì‹œê¹Œì§€ ë„ì°©', 3000, 'ì„œìš¸', 'ë°°ì†¡ê°€ëŠ¥' );
+VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg',  '»õº®¹è¼Û', 'Áö±Ý ÁÖ¹®ÇÏ¸é ³»ÀÏ ~06½Ã±îÁö µµÂø', 3000, '¼­¿ï', '¹è¼Û°¡´É' );
 INSERT INTO shippingoption (id, shippingcompanyname, shippingoptionname, shippingoptionexplain, defaultshippingfee, regionname, shppingcheck)
-VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg', 'ìƒˆë²½ë°°ì†¡', 'ì§€ê¸ˆ ì£¼ë¬¸í•˜ë©´ ë‚´ì¼ ~06ì‹œê¹Œì§€ ë„ì°©', 3000, 'ê²½ê¸°', 'ë°°ì†¡ê°€ëŠ¥' );
+VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg', '»õº®¹è¼Û', 'Áö±Ý ÁÖ¹®ÇÏ¸é ³»ÀÏ ~06½Ã±îÁö µµÂø', 3000, '°æ±â', '¹è¼Û°¡´É' );
 INSERT INTO shippingoption (id, shippingcompanyname, shippingoptionname, shippingoptionexplain, defaultshippingfee, regionname, shppingcheck)
-VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg',  '1DAYë°°ì†¡', '23ì‹œê¹Œì§€ ì£¼ë¬¸ ì‹œ ë‚´ì¼ ë„ì°©', 3000, 'ê²½ê¸°', 'ë°°ì†¡ê°€ëŠ¥' );
+VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg',  '1DAY¹è¼Û', '23½Ã±îÁö ÁÖ¹® ½Ã ³»ÀÏ µµÂø', 3000, '°æ±â', '¹è¼Û°¡´É' );
 INSERT INTO shippingoption (id, shippingcompanyname, shippingoptionname, shippingoptionexplain, defaultshippingfee, regionname, shppingcheck)
-VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg',  '1DAYë°°ì†¡', '23ì‹œê¹Œì§€ ì£¼ë¬¸ ì‹œ ë‚´ì¼ ë„ì°©', 3000, 'ì„œìš¸', 'ë°°ì†¡ê°€ëŠ¥' );
+VALUES ( shippingoption_id_seq.NEXTVAL ,'ssg',  '1DAY¹è¼Û', '23½Ã±îÁö ÁÖ¹® ½Ã ³»ÀÏ µµÂø', 3000, '¼­¿ï', '¹è¼Û°¡´É' );
 INSERT INTO shippingoption (id, shippingcompanyname, shippingoptionname, shippingoptionexplain, defaultshippingfee, regionname, shppingcheck)
-VALUES (shippingoption_id_seq.NEXTVAL , 'ë¡¯ë°ê¸€ë¡œë²Œë¡œì§€ìŠ¤', 'ë¡¯ë°íƒë°°', 'ì¼ë°˜íƒë°°', 2500, 'ì „êµ­', 'ë°°ì†¡ê°€ëŠ¥' );
+VALUES (shippingoption_id_seq.NEXTVAL , '·Ôµ¥±Û·Î¹ú·ÎÁö½º', '·Ôµ¥ÅÃ¹è', 'ÀÏ¹ÝÅÃ¹è', 2500, 'Àü±¹', '¹è¼Û°¡´É' );
 INSERT INTO shippingoption (id, shippingcompanyname, shippingoptionname, shippingoptionexplain, defaultshippingfee, regionname, shppingcheck)
-VALUES (shippingoption_id_seq.NEXTVAL , 'ë¡œì  íƒë°°', 'ë¡œì  íƒë°°', 'ì¼ë°˜íƒë°°', 2500, 'ì „êµ­', 'ë°°ì†¡ê°€ëŠ¥' );
+VALUES (shippingoption_id_seq.NEXTVAL , '·ÎÁ¨ÅÃ¹è', '·ÎÁ¨ÅÃ¹è', 'ÀÏ¹ÝÅÃ¹è', 2500, 'Àü±¹', '¹è¼Û°¡´É' );
 INSERT INTO shippingoption (id, shippingcompanyname, shippingoptionname, shippingoptionexplain, defaultshippingfee, regionname, shppingcheck)
-VALUES (shippingoption_id_seq.NEXTVAL , 'cjëŒ€í•œí†µìš´', 'cjëŒ€í•œí†µìš´', 'ì¼ë°˜íƒë°°', 3000, 'ì „êµ­', 'ë°°ì†¡ê°€ëŠ¥' );
+VALUES (shippingoption_id_seq.NEXTVAL , 'cj´ëÇÑÅë¿î', 'cj´ëÇÑÅë¿î', 'ÀÏ¹ÝÅÃ¹è', 3000, 'Àü±¹', '¹è¼Û°¡´É' );
 COMMIT;
 
 --------------------------
---íŠ¹ê°€ insert
-INSERT INTO specialprice VALUES (1, 'https://sstatic.ssgcdn.com/promo/event/ssg/202405/45606928435458158.jpg', 'STACCATOìˆ˜ìž…í™” ì—¬ì„± ì¸ê¸° ìŠˆì¦ˆ 40ì¢… íƒ1', TO_DATE('2024-05-01'), TO_DATE('2024-05-31'), 61);
+--Æ¯°¡ insert
+INSERT INTO specialprice VALUES (1, 'https://sstatic.ssgcdn.com/promo/event/ssg/202405/45606928435458158.jpg', 'STACCATO¼öÀÔÈ­ ¿©¼º ÀÎ±â ½´Áî 40Á¾ ÅÃ1', TO_DATE('2024-05-01'), TO_DATE('2024-05-31'), 61);
 
-INSERT INTO specialprice VALUES (2, 'https://sstatic.ssgcdn.com/promo/event/ssg/202404/44829923700338303.jpg', 'ë§ˆë¦¬ëŒë ˆë¥´ ë§ˆë¦¬ì™€ í•¨ê»˜ ì—¬ë¦„ ì¤€ë¹„ + ë°˜íŒ”í‹°ì…”ì¸ , ì›í”¼ìŠ¤ ì‹ ìƒì¶”ê°€ í• ì¸', TO_DATE('2024-05-01'), TO_DATE('2024-05-31'), 30);
+INSERT INTO specialprice VALUES (2, 'https://sstatic.ssgcdn.com/promo/event/ssg/202404/44829923700338303.jpg', '¸¶¸®²ø·¹¸£ ¸¶¸®¿Í ÇÔ²² ¿©¸§ ÁØºñ + ¹ÝÆÈÆ¼¼ÅÃ÷, ¿øÇÇ½º ½Å»óÃß°¡ ÇÒÀÎ', TO_DATE('2024-05-01'), TO_DATE('2024-05-31'), 30);
 
-INSERT INTO specialprice VALUES (3, 'https://sstatic.ssgcdn.com/promo/event/ssg/202404/44900931049498046.jpg' , 'LGí”„ë¼ì—˜ ê°€ì •ì˜ë‹¬ ~28%í• ì¸ ì“±ë‹¨ë… ì¶”ê°€ ì‚¬ì€í’ˆ + ì„ ë¬¼ ì‡¼í•‘ë°±', TO_DATE('2024-05-01'), TO_DATE('2024-05-31'), 23);
+INSERT INTO specialprice VALUES (3, 'https://sstatic.ssgcdn.com/promo/event/ssg/202404/44900931049498046.jpg' , 'LGÇÁ¶ó¿¤ °¡Á¤ÀÇ´Þ ~28%ÇÒÀÎ ¾³´Üµ¶ Ãß°¡ »çÀºÇ° + ¼±¹° ¼îÇÎ¹é', TO_DATE('2024-05-01'), TO_DATE('2024-05-31'), 23);
 
 INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_DATE('9999-05-31'), 0);
 
 
---ëª…ê±´ìƒí’ˆ
-
-
-INSERT INTO product VALUES (70201, '07040202', 0, 9, 8, 11, 'ì¿¨ìŠ¬ë¦½ ëƒ‰ê° ë² ê°œ ì„¸íŠ¸ 50*70 BL (ë² ê°œì†œ+ë² ê°œì»¤ë²„2P)', 'ìƒí’ˆë²ˆí˜¸ : 70201', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70201, 'ì¿¨ìŠ¬ë¦½ ëƒ‰ê° ë² ê°œ ì„¸íŠ¸ 50*70 BL (ë² ê°œì†œ+ë² ê°œì»¤ë²„2P)', 'ì¿¨ìŠ¬ë¦½ ëƒ‰ê° ë² ê°œ ì„¸íŠ¸ 50*70 BL (ë² ê°œì†œ+ë² ê°œì»¤ë²„2P)',NULL ,19900, NULL);
+--¸í°Ç»óÇ°
+INSERT INTO product VALUES (70201, '07040202', 0, 9, 8, 11, 'Äð½½¸³ ³Ã°¨ º£°³ ¼¼Æ® 50*70 BL (º£°³¼Ø+º£°³Ä¿¹ö2P)', '»óÇ°¹øÈ£ : 70201', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70201, 'Äð½½¸³ ³Ã°¨ º£°³ ¼¼Æ® 50*70 BL (º£°³¼Ø+º£°³Ä¿¹ö2P)', 'Äð½½¸³ ³Ã°¨ º£°³ ¼¼Æ® 50*70 BL (º£°³¼Ø+º£°³Ä¿¹ö2P)',NULL ,19900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i2_1200.avif','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'ë§Œì¡±í•©ë‹ˆë‹¤',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'ìµœê³ ì—ìš©',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'ì¡°ì•„ìš©',SYSDATE,'ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.',SYSDATE,'ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”',SYSDATE,'ì¼ë°˜',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'¸¸Á·ÇÕ´Ï´Ù',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'ÃÖ°í¿¡¿ë',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'Á¶¾Æ¿ë',SYSDATE,'ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.',SYSDATE,'ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä',SYSDATE,'ÀÏ¹Ý',2,3,2,3);
 
 
-INSERT INTO product VALUES (70202, '07040202', 0, 9, 8, 11, 'ì‚¬ê³„ì ˆ ë¬´í˜•ê´‘ ìˆœë©´ ë² ê°œ ì»¤ë²„_70x50cm_ë² ì´ì§€', 'ìƒí’ˆë²ˆí˜¸ : 70202', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70202, 'ì‚¬ê³„ì ˆ ë¬´í˜•ê´‘ ìˆœë©´ ë² ê°œ ì»¤ë²„_70x50cm_ë² ì´ì§€', 'ì‚¬ê³„ì ˆ ë¬´í˜•ê´‘ ìˆœë©´ ë² ê°œ ì»¤ë²„_70x50cm_ë² ì´ì§€',NULL ,9900, NULL);
+INSERT INTO product VALUES (70202, '07040202', 0, 9, 8, 11, '»ç°èÀý ¹«Çü±¤ ¼ø¸é º£°³ Ä¿¹ö_70x50cm_º£ÀÌÁö', '»óÇ°¹øÈ£ : 70202', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70202, '»ç°èÀý ¹«Çü±¤ ¼ø¸é º£°³ Ä¿¹ö_70x50cm_º£ÀÌÁö', '»ç°èÀý ¹«Çü±¤ ¼ø¸é º£°³ Ä¿¹ö_70x50cm_º£ÀÌÁö',NULL ,9900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i2_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i3_1200.avif','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'daetu01',null,'ë§Œì¡±í•©ë‹ˆë‹¤',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'m_eum01',null,'ìµœê³ ì—ìš©',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'d_Chan01',null,'ì¡°ì•„ìš©',SYSDATE,'ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'dyoung01',null,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.',SYSDATE,'ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'mggun01',null,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”',SYSDATE,'ì¼ë°˜',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'daetu01',null,'¸¸Á·ÇÕ´Ï´Ù',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'m_eum01',null,'ÃÖ°í¿¡¿ë',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'d_Chan01',null,'Á¶¾Æ¿ë',SYSDATE,'ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'dyoung01',null,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.',SYSDATE,'ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'mggun01',null,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä',SYSDATE,'ÀÏ¹Ý',2,3,2,3);
 
 
-INSERT INTO product VALUES (70203, '07040202', 0, 9, 8, 11, '[ë³¸ì‚¬ì •í’ˆ] í…œí¼ ì»´í¬íŠ¸ ë² ê°œ ì†Œí”„íŠ¸(NEW)', 'ìƒí’ˆë²ˆí˜¸ : 70203', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70203, '[ë³¸ì‚¬ì •í’ˆ] í…œí¼ ì»´í¬íŠ¸ ë² ê°œ ì†Œí”„íŠ¸(NEW)', '[ë³¸ì‚¬ì •í’ˆ] í…œí¼ ì»´í¬íŠ¸ ë² ê°œ ì†Œí”„íŠ¸(NEW)',NULL ,158400, NULL);
+INSERT INTO product VALUES (70203, '07040202', 0, 9, 8, 11, '[º»»çÁ¤Ç°] ÅÛÆÛ ÄÄÆ÷Æ® º£°³ ¼ÒÇÁÆ®(NEW)', '»óÇ°¹øÈ£ : 70203', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70203, '[º»»çÁ¤Ç°] ÅÛÆÛ ÄÄÆ÷Æ® º£°³ ¼ÒÇÁÆ®(NEW)', '[º»»çÁ¤Ç°] ÅÛÆÛ ÄÄÆ÷Æ® º£°³ ¼ÒÇÁÆ®(NEW)',NULL ,158400, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70203,'\SSGSSAK\pay\image\70203_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70203,'\SSGSSAK\pay\image\70203_i1_1100.avif','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'daetu01',null,'ë§Œì¡±í•©ë‹ˆë‹¤',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'m_eum01',null,'ìµœê³ ì—ìš©',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'d_Chan01',null,'ì¡°ì•„ìš©',SYSDATE,'ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'dyoung01',null,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.',SYSDATE,'ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'mggun01',null,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”',SYSDATE,'ì¼ë°˜',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'daetu01',null,'¸¸Á·ÇÕ´Ï´Ù',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'m_eum01',null,'ÃÖ°í¿¡¿ë',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'d_Chan01',null,'Á¶¾Æ¿ë',SYSDATE,'ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'dyoung01',null,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.',SYSDATE,'ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'mggun01',null,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä',SYSDATE,'ÀÏ¹Ý',2,3,2,3);
 
-INSERT INTO product VALUES (70204, '07040202', 0, 9, 8, 11, '[ê· ì¼ê°€ì°¬ìŠ¤] ì•„ì´ë‹‰ìŠ¤ ìˆœë©´ ëˆ„ë¹” ë² ê°œì»¤ë²„ 40x60 / 50x70', 'ìƒí’ˆë²ˆí˜¸ : 70204', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70204, '[ê· ì¼ê°€ì°¬ìŠ¤] ì•„ì´ë‹‰ìŠ¤ ìˆœë©´ ëˆ„ë¹” ë² ê°œì»¤ë²„ 40x60 / 50x70', '[ê· ì¼ê°€ì°¬ìŠ¤] ì•„ì´ë‹‰ìŠ¤ ìˆœë©´ ëˆ„ë¹” ë² ê°œì»¤ë²„ 40x60 / 50x70',NULL ,8455, NULL);
+INSERT INTO product VALUES (70204, '07040202', 0, 9, 8, 11, '[±ÕÀÏ°¡Âù½º] ¾ÆÀÌ´Ð½º ¼ø¸é ´©ºö º£°³Ä¿¹ö 40x60 / 50x70', '»óÇ°¹øÈ£ : 70204', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70204, '[±ÕÀÏ°¡Âù½º] ¾ÆÀÌ´Ð½º ¼ø¸é ´©ºö º£°³Ä¿¹ö 40x60 / 50x70', '[±ÕÀÏ°¡Âù½º] ¾ÆÀÌ´Ð½º ¼ø¸é ´©ºö º£°³Ä¿¹ö 40x60 / 50x70',NULL ,8455, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i2_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i3_1200.avif','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'daetu01',null,'ë§Œì¡±í•©ë‹ˆë‹¤',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'m_eum01',null,'ìµœê³ ì—ìš©',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'d_Chan01',null,'ì¡°ì•„ìš©',SYSDATE,'ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'dyoung01',null,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.',SYSDATE,'ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'mggun01',null,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”',SYSDATE,'ì¼ë°˜',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'daetu01',null,'¸¸Á·ÇÕ´Ï´Ù',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'m_eum01',null,'ÃÖ°í¿¡¿ë',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'d_Chan01',null,'Á¶¾Æ¿ë',SYSDATE,'ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'dyoung01',null,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.',SYSDATE,'ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'mggun01',null,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä',SYSDATE,'ÀÏ¹Ý',2,3,2,3);
 
-INSERT INTO product VALUES (70205, '07040202', 0, 9, 8, 11, 'ê·¸ë£¨ìž ìˆ¯ë©”ëª¨ë¦¬í¼ë² ê°œ', 'ìƒí’ˆë²ˆí˜¸ : 70205', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70205, 'ê·¸ë£¨ìž ìˆ¯ë©”ëª¨ë¦¬í¼ë² ê°œ', 'ê·¸ë£¨ìž ìˆ¯ë©”ëª¨ë¦¬í¼ë² ê°œ',NULL ,33900, NULL);
+INSERT INTO product VALUES (70205, '07040202', 0, 9, 8, 11, '±×·çÀá½¡¸Þ¸ð¸®Æûº£°³', '»óÇ°¹øÈ£ : 70205', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70205, '±×·çÀá½¡¸Þ¸ð¸®Æûº£°³', '±×·çÀá½¡¸Þ¸ð¸®Æûº£°³',NULL ,33900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i2_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i3_1200.avif','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'daetu01',null,'ë§Œì¡±í•©ë‹ˆë‹¤',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'m_eum01',null,'ìµœê³ ì—ìš©',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'d_Chan01',null,'ì¡°ì•„ìš©',SYSDATE,'ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'dyoung01',null,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.',SYSDATE,'ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'mggun01',null,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”',SYSDATE,'ì¼ë°˜',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'daetu01',null,'¸¸Á·ÇÕ´Ï´Ù',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'m_eum01',null,'ÃÖ°í¿¡¿ë',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'d_Chan01',null,'Á¶¾Æ¿ë',SYSDATE,'ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'dyoung01',null,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.',SYSDATE,'ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'mggun01',null,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä',SYSDATE,'ÀÏ¹Ý',2,3,2,3);
 
-INSERT INTO product VALUES (70206, '07040202', 0, 9, 8, 11, 'EVERREST í¬í„°ë¸” ë©”ëª¨ë¦¬í¼ ë² ê°œ', 'ìƒí’ˆë²ˆí˜¸ : 70206', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70206, 'EVERREST í¬í„°ë¸” ë©”ëª¨ë¦¬í¼ ë² ê°œ', 'EVERREST í¬í„°ë¸” ë©”ëª¨ë¦¬í¼ ë² ê°œ',NULL ,21480, NULL);
+INSERT INTO product VALUES (70206, '07040202', 0, 9, 8, 11, 'EVERREST Æ÷ÅÍºí ¸Þ¸ð¸®Æû º£°³', '»óÇ°¹øÈ£ : 70206', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70206, 'EVERREST Æ÷ÅÍºí ¸Þ¸ð¸®Æû º£°³', 'EVERREST Æ÷ÅÍºí ¸Þ¸ð¸®Æû º£°³',NULL ,21480, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i2_1200.avif','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'daetu01',null,'ë§Œì¡±í•©ë‹ˆë‹¤',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'m_eum01',null,'ìµœê³ ì—ìš©',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'d_Chan01',null,'ì¡°ì•„ìš©',SYSDATE,'ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'dyoung01',null,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.',SYSDATE,'ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'mggun01',null,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”',SYSDATE,'ì¼ë°˜',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'daetu01',null,'¸¸Á·ÇÕ´Ï´Ù',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'m_eum01',null,'ÃÖ°í¿¡¿ë',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'d_Chan01',null,'Á¶¾Æ¿ë',SYSDATE,'ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'dyoung01',null,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.',SYSDATE,'ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'mggun01',null,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä',SYSDATE,'ÀÏ¹Ý',2,3,2,3);
 
 
-INSERT INTO product VALUES (70207, '07040202', 0, 9, 8, 11, 'í•­ê·  ê²½ì¶” ë² ê°œì†œ 50x70 2P', 'ìƒí’ˆë²ˆí˜¸ : 70207', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70207, 'í•­ê·  ê²½ì¶” ë² ê°œì†œ 50x70 2P', 'í•­ê·  ê²½ì¶” ë² ê°œì†œ 50x70 2P',NULL ,22015, NULL);
+INSERT INTO product VALUES (70207, '07040202', 0, 9, 8, 11, 'Ç×±Õ °æÃß º£°³¼Ø 50x70 2P', '»óÇ°¹øÈ£ : 70207', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70207, 'Ç×±Õ °æÃß º£°³¼Ø 50x70 2P', 'Ç×±Õ °æÃß º£°³¼Ø 50x70 2P',NULL ,22015, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.webp','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i2_1200.webp','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'daetu01',null,'ë§Œì¡±í•©ë‹ˆë‹¤',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'m_eum01',null,'ìµœê³ ì—ìš©',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'d_Chan01',null,'ì¡°ì•„ìš©',SYSDATE,'ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'dyoung01',null,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.',SYSDATE,'ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'mggun01',null,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”',SYSDATE,'ì¼ë°˜',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'daetu01',null,'¸¸Á·ÇÕ´Ï´Ù',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'m_eum01',null,'ÃÖ°í¿¡¿ë',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'d_Chan01',null,'Á¶¾Æ¿ë',SYSDATE,'ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'dyoung01',null,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.',SYSDATE,'ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'mggun01',null,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä',SYSDATE,'ÀÏ¹Ý',2,3,2,3);
 
 
-INSERT INTO product VALUES (70208, '07040202', 0, 9, 8, 11, 'ìˆœë©´ ëˆ„ë¹” í”¼ê·¸ë¨¼íŠ¸ ì‚¬ê³„ì ˆ ë² ê°œ ì»¤ë²„ ', 'ìƒí’ˆë²ˆí˜¸ : 70208', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70208, 'ìˆœë©´ ëˆ„ë¹” í”¼ê·¸ë¨¼íŠ¸ ì‚¬ê³„ì ˆ ë² ê°œ ì»¤ë²„ ', 'ìˆœë©´ ëˆ„ë¹” í”¼ê·¸ë¨¼íŠ¸ ì‚¬ê³„ì ˆ ë² ê°œ ì»¤ë²„ ',NULL ,7275, NULL);
+INSERT INTO product VALUES (70208, '07040202', 0, 9, 8, 11, '¼ø¸é ´©ºö ÇÇ±×¸ÕÆ® »ç°èÀý º£°³ Ä¿¹ö ', '»óÇ°¹øÈ£ : 70208', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70208, '¼ø¸é ´©ºö ÇÇ±×¸ÕÆ® »ç°èÀý º£°³ Ä¿¹ö ', '¼ø¸é ´©ºö ÇÇ±×¸ÕÆ® »ç°èÀý º£°³ Ä¿¹ö ',NULL ,7275, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.webp','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.webp','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'daetu01',null,'ë§Œì¡±í•©ë‹ˆë‹¤',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'m_eum01',null,'ìµœê³ ì—ìš©',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'d_Chan01',null,'ì¡°ì•„ìš©',SYSDATE,'ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'dyoung01',null,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.',SYSDATE,'ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'mggun01',null,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”',SYSDATE,'ì¼ë°˜',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'daetu01',null,'¸¸Á·ÇÕ´Ï´Ù',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'m_eum01',null,'ÃÖ°í¿¡¿ë',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'d_Chan01',null,'Á¶¾Æ¿ë',SYSDATE,'ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'dyoung01',null,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.',SYSDATE,'ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'mggun01',null,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä',SYSDATE,'ÀÏ¹Ý',2,3,2,3);
 
 
-INSERT INTO product VALUES (70209, '07040202', 0, 9, 8, 11, 'HT)ì„¸ë¯¸ê·¸ë ˆì´ë² ê°œì»¤ë²„', 'ìƒí’ˆë²ˆí˜¸ : 70209', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70209, 'HT)ì„¸ë¯¸ê·¸ë ˆì´ë² ê°œì»¤ë²„', 'HT)ì„¸ë¯¸ê·¸ë ˆì´ë² ê°œì»¤ë²„',NULL ,7900, NULL);
+INSERT INTO product VALUES (70209, '07040202', 0, 9, 8, 11, 'HT)¼¼¹Ì±×·¹ÀÌº£°³Ä¿¹ö', '»óÇ°¹øÈ£ : 70209', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70209, 'HT)¼¼¹Ì±×·¹ÀÌº£°³Ä¿¹ö', 'HT)¼¼¹Ì±×·¹ÀÌº£°³Ä¿¹ö',NULL ,7900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.webp','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.webp','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i2_1200.webp','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'daetu01',null,'ë§Œì¡±í•©ë‹ˆë‹¤',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'m_eum01',null,'ìµœê³ ì—ìš©',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'d_Chan01',null,'ì¡°ì•„ìš©',SYSDATE,'ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'dyoung01',null,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.',SYSDATE,'ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'mggun01',null,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”',SYSDATE,'ì¼ë°˜',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'daetu01',null,'¸¸Á·ÇÕ´Ï´Ù',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'m_eum01',null,'ÃÖ°í¿¡¿ë',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'d_Chan01',null,'Á¶¾Æ¿ë',SYSDATE,'ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'dyoung01',null,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.',SYSDATE,'ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'mggun01',null,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä',SYSDATE,'ÀÏ¹Ý',2,3,2,3);
 
 
-INSERT INTO product VALUES (70210, '07040202', 0, 9, 8, 11, 'ê³ ë°€ë„ 40ìˆ˜ ìˆœë©´ ë¦¬ë²„ì‹œë¸” ë² ê°œì»¤ë²„ 40*60 NY', 'ìƒí’ˆë²ˆí˜¸ : 70210', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70210, 'ê³ ë°€ë„ 40ìˆ˜ ìˆœë©´ ë¦¬ë²„ì‹œë¸” ë² ê°œì»¤ë²„ 40*60 NY', 'ê³ ë°€ë„ 40ìˆ˜ ìˆœë©´ ë¦¬ë²„ì‹œë¸” ë² ê°œì»¤ë²„ 40*60 NY',NULL ,8900, NULL);
+INSERT INTO product VALUES (70210, '07040202', 0, 9, 8, 11, '°í¹Ðµµ 40¼ö ¼ø¸é ¸®¹ö½Ãºí º£°³Ä¿¹ö 40*60 NY', '»óÇ°¹øÈ£ : 70210', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70210, '°í¹Ðµµ 40¼ö ¼ø¸é ¸®¹ö½Ãºí º£°³Ä¿¹ö 40*60 NY', '°í¹Ðµµ 40¼ö ¼ø¸é ¸®¹ö½Ãºí º£°³Ä¿¹ö 40*60 NY',NULL ,8900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.webp','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.webp','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i2_1200.webp','other');
-INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'daetu01',null,'ë§Œì¡±í•©ë‹ˆë‹¤',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'m_eum01',null,'ìµœê³ ì—ìš©',SYSDATE,'ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'d_Chan01',null,'ì¡°ì•„ìš©',SYSDATE,'ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'dyoung01',null,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.',SYSDATE,'ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'mggun01',null,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”',SYSDATE,'ì¼ë°˜',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'daetu01',null,'¸¸Á·ÇÕ´Ï´Ù',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'m_eum01',null,'ÃÖ°í¿¡¿ë',SYSDATE,'ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'d_Chan01',null,'Á¶¾Æ¿ë',SYSDATE,'ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'dyoung01',null,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.',SYSDATE,'ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'mggun01',null,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä',SYSDATE,'ÀÏ¹Ý',2,3,2,3);
 
 ------------------------------------------------------------------------------------------------
--- ìƒí’ˆ ê´€ë ¨ í…Œì´ë¸”
+-- »óÇ° °ü·Ã Å×ÀÌºí
 
 
 --1
 INSERT INTO product VALUES (1000026532717, '04040303', 2, 1, 1, 1,
-'ì‹œëª½ í…Œë¥´ë¯¸í¬ 150ml [No.1 í—¤ì–´ì—ì„¼ìŠ¤-ì†ìƒëª¨ë°œìš©]', 'ìƒí’ˆë²ˆí˜¸ : 1000026532717 ëª¨ë¸ë²ˆí˜¸ : E1036200.',
+'½Ã¸ù Å×¸£¹ÌÅ© 150ml [No.1 Çì¾î¿¡¼¾½º-¼Õ»ó¸ð¹ß¿ë]', '»óÇ°¹øÈ£ : 1000026532717 ¸ðµ¨¹øÈ£ : E1036200.',
 '2024-04-10');
 
 --2
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000544937242, '06010101', 0, 2, 2, 2, 'ë…¸ë¸Œëžœë“œ 3ê²¹ í™”ìž¥ì§€ 33M X 30ë¡¤', 'ìƒí’ˆë²ˆí˜¸ : 1000544937242', '2024-04-10');
+VALUES (1000544937242, '06010101', 0, 2, 2, 2, '³ëºê·£µå 3°ã È­ÀåÁö 33M X 30·Ñ', '»óÇ°¹øÈ£ : 1000544937242', '2024-04-10');
 
 --3
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000587702102, '01030601', 0, 3, 3, 3, 'ì§€ì´í¬ 24S/S í”„ë¦¬ë¯¸ì—„ ë§¥ìŠ¤ ëª¨ë˜ ì •ìž¥ìŠˆíŠ¸ 3ì¢…íƒ1 PIJ2000BK', 'ì§€ì´í¬ 24S/S í”„ë¦¬ë¯¸ì—„ ë§¥ìŠ¤ ëª¨ë˜ ì •ìž¥ìŠˆíŠ¸ 3ì¢…íƒ1 PIJ2000BK" S/S ì‹œì¦Œ ë´„ì—¬ë¦„ìŠˆíŠ¸ìž…ë‹ˆë‹¤ ì§€ì´í¬ì—ì„œ ì§„í–‰í•˜ëŠ” 2024 S/S ì‹ ìƒí’ˆìœ¼ë¡œ ìš´ì˜í•˜ëŠ” ìŠˆíŠ¸ë‹¤ë³´ë‹ˆ ì¡°ê¸°í’ˆì ˆ ë ìˆ˜ìžˆëŠ”ì  ì–‘í•´ë¶€íƒë“œë¦½ë‹ˆë‹¤ ! [1] [2027] ê¸°ë³¸ë„¤ì´ë¹„ ë² ì´ì§ ìŠˆíŠ¸ ê¸°ë³¸ë„¤ì´ë¹„ ë² ì´ì§ ìˆ˜íŠ¸ë¡œì¨ ê°ì¢… ê²½ì¡°ì‚¬ ë° í–‰ì‚¬ìš©ìœ¼ë¡œ ë˜ëŠ” ë°ì¼ë¦¬ìš©ë„ë¡œ ì‚¬ìš©í•˜ì‹œê¸° ì í•©í•˜ê²Œ ì¶œì‹œëœ ëª¨ë¸ìž…ë‹ˆë‹¤ 2024ë…„ë„ ì‹ ìƒí’ˆìœ¼ë¡œ ì¶œì‹œê°€ë˜ì—ˆìœ¼ë©° ë‘ê»˜ê°ì´ ë‘ê»ì§€ì•Šì•„ ë´„ì—¬ë¦„ê³„ì ˆ ê³„ì ˆì— ê°€ìž¥ ì•Œë§žê³ í‹°ì…”ì¸ ë‚˜ í‹°ì—ë¦¬ ë‹ˆíŠ¸ì™€ ê°™ì´ ì…‹ì—…ìš©ë„ë¡œ ì½”ë””í•˜ì‹œê¸°ì—ë„ ì¢‹ìŠµë‹ˆë‹¤', '2024-02-02');
+VALUES (1000587702102, '01030601', 0, 3, 3, 3, 'ÁöÀÌÅ© 24S/S ÇÁ¸®¹Ì¾ö ¸Æ½º ¸ð´ø Á¤Àå½´Æ® 3Á¾ÅÃ1 PIJ2000BK', 'ÁöÀÌÅ© 24S/S ÇÁ¸®¹Ì¾ö ¸Æ½º ¸ð´ø Á¤Àå½´Æ® 3Á¾ÅÃ1 PIJ2000BK" S/S ½ÃÁð º½¿©¸§½´Æ®ÀÔ´Ï´Ù ÁöÀÌÅ©¿¡¼­ ÁøÇàÇÏ´Â 2024 S/S ½Å»óÇ°À¸·Î ¿î¿µÇÏ´Â ½´Æ®´Ùº¸´Ï Á¶±âÇ°Àý µÉ¼öÀÖ´ÂÁ¡ ¾çÇØºÎÅ¹µå¸³´Ï´Ù ! [1] [2027] ±âº»³×ÀÌºñ º£ÀÌÁ÷ ½´Æ® ±âº»³×ÀÌºñ º£ÀÌÁ÷ ¼öÆ®·Î½á °¢Á¾ °æÁ¶»ç ¹× Çà»ç¿ëÀ¸·Î ¶Ç´Â µ¥ÀÏ¸®¿ëµµ·Î »ç¿ëÇÏ½Ã±â ÀûÇÕÇÏ°Ô Ãâ½ÃµÈ ¸ðµ¨ÀÔ´Ï´Ù 2024³âµµ ½Å»óÇ°À¸·Î Ãâ½Ã°¡µÇ¾úÀ¸¸ç µÎ²²°¨ÀÌ µÎ²®Áö¾Ê¾Æ º½¿©¸§°èÀý °èÀý¿¡ °¡Àå ¾Ë¸Â°íÆ¼¼ÅÃ÷³ª Æ¼¿¡¸® ´ÏÆ®¿Í °°ÀÌ ¼Â¾÷¿ëµµ·Î ÄÚµðÇÏ½Ã±â¿¡µµ ÁÁ½À´Ï´Ù', '2024-02-02');
 
 --4
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (2097001577943, '11040301', 0, 4,4, 4, '[ëƒ‰ë™][ë² íŠ¸ë‚¨] ASCì¸ì¦ ì¹µí…Œì¼ìƒˆìš° (ëŒ€, 21-25, 900g)', 'ìƒí’ˆë²ˆí˜¸ : 2097001577943', '2024-04-10');
+VALUES (2097001577943, '11040301', 0, 4,4, 4, '[³Ãµ¿][º£Æ®³²] ASCÀÎÁõ Ä¬Å×ÀÏ»õ¿ì (´ë, 21-25, 900g)', '»óÇ°¹øÈ£ : 2097001577943', '2024-04-10');
 
 --5
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000582326954, '04040303', 0, 5, 5, 5, '[ì •í’ˆ/ë‹¹ì¼ì¶œê³ ] ì‚¼ì„± ê°¤ëŸ­ì‹œS24 256G ìžê¸‰ì œ SM-S921N', 'ìƒí’ˆë²ˆí˜¸ : 1000582326954 ëª¨ë¸ë²ˆí˜¸ : SMS921N256C3.', '2024-04-10');
+VALUES (1000582326954, '04040303', 0, 5, 5, 5, '[Á¤Ç°/´çÀÏÃâ°í] »ï¼º °¶·°½ÃS24 256G ÀÚ±ÞÁ¦ SM-S921N', '»óÇ°¹øÈ£ : 1000582326954 ¸ðµ¨¹øÈ£ : SMS921N256C3.', '2024-04-10');
 
 
 --6
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000398650979, '11050503', 0, 6, 6, 6, '[ëƒ‰ìž¥] 1++(8)ë“±ê¸‰ í•œìš°ì•”ì†Œ ì±„ë êµ¬ì´ìš©/ìŠ¤í…Œì´í¬ìš© 600g', 'ìƒí’ˆë²ˆí˜¸ : 1000398650979 ëª¨ë¸ë²ˆí˜¸ : í•œìš°ë¹„ì±„ë2', '2024-04-10');
+VALUES (1000398650979, '11050503', 0, 6, 6, 6, '[³ÃÀå] 1++(8)µî±Þ ÇÑ¿ì¾Ï¼Ò Ã¤³¡ ±¸ÀÌ¿ë/½ºÅ×ÀÌÅ©¿ë 600g', '»óÇ°¹øÈ£ : 1000398650979 ¸ðµ¨¹øÈ£ : ÇÑ¿ìºñÃ¤³¡2', '2024-04-10');
 
 --7
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000014118201, '12030104', 0, 7, 7, 7, 'ì—¬ìˆ˜ ë‚˜ëž˜ì‹í’ˆ ì „ë¼ë„ ë³„ë¯¸ ê¹€ì¹˜ 1kg ê¸°íšì „ ëŒì‚° ê°“ê¹€ì¹˜ íŒŒê¹€ì¹˜ ê³ ë“¤ë¹¼ê¸° ê¹€ì¹˜ ì´ê°ê¹€ì¹˜ ë¶€ì¶”ê¹€ì¹˜ ì—´ë¬´ê¹€ì¹˜ ë§›ê¹€ì¹˜', 'ë‚˜ëž˜ë°¥ìƒì˜ ê¹€ì¹˜ëŠ” 100% êµ­ë‚´ì‚° ì›ìž¬ë£Œë§Œì„ ì‚¬ìš©í•©ë‹ˆë‹¤. ê¸°í›„ì™€ í† ì–‘, í•´í’ê¹Œì§€ ê²¸ë¹„í•˜ì—¬ ë¬´, ì•Œíƒ€ë¦¬ íŒŒ, ëŒì‚°ê°“ë“± ê°ì¢… ë†ìž‘ë¬¼ë“¤ì´ ìžë¼ê¸°ì— ìµœì ì˜ ì¡°ê±´ì„ ê°€ì§„ ì „ë¼ë‚¨ë„ ì—¬ìˆ˜!!! ì „í†µ ë‚¨ë„ì‹ ê¹€ì¹˜ê°€ ë¬´ì—‡ì¸ì§€ ì§„í•˜ë©´ì„œë„ ì‹œì›í•˜ê³  ê°œìš´í•œ ë§›ì´ ë¬´ì—‡ì¸ì§€ ì œëŒ€ë¡œ ë³´ì—¬ë“œë¦¬ê² ìŠµë‹ˆë‹¤.', '2024-02-15');
+VALUES (1000014118201, '12030104', 0, 7, 7, 7, '¿©¼ö ³ª·¡½ÄÇ° Àü¶óµµ º°¹Ì ±èÄ¡ 1kg ±âÈ¹Àü µ¹»ê °«±èÄ¡ ÆÄ±èÄ¡ °íµé»©±â ±èÄ¡ ÃÑ°¢±èÄ¡ ºÎÃß±èÄ¡ ¿­¹«±èÄ¡ ¸À±èÄ¡', '³ª·¡¹ä»óÀÇ ±èÄ¡´Â 100% ±¹³»»ê ¿øÀç·á¸¸À» »ç¿ëÇÕ´Ï´Ù. ±âÈÄ¿Í Åä¾ç, ÇØÇ³±îÁö °âºñÇÏ¿© ¹«, ¾ËÅ¸¸® ÆÄ, µ¹»ê°«µî °¢Á¾ ³óÀÛ¹°µéÀÌ ÀÚ¶ó±â¿¡ ÃÖÀûÀÇ Á¶°ÇÀ» °¡Áø Àü¶ó³²µµ ¿©¼ö!!! ÀüÅë ³²µµ½Ä ±èÄ¡°¡ ¹«¾ùÀÎÁö ÁøÇÏ¸é¼­µµ ½Ã¿øÇÏ°í °³¿îÇÑ ¸ÀÀÌ ¹«¾ùÀÎÁö Á¦´ë·Î º¸¿©µå¸®°Ú½À´Ï´Ù.', '2024-02-15');
 
 --8
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (2097001308233, '11010301', 0, 8, 8, 8, 'ì—ì½°ë„ë¥´ ì¹˜í‚¤íƒ€ ë°”ë‚˜ë‚˜ 1.2kg (ë´‰)', 'ìƒí’ˆë²ˆí˜¸ : 2097001308233', '2024-03-10');
+VALUES (2097001308233, '11010301', 0, 8, 8, 8, '¿¡Äâµµ¸£ Ä¡Å°Å¸ ¹Ù³ª³ª 1.2kg (ºÀ)', '»óÇ°¹øÈ£ : 2097001308233', '2024-03-10');
 
 --9
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (2097000257655, '11050702', 0, 8, 9, 9, '[ëƒ‰ìž¥][ê¹€í•´ì¶•í˜‘] í•œëˆ ê³ ì¶”ìž¥ ì œìœ¡ë³¶ìŒ 1,000g', 'ìƒí’ˆë²ˆí˜¸ : 2097000257655', '2024-04-20');
+VALUES (2097000257655, '11050702', 0, 8, 9, 9, '[³ÃÀå][±èÇØÃàÇù] ÇÑµ· °íÃßÀå Á¦À°ººÀ½ 1,000g', '»óÇ°¹øÈ£ : 2097000257655', '2024-04-20');
 
 --10
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (2097001557433, '04040303', 0, 3, 2, 10, 'I`mperfect ë‹¹ë„ì„ ë³„ ëª»ë‚œì´ì‚¬ê³¼ 2kg (ë´‰)', 'ìƒí’ˆë²ˆí˜¸ : 2097001557433', '2024-04-15');
+VALUES (2097001557433, '04040303', 0, 3, 2, 10, 'I`mperfect ´çµµ¼±º° ¸ø³­ÀÌ»ç°ú 2kg (ºÀ)', '»óÇ°¹øÈ£ : 2097001557433', '2024-04-15');
 --11
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000579723160, '02030102', 1, 8, 4, 11, 'COLORLESS PADLOCK SILVER NECKLACE', 'ìƒí’ˆë²ˆí˜¸ : 1000579723160 ëª¨ë¸ë²ˆí˜¸ : COLORLESSPADLOCKSILVERNECKLACE.', '2024-01-10');
+VALUES (1000579723160, '02030102', 1, 8, 4, 11, 'COLORLESS PADLOCK SILVER NECKLACE', '»óÇ°¹øÈ£ : 1000579723160 ¸ðµ¨¹øÈ£ : COLORLESSPADLOCKSILVERNECKLACE.', '2024-01-10');
 
 --12
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000280142269, '07040202', 2, 8, 9, 12, '[í…œí¼/ë‹¥í„°íŒŒë² /ìˆ˜ë©´ê³µê°]ê¸°ëŠ¥ì„±ë² ê°œ ëª¨ìŒì „', 'ìƒí’ˆë²ˆí˜¸ : 1000280142269', '2024-04-10');
+VALUES (1000280142269, '07040202', 2, 8, 9, 12, '[ÅÛÆÛ/´ÚÅÍÆÄº£/¼ö¸é°ø°¨]±â´É¼ºº£°³ ¸ðÀ½Àü', '»óÇ°¹øÈ£ : 1000280142269', '2024-04-10');
 
 --13
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000059288917, '09090102', 0, 9, 5, 5, 'ì‚¼ì„±ê³µì‹íŒŒíŠ¸ë„ˆ JBL GO3 (ê³ 3) ë¸”ë£¨íˆ¬ìŠ¤ ë°©ìˆ˜ ìŠ¤í”¼ì»¤', 'ìƒí’ˆë²ˆí˜¸ : 1000059288917 ëª¨ë¸ë²ˆí˜¸ : JBLGO3.', '2024-04-10');
+VALUES (1000059288917, '09090102', 0, 9, 5, 5, '»ï¼º°ø½ÄÆÄÆ®³Ê JBL GO3 (°í3) ºí·çÅõ½º ¹æ¼ö ½ºÇÇÄ¿', '»óÇ°¹øÈ£ : 1000059288917 ¸ðµ¨¹øÈ£ : JBLGO3.', '2024-04-10');
 
 
 --14
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (2097001432075, '12090100', 0, 10, 2, 13, '[ë°€ë„] ë‹´ë°±ì‹ë¹µ 480g', 'í•˜ì–€ ì†ì‚´ì˜ ë³´ë“¤ ë³´ë“¤í•œ ë§¤ë ¥ ê²°ëŒ€ë¡œ ì­‰ ì°¢ì–´ì„œ í•œìž… ë¨¹ìœ¼ë©´ ìž…ì•ˆì—ì„œ ì‚¬ë¥´ë¥´ ë…¹ëŠ” ë¶€ë“œëŸ¬ì›€ì— ë°˜í•˜ì‹¤ ê±°ì˜ˆìš”. ì‹ë¹µ ê·¸ ìžì²´ë§Œìœ¼ë¡œë„ ë§¤ë ¥ì ì¸ ë°€ë„ì˜ ì‹œê·¸ë‹ˆì²˜ ë‹´ë°±ì‹ë¹µì„ ì¤„ ì„œëŠ” ë²ˆê±°ë¡œì›€ ì—†ì´ íŽ¸í•˜ê²Œ ì§‘ì—ì„œ ë§Œë‚˜ë³´ì„¸ìš”.', '2024-03-17');
+VALUES (2097001432075, '12090100', 0, 10, 2, 13, '[¹Ðµµ] ´ã¹é½Ä»§ 480g', 'ÇÏ¾á ¼Ó»ìÀÇ º¸µé º¸µéÇÑ ¸Å·Â °á´ë·Î Âß Âõ¾î¼­ ÇÑÀÔ ¸ÔÀ¸¸é ÀÔ¾È¿¡¼­ »ç¸£¸£ ³ì´Â ºÎµå·¯¿ò¿¡ ¹ÝÇÏ½Ç °Å¿¹¿ä. ½Ä»§ ±× ÀÚÃ¼¸¸À¸·Îµµ ¸Å·ÂÀûÀÎ ¹ÐµµÀÇ ½Ã±×´ÏÃ³ ´ã¹é½Ä»§À» ÁÙ ¼­´Â ¹ø°Å·Î¿ò ¾øÀÌ ÆíÇÏ°Ô Áý¿¡¼­ ¸¸³ªº¸¼¼¿ä.', '2024-03-17');
 
 --15
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES (1000067576484, '09010200', 0 , 10, 5, 5, 'ê°¤ëŸ­ì‹œíƒ­ Trade-in OPEN', 'ìƒí’ˆë²ˆí˜¸ : 1000067576484', '2024-04-10');
+VALUES (1000067576484, '09010200', 0 , 10, 5, 5, '°¶·°½ÃÅÇ Trade-in OPEN', '»óÇ°¹øÈ£ : 1000067576484', '2024-04-10');
 
 
 
---ìƒí’ˆì˜µì…˜ì¸ì„œíŠ¸
+------------------------------ µ¿Âù »óÇ° ÀÎ¼­Æ®
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000001,'09090102',1,1,'sellerStore012','brand23','»ï¼º°ø½ÄÆÄÆ®³Ê ÇÏ¸¸Ä«µ· ¿À¶ó ½ºÆ©µð¿À4 ºí·çÅõ½º ½ºÇÇÄ¿ AURA STUDIO4','»óÇ°¹øÈ£ : 1000553633604
 
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '2027', 'ì •ìž¥ë””ìžì¸',NULL ,null, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '2028', 'ì •ìž¥ë””ìžì¸',NULL ,null, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '2030', 'ì •ìž¥ë””ìžì¸',NULL ,null, NULL);
+¸ðµ¨¹øÈ£ : HKAURAS4BLKAS',to_date('24/05/25','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000002,'09090102',0,3,'sellerStore013','brand24','»ï¼º°ø½ÄÆÄÆ®³Ê JBL FLIP6 ºí·çÅõ½º½ºÇÇÄ¿ IP67 Ãâ·Â30W ÇÃ¸³6','»óÇ°¹øÈ£ : 1000337473259
 
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '97/74', 'ì •ìž¥ì‚¬ì´ì¦ˆ',1 ,109000, 50);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '100/86', 'ì •ìž¥ì‚¬ì´ì¦ˆ',1 ,109000, 50);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '97/74', 'ì •ìž¥ì‚¬ì´ì¦ˆ',2 ,109000, 50);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '97/78', 'ì •ìž¥ì‚¬ì´ì¦ˆ',2 ,109000, 50);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '100/74', 'ì •ìž¥ì‚¬ì´ì¦ˆ',2 ,109000, 50);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '100/78', 'ì •ìž¥ì‚¬ì´ì¦ˆ',2 ,109000, 50);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '100/82', 'ì •ìž¥ì‚¬ì´ì¦ˆ',2 ,109000, 50);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '95/78', 'ì •ìž¥ì‚¬ì´ì¦ˆ',3 ,109000, 50);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '97/86', 'ì •ìž¥ì‚¬ì´ì¦ˆ',3 ,109000, 50);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '100/86', 'ì •ìž¥ì‚¬ì´ì¦ˆ',3 ,109000, 50);
+¸ðµ¨¹øÈ£ : JBLFLIP6',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000003,'09090102',0,2,'sellerStore014','brand25','ÈÞ´ë¿ë ¹Ì´Ï ºí·çÅõ½º ½ºÇÇÄ¿','»óÇ°¹øÈ£ : 1000583195974',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000004,'09090102',0,5,'sellerStore015','brand26','Ææ´õ¸®ÇÁ FENDER RIFF ºí·çÅõ½º ½ºÇÇÄ¿','»óÇ°¹øÈ£ : 1000555779315
 
+¸ðµ¨¹øÈ£ : RIFF',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000005,'09090102',0,8,'sellerStore016','brand27','[¹Ì±¹Á¤Ç°] ¿¥¹öÆ°2 ÈÞ´ë¿ë ºí·çÅõ½º ½ºÇÇÄ¿','»óÇ°¹øÈ£ : 1000549888715
 
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000582326954, 'ì— ë²„ ì˜ë¡œìš°', 'ìƒ‰ìƒ',NULL ,1194000, 39);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000582326954, 'ì½”ë°œíŠ¸ ë°”ì´ì˜¬ë ›', 'ìƒ‰ìƒ',NULL ,1194000, 16);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000582326954, 'ë§ˆë¸” ê·¸ë ˆì´', 'ìƒ‰ìƒ',NULL ,1194000, 29);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000582326954, 'ì˜¤ë‹‰ìŠ¤ ë¸”ëž™', 'ìƒ‰ìƒ',NULL ,1194000, 26);
+¸ðµ¨¹øÈ£ : ¸¶¼£ ¿¥¹öÆ°2 ¹«¼± ºí·çÅõ½º ½ºÇÇÄ¿',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000006,'09090102',0,10,'sellerStore018','brand29','[Á¦³×¹Ù] Classic M Hi-Fi ºí·çÅõ½º ¿Àµð¿À ¿ù³Ó + Àü¿ë ½ºÅÄµå','»óÇ°¹øÈ£ : 1000556577134
 
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000398650979, 'ì¼ë°˜ êµ¬ì´ìš©(1.5~1.7cm)', 'ìš©ë„',NULL ,132000, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000398650979, 'ìŠ¤í…Œì´í¬ìš©(4~4.5cm)', 'ìš©ë„',NULL ,132000, NULL);
+¸ðµ¨¹øÈ£ : CLASSICMWST',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000007,'09090102',0,6,'sellerStore019','brand30','[¹«ÄÉ/°ø½Ä¼öÀÔ] ¹ß·ÕµåÆÄ¸® Object 9 + Stand ½ºÇÇÄ¿5 color + ½ºÅÄµå ¹«·á ÁõÁ¤','»óÇ°¹øÈ£ : 1000570849692
 
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'ëŒì‚° ê°“ê¹€ì¹˜ 1kg', 'ê¹€ì¹˜ ì„ íƒ',NULL ,11800, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'ìˆ™ì„± íŒŒê¹€ì¹˜ 1kg', 'ê¹€ì¹˜ ì„ íƒ',NULL ,11800, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'íŒŒê¹€ì¹˜ 1kg', 'ê¹€ì¹˜ ì„ íƒ',NULL ,20000, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'ëŒì‚° ê°“ê¹€ì¹˜ 1kg', 'ê¹€ì¹˜ ì„ íƒ',NULL ,11800, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'ì´ê°ê¹€ì¹˜1kg', 'ê¹€ì¹˜ ì„ íƒ',NULL ,11800, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'ì—´ë¬´ê¹€ì¹˜ 1kg', 'ê¹€ì¹˜ ì„ íƒ',NULL ,11800, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'í•œìž… ë§›ê¹€ì¹˜ 1kg', 'ê¹€ì¹˜ ì„ íƒ',NULL ,11800, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'ë¶€ì¶” ê¹€ì¹˜ 1kg', 'ê¹€ì¹˜ ì„ íƒ',NULL ,11800, NULL);
+¸ðµ¨¹øÈ£ : [¹«ÄÉ/°ø½Ä¼öÀÔ] ¹ß·ÕµåÆÄ¸®Ballon De Paris_ Object 9 + Stand 5color',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000008,'09090102',0,5,'sellerStore020','brand31','Brionvega rr-226 Radiofonografo White ºê¸®¿Âº£°¡ ¶óµð¿ÀÆ÷³ë±×¶óÆ÷ ºí·çÅõ½º LP ¶óµð¿À','»óÇ°¹øÈ£ : 1000026648892
 
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, '420mm', 'ì‚¬ì´ì¦ˆ',NULL ,NULL, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, '450mm', 'ì‚¬ì´ì¦ˆ',NULL ,NULL, NULL);
+¸ðµ¨¹øÈ£ : RR226W',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000009,'09090102',0,5,'sellStore005','brand32','·ç¾Ç¿Àµð¿À R810 ¿ÃÀÎ¿ø ºí·çÅõ½º ½ºÇÇÄ¿ RUARK','»óÇ°¹øÈ£ : 1000580126195
 
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, 'ì„ ë¬¼í¬ìž¥(ë¦¬ë³¸ + ì‡¼í•‘ë°±)', 'ì„ ë¬¼í¬ìž¥',28 ,135900, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, 'ì„ ë¬¼í¬ìž¥ ë¯¸í¬í•¨', 'ì„ ë¬¼í¬ìž¥',28 ,135000, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, 'ì„ ë¬¼í¬ìž¥(ë¦¬ë³¸ + ì‡¼í•‘ë°±)', 'ì„ ë¬¼í¬ìž¥',29 ,135900, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, 'ì„ ë¬¼í¬ìž¥ ë¯¸í¬í•¨', 'ì„ ë¬¼í¬ìž¥',29 ,135000, NULL);
+¸ðµ¨¹øÈ£ : R810',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000010,'09090102',2,3,'sellerStore019','brand33','[¹«ÄÉ] ·ÎÀÌÃ÷_¸ðµâÀÕ S205 V1 SPEAKER ÇÕÆÇÅ¸ÀÔ(15color)','»óÇ°¹øÈ£ : 1000572601910
 
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{BLK} ë¸”ëž™', 'ìƒ‰ìƒ',NULL ,43900, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{GRY} ê·¸ë ˆì´', 'ìƒ‰ìƒ',NULL ,43900, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{RED} ë ˆë“œ', 'ìƒ‰ìƒ',NULL ,43900, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{WHT} í™”ì´íŠ¸', 'ìƒ‰ìƒ',NULL ,43900, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{BLUP} ë¸”ë£¨í•‘í¬', 'ìƒ‰ìƒ',NULL ,43900, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{BLKO} ë¸”ëž™ì˜¤ë Œì§€', 'ìƒ‰ìƒ',NULL ,43900, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{ECOBLU} ì—ì½”ë¸”ë£¨', 'ìƒ‰ìƒ',NULL ,43900, NULL);
+¸ðµ¨¹øÈ£ : S205 V1 SPEAKER ÇÕÆÇÅ¸ÀÔ(15color)',to_date('24/05/26','RR/MM/DD'));
 
 
---ì˜µì…˜ ì—†ëŠ” ìƒí’ˆ 
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000026532717, 'ì‹œëª½ í…Œë¥´ë¯¸í¬ 150ml [No.1 í—¤ì–´ì—ì„¼ìŠ¤-ì†ìƒëª¨ë°œìš©]', NULL,NULL ,62000, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000544937242, 'ë…¸ë¸Œëžœë“œ 3ê²¹ í™”ìž¥ì§€ 33M X 30ë¡¤', NULL,NULL ,10580, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001577943, '[ëƒ‰ë™][ë² íŠ¸ë‚¨] ASCì¸ì¦ ì¹µí…Œì¼ìƒˆìš° (ëŒ€, 21-25, 900g)', NULL,NULL ,29800, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001308233, 'ì—ì½°ë„ë¥´ ì¹˜í‚¤íƒ€ ë°”ë‚˜ë‚˜ 1.2kg (ë´‰)', NULL,NULL ,3580, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097000257655, '[ëƒ‰ìž¥][ê¹€í•´ì¶•í˜‘] í•œëˆ ê³ ì¶”ìž¥ ì œìœ¡ë³¶ìŒ 1,000g', NULL,NULL ,19800, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001557433, 'I`mperfect ë‹¹ë„ì„ ë³„ ëª»ë‚œì´ì‚¬ê³¼ 2kg (ë´‰)', NULL,NULL ,23800, NULL);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001432075, '[ë°€ë„] ë‹´ë°±ì‹ë¹µ 480g', NULL,NULL ,6500, NULL);
 
 
---ì˜µì…˜ ì—†ëŠ” ìƒí’ˆ
+------------------------------ ¸¼À½ »óÇ° ÀÎ¼­Æ® 
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000006,'11050702',0,1,'sellStore002','brand002','±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ','»óÇ°¹øÈ£ : 1000042764299
 
---ë¦¬ë·° 
+¸ðµ¨¹øÈ£ : Á¦À°ººÀ½',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000007,'11050702',0,1,'sellStore002','brand002','±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ','»óÇ°¹øÈ£ : 1000042764296
 
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'daetu01',41,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'m_eum01',41,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'d_Chan01',41,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'dyoung01',41,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'mggun01',41,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'whyun01',41,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'minziZzang',41,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'hive',41,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'newjeans',41,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'cap',41,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
+¸ðµ¨¹øÈ£ : ¾ç³äµ·À° ¿Õ±¸ÀÌ',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000004,'11050702',0,1,'sellStore002','brand002','[°¡°Ý¿ªÁÖÇà] ¾ç³ä ¸ñ½É±¸ÀÌ (700g*2)','»óÇ°¹øÈ£ : 1000590162551',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000005,'11050702',0,1,'sellStore002','brand002','³ëºê·£µå ¹ÙºñÅ¥Æø¸³550g','»óÇ°¹øÈ£ : 1000039785690',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000008,'11050702',0,1,'sellStore002','brand002','±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ','Á¦Ç°¹øÈ£ : 1000042764302
 
+¸ðµ¨¹øÈ£ : Á¦À°ººÀ½',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000009,'11050702',0,1,'sellStore002','brand002','±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ','»óÇ°¹øÈ£ : 1000050510620
 
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'daetu01',42,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'m_eum01',42,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'d_Chan01',42,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'dyoung01',42,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'mggun01',42,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'whyun01',42,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'minziZzang',42,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'hive',42,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',1,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'newjeans',42,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'cap',42,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
+¸ðµ¨¹øÈ£ : °íÃßÀåºÒ°í±â',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000010,'11050702',0,1,'sellStore002','brand002','ÇÇÄÚÅ© ¾ç³äµÅÁö°¥ºñ500g','ºÎµå·´°í ´ÞÄÞÇÑ
+¿ì¸® Áý ÀÎ±â ¸Þ´º
+ÇÇÄÚÅ© ºñ¹Ð¿¬±¸¼ÒÀÇ ³ëÇÏ¿ì·Î ¸¸µç µÅÁö°¥ºñ¸¦ ¼Ò°³ÇÕ´Ï´Ù. ¼öÀÛ¾÷À¸·Î Æ÷¸¦ ¶ß°í Ä®ÁýÀ» ³Ö¾î ½Ä°¨ÀÌ ºÎµå·´°í ¾ç³äÀÌ Àß ¹è¾îµé¾ú¾î¿ä. Æ¯È÷ ¾ç³äÀº Èæ¼³ÅÁ°ú ¸Å½ÇÃ»À¸·Î ´Ü¸ÀÀ» ³»´Â µîÀÇ ºñ¹ý ·¹½ÃÇÇ·Î ¸¸µé¾î ´õ¿í Æ¯º°ÇÏÁÒ. ±¹³»»ê µ¿¹°º¹ÁöÀÎÁõ µÅÁö°¥ºñ ºÎÀ§¸¸ »ç¿ëÇÏ¿© ´õ¿í ¾È½ÉÇÏ°í Áñ±æ ¼ö ÀÖ´Â ÇÇÄÚÅ© ¾ç³äµÅÁö°¥ºñ¸¦ ¸¸³ª º¸¼¼¿ä. ´ÞÄÞ Â¬Á¶¸§ÇÑ ¸À°ú ¿¬ÇÑ À°Áú·Î ¿Â °¡Á· ¸ðµÎ°¡ ¸ÀÀÖ°Ô ¸ÔÀ» ¼ö ÀÖ´ä´Ï´Ù.',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000011,'11050702',0,1,'sellStore002','brand002','Á¦À°ººÀ½ (800g)','¡Ø º» »óÇ° ÀÌ¹ÌÁö´Â ´ëÇ¥ »óÇ° ÀÌ¹ÌÁöÀÔ´Ï´Ù. ½ÇÁ¦ »óÇ°Àº º» ÀÌ¹ÌÁö¿Í »óÀÌÇÒ ¼ö ÀÖ½À´Ï´Ù.
 
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'daetu01',4,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'m_eum01',5,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',1,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'d_Chan01',6,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',1,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'dyoung01',7,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'mggun01',8,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'whyun01',6,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'minziZzang',4,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'hive',4,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'newjeans',5,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'cap',6,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
+¡á »óÇ°¸í : Á¦À°ººÀ½ 800g
 
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'daetu01',43,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'m_eum01',43,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'d_Chan01',43,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'dyoung01',43,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'mggun01',43,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'whyun01',43,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'minziZzang',43,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'hive',43,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'newjeans',43,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'cap',43,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
+¡á ³»¿ë·® : 800g
 
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'daetu01',14,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'m_eum01',15,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'d_Chan01',14,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'dyoung01',14,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'mggun01',14,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'whyun01',15,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'minziZzang',16,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'hive',17,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'newjeans',17,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'cap',17,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
+¡á ¿øÀç·á ¹× ÇÔ·® : ÇÏ´Ü »ó¼¼ÀÌ¹ÌÁö Âü°í',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000012,'11050702',0,1,'sellStore002','brand002','[³ÃÀå][±èÇØÃàÇù] ÇÑµ· °íÃßÀå Á¦À°ººÀ½ 1,000g','°¡Á·ÀÌ ÁÁ¾ÆÇÏ´Â
+°íÃßÀå Á¦À°ººÀ½
+¿ì¸® ¶¥¿¡¼­ ÀÚ¶ó ¹ÏÀ» ¼ö ÀÖ´Â ÇÑµ·À¸·Î ¸¸µç °íÃßÀå Á¦À°ººÀ½À» ½ÄÅ¹¿¡ ¿Ã·Áº¸¼¼¿ä. ÇÑ±¹ÀÎÀÌ ÁÁ¾ÆÇÏ´Â ¹ÝÂù Á¦À°ººÀ½À¸·Î ¿Â °¡Á·ÀÇ ÇÑ ³¢ ½Ä»ç·Î ¸À°ú ¾ç¿¡ ºÎÁ·ÇÔÀÌ ¾ø´ä´Ï´Ù. µû·Î ¾ç³äÀ» Àç¿ì°í ¼ÕÁúÇÏ´Â °úÁ¤ ¾øÀÌ ¹Ù·Î ¿ä¸®°¡ °¡´ÉÇÑ »óÇ°ÀÌ´Ï ¹ø°Å·Î¿ò ¾øÀÌ ÇªÁüÇÑ ÇÑ »óÀ» Â÷·Áº¸¼¼¿ä. Á¦À°µ¤¹äÀ¸·Î Áñ°Üµµ ÁÁ°í, ½Ó°ú °çµé¿© ÇªÁüÇÏ°í ¸ÀÀÖ°Ô Áñ°Üµµ ÁÁ´ä´Ï´Ù.',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000013,'11050702',0,1,'sellStore002','brand002','[°¡°Ý¿ªÁÖÇà] ÈÆÁ¦¸ñ½É (400g)','¡Ø º» »óÇ° ÀÌ¹ÌÁö´Â ´ëÇ¥ »óÇ° ÀÌ¹ÌÁöÀÔ´Ï´Ù. ½ÇÁ¦ »óÇ°Àº º» ÀÌ¹ÌÁö¿Í »óÀÌÇÒ ¼ö ÀÖ½À´Ï´Ù.
 
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'daetu01',18,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'m_eum01',19,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'d_Chan01',18,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'dyoung01',18,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'mggun01',18,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'whyun01',19,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'minziZzang',18,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'hive',18,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'newjeans',18,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'cap',19,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
+¡á »óÇ°¸í : °¡°Ý¿ªÁÖÇà ÈÆÁ¦¸ñ½É 400g
 
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'daetu01',20,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'m_eum01',22,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'d_Chan01',21,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'dyoung01',25,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'mggun01',26,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'whyun01',27,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'minziZzang',24,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'hive',23,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'newjeans',24,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',1,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'cap',25,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',1,1,1,1);
+¡á ³»¿ë·® : 400g
 
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'daetu01',44,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'m_eum01',4,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'d_Chan01',44,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'dyoung01',44,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'mggun01',44,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'whyun01',44,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'minziZzang',44,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'hive',44,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'newjeans',44,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'cap',44,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
-
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'daetu01',45,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'m_eum01',45,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'d_Chan01',45,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'dyoung01',45,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'mggun01',45,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'whyun01',45,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'minziZzang',45,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'hive',45,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'newjeans',45,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'cap',45,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
-
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'daetu01',46,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'m_eum01',46,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'d_Chan01',46,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'dyoung01',46,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'mggun01',46,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'whyun01',46,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'minziZzang',46,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'hive',46,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'newjeans',46,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'cap',46,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
-
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'daetu01',30,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'m_eum01',30,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'d_Chan01',30,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'dyoung01',31,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'mggun01',31,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'whyun01',31,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'minziZzang',33,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'hive',33,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'newjeans',34,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'cap',34,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
-
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,daetu01,productOptionId,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,m_eum01,productOptionId,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,d_Chan01,productOptionId,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,dyoung01,productOptionId,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,mggun01,productOptionId,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,whyun01,productOptionId,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,minziZzang,productOptionId,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,hive,productOptionId,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,newjeans,productOptionId,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,cap,productOptionId,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
---11ë²ˆ
-
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'daetu01',34,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'m_eum01',34,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'d_Chan01',35,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'dyoung01',35,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'mggun01',35,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'whyun01',39,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'minziZzang',39,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'hive',40,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'newjeans',40,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'cap',34,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
-
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'daetu01',47,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'m_eum01',47,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'d_Chan01',47,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'dyoung01',47,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'mggun01',47,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'whyun01',47,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'minziZzang',47,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'hive',47,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'newjeans',47,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
-INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'cap',47,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
-
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,daetu01,productOptionId,'ë§Œì¡±í•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,m_eum01,productOptionId,'ìµœê³ ì—ìš©','2024.05.03','ì¼ë°˜',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,d_Chan01,productOptionId,'ì¡°ì•„ìš©','2024.05.03','ì¼ë°˜',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,dyoung01,productOptionId,'ì›ëž˜ ì“°ë˜ ìƒí’ˆì´ë¼ ìž¬êµ¬ë§¤í•©ë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,mggun01,productOptionId,'í•­ìƒ ì´ê²ƒë§Œì‚¬ìš©í•´ìš”','2024.05.03','ì¼ë°˜',2,3,2,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,whyun01,productOptionId,'ê°€ë³ê³  ì¢‹ìŠµë‹ˆë‹¤','2024.05.03','ì¼ë°˜',1,3,2,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,minziZzang,productOptionId,'ì™„ì „ ì¶”ì²œí•©ë‹ˆë‹¤','2024.05.03','ì¼ë°˜',3,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,hive,productOptionId,'ë§Œì¡±ë„ê°€ ìž¥ë‚œì•„ë‹ˆì—ìš”','2024.05.03','ì¼ë°˜',3,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,newjeans,productOptionId,'ì´‰ê°ì´ ì¢‹ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',2,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,cap,productOptionId,'ë‹¤ìŒì— ë˜ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.','2024.05.03','ì¼ë°˜',5,3,3,3);
---15ë²ˆ
+¡á ¿øÀç·á ¹× ÇÔ·® : ÇÏ´Ü »ó¼¼ÀÌ¹ÌÁö Âü°í',to_date('24/05/26','RR/MM/DD'));
 
 
---------ìƒí’ˆ ë§í¬
+-------------------------------------- µ¿¿µ »óÇ° ÀÎ¼­Æ®
+-- ³ëºê·£µå Æ÷±â±èÄ¡
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000036684949, 12030101, 0, 1, 'sellStore002', 'brand02', '³ëºê·£µå º°¹ÌÆ÷±â±èÄ¡3.5kg', '½Ã¿øÇÏ°í ±ò²ûÇÑ º°¹Ì Æ÷±â±èÄ¡', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000067576484, '³ëºê·£µå º°¹ÌÆ÷±â±èÄ¡3.5kg' , NULL, NULL, 15980, 1000);
+
+-- ¼®¹ÚÁö
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000521094336, 12030102, 0, 1, 'sellStore002', 'brandÁ¾°¡Áý', 'Á¾°¡ ½Ã¿øÇÏ°í ¾Æ»èÇÑ ¼®¹ÚÁö 900g', 'Á¦Ã¶ ¹«·Î ´ãÀº ½Ã¿øÇÑ ¼®¹ÚÁö', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000521094336, 'Á¾°¡ ½Ã¿øÇÏ°í ¾Æ»èÇÑ ¼®¹ÚÁö 900g' , NULL, NULL, 13900, 10000);
+
+-- ºñºñ°í ´ÜÁö±èÄ¡
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000020869356, 12030101, 0, 1, 'sellStore002', 'brandºñºñ°í', 'CJ ºñºñ°í ½äÀº¹èÃß±èÄ¡ 500g (PET)(´ÜÁö±èÄ¡)', 'ÆíÇÏ°Ô È¥ÀÚ¼­µµ ¸ÀÀÖ°Ô, ºñºñ°í ½äÀº ¹èÃß±èÄ¡', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000020869356, 'Á¾°¡ ½Ã¿øÇÏ°í ¾Æ»èÇÑ ¼®¹ÚÁö 900g' , NULL, NULL, 9800 , 1500);
+
+-- Á¾°¡Áý ¿­¹«±èÄ¡
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000047906497, 12030102, 0, 1, 'sellStore002', 'brandÁ¾°¡Áý', 'Á¾°¡ ¿À·¡¿À·¡ ¸ÀÀÖ´Â ¿­¹«±èÄ¡ 900g', '¾Æ»èÇÏ°í ½Ã¿øÇÑ ¿ì¸® ³ó»ê¹° ±èÄ¡', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000047906497, 'Á¾°¡ ¿À·¡¿À·¡ ¸ÀÀÖ´Â ¿­¹«±èÄ¡ 900g' , NULL, NULL, 9980 , 1600);
+
+-- ÇÇÄÚÅ© Æ÷±â±èÄ¡
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000063852561, 12030101, 0, 1, 'sellStore002', 'brandÇÇÄÚÅ©', 'ÇÇÄÚÅ© Á¶¼±È£ÅÚÆ¯Á¦À°¼ö Æ÷±â±èÄ¡ 1kg', '±íÀº °¨Ä¥¸ÀÀÇ ÇÁ¸®¹Ì¾ö Æ÷±â±èÄ¡', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000063852561, 'ÇÇÄÚÅ© Á¶¼±È£ÅÚÆ¯Á¦À°¼ö Æ÷±â±èÄ¡ 1kg' , NULL, NULL, 9980 , 2000);
+
+-- ³ëºê·£µå º°¹Ì ººÀ½±èÄ¡
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000293138988, 12030104, 0, 1, 'sellStore002', 'brand³ëºê·£µå', '³ëºê·£µå º°¹Ì ººÀ½±èÄ¡ 400g', '°çµé¿© ¸Ô±â ÁÁÀº º°¹Ì ººÀ½ ±èÄ¡', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000293138988, '³ëºê·£µå º°¹Ì ººÀ½±èÄ¡ 400g' , NULL, NULL, 3280  , 15000);
+
+-- [Á¾°¡Áý]½Ã¿ø ±ò²û Æ÷±â±èÄ¡ 3.3kg
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000031232139, 12030101, 0, 1, 'sellStore002', 'brandÁ¾°¡Áý', '[Á¾°¡Áý]½Ã¿ø ±ò²û Æ÷±â±èÄ¡ 3.3kg', '½Ã¿øÇÏ°í ±ò²ûÇÑ Á¾°¡ÁýÀÇ Æ÷±â±èÄ¡', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000031232139, '[Á¾°¡Áý]½Ã¿ø ±ò²û Æ÷±â±èÄ¡ 3.3kg' , NULL, NULL, 33800  , 1000);
+
+-- [Á¾°¡Áý] µ¿Ä¡¹Ì 1.2kg
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000008952676, 12030103, 0, 1, 'sellStore002', 'brandÁ¾°¡Áý', '[Á¾°¡Áý] µ¿Ä¡¹Ì 1.2kg', 'ÀÚ¿¬ÀÇ Àç·á·Î °Ç°­ÇÑ ´Ü¸À', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000008952676, '[Á¾°¡Áý] µ¿Ä¡¹Ì 1.2kg' , NULL, NULL, 11800  , 1300);
+
+-- [Á¾°¡Áý] ¾î¸°ÀÌ ÇÑÀÔ ±ïµÎ±â 300g
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000021131356, 12030102, 0, 1, 'sellStore002', 'brandÁ¾°¡Áý', '[Á¾°¡Áý] ¾î¸°ÀÌ ÇÑÀÔ ±ïµÎ±â 300g', '¿ì¸® ¾ÆÀÌ À§ÇÑ ¼øÇÑ ÇÑÀÔ ±ïµÎ±â', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000021131356, '[Á¾°¡Áý] ¾î¸°ÀÌ ÇÑÀÔ ±ïµÎ±â 300g' , NULL, NULL, 4380  , 200);
+
+-- ¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000523249169, 12030101, 0, 1, 'sellStore¹Ì¹ÌÀÇ¹ä»ó', 'brand½ÇºñÁý', '¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg', '¸ÅÄÞÇÔ¿¡ ¼Ó±îÁö »½~¶Õ¸®´Â °æÇè! ¸ÊÁö¸¸ Áßµ¶¼º ÀÖ´Â ±× ¸À!', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000523249169, '¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg' , NULL, NULL, 19700  , 800);
+
+
+--------------------------------- ¿ìÇö »óÇ° ÀÎ¼­Æ®
+-- »óÇ° 1 »ðÀÔ
+INSERT INTO product VALUES (10201, '01020501', 0, 9, 1, 1, 'ºñºñ¾È¿þ½ºÆ®¿ìµå Æ¼¼ÅÃ÷ ¹ÝÆÈ Å¬·¡½Ä È­ÀÌÆ® Èò»ö 3G010013 J001M A401', '»óÇ°¹øÈ£ : 10201', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10201, 'ºñºñ¾È¿þ½ºÆ®¿ìµå Æ¼¼ÅÃ÷ ¹ÝÆÈ Å¬·¡½Ä È­ÀÌÆ® Èò»ö 3G010013 J001M A401', 'ºñºñ¾È¿þ½ºÆ®¿ìµå Æ¼¼ÅÃ÷ ¹ÝÆÈ Å¬·¡½Ä È­ÀÌÆ® Èò»ö', NULL, 19900, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'daetu01', NULL, '¸¸Á·ÇÕ´Ï´Ù', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'm_eum01', NULL, 'ÃÖ°í¿¡¿ë', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'd_Chan01', NULL, 'ÀÌ»µ¿ë', SYSDATE, 'ÀÏ¹Ý', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'dyoung01', NULL, '¹ÝÆÈÀº ºñºñ¾È!.', SYSDATE, 'ÀÏ¹Ý', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'mggun01', NULL, 'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä', SYSDATE, 'ÀÏ¹Ý', 2, 3, 2, 3);
+
+-- »óÇ° 2 »ðÀÔ
+INSERT INTO product VALUES (10202, '01020502', 0, 9, 8, 2, '[Æú·Î¶öÇÁ·Î·»] º¸ÀÌÁî ¹ÝÆÈ ÇÇÄÉ Æú·Î ¼ÅÃ÷ ¹«·á¹è¼Û °üºÎ°¡¼¼ Æ÷ÇÔ', '»óÇ°¹øÈ£ : 10202', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10202, '[Æú·Î¶öÇÁ·Î·»] º¸ÀÌÁî ¹ÝÆÈ ÇÇÄÉ Æú·Î ¼ÅÃ÷ ¹«·á¹è¼Û °üºÎ°¡¼¼ Æ÷ÇÔ', '[Æú·Î¶öÇÁ·Î·»] º¸ÀÌÁî ¹ÝÆÈ ÇÇÄÉ Æú·Î ¼ÅÃ÷ ', NULL, 6004, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'daetu01', NULL, '¸¸Á·ÇÕ´Ï´Ù', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'm_eum01', NULL, 'ÃÖ°í¿¡¿ë', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'd_Chan01', NULL, 'ÀÌ»µ¿ë', SYSDATE, 'ÀÏ¹Ý', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'dyoung01', NULL, '¹ÝÆÈÀº ºñºñ¾È!.', SYSDATE, 'ÀÏ¹Ý', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'mggun01', NULL, 'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä', SYSDATE, 'ÀÏ¹Ý', 2, 3, 2, 3);
+
+-- »óÇ° 3 »ðÀÔ
+INSERT INTO product VALUES (10203, '01020503', 0, 9, 8, 3, '[Åèºê¶ó¿î] ±¹³»¹è¼Û 24SS Åèºê¶ó¿î »ç¼± 4¹Ù Æ÷ÀÎÅÚ ´ÏÆ® ½º¿þÅÍ FKA453A Y3017 101', '»óÇ°¹øÈ£ : 10203', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10203, '±¹³»¹è¼Û 24SS Åèºê¶ó¿î »ç¼± 4¹Ù Æ÷ÀÎÅÚ ´ÏÆ® ½º¿þÅÍ', '[Åèºê¶ó¿î] Åèºê¶ó¿î »ç¼± 4¹Ù Æ÷ÀÎÅÚ ´ÏÆ® ½º¿þÅÍ ', NULL, 6005, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'daetu01', NULL, '¸¸Á·ÇÕ´Ï´Ù', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'm_eum01', NULL, 'ÃÖ°í¿¡¿ë', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'd_Chan01', NULL, 'ÀÌ»µ¿ë', SYSDATE, 'ÀÏ¹Ý', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'dyoung01', NULL, '¹ÝÆÈÀº ºñºñ¾È!.', SYSDATE, 'ÀÏ¹Ý', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'mggun01', NULL, 'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä', SYSDATE, 'ÀÏ¹Ý', 2, 3, 2, 3);
+
+-- »óÇ° 4 »ðÀÔ
+INSERT INTO product VALUES (10204, '01020504', 0, 9, 8, 4, '[¾Æ¹Ì] 24SS ¿©¼º ½º¸ô ·Î°í Ä«¶ó Æ¼¼ÅÃ÷ BFUPL001 760 001', '»óÇ°¹øÈ£ : 10204', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10204, '[¾Æ¹Ì] 24SS ¿©¼º ½º¸ô ·Î°í Ä«¶ó Æ¼¼ÅÃ÷ BFUPL001 760 001', '[¾Æ¹Ì] ¿©¼º ½º¸ô ·Î°í Ä«¶ó Æ¼¼ÅÃ÷ ', NULL, 6006, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'daetu01', NULL, '¸¸Á·ÇÕ´Ï´Ù', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'm_eum01', NULL, 'ÃÖ°í¿¡¿ë', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'd_Chan01', NULL, 'ÀÌ»µ¿ë', SYSDATE, 'ÀÏ¹Ý', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'dyoung01', NULL, '¹ÝÆÈÀº ºñºñ¾È!.', SYSDATE, 'ÀÏ¹Ý', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'mggun01', NULL, 'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä', SYSDATE, 'ÀÏ¹Ý', 2, 3, 2, 3);
+
+-- »óÇ° 5 »ðÀÔ
+INSERT INTO product VALUES (10205, '01020505', 0, 9, 8, 5, '[²Äµ¥°¡¸£¼Û] (±¹³»¹è¼Û) 24SS ²Äµ¥°¡¸£¼Û ¿©¼º ·¹µåÇÏÆ® ¿ÍÆæ ¹ÝÆÈÆ¼ P1T107 1', '»óÇ°¹øÈ£ : 10205', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10205, '[²Äµ¥°¡¸£¼Û] 24SS ²Äµ¥°¡¸£¼Û ¿©¼º ·¹µåÇÏÆ® ¿ÍÆæ ¹ÝÆÈÆ¼ P1T107 1', '[²Äµ¥°¡¸£¼Û] 24SS ²Äµ¥°¡¸£¼Û ¿©¼º ·¹µåÇÏÆ® ¿ÍÆæ ¹ÝÆÈÆ¼', NULL, 6007, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'daetu01', NULL, '¸¸Á·ÇÕ´Ï´Ù', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'm_eum01', NULL, 'ÃÖ°í¿¡¿ë', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'd_Chan01', NULL, 'ÀÌ»µ¿ë', SYSDATE, 'ÀÏ¹Ý', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'dyoung01', NULL, '¹ÝÆÈÀº ºñºñ¾È!.', SYSDATE, 'ÀÏ¹Ý', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'mggun01', NULL, 'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä', SYSDATE, 'ÀÏ¹Ý', 2, 3, 2, 3);
+
+-- »óÇ° 6 »ðÀÔ
+INSERT INTO product VALUES (10206, '01020506', 0, 9, 8, 6, '[¸ÞÁ¾¸¶¸£Áö¿¤¶ó] ¸ÞÁ¾¸¶¸£Áö¿¤¶ó ¿©¼º ·Î°í ¿ö½Ãµå ºí·¢ ¹ÝÆÈÆ¼ S51GC0526 S20079 970', '»óÇ°¹øÈ£ : 10206', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10206, '[¸ÞÁ¾¸¶¸£Áö¿¤¶ó] ¸ÞÁ¾¸¶¸£Áö¿¤¶ó ¿©¼º ·Î°í ¿ö½Ãµå ºí·¢ ¹ÝÆÈÆ¼ S51GC0526 S20079 970', '[¸ÞÁ¾¸¶¸£Áö¿¤¶ó] ¸ÞÁ¾¸¶¸£Áö¿¤¶ó ¿©¼º ·Î°í ¿ö½Ãµå ºí·¢ ¹ÝÆÈÆ¼ ', NULL, 6008, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'daetu01', NULL, '¸¸Á·ÇÕ´Ï´Ù', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'm_eum01', NULL, 'ÃÖ°í¿¡¿ë', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'd_Chan01', NULL, 'ÀÌ»µ¿ë', SYSDATE, 'ÀÏ¹Ý', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'dyoung01', NULL, '¹ÝÆÈÀº ºñºñ¾È!.', SYSDATE, 'ÀÏ¹Ý', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'mggun01', NULL, 'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä', SYSDATE, 'ÀÏ¹Ý', 2, 3, 2, 3);
+
+-- »óÇ° 7 »ðÀÔ
+INSERT INTO product VALUES (10207, '01020507', 0, 9, 8, 7, '[¹ÝÅ¬¸®ÇÁ¾Ø¾ÆÆç] ¿À¸£¼ö ¹ÝÅ¬¸®ÇÁ¾Ø¾ÆÆç ½ºÀ§Æ® ¾ËÇÔºê¶ó Ææ´øÆ® ÀÚ°³ ¸ñ°ÉÀÌ 18K', '»óÇ°¹øÈ£ : 10207', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10207, '[¹ÝÅ¬¸®ÇÁ¾Ø¾ÆÆç] ¿À¸£¼ö ¹ÝÅ¬¸®ÇÁ¾Ø¾ÆÆç ½ºÀ§Æ® ¾ËÇÔºê¶ó Ææ´øÆ® ÀÚ°³ ¸ñ°ÉÀÌ 18K', '[¹ÝÅ¬¸®ÇÁ¾Ø¾ÆÆç] ¿À¸£¼ö ¹ÝÅ¬¸®ÇÁ¾Ø¾ÆÆç ½ºÀ§Æ® ¾ËÇÔºê¶ó Ææ´øÆ® ÀÚ°³ ¸ñ°ÉÀÌ 18K ', NULL, 6005, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'daetu01', NULL, '¸¸Á·ÇÕ´Ï´Ù', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'm_eum01', NULL, 'ÃÖ°í¿¡¿ë', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'd_Chan01', NULL, 'ÀÌ»µ¿ë', SYSDATE, 'ÀÏ¹Ý', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'dyoung01', NULL, '¹ÝÆÈÀº ºñºñ¾È!.', SYSDATE, 'ÀÏ¹Ý', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'mggun01', NULL, 'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä', SYSDATE, 'ÀÏ¹Ý', 2, 3, 2, 3);
+
+-- »óÇ° 8 »ðÀÔ
+INSERT INTO product VALUES (10208, '01020508', 0, 9, 8, 8, '[·Ñ·º½º] ·Ñ·º½º ·Î·º½º 179171 µ¥ÀÌÀú½ºÆ® 26 ÄÞºñ ·Î¸¸Ã¼ ÀÚ°³ÆÇ', '»óÇ°¹øÈ£ : 10208', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10208, '[·Ñ·º½º] ·Ñ·º½º ·Î·º½º 179171 µ¥ÀÌÀú½ºÆ® 26 ÄÞºñ ·Î¸¸Ã¼ ÀÚ°³ÆÇ', '[·Ñ·º½º] ·Ñ·º½º ·Î·º½º 179171 µ¥ÀÌÀú½ºÆ® 26 ÄÞºñ ·Î¸¸Ã¼ ÀÚ°³ÆÇ', NULL, 6005, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'daetu01', NULL, '¸¸Á·ÇÕ´Ï´Ù', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'm_eum01', NULL, 'ÃÖ°í¿¡¿ë', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'd_Chan01', NULL, 'ÀÌ»µ¿ë', SYSDATE, 'ÀÏ¹Ý', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'dyoung01', NULL, '¹ÝÆÈÀº ºñºñ¾È!.', SYSDATE, 'ÀÏ¹Ý', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'mggun01', NULL, 'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä', SYSDATE, 'ÀÏ¹Ý', 2, 3, 2, 3);
+
+-- »óÇ° 9 »ðÀÔ
+INSERT INTO product VALUES (10209, '01020509', 0, 9, 8, 9, '[¸ùÅ¬·¹¾î] ¸ùÅ¬·¹¾î 23FW ºí·¢ ¸ùÁ¦Å×Å© ±×·¹³ëºí ÈÄµå ±¸½º ´Ù¿î ÀÚÄÏ MONTGETECH 1A00044 53066 999', '»óÇ°¹øÈ£ : 10209', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10209, '[¸ùÅ¬·¹¾î] ¸ùÅ¬·¹¾î 23FW ºí·¢ ¸ùÁ¦Å×Å© ±×·¹³ëºí ÈÄµå ±¸½º ´Ù¿î ÀÚÄÏ', '[¸ùÅ¬·¹¾î] ¸ùÅ¬·¹¾î 23FW ºí·¢ ¸ùÁ¦Å×Å© ±×·¹³ëºí ÈÄµå ±¸½º ´Ù¿î ÀÚÄÏ ', NULL, 6005, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'daetu01', NULL, '¸¸Á·ÇÕ´Ï´Ù', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'm_eum01', NULL, 'ÃÖ°í¿¡¿ë', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'd_Chan01', NULL, 'ÀÌ»µ¿ë', SYSDATE, 'ÀÏ¹Ý', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'dyoung01', NULL, '¹ÝÆÈÀº ºñºñ¾È!.', SYSDATE, 'ÀÏ¹Ý', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'mggun01', NULL, 'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä', SYSDATE, 'ÀÏ¹Ý', 2, 3, 2, 3);
+
+-- »óÇ° 10 »ðÀÔ
+INSERT INTO product VALUES (10210, '01020510', 0, 9, 8, 10, '[½ºÅæ¾ÆÀÏ·£µå] 24SS ½ºÅæ ³ªÀÏ·Ð¸ÞÅ» ¿À¹ö¼ÅÃ÷ ºí·¢ 801511219 801511219 V0029', '»óÇ°¹øÈ£ : 10210', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10210, '[½ºÅæ¾ÆÀÏ·£µå] 24SS ½ºÅæ ³ªÀÏ·Ð¸ÞÅ» ¿À¹ö¼ÅÃ÷ ºí·¢ 801511219 801511219 V0029', '[½ºÅæ¾ÆÀÏ·£µå] 24SS ½ºÅæ ³ªÀÏ·Ð¸ÞÅ» ¿À¹ö¼ÅÃ÷ ºí·¢ ', NULL, 6005, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'daetu01', NULL, '¸¸Á·ÇÕ´Ï´Ù', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'm_eum01', NULL, 'ÃÖ°í¿¡¿ë', SYSDATE, 'ÀÏ¹Ý', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'd_Chan01', NULL, 'ÀÌ»µ¿ë', SYSDATE, 'ÀÏ¹Ý', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'dyoung01', NULL, '¹ÝÆÈÀº ºñºñ¾È!.', SYSDATE, 'ÀÏ¹Ý', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'mggun01', NULL, 'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä', SYSDATE, 'ÀÏ¹Ý', 2, 3, 2, 3);
+
+
+
+--»óÇ°¿É¼ÇÀÎ¼­Æ®
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '2027', 'Á¤ÀåµðÀÚÀÎ',NULL ,null, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '2028', 'Á¤ÀåµðÀÚÀÎ',NULL ,null, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '2030', 'Á¤ÀåµðÀÚÀÎ',NULL ,null, NULL);
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '97/74', 'Á¤Àå»çÀÌÁî',1 ,109000, 50);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '100/86', 'Á¤Àå»çÀÌÁî',1 ,109000, 50);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '97/74', 'Á¤Àå»çÀÌÁî',2 ,109000, 50);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '97/78', 'Á¤Àå»çÀÌÁî',2 ,109000, 50);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '100/74', 'Á¤Àå»çÀÌÁî',2 ,109000, 50);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '100/78', 'Á¤Àå»çÀÌÁî',2 ,109000, 50);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '100/82', 'Á¤Àå»çÀÌÁî',2 ,109000, 50);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '95/78', 'Á¤Àå»çÀÌÁî',3 ,109000, 50);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '97/86', 'Á¤Àå»çÀÌÁî',3 ,109000, 50);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '100/86', 'Á¤Àå»çÀÌÁî',3 ,109000, 50);
+
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000582326954, '¿¥¹ö ¿»·Î¿ì', '»ö»ó',NULL ,1194000, 39);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000582326954, 'ÄÚ¹ßÆ® ¹ÙÀÌ¿Ã·¿', '»ö»ó',NULL ,1194000, 16);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000582326954, '¸¶ºí ±×·¹ÀÌ', '»ö»ó',NULL ,1194000, 29);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000582326954, '¿À´Ð½º ºí·¢', '»ö»ó',NULL ,1194000, 26);
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000398650979, 'ÀÏ¹Ý ±¸ÀÌ¿ë(1.5~1.7cm)', '¿ëµµ',NULL ,132000, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000398650979, '½ºÅ×ÀÌÅ©¿ë(4~4.5cm)', '¿ëµµ',NULL ,132000, NULL);
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'µ¹»ê °«±èÄ¡ 1kg', '±èÄ¡ ¼±ÅÃ',NULL ,11800, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, '¼÷¼º ÆÄ±èÄ¡ 1kg', '±èÄ¡ ¼±ÅÃ',NULL ,11800, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'ÆÄ±èÄ¡ 1kg', '±èÄ¡ ¼±ÅÃ',NULL ,20000, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'µ¹»ê °«±èÄ¡ 1kg', '±èÄ¡ ¼±ÅÃ',NULL ,11800, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'ÃÑ°¢±èÄ¡1kg', '±èÄ¡ ¼±ÅÃ',NULL ,11800, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, '¿­¹«±èÄ¡ 1kg', '±èÄ¡ ¼±ÅÃ',NULL ,11800, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'ÇÑÀÔ ¸À±èÄ¡ 1kg', '±èÄ¡ ¼±ÅÃ',NULL ,11800, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000014118201, 'ºÎÃß ±èÄ¡ 1kg', '±èÄ¡ ¼±ÅÃ',NULL ,11800, NULL);
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, '420mm', '»çÀÌÁî',NULL ,NULL, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, '450mm', '»çÀÌÁî',NULL ,NULL, NULL);
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, '¼±¹°Æ÷Àå(¸®º» + ¼îÇÎ¹é)', '¼±¹°Æ÷Àå',28 ,135900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, '¼±¹°Æ÷Àå ¹ÌÆ÷ÇÔ', '¼±¹°Æ÷Àå',28 ,135000, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, '¼±¹°Æ÷Àå(¸®º» + ¼îÇÎ¹é)', '¼±¹°Æ÷Àå',29 ,135900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000579723160, '¼±¹°Æ÷Àå ¹ÌÆ÷ÇÔ', '¼±¹°Æ÷Àå',29 ,135000, NULL);
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{BLK} ºí·¢', '»ö»ó',NULL ,43900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{GRY} ±×·¹ÀÌ', '»ö»ó',NULL ,43900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{RED} ·¹µå', '»ö»ó',NULL ,43900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{WHT} È­ÀÌÆ®', '»ö»ó',NULL ,43900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{BLUP} ºí·çÇÎÅ©', '»ö»ó',NULL ,43900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{BLKO} ºí·¢¿À·»Áö', '»ö»ó',NULL ,43900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000059288917, '{ECOBLU} ¿¡ÄÚºí·ç', '»ö»ó',NULL ,43900, NULL);
+
+
+--¿É¼Ç ¾ø´Â »óÇ° 
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000026532717, '½Ã¸ù Å×¸£¹ÌÅ© 150ml [No.1 Çì¾î¿¡¼¾½º-¼Õ»ó¸ð¹ß¿ë]', NULL,NULL ,62000, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000544937242, '³ëºê·£µå 3°ã È­ÀåÁö 33M X 30·Ñ', NULL,NULL ,10580, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001577943, '[³Ãµ¿][º£Æ®³²] ASCÀÎÁõ Ä¬Å×ÀÏ»õ¿ì (´ë, 21-25, 900g)', NULL,NULL ,29800, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001308233, '¿¡Äâµµ¸£ Ä¡Å°Å¸ ¹Ù³ª³ª 1.2kg (ºÀ)', NULL,NULL ,3580, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097000257655, '[³ÃÀå][±èÇØÃàÇù] ÇÑµ· °íÃßÀå Á¦À°ººÀ½ 1,000g', NULL,NULL ,19800, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001557433, 'I`mperfect ´çµµ¼±º° ¸ø³­ÀÌ»ç°ú 2kg (ºÀ)', NULL,NULL ,23800, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001432075, '[¹Ðµµ] ´ã¹é½Ä»§ 480g', NULL,NULL ,6500, NULL);
+
+
+------------------------------ µ¿Âù »óÇ°¿É¼Ç ÀÎ¼­Æ®
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (49,3000000000001,'»ï¼º°ø½ÄÆÄÆ®³Ê ÇÏ¸¸Ä«µ· ¿À¶ó ½ºÆ©µð¿À4 ºí·çÅõ½º ½ºÇÇÄ¿ AURA STUDIO4','»ï¼º°ø½ÄÆÄÆ®³Ê ÇÏ¸¸Ä«µ· ¿À¶ó ½ºÆ©µð¿À4 ºí·çÅõ½º ½ºÇÇÄ¿ AURA STUDIO4',NULL,290000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (50,3000000000002,'{WHT} È­ÀÌÆ®','»ö»ó',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (51,3000000000002,'{BLU} ºí·ç','»ö»ó',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (52,3000000000002,'{TEL} ¹ÎÆ®','»ö»ó',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (53,3000000000002,'{PINK} ÇÎÅ©','»ö»ó',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (54,3000000000002,'{GREY} ±×·¹ÀÌ','»ö»ó',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (55,3000000000002,'{BLK} ºí·¢','»ö»ó',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (56,3000000000002,'{RED} ·¹µå','»ö»ó',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (57,3000000000003,'·¹µå','»ö»ó',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (58,3000000000003,'³×ÀÌºñ','»ö»ó',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (59,3000000000003,'±×¸°','»ö»ó',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (60,3000000000003,'ÆÛÇÃ','»ö»ó',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (61,3000000000003,'¿À·»Áö','»ö»ó',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (62,3000000000003,'ºí·¢(¿À·»Áö)','»ö»ó',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (63,3000000000003,'ºí·¢(±×¸°)','»ö»ó',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (64,3000000000004,'Ææ´õ¸®ÇÁ FENDER RIFF ºí·çÅõ½º ½ºÇÇÄ¿','Ææ´õ¸®ÇÁ FENDER RIFF ºí·çÅõ½º ½ºÇÇÄ¿',NULL,628950,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (65,3000000000005,'Å©¸²','»ö»ó',NULL,219900,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (66,3000000000005,'ºí·¢¾Øºê·¡½º','»ö»ó',NULL,219900,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (67,3000000000005,'ºí·¢¾Ø½ºÆ¿','»ö»ó',NULL,234814,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (68,3000000000006,'[Á¦³×¹Ù] Classic M Hi-Fi ºí·çÅõ½º ¿Àµð¿À ¿ù³Ó + Àü¿ë ½ºÅÄµå','[Á¦³×¹Ù] Classic M Hi-Fi ºí·çÅõ½º ¿Àµð¿À ¿ù³Ó + Àü¿ë ½ºÅÄµå',NULL,1560000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (69,3000000000007,'Beige','ÅëÇÕ»ö»ó',NULL,4430000,999);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (70,3000000000007,'Yellow','ÅëÇÕ»ö»ó',NULL,4430000,999);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (71,3000000000007,'Blue','ÅëÇÕ»ö»ó',NULL,4430000,999);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (72,3000000000007,'Red','ÅëÇÕ»ö»ó',NULL,4430000,999);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (73,3000000000007,'Black','ÅëÇÕ»ö»ó',NULL,4430000,999);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (75,3000000000009,'¿ù³Ó','»ö»ó',NULL,7450000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (76,3000000000009,'±×·¹ÀÌ','»ö»ó',NULL,7450000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (77,3000000000010,'ºñºñµå ·¹µå','ÅëÇÕ»ö»ó',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (78,3000000000010,'Ä³·µ ¿À·»Áö','ÅëÇÕ»ö»ó',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (79,3000000000010,'Çã´Ï ¿»·Î¿ì','ÅëÇÕ»ö»ó',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (80,3000000000010,'ÇÁ·¹½¬ ±×¸°','ÅëÇÕ»ö»ó',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (81,3000000000010,'»çÆÄÀÌ ºí·ç','ÅëÇÕ»ö»ó',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (82,3000000000010,'½º³ë¿ì È­ÀÌÆ®','ÅëÇÕ»ö»ó',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (83,3000000000010,'Æ÷±× ±×·¹ÀÌ','ÅëÇÕ»ö»ó',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (84,3000000000010,'Äµµð ÇÎÅ©','ÅëÇÕ»ö»ó',NULL,4874444,50);
+
+
+------------------------------ ¸¼À½ »óÇ°¿É¼Ç ÀÎ¼­Æ®
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (54,3000000000006,'±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ','x',0,9700,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (55,3000000000007,'±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ','x',0,12990,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (56,3000000000008,'±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ','x',0,26800,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (57,3000000000009,'±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ','x',0,8900,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (58,3000000000010,'ÇÇÄÚÅ© ¾ç³äµÅÁö°¥ºñ500g','x',0,13980,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (59,3000000000011,'Á¦À°ººÀ½ (800g)','x',0,13980,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (60,3000000000012,'[³ÃÀå][±èÇØÃàÇù] ÇÑµ· °íÃßÀå Á¦À°ººÀ½ 1,000g','x',0,19800,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (61,3000000000013,'[°¡°Ý¿ªÁÖÇà] ÈÆÁ¦¸ñ½É (400g)','x',0,5800,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (52,3000000000004,'[°¡°Ý¿ªÁÖÇà] ¾ç³ä ¸ñ½É±¸ÀÌ (700g*2)','x',0,14980,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (53,3000000000005,'³ëºê·£µå ¹ÙºñÅ¥Æø¸³550g','x',0,14980,100);
+
+
+
+--¿É¼Ç ¾ø´Â »óÇ°
+
+--¸®ºä 
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'daetu01',41,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'m_eum01',41,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'d_Chan01',41,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'dyoung01',41,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'mggun01',41,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'whyun01',41,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'minziZzang',41,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'hive',41,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'newjeans',41,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000026532717,'cap',41,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'daetu01',42,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'m_eum01',42,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'d_Chan01',42,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'dyoung01',42,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'mggun01',42,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'whyun01',42,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'minziZzang',42,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'hive',42,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'newjeans',42,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000544937242,'cap',42,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'daetu01',4,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'m_eum01',5,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'d_Chan01',6,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'dyoung01',7,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'mggun01',8,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'whyun01',6,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'minziZzang',4,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'hive',4,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'newjeans',5,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000587702102,'cap',6,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'daetu01',43,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'m_eum01',43,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'d_Chan01',43,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'dyoung01',43,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'mggun01',43,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'whyun01',43,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'minziZzang',43,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'hive',43,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'newjeans',43,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001577943,'cap',43,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'daetu01',14,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'m_eum01',15,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'d_Chan01',14,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'dyoung01',14,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'mggun01',14,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'whyun01',15,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'minziZzang',16,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'hive',17,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'newjeans',17,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000582326954,'cap',17,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'daetu01',18,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'m_eum01',19,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'d_Chan01',18,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'dyoung01',18,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'mggun01',18,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'whyun01',19,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'minziZzang',18,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'hive',18,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'newjeans',18,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000398650979,'cap',19,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'daetu01',20,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'m_eum01',22,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'d_Chan01',21,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'dyoung01',25,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'mggun01',26,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'whyun01',27,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'minziZzang',24,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'hive',23,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'newjeans',24,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',1,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000014118201,'cap',25,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',1,1,1,1);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'daetu01',44,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'m_eum01',4,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'d_Chan01',44,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'dyoung01',44,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'mggun01',44,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'whyun01',44,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'minziZzang',44,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'hive',44,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'newjeans',44,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001308233,'cap',44,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'daetu01',45,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'m_eum01',45,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'d_Chan01',45,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'dyoung01',45,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'mggun01',45,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'whyun01',45,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'minziZzang',45,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'hive',45,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'newjeans',45,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097000257655,'cap',45,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'daetu01',46,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'m_eum01',46,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'d_Chan01',46,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'dyoung01',46,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'mggun01',46,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'whyun01',46,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'minziZzang',46,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'hive',46,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'newjeans',46,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001557433,'cap',46,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'daetu01',30,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'m_eum01',30,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'d_Chan01',30,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'dyoung01',31,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'mggun01',31,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'whyun01',31,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'minziZzang',33,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'hive',33,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'newjeans',34,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000579723160,'cap',34,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,daetu01,productOptionId,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,m_eum01,productOptionId,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,d_Chan01,productOptionId,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,dyoung01,productOptionId,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,mggun01,productOptionId,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,whyun01,productOptionId,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,minziZzang,productOptionId,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,hive,productOptionId,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,newjeans,productOptionId,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000280142269,cap,productOptionId,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+--11¹ø
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'daetu01',34,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'m_eum01',34,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'d_Chan01',35,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'dyoung01',35,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'mggun01',35,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'whyun01',39,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'minziZzang',39,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'hive',40,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'newjeans',40,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,1000059288917,'cap',34,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'daetu01',47,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'m_eum01',47,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'d_Chan01',47,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'dyoung01',47,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'mggun01',47,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'whyun01',47,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'minziZzang',47,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'hive',47,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'newjeans',47,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'cap',47,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,daetu01,productOptionId,'¸¸Á·ÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,m_eum01,productOptionId,'ÃÖ°í¿¡¿ë','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,d_Chan01,productOptionId,'Á¶¾Æ¿ë','2024.05.03','ÀÏ¹Ý',3,2,3,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,dyoung01,productOptionId,'¿ø·¡ ¾²´ø »óÇ°ÀÌ¶ó Àç±¸¸ÅÇÕ´Ï´Ù.','2024.05.03','ÀÏ¹Ý',4,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,mggun01,productOptionId,'Ç×»ó ÀÌ°Í¸¸»ç¿ëÇØ¿ä','2024.05.03','ÀÏ¹Ý',2,3,2,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,whyun01,productOptionId,'°¡º±°í ÁÁ½À´Ï´Ù','2024.05.03','ÀÏ¹Ý',1,3,2,2);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,minziZzang,productOptionId,'¿ÏÀü ÃßÃµÇÕ´Ï´Ù','2024.05.03','ÀÏ¹Ý',3,3,3,3);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,hive,productOptionId,'¸¸Á·µµ°¡ Àå³­¾Æ´Ï¿¡¿ä','2024.05.03','ÀÏ¹Ý',3,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,newjeans,productOptionId,'ÃË°¨ÀÌ ÁÁ½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',2,1,1,1);
+--INSERT INTO review VALUES (review_seq.NEXTVAL,1000067576484,cap,productOptionId,'´ÙÀ½¿¡ ¶Ç ±¸¸ÅÇÏ°Ú½À´Ï´Ù.','2024.05.03','ÀÏ¹Ý',5,3,3,3);
+--15¹ø
+
+
+--------»óÇ° ¸µÅ©
 ------------------https://www.ssg.com/item/itemView.ssg?itemId=1000026532717&siteNo=7012&salestrNo=1020
 --
 --https://www.ssg.com/item/itemView.ssg?itemId=1000544937242&siteNo=6001&salestrNo=2569
 --
 --https://www.ssg.com/item/itemView.ssg?itemId=1000587702102&siteNo=6009&salestrNo=1004
-----3ë²ˆ	ì˜µì…˜
+----3¹ø	¿É¼Ç
 --
 --https://www.ssg.com/item/itemView.ssg?itemId=2097001577943&siteNo=7009&salestrNo=2493
----4ë²ˆ ìƒˆìš°
+---4¹ø »õ¿ì
 --https://www.ssg.com/item/itemView.ssg?itemId=1000582326954&siteNo=6009&salestrNo=1004
-----5ë²ˆ ì˜µì…˜
+----5¹ø ¿É¼Ç
 --
 --
 --https://www.ssg.com/item/itemView.ssg?itemId=1000398650979&siteNo=6009&salestrNo=1008
 --
-----6ë²ˆ ì˜µì…˜
+----6¹ø ¿É¼Ç
 --
 --https://www.ssg.com/item/itemView.ssg?itemId=1000014118201&siteNo=6004&salestrNo=6005&advertBidId=9999999998
-----7ë²ˆ ì˜µì…˜
+----7¹ø ¿É¼Ç
 --
 --https://www.ssg.com/item/itemView.ssg?itemId=2097001308233&siteNo=6001&salestrNo=2439
-----8ë²ˆ ë°”ë‚˜ë‚˜
+----8¹ø ¹Ù³ª³ª
 --
 --https://www.ssg.com/item/itemView.ssg?itemId=2097000257655&siteNo=6001&salestrNo=2439
-----ì œìœ¡
+----Á¦À°
 --
 --https://www.ssg.com/item/itemView.ssg?itemId=2097001557433&siteNo=6001&salestrNo=2439&advertBidId=1010867495
-----10ë²ˆ ì‚¬ê³¼
+----10¹ø »ç°ú
 --
 --https://www.ssg.com/item/itemView.ssg?itemId=1000579723160&siteNo=6009&salestrNo=1004
-----10ë²ˆ ëª©ê±¸ì´ì˜µì…˜
+----10¹ø ¸ñ°ÉÀÌ¿É¼Ç
 --
 --https://www.ssg.com/item/dealItemView.ssg?itemId=1000280142269&siteNo=6004&salestrNo=6005
----- ë³´ë¥˜ ì‚¬ìš©X í…œí¼ ë² ê°œ
+---- º¸·ù »ç¿ëX ÅÛÆÛ º£°³
 --
 --https://www.ssg.com/item/itemView.ssg?itemId=1000059288917&siteNo=6004&salestrNo=6005
-----13JBL ì˜µì…˜
+----13JBL ¿É¼Ç
 --https://www.ssg.com/item/itemView.ssg?itemId=2097001432075&siteNo=6001&salestrNo=2439
-----14ë²ˆ ë‹´ë°±ì‹ë¹µ 
---<ë³´ë¥˜>ë”œìƒí’ˆ ì‚¬ìš© X
+----14¹ø ´ã¹é½Ä»§ 
+--<º¸·ù>µô»óÇ° »ç¿ë X
 --https://www.ssg.com/item/dealItemView.ssg?itemId=1000067576484&siteNo=6004&salestrNo=6005
 
 
 -----------------------------------------------------------------------------------
--- ì£¼ë¬¸, ì„ ë¬¼, ì¿ í°.. í…Œì´ë¸”
+-- ÁÖ¹®, ¼±¹°, ÄíÆù.. Å×ÀÌºí
 INSERT INTO present (id, img, meth, name, num, rname, rnum) VALUES (1, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO present (id, img, meth, name, num, rname, rnum) VALUES (2, NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO present (id, img, meth, name, num, rname, rnum) VALUES (3, NULL, NULL, NULL, NULL, NULL, NULL);
@@ -1533,95 +1906,95 @@ INSERT INTO present (id, img, meth, name, num, rname, rnum) VALUES (9, NULL, NUL
 INSERT INTO present (id, img, meth, name, num, rname, rnum) VALUES (10, NULL, NULL, NULL, NULL, NULL, NULL);
 
 INSERT INTO coupon VALUES
-    (0, 'í• ì¸', 0, 0, 0, 1, 'ëª¨ë“ ì œí’ˆ', TO_DATE('2024-05-01', 'YYYY-MM-DD'), TO_DATE('2024-06-01', 'YYYY-MM-DD'));
+    (0, 'ÇÒÀÎ', 0, 0, 0, 1, '¸ðµçÁ¦Ç°', TO_DATE('2024-05-01', 'YYYY-MM-DD'), TO_DATE('2024-06-01', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
-    (1, 'í• ì¸', 10000, 0, 20, 1, 'ëª¨ë“ ì œí’ˆ', TO_DATE('2024-05-01', 'YYYY-MM-DD'), TO_DATE('2024-06-01', 'YYYY-MM-DD'));
+    (1, 'ÇÒÀÎ', 10000, 0, 20, 1, '¸ðµçÁ¦Ç°', TO_DATE('2024-05-01', 'YYYY-MM-DD'), TO_DATE('2024-06-01', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
-    (2, 'í• ì¸', 20000 , 1000, 10, 2, 'ëª¨ë“ ì œí’ˆ', TO_DATE('2024-05-02', 'YYYY-MM-DD'), TO_DATE('2024-06-02', 'YYYY-MM-DD'));
+    (2, 'ÇÒÀÎ', 20000 , 1000, 10, 2, '¸ðµçÁ¦Ç°', TO_DATE('2024-05-02', 'YYYY-MM-DD'), TO_DATE('2024-06-02', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
-    (3, 'í• ì¸', 10000, 15000, 10, 2, 'ì „ìžì œí’ˆ', TO_DATE('2024-05-03', 'YYYY-MM-DD'), TO_DATE('2024-07-03', 'YYYY-MM-DD'));
+    (3, 'ÇÒÀÎ', 10000, 15000, 10, 2, 'ÀüÀÚÁ¦Ç°', TO_DATE('2024-05-03', 'YYYY-MM-DD'), TO_DATE('2024-07-03', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
-    (4, 'í• ì¸', 5000, 15000, 15, 3, 'ëª¨ë“ ì œí’ˆ', TO_DATE('2024-05-04', 'YYYY-MM-DD'), TO_DATE('2024-06-04', 'YYYY-MM-DD'));
+    (4, 'ÇÒÀÎ', 5000, 15000, 15, 3, '¸ðµçÁ¦Ç°', TO_DATE('2024-05-04', 'YYYY-MM-DD'), TO_DATE('2024-06-04', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
-    (5, 'í• ì¸', 50000, 15000, 10, 3, 'ì „ìžì œí’ˆ', TO_DATE('2024-05-05', 'YYYY-MM-DD'), TO_DATE('2024-06-05', 'YYYY-MM-DD'));
+    (5, 'ÇÒÀÎ', 50000, 15000, 10, 3, 'ÀüÀÚÁ¦Ç°', TO_DATE('2024-05-05', 'YYYY-MM-DD'), TO_DATE('2024-06-05', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
-    (6, 'í• ì¸', 50000, 15000, 12, 2, 'ëª¨ë“ ì œí’ˆ', TO_DATE('2024-05-06', 'YYYY-MM-DD'), TO_DATE('2024-06-06', 'YYYY-MM-DD'));
+    (6, 'ÇÒÀÎ', 50000, 15000, 12, 2, '¸ðµçÁ¦Ç°', TO_DATE('2024-05-06', 'YYYY-MM-DD'), TO_DATE('2024-06-06', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
-    (7, 'í• ì¸', 50000, 50, 12, 2, 'í™”ìž¥í’ˆ', TO_DATE('2024-05-07', 'YYYY-MM-DD'), TO_DATE('2024-06-07', 'YYYY-MM-DD'));
+    (7, 'ÇÒÀÎ', 50000, 50, 12, 2, 'È­ÀåÇ°', TO_DATE('2024-05-07', 'YYYY-MM-DD'), TO_DATE('2024-06-07', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
-    (8, 'ë¬´ë£Œë°°ì†¡', 5000, 30000, 0, 1, 'ëª¨ë“ ì œí’ˆ', TO_DATE('2024-05-08', 'YYYY-MM-DD'), TO_DATE('2024-06-08', 'YYYY-MM-DD'));
+    (8, '¹«·á¹è¼Û', 5000, 30000, 0, 1, '¸ðµçÁ¦Ç°', TO_DATE('2024-05-08', 'YYYY-MM-DD'), TO_DATE('2024-06-08', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
-    (9, 'ë¬´ë£Œë°°ì†¡', 5000, 15000, 0, 2, 'ì „ìžì œí’ˆ', TO_DATE('2024-05-09', 'YYYY-MM-DD'), TO_DATE('2024-06-09', 'YYYY-MM-DD'));
+    (9, '¹«·á¹è¼Û', 5000, 15000, 0, 2, 'ÀüÀÚÁ¦Ç°', TO_DATE('2024-05-09', 'YYYY-MM-DD'), TO_DATE('2024-06-09', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
-    (10, 'í• ì¸', 100000, 30000, 15, 3, 'ëª¨ë“ ì œí’ˆ', TO_DATE('2024-05-10', 'YYYY-MM-DD'), TO_DATE('2024-06-10', 'YYYY-MM-DD'));
+    (10, 'ÇÒÀÎ', 100000, 30000, 15, 3, '¸ðµçÁ¦Ç°', TO_DATE('2024-05-10', 'YYYY-MM-DD'), TO_DATE('2024-06-10', 'YYYY-MM-DD'));
 INSERT INTO coupon VALUES
-    (11, 'í• ì¸', 70000, 40000, 8, 3, 'ëª¨ë“ ì œí’ˆ', TO_DATE('2024-05-10', 'YYYY-MM-DD'), TO_DATE('2024-06-10', 'YYYY-MM-DD'));
+    (11, 'ÇÒÀÎ', 70000, 40000, 8, 3, '¸ðµçÁ¦Ç°', TO_DATE('2024-05-10', 'YYYY-MM-DD'), TO_DATE('2024-06-10', 'YYYY-MM-DD'));
     INSERT INTO coupon VALUES
-    (12, 'í• ì¸', 70000, 10000, 7, 3, 'ëª¨ë“ ì œí’ˆ', TO_DATE('2024-05-10', 'YYYY-MM-DD'), TO_DATE('2024-06-10', 'YYYY-MM-DD'));
+    (12, 'ÇÒÀÎ', 70000, 10000, 7, 3, '¸ðµçÁ¦Ç°', TO_DATE('2024-05-10', 'YYYY-MM-DD'), TO_DATE('2024-06-10', 'YYYY-MM-DD'));
 
 
 
---     ì£¼ë¬¸ë²ˆí˜¸, ì£¼ë¬¸ì¼ìž, ì£¼ë¬¸ê¸ˆì•¡, ì¿ í°ë²ˆí˜¸, ì‚¬ìš©í¬ì¸íŠ¸, ê²°ì œìˆ˜ë‹¨, ì„ ë¬¼ìˆœë²ˆ, ìƒí’ˆì½”ë“œ, íšŒì›ID, ì˜µì…˜ì½”ë“œ, ê²°ì œì—¬ë¶€
---     ì£¼ë¬¸ë²ˆí˜¸, ì£¼ë¬¸ì¼ìž, ì£¼ë¬¸ê¸ˆì•¡, ì¿ í°ë²ˆí˜¸, ì‚¬ìš©í¬ì¸íŠ¸, ê²°ì œìˆ˜ë‹¨, ì„ ë¬¼ìˆœë²ˆ, ìƒí’ˆì½”ë“œ, íšŒì›ID, ì˜µì…˜ì½”ë“œ, ê²°ì œì—¬ë¶€
+--     ÁÖ¹®¹øÈ£, ÁÖ¹®ÀÏÀÚ, ÁÖ¹®±Ý¾×, ÄíÆù¹øÈ£, »ç¿ëÆ÷ÀÎÆ®, °áÁ¦¼ö´Ü, ¼±¹°¼ø¹ø, »óÇ°ÄÚµå, È¸¿øID, ¿É¼ÇÄÚµå, °áÁ¦¿©ºÎ
+--     ÁÖ¹®¹øÈ£, ÁÖ¹®ÀÏÀÚ, ÁÖ¹®±Ý¾×, ÄíÆù¹øÈ£, »ç¿ëÆ÷ÀÎÆ®, °áÁ¦¼ö´Ü, ¼±¹°¼ø¹ø, »óÇ°ÄÚµå, È¸¿øID, ¿É¼ÇÄÚµå, °áÁ¦¿©ºÎ
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 62000, 1, 1000, 'ì¹´ë“œ', 1, 'daetu01', 1);
-
-INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
-VALUES
-    (payrecord_seq.nextval, sysdate, 10580, 2, 0, 'ì¹´ë“œ', null, 'daetu01', 1);
+    (payrecord_seq.nextval, sysdate, 62000, 1, 1000, 'Ä«µå', 1, 'daetu01', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 109000, null, 0, 'ì¹´ë“œ', null, 'daetu01', 1);
+    (payrecord_seq.nextval, sysdate, 10580, 2, 0, 'Ä«µå', null, 'daetu01', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 29800, 3, 0, 'ì¹´ë“œ', null, 'd_Chan01', 1);
+    (payrecord_seq.nextval, sysdate, 109000, null, 0, 'Ä«µå', null, 'daetu01', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 1194000, 4, 0, 'ì¹´ë“œ', null, 'd_Chan01', 1);
+    (payrecord_seq.nextval, sysdate, 29800, 3, 0, 'Ä«µå', null, 'd_Chan01', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 132000, 5, 0, 'ì¹´ë“œ', null, 'minziZzang', 1);
+    (payrecord_seq.nextval, sysdate, 1194000, 4, 0, 'Ä«µå', null, 'd_Chan01', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 11800, 6, 500, 'ì¹´ë“œ', null, 'd_Chan01', 1);
+    (payrecord_seq.nextval, sysdate, 132000, 5, 0, 'Ä«µå', null, 'minziZzang', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 3580, null, 0, 'ì¹´ë“œ', null, 'minziZzang', 1);
+    (payrecord_seq.nextval, sysdate, 11800, 6, 500, 'Ä«µå', null, 'd_Chan01', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 19800, null, 0, 'ì¹´ë“œ', null, 'whyun01', 1);
+    (payrecord_seq.nextval, sysdate, 3580, null, 0, 'Ä«µå', null, 'minziZzang', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 23800, 7, 0, 'ì¹´ë“œ', null, 'minziZzang', 1);
+    (payrecord_seq.nextval, sysdate, 19800, null, 0, 'Ä«µå', null, 'whyun01', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 150000, 1, 0, 'ì¹´ë“œ', null, 'whyun01', 1);
+    (payrecord_seq.nextval, sysdate, 23800, 7, 0, 'Ä«µå', null, 'minziZzang', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 105245, 8, 0, 'ì¹´ë“œ', null, 'whyun01', 1);
+    (payrecord_seq.nextval, sysdate, 150000, 1, 0, 'Ä«µå', null, 'whyun01', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 43900, null, 0, 'ì¹´ë“œ', null, 'hive', 1);
+    (payrecord_seq.nextval, sysdate, 105245, 8, 0, 'Ä«µå', null, 'whyun01', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 6500, null, 0, 'ì¹´ë“œ', null, 'hive', 1);
+    (payrecord_seq.nextval, sysdate, 43900, null, 0, 'Ä«µå', null, 'hive', 1);
 
 INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
 VALUES
-    (payrecord_seq.nextval, sysdate, 788970, null, 0, 'ì¹´ë“œ', null, 'newjeans', 1);
+    (payrecord_seq.nextval, sysdate, 6500, null, 0, 'Ä«µå', null, 'hive', 1);
+
+INSERT INTO payrecord (id, OrderDate, OrderAmount, coupon, Points, pmethod, present, memId, ps)
+VALUES
+    (payrecord_seq.nextval, sysdate, 788970, null, 0, 'Ä«µå', null, 'newjeans', 1);
 
 
 
@@ -1718,258 +2091,258 @@ INSERT INTO couponrecord (id, memid, cnumber, cdate) VALUES
 
 
 -----------------------------------------------------------------------------
--- ë°°ì†¡ ì •ë³´, ë°°ì†¡ì§€ ì •ë³´, ê²€ìƒ‰ í…Œì´ë¸”
--- ë°°ì†¡ë²ˆí˜¸, ì£¼ë¬¸ë²ˆí˜¸, ë°°ì†¡ì§€ë²ˆí˜¸, ë°°ì†¡ìš”ì²­ì‚¬í•­, ë°°ì†¡ìƒíƒœ, íƒë°° ë°°ì†¡ ìš”ì²­ì‚¬í•­, ìˆ˜ë ¹ìœ„ì¹˜, í˜„ê´€ì¶œìž…ë°©ë²•, ë°°ì†¡ ì¢…ë£Œì¼
+-- ¹è¼Û Á¤º¸, ¹è¼ÛÁö Á¤º¸, °Ë»ö Å×ÀÌºí
+-- ¹è¼Û¹øÈ£, ÁÖ¹®¹øÈ£, ¹è¼ÛÁö¹øÈ£, ¹è¼Û¿äÃ»»çÇ×, ¹è¼Û»óÅÂ, ÅÃ¹è ¹è¼Û ¿äÃ»»çÇ×, ¼ö·ÉÀ§Ä¡, Çö°üÃâÀÔ¹æ¹ý, ¹è¼Û Á¾·áÀÏ
 
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', 'ì„œìš¸íŠ¹ë³„ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ94ê¸¸ 83', 'ì„œìš¸íŠ¹ë³„ì‹œ ê°•ë‚¨êµ¬ ì—­ì‚¼ë™ 645-20', 'ì—­ì‚¼ìƒí™œ307í˜¸', '010-1234-5678', '06131', 'X');
+( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '¼­¿ïÆ¯º°½Ã °­³²±¸ °­³²´ë·Î94±æ 83', '¼­¿ïÆ¯º°½Ã °­³²±¸ ¿ª»ïµ¿ 645-20', '¿ª»ï»ýÈ°307È£', '010-1234-5678', '06131', 'X');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', 'ì„œìš¸íŠ¹ë³„ì‹œ ì¤‘êµ¬ ì„¸ì¢…ëŒ€ë¡œ 110', 'ì„œìš¸íŠ¹ë³„ì‹œ ì¤‘êµ¬ íƒœí‰ë¡œ1ê°€ 31', 'ì„œìš¸íŠ¹ë³„ì‹œì²­', '010-1234-5678', '04524', 'X');
+( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '¼­¿ïÆ¯º°½Ã Áß±¸ ¼¼Á¾´ë·Î 110', '¼­¿ïÆ¯º°½Ã Áß±¸ ÅÂÆò·Î1°¡ 31', '¼­¿ïÆ¯º°½ÃÃ»', '010-1234-5678', '04524', 'X');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', 'ê²½ê¸°ë„ ìˆ˜ì›ì‹œ ìž¥ì•ˆêµ¬ ìˆ˜ì¼ë¡œ233ë²ˆê¸¸ 144', 'ê²½ê¸°ë„ ìˆ˜ì›ì‹œ ìž¥ì•ˆêµ¬ ì¡°ì›ë™ 10 ì•„í† í”¼ì„¼í„° 2ì¸µ', 'ì•„í† í”¼ì„¼í„° 2ì¸µ', '010-1234-5678', '05343', 'ì´ë²ˆë§Œë°°ì†¡ì§€');
+( SEQSHIPPLACEINFO.NEXTVAL, 'daetu01', 'daetu', 'daeut01', '°æ±âµµ ¼ö¿ø½Ã Àå¾È±¸ ¼öÀÏ·Î233¹ø±æ 144', '°æ±âµµ ¼ö¿ø½Ã Àå¾È±¸ Á¶¿øµ¿ 10 ¾ÆÅäÇÇ¼¾ÅÍ 2Ãþ', '¾ÆÅäÇÇ¼¾ÅÍ 2Ãþ', '010-1234-5678', '05343', 'ÀÌ¹ø¸¸¹è¼ÛÁö');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'm_eum01', 'ë§‘ìŒí•™ì›', 'ë§‘ìŒ', 'ì„œìš¸íŠ¹ë³„ì‹œ ê°•ë‚¨êµ¬ í…Œí—¤ëž€ë¡œ 132', 'ì„œìš¸íŠ¹ë³„ì‹œ ê°•ë‚¨êµ¬ ì—­ì‚¼ë™ 735 8ì¸µ ìŒìš©êµìœ¡ì„¼í„°', '8ì¸µ ìŒìš©êµìœ¡ì„¼í„°', '010-1010-2020', '06235', 'ê¸°ë³¸ë°°ì†¡ì§€');
+( SEQSHIPPLACEINFO.NEXTVAL, 'm_eum01', '¸¼À½ÇÐ¿ø', '¸¼À½', '¼­¿ïÆ¯º°½Ã °­³²±¸ Å×Çì¶õ·Î 132', '¼­¿ïÆ¯º°½Ã °­³²±¸ ¿ª»ïµ¿ 735 8Ãþ ½Ö¿ë±³À°¼¾ÅÍ', '8Ãþ ½Ö¿ë±³À°¼¾ÅÍ', '010-1010-2020', '06235', '±âº»¹è¼ÛÁö');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'm_eum01', 'ë§‘ìŒ', 'ë§‘ìŒ', 'ê°•ì›íŠ¹ë³„ìžì¹˜ë„ í‰ì°½êµ° í‰ì°½ì í‰ì°½ê°•ë¡œ 1236-4', 'ê°•ì›íŠ¹ë³„ìžì¹˜ë„ í‰ì°½êµ° í‰ì°½ì ì•½ìˆ˜ë¦¬ 15-4 ì•½ìˆ˜ í´ì‚°ì¢…í•©ê°€êµ¬', 'í´ì‚°ì¢…í•©ê°€êµ¬', '010-1010-2020', '25373', 'X');
+( SEQSHIPPLACEINFO.NEXTVAL, 'm_eum01', '¸¼À½', '¸¼À½', '°­¿øÆ¯º°ÀÚÄ¡µµ ÆòÃ¢±º ÆòÃ¢À¾ ÆòÃ¢°­·Î 1236-4', '°­¿øÆ¯º°ÀÚÄ¡µµ ÆòÃ¢±º ÆòÃ¢À¾ ¾à¼ö¸® 15-4 ¾à¼ö Å¬»êÁ¾ÇÕ°¡±¸', 'Å¬»êÁ¾ÇÕ°¡±¸', '010-1010-2020', '25373', 'X');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'd_Chan01', 'ë™ì°¬ì§‘', 'ë™ì°¬', 'ê²½ê¸° í™”ì„±ì‹œ ë™íƒ„ì‹ ë¦¬ì²œë¡œ4ê¸¸ 48', 'ê²½ê¸°ë„ í™”ì„±ì‹œ ì‹ ë™ ì‚°179 í˜¸ë°˜ì¨ë°‹ ë™íƒ„ 101ë™ 101í˜¸', '101ë™ 101í˜¸ (ì‹ ë™, í˜¸ë°˜ì¨ë°‹ ë™íƒ„)', '010-1111-2222', '18495', 'ê¸°ë³¸ë°°ì†¡ì§€');
+( SEQSHIPPLACEINFO.NEXTVAL, 'd_Chan01', 'µ¿ÂùÁý', 'µ¿Âù', '°æ±â È­¼º½Ã µ¿Åº½Å¸®Ãµ·Î4±æ 48', '°æ±âµµ È­¼º½Ã ½Åµ¿ »ê179 È£¹Ý½á¹Ô µ¿Åº 101µ¿ 101È£', '101µ¿ 101È£ (½Åµ¿, È£¹Ý½á¹Ô µ¿Åº)', '010-1111-2222', '18495', '±âº»¹è¼ÛÁö');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'd_Chan01', 'ì¹´íŽ˜', 'ì¹´íŽ˜', 'ì„œìš¸íŠ¹ë³„ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ 390', 'ì„œìš¸íŠ¹ë³„ì‹œ ê°•ë‚¨êµ¬ ì—­ì‚¼ë™ 825 ë¯¸ì§„í”„ë¼ìž ìŠ¤íƒ€ë²…ìŠ¤', 'ìŠ¤íƒ€ë²…ìŠ¤', '010-1111-2222', '06232', 'X');
+( SEQSHIPPLACEINFO.NEXTVAL, 'd_Chan01', 'Ä«Æä', 'Ä«Æä', '¼­¿ïÆ¯º°½Ã °­³²±¸ °­³²´ë·Î 390', '¼­¿ïÆ¯º°½Ã °­³²±¸ ¿ª»ïµ¿ 825 ¹ÌÁøÇÁ¶óÀÚ ½ºÅ¸¹÷½º', '½ºÅ¸¹÷½º', '010-1111-2222', '06232', 'X');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'dyoung01', 'ë™ì˜ì§‘', 'ë™ìŠ¤', 'ì„œìš¸íŠ¹ë³„ì‹œ ê°•ë‚¨êµ¬ ê°•ë‚¨ëŒ€ë¡œ94ê¸¸ 83', 'ì„œìš¸íŠ¹ë³„ì‹œ ê°•ë‚¨êµ¬ ì—­ì‚¼ë™ 645-20 ì—­ì‚¼ìƒí™” 308í˜¸', 'ì—­ì‚¼ìƒí™œ 308í˜¸', '010-3333-4444', '06131', 'ê¸°ë³¸ë°°ì†¡ì§€');
+( SEQSHIPPLACEINFO.NEXTVAL, 'dyoung01', 'µ¿¿µÁý', 'µ¿½º', '¼­¿ïÆ¯º°½Ã °­³²±¸ °­³²´ë·Î94±æ 83', '¼­¿ïÆ¯º°½Ã °­³²±¸ ¿ª»ïµ¿ 645-20 ¿ª»ï»ýÈ­ 308È£', '¿ª»ï»ýÈ° 308È£', '010-3333-4444', '06131', '±âº»¹è¼ÛÁö');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'dyoung01', 'ë™ìŠ¤', 'ë™ìŠ¤', 'ì„œìš¸ ì¢…ë¡œêµ¬ ì¢…ë¡œ8ê¸¸ 15', 'ì„œìš¸íŠ¹ë³„ì‹œ ì¢…ë¡œêµ¬ ê´€ì² ë™ 43-15 ìˆ™ë‹¬ë¼ì§€', 'ìˆ™ë‹¬ë¼ì§€', '010-3333-4444', '03189', 'X');
+( SEQSHIPPLACEINFO.NEXTVAL, 'dyoung01', 'µ¿½º', 'µ¿½º', '¼­¿ï Á¾·Î±¸ Á¾·Î8±æ 15', '¼­¿ïÆ¯º°½Ã Á¾·Î±¸ °üÃ¶µ¿ 43-15 ¼÷´ÞµÅÁö', '¼÷´ÞµÅÁö', '010-3333-4444', '03189', 'X');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', 'ì§ìž¥', 'ëª…ìŠ¤', 'ê²½ê¸°ë„ ì„±ë‚¨ì‹œ ë¶„ë‹¹êµ¬ ì •ìžì¼ë¡œ 95', 'ê²½ê¸°ë„ ì„±ë‚¨ì‹œ ë¶„ë‹¹êµ¬ ì •ìžë™ 178-4 ë„¤ì´ë²„ 1784 1ì¸µ', 'ë„¤ì´ë²„ 1784 1ì¸µ', '010-4444-5555', '13561', 'ê¸°ë³¸ë°°ì†¡ì§€');
+( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', 'Á÷Àå', '¸í½º', '°æ±âµµ ¼º³²½Ã ºÐ´ç±¸ Á¤ÀÚÀÏ·Î 95', '°æ±âµµ ¼º³²½Ã ºÐ´ç±¸ Á¤ÀÚµ¿ 178-4 ³×ÀÌ¹ö 1784 1Ãþ', '³×ÀÌ¹ö 1784 1Ãþ', '010-4444-5555', '13561', '±âº»¹è¼ÛÁö');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', 'ëª…ê±´', 'ëª…ê±´', 'ë¶€ì‚°ê´‘ì—­ì‹œ ìˆ˜ì˜êµ¬ ê´‘ì•ˆí•´ë³€ë¡œ 100', 'ë¶€ì‚°ê´‘ì—­ì‹œ ìˆ˜ì˜êµ¬ ë‚¨ì²œë™ 148-4 ë¹„ì¹˜ì•„íŒŒíŠ¸ 101ë™ 101í˜¸', 'ë¹„ì¹˜ì•„íŒŒíŠ¸ 101ë™ 101í˜¸', '010-4444-5555', '48305', 'X');
+( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', '¸í°Ç', '¸í°Ç', 'ºÎ»ê±¤¿ª½Ã ¼ö¿µ±¸ ±¤¾ÈÇØº¯·Î 100', 'ºÎ»ê±¤¿ª½Ã ¼ö¿µ±¸ ³²Ãµµ¿ 148-4 ºñÄ¡¾ÆÆÄÆ® 101µ¿ 101È£', 'ºñÄ¡¾ÆÆÄÆ® 101µ¿ 101È£', '010-4444-5555', '48305', 'X');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', 'ê°•ë‚¨êµ¬ì²­', 'ëª…ê±´', 'ì„œìš¸íŠ¹ë³„ì‹œ ê°•ë‚¨êµ¬ í•™ë™ë¡œ 426', 'ì„œìš¸íŠ¹ë³„ì‹œ ê°•ë‚¨êµ¬ ì‚¼ì„±ë™ 16-1 ê°•ë‚¨êµ¬ì²­ 1ì¸µ', '1ì¸µ (ì‚¼ì„±ë™)', '010-4444-5555', '06090', 'X');
+( SEQSHIPPLACEINFO.NEXTVAL, 'mggun01', '°­³²±¸Ã»', '¸í°Ç', '¼­¿ïÆ¯º°½Ã °­³²±¸ ÇÐµ¿·Î 426', '¼­¿ïÆ¯º°½Ã °­³²±¸ »ï¼ºµ¿ 16-1 °­³²±¸Ã» 1Ãþ', '1Ãþ (»ï¼ºµ¿)', '010-4444-5555', '06090', 'X');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'whyun01', 'ìš°í˜„', 'ìš°í˜„', 'ì„œìš¸íŠ¹ë³„ì‹œ ë…¸ì›êµ¬ ë…¸í•´ë¡œ 437', 'ì„œìš¸íŠ¹ë³„ì‹œ ë…¸ì›êµ¬ ìƒê³„ë™ 701-1 ë…¸ì›êµ¬ì²­ 2ì¸µ', 'ë…¸ì›êµ¬ì²­ 2ì¸µ', '010-5555-6666', '01689', 'X');
+( SEQSHIPPLACEINFO.NEXTVAL, 'whyun01', '¿ìÇö', '¿ìÇö', '¼­¿ïÆ¯º°½Ã ³ë¿ø±¸ ³ëÇØ·Î 437', '¼­¿ïÆ¯º°½Ã ³ë¿ø±¸ »ó°èµ¿ 701-1 ³ë¿ø±¸Ã» 2Ãþ', '³ë¿ø±¸Ã» 2Ãþ', '010-5555-6666', '01689', 'X');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'whyun01', 'ìš°í˜„ì§‘', 'ìš°í˜„', 'ì„œìš¸íŠ¹ë³„ì‹œ ë…¸ì›êµ¬ ê³µë¦‰ë¡œ51ê¸¸ 14-17)', 'ì„œìš¸íŠ¹ë³„ì‹œ ë…¸ì›êµ¬ ê³µë¦‰ë™ 744 ê±´ì˜ìž¥ë¯¸ì•„íŒŒíŠ¸ 101ë™ 101í˜¸', '101ë™ 101í˜¸ (ê³µë¦‰ë™, ê±´ì˜ìž¥ë¯¸ì•„íŒŒíŠ¸)', '010-6666-7777', '01833', 'ê¸°ë³¸ë°°ì†¡ì§€');
+( SEQSHIPPLACEINFO.NEXTVAL, 'whyun01', '¿ìÇöÁý', '¿ìÇö', '¼­¿ïÆ¯º°½Ã ³ë¿ø±¸ °ø¸ª·Î51±æ 14-17)', '¼­¿ïÆ¯º°½Ã ³ë¿ø±¸ °ø¸ªµ¿ 744 °Ç¿µÀå¹Ì¾ÆÆÄÆ® 101µ¿ 101È£', '101µ¿ 101È£ (°ø¸ªµ¿, °Ç¿µÀå¹Ì¾ÆÆÄÆ®)', '010-6666-7777', '01833', '±âº»¹è¼ÛÁö');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'minziZzang', 'í•˜ì´ë¸Œ', 'ë¯¼ì§€', 'ì„œìš¸íŠ¹ë³„ì‹œ ìš©ì‚°êµ¬ í•œê°•ëŒ€ë¡œ 42', 'ì„œìš¸íŠ¹ë³„ì‹œ ìš©ì‚°êµ¬ í•œê°•ë¡œ3ê°€ 65-9', 'í•˜ì´ë¸Œ', '010-9999-9999', '04389', 'ê¸°ë³¸ë°°ì†¡ì§€');
+( SEQSHIPPLACEINFO.NEXTVAL, 'minziZzang', 'ÇÏÀÌºê', '¹ÎÁö', '¼­¿ïÆ¯º°½Ã ¿ë»ê±¸ ÇÑ°­´ë·Î 42', '¼­¿ïÆ¯º°½Ã ¿ë»ê±¸ ÇÑ°­·Î3°¡ 65-9', 'ÇÏÀÌºê', '010-9999-9999', '04389', '±âº»¹è¼ÛÁö');
 
 INSERT INTO SHIPPINGPLACEINFORMATION VALUES
-( SEQSHIPPLACEINFO.NEXTVAL, 'hive', 'í•˜ì´ë¸Œ', 'í•˜ì´ë¸Œ', 'ì„œìš¸íŠ¹ë³„ì‹œ ìš©ì‚°êµ¬ í•œê°•ëŒ€ë¡œ 42', 'ì„œìš¸íŠ¹ë³„ì‹œ ìš©ì‚°êµ¬ í•œê°•ë¡œ3ê°€ 65-9', 'í•˜ì´ë¸Œ', '010-8888-9999', '04389', 'ê¸°ë³¸ë°°ì†¡ì§€');
+( SEQSHIPPLACEINFO.NEXTVAL, 'hive', 'ÇÏÀÌºê', 'ÇÏÀÌºê', '¼­¿ïÆ¯º°½Ã ¿ë»ê±¸ ÇÑ°­´ë·Î 42', '¼­¿ïÆ¯º°½Ã ¿ë»ê±¸ ÇÑ°­·Î3°¡ 65-9', 'ÇÏÀÌºê', '010-8888-9999', '04389', '±âº»¹è¼ÛÁö');
 
 
 
 
--- ë°°ì†¡ì •ë³´ INSERT í”„ë¡œì‹œì € ì‹¤í–‰
+-- ¹è¼ÛÁ¤º¸ INSERT ÇÁ·Î½ÃÀú ½ÇÇà
 ---- seq_shippingid.NEXTVAL , porderid, vplaceid, pshippingmsg, pshippingstate, pshippingrequest, preceiveposition, pentrance, pshippingenddate 
---EXECUTE up_insert_shipinfo ( 1, 'daetu01', 'ìž˜ì „ë‹¬í•´ì£¼ì„¸ìš”~', 'ë°°ì†¡ì „', 'ì•ˆì „í•˜ê²Œ ë°°ì†¡í•´ì£¼ì„¸ìš”~', 'ë¬¸ì•žì— ë†“ì•„ì£¼ì„¸ìš”',  'ê³µë™í˜„ê´€ ì¶œìž…ë²ˆí˜¸-(#1234)' , null);
---EXECUTE up_insert_shipinfo ( 2, 'daetu01', 'ìž˜ì „ë‹¬í•´ì£¼ì„¸ìš”~', 'ë°°ì†¡ì „', 'ì¹œì ˆí•œ ë°°ì†¡ ê¸°ì‚¬ë‹˜ê»˜ ê°ì‚¬ ì¸ì‚¬ ì „ë‹¬í•´ì£¼ì„¸ìš”.', 'ë¬¸ì•žì— ë†“ì•„ì£¼ì„¸ìš”',  'ê³µë™í˜„ê´€ ì¶œìž…ë²ˆí˜¸-(#2222)' , null);
---EXECUTE up_insert_shipinfo ( 3, 'daetu01',  'ì¢€ë” ì‹¸ê²Œ ì˜¬ë ¤ì£¼ì„¸ìš”~',  'ë°°ì†¡ì „', 'ìƒìžì— ì‹ ì¤‘í•˜ê²Œ í¬ìž¥ ë¶€íƒë“œë ¤ìš”.', 'ê²½ë¹„ì‹¤ì— ë³´ê´€í•´ì£¼ì„¸ìš”', null , null);
---EXECUTE up_insert_shipinfo ( 4, 'd_Chan01', 'ìž˜ì „ë‹¬í•´ì£¼ì„¸ìš”~', 'ë°°ì†¡ì „', 'ë°°ì†¡ ì‹œê°„ì´ ì¡°ê¸ˆ ëŠ¦ì–´ì ¸ë„ ê´œì°®ìŠµë‹ˆë‹¤~', 'ë¬¸ì•žì— ë†“ì•„ì£¼ì„¸ìš”',  'ê³µë™í˜„ê´€ ì¶œìž…ë²ˆí˜¸-(#1010)' , null);
---EXECUTE up_insert_shipinfo ( 5, 'd_Chan01',  'ë„ˆë¬´ ë¹„ì‹¸ë„¤ìš”~', 'ë°°ì†¡ì „', 'íŠ¹ë³„í•œ ë°°ì†¡ ìš”ì²­ì‚¬í•­ì€ ì—†ìŠµë‹ˆë‹¤', 'ê²½ë¹„ì‹¤ì— ë³´ê´€í•´ì£¼ì„¸ìš”',  null , null);
---EXECUTE up_insert_shipinfo ( 6, 'minziZzang',  'ìž˜ì „ë‹¬í•´ì£¼ì„¸ìš”~', 'ë°°ì†¡ì „', 'íŠ¹ë³„í•œ ìš”ì²­ ì—†ìŒ', 'ê²½ë¹„ì‹¤ì— ë³´ê´€í•´ì£¼ì„¸ìš”',  null , null);
---EXECUTE up_insert_shipinfo ( 7, 'd_Chan01', 'ìž˜ì „ë‹¬í•´ì£¼ì„¸ìš”~', 'ë°°ì†¡ì „', 'ë°©ì‹œí˜ OUT', 'ë¬¸ì•žì— ë†“ì•„ì£¼ì„¸ìš”',  'ê³µë™í˜„ê´€ ì¶œìž…ë²ˆí˜¸-(#5555)' , null);
---EXECUTE up_insert_shipinfo ( 8, 'minziZzang',  'ìž˜ì „ë‹¬í•´ì£¼ì„¸ìš”~', 'ë°°ì†¡ì „', 'GOOD', 'ë¬¸ì•žì— ë†“ì•„ì£¼ì„¸ìš”',  'ê³µë™í˜„ê´€ ì¶œìž…ë²ˆí˜¸-(#7777)' , null);
---EXECUTE up_insert_shipinfo ( 9, 'whyun01',  'ìž˜ì „ë‹¬í•´ì£¼ì„¸ìš”~', 'ë°°ì†¡ì „', 'ë¶€ë“œëŸ¬ìš´ ì†Œí¬ì— ë‹´ì•„ì£¼ì„¸ìš”.', '3ì¸µ íƒë°°ë³´ê´€í•¨ ë³´ê´€í•´ì£¼ì„¸ìš”',  null , null);
---EXECUTE up_insert_shipinfo ( 10, 'minziZzang',  'ìž˜ì „ë‹¬í•´ì£¼ì„¸ìš”~', 'ë°°ì†¡ì „', 'ë°°ì†¡ ìž˜ ë¶€íƒë“œë¦½ë‹ˆë‹¤.', 'ë¬¸ì•žì— ë†“ì•„ì£¼ì„¸ìš”',  'ê³µë™í˜„ê´€ ì¶œìž…ë²ˆí˜¸-(#3300)' , null);
+--EXECUTE up_insert_shipinfo ( 1, 'daetu01', 'ÀßÀü´ÞÇØÁÖ¼¼¿ä~', '¹è¼ÛÀü', '¾ÈÀüÇÏ°Ô ¹è¼ÛÇØÁÖ¼¼¿ä~', '¹®¾Õ¿¡ ³õ¾ÆÁÖ¼¼¿ä',  '°øµ¿Çö°ü ÃâÀÔ¹øÈ£-(#1234)' , null);
+--EXECUTE up_insert_shipinfo ( 2, 'daetu01', 'ÀßÀü´ÞÇØÁÖ¼¼¿ä~', '¹è¼ÛÀü', 'Ä£ÀýÇÑ ¹è¼Û ±â»ç´Ô²² °¨»ç ÀÎ»ç Àü´ÞÇØÁÖ¼¼¿ä.', '¹®¾Õ¿¡ ³õ¾ÆÁÖ¼¼¿ä',  '°øµ¿Çö°ü ÃâÀÔ¹øÈ£-(#2222)' , null);
+--EXECUTE up_insert_shipinfo ( 3, 'daetu01',  'Á»´õ ½Î°Ô ¿Ã·ÁÁÖ¼¼¿ä~',  '¹è¼ÛÀü', '»óÀÚ¿¡ ½ÅÁßÇÏ°Ô Æ÷Àå ºÎÅ¹µå·Á¿ä.', '°æºñ½Ç¿¡ º¸°üÇØÁÖ¼¼¿ä', null , null);
+--EXECUTE up_insert_shipinfo ( 4, 'd_Chan01', 'ÀßÀü´ÞÇØÁÖ¼¼¿ä~', '¹è¼ÛÀü', '¹è¼Û ½Ã°£ÀÌ Á¶±Ý ´Ê¾îÁ®µµ ±¦Âú½À´Ï´Ù~', '¹®¾Õ¿¡ ³õ¾ÆÁÖ¼¼¿ä',  '°øµ¿Çö°ü ÃâÀÔ¹øÈ£-(#1010)' , null);
+--EXECUTE up_insert_shipinfo ( 5, 'd_Chan01',  '³Ê¹« ºñ½Î³×¿ä~', '¹è¼ÛÀü', 'Æ¯º°ÇÑ ¹è¼Û ¿äÃ»»çÇ×Àº ¾ø½À´Ï´Ù', '°æºñ½Ç¿¡ º¸°üÇØÁÖ¼¼¿ä',  null , null);
+--EXECUTE up_insert_shipinfo ( 6, 'minziZzang',  'ÀßÀü´ÞÇØÁÖ¼¼¿ä~', '¹è¼ÛÀü', 'Æ¯º°ÇÑ ¿äÃ» ¾øÀ½', '°æºñ½Ç¿¡ º¸°üÇØÁÖ¼¼¿ä',  null , null);
+--EXECUTE up_insert_shipinfo ( 7, 'd_Chan01', 'ÀßÀü´ÞÇØÁÖ¼¼¿ä~', '¹è¼ÛÀü', '¹æ½ÃÇõ OUT', '¹®¾Õ¿¡ ³õ¾ÆÁÖ¼¼¿ä',  '°øµ¿Çö°ü ÃâÀÔ¹øÈ£-(#5555)' , null);
+--EXECUTE up_insert_shipinfo ( 8, 'minziZzang',  'ÀßÀü´ÞÇØÁÖ¼¼¿ä~', '¹è¼ÛÀü', 'GOOD', '¹®¾Õ¿¡ ³õ¾ÆÁÖ¼¼¿ä',  '°øµ¿Çö°ü ÃâÀÔ¹øÈ£-(#7777)' , null);
+--EXECUTE up_insert_shipinfo ( 9, 'whyun01',  'ÀßÀü´ÞÇØÁÖ¼¼¿ä~', '¹è¼ÛÀü', 'ºÎµå·¯¿î ¼ÒÆ÷¿¡ ´ã¾ÆÁÖ¼¼¿ä.', '3Ãþ ÅÃ¹èº¸°üÇÔ º¸°üÇØÁÖ¼¼¿ä',  null , null);
+--EXECUTE up_insert_shipinfo ( 10, 'minziZzang',  'ÀßÀü´ÞÇØÁÖ¼¼¿ä~', '¹è¼ÛÀü', '¹è¼Û Àß ºÎÅ¹µå¸³´Ï´Ù.', '¹®¾Õ¿¡ ³õ¾ÆÁÖ¼¼¿ä',  '°øµ¿Çö°ü ÃâÀÔ¹øÈ£-(#3300)' , null);
 
 
 
 
 
--- ê²€ìƒ‰í…Œì´ë¸” INSERT í”„ë¡œì‹œì € ì‹¤í–‰
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'í‚¤ë³´ë“œ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'ë…¸íŠ¸ë¶', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'ê¹€ì¹˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'ì°¸ê¹¨ìŠ¤í‹±', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', 'ê³„ëž€', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', 'ëŒ€íŒŒ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', 'ê°„ìž¥', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', 'ë°ìŠ¤í¬í†±', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', 'ì‚¼ë‹¤ìˆ˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', 'ì˜¤ë ˆì˜¤ì˜¤ì¦ˆ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', 'í‚¤ë³´ë“œ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', 'ë¡œì…˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ê°ìž', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ì°¸ì¹˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ë§ˆìš°ìŠ¤', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', 'ë‰´ì§„ìŠ¤ì•¨ë²”', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ë¯¼í¬ì§„ëª¨ìž', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ë°©íƒ„ì†Œë…„ë‹¨ì•¨ë²”', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'í‚¤ë³´ë“œ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'ë…¸íŠ¸ë¶', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'ê¹€ì¹˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'ì°¸ê¹¨ìŠ¤í‹±', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', 'ê³„ëž€', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', 'ëŒ€íŒŒ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', 'ê°„ìž¥', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', 'ë°ìŠ¤í¬í†±', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', 'ì‚¼ë‹¤ìˆ˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', 'ì˜¤ë ˆì˜¤ì˜¤ì¦ˆ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', 'í‚¤ë³´ë“œ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', 'ë¡œì…˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ê°ìž', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ì°¸ì¹˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ë§ˆìš°ìŠ¤', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', 'ë‰´ì§„ìŠ¤ì•¨ë²”', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ë¯¼í¬ì§„ëª¨ìž', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ë°©íƒ„ì†Œë…„ë‹¨ì•¨ë²”', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'í‚¤ë³´ë“œ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'ë…¸íŠ¸ë¶', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'ê¹€ì¹˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'ì°¸ê¹¨ìŠ¤í‹±', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', 'ê³„ëž€', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', 'ëŒ€íŒŒ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', 'ê°„ìž¥', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', 'ë°ìŠ¤í¬í†±', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', 'ì‚¼ë‹¤ìˆ˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', 'ì˜¤ë ˆì˜¤ì˜¤ì¦ˆ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', 'í‚¤ë³´ë“œ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', 'ë¡œì…˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ê°ìž', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ì°¸ì¹˜', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ë§ˆìš°ìŠ¤', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', 'ë‰´ì§„ìŠ¤ì•¨ë²”', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ì»´í“¨í„°', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'í‚¤ë³´ë“œ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'í˜¸ë°•', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ëŒ€íŒŒ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ìŠ¤íŒ¸', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', 'ê³ êµ¬ë§ˆ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ëª…ëž€', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'í•«ë„ê·¸', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ì»´í“¨í„°', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'í‚¤ë³´ë“œ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'í˜¸ë°•', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ëŒ€íŒŒ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ìŠ¤íŒ¸', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', 'ê³ êµ¬ë§ˆ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ëª…ëž€', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'í•«ë„ê·¸', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ì»´í“¨í„°', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'í‚¤ë³´ë“œ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'í˜¸ë°•', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ëŒ€íŒŒ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ìŠ¤íŒ¸', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
-INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', 'ê³ êµ¬ë§ˆ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+-- °Ë»öÅ×ÀÌºí INSERT ÇÁ·Î½ÃÀú ½ÇÇà
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'Å°º¸µå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '³ëÆ®ºÏ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '±èÄ¡', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'Âü±ú½ºÆ½', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '°è¶õ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '´ëÆÄ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '°£Àå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', 'µ¥½ºÅ©Åé', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '»ï´Ù¼ö', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '¿À·¹¿À¿ÀÁî', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', 'Å°º¸µå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '·Î¼Ç', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '°¨ÀÚ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ÂüÄ¡', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '¸¶¿ì½º', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '´ºÁø½º¾Ù¹ü', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '¹ÎÈñÁø¸ðÀÚ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '¹æÅº¼Ò³â´Ü¾Ù¹ü', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'Å°º¸µå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '³ëÆ®ºÏ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '±èÄ¡', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'Âü±ú½ºÆ½', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '°è¶õ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '´ëÆÄ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '°£Àå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', 'µ¥½ºÅ©Åé', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '»ï´Ù¼ö', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '¿À·¹¿À¿ÀÁî', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', 'Å°º¸µå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '·Î¼Ç', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '°¨ÀÚ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ÂüÄ¡', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '¸¶¿ì½º', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '´ºÁø½º¾Ù¹ü', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '¹ÎÈñÁø¸ðÀÚ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '¹æÅº¼Ò³â´Ü¾Ù¹ü', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'Å°º¸µå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '³ëÆ®ºÏ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', '±èÄ¡', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'daetu01', 'Âü±ú½ºÆ½', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '°è¶õ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'm_eum01', '´ëÆÄ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', '°£Àå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'd_Chan01', 'µ¥½ºÅ©Åé', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '»ï´Ù¼ö', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'dyoung01', '¿À·¹¿À¿ÀÁî', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', 'Å°º¸µå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'mggun01', '·Î¼Ç', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '°¨ÀÚ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'ÂüÄ¡', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '¸¶¿ì½º', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '´ºÁø½º¾Ù¹ü', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ÄÄÇ»ÅÍ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'Å°º¸µå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'È£¹Ú', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '´ëÆÄ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '½ºÆÔ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '°í±¸¸¶', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '¸í¶õ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ÇÖµµ±×', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ÄÄÇ»ÅÍ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'Å°º¸µå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'È£¹Ú', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '´ëÆÄ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '½ºÆÔ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '°í±¸¸¶', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', '¸í¶õ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ÇÖµµ±×', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'ÄÄÇ»ÅÍ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'hive', 'Å°º¸µå', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', 'È£¹Ú', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '´ëÆÄ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'whyun01', '½ºÆÔ', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
+INSERT INTO search VALUES( seq_search.NEXTVAL, 'minziZzang', '°í±¸¸¶', TO_CHAR(SYSDATE, 'yyyy-mm-dd'));
 
 
 
---ê³µì§€ì‚¬í•­ insert
-INSERT INTO announcement VALUES (1, 'UBPAY ê²°ì œì„œë¹„ìŠ¤', TO_DATE('2024-03-28'), 'UBPAY ê²°ì œì„œë¹„ìŠ¤ ì¢…ë£Œ ì•ˆë‚´');
+--°øÁö»çÇ× insert
+INSERT INTO announcement VALUES (1, 'UBPAY °áÁ¦¼­ºñ½º', TO_DATE('2024-03-28'), 'UBPAY °áÁ¦¼­ºñ½º Á¾·á ¾È³»');
 
-INSERT INTO announcement VALUES (2, 'SSG.COMì„ ì‚¬ì¹­í•˜ëŠ” ë¬¸ìž', TO_DATE('2024-04-02'), 'SSG.COMì„ ì‚¬ì¹­ ë¬¸ìž ì£¼ì˜ ì•ˆë‚´');
+INSERT INTO announcement VALUES (2, 'SSG.COMÀ» »çÄªÇÏ´Â ¹®ÀÚ', TO_DATE('2024-04-02'), 'SSG.COMÀ» »çÄª ¹®ÀÚ ÁÖÀÇ ¾È³»');
 
-INSERT INTO announcement VALUES (3, 'ì´ë§ˆíŠ¸ëª° íƒë°° ë°°ì†¡ë¹„', TO_DATE('2024-04-10'), 'ì´ë§ˆíŠ¸ëª° íƒë°° ë°°ì†¡ ë°°ì†¡ë¹„ ì¡°ì • ì•ˆë‚´');
+INSERT INTO announcement VALUES (3, 'ÀÌ¸¶Æ®¸ô ÅÃ¹è ¹è¼Ûºñ', TO_DATE('2024-04-10'), 'ÀÌ¸¶Æ®¸ô ÅÃ¹è ¹è¼Û ¹è¼Ûºñ Á¶Á¤ ¾È³»');
 
-INSERT INTO announcement VALUES (4, 'ì£¼ë¬¸,ë°°ì†¡,ì•Œë¦¼í†¡ ì•±í‘¸ì‹œ', TO_DATE('2024-04-17'), 'ì£¼ë¬¸,ë°°ì†¡,ì•Œë¦¼í†¡ì„ ì•±í‘¸ì‹œë¡œ ì•ˆë‚´í•´ ë“œë ¤ìš”');
+INSERT INTO announcement VALUES (4, 'ÁÖ¹®,¹è¼Û,¾Ë¸²Åå ¾ÛÇª½Ã', TO_DATE('2024-04-17'), 'ÁÖ¹®,¹è¼Û,¾Ë¸²ÅåÀ» ¾ÛÇª½Ã·Î ¾È³»ÇØ µå·Á¿ä');
 
-INSERT INTO announcement VALUES (5, 'SSG.COM ì´ìš©ì•½ê´€ ê°œì •', TO_DATE('2024-04-28'), 'SSG.COM ì´ìš©ì•½ê´€ ê°œì •ì„ ì•ˆë‚´');
+INSERT INTO announcement VALUES (5, 'SSG.COM ÀÌ¿ë¾à°ü °³Á¤', TO_DATE('2024-04-28'), 'SSG.COM ÀÌ¿ë¾à°ü °³Á¤À» ¾È³»');
 
-INSERT INTO announcement VALUES (6, 'ìŠ¤ë§ˆì¼ìºì‹œ ì „í™˜ í•œë„ ë³€ê²½', TO_DATE('2024-05-01'), 'ìŠ¤ë§ˆì¼ìºì‹œ ì „í™˜ í•œë„ ë³€ê²½ ì•ˆë‚´');
+INSERT INTO announcement VALUES (6, '½º¸¶ÀÏÄ³½Ã ÀüÈ¯ ÇÑµµ º¯°æ', TO_DATE('2024-05-01'), '½º¸¶ÀÏÄ³½Ã ÀüÈ¯ ÇÑµµ º¯°æ ¾È³»');
 
-INSERT INTO announcement VALUES (7, 'ê°œì¸ì •ë³´ì²˜ë¦¬ ë°©ì¹¨ ê°œì •', TO_DATE('2024-05-08'), 'SSG.COM ê°œì¸ì •ë³´ì²˜ë¦¬ë°©ì¹¨ ê°œì • ì•ˆë‚´');
+INSERT INTO announcement VALUES (7, '°³ÀÎÁ¤º¸Ã³¸® ¹æÄ§ °³Á¤', TO_DATE('2024-05-08'), 'SSG.COM °³ÀÎÁ¤º¸Ã³¸®¹æÄ§ °³Á¤ ¾È³»');
 
-INSERT INTO announcement VALUES (8, 'ê°œì¸ì •ë³´ì²˜ë¦¬ ë°©ì¹¨ ê°œì •', TO_DATE('2024-05-08'), 'SSG.COM ê°œì¸ì •ë³´ì²˜ë¦¬ë°©ì¹¨ ê°œì • ì•ˆë‚´');
+INSERT INTO announcement VALUES (8, '°³ÀÎÁ¤º¸Ã³¸® ¹æÄ§ °³Á¤', TO_DATE('2024-05-08'), 'SSG.COM °³ÀÎÁ¤º¸Ã³¸®¹æÄ§ °³Á¤ ¾È³»');
 
-INSERT INTO announcement VALUES (9, 'ê°œì¸ì •ë³´ì²˜ë¦¬ ë°©ì¹¨ ê°œì •', TO_DATE('2024-05-15'), 'SSG.COM ê°œì¸ì •ë³´ì²˜ë¦¬ë°©ì¹¨ ê°œì • ì•ˆë‚´');
+INSERT INTO announcement VALUES (9, '°³ÀÎÁ¤º¸Ã³¸® ¹æÄ§ °³Á¤', TO_DATE('2024-05-15'), 'SSG.COM °³ÀÎÁ¤º¸Ã³¸®¹æÄ§ °³Á¤ ¾È³»');
 
-INSERT INTO announcement VALUES (10, 'ì´ìš©ì•½ê´€ ê°œì •', TO_DATE('2024-05-21'), 'SSG.COM ì´ìš©ì•½ê´€ ê°œì • ì•ˆë‚´');
+INSERT INTO announcement VALUES (10, 'ÀÌ¿ë¾à°ü °³Á¤', TO_DATE('2024-05-21'), 'SSG.COM ÀÌ¿ë¾à°ü °³Á¤ ¾È³»');
 
 
--- ì´ë²¤íŠ¸ insert
-INSERT INTO event VALUES (1, 'ìµœì • 468í˜¸ í™ˆëŸ° ì´ë²¤íŠ¸', 'event_image1.jpg', TO_DATE('2024-04-22'), TO_DATE('2024-05-02'));
+-- ÀÌº¥Æ® insert
+INSERT INTO event VALUES (1, 'ÃÖÁ¤ 468È£ È¨·± ÀÌº¥Æ®', 'event_image1.jpg', TO_DATE('2024-04-22'), TO_DATE('2024-05-02'));
 
 INSERT INTO event VALUES (2, 'Gift Guide', 'event_image2.jpg', TO_DATE('2024-04-28'), TO_DATE('2024-05-02'));
 
-INSERT INTO event VALUES (3, '4ì›” ì‹œë§ˆì„ ì›ë”ì„¸ì¼', 'event_image3.jpg', TO_DATE('2024-04-25'), TO_DATE('2024-05-02'));
+INSERT INTO event VALUES (3, '4¿ù ½Ã¸¶À» ¿ø´õ¼¼ÀÏ', 'event_image3.jpg', TO_DATE('2024-04-25'), TO_DATE('2024-05-02'));
 
-INSERT INTO event VALUES (4, 'LOOK UP : ê°€ë°©', 'event_image4.jpg', TO_DATE('2024-04-22'), TO_DATE('2024-05-04'));
+INSERT INTO event VALUES (4, 'LOOK UP : °¡¹æ', 'event_image4.jpg', TO_DATE('2024-04-22'), TO_DATE('2024-05-04'));
 
-INSERT INTO event VALUES (5, 'Wì»¨ì…‰ ì„¸ë ˆëª¨ë‹ˆìƒµ', 'event_image5.jpg', TO_DATE('2024-04-25'), TO_DATE('2024-05-02'));
+INSERT INTO event VALUES (5, 'WÄÁ¼Á ¼¼·¹¸ð´Ï¼¥', 'event_image5.jpg', TO_DATE('2024-04-25'), TO_DATE('2024-05-02'));
 
-INSERT INTO event VALUES (6, 'ì²´í—˜ë‹¨ ê°•ì´ì§€ ìœ ì‚°ê· ', 'event_image6.jpg', TO_DATE('2024-04-23'), TO_DATE('2024-05-02'));
+INSERT INTO event VALUES (6, 'Ã¼Çè´Ü °­ÀÌÁö À¯»ê±Õ', 'event_image6.jpg', TO_DATE('2024-04-23'), TO_DATE('2024-05-02'));
 
-INSERT INTO event VALUES (7, 'MADA êµ¬ê¸°ìž ë§í´ ê´‘ì±„ ì„¸ëŸ¼ìŠ¤í‹±', 'event_image7.jpg', TO_DATE('2024-04-22'), TO_DATE('2024-04-28'));
+INSERT INTO event VALUES (7, 'MADA ±¸±âÀÚ ¸µÅ¬ ±¤Ã¤ ¼¼·³½ºÆ½', 'event_image7.jpg', TO_DATE('2024-04-22'), TO_DATE('2024-04-28'));
 
-INSERT INTO applicant VALUES (applicant_seq.nextval, 1,  'daetu01', 'ë”± ì €í¬ ì•„ì´ì˜ íƒˆì·¨ì œê°€ í•„ìš”í–ˆëŠ”ë° ì‹ ì²­í•©ë‹ˆë‹¤.', TO_DATE('2024-04-22'), 'ë‹¹ì²¨',null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1,  'daetu01', 'µü ÀúÈñ ¾ÆÀÌÀÇ Å»ÃëÁ¦°¡ ÇÊ¿äÇß´Âµ¥ ½ÅÃ»ÇÕ´Ï´Ù.', TO_DATE('2024-04-22'), '´çÃ·',null);
 
-INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'm_eum01', 'ê³„ì† ì“°ê³  ìžˆëŠ” ì œí’ˆì¸ë° ë„ˆë¬´ ì¢‹ì•„ìš”.', TO_DATE('2024-04-24'), 'íƒˆë½',null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'm_eum01', '°è¼Ó ¾²°í ÀÖ´Â Á¦Ç°ÀÎµ¥ ³Ê¹« ÁÁ¾Æ¿ä.', TO_DATE('2024-04-24'), 'Å»¶ô',null);
 
-INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'd_Chan01', 'ì‹ ì²­í•©ë‹ˆë‹¤. ë‹¹ì²¨ ë˜ì—ˆìœ¼ë©´ ì¢‹ê² ì–´ìš”', TO_DATE('2024-04-25'), 'ë‹¹ì²¨',null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'd_Chan01', '½ÅÃ»ÇÕ´Ï´Ù. ´çÃ· µÇ¾úÀ¸¸é ÁÁ°Ú¾î¿ä', TO_DATE('2024-04-25'), '´çÃ·',null);
 
-INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'mggun01', 'ì €í¬ ëŒ•ëŒ•ì´ê°€ ì°¸ ì¢‹ì•„í•´ìš”.', TO_DATE('2024-04-25'), 'íƒˆë½',null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'mggun01', 'ÀúÈñ ´ó´óÀÌ°¡ Âü ÁÁ¾ÆÇØ¿ä.', TO_DATE('2024-04-25'), 'Å»¶ô',null);
 
-INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'whyun01', 'ë‹¹ì²¨ë˜ê³  ì‹¶ì–´ìš” ê¼­!.', TO_DATE('2024-04-26'), 'ë‹¹ì²¨',null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'whyun01', '´çÃ·µÇ°í ½Í¾î¿ä ²À!.', TO_DATE('2024-04-26'), '´çÃ·',null);
 
-INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'minziZzang', 'ì‹ ì²­í•´ìš”!', TO_DATE('2024-04-26'), 'ë‹¹ì²¨',null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'minziZzang', '½ÅÃ»ÇØ¿ä!', TO_DATE('2024-04-26'), '´çÃ·',null);
 
-INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'hive', 'ì‹ ì²­í•©ë‹ˆë‹¤.', TO_DATE('2024-04-27'), 'ë‹¹ì²¨',null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 1, 'hive', '½ÅÃ»ÇÕ´Ï´Ù.', TO_DATE('2024-04-27'), '´çÃ·',null);
 
---ë§í¬ https://event.ssg.com/eventDetail.ssg?nevntId=1000000012872&domainSiteNo=6005&_mpop=new
-INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'daetu01', 'ê¼­ ë‹¹ì²¨ë˜ê³  ì‹¶ì–´ìš”!', TO_DATE('2024-04-27'), 'ë‹¹ì²¨',null);
+--¸µÅ© https://event.ssg.com/eventDetail.ssg?nevntId=1000000012872&domainSiteNo=6005&_mpop=new
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'daetu01', '²À ´çÃ·µÇ°í ½Í¾î¿ä!', TO_DATE('2024-04-27'), '´çÃ·',null);
 
-INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'm_eum01', 'ê³„ì† ì“°ê³  ìžˆëŠ” ì œí’ˆì¸ë° ë„ˆë¬´ ì¢‹ì•„ìš”.', TO_DATE('2024-05-27'), 'íƒˆë½',null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'm_eum01', '°è¼Ó ¾²°í ÀÖ´Â Á¦Ç°ÀÎµ¥ ³Ê¹« ÁÁ¾Æ¿ä.', TO_DATE('2024-05-27'), 'Å»¶ô',null);
 
-INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'd_Chan01', 'ì‹ ì²­í•©ë‹ˆë‹¤. ë‹¹ì²¨ ë˜ì—ˆìœ¼ë©´ ì¢‹ê² ì–´ìš”', TO_DATE('2024-05-27'), 'ë‹¹ì²¨',null);
-
-
-INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'mggun01', 'ì €í¬ ì•„ì´ ì°¸ ì¢‹ì•„í•´ìš”.', TO_DATE('2024-05-28'), 'íƒˆë½',null);
-
-INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'whyun01', 'ë‹¹ì²¨ë˜ê³  ì‹¶ì–´ìš” ê¼­!.', TO_DATE('2024-05-28'), 'ë‹¹ì²¨',null);
-
-INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'minziZzang', 'ì‹ ì²­í•´ìš”!', TO_DATE('2024-05-28'), 'íƒˆë½',null);
-
-INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'hive', 'ì‹ ì²­í•©ë‹ˆë‹¤.', TO_DATE('2024-05-28'), 'ë‹¹ì²¨',null);
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'd_Chan01', '½ÅÃ»ÇÕ´Ï´Ù. ´çÃ· µÇ¾úÀ¸¸é ÁÁ°Ú¾î¿ä', TO_DATE('2024-05-27'), '´çÃ·',null);
 
 
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'mggun01', 'ÀúÈñ ¾ÆÀÌ Âü ÁÁ¾ÆÇØ¿ä.', TO_DATE('2024-05-28'), 'Å»¶ô',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'whyun01', '´çÃ·µÇ°í ½Í¾î¿ä ²À!.', TO_DATE('2024-05-28'), '´çÃ·',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'minziZzang', '½ÅÃ»ÇØ¿ä!', TO_DATE('2024-05-28'), 'Å»¶ô',null);
+
+INSERT INTO applicant VALUES (applicant_seq.nextval, 2, 'hive', '½ÅÃ»ÇÕ´Ï´Ù.', TO_DATE('2024-05-28'), '´çÃ·',null);
 
 
---INSERT INTO applicant VALUES (1, 1, 'daetu01', 'ë”± ì €í¬ ì•„ì´ì˜ íƒˆì·¨ì œê°€ í•„ìš”í–ˆëŠ”ë° ì‹ ì²­í•©ë‹ˆë‹¤.', TO_DATE('2024-04-22'), 'ë‹¹ì²¨');
+
+
+--INSERT INTO applicant VALUES (1, 1, 'daetu01', 'µü ÀúÈñ ¾ÆÀÌÀÇ Å»ÃëÁ¦°¡ ÇÊ¿äÇß´Âµ¥ ½ÅÃ»ÇÕ´Ï´Ù.', TO_DATE('2024-04-22'), '´çÃ·');
 --
---INSERT INTO applicant VALUES (2, 1, 'm_eum01', 'ê³„ì† ì“°ê³  ìžˆëŠ” ì œí’ˆì¸ë° ë„ˆë¬´ ì¢‹ì•„ìš”.', TO_DATE('2024-04-24'), 'íƒˆë½');
+--INSERT INTO applicant VALUES (2, 1, 'm_eum01', '°è¼Ó ¾²°í ÀÖ´Â Á¦Ç°ÀÎµ¥ ³Ê¹« ÁÁ¾Æ¿ä.', TO_DATE('2024-04-24'), 'Å»¶ô');
 --
---INSERT INTO applicant VALUES (3, 1, 'd_Chan01', 'ì‹ ì²­í•©ë‹ˆë‹¤. ë‹¹ì²¨ ë˜ì—ˆìœ¼ë©´ ì¢‹ê² ì–´ìš”', TO_DATE('2024-04-25'), 'ë‹¹ì²¨');
+--INSERT INTO applicant VALUES (3, 1, 'd_Chan01', '½ÅÃ»ÇÕ´Ï´Ù. ´çÃ· µÇ¾úÀ¸¸é ÁÁ°Ú¾î¿ä', TO_DATE('2024-04-25'), '´çÃ·');
 --
---INSERT INTO applicant VALUES (4, 1, 'mggun01', 'ì €í¬ ëŒ•ëŒ•ì´ê°€ ì°¸ ì¢‹ì•„í•´ìš”.', TO_DATE('2024-04-25'), 'íƒˆë½');
+--INSERT INTO applicant VALUES (4, 1, 'mggun01', 'ÀúÈñ ´ó´óÀÌ°¡ Âü ÁÁ¾ÆÇØ¿ä.', TO_DATE('2024-04-25'), 'Å»¶ô');
 --
---INSERT INTO applicant VALUES (5, 1, 'whyun01', 'ë‹¹ì²¨ë˜ê³  ì‹¶ì–´ìš” ê¼­!.', TO_DATE('2024-04-26'), 'ë‹¹ì²¨');
+--INSERT INTO applicant VALUES (5, 1, 'whyun01', '´çÃ·µÇ°í ½Í¾î¿ä ²À!.', TO_DATE('2024-04-26'), '´çÃ·');
 --
---INSERT INTO applicant VALUES (5, 1, 'minziZzang', 'ì‹ ì²­í•´ìš”!', TO_DATE('2024-04-26'), 'ë‹¹ì²¨');
+--INSERT INTO applicant VALUES (5, 1, 'minziZzang', '½ÅÃ»ÇØ¿ä!', TO_DATE('2024-04-26'), '´çÃ·');
 --
---INSERT INTO applicant VALUES (5, 1, 'hive', 'ì‹ ì²­í•©ë‹ˆë‹¤.', TO_DATE('2024-04-27'), 'ë‹¹ì²¨');
+--INSERT INTO applicant VALUES (5, 1, 'hive', '½ÅÃ»ÇÕ´Ï´Ù.', TO_DATE('2024-04-27'), '´çÃ·');
 --
-----ë§í¬ https://event.ssg.com/eventDetail.ssg?nevntId=1000000012872&domainSiteNo=6005&_mpop=new
---INSERT INTO applicant VALUES (1, 2, 'daetu01', 'ê¼­ ë‹¹ì²¨ë˜ê³  ì‹¶ì–´ìš”ã…‚!', TO_DATE('2024-04-27'), 'ë‹¹ì²¨');
+----¸µÅ© https://event.ssg.com/eventDetail.ssg?nevntId=1000000012872&domainSiteNo=6005&_mpop=new
+--INSERT INTO applicant VALUES (1, 2, 'daetu01', '²À ´çÃ·µÇ°í ½Í¾î¿ä¤²!', TO_DATE('2024-04-27'), '´çÃ·');
 --
---INSERT INTO applicant VALUES (2, 2, 'm_eum01', 'ê³„ì† ì“°ê³  ìžˆëŠ” ì œí’ˆì¸ë° ë„ˆë¬´ ì¢‹ì•„ìš”.', TO_DATE('2024-05-27'), 'íƒˆë½');
+--INSERT INTO applicant VALUES (2, 2, 'm_eum01', '°è¼Ó ¾²°í ÀÖ´Â Á¦Ç°ÀÎµ¥ ³Ê¹« ÁÁ¾Æ¿ä.', TO_DATE('2024-05-27'), 'Å»¶ô');
 --
---INSERT INTO applicant VALUES (3, 2, 'd_Chan01', 'ì‹ ì²­í•©ë‹ˆë‹¤. ë‹¹ì²¨ ë˜ì—ˆìœ¼ë©´ ì¢‹ê² ì–´ìš”', TO_DATE('2024-05-27'), 'ë‹¹ì²¨');
+--INSERT INTO applicant VALUES (3, 2, 'd_Chan01', '½ÅÃ»ÇÕ´Ï´Ù. ´çÃ· µÇ¾úÀ¸¸é ÁÁ°Ú¾î¿ä', TO_DATE('2024-05-27'), '´çÃ·');
 --
---INSERT INTO applicant VALUES (4, 2, 'mggun01', 'ì €í¬ ì•„ì´ ì°¸ ì¢‹ì•„í•´ìš”.', TO_DATE('2024-05-28'), 'íƒˆë½');
+--INSERT INTO applicant VALUES (4, 2, 'mggun01', 'ÀúÈñ ¾ÆÀÌ Âü ÁÁ¾ÆÇØ¿ä.', TO_DATE('2024-05-28'), 'Å»¶ô');
 --
---INSERT INTO applicant VALUES (5, 2, 'whyun01', 'ë‹¹ì²¨ë˜ê³  ì‹¶ì–´ìš” ê¼­!.', TO_DATE('2024-05-28'), 'ë‹¹ì²¨');
+--INSERT INTO applicant VALUES (5, 2, 'whyun01', '´çÃ·µÇ°í ½Í¾î¿ä ²À!.', TO_DATE('2024-05-28'), '´çÃ·');
 --
---INSERT INTO applicant VALUES (5, 2, 'minziZzang', 'ì‹ ì²­í•´ìš”!', TO_DATE('2024-05-28'), 'íƒˆë½');
+--INSERT INTO applicant VALUES (5, 2, 'minziZzang', '½ÅÃ»ÇØ¿ä!', TO_DATE('2024-05-28'), 'Å»¶ô');
 --
---INSERT INTO applicant VALUES (7, 2, 'hive', 'ì‹ ì²­í•©ë‹ˆë‹¤.', TO_DATE('2024-05-28'), 'ë‹¹ì²¨');
+--INSERT INTO applicant VALUES (7, 2, 'hive', '½ÅÃ»ÇÕ´Ï´Ù.', TO_DATE('2024-05-28'), '´çÃ·');
 --
---INSERT INTO  applicant VALUES( applicant_seq.NEXTVAL, 2, 'hive', 'ì‹ ì²­í•©ë‹ˆë‹¤', SYSDATE, NULL, NULL);
+--INSERT INTO  applicant VALUES( applicant_seq.NEXTVAL, 2, 'hive', '½ÅÃ»ÇÕ´Ï´Ù', SYSDATE, NULL, NULL);
 --
---INSERT INTO applicant VALUES( applicant.NEXTVAL, ?(eventid), ?(memid), ?('ì‹ ì²­ì½”ë©”íŠ¸'), ?(ì‹ ì²­ë‚ ì§œ), null, null);
+--INSERT INTO applicant VALUES( applicant.NEXTVAL, ?(eventid), ?(memid), ?('½ÅÃ»ÄÚ¸ÞÆ®'), ?(½ÅÃ»³¯Â¥), null, null);
 
 
 -- require terms 
@@ -1993,7 +2366,7 @@ INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_email', '/SSGSS
 INSERT INTO terms VALUES (terms_seq.NEXTVAL, 'ssgInfoRcvAgree=10_sms', '/SSGSSAK/member/terms/ssgInfoRcvAgree_sms','N');
 
 -- divisionFolder 
-INSERT INTO divisionfolder VALUES (division_seq.NEXTVAL, 'daetu01','ëª¨ì•„ë³´ê¸°',SYSDATE);
+INSERT INTO divisionfolder VALUES (division_seq.NEXTVAL, 'daetu01','¸ð¾Æº¸±â',SYSDATE);
 
 
 -- interestgoods insert
@@ -2024,7 +2397,7 @@ INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000026532717,'\SSGSSAK\pay
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000544937242,'\SSGSSAK\pay\image\1000544937242_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000544937242,'\SSGSSAK\pay\image\1000544937242_i2_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000544937242,'\SSGSSAK\pay\image\1000544937242_i3_1200.avif','other');
-INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000544937242,'\SSGSSAK\pay\image\ìŠ¤í¬ë¦°ìƒ· 2024-04-27 205657.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000544937242,'\SSGSSAK\pay\image\½ºÅ©¸°¼¦ 2024-04-27 205657.png','other');
 
 --3
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000587702102,'\SSGSSAK\pay\image\1000587702102_i1_1100.avif','sum');
@@ -2042,7 +2415,7 @@ INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay\image\2097001577943_i3_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay\image\2097001577943_i4_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay\image\2097001577943_i5_1200.avif','other');
-INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay\image\ìŠ¤í¬ë¦°ìƒ· 2024-04-27 210640.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001577943,'\SSGSSAK\pay\image\½ºÅ©¸°¼¦ 2024-04-27 210640.png','other');
 
 --5
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000582326954,'\SSGSSAK\pay\image\1000582326954_i1_1100.avif','sum');
@@ -2083,7 +2456,7 @@ INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001308233,'\SSGSSAK\pay
 --9
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097000257655,'\SSGSSAK\pay\image\2097000257655_i1_1200.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097000257655,'\SSGSSAK\pay\image\2097000257655_i2_1200.webp','other');
-INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097000257655,'\SSGSSAK\pay\image\ë™ì˜ìƒëŒ€ì²´í…ìŠ¤íŠ¸2.mp4','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097000257655,'\SSGSSAK\pay\image\µ¿¿µ»ó´ëÃ¼ÅØ½ºÆ®2.mp4','other');
 
 
 
@@ -2092,17 +2465,17 @@ INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\2097001557433_i2_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\2097001557433_i3_1200.jpg','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\R2097001557433_i4_1200.jpg','other');
-INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\ìŠ¤í¬ë¦°ìƒ· 2024-04-27 212503.png','other');
-INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\ìŠ¤í¬ë¦°ìƒ· 2024-04-27 212526.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\½ºÅ©¸°¼¦ 2024-04-27 212503.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001557433,'\SSGSSAK\pay\image\½ºÅ©¸°¼¦ 2024-04-27 212526.png','other');
 
 --11
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\1000579723160_i1_1100.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\1000579723160_i2_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\1000579723160_i3_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\162024020616351412651769639176_804.jpg','other');
-INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\ìŠ¤í¬ë¦°ìƒ· 2024-04-27 212717.png','other');
-INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\ìŠ¤í¬ë¦°ìƒ· 2024-04-27 212722.png','other');
-INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\ìŠ¤í¬ë¦°ìƒ· 2024-04-27 212727.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\½ºÅ©¸°¼¦ 2024-04-27 212717.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\½ºÅ©¸°¼¦ 2024-04-27 212722.png','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000579723160,'\SSGSSAK\pay\image\½ºÅ©¸°¼¦ 2024-04-27 212727.png','other');
 
 --13
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,1000059288917,'\SSGSSAK\pay\image\1000059288917_i1_1100.avif','sum');
@@ -2120,6 +2493,308 @@ INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay\image\2097001432075_i3_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay\image\2097001432075_i4_1200.jpg','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay\image\2097001432075_i5_1200.webp','other');
+
+
+
+-- µ¿Âù »óÇ° ÀÌ¹ÌÁö
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (84,3000000000000,'\SSGSSAK\pay\image\a47e6b34-a481-4cf8-961a-8e019d0ac9da½ºÅ©¸°¼¦ 2024-04-03 235359.png','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (85,3000000000000,'\SSGSSAK\pay\image\a47e6b34-a481-4cf8-961a-8e019d0ac9da½ºÅ©¸°¼¦ 2024-04-07 004755.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (86,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000026532717_i6_500.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (87,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i2_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (88,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (89,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (90,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i5_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (91,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfas2.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (92,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfexchange,return_notice.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (93,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (94,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_color.gif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (95,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_compare.gif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (96,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_point.gif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (97,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_review.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (98,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (99,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (100,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (101,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_04.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (102,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (103,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_06.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (104,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_07.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (105,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_spec.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (106,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfservice_hm.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (107,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf°ø½ÄÆÄÆ®³Ê»ç°¡-ÁÁÀºÀÌÀ¯_À½Çâ_µô.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (108,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (109,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i2_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (110,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (111,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (112,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i5_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (113,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (114,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (115,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (116,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (117,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (118,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (119,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_04.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (120,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (121,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_06.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (122,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_07.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (123,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_08.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (124,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_09.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (125,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_10.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (126,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_11.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (127,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_13.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (128,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cnew_1.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (129,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c½ºÅ©¸°¼¦ 2024-05-26 220727.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (130,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef1000583195974_i1_1100.jpg','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (131,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef1000583195974_i2_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (132,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_01_n.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (133,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (134,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (135,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (136,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_06.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (137,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_07.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (138,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_08.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (139,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_09_n.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (140,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efnotice_xxovit.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (141,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef½ºÅ©¸°¼¦ 2024-05-26 221856.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (142,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (143,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i2_500.webp','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (144,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (145,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (146,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2eend.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (147,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2intro.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (148,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_001.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (149,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_002.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (150,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_003.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (151,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_004.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (152,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_005.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (153,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_006.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (154,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_007.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (155,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2soundcat-logo-final3.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (156,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2½ºÅ©¸°¼¦ 2024-05-26 222639.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (157,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (158,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i2_500.webp','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (159,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (160,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (161,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e082024042608561096444338587433_753.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (162,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e142024042514153967849658520075_150.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (163,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e162023060816482191246355876635_550.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (164,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7ecdtl_oversea.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (165,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e½ºÅ©¸°¼¦ 2024-05-26 223100.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (166,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (167,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i1_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (168,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i2_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (169,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i2_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (170,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191709383169740416_996.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (171,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191726224356836435_82.webp','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (172,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191786642637337263_867.webp','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (173,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716365861271371169137_511.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (174,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366½ºÅ©¸°¼¦ 2024-05-26 223614.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (175,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i1_1100.jpg','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (176,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i2_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (177,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (178,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (179,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i5_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (180,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aBallondeparis_notice.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (181,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (182,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (183,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (184,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_04.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (185,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (186,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aBALLONDEPARRIS_JEJU DELIVERY.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (187,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175anotice_refund_highendwhite.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (188,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (189,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (190,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (191,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_04.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (192,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (193,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_06.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (194,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_07.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (195,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_08.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (196,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_09.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (197,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_10.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (198,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a½ºÅ©¸°¼¦ 2024-05-26 224148.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (199,3000000000008,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547a1000026648892_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (200,3000000000008,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547arr226_w_db.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (201,3000000000008,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547a½ºÅ©¸°¼¦ 2024-05-26 232221.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (202,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (203,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i1_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (204,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i2_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (205,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i2_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (206,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (207,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i3_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (208,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (209,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i4_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (210,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i5_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (211,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i5_1200.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (212,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i6_500.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (213,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i6_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (214,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i7_1200.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (215,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe4R810.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (216,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i1_1100.jpg','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (217,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i2_500.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (218,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i4_500.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (219,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i5_500.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (220,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i6_500.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (221,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047notice_refund_furniture.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (222,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (223,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (224,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (225,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_04.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (226,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (227,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047½ºÅ©¸°¼¦ 2024-05-26 233205.png','other');
+
+
+
+-- ¸¼À½ »óÇ° ÀÌ¹ÌÁö
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (175,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[³ÃÀå][±èÇØÃàÇù] ÇÑµ· °íÃßÀå Á¦À°ººÀ½ 1,000g2.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (176,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[³ÃÀå][±èÇØÃàÇù] ÇÑµ· °íÃßÀå Á¦À°ººÀ½ 1,000g3.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (177,3000000000013,'\SSGSSAK\pay\image\4967aeea-e608-4d26-8048-99c55f9dab06[°¡°Ý¿ªÁÖÇà] ÈÆÁ¦¸ñ½É (400g).png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (178,3000000000013,'\SSGSSAK\pay\image\4967aeea-e608-4d26-8048-99c55f9dab06[°¡°Ý¿ªÁÖÇà] ÈÆÁ¦¸ñ½É (400g)1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (120,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a¾ç³ä¸ñ»ì±¸ÀÌ2.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (121,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64³ëºê·£µå ¹ÙºñÅ¥Æø¸³550g.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (122,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64³ëºê·£µå ¹ÙºñÅ¥Æø¸³550g1.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (123,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64³ëºê·£µå ¹ÙºñÅ¥Æø¸³550g2.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (124,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64³ëºê·£µå ¹ÙºñÅ¥Æø¸³550g3.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (125,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (126,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (127,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (128,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (118,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a¾ç³ä¸ñ»ì±¸ÀÌ.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (119,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a¾ç³ä¸ñ»ì±¸ÀÌ1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (129,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (130,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (131,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (132,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (133,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (134,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 1ÆÑ9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (135,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (136,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (137,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (138,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (139,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (140,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (141,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (142,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (143,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (144,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0±¹³»»ê ¾ç³äµ·À° ¿Õ±¸ÀÌ 530g X 1ÆÑ9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (145,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (146,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (147,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (148,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (149,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (150,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (151,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (152,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (153,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (154,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930±¹³»»ê ¸ÅÄÞ´ÞÄÞ Á¦À°ººÀ½ 400g X 3ÆÑ9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (155,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (156,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (157,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (158,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (159,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (160,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (161,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (162,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (163,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (164,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0±¹³»»ê ÈæµÅÁö °íÃßÀå ºÒ°í±â 500g X 1ÆÑ9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (165,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aadÇÇÄÚÅ© ¾ç³äµÅÁö°¥ºñ500g.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (166,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aadÇÇÄÚÅ© ¾ç³äµÅÁö°¥ºñ500g1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (167,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aadÇÇÄÚÅ© ¾ç³äµÅÁö°¥ºñ500g2.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (168,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aadÇÇÄÚÅ© ¾ç³äµÅÁö°¥ºñ500g3.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (169,3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527aÁ¦À°ººÀ½ (800g).png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (170,3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527aÁ¦À°ººÀ½ (800g)1.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (171,3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527aÁ¦À°ººÀ½ (800g)1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (172,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[³ÃÀå][±èÇØÃàÇù] ÇÑµ· °íÃßÀå Á¦À°ººÀ½ 1,000g.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (173,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[³ÃÀå][±èÇØÃàÇù] ÇÑµ· °íÃßÀå Á¦À°ººÀ½ 1,000g1.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (174,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[³ÃÀå][±èÇØÃàÇù] ÇÑµ· °íÃßÀå Á¦À°ººÀ½ 1,000g1.png','other');
+
+
+
+-------------------------------- µ¿¿µ »óÇ° ÀÌ¹ÌÁö ÀÎ¼­Æ®
+-- ¹èÃß±èÄ¡ 1000036684949
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000036684949, '\SSGSSAK\pay\image\ffb7d34a-3640-411a-8324-f9dad19f44c1º°¹Ì Æ÷±â±èÄ¡(SUM).png', 'SUM');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000036684949, '\SSGSSAK\pay\image\ffb7d34a-3640-411a-8324-f9dad19f44c1Æ÷±â±èÄ¡ 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000036684949, '\SSGSSAK\pay\image\ffb7d34a-3640-411a-8324-f9dad19f44c1º°¹Ì Æ÷±â±èÄ¡ ³»¿ë1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000036684949, '\SSGSSAK\pay\image\ffb7d34a-3640-411a-8324-f9dad19f44c1º°¹Ì Æ÷±â±èÄ¡ ³»¿ë2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000036684949, '\SSGSSAK\pay\image\ffb7d34a-3640-411a-8324-f9dad19f44c1º°¹Ì Æ÷±â±èÄ¡ ³»¿ë3.png', 'other');
+
+-- ¼®¹ÚÁö 1000521094336
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000521094336, '\SSGSSAK\pay\image\6d8fdb91-9103-4886-b20e-3776a65abdc8¼®¹ÚÁö(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000521094336, '\SSGSSAK\pay\image\6d8fdb91-9103-4886-b20e-3776a65abdc8¼®¹ÚÁö.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000521094336, '\SSGSSAK\pay\image\6d8fdb91-9103-4886-b20e-3776a65abdc8¼®¹ÚÁö ³»¿ë 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000521094336, '\SSGSSAK\pay\image\6d8fdb91-9103-4886-b20e-3776a65abdc8¼®¹ÚÁö ³»¿ë 2.png', 'other');
+
+-- ºñºñ°í ½äÀº¹èÃß±èÄ¡ ´ÜÁö 1000020869356
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59ºñºñ°í ½äÀº¹èÃß±èÄ¡ ´ÜÁö(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59ºñºñ°í ½äÀº¹èÃß±èÄ¡ ´ÜÁö 2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59ºñºñ°í ½äÀº¹èÃß±èÄ¡ ´ÜÁö ³»¿ë 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59ºñºñ°í ½äÀº¹èÃß±èÄ¡ ´ÜÁö ³»¿ë 2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59ºñºñ°í ½äÀº¹èÃß±èÄ¡ ´ÜÁö ³»¿ë 3.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59ºñºñ°í ½äÀº¹èÃß±èÄ¡ ´ÜÁö ³»¿ë 4.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59ºñºñ°í ½äÀº¹èÃß±èÄ¡ ´ÜÁö ³»¿ë 5.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59ºñºñ°í ½äÀº¹èÃß±èÄ¡ ´ÜÁö ³»¿ë 6.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59ºñºñ°í ½äÀº¹èÃß±èÄ¡ ´ÜÁö ³»¿ë 7.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59ºñºñ°í ½äÀº¹èÃß±èÄ¡ ´ÜÁö ³»¿ë 8.png', 'other');
+
+-- Á¾°¡Áý ¿­¹«±èÄ¡ 900g 1000047906497
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000047906497, '\SSGSSAK\pay\image\7b275d28-36f6-46a8-b903-b60dc3013376Á¾°¡Áý ¿­¹«±èÄ¡ 900g(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000047906497, '\SSGSSAK\pay\image\7b275d28-36f6-46a8-b903-b60dc3013376Á¾°¡Áý ¿­¹«±èÄ¡ 900g 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000047906497, '\SSGSSAK\pay\image\7b275d28-36f6-46a8-b903-b60dc3013376Á¾°¡Áý ¿­¹«±èÄ¡ 900g ³»¿ë 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000047906497, '\SSGSSAK\pay\image\7b275d28-36f6-46a8-b903-b60dc3013376Á¾°¡Áý ¿­¹«±èÄ¡ 900g ³»¿ë 2.png', 'other');
+
+-- ÇÇÄÚÅ© Á¶¼±È£ÅÚ Æ÷±â±èÄ¡ 1kg 1000063852561
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000063852561, '\SSGSSAK\pay\image\e14f9d9d-16ef-4d77-8309-e7aeee3672ecÇÇÄÚÅ© Á¶¼±È£ÅÚ Æ÷±â±èÄ¡ 1kg (SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000063852561, '\SSGSSAK\pay\image\e14f9d9d-16ef-4d77-8309-e7aeee3672ecÇÇÄÚÅ© Á¶¼±È£ÅÚ Æ÷±â±èÄ¡ 1kg 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000063852561, '\SSGSSAK\pay\image\e14f9d9d-16ef-4d77-8309-e7aeee3672ecÇÇÄÚÅ© Á¶¼±È£ÅÚ Æ÷±â±èÄ¡ 1kg ³»¿ë1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000063852561, '\SSGSSAK\pay\image\e14f9d9d-16ef-4d77-8309-e7aeee3672ecÇÇÄÚÅ© Á¶¼±È£ÅÚ Æ÷±â±èÄ¡ 1kg ³»¿ë2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000063852561, '\SSGSSAK\pay\image\e14f9d9d-16ef-4d77-8309-e7aeee3672ecÇÇÄÚÅ© Á¶¼±È£ÅÚ Æ÷±â±èÄ¡ 1kg ³»¿ë3.png', 'other');
+
+-- ³ëºê·£µå º°¹Ì ººÀ½±èÄ¡ 1000293138988
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c³ëºê·£µå º°¹Ì ººÀ½±èÄ¡(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c³ëºê·£µå º°¹Ì ººÀ½±èÄ¡ 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c³ëºê·£µå º°¹Ì ººÀ½±èÄ¡ ³»¿ë1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c³ëºê·£µå º°¹Ì ººÀ½±èÄ¡ ³»¿ë2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c³ëºê·£µå º°¹Ì ººÀ½±èÄ¡ ³»¿ë3.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c³ëºê·£µå º°¹Ì ººÀ½±èÄ¡ ³»¿ë4.png', 'other');
+
+-- Á¾°¡Áý ½Ã¿øÇÏ°í ±ò²ûÇÑ Æ÷±â±èÄ¡ 3.3kg 1000031232139
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000031232139, '\SSGSSAK\pay\image\cb34c6d6-a134-4558-b4b5-88a1b2907e4cÁ¾°¡Áý ½Ã¿øÇÏ°í ±ò²ûÇÑ Æ÷±â±èÄ¡ 3.3kg(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000031232139, '\SSGSSAK\pay\image\cb34c6d6-a134-4558-b4b5-88a1b2907e4cÁ¾°¡Áý ½Ã¿øÇÏ°í ±ò²ûÇÑ Æ÷±â±èÄ¡ 3.3kg 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000031232139, '\SSGSSAK\pay\image\cb34c6d6-a134-4558-b4b5-88a1b2907e4cÁ¾°¡Áý ½Ã¿øÇÏ°í ±ò²ûÇÑ Æ÷±â±èÄ¡ 3.3kg ³»¿ë 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000031232139, '\SSGSSAK\pay\image\cb34c6d6-a134-4558-b4b5-88a1b2907e4cÁ¾°¡Áý ½Ã¿øÇÏ°í ±ò²ûÇÑ Æ÷±â±èÄ¡ 3.3kg ³»¿ë 2.png', 'other');
+
+-- Á¾°¡Áý µ¿Ä¡¹Ì 1.2kg 1000008952676
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000008952676, '\SSGSSAK\pay\image\594e956f-3c82-4a9f-b9fc-5943c245c058Á¾°¡Áý µ¿Ä¡¹Ì 1.2kg(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000008952676, '\SSGSSAK\pay\image\594e956f-3c82-4a9f-b9fc-5943c245c058Á¾°¡Áý µ¿Ä¡¹Ì 1.2kg 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000008952676, '\SSGSSAK\pay\image\594e956f-3c82-4a9f-b9fc-5943c245c058Á¾°¡Áý µ¿Ä¡¹Ì 1.2kg ³»¿ë 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000008952676, '\SSGSSAK\pay\image\594e956f-3c82-4a9f-b9fc-5943c245c058Á¾°¡Áý µ¿Ä¡¹Ì 1.2kg ³»¿ë2.png', 'other');
+
+-- Á¾°¡Áý ¾î¸°ÀÎ ÇÑÀÔ ±ïµÎ±â 1000021131356
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4eÁ¾°¡Áý ¾î¸°ÀÎ ÇÑÀÔ ±ïµÎ±â(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4eÁ¾°¡Áý ¾î¸°ÀÎ ÇÑÀÔ ±ïµÎ±â 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4eÁ¾°¡Áý ¾î¸°ÀÎ ÇÑÀÔ ±ïµÎ±â 2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4eÁ¾°¡Áý ¾î¸°ÀÎ ÇÑÀÔ ±ïµÎ±â 3.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4eÁ¾°¡Áý ¾î¸°ÀÎ ÇÑÀÔ ±ïµÎ±â ³»¿ë 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4eÁ¾°¡Áý ¾î¸°ÀÎ ÇÑÀÔ ±ïµÎ±â ³»¿ë 2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4eÁ¾°¡Áý ¾î¸°ÀÎ ÇÑÀÔ ±ïµÎ±â ³»¿ë 3.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4eÁ¾°¡Áý ¾î¸°ÀÎ ÇÑÀÔ ±ïµÎ±â ³»¿ë 4.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4eÁ¾°¡Áý ¾î¸°ÀÎ ÇÑÀÔ ±ïµÎ±â ³»¿ë 5.png', 'other');
+
+-- ¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg 1000523249169
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg ³»¿ë 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg ³»¿ë 2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg ³»¿ë 3.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg ³»¿ë 4.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg ³»¿ë 5.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg ³»¿ë 6.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg ³»¿ë 7.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg ³»¿ë 8.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg ³»¿ë 9.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba¼±È­µ¿ ½ÇºñÁý ¸Å¿î ½Çºñ±èÄ¡ ¹èÃß±èÄ¡ 1kg ³»¿ë 10.png', 'other');
+
+
+
+
 
 
 
