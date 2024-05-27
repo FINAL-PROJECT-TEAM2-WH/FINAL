@@ -122,7 +122,8 @@ CREATE TABLE member (
     updateDate DATE DEFAULT SYSDATE NULL,
     loginNotification char(1) DEFAULT 0 NULL,
     login2Notification char(1) DEFAULT 0 NULL,
-    privilege varchar2(300) DEFAULT 'member' NULL
+    privilege varchar2(300) DEFAULT 'member' NULL,
+    enabled char(4) DEFAULT 'N' NOT NULL
 );
 
 
@@ -368,8 +369,6 @@ CREATE TABLE present (
 
 CREATE TABLE Auth (
 id varchar(300) NOT NULL,
-name varchar2 (300) NOT NULL,
-loginYN char(1)  DEFAULT 'Y' NULL,
 privilege varchar(300) NOT NULL
 );
 

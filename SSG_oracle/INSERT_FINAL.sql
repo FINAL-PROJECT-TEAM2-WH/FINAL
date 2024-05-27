@@ -966,6 +966,34 @@ INSERT INTO category VALUES ('09111400', '디지털/렌탈', '렌탈', '기타 �
 
 INSERT INTO category VALUES ('10000000', '여행/e쿠폰/문구/도서', '', '', '');
 
+------------------------------------ 우현 카테고리 
+-- 명품
+-- 카테고리 데이터 삽입
+INSERT INTO category VALUES ('01020501', '명품', '여성명품', '상의', '');
+INSERT INTO category VALUES ('01000000', '명품', '', '', '');
+INSERT INTO category VALUES ('01020000', '명품', '', '','');
+INSERT INTO category VALUES ('01020101', '명품', '여성명품', '가방', '');
+INSERT INTO category VALUES ('01020202', '명품', '여성명품', '지갑', '');
+INSERT INTO category VALUES ('01020303', '명품', '여성명품', '슈즈', '');
+INSERT INTO category VALUES ('01020404', '명품', '여성명품', '아우터', '');
+INSERT INTO category VALUES ('01020505', '명품', '여성명품', '상의', '');
+INSERT INTO category VALUES ('01020606', '명품', '여성명품', '하의', '');
+INSERT INTO category VALUES ('01020707', '명품', '여성명품', '원피스', '');
+INSERT INTO category VALUES ('01020808', '명품', '여성명품', '시계', '');
+INSERT INTO category VALUES ('01020909', '명품', '여성명품', '안경/선글라스', '');
+INSERT INTO category VALUES ('01021010', '명품', '여성명품', '유아동', '');
+
+
+INSERT INTO category VALUES ('01020212', '명품', '남성명품', '지갑', '');
+INSERT INTO category VALUES ('01020313', '명품', '남성명품', '슈즈', '');
+INSERT INTO category VALUES ('01020414', '명품', '남성명품', '아우터', '');
+INSERT INTO category VALUES ('01020515', '명품', '남성명품', '상의', '');
+INSERT INTO category VALUES ('01020616', '명품', '남성명품', '하의', '');
+INSERT INTO category VALUES ('01020717', '명품', '남성명품', '원피스', '');
+INSERT INTO category VALUES ('01020818', '명품', '남성명품', '시계', '');
+INSERT INTO category VALUES ('01020919', '명품', '남성명품', '안경/선글라스', '');
+INSERT INTO category VALUES ('01021020', '명품', '남성명품', '유아동', '');
+
 
 
 INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '케라스타즈');
@@ -1004,6 +1032,23 @@ INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '아이닉스');
 
 INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '모던하우스');
 
+  -- 동찬 브랜드
+ insert into brand values(brand_seq.NEXTVAL,NULL,'하만카돈');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'JBL');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'쏘빗');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'펜더');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'마샬');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'제네바');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'발롱드파리');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'게이즈샵');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'리스닝룸 by ODE');
+ insert into brand values(brand_seq.NEXTVAL,NULL,'로이츠');
+ 
+
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'종가집'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'비비고'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'실비집'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'피코크'  );
 
 
 INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '시코르');
@@ -1032,6 +1077,19 @@ INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '대우침장');
 
 INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '모던하우스');
 
+-- 동찬 스토어
+ --셀러스토어
+ insert into sellerstore values(seller_seq.NEXTVAL,'삼성씨앤에이치');
+ insert into sellerstore values(seller_seq.NEXTVAL,'삼성하만온라인스토어');
+ insert into sellerstore values(seller_seq.NEXTVAL,'쏘빗');
+ insert into sellerstore values(seller_seq.NEXTVAL,'더그랩사운드');
+ insert into sellerstore values(seller_seq.NEXTVAL,'뉴욕스토리');
+ insert into sellerstore values(seller_seq.NEXTVAL,'IT딕셔너리_닥터사운드/대광 판매자스토어');
+ insert into sellerstore values(seller_seq.NEXTVAL,'무케렌시아');
+ insert into sellerstore values(seller_seq.NEXTVAL,'게이즈샵_레이블럭/강대하');
+
+-- 동영 스토어
+INSERT INTO sellerstore VALUES( seller_seq.NEXTVAL ,'미미의밥상'  );
 ----------------------------------------------------------------------------------
 -- 배송옵션 테이블 생성
 -- 배송옵션 시퀀스 생성
@@ -1075,6 +1133,7 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 
 --판매자 이마트
 INSERT INTO product VALUES (70201, '07040202', 0, null, 8, 11, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '상품번호 : 70201', SYSDATE);
+
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70201, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)',NULL ,19900, NULL);
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','sum');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','other');
@@ -1303,6 +1362,271 @@ VALUES (1000067576484, '09010200', 0 , 10, 5, 5, '갤럭시탭 Trade-in OPEN', '
 
 
 
+------------------------------ 동찬 상품 인서트
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000001,'09090102',1,1,'sellerStore012','brand23','삼성공식파트너 하만카돈 오라 스튜디오4 블루투스 스피커 AURA STUDIO4','상품번호 : 1000553633604
+
+모델번호 : HKAURAS4BLKAS',to_date('24/05/25','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000002,'09090102',0,3,'sellerStore013','brand24','삼성공식파트너 JBL FLIP6 블루투스스피커 IP67 출력30W 플립6','상품번호 : 1000337473259
+
+모델번호 : JBLFLIP6',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000003,'09090102',0,2,'sellerStore014','brand25','휴대용 미니 블루투스 스피커','상품번호 : 1000583195974',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000004,'09090102',0,5,'sellerStore015','brand26','펜더리프 FENDER RIFF 블루투스 스피커','상품번호 : 1000555779315
+
+모델번호 : RIFF',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000005,'09090102',0,8,'sellerStore016','brand27','[미국정품] 엠버튼2 휴대용 블루투스 스피커','상품번호 : 1000549888715
+
+모델번호 : 마샬 엠버튼2 무선 블루투스 스피커',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000006,'09090102',0,10,'sellerStore018','brand29','[제네바] Classic M Hi-Fi 블루투스 오디오 월넛 + 전용 스탠드','상품번호 : 1000556577134
+
+모델번호 : CLASSICMWST',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000007,'09090102',0,6,'sellerStore019','brand30','[무케/공식수입] 발롱드파리 Object 9 + Stand 스피커5 color + 스탠드 무료 증정','상품번호 : 1000570849692
+
+모델번호 : [무케/공식수입] 발롱드파리Ballon De Paris_ Object 9 + Stand 5color',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000008,'09090102',0,5,'sellerStore020','brand31','Brionvega rr-226 Radiofonografo White 브리온베가 라디오포노그라포 블루투스 LP 라디오','상품번호 : 1000026648892
+
+모델번호 : RR226W',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000009,'09090102',0,5,'sellStore005','brand32','루악오디오 R810 올인원 블루투스 스피커 RUARK','상품번호 : 1000580126195
+
+모델번호 : R810',to_date('24/05/26','RR/MM/DD'));
+Insert into SSGSSAK.PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000010,'09090102',2,3,'sellerStore019','brand33','[무케] 로이츠_모듈잇 S205 V1 SPEAKER 합판타입(15color)','상품번호 : 1000572601910
+
+모델번호 : S205 V1 SPEAKER 합판타입(15color)',to_date('24/05/26','RR/MM/DD'));
+
+
+
+
+------------------------------ 맑음 상품 인서트 
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000006,'11050702',0,1,'sellStore002','brand002','국내산 매콤달콤 제육볶음 400g X 1팩','상품번호 : 1000042764299
+
+모델번호 : 제육볶음',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000007,'11050702',0,1,'sellStore002','brand002','국내산 양념돈육 왕구이 530g X 1팩','상품번호 : 1000042764296
+
+모델번호 : 양념돈육 왕구이',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000004,'11050702',0,1,'sellStore002','brand002','[가격역주행] 양념 목심구이 (700g*2)','상품번호 : 1000590162551',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000005,'11050702',0,1,'sellStore002','brand002','노브랜드 바비큐폭립550g','상품번호 : 1000039785690',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000008,'11050702',0,1,'sellStore002','brand002','국내산 매콤달콤 제육볶음 400g X 3팩','제품번호 : 1000042764302
+
+모델번호 : 제육볶음',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000009,'11050702',0,1,'sellStore002','brand002','국내산 흑돼지 고추장 불고기 500g X 1팩','상품번호 : 1000050510620
+
+모델번호 : 고추장불고기',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000010,'11050702',0,1,'sellStore002','brand002','피코크 양념돼지갈비500g','부드럽고 달콤한
+우리 집 인기 메뉴
+피코크 비밀연구소의 노하우로 만든 돼지갈비를 소개합니다. 수작업으로 포를 뜨고 칼집을 넣어 식감이 부드럽고 양념이 잘 배어들었어요. 특히 양념은 흑설탕과 매실청으로 단맛을 내는 등의 비법 레시피로 만들어 더욱 특별하죠. 국내산 동물복지인증 돼지갈비 부위만 사용하여 더욱 안심하고 즐길 수 있는 피코크 양념돼지갈비를 만나 보세요. 달콤 짭조름한 맛과 연한 육질로 온 가족 모두가 맛있게 먹을 수 있답니다.',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000011,'11050702',0,1,'sellStore002','brand002','제육볶음 (800g)','※ 본 상품 이미지는 대표 상품 이미지입니다. 실제 상품은 본 이미지와 상이할 수 있습니다.
+
+■ 상품명 : 제육볶음 800g
+
+■ 내용량 : 800g
+
+■ 원재료 및 함량 : 하단 상세이미지 참고',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000012,'11050702',0,1,'sellStore002','brand002','[냉장][김해축협] 한돈 고추장 제육볶음 1,000g','가족이 좋아하는
+고추장 제육볶음
+우리 땅에서 자라 믿을 수 있는 한돈으로 만든 고추장 제육볶음을 식탁에 올려보세요. 한국인이 좋아하는 반찬 제육볶음으로 온 가족의 한 끼 식사로 맛과 양에 부족함이 없답니다. 따로 양념을 재우고 손질하는 과정 없이 바로 요리가 가능한 상품이니 번거로움 없이 푸짐한 한 상을 차려보세요. 제육덮밥으로 즐겨도 좋고, 쌈과 곁들여 푸짐하고 맛있게 즐겨도 좋답니다.',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000013,'11050702',0,1,'sellStore002','brand002','[가격역주행] 훈제목심 (400g)','※ 본 상품 이미지는 대표 상품 이미지입니다. 실제 상품은 본 이미지와 상이할 수 있습니다.
+
+■ 상품명 : 가격역주행 훈제목심 400g
+
+■ 내용량 : 400g
+
+■ 원재료 및 함량 : 하단 상세이미지 참고',to_date('24/05/26','RR/MM/DD'));
+
+
+-------------------------------------- 동영 상품 인서트
+-- 노브랜드 포기김치
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000036684949, 12030101, 0, 1, 'sellStore002', 'brand02', '노브랜드 별미포기김치3.5kg', '시원하고 깔끔한 별미 포기김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000067576484, '노브랜드 별미포기김치3.5kg' , NULL, NULL, 15980, 1000);
+
+-- 석박지
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000521094336, 12030102, 0, 1, 'sellStore002', 'brand종가집', '종가 시원하고 아삭한 석박지 900g', '제철 무로 담은 시원한 석박지', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000521094336, '종가 시원하고 아삭한 석박지 900g' , NULL, NULL, 13900, 10000);
+
+-- 비비고 단지김치
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000020869356, 12030101, 0, 1, 'sellStore002', 'brand비비고', 'CJ 비비고 썰은배추김치 500g (PET)(단지김치)', '편하게 혼자서도 맛있게, 비비고 썰은 배추김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000020869356, '종가 시원하고 아삭한 석박지 900g' , NULL, NULL, 9800 , 1500);
+
+-- 종가집 열무김치
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000047906497, 12030102, 0, 1, 'sellStore002', 'brand종가집', '종가 오래오래 맛있는 열무김치 900g', '아삭하고 시원한 우리 농산물 김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000047906497, '종가 오래오래 맛있는 열무김치 900g' , NULL, NULL, 9980 , 1600);
+
+-- 피코크 포기김치
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000063852561, 12030101, 0, 1, 'sellStore002', 'brand피코크', '피코크 조선호텔특제육수 포기김치 1kg', '깊은 감칠맛의 프리미엄 포기김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000063852561, '피코크 조선호텔특제육수 포기김치 1kg' , NULL, NULL, 9980 , 2000);
+
+-- 노브랜드 별미 볶음김치
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000293138988, 12030104, 0, 1, 'sellStore002', 'brand노브랜드', '노브랜드 별미 볶음김치 400g', '곁들여 먹기 좋은 별미 볶음 김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000293138988, '노브랜드 별미 볶음김치 400g' , NULL, NULL, 3280  , 15000);
+
+-- [종가집]시원 깔끔 포기김치 3.3kg
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000031232139, 12030101, 0, 1, 'sellStore002', 'brand종가집', '[종가집]시원 깔끔 포기김치 3.3kg', '시원하고 깔끔한 종가집의 포기김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000031232139, '[종가집]시원 깔끔 포기김치 3.3kg' , NULL, NULL, 33800  , 1000);
+
+-- [종가집] 동치미 1.2kg
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000008952676, 12030103, 0, 1, 'sellStore002', 'brand종가집', '[종가집] 동치미 1.2kg', '자연의 재료로 건강한 단맛', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000008952676, '[종가집] 동치미 1.2kg' , NULL, NULL, 11800  , 1300);
+
+-- [종가집] 어린이 한입 깍두기 300g
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000021131356, 12030102, 0, 1, 'sellStore002', 'brand종가집', '[종가집] 어린이 한입 깍두기 300g', '우리 아이 위한 순한 한입 깍두기', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000021131356, '[종가집] 어린이 한입 깍두기 300g' , NULL, NULL, 4380  , 200);
+
+-- 선화동 실비집 매운 실비김치 배추김치 1kg
+INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
+VALUES ( 1000523249169, 12030101, 0, 1, 'sellStore미미의밥상', 'brand실비집', '선화동 실비집 매운 실비김치 배추김치 1kg', '매콤함에 속까지 뻥~뚫리는 경험! 맵지만 중독성 있는 그 맛!', TO_CHAR(SYSDATE, YY/MM/DD) );
+
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000523249169, '선화동 실비집 매운 실비김치 배추김치 1kg' , NULL, NULL, 19700  , 800);
+
+
+--------------------------------- 우현 상품 인서트
+-- 상품 1 삽입
+INSERT INTO product VALUES (10201, '01020501', 0, 9, 1, 1, '비비안웨스트우드 티셔츠 반팔 클래식 화이트 흰색 3G010013 J001M A401', '상품번호 : 10201', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10201, '비비안웨스트우드 티셔츠 반팔 클래식 화이트 흰색 3G010013 J001M A401', '비비안웨스트우드 티셔츠 반팔 클래식 화이트 흰색', NULL, 19900, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+
+-- 상품 2 삽입
+INSERT INTO product VALUES (10202, '01020502', 0, 9, 8, 2, '[폴로랄프로렌] 보이즈 반팔 피케 폴로 셔츠 무료배송 관부가세 포함', '상품번호 : 10202', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10202, '[폴로랄프로렌] 보이즈 반팔 피케 폴로 셔츠 무료배송 관부가세 포함', '[폴로랄프로렌] 보이즈 반팔 피케 폴로 셔츠 ', NULL, 6004, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+
+-- 상품 3 삽입
+INSERT INTO product VALUES (10203, '01020503', 0, 9, 8, 3, '[톰브라운] 국내배송 24SS 톰브라운 사선 4바 포인텔 니트 스웨터 FKA453A Y3017 101', '상품번호 : 10203', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10203, '국내배송 24SS 톰브라운 사선 4바 포인텔 니트 스웨터', '[톰브라운] 톰브라운 사선 4바 포인텔 니트 스웨터 ', NULL, 6005, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+
+-- 상품 4 삽입
+INSERT INTO product VALUES (10204, '01020504', 0, 9, 8, 4, '[아미] 24SS 여성 스몰 로고 카라 티셔츠 BFUPL001 760 001', '상품번호 : 10204', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10204, '[아미] 24SS 여성 스몰 로고 카라 티셔츠 BFUPL001 760 001', '[아미] 여성 스몰 로고 카라 티셔츠 ', NULL, 6006, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+
+-- 상품 5 삽입
+INSERT INTO product VALUES (10205, '01020505', 0, 9, 8, 5, '[꼼데가르송] (국내배송) 24SS 꼼데가르송 여성 레드하트 와펜 반팔티 P1T107 1', '상품번호 : 10205', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10205, '[꼼데가르송] 24SS 꼼데가르송 여성 레드하트 와펜 반팔티 P1T107 1', '[꼼데가르송] 24SS 꼼데가르송 여성 레드하트 와펜 반팔티', NULL, 6007, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+
+-- 상품 6 삽입
+INSERT INTO product VALUES (10206, '01020506', 0, 9, 8, 6, '[메종마르지엘라] 메종마르지엘라 여성 로고 워시드 블랙 반팔티 S51GC0526 S20079 970', '상품번호 : 10206', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10206, '[메종마르지엘라] 메종마르지엘라 여성 로고 워시드 블랙 반팔티 S51GC0526 S20079 970', '[메종마르지엘라] 메종마르지엘라 여성 로고 워시드 블랙 반팔티 ', NULL, 6008, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+
+-- 상품 7 삽입
+INSERT INTO product VALUES (10207, '01020507', 0, 9, 8, 7, '[반클리프앤아펠] 오르수 반클리프앤아펠 스위트 알함브라 펜던트 자개 목걸이 18K', '상품번호 : 10207', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10207, '[반클리프앤아펠] 오르수 반클리프앤아펠 스위트 알함브라 펜던트 자개 목걸이 18K', '[반클리프앤아펠] 오르수 반클리프앤아펠 스위트 알함브라 펜던트 자개 목걸이 18K ', NULL, 6005, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+
+-- 상품 8 삽입
+INSERT INTO product VALUES (10208, '01020508', 0, 9, 8, 8, '[롤렉스] 롤렉스 로렉스 179171 데이저스트 26 콤비 로만체 자개판', '상품번호 : 10208', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10208, '[롤렉스] 롤렉스 로렉스 179171 데이저스트 26 콤비 로만체 자개판', '[롤렉스] 롤렉스 로렉스 179171 데이저스트 26 콤비 로만체 자개판', NULL, 6005, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+
+-- 상품 9 삽입
+INSERT INTO product VALUES (10209, '01020509', 0, 9, 8, 9, '[몽클레어] 몽클레어 23FW 블랙 몽제테크 그레노블 후드 구스 다운 자켓 MONTGETECH 1A00044 53066 999', '상품번호 : 10209', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10209, '[몽클레어] 몽클레어 23FW 블랙 몽제테크 그레노블 후드 구스 다운 자켓', '[몽클레어] 몽클레어 23FW 블랙 몽제테크 그레노블 후드 구스 다운 자켓 ', NULL, 6005, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+
+-- 상품 10 삽입
+INSERT INTO product VALUES (10210, '01020510', 0, 9, 8, 10, '[스톤아일랜드] 24SS 스톤 나일론메탈 오버셔츠 블랙 801511219 801511219 V0029', '상품번호 : 10210', SYSDATE);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10210, '[스톤아일랜드] 24SS 스톤 나일론메탈 오버셔츠 블랙 801511219 801511219 V0029', '[스톤아일랜드] 24SS 스톤 나일론메탈 오버셔츠 블랙 ', NULL, 6005, NULL);
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i1_1200.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i1_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i2_1200.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i2_1200.avif', 'other');
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
+INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+
+
+
 --상품옵션인서트
 
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000587702102, '2027', '정장디자인',NULL ,null, NULL);
@@ -1363,6 +1687,58 @@ INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001308233, '
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097000257655, '[냉장][김해축협] 한돈 고추장 제육볶음 1,000g', NULL,NULL ,19800, NULL);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001557433, 'I`mperfect 당도선별 못난이사과 2kg (봉)', NULL,NULL ,23800, NULL);
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001432075, '[밀도] 담백식빵 480g', NULL,NULL ,6500, NULL);
+
+
+------------------------------ 동찬 상품옵션 인서트
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (49,3000000000001,'삼성공식파트너 하만카돈 오라 스튜디오4 블루투스 스피커 AURA STUDIO4','삼성공식파트너 하만카돈 오라 스튜디오4 블루투스 스피커 AURA STUDIO4',NULL,290000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (50,3000000000002,'{WHT} 화이트','색상',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (51,3000000000002,'{BLU} 블루','색상',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (52,3000000000002,'{TEL} 민트','색상',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (53,3000000000002,'{PINK} 핑크','색상',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (54,3000000000002,'{GREY} 그레이','색상',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (55,3000000000002,'{BLK} 블랙','색상',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (56,3000000000002,'{RED} 레드','색상',NULL,190000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (57,3000000000003,'레드','색상',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (58,3000000000003,'네이비','색상',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (59,3000000000003,'그린','색상',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (60,3000000000003,'퍼플','색상',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (61,3000000000003,'오렌지','색상',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (62,3000000000003,'블랙(오렌지)','색상',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (63,3000000000003,'블랙(그린)','색상',NULL,37300,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (64,3000000000004,'펜더리프 FENDER RIFF 블루투스 스피커','펜더리프 FENDER RIFF 블루투스 스피커',NULL,628950,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (65,3000000000005,'크림','색상',NULL,219900,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (66,3000000000005,'블랙앤브래스','색상',NULL,219900,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (67,3000000000005,'블랙앤스틸','색상',NULL,234814,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (68,3000000000006,'[제네바] Classic M Hi-Fi 블루투스 오디오 월넛 + 전용 스탠드','[제네바] Classic M Hi-Fi 블루투스 오디오 월넛 + 전용 스탠드',NULL,1560000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (69,3000000000007,'Beige','통합색상',NULL,4430000,999);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (70,3000000000007,'Yellow','통합색상',NULL,4430000,999);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (71,3000000000007,'Blue','통합색상',NULL,4430000,999);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (72,3000000000007,'Red','통합색상',NULL,4430000,999);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (73,3000000000007,'Black','통합색상',NULL,4430000,999);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (75,3000000000009,'월넛','색상',NULL,7450000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (76,3000000000009,'그레이','색상',NULL,7450000,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (77,3000000000010,'비비드 레드','통합색상',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (78,3000000000010,'캐럿 오렌지','통합색상',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (79,3000000000010,'허니 옐로우','통합색상',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (80,3000000000010,'프레쉬 그린','통합색상',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (81,3000000000010,'사파이 블루','통합색상',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (82,3000000000010,'스노우 화이트','통합색상',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (83,3000000000010,'포그 그레이','통합색상',NULL,4874444,50);
+Insert into SCOTT.PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (84,3000000000010,'캔디 핑크','통합색상',NULL,4874444,50);
+
+
+------------------------------ 맑음 상품옵션 인서트
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (54,3000000000006,'국내산 매콤달콤 제육볶음 400g X 1팩','x',0,9700,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (55,3000000000007,'국내산 양념돈육 왕구이 530g X 1팩','x',0,12990,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (56,3000000000008,'국내산 매콤달콤 제육볶음 400g X 3팩','x',0,26800,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (57,3000000000009,'국내산 흑돼지 고추장 불고기 500g X 1팩','x',0,8900,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (58,3000000000010,'피코크 양념돼지갈비500g','x',0,13980,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (59,3000000000011,'제육볶음 (800g)','x',0,13980,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (60,3000000000012,'[냉장][김해축협] 한돈 고추장 제육볶음 1,000g','x',0,19800,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (61,3000000000013,'[가격역주행] 훈제목심 (400g)','x',0,5800,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (52,3000000000004,'[가격역주행] 양념 목심구이 (700g*2)','x',0,14980,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (53,3000000000005,'노브랜드 바비큐폭립550g','x',0,14980,100);
+
 
 
 --옵션 없는 상품
@@ -2183,6 +2559,308 @@ INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay\image\2097001432075_i3_1200.avif','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay\image\2097001432075_i4_1200.jpg','other');
 INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay\image\2097001432075_i5_1200.webp','other');
+
+
+
+-- 동찬 상품 이미지
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (84,3000000000000,'\SSGSSAK\pay\image\a47e6b34-a481-4cf8-961a-8e019d0ac9da스크린샷 2024-04-03 235359.png','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (85,3000000000000,'\SSGSSAK\pay\image\a47e6b34-a481-4cf8-961a-8e019d0ac9da스크린샷 2024-04-07 004755.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (86,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000026532717_i6_500.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (87,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i2_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (88,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (89,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (90,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i5_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (91,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfas2.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (92,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfexchange,return_notice.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (93,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (94,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_color.gif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (95,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_compare.gif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (96,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_point.gif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (97,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_review.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (98,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (99,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (100,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (101,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_04.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (102,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (103,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_06.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (104,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_07.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (105,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_spec.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (106,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfservice_hm.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (107,3000000000001,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf공식파트너사가-좋은이유_음향_딜.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (108,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (109,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i2_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (110,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (111,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (112,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i5_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (113,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (114,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (115,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (116,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (117,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (118,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (119,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_04.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (120,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (121,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_06.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (122,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_07.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (123,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_08.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (124,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_09.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (125,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_10.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (126,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_11.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (127,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_13.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (128,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cnew_1.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (129,3000000000002,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c스크린샷 2024-05-26 220727.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (130,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef1000583195974_i1_1100.jpg','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (131,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef1000583195974_i2_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (132,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_01_n.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (133,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (134,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (135,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (136,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_06.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (137,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_07.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (138,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_08.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (139,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_09_n.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (140,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efnotice_xxovit.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (141,3000000000003,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef스크린샷 2024-05-26 221856.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (142,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (143,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i2_500.webp','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (144,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (145,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (146,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2eend.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (147,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2intro.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (148,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_001.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (149,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_002.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (150,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_003.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (151,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_004.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (152,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_005.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (153,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_006.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (154,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_007.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (155,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2soundcat-logo-final3.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (156,3000000000004,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2스크린샷 2024-05-26 222639.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (157,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (158,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i2_500.webp','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (159,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (160,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (161,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e082024042608561096444338587433_753.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (162,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e142024042514153967849658520075_150.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (163,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e162023060816482191246355876635_550.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (164,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7ecdtl_oversea.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (165,3000000000005,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e스크린샷 2024-05-26 223100.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (166,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (167,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i1_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (168,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i2_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (169,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i2_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (170,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191709383169740416_996.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (171,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191726224356836435_82.webp','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (172,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191786642637337263_867.webp','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (173,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716365861271371169137_511.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (174,3000000000006,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366스크린샷 2024-05-26 223614.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (175,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i1_1100.jpg','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (176,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i2_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (177,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (178,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (179,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i5_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (180,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aBallondeparis_notice.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (181,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (182,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (183,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (184,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_04.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (185,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (186,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aBALLONDEPARRIS_JEJU DELIVERY.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (187,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175anotice_refund_highendwhite.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (188,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (189,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (190,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (191,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_04.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (192,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (193,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_06.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (194,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_07.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (195,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_08.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (196,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_09.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (197,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_10.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (198,3000000000007,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a스크린샷 2024-05-26 224148.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (199,3000000000008,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547a1000026648892_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (200,3000000000008,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547arr226_w_db.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (201,3000000000008,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547a스크린샷 2024-05-26 232221.png','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (202,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i1_1100.avif','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (203,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i1_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (204,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i2_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (205,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i2_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (206,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i3_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (207,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i3_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (208,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i4_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (209,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i4_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (210,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i5_500.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (211,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i5_1200.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (212,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i6_500.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (213,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i6_1200.avif','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (214,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i7_1200.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (215,3000000000009,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe4R810.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (216,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i1_1100.jpg','sum');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (217,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i2_500.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (218,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i4_500.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (219,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i5_500.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (220,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i6_500.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (221,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047notice_refund_furniture.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (222,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_01.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (223,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_02.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (224,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_03.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (225,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_04.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (226,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_05.jpg','other');
+Insert into SCOTT.PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (227,3000000000010,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047스크린샷 2024-05-26 233205.png','other');
+
+
+
+-- 맑음 상품 이미지
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (175,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g2.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (176,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g3.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (177,3000000000013,'\SSGSSAK\pay\image\4967aeea-e608-4d26-8048-99c55f9dab06[가격역주행] 훈제목심 (400g).png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (178,3000000000013,'\SSGSSAK\pay\image\4967aeea-e608-4d26-8048-99c55f9dab06[가격역주행] 훈제목심 (400g)1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (120,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a양념목살구이2.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (121,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (122,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g1.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (123,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g2.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (124,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g3.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (125,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (126,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (127,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (128,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (118,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a양념목살구이.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (119,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a양념목살구이1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (129,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (130,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (131,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (132,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (133,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (134,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (135,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (136,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (137,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (138,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (139,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (140,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (141,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (142,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (143,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (144,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (145,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (146,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (147,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (148,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (149,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (150,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (151,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (152,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (153,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (154,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (155,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (156,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (157,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (158,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (159,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (160,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (161,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (162,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (163,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (164,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (165,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (166,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (167,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g2.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (168,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g3.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (169,3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527a제육볶음 (800g).png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (170,3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527a제육볶음 (800g)1.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (171,3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527a제육볶음 (800g)1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (172,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (173,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g1.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (174,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g1.png','other');
+
+
+
+-------------------------------- 동영 상품 이미지 인서트
+-- 배추김치 1000036684949
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000036684949, '\SSGSSAK\pay\image\ffb7d34a-3640-411a-8324-f9dad19f44c1별미 포기김치(SUM).png', 'SUM');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000036684949, '\SSGSSAK\pay\image\ffb7d34a-3640-411a-8324-f9dad19f44c1포기김치 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000036684949, '\SSGSSAK\pay\image\ffb7d34a-3640-411a-8324-f9dad19f44c1별미 포기김치 내용1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000036684949, '\SSGSSAK\pay\image\ffb7d34a-3640-411a-8324-f9dad19f44c1별미 포기김치 내용2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000036684949, '\SSGSSAK\pay\image\ffb7d34a-3640-411a-8324-f9dad19f44c1별미 포기김치 내용3.png', 'other');
+
+-- 석박지 1000521094336
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000521094336, '\SSGSSAK\pay\image\6d8fdb91-9103-4886-b20e-3776a65abdc8석박지(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000521094336, '\SSGSSAK\pay\image\6d8fdb91-9103-4886-b20e-3776a65abdc8석박지.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000521094336, '\SSGSSAK\pay\image\6d8fdb91-9103-4886-b20e-3776a65abdc8석박지 내용 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000521094336, '\SSGSSAK\pay\image\6d8fdb91-9103-4886-b20e-3776a65abdc8석박지 내용 2.png', 'other');
+
+-- 비비고 썰은배추김치 단지 1000020869356
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59비비고 썰은배추김치 단지(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59비비고 썰은배추김치 단지 2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59비비고 썰은배추김치 단지 내용 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59비비고 썰은배추김치 단지 내용 2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59비비고 썰은배추김치 단지 내용 3.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59비비고 썰은배추김치 단지 내용 4.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59비비고 썰은배추김치 단지 내용 5.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59비비고 썰은배추김치 단지 내용 6.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59비비고 썰은배추김치 단지 내용 7.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000020869356, '\SSGSSAK\pay\image\a9bc15fe-f549-47e8-a985-2e6bd02bce59비비고 썰은배추김치 단지 내용 8.png', 'other');
+
+-- 종가집 열무김치 900g 1000047906497
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000047906497, '\SSGSSAK\pay\image\7b275d28-36f6-46a8-b903-b60dc3013376종가집 열무김치 900g(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000047906497, '\SSGSSAK\pay\image\7b275d28-36f6-46a8-b903-b60dc3013376종가집 열무김치 900g 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000047906497, '\SSGSSAK\pay\image\7b275d28-36f6-46a8-b903-b60dc3013376종가집 열무김치 900g 내용 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000047906497, '\SSGSSAK\pay\image\7b275d28-36f6-46a8-b903-b60dc3013376종가집 열무김치 900g 내용 2.png', 'other');
+
+-- 피코크 조선호텔 포기김치 1kg 1000063852561
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000063852561, '\SSGSSAK\pay\image\e14f9d9d-16ef-4d77-8309-e7aeee3672ec피코크 조선호텔 포기김치 1kg (SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000063852561, '\SSGSSAK\pay\image\e14f9d9d-16ef-4d77-8309-e7aeee3672ec피코크 조선호텔 포기김치 1kg 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000063852561, '\SSGSSAK\pay\image\e14f9d9d-16ef-4d77-8309-e7aeee3672ec피코크 조선호텔 포기김치 1kg 내용1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000063852561, '\SSGSSAK\pay\image\e14f9d9d-16ef-4d77-8309-e7aeee3672ec피코크 조선호텔 포기김치 1kg 내용2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000063852561, '\SSGSSAK\pay\image\e14f9d9d-16ef-4d77-8309-e7aeee3672ec피코크 조선호텔 포기김치 1kg 내용3.png', 'other');
+
+-- 노브랜드 별미 볶음김치 1000293138988
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c노브랜드 별미 볶음김치(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c노브랜드 별미 볶음김치 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c노브랜드 별미 볶음김치 내용1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c노브랜드 별미 볶음김치 내용2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c노브랜드 별미 볶음김치 내용3.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000293138988, '\SSGSSAK\pay\image\0d28efb6-5ad8-4c65-aeb3-c41488d4285c노브랜드 별미 볶음김치 내용4.png', 'other');
+
+-- 종가집 시원하고 깔끔한 포기김치 3.3kg 1000031232139
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000031232139, '\SSGSSAK\pay\image\cb34c6d6-a134-4558-b4b5-88a1b2907e4c종가집 시원하고 깔끔한 포기김치 3.3kg(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000031232139, '\SSGSSAK\pay\image\cb34c6d6-a134-4558-b4b5-88a1b2907e4c종가집 시원하고 깔끔한 포기김치 3.3kg 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000031232139, '\SSGSSAK\pay\image\cb34c6d6-a134-4558-b4b5-88a1b2907e4c종가집 시원하고 깔끔한 포기김치 3.3kg 내용 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000031232139, '\SSGSSAK\pay\image\cb34c6d6-a134-4558-b4b5-88a1b2907e4c종가집 시원하고 깔끔한 포기김치 3.3kg 내용 2.png', 'other');
+
+-- 종가집 동치미 1.2kg 1000008952676
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000008952676, '\SSGSSAK\pay\image\594e956f-3c82-4a9f-b9fc-5943c245c058종가집 동치미 1.2kg(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000008952676, '\SSGSSAK\pay\image\594e956f-3c82-4a9f-b9fc-5943c245c058종가집 동치미 1.2kg 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000008952676, '\SSGSSAK\pay\image\594e956f-3c82-4a9f-b9fc-5943c245c058종가집 동치미 1.2kg 내용 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000008952676, '\SSGSSAK\pay\image\594e956f-3c82-4a9f-b9fc-5943c245c058종가집 동치미 1.2kg 내용2.png', 'other');
+
+-- 종가집 어린인 한입 깍두기 1000021131356
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4e종가집 어린인 한입 깍두기(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4e종가집 어린인 한입 깍두기 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4e종가집 어린인 한입 깍두기 2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4e종가집 어린인 한입 깍두기 3.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4e종가집 어린인 한입 깍두기 내용 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4e종가집 어린인 한입 깍두기 내용 2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4e종가집 어린인 한입 깍두기 내용 3.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4e종가집 어린인 한입 깍두기 내용 4.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000021131356, '\SSGSSAK\pay\image\5bb5df77-db01-445a-a1a3-332aaefdbd4e종가집 어린인 한입 깍두기 내용 5.png', 'other');
+
+-- 선화동 실비집 매운 실비김치 배추김치 1kg 1000523249169
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg(SUM).png', 'sum');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg 내용 1.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg 내용 2.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg 내용 3.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg 내용 4.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg 내용 5.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg 내용 6.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg 내용 7.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg 내용 8.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg 내용 9.png', 'other');
+INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg 내용 10.png', 'other');
+
+
+
+
 
 
 
