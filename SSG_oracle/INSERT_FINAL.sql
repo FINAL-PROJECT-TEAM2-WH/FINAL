@@ -1394,36 +1394,36 @@ values (1000572601910,'09090102',2,3,20,28,'[무케] 로이츠_모듈잇 S205 V1
 
 
 
-
+select * from brand;
 ------------------------------ 맑음 상품 인서트 
-Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000006,'11050702',0,1,'sellStore002','brand002','국내산 매콤달콤 제육볶음 400g X 1팩','상품번호 : 1000042764299
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000006,'11050702',0,1,2,2,'국내산 매콤달콤 제육볶음 400g X 1팩','상품번호 : 1000042764299
 
 모델번호 : 제육볶음',to_date('24/05/26','RR/MM/DD'));
-Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000007,'11050702',0,1,'sellStore002','brand002','국내산 양념돈육 왕구이 530g X 1팩','상품번호 : 1000042764296
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000007,'11050702',0,1,2,2,'국내산 양념돈육 왕구이 530g X 1팩','상품번호 : 1000042764296
 
 모델번호 : 양념돈육 왕구이',to_date('24/05/26','RR/MM/DD'));
-Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000004,'11050702',0,1,'sellStore002','brand002','[가격역주행] 양념 목심구이 (700g*2)','상품번호 : 1000590162551',to_date('24/05/26','RR/MM/DD'));
-Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000005,'11050702',0,1,'sellStore002','brand002','노브랜드 바비큐폭립550g','상품번호 : 1000039785690',to_date('24/05/26','RR/MM/DD'));
-Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000008,'11050702',0,1,'sellStore002','brand002','국내산 매콤달콤 제육볶음 400g X 3팩','제품번호 : 1000042764302
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000004,'11050702',0,1,2,2,'[가격역주행] 양념 목심구이 (700g*2)','상품번호 : 1000590162551',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000005,'11050702',0,1,2,2,'노브랜드 바비큐폭립550g','상품번호 : 1000039785690',to_date('24/05/26','RR/MM/DD'));
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000008,'11050702',0,1,2,2,'국내산 매콤달콤 제육볶음 400g X 3팩','제품번호 : 1000042764302
 
 모델번호 : 제육볶음',to_date('24/05/26','RR/MM/DD'));
-Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000009,'11050702',0,1,'sellStore002','brand002','국내산 흑돼지 고추장 불고기 500g X 1팩','상품번호 : 1000050510620
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000009,'11050702',0,1,2,2,'국내산 흑돼지 고추장 불고기 500g X 1팩','상품번호 : 1000050510620
 
 모델번호 : 고추장불고기',to_date('24/05/26','RR/MM/DD'));
-Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000010,'11050702',0,1,'sellStore002','brand002','피코크 양념돼지갈비500g','부드럽고 달콤한
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000010,'11050702',0,1,2,2,'피코크 양념돼지갈비500g','부드럽고 달콤한
 우리 집 인기 메뉴
 피코크 비밀연구소의 노하우로 만든 돼지갈비를 소개합니다. 수작업으로 포를 뜨고 칼집을 넣어 식감이 부드럽고 양념이 잘 배어들었어요. 특히 양념은 흑설탕과 매실청으로 단맛을 내는 등의 비법 레시피로 만들어 더욱 특별하죠. 국내산 동물복지인증 돼지갈비 부위만 사용하여 더욱 안심하고 즐길 수 있는 피코크 양념돼지갈비를 만나 보세요. 달콤 짭조름한 맛과 연한 육질로 온 가족 모두가 맛있게 먹을 수 있답니다.',to_date('24/05/26','RR/MM/DD'));
-Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000011,'11050702',0,1,'sellStore002','brand002','제육볶음 (800g)','※ 본 상품 이미지는 대표 상품 이미지입니다. 실제 상품은 본 이미지와 상이할 수 있습니다.
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000011,'11050702',0,1,2,2,'제육볶음 (800g)','※ 본 상품 이미지는 대표 상품 이미지입니다. 실제 상품은 본 이미지와 상이할 수 있습니다.
 
 ■ 상품명 : 제육볶음 800g
 
 ■ 내용량 : 800g
 
 ■ 원재료 및 함량 : 하단 상세이미지 참고',to_date('24/05/26','RR/MM/DD'));
-Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000012,'11050702',0,1,'sellStore002','brand002','[냉장][김해축협] 한돈 고추장 제육볶음 1,000g','가족이 좋아하는
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000012,'11050702',0,1,2,2,'[냉장][김해축협] 한돈 고추장 제육볶음 1,000g','가족이 좋아하는
 고추장 제육볶음
 우리 땅에서 자라 믿을 수 있는 한돈으로 만든 고추장 제육볶음을 식탁에 올려보세요. 한국인이 좋아하는 반찬 제육볶음으로 온 가족의 한 끼 식사로 맛과 양에 부족함이 없답니다. 따로 양념을 재우고 손질하는 과정 없이 바로 요리가 가능한 상품이니 번거로움 없이 푸짐한 한 상을 차려보세요. 제육덮밥으로 즐겨도 좋고, 쌈과 곁들여 푸짐하고 맛있게 즐겨도 좋답니다.',to_date('24/05/26','RR/MM/DD'));
-Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000013,'11050702',0,1,'sellStore002','brand002','[가격역주행] 훈제목심 (400g)','※ 본 상품 이미지는 대표 상품 이미지입니다. 실제 상품은 본 이미지와 상이할 수 있습니다.
+Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000013,'11050702',0,1,2,2,'[가격역주행] 훈제목심 (400g)','※ 본 상품 이미지는 대표 상품 이미지입니다. 실제 상품은 본 이미지와 상이할 수 있습니다.
 
 ■ 상품명 : 가격역주행 훈제목심 400g
 
@@ -1731,16 +1731,16 @@ Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONP
 
 
 ------------------------------ 맑음 상품옵션 인서트
-Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (54,3000000000006,'국내산 매콤달콤 제육볶음 400g X 1팩','x',0,9700,100);
-Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (55,3000000000007,'국내산 양념돈육 왕구이 530g X 1팩','x',0,12990,100);
-Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (56,3000000000008,'국내산 매콤달콤 제육볶음 400g X 3팩','x',0,26800,100);
-Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (57,3000000000009,'국내산 흑돼지 고추장 불고기 500g X 1팩','x',0,8900,100);
-Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (58,3000000000010,'피코크 양념돼지갈비500g','x',0,13980,100);
-Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (59,3000000000011,'제육볶음 (800g)','x',0,13980,100);
-Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (60,3000000000012,'[냉장][김해축협] 한돈 고추장 제육볶음 1,000g','x',0,19800,100);
-Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (61,3000000000013,'[가격역주행] 훈제목심 (400g)','x',0,5800,100);
-Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (52,3000000000004,'[가격역주행] 양념 목심구이 (700g*2)','x',0,14980,100);
-Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (53,3000000000005,'노브랜드 바비큐폭립550g','x',0,14980,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,3000000000006,'국내산 매콤달콤 제육볶음 400g X 1팩','x',0,9700,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,3000000000007,'국내산 양념돈육 왕구이 530g X 1팩','x',0,12990,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,3000000000008,'국내산 매콤달콤 제육볶음 400g X 3팩','x',0,26800,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,3000000000009,'국내산 흑돼지 고추장 불고기 500g X 1팩','x',0,8900,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,3000000000010,'피코크 양념돼지갈비500g','x',0,13980,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,3000000000011,'제육볶음 (800g)','x',0,13980,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,3000000000012,'[냉장][김해축협] 한돈 고추장 제육볶음 1,000g','x',0,19800,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,3000000000013,'[가격역주행] 훈제목심 (400g)','x',0,5800,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,3000000000004,'[가격역주행] 양념 목심구이 (700g*2)','x',0,14980,100);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,3000000000005,'노브랜드 바비큐폭립550g','x',0,14980,100);
 
 
 
@@ -2713,67 +2713,67 @@ Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (227,10005726019
 
 
 -- 맑음 상품 이미지
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (175,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g2.png','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (176,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g3.png','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (177,3000000000013,'\SSGSSAK\pay\image\4967aeea-e608-4d26-8048-99c55f9dab06[가격역주행] 훈제목심 (400g).png','sum');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (178,3000000000013,'\SSGSSAK\pay\image\4967aeea-e608-4d26-8048-99c55f9dab06[가격역주행] 훈제목심 (400g)1.png','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (120,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a양념목살구이2.avif','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (121,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g.png','sum');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (122,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g1.avif','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (123,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g2.avif','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (124,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g3.avif','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (125,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩.png','sum');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (126,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩1.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (127,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩2.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (128,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩3.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (118,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a양념목살구이.png','sum');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (119,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a양념목살구이1.png','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (129,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩4.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (130,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩5.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (131,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩6.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (132,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩7.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (133,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩8.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (134,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩9.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (135,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩.png','sum');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (136,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩1.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (137,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩2.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (138,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩3.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (139,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩4.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (140,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩5.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (141,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩6.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (142,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩7.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (143,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩8.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (144,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩9.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (145,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩.png','sum');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (146,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩1.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (147,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩2.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (148,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩3.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (149,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩4.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (150,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩5.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (151,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩6.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (152,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩7.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (153,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩8.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (154,3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩9.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (155,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩.png','sum');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (156,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩1.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (157,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩2.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (158,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩3.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (159,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩4.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (160,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩5.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (161,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩6.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (162,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩7.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (163,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩8.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (164,3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩9.jpg','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (165,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g.png','sum');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (166,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g1.png','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (167,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g2.png','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (168,3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g3.png','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (169,3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527a제육볶음 (800g).png','sum');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (170,3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527a제육볶음 (800g)1.avif','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (171,3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527a제육볶음 (800g)1.png','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (172,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g.png','sum');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (173,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g1.avif','other');
-Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (174,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g2.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g3.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000013,'\SSGSSAK\pay\image\4967aeea-e608-4d26-8048-99c55f9dab06[가격역주행] 훈제목심 (400g).png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000013,'\SSGSSAK\pay\image\4967aeea-e608-4d26-8048-99c55f9dab06[가격역주행] 훈제목심 (400g)1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a양념목살구이2.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g1.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g2.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000005,'\SSGSSAK\pay\image\1e6a62a5-f92d-48a7-b371-6176ce72cd64노브랜드 바비큐폭립550g3.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a양념목살구이.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000004,'\SSGSSAK\pay\image\bf55198a-4b3c-4d8f-8769-423999f0783a양념목살구이1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000006,'\SSGSSAK\pay\image\757706a2-70f8-421a-becd-6cc76bd272c6국내산 매콤달콤 제육볶음 400g X 1팩9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval,3000000000007,'\SSGSSAK\pay\image\3cc93a11-b90f-457c-b8ed-d01ac51479e0국내산 양념돈육 왕구이 530g X 1팩9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000008,'\SSGSSAK\pay\image\9734f4f3-ddb2-4e42-88dc-459634b2e930국내산 매콤달콤 제육볶음 400g X 3팩9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩1.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩2.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩3.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩4.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩5.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩6.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩7.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩8.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000009,'\SSGSSAK\pay\image\b4d8d1fe-db97-41c9-a126-7088835d48c0국내산 흑돼지 고추장 불고기 500g X 1팩9.jpg','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g2.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000010,'\SSGSSAK\pay\image\627a0bbc-aded-47f1-8f83-edf222ba4aad피코크 양념돼지갈비500g3.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527a제육볶음 (800g).png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527a제육볶음 (800g)1.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000011,'\SSGSSAK\pay\image\0c57a1e7-5f03-4404-a727-5eb0c75f527a제육볶음 (800g)1.png','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g.png','sum');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g1.avif','other');
+Insert into PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.nextval, 3000000000012,'\SSGSSAK\pay\image\05d75e64-c302-4c96-b043-83daec879e60[냉장][김해축협] 한돈 고추장 제육볶음 1,000g1.png','other');
 
 
 
