@@ -102,8 +102,8 @@ CREATE TABLE product (
     categoryId VARCHAR2(20) NOT NULL,
     specialPriceId NUMBER NULL,
     shippingOptionId NUMBER NOT NULL,
-    sellerStoreId number NOT NULL,
-    brandId number NOT NULL,
+    sellerStoreId number  NULL,
+    brandId number  NULL,
     pdName VARCHAR2(300) NULL,
     pcontent VARCHAR2(3000) NULL,
     updateDay DATE NULL
