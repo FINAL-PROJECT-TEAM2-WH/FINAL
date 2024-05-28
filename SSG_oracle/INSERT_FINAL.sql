@@ -969,30 +969,30 @@ INSERT INTO category VALUES ('10000000', '여행/e쿠폰/문구/도서', '', '',
 ------------------------------------ 우현 카테고리 
 -- 명품
 -- 카테고리 데이터 삽입
-INSERT INTO category VALUES ('01020501', '명품', '여성명품', '상의', '');
-INSERT INTO category VALUES ('01000000', '명품', '', '', '');
-INSERT INTO category VALUES ('01020000', '명품', '', '','');
-INSERT INTO category VALUES ('01020101', '명품', '여성명품', '가방', '');
-INSERT INTO category VALUES ('01020202', '명품', '여성명품', '지갑', '');
-INSERT INTO category VALUES ('01020303', '명품', '여성명품', '슈즈', '');
-INSERT INTO category VALUES ('01020404', '명품', '여성명품', '아우터', '');
-INSERT INTO category VALUES ('01020505', '명품', '여성명품', '상의', '');
-INSERT INTO category VALUES ('01020606', '명품', '여성명품', '하의', '');
-INSERT INTO category VALUES ('01020707', '명품', '여성명품', '원피스', '');
-INSERT INTO category VALUES ('01020808', '명품', '여성명품', '시계', '');
-INSERT INTO category VALUES ('01020909', '명품', '여성명품', '안경/선글라스', '');
-INSERT INTO category VALUES ('01021010', '명품', '여성명품', '유아동', '');
 
+INSERT INTO category VALUES ('03000000', '명품', '', '','');
+INSERT INTO category VALUES ('03010100', '명품', '여성명품', '가방', '');
+INSERT INTO category VALUES ('03010200', '명품', '여성명품', '지갑', '');
+INSERT INTO category VALUES ('03010300', '명품', '여성명품', '슈즈', '');
+INSERT INTO category VALUES ('03010400', '명품', '여성명품', '아우터', '');
+INSERT INTO category VALUES ('03010500', '명품', '여성명품', '상의', '');
+INSERT INTO category VALUES ('03010600', '명품', '여성명품', '하의', '');
+INSERT INTO category VALUES ('03010700', '명품', '여성명품', '원피스', '');
+INSERT INTO category VALUES ('03010800', '명품', '남성명품', '패션소품/액세서리', '');
+INSERT INTO category VALUES ('03010900', '명품', '여성명품', '시계', '');
+INSERT INTO category VALUES ('03011000', '명품', '여성명품', '안경/선글라스', '');
+INSERT INTO category VALUES ('03011100', '명품', '여성명품', '유아동', '');
 
-INSERT INTO category VALUES ('01020212', '명품', '남성명품', '지갑', '');
-INSERT INTO category VALUES ('01020313', '명품', '남성명품', '슈즈', '');
-INSERT INTO category VALUES ('01020414', '명품', '남성명품', '아우터', '');
-INSERT INTO category VALUES ('01020515', '명품', '남성명품', '상의', '');
-INSERT INTO category VALUES ('01020616', '명품', '남성명품', '하의', '');
-INSERT INTO category VALUES ('01020717', '명품', '남성명품', '원피스', '');
-INSERT INTO category VALUES ('01020818', '명품', '남성명품', '시계', '');
-INSERT INTO category VALUES ('01020919', '명품', '남성명품', '안경/선글라스', '');
-INSERT INTO category VALUES ('01021020', '명품', '남성명품', '유아동', '');
+INSERT INTO category VALUES ('03020100', '명품', '남성명품', '가방', '');
+INSERT INTO category VALUES ('03020200', '명품', '남성명품', '지갑', '');
+INSERT INTO category VALUES ('03020300', '명품', '남성명품', '슈즈', '');
+INSERT INTO category VALUES ('03020400', '명품', '남성명품', '아우터', '');
+INSERT INTO category VALUES ('03020500', '명품', '남성명품', '상의', '');
+INSERT INTO category VALUES ('03020600', '명품', '남성명품', '팬츠', '');
+INSERT INTO category VALUES ('03020700', '명품', '남성명품', '패션소품/액세서리', '');
+INSERT INTO category VALUES ('03020800', '명품', '남성명품', '시계/쥬얼리', '');
+INSERT INTO category VALUES ('03020900', '명품', '남성명품', '안경/선글라스', '');
+INSERT INTO category VALUES ('03021000', '명품', '남성명품', '유아동', '');
 
 
 
@@ -1043,10 +1043,10 @@ INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '모던하우스');
  insert into brand values(brand_seq.NEXTVAL,NULL,'로이츠');
  
 
-INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'종가집'  );
-INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'비비고'  );
-INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'실비집'  );
-INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'피코크'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,NULL,'종가집'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,NULL,'비비고'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,NULL,'실비집'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,NULL,'피코크'  );
 
 
 INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '시코르');
@@ -1130,8 +1130,8 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --명건상품
 --테이블 변경 및 브랜드,셀러스토어 확정 후 인서트 예정
 
---판매자 이마트
---INSERT INTO product VALUES (70201, '07040202', 0, null, 8, 11, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '상품번호 : 70201', SYSDATE);
+--판매자 이마트(완)
+--INSERT INTO product VALUES (70201, '07040202', 0, 9, 2, null, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '상품번호 : 70201', SYSDATE);
 --INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70201, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)',NULL ,19900, NULL);
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','sum');
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','other');
@@ -1142,8 +1142,8 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
---판매자 이마트 브랜드 자주
---INSERT INTO product VALUES (70202, '07040202', 0, 9, 8, 11, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '상품번호 : 70202', SYSDATE);
+--판매자 이마트 브랜드 자주 (완)
+--INSERT INTO product VALUES (70202, '07040202', 0, 9, 2, 16, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '상품번호 : 70202', SYSDATE);
 --INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70202, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '사계절 무형광 순면 베개 커버_70x50cm_베이지',NULL ,9900, NULL);
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i1_1100.avif','sum');
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i1_1100.avif','other');
@@ -1157,7 +1157,7 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
---브랜드 판매자 템퍼
+--브랜드 판매자 템퍼 (E)
 --INSERT INTO product VALUES (70203, '07040202', 0, 9, 8, 11, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '상품번호 : 70203', SYSDATE);
 --INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70203, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '[본사정품] 템퍼 컴포트 베개 소프트(NEW)',NULL ,158400, NULL);
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70203,'\SSGSSAK\pay\image\70203_i1_1100.avif','sum');
@@ -1169,8 +1169,8 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
---브랜드 아이닉스 판매자 대우침장
---INSERT INTO product VALUES (70204, '07040202', 0, 9, 8, 11, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '상품번호 : 70204', SYSDATE);
+--브랜드 아이닉스 판매자 대우침장 (완)
+--INSERT INTO product VALUES (70204, '07040202', 0, 9, 12, 17, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '상품번호 : 70204', SYSDATE);
 --INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70204, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70',NULL ,8455, NULL);
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i1_1100.avif','sum');
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i1_1100.avif','other');
@@ -1208,8 +1208,8 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
---판매자 이마트
---INSERT INTO product VALUES (70205, '07040202', 0, 9, null, 11, '그루잠숯메모리폼베개', '상품번호 : 70205', SYSDATE);
+--판매자 이마트 (완)
+--INSERT INTO product VALUES (70205, '07040202', 0, 9, 2, null, '그루잠숯메모리폼베개', '상품번호 : 70205', SYSDATE);
 --INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70205, '그루잠숯메모리폼베개', '그루잠숯메모리폼베개',NULL ,33900, NULL);
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i1_1100.avif','sum');
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i1_1100.avif','other');
@@ -1223,8 +1223,8 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
 
---판매자 트레이더스
---INSERT INTO product VALUES (70206, '07040202', 0, 9, null, 11, 'EVERREST 포터블 메모리폼 베개', '상품번호 : 70206', SYSDATE);
+--판매자 트레이더스 (E)
+--INSERT INTO product VALUES (70206, '07040202', 0, 9, 10, null, 'EVERREST 포터블 메모리폼 베개', '상품번호 : 70206', SYSDATE);
 --INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70206, 'EVERREST 포터블 메모리폼 베개', 'EVERREST 포터블 메모리폼 베개',NULL ,21480, NULL);
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','sum');
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','other');
@@ -1236,8 +1236,8 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
--- 브랜드 셀러 모던하우스
---INSERT INTO product VALUES (70207, '07040202', 0, 9, 8, 11, '항균 경추 베개솜 50x70 2P', '상품번호 : 70207', SYSDATE);
+-- 브랜드 셀러 모던하우스 (E)
+--INSERT INTO product VALUES (70207, '07040202', 0, 9, 13, 18, '항균 경추 베개솜 50x70 2P', '상품번호 : 70207', SYSDATE);
 --INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70207, '항균 경추 베개솜 50x70 2P', '항균 경추 베개솜 50x70 2P',NULL ,22015, NULL);
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.avif','sum');
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.avif','other');
@@ -1253,8 +1253,8 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
---브랜드 셀러 텐바이텐
---INSERT INTO product VALUES (70208, '07040202', 0, 9, 8, 11, '순면 누빔 피그먼트 사계절 베개 커버 ', '상품번호 : 70208', SYSDATE);
+--브랜드 셀러 텐바이텐 (E)
+--INSERT INTO product VALUES (70208, '07040202', 0, 9, 11, 15, '순면 누빔 피그먼트 사계절 베개 커버 ', '상품번호 : 70208', SYSDATE);
 --INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70208, '순면 누빔 피그먼트 사계절 베개 커버 ', '순면 누빔 피그먼트 사계절 베개 커버 ',NULL ,7275, NULL);
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.avif','sum');
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.avif','other');
@@ -1266,8 +1266,8 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
---브랜드 아트비츠
---INSERT INTO product VALUES (70209, '07040202', 0, null, 1, 11, 'HT)세미그레이베개커버', '상품번호 : 70209', SYSDATE);
+--브랜드 아트비츠 (E)
+--INSERT INTO product VALUES (70209, '07040202', 0, 9, null, 15, 'HT)세미그레이베개커버', '상품번호 : 70209', SYSDATE);
 --INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70209, 'HT)세미그레이베개커버', 'HT)세미그레이베개커버',NULL ,7900, NULL);
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.avif','sum');
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.avif','other');
@@ -1279,8 +1279,8 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
 --INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
 
---브랜드 셀러 모두 null
---INSERT INTO product VALUES (70210, '07040202', 0, null, null, 11, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '상품번호 : 70210', SYSDATE);
+--브랜드 셀러 모두 null (E)
+--INSERT INTO product VALUES (70210, '07040202', 0, 9, null, null, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '상품번호 : 70210', SYSDATE);
 --INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70210, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '고밀도 40수 순면 리버시블 베개커버 40*60 NY',NULL ,8900, NULL);
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.avif','sum');
 --INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.avif','other');
