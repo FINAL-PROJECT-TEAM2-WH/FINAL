@@ -969,30 +969,30 @@ INSERT INTO category VALUES ('10000000', '여행/e쿠폰/문구/도서', '', '',
 ------------------------------------ 우현 카테고리 
 -- 명품
 -- 카테고리 데이터 삽입
-INSERT INTO category VALUES ('01020501', '명품', '여성명품', '상의', '');
-INSERT INTO category VALUES ('01000000', '명품', '', '', '');
-INSERT INTO category VALUES ('01020000', '명품', '', '','');
-INSERT INTO category VALUES ('01020101', '명품', '여성명품', '가방', '');
-INSERT INTO category VALUES ('01020202', '명품', '여성명품', '지갑', '');
-INSERT INTO category VALUES ('01020303', '명품', '여성명품', '슈즈', '');
-INSERT INTO category VALUES ('01020404', '명품', '여성명품', '아우터', '');
-INSERT INTO category VALUES ('01020505', '명품', '여성명품', '상의', '');
-INSERT INTO category VALUES ('01020606', '명품', '여성명품', '하의', '');
-INSERT INTO category VALUES ('01020707', '명품', '여성명품', '원피스', '');
-INSERT INTO category VALUES ('01020808', '명품', '여성명품', '시계', '');
-INSERT INTO category VALUES ('01020909', '명품', '여성명품', '안경/선글라스', '');
-INSERT INTO category VALUES ('01021010', '명품', '여성명품', '유아동', '');
 
+INSERT INTO category VALUES ('03000000', '명품', '', '','');
+INSERT INTO category VALUES ('03010100', '명품', '여성명품', '가방', '');
+INSERT INTO category VALUES ('03010200', '명품', '여성명품', '지갑', '');
+INSERT INTO category VALUES ('03010300', '명품', '여성명품', '슈즈', '');
+INSERT INTO category VALUES ('03010400', '명품', '여성명품', '아우터', '');
+INSERT INTO category VALUES ('03010500', '명품', '여성명품', '상의', '');
+INSERT INTO category VALUES ('03010600', '명품', '여성명품', '하의', '');
+INSERT INTO category VALUES ('03010700', '명품', '여성명품', '원피스', '');
+INSERT INTO category VALUES ('03010800', '명품', '남성명품', '패션소품/액세서리', '');
+INSERT INTO category VALUES ('03010900', '명품', '여성명품', '시계', '');
+INSERT INTO category VALUES ('03011000', '명품', '여성명품', '안경/선글라스', '');
+INSERT INTO category VALUES ('03011100', '명품', '여성명품', '유아동', '');
 
-INSERT INTO category VALUES ('01020212', '명품', '남성명품', '지갑', '');
-INSERT INTO category VALUES ('01020313', '명품', '남성명품', '슈즈', '');
-INSERT INTO category VALUES ('01020414', '명품', '남성명품', '아우터', '');
-INSERT INTO category VALUES ('01020515', '명품', '남성명품', '상의', '');
-INSERT INTO category VALUES ('01020616', '명품', '남성명품', '하의', '');
-INSERT INTO category VALUES ('01020717', '명품', '남성명품', '원피스', '');
-INSERT INTO category VALUES ('01020818', '명품', '남성명품', '시계', '');
-INSERT INTO category VALUES ('01020919', '명품', '남성명품', '안경/선글라스', '');
-INSERT INTO category VALUES ('01021020', '명품', '남성명품', '유아동', '');
+INSERT INTO category VALUES ('03020100', '명품', '남성명품', '가방', '');
+INSERT INTO category VALUES ('03020200', '명품', '남성명품', '지갑', '');
+INSERT INTO category VALUES ('03020300', '명품', '남성명품', '슈즈', '');
+INSERT INTO category VALUES ('03020400', '명품', '남성명품', '아우터', '');
+INSERT INTO category VALUES ('03020500', '명품', '남성명품', '상의', '');
+INSERT INTO category VALUES ('03020600', '명품', '남성명품', '팬츠', '');
+INSERT INTO category VALUES ('03020700', '명품', '남성명품', '패션소품/액세서리', '');
+INSERT INTO category VALUES ('03020800', '명품', '남성명품', '시계/쥬얼리', '');
+INSERT INTO category VALUES ('03020900', '명품', '남성명품', '안경/선글라스', '');
+INSERT INTO category VALUES ('03021000', '명품', '남성명품', '유아동', '');
 
 
 
@@ -1043,10 +1043,10 @@ INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '모던하우스');
  insert into brand values(brand_seq.NEXTVAL,NULL,'로이츠');
  
 
-INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'종가집'  );
-INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'비비고'  );
-INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'실비집'  );
-INSERT INTO brand VALUES( brand_seq.NEXTVAL ,'피코크'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,NULL,'종가집'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,NULL,'비비고'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,NULL,'실비집'  );
+INSERT INTO brand VALUES( brand_seq.NEXTVAL ,NULL,'피코크'  );
 
 
 INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '시코르');
