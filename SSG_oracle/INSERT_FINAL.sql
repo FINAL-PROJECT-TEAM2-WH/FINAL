@@ -1049,6 +1049,22 @@ INSERT INTO brand VALUES( brand_seq.NEXTVAL ,NULL,'실비집'  );
 INSERT INTO brand VALUES( brand_seq.NEXTVAL ,NULL,'피코크'  );
 
 
+-- 
+INSERT INTO brand (id, brandname) VALUES (brand_seq.NEXTVAL, '랑콤'); -- 23
+INSERT INTO brand (id, brandname) VALUES (brand_seq.NEXTVAL, '조르지오 아르마니'); -- 24
+INSERT INTO brand (id, brandname) VALUES (brand_seq.NEXTVAL, '입생로랑'); -- 25
+INSERT INTO brand (id, brandname) VALUES (brand_seq.NEXTVAL, '크리니크'); -- 26 
+INSERT INTO brand (id, brandname) VALUES (brand_seq.NEXTVAL, '메디힐'); -- 27
+
+INSERT INTO brand (id, brandname) VALUES (brand_seq.NEXTVAL, '키엘'); --28
+INSERT INTO brand (id, brandname) VALUES (brand_seq.NEXTVAL, '온더바디'); --29
+INSERT INTO brand (id, brandname) VALUES (brand_seq.NEXTVAL, '조 말론 런던'); 
+INSERT INTO brand (id, brandname) VALUES (brand_seq.NEXTVAL, '리엔'); 
+INSERT INTO brand (id, brandname) VALUES (brand_seq.NEXTVAL, '블랑블랙'); 
+INSERT INTO brand (id, brandname) VALUES (brand_seq.NEXTVAL, '모로칸오일'); 
+
+
+
 INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '시코르');
 
 INSERT INTO sellerStore VALUES (seller_seq.NEXTVAL, '이마트');
@@ -1130,167 +1146,215 @@ INSERT INTO specialprice VALUES (0, 'none' , 'none', TO_DATE('1111-05-01'), TO_D
 --명건상품
 --테이블 변경 및 브랜드,셀러스토어 확정 후 인서트 예정
 
+
 --판매자 이마트(완)
---INSERT INTO product VALUES (70201, '07040202', 0, 9, 2, null, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '상품번호 : 70201', SYSDATE);
---INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70201, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)',NULL ,19900, NULL);
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','sum');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i2_1200.avif','other');
---INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO product VALUES (70201, '07040202', 0, 9, 2, 2, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '상품번호 : 70201', SYSDATE);
+INSERT INTO product VALUES (70202, '07040202', 0, 9, 2, 16, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '상품번호 : 70202', SYSDATE);
+INSERT INTO product VALUES (70203, '07040202', 0, 9, 8, 11, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '상품번호 : 70203', SYSDATE);
+INSERT INTO product VALUES (70204, '07040202', 0, 9, 12, 17, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '상품번호 : 70204', SYSDATE);
+INSERT INTO product VALUES (70205, '07040202', 0, 9, 2, 2, '그루잠숯메모리폼베개', '상품번호 : 70205', SYSDATE);
+INSERT INTO product VALUES (70206, '07040202', 0, 9, 10, 2, 'EVERREST 포터블 메모리폼 베개', '상품번호 : 70206', SYSDATE);
+INSERT INTO product VALUES (70207, '07040202', 0, 9, 13, 18, '항균 경추 베개솜 50x70 2P', '상품번호 : 70207', SYSDATE);
+INSERT INTO product VALUES (70208, '07040202', 0, 9, 11, 15, '순면 누빔 피그먼트 사계절 베개 커버 ', '상품번호 : 70208', SYSDATE);
+INSERT INTO product VALUES (70209, '07040202', 0, 9, 2, 15, 'HT)세미그레이베개커버', '상품번호 : 70209', SYSDATE);
+INSERT INTO product VALUES (70210, '07040202', 0, 9, 2, 2, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '상품번호 : 70210', SYSDATE);
+
+
+
+-- option
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70201, '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)', '쿨슬립 냉감 베개 세트 50*70 BL (베개솜+베개커버2P)',NULL ,19900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70202, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '사계절 무형광 순면 베개 커버_70x50cm_베이지',NULL ,9900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70203, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '[본사정품] 템퍼 컴포트 베개 소프트(NEW)',NULL ,158400, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70204, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70',NULL ,8455, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70205, '그루잠숯메모리폼베개', '그루잠숯메모리폼베개',NULL ,33900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70206, 'EVERREST 포터블 메모리폼 베개', 'EVERREST 포터블 메모리폼 베개',NULL ,21480, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70207, '항균 경추 베개솜 50x70 2P', '항균 경추 베개솜 50x70 2P',NULL ,22015, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70208, '순면 누빔 피그먼트 사계절 베개 커버 ', '순면 누빔 피그먼트 사계절 베개 커버 ',NULL ,7275, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70209, 'HT)세미그레이베개커버', 'HT)세미그레이베개커버',NULL ,7900, NULL);
+INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70210, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '고밀도 40수 순면 리버시블 베개커버 40*60 NY',NULL ,8900, NULL);
+
+
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i1_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70201,'\SSGSSAK\pay\image\70201_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i1_1100.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i4_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i5_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70203,'\SSGSSAK\pay\image\70203_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70203,'\SSGSSAK\pay\image\70203_i1_1100.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i1_1100.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i4_1200.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i5_1200.jpg','other');
+--
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_001.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_01.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_02.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_03.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_04.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_05.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_06.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_07.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_08.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_09.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_10.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_11.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_12.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_13.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_14.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_15.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_16.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_17.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_18.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_19.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_20.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_21.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i1_1100.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_q1.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_q1.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_pillow2022_06_top_01.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_pillow2022_06_top_02.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_pillow2022_06_top_03.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_FP1122004_01.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_세탁_유의사항.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_cs_info_ssg.jpg','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i3_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.avif','sum');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i2_1200.avif','other');
+INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i3_1200.avif','other');
+
+
+
+-- review
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70201,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+
+
 
 --판매자 이마트 브랜드 자주 (완)
---INSERT INTO product VALUES (70202, '07040202', 0, 9, 2, 16, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '상품번호 : 70202', SYSDATE);
---INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70202, '사계절 무형광 순면 베개 커버_70x50cm_베이지', '사계절 무형광 순면 베개 커버_70x50cm_베이지',NULL ,9900, NULL);
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i1_1100.avif','sum');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i1_1100.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i2_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i3_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i4_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70202,'\SSGSSAK\pay\image\70202_i5_1200.avif','other');
---INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70202,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+
+
+
 
 --브랜드 판매자 템퍼 (E)
---INSERT INTO product VALUES (70203, '07040202', 0, 9, 8, 11, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '상품번호 : 70203', SYSDATE);
---INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70203, '[본사정품] 템퍼 컴포트 베개 소프트(NEW)', '[본사정품] 템퍼 컴포트 베개 소프트(NEW)',NULL ,158400, NULL);
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70203,'\SSGSSAK\pay\image\70203_i1_1100.avif','sum');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70203,'\SSGSSAK\pay\image\70203_i1_1100.avif','other');
---INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70203,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+
+
+
+
 
 
 --브랜드 아이닉스 판매자 대우침장 (완)
---INSERT INTO product VALUES (70204, '07040202', 0, 9, 12, 17, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '상품번호 : 70204', SYSDATE);
---INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70204, '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70', '[균일가찬스] 아이닉스 순면 누빔 베개커버 40x60 / 50x70',NULL ,8455, NULL);
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i1_1100.avif','sum');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i1_1100.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i2_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i3_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i4_1200.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_i5_1200.jpg','other');
---
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_001.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_01.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_02.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_03.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_04.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_05.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_06.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_07.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_08.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_09.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_10.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_11.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_12.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_13.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_14.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_15.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_16.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_17.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_18.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_19.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_20.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70204,'\SSGSSAK\pay\image\70204_21.jpg','other');
---INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70204,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+
+
+
+
 
 
 --판매자 이마트 (완)
---INSERT INTO product VALUES (70205, '07040202', 0, 9, 2, null, '그루잠숯메모리폼베개', '상품번호 : 70205', SYSDATE);
---INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70205, '그루잠숯메모리폼베개', '그루잠숯메모리폼베개',NULL ,33900, NULL);
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i1_1100.avif','sum');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i1_1100.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i2_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_i3_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70205,'\SSGSSAK\pay\image\70205_q1.avif','other');
---INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70205,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+
+
+
+
 
 
 --판매자 트레이더스 (E)
---INSERT INTO product VALUES (70206, '07040202', 0, 9, 10, null, 'EVERREST 포터블 메모리폼 베개', '상품번호 : 70206', SYSDATE);
---INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70206, 'EVERREST 포터블 메모리폼 베개', 'EVERREST 포터블 메모리폼 베개',NULL ,21480, NULL);
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','sum');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i1_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_i2_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70206,'\SSGSSAK\pay\image\70206_q1.avif','other');
---INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70206,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+
+
+
+
 
 -- 브랜드 셀러 모던하우스 (E)
---INSERT INTO product VALUES (70207, '07040202', 0, 9, 13, 18, '항균 경추 베개솜 50x70 2P', '상품번호 : 70207', SYSDATE);
---INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70207, '항균 경추 베개솜 50x70 2P', '항균 경추 베개솜 50x70 2P',NULL ,22015, NULL);
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.avif','sum');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i1_1100.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i2_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_i3_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_pillow2022_06_top_01.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_pillow2022_06_top_02.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_pillow2022_06_top_03.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70207,'\SSGSSAK\pay\image\70207_FP1122004_01.jpg','other');
---INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70207,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+
+
+
+
 
 --브랜드 셀러 텐바이텐 (E)
---INSERT INTO product VALUES (70208, '07040202', 0, 9, 11, 15, '순면 누빔 피그먼트 사계절 베개 커버 ', '상품번호 : 70208', SYSDATE);
---INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70208, '순면 누빔 피그먼트 사계절 베개 커버 ', '순면 누빔 피그먼트 사계절 베개 커버 ',NULL ,7275, NULL);
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.avif','sum');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_i1_1100.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_세탁_유의사항.jpg','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70208,'\SSGSSAK\pay\image\70208_cs_info_ssg.jpg','other');
---INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70208,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+
+
+
+
 
 --브랜드 아트비츠 (E)
---INSERT INTO product VALUES (70209, '07040202', 0, 9, null, 15, 'HT)세미그레이베개커버', '상품번호 : 70209', SYSDATE);
---INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70209, 'HT)세미그레이베개커버', 'HT)세미그레이베개커버',NULL ,7900, NULL);
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.avif','sum');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i1_1100.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i2_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70209,'\SSGSSAK\pay\image\70209_i3_1200.avif','other');
---INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70209,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+
+
+
+
 
 --브랜드 셀러 모두 null (E)
---INSERT INTO product VALUES (70210, '07040202', 0, 9, null, null, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '상품번호 : 70210', SYSDATE);
---INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 70210, '고밀도 40수 순면 리버시블 베개커버 40*60 NY', '고밀도 40수 순면 리버시블 베개커버 40*60 NY',NULL ,8900, NULL);
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.avif','sum');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i1_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i2_1200.avif','other');
---INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,70210,'\SSGSSAK\pay\image\70210_i3_1200.avif','other');
---INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'daetu01',null,'만족합니다',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'m_eum01',null,'최고에용',SYSDATE,'일반',5,3,3,3);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'d_Chan01',null,'조아용',SYSDATE,'일반',3,2,3,2);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'dyoung01',null,'원래 쓰던 상품이라 재구매합니다.',SYSDATE,'일반',4,1,1,1);
---INSERT INTO review VALUES (review_seq.NEXTVAL,70210,'mggun01',null,'항상 이것만사용해요',SYSDATE,'일반',2,3,2,3);
+
+
+
+
 
 ------------------------------------------------------------------------------------------------
 -- 상품 관련 테이블
@@ -1392,7 +1456,6 @@ values (1000572601910,'09090102',2,3,20,28,'[무케] 로이츠_모듈잇 S205 V1
 
 
 
-select * from brand;
 ------------------------------ 맑음 상품 인서트 
 Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID,BRANDID,PDNAME,PCONTENT,UPDATEDAY) values (3000000000006,'11050702',0,1,2,2,'국내산 매콤달콤 제육볶음 400g X 1팩','상품번호 : 1000042764299
 
@@ -1430,198 +1493,245 @@ Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID
 ■ 원재료 및 함량 : 하단 상세이미지 참고',to_date('24/05/26','RR/MM/DD'));
 
 
+SELECT * 
+FROM brand;
 -------------------------------------- 동영 상품 인서트
 -- 노브랜드 포기김치
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES ( 1000036684949, 12030101, 0, 1, 'sellStore002', 'brand02', '노브랜드 별미포기김치3.5kg', '시원하고 깔끔한 별미 포기김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+VALUES ( 1000036684949, '12030101', 0, 1, 2, 2, '노브랜드 별미포기김치3.5kg', '시원하고 깔끔한 별미 포기김치', SYSDATE );
+
 
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000067576484, '노브랜드 별미포기김치3.5kg' , NULL, NULL, 15980, 1000);
 
 -- 석박지
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES ( 1000521094336, 12030102, 0, 1, 'sellStore002', 'brand종가집', '종가 시원하고 아삭한 석박지 900g', '제철 무로 담은 시원한 석박지', TO_CHAR(SYSDATE, YY/MM/DD) );
+VALUES ( 1000521094336, 12030102, 0, 1, 2, 29, '종가 시원하고 아삭한 석박지 900g', '제철 무로 담은 시원한 석박지', SYSDATE );
 
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000521094336, '종가 시원하고 아삭한 석박지 900g' , NULL, NULL, 13900, 10000);
 
 -- 비비고 단지김치
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES ( 1000020869356, 12030101, 0, 1, 'sellStore002', 'brand비비고', 'CJ 비비고 썰은배추김치 500g (PET)(단지김치)', '편하게 혼자서도 맛있게, 비비고 썰은 배추김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+VALUES ( 1000020869356, 12030101, 0, 1, 2, 30, 'CJ 비비고 썰은배추김치 500g (PET)(단지김치)', '편하게 혼자서도 맛있게, 비비고 썰은 배추김치', SYSDATE );
 
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000020869356, '종가 시원하고 아삭한 석박지 900g' , NULL, NULL, 9800 , 1500);
 
 -- 종가집 열무김치
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES ( 1000047906497, 12030102, 0, 1, 'sellStore002', 'brand종가집', '종가 오래오래 맛있는 열무김치 900g', '아삭하고 시원한 우리 농산물 김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+VALUES ( 1000047906497, 12030102, 0, 1, 2, 29, '종가 오래오래 맛있는 열무김치 900g', '아삭하고 시원한 우리 농산물 김치', SYSDATE );
 
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000047906497, '종가 오래오래 맛있는 열무김치 900g' , NULL, NULL, 9980 , 1600);
 
 -- 피코크 포기김치
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES ( 1000063852561, 12030101, 0, 1, 'sellStore002', 'brand피코크', '피코크 조선호텔특제육수 포기김치 1kg', '깊은 감칠맛의 프리미엄 포기김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+VALUES ( 1000063852561, 12030101, 0, 1, 2, 32, '피코크 조선호텔특제육수 포기김치 1kg', '깊은 감칠맛의 프리미엄 포기김치', SYSDATE );
 
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000063852561, '피코크 조선호텔특제육수 포기김치 1kg' , NULL, NULL, 9980 , 2000);
 
 -- 노브랜드 별미 볶음김치
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES ( 1000293138988, 12030104, 0, 1, 'sellStore002', 'brand노브랜드', '노브랜드 별미 볶음김치 400g', '곁들여 먹기 좋은 별미 볶음 김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+VALUES ( 1000293138988, 12030104, 0, 1, 2, 2, '노브랜드 별미 볶음김치 400g', '곁들여 먹기 좋은 별미 볶음 김치', SYSDATE );
 
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000293138988, '노브랜드 별미 볶음김치 400g' , NULL, NULL, 3280  , 15000);
 
 -- [종가집]시원 깔끔 포기김치 3.3kg
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES ( 1000031232139, 12030101, 0, 1, 'sellStore002', 'brand종가집', '[종가집]시원 깔끔 포기김치 3.3kg', '시원하고 깔끔한 종가집의 포기김치', TO_CHAR(SYSDATE, YY/MM/DD) );
+VALUES ( 1000031232139, 12030101, 0, 1, 2, 29, '[종가집]시원 깔끔 포기김치 3.3kg', '시원하고 깔끔한 종가집의 포기김치', SYSDATE );
 
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000031232139, '[종가집]시원 깔끔 포기김치 3.3kg' , NULL, NULL, 33800  , 1000);
 
 -- [종가집] 동치미 1.2kg
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES ( 1000008952676, 12030103, 0, 1, 'sellStore002', 'brand종가집', '[종가집] 동치미 1.2kg', '자연의 재료로 건강한 단맛', TO_CHAR(SYSDATE, YY/MM/DD) );
+VALUES ( 1000008952676, 12030103, 0, 1, 2, 29, '[종가집] 동치미 1.2kg', '자연의 재료로 건강한 단맛', SYSDATE );
 
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000008952676, '[종가집] 동치미 1.2kg' , NULL, NULL, 11800  , 1300);
 
 -- [종가집] 어린이 한입 깍두기 300g
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES ( 1000021131356, 12030102, 0, 1, 'sellStore002', 'brand종가집', '[종가집] 어린이 한입 깍두기 300g', '우리 아이 위한 순한 한입 깍두기', TO_CHAR(SYSDATE, YY/MM/DD) );
+VALUES ( 1000021131356, 12030102, 0, 1, 2, 29, '[종가집] 어린이 한입 깍두기 300g', '우리 아이 위한 순한 한입 깍두기', SYSDATE );
 
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000021131356, '[종가집] 어린이 한입 깍두기 300g' , NULL, NULL, 4380  , 200);
 
 -- 선화동 실비집 매운 실비김치 배추김치 1kg
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
-VALUES ( 1000523249169, 12030101, 0, 1, 'sellStore미미의밥상', 'brand실비집', '선화동 실비집 매운 실비김치 배추김치 1kg', '매콤함에 속까지 뻥~뚫리는 경험! 맵지만 중독성 있는 그 맛!', TO_CHAR(SYSDATE, YY/MM/DD) );
+VALUES ( 1000523249169, 12030101, 0, 1, 22, 31, '선화동 실비집 매운 실비김치 배추김치 1kg', '매콤함에 속까지 뻥~뚫리는 경험! 맵지만 중독성 있는 그 맛!', SYSDATE );
 
 INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 1000523249169, '선화동 실비집 매운 실비김치 배추김치 1kg' , NULL, NULL, 19700  , 800);
 
 
---------------------------------- 우현 상품 인서트
--- 상품 1 삽입
-INSERT INTO product VALUES (10201, '01020501', 0, 9, 1, 1, '비비안웨스트우드 티셔츠 반팔 클래식 화이트 흰색 3G010013 J001M A401', '상품번호 : 10201', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10201, '비비안웨스트우드 티셔츠 반팔 클래식 화이트 흰색 3G010013 J001M A401', '비비안웨스트우드 티셔츠 반팔 클래식 화이트 흰색', NULL, 19900, NULL);
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i1_1200.avif', 'sum');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i1_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i2_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10201, '\SSGSSAK\pay\image\10201_i2_1200.avif', 'other');
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10201, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+---- 우현 상품 삽입
+INSERT INTO product VALUES (1000578880439, '03020500', 0, 9, 1, 1, '비비안웨스트우드 티셔츠 반팔 클래식 화이트 흰색 3G010013 J001M A401', '상품번호 : 10201', SYSDATE);
+INSERT INTO product VALUES (1000598025046, '03020500', 0, 9, 8, 2, '구찌 아디다스 트레포일 프린트 티셔츠 아이보리', '상품번호 : 10202', SYSDATE);
+INSERT INTO product VALUES (1000597094621, '03020500', 0, 9, 8, 3, '[톰브라운] 국내배송 24SS 톰브라운 사선 4바 포인텔 니트 스웨터 FKA453A Y3017 101', '상품번호 : 10203', SYSDATE);
+INSERT INTO product VALUES (1000586136468, '03020500', 0, 9, 8, 4, '[아미] 24SS 여성 스몰 로고 카라 티셔츠 BFUPL001 760 001', '상품번호 : 10204', SYSDATE);
+INSERT INTO product VALUES (1000585827432, '03020500', 0, 9, 8, 5, '[꼼데가르송] (국내배송) 24SS 꼼데가르송 여성 레드하트 와펜 반팔티 P1T107 1', '상품번호 : 10205', SYSDATE);
+INSERT INTO product VALUES (1000591346079, '03020500', 0, 9, 8, 6, '[메종마르지엘라] 메종마르지엘라 여성 로고 워시드 블랙 반팔티 S51GC0526 S20079 970', '상품번호 : 10206', SYSDATE);
+--7
+INSERT INTO product VALUES (1000585215739, '03020500', 0, 9, 8, 7, '몽클레어 여성 로고 화이트 반팔티', '상품번호 : 10207', SYSDATE);
+INSERT INTO product VALUES (1000562788026, '03020500', 0, 9, 8, 8, '[아크네]23FW CL0206 900 페이스 로고 릴렉스 티셔츠 블랙', '상품번호 : 10208', SYSDATE);
+INSERT INTO product VALUES (1000586877083, '03020500', 0, 9, 8, 9, '메종키츠네 24SS 스피디 폭스 반팔 티셔츠', '상품번호 : 10209', SYSDATE);
+INSERT INTO product VALUES (1000584505229, '03020500', 0, 9, 8, 10, '구찌 아디다스 크롭 티셔츠 화이트', '상품번호 : 10210', SYSDATE);
 
--- 상품 2 삽입
-INSERT INTO product VALUES (10202, '01020502', 0, 9, 8, 2, '[폴로랄프로렌] 보이즈 반팔 피케 폴로 셔츠 무료배송 관부가세 포함', '상품번호 : 10202', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10202, '[폴로랄프로렌] 보이즈 반팔 피케 폴로 셔츠 무료배송 관부가세 포함', '[폴로랄프로렌] 보이즈 반팔 피케 폴로 셔츠 ', NULL, 6004, NULL);
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i1_1200.avif', 'sum');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i1_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i2_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10202, '\SSGSSAK\pay\image\10202_i2_1200.avif', 'other');
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10202, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+--상품1
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000578880439,'비비안웨스트우드 티셔츠 반팔 클래식 화이트 흰색 3G01',NULL,0,134559,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000578880439,'{XXS} 사이즈','SIZE',NULL,134559,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000578880439,'{XS} 사이즈','SIZE',NULL,134559,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000578880439,'{S} 사이즈','SIZE',NULL,134559,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000578880439,'{M} 사이즈','SIZE',NULL,134559,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000578880439,'{L} 사이즈','SIZE',NULL,134559,50);
+--상품2
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000598025046,'구찌 아디다스 트레포일 프린트 티셔츠 아이보리','NULL',0,531245,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000598025046,'{US XXS} 사이즈','SIZE',NULL,531245,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000598025046,'{US XS} 사이즈','SIZE',NULL,531245,50);
+--상품3
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000597094621,'국내배송 24SS 톰브라운 사선 4바 포인텔 니트 스웨터','NULL',0,704168,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000597094621,'{38} 사이즈','SIZE',NULL,704168,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000597094621,'{40} 사이즈','SIZE',NULL,704168,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000597094621,'{42} 사이즈','SIZE',NULL,704168,50);
+--상품4
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586136468,'[아미] 24SS 여성 스몰 로고 카라 티셔츠','NULL',0,201430,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586136468,'{L} 사이즈','SIZE',NULL,201430,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586136468,'{XL} 사이즈','SIZE',NULL,201430,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586136468,'{XXL} 사이즈','SIZE',NULL,201430,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586136468,'{XXXL} 사이즈','SIZE',NULL,201430,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586136468,'{XS} 사이즈','SIZE',NULL,201430,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586136468,'{S} 사이즈','SIZE',NULL,201430,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586136468,'{M} 사이즈','SIZE',NULL,201430,50);
+--상품5
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000585827432,'24SS 꼼데가르송 여성 레드하트 와펜 반팔티','NULL',0,128130 ,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000585827432,'{FREE-XS} 사이즈','SIZE',NULL,128130,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000585827432,'{FREE-S} 사이즈','SIZE',NULL,128130,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000585827432,'{FREE-M} 사이즈','SIZE',NULL,128130,50);
+--상품6
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000591346079,'메종마르지엘라 여성 로고 워시드 블랙 반팔티','NULL',0,413626,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000591346079,'{S} 사이즈','SIZE',NULL,413626,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000591346079,'{M} 사이즈','SIZE',NULL,413626,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000591346079,'{L} 사이즈','SIZE',NULL,413626,50);
+--상품7
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000585215739,'몽클레어 여성 로고 화이트 반팔티','NULL',0,320333,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000585215739,'{M} 사이즈','SIZE',NULL,320333,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000585215739,'{L} 사이즈','SIZE',NULL,320333,50);
+--상품8
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000562788026,'[아크네]23FW CL0206 900 페이스 로고 릴렉스 티셔츠 블랙','NULL',0,145350 ,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000562788026,'{XS} 사이즈','SIZE',NULL,145350,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000562788026,'{S} 사이즈','SIZE',NULL,145350,50);
+--상품9
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586877083,'메종키츠네 24SS 스피디 폭스 반팔 티셔츠','NULL',0,143405,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586877083,'{L} 사이즈','SIZE',NULL,143405,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586877083,'{M} 사이즈','SIZE',NULL,143405,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000586877083,'{S} 사이즈','SIZE',NULL,143405,50);
+--상품10
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000584505229,'구찌 아디다스 크롭 티셔츠 화이트','NULL',0,758211 ,60);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000584505229,'{US XXS} 사이즈','SIZE',NULL,758211,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000584505229,'{US XS} 사이즈','SIZE',NULL,758211,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000584505229,'{US S} 사이즈','SIZE',NULL,758211,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000584505229,'{US M} 사이즈','SIZE',NULL,758211,50);
+Insert into PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000584505229,'{US L} 사이즈','SIZE',NULL,758211,50);
 
--- 상품 3 삽입
-INSERT INTO product VALUES (10203, '01020503', 0, 9, 8, 3, '[톰브라운] 국내배송 24SS 톰브라운 사선 4바 포인텔 니트 스웨터 FKA453A Y3017 101', '상품번호 : 10203', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10203, '국내배송 24SS 톰브라운 사선 4바 포인텔 니트 스웨터', '[톰브라운] 톰브라운 사선 4바 포인텔 니트 스웨터 ', NULL, 6005, NULL);
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i1_1200.avif', 'sum');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i1_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i2_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10203, '\SSGSSAK\pay\image\10203_i2_1200.avif', 'other');
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10203, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
 
--- 상품 4 삽입
-INSERT INTO product VALUES (10204, '01020504', 0, 9, 8, 4, '[아미] 24SS 여성 스몰 로고 카라 티셔츠 BFUPL001 760 001', '상품번호 : 10204', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10204, '[아미] 24SS 여성 스몰 로고 카라 티셔츠 BFUPL001 760 001', '[아미] 여성 스몰 로고 카라 티셔츠 ', NULL, 6006, NULL);
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i1_1200.avif', 'sum');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i1_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i2_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10204, '\SSGSSAK\pay\image\10204_i2_1200.avif', 'other');
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10204, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+--상품1 이미지
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000578880439, '\SSGSSAK\pay\image\1000578880439_i1_10201.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000578880439, '\SSGSSAK\pay\image\1000578880439_i2_10201.avif', 'other');
 
--- 상품 5 삽입
-INSERT INTO product VALUES (10205, '01020505', 0, 9, 8, 5, '[꼼데가르송] (국내배송) 24SS 꼼데가르송 여성 레드하트 와펜 반팔티 P1T107 1', '상품번호 : 10205', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10205, '[꼼데가르송] 24SS 꼼데가르송 여성 레드하트 와펜 반팔티 P1T107 1', '[꼼데가르송] 24SS 꼼데가르송 여성 레드하트 와펜 반팔티', NULL, 6007, NULL);
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i1_1200.avif', 'sum');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i1_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i2_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10205, '\SSGSSAK\pay\image\10205_i2_1200.avif', 'other');
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10205, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+--상품2 이미지
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000598025046, '\SSGSSAK\pay\image\1000598025046_i1_1100.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000598025046, '\SSGSSAK\pay\image\1000598025046_i2_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000598025046, '\SSGSSAK\pay\image\1000598025046_i3_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000598025046, '\SSGSSAK\pay\image\1000598025046_i4_1100.avif', 'other');
 
--- 상품 6 삽입
-INSERT INTO product VALUES (10206, '01020506', 0, 9, 8, 6, '[메종마르지엘라] 메종마르지엘라 여성 로고 워시드 블랙 반팔티 S51GC0526 S20079 970', '상품번호 : 10206', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10206, '[메종마르지엘라] 메종마르지엘라 여성 로고 워시드 블랙 반팔티 S51GC0526 S20079 970', '[메종마르지엘라] 메종마르지엘라 여성 로고 워시드 블랙 반팔티 ', NULL, 6008, NULL);
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i1_1200.avif', 'sum');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i1_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i2_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10206, '\SSGSSAK\pay\image\10206_i2_1200.avif', 'other');
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10206, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+--상품3 이미지
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000597094621, '\SSGSSAK\pay\image\1000597094621_i1_1100.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000597094621, '\SSGSSAK\pay\image\1000597094621_i2_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000597094621, '\SSGSSAK\pay\image\1000597094621_i3_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000597094621, '\SSGSSAK\pay\image\1000597094621_i4_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000597094621, '\SSGSSAK\pay\image\1000597094621_i5_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000597094621, '\SSGSSAK\pay\image\1000597094621_i6_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000597094621, '\SSGSSAK\pay\image\1000597094621_i7_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000597094621, '\SSGSSAK\pay\image\1000597094621_i8_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000597094621, '\SSGSSAK\pay\image\1000597094621_i9_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000597094621, '\SSGSSAK\pay\image\1000597094621_i10_1100.avif', 'other');
+--상품4 이미지
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000586136468, '\SSGSSAK\pay\image\1000586136468_i1_1100.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000586136468, '\SSGSSAK\pay\image\1000586136468_i2_1100.avif', 'other');
 
--- 상품 7 삽입
-INSERT INTO product VALUES (10207, '01020507', 0, 9, 8, 7, '[반클리프앤아펠] 오르수 반클리프앤아펠 스위트 알함브라 펜던트 자개 목걸이 18K', '상품번호 : 10207', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10207, '[반클리프앤아펠] 오르수 반클리프앤아펠 스위트 알함브라 펜던트 자개 목걸이 18K', '[반클리프앤아펠] 오르수 반클리프앤아펠 스위트 알함브라 펜던트 자개 목걸이 18K ', NULL, 6005, NULL);
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i1_1200.avif', 'sum');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i1_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i2_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10207, '\SSGSSAK\pay\image\10207_i2_1200.avif', 'other');
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10207, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+--상품5 이미지
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585827432, '\SSGSSAK\pay\image\1000585827432_i1_1100.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585827432, '\SSGSSAK\pay\image\1000585827432_i2_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585827432, '\SSGSSAK\pay\image\1000585827432_i3_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585827432, '\SSGSSAK\pay\image\1000585827432_i4_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585827432, '\SSGSSAK\pay\image\1000585827432_i5_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585827432, '\SSGSSAK\pay\image\1000585827432_i6_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585827432, '\SSGSSAK\pay\image\1000585827432_i7_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585827432, '\SSGSSAK\pay\image\1000585827432_i8_1100.avif', 'other');
 
--- 상품 8 삽입
-INSERT INTO product VALUES (10208, '01020508', 0, 9, 8, 8, '[롤렉스] 롤렉스 로렉스 179171 데이저스트 26 콤비 로만체 자개판', '상품번호 : 10208', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10208, '[롤렉스] 롤렉스 로렉스 179171 데이저스트 26 콤비 로만체 자개판', '[롤렉스] 롤렉스 로렉스 179171 데이저스트 26 콤비 로만체 자개판', NULL, 6005, NULL);
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i1_1200.avif', 'sum');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i1_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i2_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10208, '\SSGSSAK\pay\image\10208_i2_1200.avif', 'other');
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10208, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+--상품6 이미지
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i1_1100.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i2_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i3_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i4_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i5_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i6_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i7_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i8_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i9_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i10_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i11_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i12_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i13_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000591346079, '\SSGSSAK\pay\image\1000591346079_i14_1100.avif', 'other');
 
--- 상품 9 삽입
-INSERT INTO product VALUES (10209, '01020509', 0, 9, 8, 9, '[몽클레어] 몽클레어 23FW 블랙 몽제테크 그레노블 후드 구스 다운 자켓 MONTGETECH 1A00044 53066 999', '상품번호 : 10209', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10209, '[몽클레어] 몽클레어 23FW 블랙 몽제테크 그레노블 후드 구스 다운 자켓', '[몽클레어] 몽클레어 23FW 블랙 몽제테크 그레노블 후드 구스 다운 자켓 ', NULL, 6005, NULL);
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i1_1200.avif', 'sum');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i1_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i2_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10209, '\SSGSSAK\pay\image\10209_i2_1200.avif', 'other');
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10209, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+--상품7 이미지
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i1_1100.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i2_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i3_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i4_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i5_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i6_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i7_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i8_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i9_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i10_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i11_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i12_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i13_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000585215739, '\SSGSSAK\pay\image\1000585215739_i14_1100.avif', 'other');
 
--- 상품 10 삽입
-INSERT INTO product VALUES (10210, '01020510', 0, 9, 8, 10, '[스톤아일랜드] 24SS 스톤 나일론메탈 오버셔츠 블랙 801511219 801511219 V0029', '상품번호 : 10210', SYSDATE);
-INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 10210, '[스톤아일랜드] 24SS 스톤 나일론메탈 오버셔츠 블랙 801511219 801511219 V0029', '[스톤아일랜드] 24SS 스톤 나일론메탈 오버셔츠 블랙 ', NULL, 6005, NULL);
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i1_1200.avif', 'sum');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i1_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i2_1200.avif', 'other');
-INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 10210, '\SSGSSAK\pay\image\10210_i2_1200.avif', 'other');
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'daetu01', NULL, '만족합니다', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'm_eum01', NULL, '최고에용', SYSDATE, '일반', 5, 3, 3, 3);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'd_Chan01', NULL, '이뻐용', SYSDATE, '일반', 3, 2, 3, 2);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'dyoung01', NULL, '반팔은 비비안!.', SYSDATE, '일반', 4, 1, 1, 1);
-INSERT INTO review VALUES (review_seq.NEXTVAL, 10210, 'mggun01', NULL, '항상 이것만사용해요', SYSDATE, '일반', 2, 3, 2, 3);
+--상품8 이미지
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000562788026, '\SSGSSAK\pay\image\1000562788026_i1_1100.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000562788026, '\SSGSSAK\pay\image\1000562788026_i2_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000562788026, '\SSGSSAK\pay\image\1000562788026_i3_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000562788026, '\SSGSSAK\pay\image\1000562788026_i4_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000562788026, '\SSGSSAK\pay\image\1000562788026_i5_1100.avif', 'other');
+
+--상품9 이미지
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000586877083, '\SSGSSAK\pay\image\1000586877083_i1_1100.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000586877083, '\SSGSSAK\pay\image\1000586877083_i2_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000586877083, '\SSGSSAK\pay\image\1000586877083_i3_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000586877083, '\SSGSSAK\pay\image\1000586877083_i4_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000586877083, '\SSGSSAK\pay\image\1000586877083_i5_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000586877083, '\SSGSSAK\pay\image\1000586877083_i6_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000586877083, '\SSGSSAK\pay\image\1000586877083_i7_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000586877083, '\SSGSSAK\pay\image\1000586877083_i8_1100.avif', 'other');
+
+--상품10 이미지
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000584505229, '\SSGSSAK\pay\image\1000584505229_i1_1100.avif', 'sum');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000584505229, '\SSGSSAK\pay\image\1000584505229_i2_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000584505229, '\SSGSSAK\pay\image\1000584505229_i3_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000584505229, '\SSGSSAK\pay\image\1000584505229_i4_1100.avif', 'other');
+INSERT INTO productImg VALUES (productimg_seq.NEXTVAL, 1000584505229, '\SSGSSAK\pay\image\1000584505229_i5_1100.avif', 'other');
+
+
+
+--리뷰
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'daetu01',47,'만족합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'m_eum01',47,'최고에용','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'d_Chan01',47,'조아용','2024.05.03','일반',3,2,3,2);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'dyoung01',47,'완전 딱 맞아요.','2024.05.03','일반',4,1,1,1);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'mggun01',47,'핏도 좋고 상품이 좋아요','2024.05.03','일반',2,3,2,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'whyun01',47,'원단이 좋습니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'minziZzang',47,'완전 추천합니다','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'hive',47,'만족도가 장난아니에요','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'newjeans',47,'촉감이 좋습니다.','2024.05.03','일반',5,3,3,3);
+INSERT INTO review VALUES (review_seq.NEXTVAL,2097001432075,'cap',47,'비싼값 하네요.','2024.05.03','일반',5,3,3,3);
 
 
 
@@ -1689,42 +1799,42 @@ INSERT INTO productoption VALUES (productoption_id_seq.NEXTVAL, 2097001432075, '
 
 
 ------------------------------ 동찬 상품옵션 인서트
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (49,1000553633604,'삼성공식파트너 하만카돈 오라 스튜디오4 블루투스 스피커 AURA STUDIO4','삼성공식파트너 하만카돈 오라 스튜디오4 블루투스 스피커 AURA STUDIO4',NULL,290000,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (50,1000337473259,'{WHT} 화이트','색상',NULL,190000,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (51,1000337473259,'{BLU} 블루','색상',NULL,190000,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (52,1000337473259,'{TEL} 민트','색상',NULL,190000,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (53,1000337473259,'{PINK} 핑크','색상',NULL,190000,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (54,1000337473259,'{GREY} 그레이','색상',NULL,190000,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (55,1000337473259,'{BLK} 블랙','색상',NULL,190000,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (56,1000337473259,'{RED} 레드','색상',NULL,190000,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (57,1000583195974,'레드','색상',NULL,37300,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (58,1000583195974,'네이비','색상',NULL,37300,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (59,1000583195974,'그린','색상',NULL,37300,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (60,1000583195974,'퍼플','색상',NULL,37300,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (61,1000583195974,'오렌지','색상',NULL,37300,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (62,1000583195974,'블랙(오렌지)','색상',NULL,37300,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (63,1000583195974,'블랙(그린)','색상',NULL,37300,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (64,1000555779315,'펜더리프 FENDER RIFF 블루투스 스피커','펜더리프 FENDER RIFF 블루투스 스피커',NULL,628950,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (65,1000549888715,'크림','색상',NULL,219900,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (66,1000549888715,'블랙앤브래스','색상',NULL,219900,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (67,1000549888715,'블랙앤스틸','색상',NULL,234814,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (68,1000556577134,'[제네바] Classic M Hi-Fi 블루투스 오디오 월넛 + 전용 스탠드','[제네바] Classic M Hi-Fi 블루투스 오디오 월넛 + 전용 스탠드',NULL,1560000,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (69,1000570849692,'Beige','통합색상',NULL,4430000,999);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (70,1000570849692,'Yellow','통합색상',NULL,4430000,999);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (71,1000570849692,'Blue','통합색상',NULL,4430000,999);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (72,1000570849692,'Red','통합색상',NULL,4430000,999);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (73,1000570849692,'Black','통합색상',NULL,4430000,999);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (74,1000026648892,'Brionvega rr-226 Radiofonografo White 브리온베가 라디오포노그라포 블루투스 LP 라디오','Brionvega rr-226 Radiofonografo White 브리온베가 라디오포노그라포 블루투스 LP 라디오',NULL,21900000,999);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (75,1000580126195,'월넛','색상',NULL,7450000,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (76,1000580126195,'그레이','색상',NULL,7450000,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (77,1000572601910,'비비드 레드','통합색상',NULL,4874444,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (78,1000572601910,'캐럿 오렌지','통합색상',NULL,4874444,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (79,1000572601910,'허니 옐로우','통합색상',NULL,4874444,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (80,1000572601910,'프레쉬 그린','통합색상',NULL,4874444,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (81,1000572601910,'사파이 블루','통합색상',NULL,4874444,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (82,1000572601910,'스노우 화이트','통합색상',NULL,4874444,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (83,1000572601910,'포그 그레이','통합색상',NULL,4874444,50);
-Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (84,1000572601910,'캔디 핑크','통합색상',NULL,4874444,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000553633604,'삼성공식파트너 하만카돈 오라 스튜디오4 블루투스 스피커 AURA STUDIO4','삼성공식파트너 하만카돈 오라 스튜디오4 블루투스 스피커 AURA STUDIO4',NULL,290000,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000337473259,'{WHT} 화이트','색상',NULL,190000,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000337473259,'{BLU} 블루','색상',NULL,190000,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000337473259,'{TEL} 민트','색상',NULL,190000,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000337473259,'{PINK} 핑크','색상',NULL,190000,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000337473259,'{GREY} 그레이','색상',NULL,190000,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000337473259,'{BLK} 블랙','색상',NULL,190000,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000337473259,'{RED} 레드','색상',NULL,190000,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000583195974,'레드','색상',NULL,37300,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000583195974,'네이비','색상',NULL,37300,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000583195974,'그린','색상',NULL,37300,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000583195974,'퍼플','색상',NULL,37300,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000583195974,'오렌지','색상',NULL,37300,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000583195974,'블랙(오렌지)','색상',NULL,37300,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000583195974,'블랙(그린)','색상',NULL,37300,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000555779315,'펜더리프 FENDER RIFF 블루투스 스피커','펜더리프 FENDER RIFF 블루투스 스피커',NULL,628950,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000549888715,'크림','색상',NULL,219900,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000549888715,'블랙앤브래스','색상',NULL,219900,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000549888715,'블랙앤스틸','색상',NULL,234814,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000556577134,'[제네바] Classic M Hi-Fi 블루투스 오디오 월넛 + 전용 스탠드','[제네바] Classic M Hi-Fi 블루투스 오디오 월넛 + 전용 스탠드',NULL,1560000,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000570849692,'Beige','통합색상',NULL,4430000,999);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000570849692,'Yellow','통합색상',NULL,4430000,999);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000570849692,'Blue','통합색상',NULL,4430000,999);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000570849692,'Red','통합색상',NULL,4430000,999);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000570849692,'Black','통합색상',NULL,4430000,999);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000026648892,'Brionvega rr-226 Radiofonografo White 브리온베가 블루투스 LP 라디오','Brionvega rr-226 Radiofonografo White 브리온베가 블루투스 LP 라디오',NULL,21900000,999);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000580126195,'월넛','색상',NULL,7450000,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000580126195,'그레이','색상',NULL,7450000,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000572601910,'비비드 레드','통합색상',NULL,4874444,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000572601910,'캐럿 오렌지','통합색상',NULL,4874444,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000572601910,'허니 옐로우','통합색상',NULL,4874444,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000572601910,'프레쉬 그린','통합색상',NULL,4874444,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000572601910,'사파이 블루','통합색상',NULL,4874444,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000572601910,'스노우 화이트','통합색상',NULL,4874444,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000572601910,'포그 그레이','통합색상',NULL,4874444,50);
+Insert into  PRODUCTOPTION (ID,PRODUCTID,OPTIONNAME,OPTIONDESC,OPTIONREF,OPTIONPRICE,OPTIONSTOCK) values (productoption_id_seq.NEXTVAL,1000572601910,'캔디 핑크','통합색상',NULL,4874444,50);
 
 
 
@@ -2565,148 +2675,148 @@ INSERT INTO productImg VALUES(productimg_seq.NEXTVAL,2097001432075,'\SSGSSAK\pay
 
 
 -- 동찬 상품 이미지
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (86,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000026532717_i6_500.avif','sum');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (87,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i2_1200.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (88,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i3_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (89,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i4_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (90,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i5_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (91,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfas2.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (92,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfexchange,return_notice.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (93,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (94,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_color.gif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (95,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_compare.gif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (96,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_point.gif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (97,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_review.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (98,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_01.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (99,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_02.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (100,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_03.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (101,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_04.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (102,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_05.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (103,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_06.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (104,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_07.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (105,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_spec.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (106,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfservice_hm.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (107,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf공식파트너사가-좋은이유_음향_딜.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (108,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i1_1100.avif','sum');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (109,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i2_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (110,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i3_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (111,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i4_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (112,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i5_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (113,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_01.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (114,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_02.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (115,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_03.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (116,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_01.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (117,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_02.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (118,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_03.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (119,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_04.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (120,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_05.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (121,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_06.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (122,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_07.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (123,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_08.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (124,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_09.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (125,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_10.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (126,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_11.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (127,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_13.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (128,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cnew_1.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (129,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c스크린샷 2024-05-26 220727.png','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (130,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef1000583195974_i1_1100.jpg','sum');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (131,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef1000583195974_i2_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (132,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_01_n.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (133,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_02.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (134,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_03.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (135,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_05.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (136,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_06.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (137,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_07.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (138,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_08.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (139,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_09_n.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (140,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efnotice_xxovit.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (141,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef스크린샷 2024-05-26 221856.png','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (142,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i1_1100.avif','sum');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (143,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i2_500.webp','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (144,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i3_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (145,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i4_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (146,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2eend.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (147,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2intro.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (148,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_001.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (149,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_002.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (150,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_003.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (151,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_004.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (152,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_005.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (153,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_006.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (154,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_007.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (155,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2soundcat-logo-final3.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (156,1000549888715,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2스크린샷 2024-05-26 222639.png','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (157,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i1_1100.avif','sum');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (158,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i2_500.webp','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (159,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i3_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (160,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i4_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (161,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e082024042608561096444338587433_753.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (162,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e142024042514153967849658520075_150.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (163,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e162023060816482191246355876635_550.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (164,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7ecdtl_oversea.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (165,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e스크린샷 2024-05-26 223100.png','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (166,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i1_1100.avif','sum');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (167,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i1_1200.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (168,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i2_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (169,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i2_1200.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (170,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191709383169740416_996.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (171,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191726224356836435_82.webp','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (172,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191786642637337263_867.webp','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (173,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716365861271371169137_511.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (174,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366스크린샷 2024-05-26 223614.png','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (175,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i1_1100.jpg','sum');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (176,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i2_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (177,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i3_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (178,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i4_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (179,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i5_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (180,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aBallondeparis_notice.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (181,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_01.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (182,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_02.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (183,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_03.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (184,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_04.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (185,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_05.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (186,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aBALLONDEPARRIS_JEJU DELIVERY.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (187,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175anotice_refund_highendwhite.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (188,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_01.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (189,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_02.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (190,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_03.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (191,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_04.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (192,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_05.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (193,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_06.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (194,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_07.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (195,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_08.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (196,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_09.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (197,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_10.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (198,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a스크린샷 2024-05-26 224148.png','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (199,1000026648892,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547a1000026648892_i1_1100.avif','sum');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (200,1000026648892,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547arr226_w_db.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (201,1000026648892,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547a스크린샷 2024-05-26 232221.png','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (202,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i1_1100.avif','sum');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (203,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i1_1200.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (204,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i2_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (205,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i2_1200.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (206,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i3_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (207,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i3_1200.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (208,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i4_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (209,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i4_1200.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (210,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i5_500.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (211,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i5_1200.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (212,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i6_500.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (213,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i6_1200.avif','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (214,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i7_1200.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (215,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe4R810.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (216,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i1_1100.jpg','sum');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (217,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i2_500.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (218,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i4_500.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (219,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i5_500.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (220,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i6_500.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (221,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047notice_refund_furniture.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (222,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_01.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (223,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_02.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (224,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_03.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (225,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_04.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (226,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_05.jpg','other');
-Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (227,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047스크린샷 2024-05-26 233205.png','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000026532717_i6_500.avif','sum');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i2_1200.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i3_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i4_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf1000553633604_i5_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfas2.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfexchange,return_notice.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_color.gif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_compare.gif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_point.gif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAS4_review.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_01.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_02.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_03.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_04.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_05.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_06.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_fb_07.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfHKAURAS4BLKAS_spec.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edfservice_hm.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000553633604,'\SSGSSAK\pay\image\d6fe38fe-3714-4be9-aa00-9589499e8edf공식파트너사가-좋은이유_음향_딜.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i1_1100.avif','sum');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i2_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i3_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i4_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c1000337473259_i5_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_01.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_02.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cFLIP6_TOP_03.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_01.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_02.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_03.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_04.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_05.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_06.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_07.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_08.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_09.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_10.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_11.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cJBLFLIP6_fb_13.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1cnew_1.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000337473259,'\SSGSSAK\pay\image\f4e9848e-1d73-40d5-b90a-28a4b2485d1c스크린샷 2024-05-26 220727.png','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef1000583195974_i1_1100.jpg','sum');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef1000583195974_i2_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_01_n.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_02.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_03.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_05.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_06.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_07.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_08.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efD1_09_n.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1efnotice_xxovit.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000583195974,'\SSGSSAK\pay\image\891afbeb-06db-4c4b-b02f-9eeafcc9c1ef스크린샷 2024-05-26 221856.png','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i1_1100.avif','sum');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i2_500.webp','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i3_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a21000555779315_i4_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2eend.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2intro.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_001.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_002.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_003.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_004.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_005.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_006.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2RIFF_007.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000555779315,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2soundcat-logo-final3.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000549888715,'\SSGSSAK\pay\image\c4c5815d-1e0e-4415-ad00-8a9709bad5a2스크린샷 2024-05-26 222639.png','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i1_1100.avif','sum');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i2_500.webp','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i3_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e1000549888715_i4_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e082024042608561096444338587433_753.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e142024042514153967849658520075_150.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e162023060816482191246355876635_550.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7ecdtl_oversea.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000549888715,'\SSGSSAK\pay\image\e40b1c5b-8dde-4b3c-9923-45f46bd6ca7e스크린샷 2024-05-26 223100.png','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i1_1100.avif','sum');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i1_1200.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i2_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd3661000556577134_i2_1200.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191709383169740416_996.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191726224356836435_82.webp','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716191786642637337263_867.webp','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366162023080716365861271371169137_511.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000556577134,'\SSGSSAK\pay\image\a4d45d29-b5f4-45a3-b021-4731c90bd366스크린샷 2024-05-26 223614.png','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i1_1100.jpg','sum');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i2_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i3_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i4_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a1000570849692_i5_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aBallondeparis_notice.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_01.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_02.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_03.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_04.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aballondeparis_plustotal_detail_05.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aBALLONDEPARRIS_JEJU DELIVERY.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175anotice_refund_highendwhite.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_01.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_02.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_03.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_04.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_05.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_06.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_07.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_08.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_09.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175aobject9_detail_10.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000570849692,'\SSGSSAK\pay\image\c562c1c7-b923-4e93-8d89-b59c3361175a스크린샷 2024-05-26 224148.png','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000026648892,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547a1000026648892_i1_1100.avif','sum');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000026648892,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547arr226_w_db.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000026648892,'\SSGSSAK\pay\image\0f3480af-9b12-4930-a3e2-8fc5a262547a스크린샷 2024-05-26 232221.png','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i1_1100.avif','sum');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i1_1200.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i2_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i2_1200.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i3_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i3_1200.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i4_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i4_1200.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i5_500.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i5_1200.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i6_500.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i6_1200.avif','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe41000580126195_i7_1200.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000580126195,'\SSGSSAK\pay\image\87a56194-10dd-47a5-ba2c-ac66198aabe4R810.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i1_1100.jpg','sum');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i2_500.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i4_500.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i5_500.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be024700471000572601910_i6_500.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047notice_refund_furniture.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_01.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_02.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_03.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_04.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047V1_de_05.jpg','other');
+Insert into  PRODUCTIMG (ID,PRODUCTID,IMGURL,IMGCONTENT) values (productimg_seq.NEXTVAL,1000572601910,'\SSGSSAK\pay\image\cf39b449-97ef-4b6c-9aea-11be02470047스크린샷 2024-05-26 233205.png','other');
 
 
 
@@ -2859,6 +2969,182 @@ INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\
 INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\SSGSSAK\pay\image\0ca6a093-8cfa-4c69-ae64-a435997d60ba선화동 실비집 매운 실비김치 배추김치 1kg 내용 10.png', 'other');
 
 
+
+
+
+SELECT * 
+FROm brand;
+
+--                                ID,   categoryid,specialpriceId, shippingoptionid, sellerstoerid, brandid, pdName, pcontent
+INSERT INTO product VALUES (1000581901874, '04020000', 0, 3, 5, 33, '[1+1용량] NEW 클라리피끄 더블 트리트먼트 에센스 150ml 세트', '상품번호 : 1000581901874',SYSDATE);
+INSERT INTO product VALUES (1000301692396, '04020900', 0, 3, 5, 36, '[5] 각질케어토너 2번 400ml(+각질케어토너 2번 200ml 정품 증정)', '상품번호 : 1000301692396',SYSDATE);
+INSERT INTO product VALUES (1000573113248, '04010000', 0, 3, 5, 35, 'NEW 루쥬 쀠르 꾸뛰르', '상품번호 : 1000573113248',SYSDATE);
+INSERT INTO product VALUES (2097001704868, '04020000', 0, 3, 5, 37, '메디힐 티트리 트러블 패드 100매(추가 증정 리필 100매)/총 발송수량 200매', '상품번호 : 2097001704868',SYSDATE);
+INSERT INTO product VALUES (1000000083690, '04020000', 0, 3, 5, 38, '울트라 훼이셜 토너 250ml', '상품번호 : 1000000083690',SYSDATE);
+
+INSERT INTO product VALUES (1000017067113, '04050000', 0, 3, 5, 39, '온더바디 더내추럴 너리싱 코코넛 비누 90g*4입', '상품번호 : 1000017067113',SYSDATE);
+INSERT INTO product VALUES (1000004714887, '04030000', 0, 3, 5, 40, '블랙베리 앤 베이 코롱 30ml', '상품번호 : 1000004714887',SYSDATE);
+INSERT INTO product VALUES (1000266298389, '04020000', 0, 3, 5, 41, '리엔 흑모비책 크림염색2입', '상품번호 : 1000266298389',SYSDATE);
+INSERT INTO product VALUES (1000170121260, '04060000', 0, 3, 5, 42, '플럼 큐브 파우치', '상품번호 : 1000170121260',SYSDATE);
+INSERT INTO product VALUES (1000042938047, '04040303', 0, 3, 5, 43, '[모로칸오일 공식수입원] 모로칸오일트리트먼트100ml(펌핑기)', '상품번호 : 1000042938047',SYSDATE);
+
+-- option
+
+-- 1000581901874
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000581901874, '[단독] NEW 클라리피끄 더블 트리트먼트 에센스 150ml 세트 (남은수량 861)', 125970);
+
+-- 1000301692396
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000301692396, '[5] 각질케어토너 2번 400ml (+각질케어토너 2번 200ml 정품 증정)',46215);
+
+-- 1000573113248
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : N15 누드 셀프 [NEW]',47025);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : P3 핑크 턱시도 [BEST]',47025);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : P4 시크 코랄 [BEST]',47025);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : O7 트랜스그레시브 코랄 [BEST]',47025);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : O13 르 오랑쥬 [BEST]',47025);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : R7 루쥬 인솔리트 [BEST]',47025);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : R1 르 루쥬',47025);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : P2 로즈 노 타부​',47025);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : R5 서버시브 루비',47025);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : N7 디자이어 로즈',47025);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : N8 블루즈 뉘',47025);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000573113248, '색상 : O4 러스티 오랑쥬',47025);
+
+--  2097001704868
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 2097001704868, '메디힐 티트리 트러블 패드 100매 (추가 증정 리필 100매) / 총 발송수량 200매', 28900);
+
+--  1000000083690
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000000083690,'울트라 훼이셜 토너 250ml (남은수량 297)', 34723);
+
+--  1000017067113
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000017067113, '온더바디 더내추럴 너리싱 코코넛 비누 90g*4입', 5950);
+
+--  1000004714887
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000004714887, '블랙베리 앤 베이 코롱 30ml', 104500);
+
+--  1000266298389
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000266298389, '리엔 흑모비책 크림염색2입(흑갈색)', 10900);
+
+--  1000170121260
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000170121260, '플럼 큐브 파우치', 22710);
+
+--  1000042938047
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000042938047, '세트1 : 모로칸오일 오리지날 100ml / 세트2 : 트리트먼트 오리지날 50ml', 48546);
+INSERT INTO productoption (id, productid, optionname, optionprice)VALUES(productoption_id_seq.NEXTVAL, 1000042938047, '세트1 : 모로칸오일 오리지날 100ml / 세트2 : 트리트먼트 라이트 50ml', 48546);
+
+
+-- PRODUCTIMG
+
+-- 1000581901874
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000581901874, '\SSGSSAK\pay\image\1000581901874_i1_1100.webp','sum');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000581901874, '\SSGSSAK\pay\image\1000581901874_i1_500.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000581901874, '\SSGSSAK\pay\image\1000581902723_prinfo_0.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000581901874, '\SSGSSAK\pay\image\1000114542_1_101702.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000581901874, '\SSGSSAK\pay\image\112024032711330268168259967825_195.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000581901874, '\SSGSSAK\pay\image\1000581902723_prinfo_1.png','other');
+
+
+-- 1000301692396
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000301692396, '\SSGSSAK\pay\image\1000301692396_i1_1100.avif','sum');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000301692396, '\SSGSSAK\pay\image\1000301692396_i1_500.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000301692396, '\SSGSSAK\pay\image\1000301692396_prinfo_0.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000301692396, '\SSGSSAK\pay\image\112023021611105706765464359546_64.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000301692396, '\SSGSSAK\pay\image\162021122716192700350404556040_713.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000301692396, '\SSGSSAK\pay\image\1000301692396_prinfo_1.png','other');
+
+
+
+-- 1000573113248
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000573113248, '\SSGSSAK\pay\image\1000573113248_i1_1100.avif','sum');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000573113248, '\SSGSSAK\pay\image\1000573113248_i2_1200.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000573113248, '\SSGSSAK\pay\image\1000573113248_i3_1200.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000573113248, '\SSGSSAK\pay\image\1000573113248_prinfo_0.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000573113248, '\SSGSSAK\pay\image\172023030817232412527758656775_617.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000573113248, '\SSGSSAK\pay\image\132024020713055694726894624689_953.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000573113248, '\SSGSSAK\pay\image\1000573113248_prinfo_1.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000573113248, '\SSGSSAK\pay\image\1000573113248_prinfo_2.png','other');
+
+
+-- 2097001704868
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\2097001704868_i1_1100.avif','sum');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\2097001704868_i2_1200.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\2097001704868_prinfo_0.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\01SKAC09001_1.gif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\01SKAC09001_2.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\01SKAC09001_3.gif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\01SKAC09001_4.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\01SKAC09001_5.gif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\01SKAC09001_6.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\01SKAC09001_7.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\01SKAC09001_8.gif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\01SKAC09001_9.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\01SKAC09001_10.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\01SKAC09001_11.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\2097001704868_i1_1200.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 2097001704868, '\SSGSSAK\pay\image\2097001704868_prinfo_1.png','other');
+
+
+-- 1000000083690
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000000083690, '\SSGSSAK\pay\image\0000000083690_i1_1100.avif','sum');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000000083690, '\SSGSSAK\pay\image\0000000083690_prinfo_0.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000000083690, '\SSGSSAK\pay\image\1000077476_1_123008.webp','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000000083690, '\SSGSSAK\pay\image\0000000083690_prinfo_1.png','other');
+
+
+-- 1000017067113
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_i1_1100.avif','sum');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_i1_1200.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_i3_1200.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_i2_1200.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_prinfo_0.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_prinfo_1.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_prinfo_2.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_prinfo_3.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_prinfo_4.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_prinfo_5.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_prinfo_6.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_prinfo_7.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_prinfo_8.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_prinfo_9.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000017067113, '\SSGSSAK\pay\image\1000017067113_prinfo_10.png','other');
+
+
+-- 1000004714887
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000004714887, '\SSGSSAK\pay\image\0000004714887_i1_1100.avif','sum');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000004714887, '\SSGSSAK\pay\image\1000114958_1_132229.webp','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000004714887, '\SSGSSAK\pay\image\0000004714887_prinfo_0','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000004714887, '\SSGSSAK\pay\image\132022100613483098775398058639_91.avif','other');
+
+
+
+-- 1000266298389
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000266298389, '\SSGSSAK\pay\image\1000029870301_i1_1100.avif','sum');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000266298389, '\SSGSSAK\pay\image\1000029870301_i2_1200.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000266298389, '\SSGSSAK\pay\image\1000029870301_i3_1200.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000266298389, '\SSGSSAK\pay\image\1000544935494_prinfo_0.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000266298389, '\SSGSSAK\pay\image\1000544935494_prinfo_1.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000266298389, '\SSGSSAK\pay\image\1000544935494_prinfo_2.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000266298389, '\SSGSSAK\pay\image\1000544935494_prinfo_3.png','other');
+
+
+-- 1000170121260
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000170121260, '\SSGSSAK\pay\image\1000170121260_i1_1100.avif','sum');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000170121260, '\SSGSSAK\pay\image\1000170121260_i2_1200.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000170121260, '\SSGSSAK\pay\image\1000170121260_prinfo_0.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000170121260, '\SSGSSAK\pay\image\p412_plum_cube_pouch.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000170121260, '\SSGSSAK\pay\image\iframePItemDtlDesc.jpg','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000170121260, '\SSGSSAK\pay\image\1000170121260_prinfo_1.png','other');
+
+
+-- 1000042938047
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '\SSGSSAK\pay\image\1000042938047_i1_1100.avif','sum');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '\SSGSSAK\pay\image\1000042938047_i2_1200.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '\SSGSSAK\pay\image\1000042106243_prinfo_0.png','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '\SSGSSAK\pay\image\1000114931_1_101118.webp','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '\SSGSSAK\pay\image\122023020212140534565341362634_607.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '\SSGSSAK\pay\image\122023032712484610043331815333_722.webp','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '\SSGSSAK\pay\image\162023030116330815812214875221_472.avif','other');
+INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '\SSGSSAK\pay\image\1000042106243_prinfo_1.png','other');
 
 
 
