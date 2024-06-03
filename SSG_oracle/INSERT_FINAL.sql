@@ -146,7 +146,11 @@ increment by 1
 nocache 
 nocycle;
 
-
+create sequence authority_seq
+start with 1 
+increment by 1 
+nocache 
+nocycle;
 
 
 
@@ -154,17 +158,23 @@ nocycle;
 
 -- 회원 INSERT
 -- 더미데이터 
-INSERT INTO MEMBER VALUES('daetu01','daetu01@gmail.com','010-1111-1111','원대만','1234','1978-05-29',SYSDATE,SYSDATE,'0','0','member','N');
-INSERT INTO MEMBER VALUES('m_eum01','m_eum01@naver.com','010-4142-2134','권맑음','1234','1998-09-12',SYSDATE,SYSDATE,'0','0','member','N');
-INSERT INTO MEMBER VALUES('d_Chan01','d_Chan01@daum.com','010-1231-2685','이동찬','1234','1995-11-20',SYSDATE,SYSDATE,'0','0','member','N');
-INSERT INTO MEMBER VALUES('dyoung01','dyoung01@gmail.com','010-1245-5415','이동영','1234','1990-01-02',SYSDATE,SYSDATE,'0','0','member','N');
-INSERT INTO MEMBER VALUES('mggun01','mggun01@gmail.com','010-6733-3573','강명건','1234','1993-05-20',SYSDATE,SYSDATE,'0','0','member','N');
-INSERT INTO MEMBER VALUES('whyun01','whyun01@gmail.com','010-2351-6738','박우현','1234','1992-10-01',SYSDATE,SYSDATE,'0','0','member','N');
+INSERT INTO MEMBER VALUES('daetu01','daetu01@gmail.com','010-1111-1111','원대만','1234','1978-05-29',SYSDATE,SYSDATE,'0','0','N');
+INSERT INTO MEMBER VALUES('m_eum01','m_eum01@naver.com','010-4142-2134','권맑음','1234','1998-09-12',SYSDATE,SYSDATE,'0','0','N');
+INSERT INTO MEMBER VALUES('d_Chan01','d_Chan01@daum.com','010-1231-2685','이동찬','1234','1995-11-20',SYSDATE,SYSDATE,'0','0','N');
+INSERT INTO MEMBER VALUES('dyoung01','dyoung01@gmail.com','010-1245-5415','이동영','1234','1990-01-02',SYSDATE,SYSDATE,'0','0','N');
+INSERT INTO MEMBER VALUES('mggun01','mggun01@gmail.com','010-6733-3573','강명건','1234','1993-05-20',SYSDATE,SYSDATE,'0','0','N');
+INSERT INTO MEMBER VALUES('whyun01','whyun01@gmail.com','010-2351-6738','박우현','1234','1992-10-01',SYSDATE,SYSDATE,'0','0','N');
 
-INSERT INTO MEMBER VALUES('minziZzang','minziZzang@gmail.com','010-1461-1245','김민지','1234','2003-02-10',SYSDATE,SYSDATE,'0','0','member','N');
-INSERT INTO MEMBER VALUES('hive','hive@gmail.com','010-5242-6642','오함마','1234','2006-03-20',SYSDATE,SYSDATE,'0','0','member','N');
-INSERT INTO MEMBER VALUES('newjeans','newjeans@gmail.com','010-6645-2411','박바지','1234','2007-01-20',SYSDATE,SYSDATE,'0','0','member','N');
-INSERT INTO MEMBER VALUES('cap','cap@gmail.com','010-5124-5665','하남자','1234','2002-06-06',SYSDATE,SYSDATE,'0','0','member','N');
+INSERT INTO MEMBER VALUES('minziZzang','minziZzang@gmail.com','010-1461-1245','김민지','1234','2003-02-10',SYSDATE,SYSDATE,'0','0','N');
+INSERT INTO MEMBER VALUES('hive','hive@gmail.com','010-5242-6642','오함마','1234','2006-03-20',SYSDATE,SYSDATE,'0','0','N');
+INSERT INTO MEMBER VALUES('newjeans','newjeans@gmail.com','010-6645-2411','박바지','1234','2007-01-20',SYSDATE,SYSDATE,'0','0','N');
+INSERT INTO MEMBER VALUES('cap','cap@gmail.com','010-5124-5665','하남자','1234','2002-06-06',SYSDATE,SYSDATE,'0','0','N');
+
+INSERT INTO authority VALUES (authority_seq.NEXTVAL, 'member');
+INSERT INTO authority VALUES (authority_seq.NEXTVAL, 'admin');
+
+INSERT INTO AUTH VALUES ('daetu01',1);
+INSERT INTO AUTH VALUES ('d_Chan01',2);
 
 
 -------------------------------------------------------------------------------------------
@@ -1566,8 +1576,7 @@ Insert into PRODUCT (ID,CATEGORYID,SPECIALPRICEID,SHIPPINGOPTIONID,SELLERSTOREID
 ■ 원재료 및 함량 : 하단 상세이미지 참고',to_date('24/05/26','RR/MM/DD'));
 
 
-SELECT * 
-FROM brand;
+
 -------------------------------------- 동영 상품 인서트
 -- 노브랜드 포기김치
 INSERT INTO product (id, categoryId, specialPriceId, shippingOptionId, sellerStoreId, brandId, pdName, pContent, updateDay)
@@ -2981,11 +2990,6 @@ INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '\resource
 
 
 
-
-
-SELECT * 
-FROm brand;
-
 --                                ID,   categoryid,specialpriceId, shippingoptionid, sellerstoerid, brandid, pdName, pcontent
 INSERT INTO product VALUES (1000581901874, '04020000', 0, 3, 5, 33, '[1+1용량] NEW 클라리피끄 더블 트리트먼트 에센스 150ml 세트', '상품번호 : 1000581901874',SYSDATE);
 INSERT INTO product VALUES (1000301692396, '04020900', 0, 3, 5, 36, '[5] 각질케어토너 2번 400ml(+각질케어토너 2번 200ml 정품 증정)', '상품번호 : 1000301692396',SYSDATE);
@@ -3158,9 +3162,6 @@ INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '\resource
 INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '\resources\images\1000042106243_prinfo_1.png','other');
 
 
-
-
-
-
 COMMIT;
 COMMIT;
+

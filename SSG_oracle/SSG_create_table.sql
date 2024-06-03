@@ -31,6 +31,7 @@ DROP TABLE ShoppingCart CASCADE CONSTRAINTS;
 DROP TABLE applicant CASCADE CONSTRAINTS;
 DROP TABLE present CASCADE CONSTRAINTS;
 DROP TABLE Auth CASCADE CONSTRAINTS;
+DROP TABLE Authority CASCADE CONSTRAINTS;
 DROP TABLE paydetail CASCADE CONSTRAINTS;
 DROP TABLE terms CASCADE CONSTRAINTS;
 DROP TABLE divisionfolder CASCADE CONSTRAINTS;
@@ -64,6 +65,7 @@ drop sequence reviewimg_seq;
 drop sequence loginLog_seq;
 drop sequence brand_seq;
 drop sequence seller_seq;
+drop sequence authority_seq;
 
 -- sellerstore 시퀀스 , brand 시퀀스 작업 및 팀원들한테 컨펌 받아야함. 
 
@@ -122,7 +124,6 @@ CREATE TABLE member (
     updateDate DATE DEFAULT SYSDATE NULL,
     loginNotification char(1) DEFAULT 0 NULL,
     login2Notification char(1) DEFAULT 0 NULL,
-    privilege varchar2(300) DEFAULT 'member' NULL,
     enabled char(4) DEFAULT 'N' NOT NULL
 );
 
@@ -367,9 +368,14 @@ CREATE TABLE present (
     rnum varchar2(2000) NULL
 );
 
+CREATE TABLE Authority (
+id NUMBER NOT NULL,
+authName VARCHAR2(300) NOT NULL
+);
+
 CREATE TABLE Auth (
-id varchar(300) NOT NULL,
-privilege varchar(300) NOT NULL
+memid varchar(300) NOT NULL,
+authid NUMBER NOT NULL
 );
 
 CREATE TABLE paydetail (
@@ -425,8 +431,9 @@ ALTER TABLE interestBrand ADD CONSTRAINT PK_INTERESTBRAND PRIMARY KEY (
     id
 );
 
+
 ALTER TABLE Auth ADD CONSTRAINT PK_AUTH PRIMARY KEY (
-id
+memid, authid
 );
 
 ALTER TABLE interestGoods ADD CONSTRAINT PK_INTERESTGOODS PRIMARY KEY (
@@ -533,6 +540,12 @@ ALTER TABLE divisionFolder ADD CONSTRAINT PK_DIVISIONFOLDER PRIMARY KEY (
     id
 );
 
+ALTER TABLE Authority ADD CONSTRAINT PK_Authority PRIMARY KEY (
+    id
+);
+
+
+
 
 ALTER TABLE paydetail ADD CONSTRAINT FK_payrecord_TO_paydetail_1 FOREIGN KEY (id2) REFERENCES payrecord (id);
 
@@ -570,11 +583,19 @@ REFERENCES shippingOption (
 );
 
 ALTER TABLE Auth ADD CONSTRAINT FK_member_TO_auth_1 FOREIGN KEY (
-    id
+    memid
 )
 REFERENCES member (
     id
 );
+
+ALTER TABLE Auth ADD CONSTRAINT FK_Auth_TO_Authority FOREIGN KEY (
+    authid
+)
+REFERENCES Authority (
+    id
+);
+
 
 ALTER TABLE product ADD CONSTRAINT FK_sellerstore_TO_product_1 FOREIGN KEY (
     sellerStoreId
