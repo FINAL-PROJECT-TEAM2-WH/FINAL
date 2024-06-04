@@ -1,3 +1,82 @@
+		SELECT *
+		FROM (
+		SELECT ROWNUM no, t.*
+		FROM (
+		SELECT
+		p.ID,
+		MAX(p.SHIPPINGOPTIONID) AS SHIPPINGOPTIONID,
+		MAX(p.sellerstoreid) AS
+		SELLERSTOREID,
+		MAX(s.SELLERNAME) AS SELLERNAME,
+		MAX(p.brandid) AS
+		BRANDID,
+		MAX(b.brandname) AS BRANDNAME,
+		MAX(p.PDNAME) AS PDNAME,
+		MAX(p.UPDATEDAY) AS UPDATEDAY,
+		COALESCE(MAX(o.optionPrice), 0) AS
+		optionPrice,
+		COALESCE(MAX(o.optionPrice) - ((MAX(o.optionPrice) / 100)
+		* MAX(c.spclDscnRt)), 0) AS sprice,
+		COALESCE(MAX(c.spclDscnRt), 0) AS
+		discount,
+		COALESCE(MAX(reviewData.reviewCount), 0) AS reviewCount,
+		COALESCE(MAX(reviewData.averageGrade), 0) AS avgGrade,
+		MAX(productimg.IMGURL) AS imgurl
+		FROM
+		PRODUCT p
+		JOIN BRAND b ON p.BRANDID = b.ID
+		JOIN sellerstore s ON p.SELLERSTOREID
+		= s.id
+		LEFT JOIN productOption o ON p.ID = o.productid
+		LEFT JOIN
+		specialprice c ON p.specialPriceId = c.id
+		LEFT JOIN (
+		SELECT productId,
+		COUNT(*) AS reviewCount, AVG(grade) AS averageGrade
+		FROM review
+		GROUP BY
+		productId
+		) reviewData ON p.ID = reviewData.productId
+		LEFT JOIN (
+        SELECT DISTINCT productid, IMGURL
+        FROM productimg
+        WHERE IMGCONTENT = 'sum'
+        ) productimg ON p.id = productimg.productid
+		WHERE
+		TO_CHAR(p.CATEGORYID) LIKE '' || '%'
+		GROUP BY p.id
+		) t
+		) b
+		WHERE no BETWEEN 1 AND 100
+        ORDER BY UPDATEDAY DESC;
+
+
+		SELECT DISTINCT c.id, c.middleCateName 
+		FROM category c 
+		JOIN product p ON SUBSTR(p.categoryId, 1, 2) = SUBSTR(c.id, 1, 2) 
+		WHERE p.id = 1000004714887
+		AND SUBSTR(c.id, 5, 8) = '0000' 
+		AND c.middleCateName IS NOT NULL;
+        
+		SELECT DISTINCT c.id, c.subCateName 
+		FROM category c 
+		JOIN product p ON SUBSTR(p.categoryId, 1, 4) = SUBSTR(c.id, 1, 4) 
+		WHERE p.id = 1000004714887 
+		AND SUBSTR(c.id, 7, 8) = '00' 
+		AND c.subCateName IS NOT NULL;
+        
+        
+        SELECT DISTINCT c.id, c.miniCateName 
+		FROM category c
+		JOIN product p ON SUBSTR(p.categoryId, 1, 6) = SUBSTR(c.id, 1, 6) 
+		WHERE p.id = 1000004714887
+		AND c.miniCateName IS NOT NULL;
+        
+        
+        SELECT c.id, c.majorcatename,c.middlecatename,c.subcatename, c.minicatename
+		FROM product p JOIN category c ON p.categoryid = c.id
+		WHERE p.id = 1000004714887;
+        
 SELECT * 
 FROM productimg pi 
 JOIN product p ON p.id = pi.productid
@@ -12,7 +91,10 @@ FROM category;
 SELECT *
 FROM dept;
 
-
+ SELECT DISTINCT majorCateName, id
+ FROM category                   
+ WHERE id LIKE '%000000'         
+ AND majorCateName IS NOT NULL ;
 
 SELECT COUNT(*) FROM tbl_cstvsboard;
 
@@ -76,6 +158,8 @@ FROM coupon;
 SELECT *
 FROM productImg
 WHERE productid = 1000280142269;
+
+
 
 SELECT *
 FROM review;

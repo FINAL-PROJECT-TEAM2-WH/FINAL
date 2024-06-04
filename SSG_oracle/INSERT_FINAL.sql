@@ -981,6 +981,7 @@ INSERT INTO category VALUES ('10000000', '여행/e쿠폰/문구/도서', '', '',
 -- 카테고리 데이터 삽입
 
 INSERT INTO category VALUES ('03000000', '명품', '', '','');
+INSERT INTO category VALUES ('03010000', '명품', '여성명품', '', '');
 INSERT INTO category VALUES ('03010100', '명품', '여성명품', '가방', '');
 INSERT INTO category VALUES ('03010200', '명품', '여성명품', '지갑', '');
 INSERT INTO category VALUES ('03010300', '명품', '여성명품', '슈즈', '');
@@ -993,6 +994,7 @@ INSERT INTO category VALUES ('03010900', '명품', '여성명품', '시계', '')
 INSERT INTO category VALUES ('03011000', '명품', '여성명품', '안경/선글라스', '');
 INSERT INTO category VALUES ('03011100', '명품', '여성명품', '유아동', '');
 
+INSERT INTO category VALUES ('03020000', '명품', '남성명품', '', '');
 INSERT INTO category VALUES ('03020100', '명품', '남성명품', '가방', '');
 INSERT INTO category VALUES ('03020200', '명품', '남성명품', '지갑', '');
 INSERT INTO category VALUES ('03020300', '명품', '남성명품', '슈즈', '');
@@ -2990,6 +2992,7 @@ INSERT INTO productimg VALUES (PRODUCTIMG_SEQ.NEXTVAL, 1000523249169, '/resource
 
 
 
+
 --                                ID,   categoryid,specialpriceId, shippingoptionid, sellerstoerid, brandid, pdName, pcontent
 INSERT INTO product VALUES (1000581901874, '04020000', 0, 3, 5, 33, '[1+1용량] NEW 클라리피끄 더블 트리트먼트 에센스 150ml 세트', '상품번호 : 1000581901874',SYSDATE);
 INSERT INTO product VALUES (1000301692396, '04020900', 0, 3, 5, 36, '[5] 각질케어토너 2번 400ml(+각질케어토너 2번 200ml 정품 증정)', '상품번호 : 1000301692396',SYSDATE);
@@ -3160,6 +3163,7 @@ INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '/resource
 INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '/resources/images/122023032712484610043331815333_722.webp','other');
 INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '/resources/images/162023030116330815812214875221_472.avif','other');
 INSERT INTO productimg VALUES (productimg_seq.NEXTVAL, 1000042938047, '/resources/images/1000042106243_prinfo_1.png','other');
+
 
 
 COMMIT;
