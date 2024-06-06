@@ -158,6 +158,7 @@ nocycle;
 
 -- 회원 INSERT
 -- 더미데이터 
+-- 비밀번호 asdfasdf123@ 이거입니다. !!!!!!!!!!!!!
 INSERT INTO MEMBER VALUES('daetu01','daetu01@gmail.com','010-1111-1111','원대만','$2a$10$Gp6o1tynZPeQNw2Jg1zAeuDRZpDzxitFyNcrsl6d104WfuEr9BWIO','1978-05-29',SYSDATE,SYSDATE,'0','0','N');
 INSERT INTO MEMBER VALUES('m_eum01','m_eum01@naver.com','010-4142-2134','권맑음','1234','1998-09-12',SYSDATE,SYSDATE,'0','0','N');
 INSERT INTO MEMBER VALUES('d_Chan01','d_Chan01@daum.com','010-1231-2685','이동찬','1234','1995-11-20',SYSDATE,SYSDATE,'0','0','N');
