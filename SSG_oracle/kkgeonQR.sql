@@ -47,8 +47,8 @@
 		GROUP BY p.id
 		) t
 		) b
-		WHERE no BETWEEN 1 AND 100
-        ORDER BY UPDATEDAY DESC;
+		WHERE no BETWEEN 1 AND 100;
+        
 
 
 		SELECT DISTINCT c.id, c.middleCateName 
@@ -102,6 +102,10 @@ SELECT c.id,  c.majorcatename,c.middlecatename,c.subcatename, c.minicatename
 FROM product p JOIN category c ON p.categoryid = c.id
 WHERE p.id = 1000026532717;
 --상품용현재카테쿼리
+
+SELECT *
+FROM member;
+
 
 SELECT DISTINCT middleCateName, id 
 				FROM category 
@@ -408,7 +412,7 @@ SELECT *
 BEGIN
     FOR i IN 1 .. 158
     LOOP 
-      INSERT INTO tbl_board (bno, title, content, writer)
+      INSERT INTO notice_board (bno, title, content, writer)
       VALUES ( seq_board.nextval ,  'PL SQL-' || i, 'PL SQL-' || i, '홍길동' ) ;
     END LOOP;  
 END;

@@ -982,6 +982,7 @@ INSERT INTO category VALUES ('10000000', '여행/e쿠폰/문구/도서', '', '',
 -- 카테고리 데이터 삽입
 
 INSERT INTO category VALUES ('03000000', '명품', '', '','');
+INSERT INTO category VALUES ('03010000', '명품', '여성명품', '','');
 INSERT INTO category VALUES ('03010100', '명품', '여성명품', '가방', '');
 INSERT INTO category VALUES ('03010200', '명품', '여성명품', '지갑', '');
 INSERT INTO category VALUES ('03010300', '명품', '여성명품', '슈즈', '');
@@ -994,6 +995,7 @@ INSERT INTO category VALUES ('03010900', '명품', '여성명품', '시계', '')
 INSERT INTO category VALUES ('03011000', '명품', '여성명품', '안경/선글라스', '');
 INSERT INTO category VALUES ('03011100', '명품', '여성명품', '유아동', '');
 
+INSERT INTO category VALUES ('03020000', '명품', '남성명품', '', '');
 INSERT INTO category VALUES ('03020100', '명품', '남성명품', '가방', '');
 INSERT INTO category VALUES ('03020200', '명품', '남성명품', '지갑', '');
 INSERT INTO category VALUES ('03020300', '명품', '남성명품', '슈즈', '');
