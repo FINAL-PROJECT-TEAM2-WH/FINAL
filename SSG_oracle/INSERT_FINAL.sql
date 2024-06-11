@@ -1009,7 +1009,7 @@ INSERT INTO category VALUES ('03021000', '명품', '남성명품', '유아동', 
 
 
 
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '케라스타즈');
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, 'https://img.skmonline.com.tw/App_Images/727/Brand/2021/1123/389eb90f-6c2e-451d-a583-de6dcd6bad7a.jpg', '케라스타즈');
 
 INSERT INTO brand VALUES (brand_seq.NEXTVAL, 'https://sui.ssgcdn.com/cmpt/banner/201708/2017081013263780463968040496_758.jpg', '노브랜드');
 
@@ -1017,7 +1017,7 @@ INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '지이크');
 
 INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '새우팔아');
 
-INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '삼성공식스토어');
+INSERT INTO brand VALUES (brand_seq.NEXTVAL, 'https://blog.kakaocdn.net/dn/dg5fpM/btqwMdBY480/yBALyxESNGxdULrhjEW1L1/img.jpg', '삼성공식스토어');
 
 INSERT INTO brand VALUES (brand_seq.NEXTVAL, NULL, '한우비');
 

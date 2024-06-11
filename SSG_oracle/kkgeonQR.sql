@@ -41,6 +41,12 @@
 		) t
 		) b
 		WHERE no BETWEEN 1 AND 100;
+commit;
+UPDATE brand
+SET BRANDIMG = 'https://sitem.ssgcdn.com/97/36/80/item/1000520803697_i3_750.jpg'
+WHERE id = 6;
+        
+        DESC brand;
         
         
         SELECT *
