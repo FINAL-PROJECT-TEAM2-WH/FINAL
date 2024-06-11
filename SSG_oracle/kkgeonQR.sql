@@ -5,50 +5,62 @@
 		SELECT
 		p.ID,
 		MAX(p.SHIPPINGOPTIONID) AS SHIPPINGOPTIONID,
-		MAX(p.sellerstoreid) AS
-		SELLERSTOREID,
+		MAX(p.sellerstoreid) AS	SELLERSTOREID,
 		MAX(s.SELLERNAME) AS SELLERNAME,
-		MAX(p.brandid) AS
-		BRANDID,
+		MAX(p.brandid) AS BRANDID,
 		MAX(b.brandname) AS BRANDNAME,
 		MAX(p.PDNAME) AS PDNAME,
 		MAX(p.UPDATEDAY) AS UPDATEDAY,
-		COALESCE(MAX(o.optionPrice), 0) AS
-		optionPrice,
-		COALESCE(MAX(o.optionPrice) - ((MAX(o.optionPrice) / 100)
-		* MAX(c.spclDscnRt)), 0) AS sprice,
-		COALESCE(MAX(c.spclDscnRt), 0) AS
-		discount,
+		COALESCE(MAX(o.optionPrice), 0) AS optionPrice,
+		COALESCE(MAX(o.optionPrice) - ((MAX(o.optionPrice) / 100) * MAX(c.spclDscnRt)), 0) AS sprice,
+		COALESCE(MAX(c.spclDscnRt), 0) AS discount,
 		COALESCE(MAX(reviewData.reviewCount), 0) AS reviewCount,
-		COALESCE(MAX(reviewData.averageGrade), 0) AS avgGrade,
-		MAX(productimg.IMGURL) AS imgurl
+		COALESCE(MAX(reviewData.avgGrade), 0) AS avgGrade,
+		MAX(productimg.IMGURL) AS prodImgurl,
+        MAX(brandImg) AS brandImgurl
 		FROM
 		PRODUCT p
 		JOIN BRAND b ON p.BRANDID = b.ID
-		JOIN sellerstore s ON p.SELLERSTOREID
-		= s.id
+		JOIN sellerstore s ON p.SELLERSTOREID = s.id
 		LEFT JOIN productOption o ON p.ID = o.productid
-		LEFT JOIN
-		specialprice c ON p.specialPriceId = c.id
+		LEFT JOIN specialprice c ON p.specialPriceId = c.id
 		LEFT JOIN (
 		SELECT productId,
-		COUNT(*) AS reviewCount, AVG(grade) AS averageGrade
+		COUNT(*) AS reviewCount, 
+		AVG(grade) AS avgGrade
 		FROM review
-		GROUP BY
-		productId
+		GROUP BY productId
 		) reviewData ON p.ID = reviewData.productId
 		LEFT JOIN (
         SELECT DISTINCT productid, IMGURL
         FROM productimg
-        WHERE IMGCONTENT = 'sum'
+        WHERE IMGCONTENT = 'sum' OR IMGCONTENT LIKE 'SUM'
         ) productimg ON p.id = productimg.productid
-		WHERE
-		TO_CHAR(p.CATEGORYID) LIKE '' || '%'
+		WHERE p.BRANDID LIKE 2
 		GROUP BY p.id
 		) t
 		) b
 		WHERE no BETWEEN 1 AND 100;
+commit;
+UPDATE brand
+SET BRANDIMG = 'https://sitem.ssgcdn.com/97/36/80/item/1000520803697_i3_750.jpg'
+WHERE id = 6;
         
+        DESC brand;
+        
+        
+        SELECT *
+        FROM product
+        WHERE id = 1000004714887;
+        
+        SELECT *
+        FROM brand ;
+        
+        
+        
+        
+        SELECT *
+        FROM member;
 
 
 		SELECT DISTINCT c.id, c.middleCateName 
