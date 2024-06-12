@@ -46,6 +46,9 @@ UPDATE brand
 SET BRANDIMG = 'https://sitem.ssgcdn.com/97/36/80/item/1000520803697_i3_750.jpg'
 WHERE id = 6;
         
+        
+        SELECT *
+        FROM member;
         DESC brand;
         
         
