@@ -172,9 +172,10 @@ INSERT INTO MEMBER VALUES('newjeans','newjeans@gmail.com','010-6645-2411','박�
 INSERT INTO MEMBER VALUES('cap','cap@gmail.com','010-5124-5665','하남자','1234','2002-06-06',SYSDATE,SYSDATE,'0','0','N');
 
 INSERT INTO authority VALUES (authority_seq.NEXTVAL, 'member');
-INSERT INTO authority VALUES (authority_seq.NEXTVAL, 'admin');
+INSERT INTO authority VALUES (authority_seq.NEXTVAL, 'ROLE_ADMIN');
 
 INSERT INTO AUTH VALUES ('daetu01',1);
+INSERT INTO AUTH VALUES ('daetu01',2);
 INSERT INTO AUTH VALUES ('d_Chan01',2);
 
 
