@@ -400,20 +400,20 @@ INSERT INTO category VALUES ('01051100', '패션의류', '여성트렌드패션'
 INSERT INTO category VALUES ('01051200', '패션의류', '여성트렌드패션', '팬츠', '');
 
 -- 남성패션
-INSERT INTO category VALUES ('01060000', '패션의류', '남성패션', '', '');
-INSERT INTO category VALUES ('01060100', '패션의류', '남성패션', '가디건', '');
-INSERT INTO category VALUES ('01060200', '패션의류', '남성패션', '니트/베스트', '');
-INSERT INTO category VALUES ('01060300', '패션의류', '남성패션', '셔츠/남방', '');
-INSERT INTO category VALUES ('01060400', '패션의류', '남성패션', '자켓', '');
-INSERT INTO category VALUES ('01060500', '패션의류', '남성패션', '점퍼/패딩', '');
-INSERT INTO category VALUES ('01060600', '패션의류', '남성패션', '정장/수트', '');
+INSERT INTO category VALUES ('01030000', '패션의류', '남성패션', '', '');
+INSERT INTO category VALUES ('01030100', '패션의류', '남성패션', '가디건', '');
+INSERT INTO category VALUES ('01030200', '패션의류', '남성패션', '니트/베스트', '');
+INSERT INTO category VALUES ('01030300', '패션의류', '남성패션', '셔츠/남방', '');
+INSERT INTO category VALUES ('01030400', '패션의류', '남성패션', '자켓', '');
+INSERT INTO category VALUES ('01030500', '패션의류', '남성패션', '점퍼/패딩', '');
+INSERT INTO category VALUES ('01030600', '패션의류', '남성패션', '정장/수트', '');
 INSERT INTO category VALUES ('01030601', '패션의류', '남성패션', '정장/수트', '솔리드정장세트');
 INSERT INTO category VALUES ('01030602', '패션의류', '남성패션', '정장/수트', '패턴정장세트');
 INSERT INTO category VALUES ('01030603', '패션의류', '남성패션', '정장/수트', '정장바지');
 INSERT INTO category VALUES ('01030604', '패션의류', '남성패션', '정장/수트', '정장자켓');
-INSERT INTO category VALUES ('01060700', '패션의류', '남성패션', '코트', '');
-INSERT INTO category VALUES ('01060800', '패션의류', '남성패션', '맨투맨/후드/티셔츠', '');
-INSERT INTO category VALUES ('01060900', '패션의류', '남성패션', '팬츠', '');
+INSERT INTO category VALUES ('01030700', '패션의류', '남성패션', '코트', '');
+INSERT INTO category VALUES ('01030800', '패션의류', '남성패션', '맨투맨/후드/티셔츠', '');
+INSERT INTO category VALUES ('01030900', '패션의류', '남성패션', '팬츠', '');
 
 -- 캐주얼/유니섹스
 INSERT INTO category VALUES ('01070000', '패션의류', '캐주얼/유니섹스', '', '');
